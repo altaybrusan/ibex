@@ -30,3 +30,12 @@ SOURCES += \
         testsplatform.cpp 
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
+
+
+win32
+{
+#    CONFIG(release, release|debug){LIBS+= ../common/release/common.dll}
+#     CONFIG(debug, release|debug){LIBS+= ../common/debug/common.lib}
+
+}
+

@@ -1,8 +1,8 @@
 #ifndef PLATFORM_H
 #define PLATFORM_H
-//#include <QWidget>
 
 #include <QObject>
+
 namespace Common {
 
     class Platform:public QObject

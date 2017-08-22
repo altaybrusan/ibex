@@ -1,5 +1,9 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    common
+#    utilities\
+    common \
+    tests \
+
+CONFIG += ordered
 

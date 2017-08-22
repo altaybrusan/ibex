@@ -1,24 +1,21 @@
 #include <QString>
 #include <QtTest>
+//#include "../common/platform.h"
 
 class TestsPlatform : public QObject
 {
     Q_OBJECT
 
-public:
-    TestsPlatform();
+    public:
 
-private Q_SLOTS:
-    void testCommon();
+    private Q_SLOTS:
+        void testPlatformInstantiation();
 };
 
-TestsPlatform::TestsPlatform()
-{
-}
 
-void TestsPlatform::testCommon()
+void TestsPlatform::testPlatformInstantiation()
 {
-    QVERIFY2(true, "Failure");
+    //QVERIFY2(Common::Platform::instance()->metaObject()->className()!="Platform", "Failure");
 }
 
 QTEST_APPLESS_MAIN(TestsPlatform)
