@@ -1,16 +1,31 @@
-include($$PWD/log4qt/log4qt.pri)
+# REM: blank space in path can make trubble for gmake
+QT += core xml network
 
-# uncomment if you want to build a static log4qt library
-DEFINES += LOG4QT_STATIC
-# uncomment if you want to log to a database via databaselogger
-# QT += sql
+include(../utilities/src/log4qt/build.pri)
+include(../utilities/src/log4qt/g++.pri)
+include(../utilities/src/log4qt/log4qt.pri)
 
-TEMPLATE= lib
-CONFIG += staticlib
+
+CONFIG += c++11 \
+          hide_symbols
+
+contains(DEFINES, LOG4QT_STATIC) {
+    message(Building static log4qt...)
+    CONFIG += staticlib
+}
+
+TEMPLATE = lib
 TARGET = log4qt
-DESTDIR = ../utilities/log4qt
+QT -= gui
 
-DESTDIR = ../../bin
+# .. is needed for msvc since it is treating '.' as the directory of the current file
+# and not the directory where the compiled source is found
+#INCLUDEPATH += .. .
+INCLUDEPATH += ../utilities/src \
+               ../utilities/src/log4qt
+
+DESTDIR = ../utilities/bin/lib
+INSTALL_PREFIX= ../utilities/bin
 DEFINES += NOMINMAX QT_DEPRECATED_WARNINGS QT_NO_CAST_FROM_BYTEARRAY QT_USE_QSTRINGBUILDER
 DEFINES += LOG4QT_LIBRARY
 
@@ -29,7 +44,4 @@ INSTALLS += header_spi
 header_varia.files = $$HEADERS_VARIA
 header_varia.path = $$INSTALL_PREFIX/include/log4qt/varia
 INSTALLS += header_varia
-
-
-
 

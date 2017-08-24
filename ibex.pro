@@ -1,9 +1,10 @@
+# REM: blank space in path can make trubble for gmake
 TEMPLATE = subdirs
 
 SUBDIRS += \
-#    utilities\
+    utilities\
     common \
-    tests \
+
 
 CONFIG += ordered
 
