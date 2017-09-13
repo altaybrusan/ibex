@@ -1,6 +1,7 @@
-# REM: blank space in path can make trubble for gmake
+# REM: blank space in path can make trubble for qmake
 QT += core network
 CONFIG += qt c++14
+# is you want to back to debug/release mode comment out the following line
 CONFIG += test
 INCLUDEPATH += ../utilities/bin/include \
                ../utilities/bin/include/log4qt
@@ -23,24 +24,25 @@ HEADERS += \
     src/call_once.h \
     src/singleton.h \
     src/basiclogmanager.h \
+    src/itool.h \
+    src/irole.h \
+    src/iforegroundtool.h
 
 SOURCES += \
     src/platform.cpp \
     src/main.cpp \
     src/basiclogmanager.cpp \
-    test/testbasiclogmanager.cpp
+    test/testbasiclogmanager.cpp \
+    test/testplatform.cpp
 
 
 test{
    message(Configuring test build...)
 
-
-
-
     QT += testlib
     QT -= gui
 
-    TARGET = testbasiclogmanager
+    TARGET = testplatform
     CONFIG   += console
     CONFIG   -= app_bundle
 
@@ -58,7 +60,8 @@ test{
 
     SOURCES -= src/main.cpp
     SOURCES += \
-        test/testbasiclogmanager.cpp
+#        test/testbasiclogmanager.cpp
+         test/testplatform.cpp
 
 }
 else{

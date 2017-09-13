@@ -14,12 +14,14 @@ namespace Common {
     public:
         ~Platform();
         static Platform* instance();
+        static QString GetSystemDate();
+        static QString GetSystemTime();
+
 
     private:
         Platform(QObject* parent = 0);
         static Platform* createInstance();
         void InstantiateLogManager();
-        void TestLogManager();
 
 
         BasicLogManager* _manager;
