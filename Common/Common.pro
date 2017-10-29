@@ -25,10 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    newpatientdialog.cpp \
+    bodypartselectionsquare.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    newpatientdialog.h \
+    bodypart.h \
+    bodypartselectionsquare.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    newpatientdialog.ui
+
+RESOURCES += \
+    resources.qrc

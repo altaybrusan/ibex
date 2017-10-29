@@ -1,1 +1,6 @@
 TEMPLATE = subdirs
+
+SUBDIRS += \
+    Common
+
+

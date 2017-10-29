@@ -1,24 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>976</width>
+    <height>596</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>MainWindow</string>
+  <property name="windowTitle">
+   <string>iBEX</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/assets/images/_ibex_logo.png</normaloff>:/assets/images/_ibex_logo.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(172, 172, 172);
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/assets/images/_ibex_logo.png);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="mainMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>976</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 127);
+border-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+selection-background-color: rgb(85, 170, 255);
+</string>
+   </property>
+   <widget class="QMenu" name="menuStudy">
+    <property name="title">
+     <string>&amp;Study</string>
+    </property>
+    <addaction name="action_New_Study"/>
+    <addaction name="action_Open_Study"/>
+    <addaction name="action_Load_Study"/>
+    <addaction name="action_Quick_Start"/>
+    <addaction name="separator"/>
+    <addaction name="action_Print_Study"/>
+    <addaction name="action_Write_To_CD"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menuS_ystem">
+    <property name="title">
+     <string>S&amp;ystem</string>
+    </property>
+    <addaction name="action_Get_Peripherals_Status"/>
+    <addaction name="action_Get_Tools_Status"/>
+    <addaction name="action_Get_Filters_Status"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="action_Get_Connections"/>
+    <addaction name="action_Update_Devices_Settings"/>
+    <addaction name="action_Update_Worklist_Settings"/>
+    <addaction name="action_Update_PACS_Server_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_About"/>
+   </widget>
+   <addaction name="menuStudy"/>
+   <addaction name="menuS_ystem"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="studyToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_New_Study"/>
+   <addaction name="action_Open_Study"/>
+   <addaction name="action_Load_Study"/>
+   <addaction name="action_Quick_Start"/>
+   <addaction name="separator"/>
+   <addaction name="action_Print_Study"/>
+   <addaction name="action_Write_To_CD"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="systemToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Get_Peripherals_Status"/>
+   <addaction name="action_Get_Tools_Status"/>
+   <addaction name="action_Get_Filters_Status"/>
+  </widget>
+  <widget class="QToolBar" name="settingsToolBar">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Get_Connections"/>
+   <addaction name="action_Update_Devices_Settings"/>
+   <addaction name="action_Update_Worklist_Settings"/>
+   <addaction name="action_Update_PACS_Server_Settings"/>
+  </widget>
+  <action name="action_New_Study">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_start_document.png</normaloff>:/assets/images/_48_start_document.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+  </action>
+  <action name="action_Open_Study">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_open_document.png</normaloff>:/assets/images/_48_open_document.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="action_Load_Study">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_load.png</normaloff>:/assets/images/_48_load.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Load</string>
+   </property>
+  </action>
+  <action name="action_Quick_Start">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_quick.png</normaloff>:/assets/images/_48_quick.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Quick</string>
+   </property>
+  </action>
+  <action name="action_Print_Study">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_printing.png</normaloff>:/assets/images/_48_printing.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="action_Write_To_CD">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_writecd.png</normaloff>:/assets/images/_48_writecd.png</iconset>
+   </property>
+   <property name="text">
+    <string>Write</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_exit.png</normaloff>:/assets/images/_48_exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="action_Get_Peripherals_Status">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_pheripherals.png</normaloff>:/assets/images/_48_pheripherals.png</iconset>
+   </property>
+   <property name="text">
+    <string>Peripherals</string>
+   </property>
+  </action>
+  <action name="action_Get_Tools_Status">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_tools.png</normaloff>:/assets/images/_48_tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tools</string>
+   </property>
+  </action>
+  <action name="action_Get_Filters_Status">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_filters.png</normaloff>:/assets/images/_48_filters.png</iconset>
+   </property>
+   <property name="text">
+    <string>Filters</string>
+   </property>
+  </action>
+  <action name="action_Get_Connections">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_connections.png</normaloff>:/assets/images/_48_connections.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connections</string>
+   </property>
+  </action>
+  <action name="action_Update_Devices_Settings">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_devices.png</normaloff>:/assets/images/_48_devices.png</iconset>
+   </property>
+   <property name="text">
+    <string>Devices</string>
+   </property>
+  </action>
+  <action name="action_Update_Worklist_Settings">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_worklist.png</normaloff>:/assets/images/_48_worklist.png</iconset>
+   </property>
+   <property name="text">
+    <string>Worklist</string>
+   </property>
+  </action>
+  <action name="action_Update_PACS_Server_Settings">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_pacs_server.png</normaloff>:/assets/images/_48_pacs_server.png</iconset>
+   </property>
+   <property name="text">
+    <string>PACS Server</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/assets/images/_48_info.png</normaloff>:/assets/images/_48_info.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
- <resources/>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

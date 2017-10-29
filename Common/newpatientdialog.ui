@@ -1,38 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>NewPatientDialog</class>
  <widget class="QDialog" name="NewPatientDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>700</width>
+    <height>485</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>New Patient Registeration</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>240</y>
-     <width>341</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(172, 172, 172);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <spacer name="horizontalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_3">
+          <property name="minimumSize">
+           <size>
+            <width>48</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/assets/images/_48_start_document.png);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="titleLbl">
+          <property name="styleSheet">
+           <string notr="true">font: 75 22pt &quot;Bell MT&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Patient Information</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="lastNameLbl">
+            <property name="text">
+             <string>&amp;Last Name*</string>
+            </property>
+            <property name="buddy">
+             <cstring>lastNameLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>37</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lastNameLineEdit">
+            <property name="toolTip">
+             <string extracomment="patient last name"/>
+            </property>
+            <property name="whatsThis">
+             <string>patient last name</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);
+</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="firstNameLbl">
+            <property name="text">
+             <string>&amp;First Name</string>
+            </property>
+            <property name="buddy">
+             <cstring>firstNameLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>46</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="firstNameLineEdit">
+            <property name="toolTip">
+             <string extracomment="patient first name"/>
+            </property>
+            <property name="whatsThis">
+             <string>patient first name</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="middleNameLbl">
+            <property name="text">
+             <string>&amp;Middle Name</string>
+            </property>
+            <property name="buddy">
+             <cstring>middleNameLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>26</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="middleNameLineEdit">
+            <property name="toolTip">
+             <string extracomment="middle name"/>
+            </property>
+            <property name="whatsThis">
+             <string>patient middle name</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="patientIDLbl">
+            <property name="text">
+             <string>&amp;Patient ID*</string>
+            </property>
+            <property name="buddy">
+             <cstring>patientIdLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>41</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="patientIdLineEdit">
+            <property name="toolTip">
+             <string extracomment="patient ID"/>
+            </property>
+            <property name="whatsThis">
+             <string>Primary hospital identification number or code for the patient. Tag(0010,0020)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="birthDateLbl">
+            <property name="text">
+             <string>&amp;Birth Date</string>
+            </property>
+            <property name="buddy">
+             <cstring>dateEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>50</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="dateEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="whatsThis">
+             <string>patient birthdate</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="GenderLbl">
+            <property name="text">
+             <string>&amp;Gender</string>
+            </property>
+            <property name="buddy">
+             <cstring>genderComboBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="genderComboBox">
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Male</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Female</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Unknown</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="refessingPhysicianLbl">
+            <property name="text">
+             <string>&amp;Referring Physician</string>
+            </property>
+            <property name="buddy">
+             <cstring>referringPhysicianLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="referringPhysicianLineEdit">
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="admissionNumberLbl">
+            <property name="text">
+             <string>&amp;Admission Number</string>
+            </property>
+            <property name="buddy">
+             <cstring>admissionNumberLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>42</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="admissionNumberLineEdit">
+            <property name="whatsThis">
+             <string>Identification number of the visit as assigned by the healthcare provider. Tag (0038,0010)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="accessionNumberLbl">
+            <property name="text">
+             <string>A&amp;ccession Number*</string>
+            </property>
+            <property name="buddy">
+             <cstring>accessionNumberLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>34</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="accessionNumberLineEdit">
+            <property name="whatsThis">
+             <string>A RIS generated number that identifies the order for the Study. Tag (0008,0050)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGraphicsView" name="graphicsView">
+       <property name="minimumSize">
+        <size>
+         <width>180</width>
+         <height>380</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>180</width>
+         <height>380</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <pixmapfunction/>
+ <tabstops>
+  <tabstop>lastNameLineEdit</tabstop>
+  <tabstop>firstNameLineEdit</tabstop>
+  <tabstop>middleNameLineEdit</tabstop>
+  <tabstop>patientIdLineEdit</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>genderComboBox</tabstop>
+  <tabstop>referringPhysicianLineEdit</tabstop>
+  <tabstop>admissionNumberLineEdit</tabstop>
+  <tabstop>accessionNumberLineEdit</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -42,8 +551,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>224</x>
+     <y>366</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -58,11 +567,11 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>262</x>
+     <y>367</y>
     </hint>
     <hint type="destinationlabel">
-     <x>286</x>
+     <x>268</x>
      <y>274</y>
     </hint>
    </hints>
