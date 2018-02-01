@@ -39,9 +39,12 @@
 #include <vtkCommand.h>
 #include <vtkImageMapper.h>
 #include <vtkImageData.h>
-
-#include <QVTKOpenGLWidget.h>
-
+#include <vtkCamera.h>
+#include <vtkImageActor.h>
+#include <vtkImageFlip.h>
+#include <vtkImageCast.h>
+#include <vtkImageMapper3D.h>
+#include <vtkAlgorithm.h>
 
 
 // STD includes
@@ -66,6 +69,7 @@ ImageViewer::ImageViewer(QWidget *parent) :
     renderer(vtkRenderer::New()),
     style(vtkSmartPointer<vtkInteractorStyleImage>::New()),
     blankImage(vtkImageData::New()),
+    flipFilter(vtkSmartPointer<vtkImageFlip>::New()),
     ui(new Ui::ImageViewer)
 {
     ui->setupUi(this);
@@ -134,6 +138,22 @@ ImageViewer::ImageViewer(QWidget *parent) :
             SIGNAL(doubleClicked(ctkThumbnailLabel)),
             this,
             SLOT(OnThumbnailChanged(ctkThumbnailLabel)));
+    connect(ui->actionvFlip,
+            SIGNAL(toggled(bool)),
+            this,
+            SLOT(OnVerticalFlipToggled(bool)));
+    connect(ui->actionhFlip,
+            SIGNAL(toggled(bool)),
+            this,
+            SLOT(OnHorizontalFlipToggled(bool)));
+
+
+// These linese test to make toolbar (flip) operations mutually exclusive.
+
+//    QActionGroup* toolActionGroup= new QActionGroup(this);
+//    toolActionGroup->addAction(ui->actionhFlip);
+//    toolActionGroup->addAction(ui->actionvFlip);
+//    toolActionGroup->setExclusive(true);
 
 }
 
@@ -144,9 +164,57 @@ ImageViewer::~ImageViewer()
 
 void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 {
-   qDebug()<<widget.text();
+    DisplayImage(widget.text());
+}
 
-   DisplayImage(widget.text());
+
+// this image flip is not the best practice. find a better solutipn for the next iteration
+void ImageViewer::OnVerticalFlipToggled(bool value)
+{
+
+    imageViewer->GetInput();
+    flipFilter->SetInputConnection(imageReader->GetOutputPort());
+    if(value)
+    {
+        flipFilter->SetFilteredAxis(0);
+
+    }
+    else
+    {
+        flipFilter->SetFilteredAxis(-2);
+
+    }
+
+    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
+    flipFilter->Update();
+    imageViewer->Render();
+}
+
+// this image flip is not the best practice. find a better solutipn for the next iteration
+void ImageViewer::OnHorizontalFlipToggled(bool value)
+{
+
+
+    //instead of fliping image, you can flip camera.
+    //imageViewer->GetRenderer()->GetActiveCamera()->Yaw(180);
+
+    //flipXFilter->AddInputData(imageViewer->GetImageActor()->GetInput());
+    flipFilter->SetInputConnection(imageReader->GetOutputPort());
+    if(value)
+    {
+        //ui->actionvFlip->setChecked(false);
+        flipFilter->SetFilteredAxis(1);
+    }
+    else
+    {
+        flipFilter->SetFilteredAxis(-1);
+
+    }
+
+
+    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
+    flipFilter->Update();
+    imageViewer->Render();
 
 }
 
@@ -164,12 +232,9 @@ bool ImageViewer::IsValidFile(QString fullFileName)
     }
 }
 
-
-
 /**
 * Display an image file
 */
-
 void ImageViewer::DisplayImage(QString fullFileName)
 {
     if(IsValidFile(fullFileName))
@@ -208,7 +273,6 @@ void ImageViewer::DisplayImage(QString fullFileName)
 
 }
 
-
 void ImageViewer::UpdateThumbnailList()
 {
     foreach (QString item, imagelist) {
@@ -222,3 +286,8 @@ void ImageViewer::UpdateThumbnailList()
 }
 
 
+// not implemented yet.
+void ImageViewer::on_actioninvertColor_triggered()
+{
+
+}

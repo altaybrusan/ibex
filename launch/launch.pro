@@ -50,7 +50,8 @@ LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
         $$(VTK_DIR)/lib/vtkCommonExecutionModel-9.0.lib\
         $$(VTK_DIR)/lib/vtkInteractionWidgets-9.0.lib\
         $$(VTK_DIR)/lib/vtkRenderingAnnotation-9.0.lib\
-        $$(VTK_DIR)/lib/vtkCommonDataModel-9.0.lib
+        $$(VTK_DIR)/lib/vtkCommonDataModel-9.0.lib\
+        $$(VTK_DIR)/lib/vtkImagingCore-9.0.lib
 
 
 INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
