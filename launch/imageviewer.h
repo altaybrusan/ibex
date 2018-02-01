@@ -2,6 +2,16 @@
 #define IMAGEVIEWER_H
 
 #include <QMainWindow>
+#include <ctkQImageView.h>
+#include <vtkRenderWindowInteractor.h>
+#include <vtkSmartPointer.h>
+#include <vtkLegendScaleActor.h>
+#include <vtkImageViewer2.h>
+#include <vtkDistanceWidget.h>
+#include <vtkImageReader2.h>
+#include <vtkImageReader2Factory.h>
+#include <ctkThumbnailListWidget.h>
+#include "ctkThumbnailLabel.h"
 
 namespace Ui {
 class ImageViewer;
@@ -13,10 +23,32 @@ class ImageViewer : public QMainWindow
 
 public:
     explicit ImageViewer(QWidget *parent = 0);
+    void DisplayImage(QString fullFileName);
     ~ImageViewer();
+
+
+protected slots:
+    void OnThumbnailChanged(const ctkThumbnailLabel & 	widget);
+
 
 private:
     Ui::ImageViewer *ui;
+    vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor;
+    vtkSmartPointer<vtkImageViewer2> imageViewer;
+    vtkSmartPointer<vtkLegendScaleActor> legendScaleActor;
+    vtkSmartPointer<vtkDistanceWidget> distanceWidget;
+    vtkSmartPointer<vtkImageReader2> imageReader;
+    vtkSmartPointer<vtkImageReader2Factory> imageFactory;
+    vtkSmartPointer<vtkRenderer> renderer;
+    vtkSmartPointer<vtkInteractorStyleImage> style;
+    vtkSmartPointer<vtkImageData> blankImage;
+    ctkThumbnailListWidget* thumbnailBar;
+
+    QList<QString> imagelist,thumbnailList;
+
+    bool IsValidFile(QString fullFileName);
+    void UpdateThumbnailList();
+
 };
 
 #endif // IMAGEVIEWER_H
