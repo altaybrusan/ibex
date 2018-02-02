@@ -22,5 +22,6 @@
         <file>images/_48_horizontal_flip.png</file>
         <file>images/_48_vertical_flip.png</file>
         <file>images/_48_invert_selection.png</file>
+        <file>images/_72_radiation_sign.png</file>
     </qresource>
 </RCC>

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ImageViewer_t {
-    QByteArrayData data[8];
-    char stringdata0[109];
+    QByteArrayData data[9];
+    char stringdata0[140];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,12 +38,14 @@ QT_MOC_LITERAL(3, 32, 17), // "ctkThumbnailLabel"
 QT_MOC_LITERAL(4, 50, 6), // "widget"
 QT_MOC_LITERAL(5, 57, 21), // "OnVerticalFlipToggled"
 QT_MOC_LITERAL(6, 79, 5), // "value"
-QT_MOC_LITERAL(7, 85, 23) // "OnHorizontalFlipToggled"
+QT_MOC_LITERAL(7, 85, 23), // "OnHorizontalFlipToggled"
+QT_MOC_LITERAL(8, 109, 30) // "on_actioninvertColor_triggered"
 
     },
     "ImageViewer\0OnThumbnailChanged\0\0"
     "ctkThumbnailLabel\0widget\0OnVerticalFlipToggled\0"
-    "value\0OnHorizontalFlipToggled"
+    "value\0OnHorizontalFlipToggled\0"
+    "on_actioninvertColor_triggered"
 };
 #undef QT_MOC_LITERAL
 
@@ -53,7 +55,7 @@ static const uint qt_meta_data_ImageViewer[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -61,14 +63,16 @@ static const uint qt_meta_data_ImageViewer[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   29,    2, 0x09 /* Protected */,
-       5,    1,   32,    2, 0x09 /* Protected */,
-       7,    1,   35,    2, 0x09 /* Protected */,
+       1,    1,   34,    2, 0x09 /* Protected */,
+       5,    1,   37,    2, 0x09 /* Protected */,
+       7,    1,   40,    2, 0x09 /* Protected */,
+       8,    0,   43,    2, 0x09 /* Protected */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, QMetaType::Bool,    6,
     QMetaType::Void, QMetaType::Bool,    6,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -82,6 +86,7 @@ void ImageViewer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->OnThumbnailChanged((*reinterpret_cast< const ctkThumbnailLabel(*)>(_a[1]))); break;
         case 1: _t->OnVerticalFlipToggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 2: _t->OnHorizontalFlipToggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 3: _t->on_actioninvertColor_triggered(); break;
         default: ;
         }
     }
@@ -112,13 +117,13 @@ int ImageViewer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 4)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

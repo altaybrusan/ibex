@@ -14,7 +14,7 @@ CXX           = cl
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DTEST_IMAGES_DIR=\"C:/Users/Altay/Documents/Qt/Projects/ibex/launch/test_images/\" -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi -MDd -W3 -w44456 -w44457 -w44458 /Fd..\build\debug\.obj\laucnh.vc.pdb $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fd..\build\debug\.obj\laucnh.vc.pdb $(DEFINES)
-INCPATH       = -I. -I..\3rd-Party\ctk\include\ctk-0.1 -IC:\VTK\include\vtk-9.0 -IC:\Qt\5.9.4\msvc2015_64\include -IC:\Qt\5.9.4\msvc2015_64\include\QtWidgets -IC:\Qt\5.9.4\msvc2015_64\include\QtGui -IC:\Qt\5.9.4\msvc2015_64\include\QtANGLE -IC:\Qt\5.9.4\msvc2015_64\include\QtCore -I..\build\debug\.moc -I..\build\debug\.ui -IC:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc 
+INCPATH       = -I. -I..\3rd-Party\ctk\include\ctk-0.1 -I..\common\include -IC:\VTK\include\vtk-9.0 -IC:\Qt\5.9.4\msvc2015_64\include -IC:\Qt\5.9.4\msvc2015_64\include\QtWidgets -IC:\Qt\5.9.4\msvc2015_64\include\QtGui -IC:\Qt\5.9.4\msvc2015_64\include\QtANGLE -IC:\Qt\5.9.4\msvc2015_64\include\QtCore -I..\build\debug\.moc -I..\build\debug\.ui -IC:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
 LIBS          = /LIBPATH:C:\Qt\5.9.4\msvc2015_64\lib C:\Qt\5.9.4\msvc2015_64\lib\qtmaind.lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\utils\postgresql\pgsql\lib shell32.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgetsPlugins.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKWidgetsPlugins.lib C:\VTK\lib\QVTKWidgetPlugin.lib C:\VTK\lib\vtkInteractionStyle-9.0.lib C:\VTK\lib\vtkCommonCore-9.0.lib C:\VTK\lib\vtkRenderingOpenGL2-9.0.lib C:\VTK\lib\vtkViewsCore-9.0.lib C:\VTK\lib\vtkGUISupportQt-9.0.lib C:\VTK\lib\vtkRenderingCore-9.0.lib C:\VTK\lib\vtkInteractionImage-9.0.lib C:\VTK\lib\vtkRenderingImage-9.0.lib C:\VTK\lib\vtkIOImage-9.0.lib C:\VTK\lib\vtkCommonExecutionModel-9.0.lib C:\VTK\lib\vtkInteractionWidgets-9.0.lib C:\VTK\lib\vtkRenderingAnnotation-9.0.lib C:\VTK\lib\vtkCommonDataModel-9.0.lib C:\VTK\lib\vtkImagingCore-9.0.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Guid.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Cored.lib 
@@ -216,6 +216,7 @@ compiler_rcc_clean:
 		C:\Qt\5.9.4\msvc2015_64\bin\rcc.exe \
 		images\_48_filters.png \
 		images\_48_pacs_server.png \
+		images\_72_radiation_sign.png \
 		images\_48_start_document.png \
 		images\human.jpg \
 		images\_48_info.png \
@@ -353,7 +354,7 @@ compiler_moc_header_clean:
 		mainwindow.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" mainwindow.h -o ..\build\debug\.moc\moc_mainwindow.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" mainwindow.h -o ..\build\debug\.moc\moc_mainwindow.cpp
 
 ..\build\debug\.moc\moc_newpatientdialog.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -687,7 +688,7 @@ compiler_moc_header_clean:
 		newpatientdialog.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" newpatientdialog.h -o ..\build\debug\.moc\moc_newpatientdialog.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" newpatientdialog.h -o ..\build\debug\.moc\moc_newpatientdialog.cpp
 
 ..\build\debug\.moc\moc_bodypart.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
@@ -755,7 +756,7 @@ compiler_moc_header_clean:
 		bodypart.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypart.h -o ..\build\debug\.moc\moc_bodypart.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypart.h -o ..\build\debug\.moc\moc_bodypart.cpp
 
 ..\build\debug\.moc\moc_bodypartselectionsquare.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
@@ -857,7 +858,7 @@ compiler_moc_header_clean:
 		bodypartselectionsquare.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypartselectionsquare.h -o ..\build\debug\.moc\moc_bodypartselectionsquare.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypartselectionsquare.h -o ..\build\debug\.moc\moc_bodypartselectionsquare.cpp
 
 ..\build\debug\.moc\moc_exposuredialog.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -963,7 +964,7 @@ compiler_moc_header_clean:
 		exposuredialog.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" exposuredialog.h -o ..\build\debug\.moc\moc_exposuredialog.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" exposuredialog.h -o ..\build\debug\.moc\moc_exposuredialog.cpp
 
 ..\build\debug\.moc\moc_imageviewer.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmainwindow.h \
@@ -1127,10 +1128,14 @@ compiler_moc_header_clean:
 		..\3rd-Party\ctk\include\ctk-0.1\ctkThumbnailLabel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QModelIndex \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\VTK\include\vtk-9.0\vtkImageFlip.h \
+		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
+		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		imageviewer.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" imageviewer.h -o ..\build\debug\.moc\moc_imageviewer.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" imageviewer.h -o ..\build\debug\.moc\moc_imageviewer.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -2514,6 +2519,10 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		..\3rd-Party\ctk\include\ctk-0.1\ctkThumbnailLabel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QModelIndex \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\VTK\include\vtk-9.0\vtkImageFlip.h \
+		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
+		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug
 
 ..\build\debug\.obj\imageviewer.obj: imageviewer.cpp imageviewer.h \
@@ -2679,6 +2688,10 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		..\3rd-Party\ctk\include\ctk-0.1\ctkThumbnailLabel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QModelIndex \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\VTK\include\vtk-9.0\vtkImageFlip.h \
+		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
+		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		..\build\debug\.ui\ui_imageviewer.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFileInfo \
@@ -2766,10 +2779,18 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageMapper.h \
 		C:\VTK\include\vtk-9.0\vtkMapper2D.h \
 		C:\VTK\include\vtk-9.0\vtkAbstractMapper.h \
-		C:\VTK\include\vtk-9.0\vtkImageFlip.h \
-		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
-		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h
+		C:\VTK\include\vtk-9.0\vtkCamera.h \
+		C:\VTK\include\vtk-9.0\vtkRect.h \
+		C:\VTK\include\vtk-9.0\vtkVector.h \
+		C:\VTK\include\vtk-9.0\vtkTuple.h \
+		C:\VTK\include\vtk-9.0\vtkMath.h \
+		C:\VTK\include\vtk-9.0\vtkTypeTraits.h \
+		C:\VTK\include\vtk-9.0\vtkMathConfigure.h \
+		C:\VTK\include\vtk-9.0\vtkImageActor.h \
+		C:\VTK\include\vtk-9.0\vtkImageSlice.h \
+		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		C:\VTK\include\vtk-9.0\vtkImageMapper3D.h \
+		C:\VTK\include\vtk-9.0\vtkAbstractMapper3D.h
 
 ..\build\debug\.obj\qrc_resources.obj: ..\build\debug\.rcc\qrc_resources.cpp 
 

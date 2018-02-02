@@ -55,7 +55,9 @@ LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
 
 
 INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
+               ../common/include \
                $$(VTK_DIR)/include/vtk-9.0
+
 
 
 SOURCES += \
@@ -72,7 +74,7 @@ HEADERS += \
     bodypart.h \
     bodypartselectionsquare.h \
     exposuredialog.h \
-    imageviewer.h
+    imageviewer.h \
 
 FORMS += \
         mainwindow.ui \

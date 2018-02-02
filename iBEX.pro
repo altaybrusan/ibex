@@ -4,7 +4,8 @@ include(commonconfig.pri)
 CONFIG += ordered
 SUBDIRS += \
     launch \
-    plugins
+    plugins \
+    tests
 
 
 

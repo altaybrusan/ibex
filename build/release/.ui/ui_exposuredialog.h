@@ -17,6 +17,9 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTableView>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include "ctkCollapsibleGroupBox.h"
 
@@ -29,12 +32,19 @@ public:
     QFrame *displayFrame;
     QVBoxLayout *verticalLayout;
     QFrame *sideFrame;
-    ctkCollapsibleGroupBox *CollapsibleGroupBox;
-    ctkCollapsibleGroupBox *CollapsibleGroupBox_2;
-    ctkCollapsibleGroupBox *CollapsibleGroupBox_3;
+    QVBoxLayout *verticalLayout_2;
+    QFrame *titleFrame;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *iconhorizontalSpacerLeft;
     QFrame *frame;
-    QFrame *frame_2;
+    QSpacerItem *iconhorizontalSpacerRight;
+    ctkCollapsibleGroupBox *patientDemographyBox;
+    QTableView *procedureTableView;
     QFrame *line;
+    QFrame *protocolFrame;
+    QFrame *statusFrame;
+    QVBoxLayout *verticalLayout_3;
+    QTextBrowser *textBrowser;
 
     void setupUi(QDialog *ExposureDialog)
     {
@@ -66,30 +76,80 @@ public:
         sideFrame->setSizePolicy(sizePolicy1);
         sideFrame->setFrameShape(QFrame::Panel);
         sideFrame->setFrameShadow(QFrame::Plain);
-        CollapsibleGroupBox = new ctkCollapsibleGroupBox(sideFrame);
-        CollapsibleGroupBox->setObjectName(QStringLiteral("CollapsibleGroupBox"));
-        CollapsibleGroupBox->setGeometry(QRect(10, 50, 300, 100));
-        CollapsibleGroupBox_2 = new ctkCollapsibleGroupBox(sideFrame);
-        CollapsibleGroupBox_2->setObjectName(QStringLiteral("CollapsibleGroupBox_2"));
-        CollapsibleGroupBox_2->setGeometry(QRect(10, 200, 300, 100));
-        CollapsibleGroupBox_3 = new ctkCollapsibleGroupBox(sideFrame);
-        CollapsibleGroupBox_3->setObjectName(QStringLiteral("CollapsibleGroupBox_3"));
-        CollapsibleGroupBox_3->setGeometry(QRect(10, 340, 300, 100));
-        frame = new QFrame(sideFrame);
+        verticalLayout_2 = new QVBoxLayout(sideFrame);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        titleFrame = new QFrame(sideFrame);
+        titleFrame->setObjectName(QStringLiteral("titleFrame"));
+        titleFrame->setMaximumSize(QSize(16777215, 80));
+        titleFrame->setFrameShape(QFrame::StyledPanel);
+        titleFrame->setFrameShadow(QFrame::Raised);
+        horizontalLayout_2 = new QHBoxLayout(titleFrame);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(-1, 3, -1, 3);
+        iconhorizontalSpacerLeft = new QSpacerItem(90, 20, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(iconhorizontalSpacerLeft);
+
+        frame = new QFrame(titleFrame);
         frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(10, 490, 231, 80));
+        frame->setMinimumSize(QSize(0, 70));
+        frame->setStyleSheet(QStringLiteral("image: url(:/assets/images/_72_radiation_sign.png);"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        frame_2 = new QFrame(sideFrame);
-        frame_2->setObjectName(QStringLiteral("frame_2"));
-        frame_2->setGeometry(QRect(50, 650, 120, 80));
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
+
+        horizontalLayout_2->addWidget(frame);
+
+        iconhorizontalSpacerRight = new QSpacerItem(90, 20, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(iconhorizontalSpacerRight);
+
+
+        verticalLayout_2->addWidget(titleFrame);
+
+        patientDemographyBox = new ctkCollapsibleGroupBox(sideFrame);
+        patientDemographyBox->setObjectName(QStringLiteral("patientDemographyBox"));
+
+        verticalLayout_2->addWidget(patientDemographyBox);
+
+        procedureTableView = new QTableView(sideFrame);
+        procedureTableView->setObjectName(QStringLiteral("procedureTableView"));
+        procedureTableView->setMaximumSize(QSize(16777215, 150));
+
+        verticalLayout_2->addWidget(procedureTableView);
+
         line = new QFrame(sideFrame);
         line->setObjectName(QStringLiteral("line"));
-        line->setGeometry(QRect(20, 470, 241, 16));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_2->addWidget(line);
+
+        protocolFrame = new QFrame(sideFrame);
+        protocolFrame->setObjectName(QStringLiteral("protocolFrame"));
+        protocolFrame->setFrameShape(QFrame::StyledPanel);
+        protocolFrame->setFrameShadow(QFrame::Raised);
+
+        verticalLayout_2->addWidget(protocolFrame);
+
+        statusFrame = new QFrame(sideFrame);
+        statusFrame->setObjectName(QStringLiteral("statusFrame"));
+        statusFrame->setMaximumSize(QSize(16777215, 160));
+        statusFrame->setFrameShape(QFrame::Panel);
+        statusFrame->setFrameShadow(QFrame::Plain);
+        verticalLayout_3 = new QVBoxLayout(statusFrame);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(2, 2, 2, 2);
+        textBrowser = new QTextBrowser(statusFrame);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setMaximumSize(QSize(16777215, 150));
+        textBrowser->setStyleSheet(QLatin1String("background-color: rgb(0, 0, 0);\n"
+"color: rgb(0, 255, 0);"));
+
+        verticalLayout_3->addWidget(textBrowser);
+
+
+        verticalLayout_2->addWidget(statusFrame);
+
 
         horizontalLayout->addWidget(sideFrame);
 
@@ -101,10 +161,8 @@ public:
 
     void retranslateUi(QDialog *ExposureDialog)
     {
-        ExposureDialog->setWindowTitle(QApplication::translate("ExposureDialog", "Dialog", Q_NULLPTR));
-        CollapsibleGroupBox->setTitle(QApplication::translate("ExposureDialog", "GroupBox", Q_NULLPTR));
-        CollapsibleGroupBox_2->setTitle(QApplication::translate("ExposureDialog", "GroupBox", Q_NULLPTR));
-        CollapsibleGroupBox_3->setTitle(QApplication::translate("ExposureDialog", "GroupBox", Q_NULLPTR));
+        ExposureDialog->setWindowTitle(QApplication::translate("ExposureDialog", "Exposure Dialog", Q_NULLPTR));
+        patientDemographyBox->setTitle(QApplication::translate("ExposureDialog", "Patients Demography", Q_NULLPTR));
     } // retranslateUi
 
 };

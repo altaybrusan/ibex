@@ -32,6 +32,7 @@ protected slots:
     void OnThumbnailChanged(const ctkThumbnailLabel & 	widget);
     void OnVerticalFlipToggled(bool value);
     void OnHorizontalFlipToggled(bool value);
+    void on_actioninvertColor_triggered();
 
 
 private:

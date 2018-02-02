@@ -24,6 +24,6 @@ void MainWindow::on_action_Quick_Start_triggered()
 {
     ExposureDialog* _dialog =new ExposureDialog(this);
 
-    _dialog->show();
+    _dialog->showMaximized();
 
 }
