@@ -1,6 +1,7 @@
 #include <QString>
 #include <QtTest>
 #include "idevice.h"
+#include "isettingsparser.h"
 
 class GeneratorSimulator:public QObject,IDevice
 {
@@ -40,12 +41,27 @@ public:
         return _msg;
     }
 
+    void UpdateSettingsParser(const ISettingsParser* parser ) override
+    {
+        //parser.GetSettings();
+
+        return;
+    }
 
     void Execute(QString& command)
     {
         qDebug()<<" Requested command is: " << command;
 
         return;
+    }
+
+    void UpdateParentWidget(QWidget *parent) override
+    {
+
+    }
+    QWidget *GetWidget() override
+    {
+        return new QWidget();
     }
 
     ~GeneratorSimulator()
@@ -58,9 +74,10 @@ signals:
     QString NotifyNewMessage();
 
 
+
+
+
 };
-
-
 
 class TestIDevice : public QObject
 {

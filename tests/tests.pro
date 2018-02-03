@@ -4,9 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += testlib
-
-QT       -= gui
+QT       += testlib gui core
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+#QT       -= gui
 
 TARGET = tst_testsqtenum
 CONFIG   += console

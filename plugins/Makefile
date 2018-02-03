@@ -26,7 +26,8 @@ SYMLINK       = $(QMAKE) -install ln -f -s
 DEL_DIR       = rmdir
 MOVE          = move
 SUBTARGETS    =  \
-		sub-log4qt
+		sub-log4qt \
+		sub-GulmayGenerator
 
 
 sub-log4qt-qmake_all:  FORCE
@@ -62,6 +63,39 @@ sub-log4qt-uninstall_subtargets: FORCE
 	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+sub-GulmayGenerator-qmake_all:  FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	cd GulmayGenerator\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && $(MAKE) -f Makefile qmake_all
+sub-GulmayGenerator: FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-GulmayGenerator-make_first: FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-GulmayGenerator-all: FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-GulmayGenerator-clean: FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-GulmayGenerator-distclean: FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-GulmayGenerator-install_subtargets: FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-GulmayGenerator-uninstall_subtargets: FORCE
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
 
 Makefile: plugins.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf \
@@ -365,39 +399,55 @@ plugins.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile plugins.pro -spec win32-msvc
 
-qmake_all: sub-log4qt-qmake_all FORCE
+qmake_all: sub-log4qt-qmake_all sub-GulmayGenerator-qmake_all FORCE
 
-make_first: sub-log4qt-make_first  FORCE
-all: sub-log4qt-all  FORCE
-clean: sub-log4qt-clean  FORCE
-distclean: sub-log4qt-distclean  FORCE
+make_first: sub-log4qt-make_first sub-GulmayGenerator-make_first  FORCE
+all: sub-log4qt-all sub-GulmayGenerator-all  FORCE
+clean: sub-log4qt-clean sub-GulmayGenerator-clean  FORCE
+distclean: sub-log4qt-distclean sub-GulmayGenerator-distclean  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-log4qt-install_subtargets FORCE
-uninstall_subtargets: sub-log4qt-uninstall_subtargets FORCE
+install_subtargets: sub-log4qt-install_subtargets sub-GulmayGenerator-install_subtargets FORCE
+uninstall_subtargets: sub-log4qt-uninstall_subtargets sub-GulmayGenerator-uninstall_subtargets FORCE
 
 sub-log4qt-debug:
 	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-log4qt-debug
+sub-GulmayGenerator-debug:
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+debug: sub-log4qt-debug sub-GulmayGenerator-debug
 
 sub-log4qt-release:
 	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-log4qt-release
+sub-GulmayGenerator-release:
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+release: sub-log4qt-release sub-GulmayGenerator-release
 
 sub-log4qt-check:
 	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-log4qt-check
+sub-GulmayGenerator-check:
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+check: sub-log4qt-check sub-GulmayGenerator-check
 
 sub-log4qt-benchmark:
 	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-log4qt-benchmark
+sub-GulmayGenerator-benchmark:
+	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd GulmayGenerator\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-log4qt-benchmark sub-GulmayGenerator-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

@@ -63,10 +63,10 @@ INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    newpatientdialog.cpp \
-    bodypartselectionsquare.cpp \
-    exposuredialog.cpp \
-    imageviewer.cpp
+        newpatientdialog.cpp \
+        bodypartselectionsquare.cpp \
+        exposuredialog.cpp \
+        imageviewer.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -75,6 +75,8 @@ HEADERS += \
     bodypartselectionsquare.h \
     exposuredialog.h \
     imageviewer.h \
+    ../common/include/idevice.h\
+    ../common/include/isettingsparser.h
 
 FORMS += \
         mainwindow.ui \

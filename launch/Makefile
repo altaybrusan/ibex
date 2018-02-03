@@ -211,7 +211,6 @@ Makefile: launch.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf \
-		..\commonconfig.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf \
@@ -371,7 +370,6 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf:
-..\commonconfig.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf:
@@ -402,10 +400,10 @@ qmake_all: FORCE
 make_first: release-make_first debug-make_first  FORCE
 all: release-all debug-all  FORCE
 clean: release-clean debug-clean  FORCE
-	-$(DEL_FILE) ..\build\laucnh.exp
+	-$(DEL_FILE) laucnh.exp
 distclean: release-distclean debug-distclean  FORCE
 	-$(DEL_FILE) Makefile
-	-$(DEL_FILE) ..\build\laucnh.lib
+	-$(DEL_FILE) laucnh.lib
 
 release-mocclean:
 	@set MAKEFLAGS=$(MAKEFLAGS)

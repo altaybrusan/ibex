@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
-include(commonconfig.pri)
+include(./common/build/commonconfig.pri)
 
 CONFIG += ordered
 SUBDIRS += \

@@ -11,3 +11,4 @@ Debug:OBJECTS_DIR = $$DESTDIR/.obj
 Debug:MOC_DIR = $$DESTDIR/.moc
 Debug:RCC_DIR = $$DESTDIR/.rcc
 Debug:UI_DIR = $$DESTDIR/.ui
+

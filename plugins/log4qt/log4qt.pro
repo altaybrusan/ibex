@@ -1,9 +1,9 @@
 QT += core xml network
 
-include(build.pri)
-include(g++.pri)
+include(../../common/build/build.pri)
+include(../../common/build/g++.pri)
 include(log4qt.pri)
-include(../../commonconfig.pri)
+include(../../common/build/commonconfig.pri)
 include(../pluginconfiguration.pri)
 
 # uncomment if you want to build a static log4qt library

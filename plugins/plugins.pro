@@ -1,3 +1,4 @@
 TEMPLATE = subdirs
 SUBDIRS += \
-            log4qt
+            log4qt \
+    GulmayGenerator
