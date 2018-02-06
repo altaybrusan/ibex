@@ -17,10 +17,12 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 #include "ctkCollapsibleGroupBox.h"
 
 QT_BEGIN_NAMESPACE
@@ -42,6 +44,9 @@ public:
     QTableView *procedureTableView;
     QFrame *line;
     QFrame *protocolFrame;
+    QHBoxLayout *horizontalLayout_3;
+    QScrollArea *parameterScrollArea;
+    QWidget *scrollAreaWidgetContents;
     QFrame *statusFrame;
     QVBoxLayout *verticalLayout_3;
     QTextBrowser *textBrowser;
@@ -56,7 +61,7 @@ public:
         displayFrame = new QFrame(ExposureDialog);
         displayFrame->setObjectName(QStringLiteral("displayFrame"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(3);
+        sizePolicy.setHorizontalStretch(4);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(displayFrame->sizePolicy().hasHeightForWidth());
         displayFrame->setSizePolicy(sizePolicy);
@@ -70,14 +75,16 @@ public:
         sideFrame = new QFrame(ExposureDialog);
         sideFrame->setObjectName(QStringLiteral("sideFrame"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(1);
+        sizePolicy1.setHorizontalStretch(2);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(sideFrame->sizePolicy().hasHeightForWidth());
         sideFrame->setSizePolicy(sizePolicy1);
         sideFrame->setFrameShape(QFrame::Panel);
         sideFrame->setFrameShadow(QFrame::Plain);
         verticalLayout_2 = new QVBoxLayout(sideFrame);
+        verticalLayout_2->setSpacing(5);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(2, 2, 2, 2);
         titleFrame = new QFrame(sideFrame);
         titleFrame->setObjectName(QStringLiteral("titleFrame"));
         titleFrame->setMaximumSize(QSize(16777215, 80));
@@ -128,6 +135,25 @@ public:
         protocolFrame->setObjectName(QStringLiteral("protocolFrame"));
         protocolFrame->setFrameShape(QFrame::StyledPanel);
         protocolFrame->setFrameShadow(QFrame::Raised);
+        horizontalLayout_3 = new QHBoxLayout(protocolFrame);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        parameterScrollArea = new QScrollArea(protocolFrame);
+        parameterScrollArea->setObjectName(QStringLiteral("parameterScrollArea"));
+        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(parameterScrollArea->sizePolicy().hasHeightForWidth());
+        parameterScrollArea->setSizePolicy(sizePolicy2);
+        parameterScrollArea->setMinimumSize(QSize(0, 250));
+        parameterScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        parameterScrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 386, 248));
+        parameterScrollArea->setWidget(scrollAreaWidgetContents);
+
+        horizontalLayout_3->addWidget(parameterScrollArea);
+
 
         verticalLayout_2->addWidget(protocolFrame);
 

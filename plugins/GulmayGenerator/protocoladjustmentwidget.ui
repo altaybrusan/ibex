@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>505</width>
-    <height>255</height>
+    <width>522</width>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,7 +37,7 @@
      <property name="frameShadow">
       <enum>QFrame::Sunken</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
@@ -75,6 +75,12 @@
           </item>
           <item>
            <widget class="QLCDNumber" name="kvpLcd">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -102,6 +108,22 @@ color: rgb(0, 255, 0);</string>
            </widget>
           </item>
          </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>4</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -138,6 +160,12 @@ color: rgb(0, 255, 0);</string>
           </item>
           <item>
            <widget class="QLCDNumber" name="currentLcd">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -160,6 +188,22 @@ color: rgb(0, 255, 0);</string>
            </widget>
           </item>
          </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>5</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -203,6 +247,12 @@ color: rgb(0, 255, 0);</string>
           </item>
           <item>
            <widget class="QLCDNumber" name="durationLcd">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -227,11 +277,43 @@ color: rgb(0, 255, 0);</string>
          </layout>
         </item>
         <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>2</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="Line" name="line">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>2</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -257,6 +339,12 @@ color: rgb(0, 255, 0);</string>
           </item>
           <item>
            <widget class="QLCDNumber" name="passedTimeLcd">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -280,96 +368,112 @@ color: rgb(0, 255, 0);</string>
           </item>
          </layout>
         </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QToolButton" name="applyBtn">
-          <property name="minimumSize">
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>100</width>
-            <height>100</height>
+            <width>20</width>
+            <height>5</height>
            </size>
           </property>
-          <property name="maximumSize">
-           <size>
-            <width>100</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Tahoma</family>
-            <pointsize>9</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font: 9pt &quot;Tahoma&quot;;
-background-color: rgb(85, 170, 127);</string>
-          </property>
-          <property name="text">
-           <string>Apply</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../../../SimpleScanner/resources.qrc">
-            <normaloff>:/images/image/apply.png</normaloff>:/images/image/apply.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>64</width>
-            <height>64</height>
-           </size>
-          </property>
-          <property name="toolButtonStyle">
-           <enum>Qt::ToolButtonTextUnderIcon</enum>
-          </property>
-         </widget>
+         </spacer>
         </item>
         <item>
-         <widget class="QToolButton" name="toggleFocalSpotBtn">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>100</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font: 9pt &quot;Tahoma&quot;;
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QToolButton" name="applyBtn">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Tahoma</family>
+              <pointsize>9</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;Tahoma&quot;;
+background-color: rgb(85, 170, 127);</string>
+            </property>
+            <property name="text">
+             <string>Apply</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/images/image/apply.png</normaloff>:/images/image/apply.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>64</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toggleFocalSpotBtn">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;Tahoma&quot;;
 </string>
-          </property>
-          <property name="text">
-           <string>Focal</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../../../SimpleScanner/resources.qrc">
-            <normaloff>:/images/image/largspot.png</normaloff>:/images/image/largspot.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>64</width>
-            <height>64</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="toolButtonStyle">
-           <enum>Qt::ToolButtonTextUnderIcon</enum>
-          </property>
-         </widget>
+            </property>
+            <property name="text">
+             <string>Focal</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/images/image/largspot.png</normaloff>:/images/image/largspot.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>64</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
@@ -385,8 +489,6 @@ background-color: rgb(85, 170, 127);</string>
    <header>ctkSliderWidget.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="../../../SimpleScanner/resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

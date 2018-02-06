@@ -213,7 +213,7 @@ Makefile: GulmayGenerator.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.c
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf \
 		..\..\common\build\build.pri \
 		..\..\common\build\g++.pri \
-		..\..\common\build\commonconfig.pri \
+		..\..\commonconfig.pri \
 		..\pluginconfiguration.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf \
@@ -375,7 +375,7 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf:
 ..\..\common\build\build.pri:
 ..\..\common\build\g++.pri:
-..\..\common\build\commonconfig.pri:
+..\..\commonconfig.pri:
 ..\pluginconfiguration.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf:
@@ -406,10 +406,10 @@ qmake_all: FORCE
 make_first: release-make_first debug-make_first  FORCE
 all: release-all debug-all  FORCE
 clean: release-clean debug-clean  FORCE
-	-$(DEL_FILE) ..\..\common\build\build\GulmayGenerator.exp
+	-$(DEL_FILE) ..\..\build\GulmayGenerator.exp
 distclean: release-distclean debug-distclean  FORCE
 	-$(DEL_FILE) Makefile
-	-$(DEL_FILE) ..\..\common\build\build\GulmayGenerator.lib
+	-$(DEL_FILE) ..\..\build\GulmayGenerator.lib
 
 release-mocclean:
 	@set MAKEFLAGS=$(MAKEFLAGS)

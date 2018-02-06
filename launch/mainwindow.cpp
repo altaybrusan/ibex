@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "newpatientdialog.h"
 #include "exposuredialog.h"
+#include "QMessageBox"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -23,7 +24,7 @@ void MainWindow::on_action_New_Study_triggered()
 void MainWindow::on_action_Quick_Start_triggered()
 {
     ExposureDialog* _dialog =new ExposureDialog(this);
-
+    //_dialog->show();
     _dialog->showMaximized();
 
 }

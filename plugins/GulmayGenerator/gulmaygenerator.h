@@ -10,7 +10,7 @@ class GULMAYGENERATORSHARED_EXPORT GulmayGenerator:public QObject, IDevice
 {
 
     Q_OBJECT
-    //Q_PLUGIN_METADATA(IID "tr.edu.boun.IDevice")
+    Q_PLUGIN_METADATA(IID "tr.edu.boun.IDevice")
     Q_INTERFACES(IDevice)
 
 

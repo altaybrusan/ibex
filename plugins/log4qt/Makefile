@@ -214,7 +214,7 @@ Makefile: log4qt.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt
 		..\..\common\build\build.pri \
 		..\..\common\build\g++.pri \
 		log4qt.pri \
-		..\..\common\build\commonconfig.pri \
+		..\..\commonconfig.pri \
 		..\pluginconfiguration.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf \
@@ -375,7 +375,7 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf:
 ..\..\common\build\build.pri:
 ..\..\common\build\g++.pri:
 log4qt.pri:
-..\..\common\build\commonconfig.pri:
+..\..\commonconfig.pri:
 ..\pluginconfiguration.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf:

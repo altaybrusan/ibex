@@ -6,7 +6,7 @@
 
 include(../../common/build/build.pri)
 include(../../common/build/g++.pri)
-include(../../common/build/commonconfig.pri)
+include(../../commonconfig.pri)
 include(../pluginconfiguration.pri)
 
 

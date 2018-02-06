@@ -31,29 +31,34 @@ class Ui_ProtocolAdjustmentWidget
 public:
     QHBoxLayout *horizontalLayout_5;
     QFrame *displayFrame;
-    QHBoxLayout *horizontalLayout;
+    QHBoxLayout *horizontalLayout_6;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_1;
     QLabel *kvpLbl;
     ctkSliderWidget *kvpSlider;
     QSpacerItem *horizontalSpacer_1;
     QLCDNumber *kvpLcd;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_2;
     QLabel *currentLbl;
     ctkSliderWidget *currentSlider;
     QSpacerItem *horizontalSpacer_2;
     QLCDNumber *currentLcd;
+    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_3;
     QLabel *timeLbl;
     ctkSliderWidget *durationSlider;
     QSpacerItem *horizontalSpacer_3;
     QLCDNumber *durationLcd;
+    QSpacerItem *verticalSpacer_3;
     QFrame *line;
+    QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_4;
     QLabel *passedTimeLbl;
     QSpacerItem *horizontalSpacer_4;
     QLCDNumber *passedTimeLcd;
-    QVBoxLayout *verticalLayout_2;
+    QSpacerItem *verticalSpacer_5;
+    QHBoxLayout *horizontalLayout;
     QToolButton *applyBtn;
     QToolButton *toggleFocalSpotBtn;
 
@@ -61,7 +66,7 @@ public:
     {
         if (ProtocolAdjustmentWidget->objectName().isEmpty())
             ProtocolAdjustmentWidget->setObjectName(QStringLiteral("ProtocolAdjustmentWidget"));
-        ProtocolAdjustmentWidget->resize(505, 255);
+        ProtocolAdjustmentWidget->resize(522, 366);
         horizontalLayout_5 = new QHBoxLayout(ProtocolAdjustmentWidget);
         horizontalLayout_5->setSpacing(0);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
@@ -70,8 +75,8 @@ public:
         displayFrame->setObjectName(QStringLiteral("displayFrame"));
         displayFrame->setFrameShape(QFrame::StyledPanel);
         displayFrame->setFrameShadow(QFrame::Sunken);
-        horizontalLayout = new QHBoxLayout(displayFrame);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout_6 = new QHBoxLayout(displayFrame);
+        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout_1 = new QHBoxLayout();
@@ -95,6 +100,11 @@ public:
 
         kvpLcd = new QLCDNumber(displayFrame);
         kvpLcd->setObjectName(QStringLiteral("kvpLcd"));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(kvpLcd->sizePolicy().hasHeightForWidth());
+        kvpLcd->setSizePolicy(sizePolicy);
         kvpLcd->setMinimumSize(QSize(0, 30));
         kvpLcd->setStyleSheet(QLatin1String("\n"
 "background-color: rgb(0, 0, 0);\n"
@@ -108,6 +118,10 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_1);
+
+        verticalSpacer = new QSpacerItem(20, 4, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
@@ -128,6 +142,8 @@ public:
 
         currentLcd = new QLCDNumber(displayFrame);
         currentLcd->setObjectName(QStringLiteral("currentLcd"));
+        sizePolicy.setHeightForWidth(currentLcd->sizePolicy().hasHeightForWidth());
+        currentLcd->setSizePolicy(sizePolicy);
         currentLcd->setMinimumSize(QSize(0, 30));
         currentLcd->setStyleSheet(QLatin1String("background-color: rgb(0, 0, 0);\n"
 "color: rgb(0, 255, 0);"));
@@ -138,6 +154,10 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_2);
+
+        verticalSpacer_2 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
@@ -159,6 +179,8 @@ public:
 
         durationLcd = new QLCDNumber(displayFrame);
         durationLcd->setObjectName(QStringLiteral("durationLcd"));
+        sizePolicy.setHeightForWidth(durationLcd->sizePolicy().hasHeightForWidth());
+        durationLcd->setSizePolicy(sizePolicy);
         durationLcd->setMinimumSize(QSize(0, 30));
         durationLcd->setStyleSheet(QLatin1String("background-color: rgb(0, 0, 0);\n"
 "color: rgb(0, 255, 0);"));
@@ -170,12 +192,20 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_3);
 
+        verticalSpacer_3 = new QSpacerItem(20, 2, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer_3);
+
         line = new QFrame(displayFrame);
         line->setObjectName(QStringLiteral("line"));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
         verticalLayout->addWidget(line);
+
+        verticalSpacer_4 = new QSpacerItem(20, 2, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer_4);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
@@ -190,6 +220,8 @@ public:
 
         passedTimeLcd = new QLCDNumber(displayFrame);
         passedTimeLcd->setObjectName(QStringLiteral("passedTimeLcd"));
+        sizePolicy.setHeightForWidth(passedTimeLcd->sizePolicy().hasHeightForWidth());
+        passedTimeLcd->setSizePolicy(sizePolicy);
         passedTimeLcd->setMinimumSize(QSize(0, 30));
         passedTimeLcd->setStyleSheet(QLatin1String("background-color: rgb(0, 0, 0);\n"
 "color: rgb(0, 255, 0);"));
@@ -201,14 +233,15 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_4);
 
+        verticalSpacer_5 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        horizontalLayout->addLayout(verticalLayout);
+        verticalLayout->addItem(verticalSpacer_5);
 
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         applyBtn = new QToolButton(displayFrame);
         applyBtn->setObjectName(QStringLiteral("applyBtn"));
-        applyBtn->setMinimumSize(QSize(100, 100));
+        applyBtn->setMinimumSize(QSize(0, 0));
         applyBtn->setMaximumSize(QSize(100, 100));
         QFont font1;
         font1.setFamily(QStringLiteral("Tahoma"));
@@ -225,11 +258,11 @@ public:
         applyBtn->setIconSize(QSize(64, 64));
         applyBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-        verticalLayout_2->addWidget(applyBtn);
+        horizontalLayout->addWidget(applyBtn);
 
         toggleFocalSpotBtn = new QToolButton(displayFrame);
         toggleFocalSpotBtn->setObjectName(QStringLiteral("toggleFocalSpotBtn"));
-        toggleFocalSpotBtn->setMinimumSize(QSize(100, 100));
+        toggleFocalSpotBtn->setMinimumSize(QSize(0, 0));
         toggleFocalSpotBtn->setMaximumSize(QSize(100, 100));
         toggleFocalSpotBtn->setStyleSheet(QLatin1String("font: 9pt \"Tahoma\";\n"
 ""));
@@ -240,10 +273,13 @@ public:
         toggleFocalSpotBtn->setCheckable(true);
         toggleFocalSpotBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-        verticalLayout_2->addWidget(toggleFocalSpotBtn);
+        horizontalLayout->addWidget(toggleFocalSpotBtn);
 
 
-        horizontalLayout->addLayout(verticalLayout_2);
+        verticalLayout->addLayout(horizontalLayout);
+
+
+        horizontalLayout_6->addLayout(verticalLayout);
 
 
         horizontalLayout_5->addWidget(displayFrame);

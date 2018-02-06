@@ -7,6 +7,7 @@
 #include <QCoreApplication>
 #include "idevice.h"
 
+
 ExposureDialog::ExposureDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ExposureDialog)
@@ -16,7 +17,9 @@ ExposureDialog::ExposureDialog(QWidget *parent) :
     auto _viewer=new ImageViewer(this);
     ui->displayFrame->layout()->addWidget(_viewer);
 
-    QDir pluginsDir(QDir::currentPath());
+    QDir pluginsDir(qApp->applicationDirPath());
+
+
 //#if defined(Q_OS_WIN)
 //    if (pluginsDir.dirName().toLower() == "debug" || pluginsDir.dirName().toLower() == "release")
 //        pluginsDir.cdUp();
@@ -31,21 +34,18 @@ ExposureDialog::ExposureDialog(QWidget *parent) :
     IDevice* device;
     qDebug()<<"I am at: "<<pluginsDir.currentPath();
     pluginsDir.cd("plugins");
-    qDebug()<<"Now, I am at: "<<pluginsDir.currentPath();
     foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
         QPluginLoader pluginLoader(pluginsDir.absoluteFilePath(fileName));
         QObject *plugin = pluginLoader.instance();
-
-        qDebug()<<"I am processing: "<<fileName;
+qDebug()<<"I am processing the plugin : "<<fileName;
         if (plugin) {
+
 
             device = qobject_cast<IDevice *>(plugin);
             if (device)
             {
                     qDebug()<<"... The loaded plugin is:"<<device->GetDeviceType();
-                    device->UpdateParentWidget(ui->protocolFrame);
-
-
+                    device->UpdateParentWidget(ui->parameterScrollArea);
             }
 
         }
