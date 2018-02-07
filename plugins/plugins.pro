@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 SUBDIRS += \
             log4qt \
     GulmayGenerator \
-    TeledyneDetector
+    TeledyneDetector \
+    DeltaB2MotorDriver

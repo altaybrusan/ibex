@@ -45,6 +45,7 @@ ExposureDialog::ExposureDialog(QWidget *parent) :
             device = qobject_cast<IDevice *>(plugin);
             if (device)
             {
+                // There must be a mechanis to order the loaded widgets.
                 int device_type=device->GetDeviceType();
                 qDebug()<<"... The loaded plugin is:"<<device_type;
                 pluginsWidgetList.append(device->GetWidget());
