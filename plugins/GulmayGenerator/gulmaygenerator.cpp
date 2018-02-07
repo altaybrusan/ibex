@@ -22,27 +22,13 @@ void GulmayGenerator::UpdateSettingsParser(const ISettingsParser* parser)
 void GulmayGenerator::UpdateParentWidget(QWidget *parent)
 {
 
-
 }
 
 QWidget *GulmayGenerator::GetWidget()
 {
-
     //this section must go to launch
     ProtocolAdjustmentWidget* _pWidget= new ProtocolAdjustmentWidget();
-
-//    QVBoxLayout *layout = new QVBoxLayout;
-//     layout->addWidget(_pWidget);
-//     parent->setLayout(layout);
-//     parent->show();
-
-
-
-
-    _userInterface = _pWidget;//parent;
-    //_pWidget.setParent(_userInterface);
-
-
+    _userInterface = _pWidget;
     return _userInterface;
 }
 

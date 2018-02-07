@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
 SUBDIRS += \
             log4qt \
-    GulmayGenerator
+    GulmayGenerator \
+    TeledyneDetector

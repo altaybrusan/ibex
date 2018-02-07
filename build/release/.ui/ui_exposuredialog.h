@@ -44,7 +44,7 @@ public:
     QTableView *procedureTableView;
     QFrame *line;
     QScrollArea *scrollArea;
-    QWidget *scrollAreaWidget;
+    QWidget *scrollAreaWidgetContents;
     QFrame *statusFrame;
     QVBoxLayout *verticalLayout_3;
     QTextBrowser *textBrowser;
@@ -133,10 +133,10 @@ public:
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
         scrollArea->setMaximumSize(QSize(16777215, 250));
         scrollArea->setWidgetResizable(true);
-        scrollAreaWidget = new QWidget();
-        scrollAreaWidget->setObjectName(QStringLiteral("scrollAreaWidget"));
-        scrollAreaWidget->setGeometry(QRect(0, 0, 410, 248));
-        scrollArea->setWidget(scrollAreaWidget);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 414, 248));
+        scrollArea->setWidget(scrollAreaWidgetContents);
 
         verticalLayout_2->addWidget(scrollArea);
 

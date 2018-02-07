@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-02-03T01:55:44
+# Project created by QtCreator 2018-02-07T09:48:57
 #
 #-------------------------------------------------
 
@@ -9,13 +9,12 @@ include(../../common/build/g++.pri)
 include(../../commonconfig.pri)
 include(../pluginconfiguration.pri)
 
-
 TEMPLATE = lib
 CONFIG  += plugin
 QT      += widgets
 
-TARGET = GulmayGenerator
-DEFINES += GULMAYGENERATOR_LIBRARY
+TARGET = TeledyneDetector
+DEFINES += TELEDYNEDETECTOR_LIBRARY
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -32,22 +31,13 @@ INCLUDEPATH +=  ../../common/include \
                 ../../3rd-Party/ctk/include/ctk-0.1
 
 SOURCES += \
-        gulmaygenerator.cpp \
-    protocoladjustmentwidget.cpp
-
+        teledynedetector.cpp \
+    detectorsettingswidget.cpp
 
 HEADERS += \
-        gulmaygenerator.h \
-        gulmaygenerator_global.h \
-    protocoladjustmentwidget.h
-
-
-LIBS += ../../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKCore.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgets.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgetsPlugins.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgets.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgetsPlugins.lib\
+        teledynedetector.h \
+        teledynedetector_global.h \ 
+    detectorsettingswidget.h
 
 unix {
     target.path = /usr/lib
@@ -55,7 +45,4 @@ unix {
 }
 
 FORMS += \
-    protocoladjustmentwidget.ui
-
-RESOURCES += \
-    resources.qrc
+    detectorsettingswidget.ui
