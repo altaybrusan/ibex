@@ -402,10 +402,10 @@ qmake_all: FORCE
 make_first: release-make_first debug-make_first  FORCE
 all: release-all debug-all  FORCE
 clean: release-clean debug-clean  FORCE
-	-$(DEL_FILE) ..\build\laucnh.exp
+	-$(DEL_FILE) ..\build\laucnh0.exp
 distclean: release-distclean debug-distclean  FORCE
 	-$(DEL_FILE) Makefile
-	-$(DEL_FILE) ..\build\laucnh.lib
+	-$(DEL_FILE) ..\build\laucnh0.lib
 
 release-mocclean:
 	@set MAKEFLAGS=$(MAKEFLAGS)

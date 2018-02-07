@@ -40,12 +40,15 @@ ExposureDialog::ExposureDialog(QWidget *parent) :
 qDebug()<<"I am processing the plugin : "<<fileName;
         if (plugin) {
 
-
             device = qobject_cast<IDevice *>(plugin);
             if (device)
             {
-                    qDebug()<<"... The loaded plugin is:"<<device->GetDeviceType();
-                    device->UpdateParentWidget(ui->parameterScrollArea);
+                qDebug()<<"... The loaded plugin is:"<<device->GetDeviceType();
+
+//                    //device->UpdateParentWidget(ui->parameterScrollArea);
+                    QVBoxLayout *layout = new QVBoxLayout(parent);
+//                    QScrollArea* scroll = dynamic_cast<QScrollArea*>(parent);
+                     ui->scrollArea->setWidget(device->GetWidget());
             }
 
         }

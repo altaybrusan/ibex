@@ -2,6 +2,7 @@
 #include "idevice.h"
 #include "protocoladjustmentwidget.h"
 #include <QVBoxLayout>
+#include <QScrollArea>
 
 GulmayGenerator::GulmayGenerator()
 {
@@ -21,23 +22,26 @@ void GulmayGenerator::UpdateSettingsParser(const ISettingsParser* parser)
 void GulmayGenerator::UpdateParentWidget(QWidget *parent)
 {
 
-    //this section must go to launch
-    ProtocolAdjustmentWidget* _pWidget= new ProtocolAdjustmentWidget(parent);
-    QVBoxLayout *layout = new QVBoxLayout;
-     layout->addWidget(_pWidget);
-     parent->setLayout(layout);
-     parent->show();
-
-
-    //_userInterface = parent;
-
-    //_pWidget.setParent(_userInterface);
-
 
 }
 
 QWidget *GulmayGenerator::GetWidget()
 {
+
+    //this section must go to launch
+    ProtocolAdjustmentWidget* _pWidget= new ProtocolAdjustmentWidget();
+
+//    QVBoxLayout *layout = new QVBoxLayout;
+//     layout->addWidget(_pWidget);
+//     parent->setLayout(layout);
+//     parent->show();
+
+
+
+
+    _userInterface = _pWidget;//parent;
+    //_pWidget.setParent(_userInterface);
+
 
     return _userInterface;
 }

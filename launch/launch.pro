@@ -9,6 +9,16 @@ QT       += core gui
 include(../commonconfig.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+win32:
+{
+VERSION = 0.0.0.1
+QMAKE_TARGET_COMPANY = Bogazici University
+QMAKE_TARGET_PRODUCT = iBEX
+QMAKE_TARGET_DESCRIPTION = "Software platform for medical x-ray equipments"
+QMAKE_TARGET_COPYRIGHT = LGPL
+}
+
+
 TARGET = laucnh
 TEMPLATE = app
 

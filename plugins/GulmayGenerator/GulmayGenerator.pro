@@ -58,3 +58,6 @@ unix {
 
 FORMS += \
     protocoladjustmentwidget.ui
+
+RESOURCES += \
+    resources.qrc

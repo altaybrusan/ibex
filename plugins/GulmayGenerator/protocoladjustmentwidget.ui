@@ -390,8 +390,8 @@ color: rgb(0, 255, 0);</string>
            <widget class="QToolButton" name="applyBtn">
             <property name="minimumSize">
              <size>
-              <width>0</width>
-              <height>0</height>
+              <width>100</width>
+              <height>100</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -420,8 +420,8 @@ background-color: rgb(85, 170, 127);</string>
              <string>Apply</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>:/images/image/apply.png</normaloff>:/images/image/apply.png</iconset>
+             <iconset resource="resources.qrc">
+              <normaloff>:/assets/images/_64_apply.png</normaloff>:/assets/images/_64_apply.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -438,8 +438,8 @@ background-color: rgb(85, 170, 127);</string>
            <widget class="QToolButton" name="toggleFocalSpotBtn">
             <property name="minimumSize">
              <size>
-              <width>0</width>
-              <height>0</height>
+              <width>100</width>
+              <height>100</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -456,8 +456,8 @@ background-color: rgb(85, 170, 127);</string>
              <string>Focal</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>:/images/image/largspot.png</normaloff>:/images/image/largspot.png</iconset>
+             <iconset resource="resources.qrc">
+              <normaloff>:/assets/images/_64_largspot.png</normaloff>:/assets/images/_64_largspot.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -489,6 +489,8 @@ background-color: rgb(85, 170, 127);</string>
    <header>ctkSliderWidget.h</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

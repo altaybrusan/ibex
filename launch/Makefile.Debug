@@ -16,14 +16,14 @@ CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi -MDd -W3 -w44456 -
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fd..\build\debug\.obj\laucnh.vc.pdb $(DEFINES)
 INCPATH       = -I. -I..\3rd-Party\ctk\include\ctk-0.1 -I..\common\include -IC:\VTK\include\vtk-9.0 -IC:\Qt\5.9.4\msvc2015_64\include -IC:\Qt\5.9.4\msvc2015_64\include\QtWidgets -IC:\Qt\5.9.4\msvc2015_64\include\QtGui -IC:\Qt\5.9.4\msvc2015_64\include\QtANGLE -IC:\Qt\5.9.4\msvc2015_64\include\QtCore -I..\build\debug\.moc -I..\build\debug\.ui -IC:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc 
 LINKER        = link
-LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
-LIBS          = /LIBPATH:C:\Qt\5.9.4\msvc2015_64\lib C:\Qt\5.9.4\msvc2015_64\lib\qtmaind.lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\utils\postgresql\pgsql\lib shell32.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgetsPlugins.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKWidgetsPlugins.lib C:\VTK\lib\QVTKWidgetPlugin.lib C:\VTK\lib\vtkInteractionStyle-9.0.lib C:\VTK\lib\vtkCommonCore-9.0.lib C:\VTK\lib\vtkRenderingOpenGL2-9.0.lib C:\VTK\lib\vtkViewsCore-9.0.lib C:\VTK\lib\vtkGUISupportQt-9.0.lib C:\VTK\lib\vtkRenderingCore-9.0.lib C:\VTK\lib\vtkInteractionImage-9.0.lib C:\VTK\lib\vtkRenderingImage-9.0.lib C:\VTK\lib\vtkIOImage-9.0.lib C:\VTK\lib\vtkCommonExecutionModel-9.0.lib C:\VTK\lib\vtkInteractionWidgets-9.0.lib C:\VTK\lib\vtkRenderingAnnotation-9.0.lib C:\VTK\lib\vtkCommonDataModel-9.0.lib C:\VTK\lib\vtkImagingCore-9.0.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Guid.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Cored.lib 
+LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /VERSION:0.0
+LIBS          = /LIBPATH:C:\Qt\5.9.4\msvc2015_64\lib C:\Qt\5.9.4\msvc2015_64\lib\qtmaind.lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\utils\postgresql\pgsql\lib shell32.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKCore.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgetsPlugins.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKWidgets.lib ..\3rd-Party\ctk\lib\ctk-0.1\CTKWidgetsPlugins.lib C:\VTK\lib\QVTKWidgetPlugin.lib C:\VTK\lib\vtkInteractionStyle-9.0.lib C:\VTK\lib\vtkCommonCore-9.0.lib C:\VTK\lib\vtkRenderingOpenGL2-9.0.lib C:\VTK\lib\vtkViewsCore-9.0.lib C:\VTK\lib\vtkGUISupportQt-9.0.lib C:\VTK\lib\vtkRenderingCore-9.0.lib C:\VTK\lib\vtkInteractionImage-9.0.lib C:\VTK\lib\vtkRenderingImage-9.0.lib C:\VTK\lib\vtkIOImage-9.0.lib C:\VTK\lib\vtkCommonExecutionModel-9.0.lib C:\VTK\lib\vtkInteractionWidgets-9.0.lib C:\VTK\lib\vtkRenderingAnnotation-9.0.lib C:\VTK\lib\vtkCommonDataModel-9.0.lib C:\VTK\lib\vtkImagingCore-9.0.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Guid.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Cored.lib C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\laucnh_resource.res 
 QMAKE         = C:\Qt\5.9.4\msvc2015_64\bin\qmake.exe
 IDC           = idc
 IDL           = midl /NOLOGO
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\laucnh_resource.res
 COPY          = copy /y
 SED           = $(QMAKE) -install sed
 COPY_FILE     = copy /y
@@ -178,11 +178,14 @@ DESTDIR_TARGET = ..\build\debug\laucnh.exe
 first: all
 all: Makefile.Debug  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_newpatientdialog.h ..\build\debug\.ui\ui_exposuredialog.h ..\build\debug\.ui\ui_imageviewer.h $(OBJECTS) 
+$(DESTDIR_TARGET): ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_newpatientdialog.h ..\build\debug\.ui\ui_exposuredialog.h ..\build\debug\.ui\ui_imageviewer.h $(OBJECTS) C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\laucnh_resource.res
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
 ..\build\debug\.obj\main.obj ..\build\debug\.obj\mainwindow.obj ..\build\debug\.obj\newpatientdialog.obj ..\build\debug\.obj\bodypartselectionsquare.obj ..\build\debug\.obj\exposuredialog.obj ..\build\debug\.obj\imageviewer.obj ..\build\debug\.obj\qrc_resources.obj ..\build\debug\.obj\moc_mainwindow.obj ..\build\debug\.obj\moc_newpatientdialog.obj ..\build\debug\.obj\moc_bodypart.obj ..\build\debug\.obj\moc_bodypartselectionsquare.obj ..\build\debug\.obj\moc_exposuredialog.obj ..\build\debug\.obj\moc_imageviewer.obj
 $(LIBS)
 <<
+
+C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\laucnh_resource.res: laucnh_resource.rc
+	rc /NOLOGO -D_DEBUG $(DEFINES) -fo C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\laucnh_resource.res laucnh_resource.rc
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Debug launch.pro -spec win32-msvc
@@ -194,10 +197,11 @@ dist:
 
 clean: compiler_clean 
 	-$(DEL_FILE) ..\build\debug\.obj\main.obj ..\build\debug\.obj\mainwindow.obj ..\build\debug\.obj\newpatientdialog.obj ..\build\debug\.obj\bodypartselectionsquare.obj ..\build\debug\.obj\exposuredialog.obj ..\build\debug\.obj\imageviewer.obj ..\build\debug\.obj\qrc_resources.obj ..\build\debug\.obj\moc_mainwindow.obj ..\build\debug\.obj\moc_newpatientdialog.obj ..\build\debug\.obj\moc_bodypart.obj ..\build\debug\.obj\moc_bodypartselectionsquare.obj ..\build\debug\.obj\moc_exposuredialog.obj ..\build\debug\.obj\moc_imageviewer.obj
-	-$(DEL_FILE) ..\build\debug\laucnh.exp ..\build\debug\.obj\laucnh.vc.pdb ..\build\debug\laucnh.ilk ..\build\debug\laucnh.idb
+	-$(DEL_FILE) ..\build\debug\laucnh0.exp ..\build\debug\.obj\laucnh.vc.pdb ..\build\debug\laucnh0.ilk ..\build\debug\laucnh0.idb
+	-$(DEL_FILE) C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\laucnh_resource.res
 
 distclean: clean 
-	-$(DEL_FILE) ..\build\debug\laucnh.lib ..\build\debug\laucnh.pdb
+	-$(DEL_FILE) ..\build\debug\laucnh0.lib ..\build\debug\laucnh0.pdb
 	-$(DEL_FILE) $(DESTDIR_TARGET)
 	-$(DEL_FILE) Makefile.Debug
 

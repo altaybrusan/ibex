@@ -39,6 +39,10 @@ public:
     // based on its internal state the plugin draw on its canvas.
     // Some devices may not require any UI. So do not ask for UI at constructor!
     virtual void UpdateParentWidget(QWidget* parent)= 0;
+    // The other model is that the launcher asks the plugin to provide its most
+    // updated UI based on its internal state. Launcher then draw the received
+    // widget on its canvas. this model is better then the other, due to that
+    // the launcher can organize its layout.
     virtual QWidget* GetWidget() = 0;
 
 //    // not best practice

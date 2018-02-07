@@ -241,7 +241,7 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         applyBtn = new QToolButton(displayFrame);
         applyBtn->setObjectName(QStringLiteral("applyBtn"));
-        applyBtn->setMinimumSize(QSize(0, 0));
+        applyBtn->setMinimumSize(QSize(100, 100));
         applyBtn->setMaximumSize(QSize(100, 100));
         QFont font1;
         font1.setFamily(QStringLiteral("Tahoma"));
@@ -253,7 +253,7 @@ public:
         applyBtn->setStyleSheet(QLatin1String("font: 9pt \"Tahoma\";\n"
 "background-color: rgb(85, 170, 127);"));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/images/image/apply.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/assets/images/_64_apply.png"), QSize(), QIcon::Normal, QIcon::Off);
         applyBtn->setIcon(icon);
         applyBtn->setIconSize(QSize(64, 64));
         applyBtn->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
@@ -262,12 +262,12 @@ public:
 
         toggleFocalSpotBtn = new QToolButton(displayFrame);
         toggleFocalSpotBtn->setObjectName(QStringLiteral("toggleFocalSpotBtn"));
-        toggleFocalSpotBtn->setMinimumSize(QSize(0, 0));
+        toggleFocalSpotBtn->setMinimumSize(QSize(100, 100));
         toggleFocalSpotBtn->setMaximumSize(QSize(100, 100));
         toggleFocalSpotBtn->setStyleSheet(QLatin1String("font: 9pt \"Tahoma\";\n"
 ""));
         QIcon icon1;
-        icon1.addFile(QStringLiteral(":/images/image/largspot.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QStringLiteral(":/assets/images/_64_largspot.png"), QSize(), QIcon::Normal, QIcon::Off);
         toggleFocalSpotBtn->setIcon(icon1);
         toggleFocalSpotBtn->setIconSize(QSize(64, 64));
         toggleFocalSpotBtn->setCheckable(true);

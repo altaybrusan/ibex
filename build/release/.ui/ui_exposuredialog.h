@@ -43,10 +43,8 @@ public:
     ctkCollapsibleGroupBox *patientDemographyBox;
     QTableView *procedureTableView;
     QFrame *line;
-    QFrame *protocolFrame;
-    QHBoxLayout *horizontalLayout_3;
-    QScrollArea *parameterScrollArea;
-    QWidget *scrollAreaWidgetContents;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidget;
     QFrame *statusFrame;
     QVBoxLayout *verticalLayout_3;
     QTextBrowser *textBrowser;
@@ -131,31 +129,16 @@ public:
 
         verticalLayout_2->addWidget(line);
 
-        protocolFrame = new QFrame(sideFrame);
-        protocolFrame->setObjectName(QStringLiteral("protocolFrame"));
-        protocolFrame->setFrameShape(QFrame::StyledPanel);
-        protocolFrame->setFrameShadow(QFrame::Raised);
-        horizontalLayout_3 = new QHBoxLayout(protocolFrame);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        parameterScrollArea = new QScrollArea(protocolFrame);
-        parameterScrollArea->setObjectName(QStringLiteral("parameterScrollArea"));
-        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(parameterScrollArea->sizePolicy().hasHeightForWidth());
-        parameterScrollArea->setSizePolicy(sizePolicy2);
-        parameterScrollArea->setMinimumSize(QSize(0, 250));
-        parameterScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        parameterScrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 386, 248));
-        parameterScrollArea->setWidget(scrollAreaWidgetContents);
+        scrollArea = new QScrollArea(sideFrame);
+        scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        scrollArea->setMaximumSize(QSize(16777215, 250));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidget = new QWidget();
+        scrollAreaWidget->setObjectName(QStringLiteral("scrollAreaWidget"));
+        scrollAreaWidget->setGeometry(QRect(0, 0, 410, 248));
+        scrollArea->setWidget(scrollAreaWidget);
 
-        horizontalLayout_3->addWidget(parameterScrollArea);
-
-
-        verticalLayout_2->addWidget(protocolFrame);
+        verticalLayout_2->addWidget(scrollArea);
 
         statusFrame = new QFrame(sideFrame);
         statusFrame->setObjectName(QStringLiteral("statusFrame"));
