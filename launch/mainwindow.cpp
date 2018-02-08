@@ -3,11 +3,14 @@
 #include "newpatientdialog.h"
 #include "exposuredialog.h"
 #include "QMessageBox"
+#include "pacsnodesettingsdialog.h"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -27,4 +30,10 @@ void MainWindow::on_action_Quick_Start_triggered()
     //_dialog->show();
     _dialog->showMaximized();
 
+}
+
+void MainWindow::on_action_Update_PACS_Server_Settings_triggered()
+{
+   PacsNodeSettingsDialog* _dialog=new PacsNodeSettingsDialog(this);
+   _dialog->show();
 }

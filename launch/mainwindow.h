@@ -20,6 +20,8 @@ private slots:
 
     void on_action_Quick_Start_triggered();
 
+    void on_action_Update_PACS_Server_Settings_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

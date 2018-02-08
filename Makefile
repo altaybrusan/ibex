@@ -339,7 +339,6 @@ Makefile: iBEX.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf \
-		commonconfig.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf \
@@ -490,7 +489,6 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf:
-commonconfig.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf:

@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 
-QT       += core gui
+QT       += core gui sql
 include(../commonconfig.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -65,6 +65,7 @@ LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
 
 
 INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
+               ../3rd-Party/ctk/include \
                ../common/include \
                $$(VTK_DIR)/include/vtk-9.0
 
@@ -76,7 +77,8 @@ SOURCES += \
         newpatientdialog.cpp \
         bodypartselectionsquare.cpp \
         exposuredialog.cpp \
-        imageviewer.cpp
+        imageviewer.cpp \
+    pacsnodesettingsdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -86,13 +88,16 @@ HEADERS += \
     exposuredialog.h \
     imageviewer.h \
     ../common/include/idevice.h\
-    ../common/include/isettingsparser.h
+    ../common/include/isettingsparser.h \
+    pacsnodesettingsdialog.h
 
 FORMS += \
         mainwindow.ui \
     newpatientdialog.ui \
     exposuredialog.ui \
-    imageviewer.ui
+    imageviewer.ui \
+    pacsnodesettingsdialog.ui
+
 
 RESOURCES += \
     resources.qrc
