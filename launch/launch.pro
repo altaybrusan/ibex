@@ -36,14 +36,14 @@ DEFINES += TEST_IMAGES_DIR=\\\"$$TEST_IMAGE_REPO\\\"
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-LIBS += ../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
-        ../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMCore.lib \
-        ../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMWidgets.lib \
-        ../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKCore.lib \
-        ../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgets.lib \
-        ../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgetsPlugins.lib \
-        ../3rd-Party/ctk/lib/ctk-0.1/CTKWidgets.lib \
-        ../3rd-Party/ctk/lib/ctk-0.1/CTKWidgetsPlugins.lib\
+LIBS += $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMCore.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMWidgets.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKCore.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgets.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgetsPlugins.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKWidgets.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKWidgetsPlugins.lib\
 
 
 
@@ -78,7 +78,8 @@ SOURCES += \
         bodypartselectionsquare.cpp \
         exposuredialog.cpp \
         imageviewer.cpp \
-    pacsnodesettingsdialog.cpp
+    pacsnodesettingsdialog.cpp \
+    loadstudydialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -87,16 +88,20 @@ HEADERS += \
     bodypartselectionsquare.h \
     exposuredialog.h \
     imageviewer.h \
+    pacsnodesettingsdialog.h \
+    loadstudydialog.h\
     ../common/include/idevice.h\
     ../common/include/isettingsparser.h \
-    pacsnodesettingsdialog.h
+    ../common/include/iconnector.h \
+    iconnector.h
 
 FORMS += \
         mainwindow.ui \
     newpatientdialog.ui \
     exposuredialog.ui \
     imageviewer.ui \
-    pacsnodesettingsdialog.ui
+    pacsnodesettingsdialog.ui \
+    loadstudydialog.ui
 
 
 RESOURCES += \

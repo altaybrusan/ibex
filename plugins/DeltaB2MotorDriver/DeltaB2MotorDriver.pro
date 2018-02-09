@@ -41,15 +41,14 @@ HEADERS += \
         deltab2motordriver_global.h \ 
     speedcontrolwidget.h \
     speedcontrolwidget.h
-
-LIBS += ../../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMCore.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMWidgets.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKCore.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgets.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgetsPlugins.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgets.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgetsPlugins.lib\
+LIBS += $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMCore.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMWidgets.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKCore.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgets.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgetsPlugins.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgets.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgetsPlugins.lib\
 
 unix {
     target.path = /usr/lib
