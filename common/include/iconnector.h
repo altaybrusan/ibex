@@ -9,11 +9,6 @@ class IConnector
 
 public:
 
-    template<typename T>
-    void WriteToConnection(const T& message) = 0;
-
-    template<typename U,typename V>
-    V ReadFromDevice(const U& param) = 0;
 
     // Connectors Do not have any idea where and what is the underling
     // file format of the settings. In otherwords, a connector can not
@@ -24,10 +19,25 @@ public:
     virtual void UpdateConnectionSettings(QMap<QString,QString> settings) = 0;
     virtual QMap<QString,QString> GetConnectionSettings()= 0;
 
+    // some connections may require an initial verification like security dongle
+    // checking or something like that.
+    template<typename U,typename V>
+    U VerifyConnection(V parameter);
+    // depends on parameters, different write commands may issue.
+    // for example writing to port when you execute a command may differ from
+    // writing to port when you are updating a device parameter.
+    template<typename T>
+    void WriteToConnection(const T& message, const QString parameter=0) = 0;
+    template<typename U,typename V>
+    V ReadFromConnection(const U& param,const QString parameter=0) = 0;
 
-    // May be not-best practice. Because some connecction types
-    // may not require any connection time out at all!
-    virtual void SetConnectionTimeout(int msec)=0;
+
+    // try to open the connection in a separate thread.
+    virtual void OpenConnectionAsService() = 0;
+    // open the connection on the callers thread.
+    virtual void OpenConnection() = 0;
+    virtual void CloseConnection() = 0;
+
 
 
 
@@ -43,7 +53,8 @@ signals:
     void NotifyMessage(const QString message) const;
     // simple message as error! not best practice.
     void NotifyConnectionError(const QString error) const;
-
+    void NotifyConnectionOpened();
+    void NotifyConnectionClosed();
 };
 
 
