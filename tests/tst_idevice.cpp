@@ -73,10 +73,6 @@ public:
 signals:
     QString NotifyNewMessage();
 
-
-
-
-
 };
 
 class TestIDevice : public QObject
@@ -97,13 +93,13 @@ private Q_SLOTS:
     void testTestIDeviceCreation()
     {
         GeneratorSimulator _gen;
-        //QCOMPARE(_gen.GetDeviceType(),DEVICE_TYPE::GENERATOR);
-        QCOMPARE(_gen.GetDeviceType(),DEVICE_TYPE::ACTUATOR);
+        QCOMPARE(_gen.GetDeviceType(),DEVICE_TYPE::GENERATOR);
+        //QCOMPARE(_gen.GetDeviceType(),DEVICE_TYPE::ACTUATOR);
     }
 
 };
 
 
-QTEST_APPLESS_MAIN(TestIDevice)
+//QTEST_APPLESS_MAIN(TestIDevice)
 
 #include "tst_idevice.moc"

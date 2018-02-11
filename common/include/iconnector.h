@@ -16,8 +16,8 @@ public:
     // It just get the already-read settings and can update its OWN COPY,
     // but not the central settings repository. It does not have any  function
     // like read from or write into settings file.
-    virtual void UpdateConnectionSettings(QMap<QString,QString> settings) = 0;
-    virtual QMap<QString,QString> GetConnectionSettings()= 0;
+    virtual void UpdateConnectionSettings(const QMap<QString,QString>* settings) = 0;
+    virtual const QMap<QString,QString>* GetConnectionSettings()= 0;
 
     // some connections may require an initial verification like security dongle
     // checking or something like that.
@@ -39,8 +39,6 @@ public:
     virtual void CloseConnection() = 0;
 
 
-
-
     virtual ~IConnector()
     {
 
@@ -50,13 +48,13 @@ public:
 //inherited by all sub-classes
 signals:
 
-    void NotifyMessage(const QString message) const;
+    virtual void NotifyMessage(const QString message) const = 0;
     // simple message as error! not best practice.
-    void NotifyConnectionError(const QString error) const;
-    void NotifyConnectionOpened();
-    void NotifyConnectionClosed();
+    virtual void NotifyConnectionError(const QString error) const = 0;
+    virtual void NotifyConnectionOpened() = 0;
+    virtual void NotifyConnectionClosed() = 0;
 };
 
 
-Q_DECLARE_INTERFACE(IDevice, "tr.edu.boun.IConnector")
+Q_DECLARE_INTERFACE(IConnector, "tr.edu.boun.IConnector")
 #endif // ICONNECTOR_H

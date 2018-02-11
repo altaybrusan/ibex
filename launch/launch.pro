@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 
-QT       += core gui sql
+QT       += core gui sql serialport
 include(../commonconfig.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -79,7 +79,8 @@ SOURCES += \
         exposuredialog.cpp \
         imageviewer.cpp \
     pacsnodesettingsdialog.cpp \
-    loadstudydialog.cpp
+    loadstudydialog.cpp \
+    rs232connector.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -93,7 +94,7 @@ HEADERS += \
     ../common/include/idevice.h\
     ../common/include/isettingsparser.h \
     ../common/include/iconnector.h \
-    iconnector.h
+    rs232connector.h
 
 FORMS += \
         mainwindow.ui \

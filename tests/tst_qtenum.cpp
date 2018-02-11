@@ -33,6 +33,6 @@ void TestsQtEnum::testEnumApplicationInQt5()
 }
 
 
-QTEST_APPLESS_MAIN(TestsQtEnum)
+//QTEST_APPLESS_MAIN(TestsQtEnum)
 
 #include "tst_testsqtenum.moc"
