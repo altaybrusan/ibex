@@ -1,8 +1,8 @@
 #include <QString>
 #include <QtTest>
-#include "idevice.h"
-#include "isettingsparser.h"
+#include <idevice.h>
 
+// simulator class: implement IDevice interface.
 class GeneratorSimulator:public QObject,IDevice
 {
     Q_OBJECT
@@ -68,38 +68,30 @@ public:
     {
 
     }
-
-
-signals:
-    QString NotifyNewMessage();
-
 };
 
-class TestIDevice : public QObject
+class IDeviceTester : public QObject
 {
     Q_OBJECT
 
 public:
-    TestIDevice()
-    {
-
-    }
-    ~TestIDevice()
-    {
-
-    }
+    IDeviceTester();
 
 private Q_SLOTS:
-    void testTestIDeviceCreation()
-    {
-        GeneratorSimulator _gen;
-        QCOMPARE(_gen.GetDeviceType(),DEVICE_TYPE::GENERATOR);
-        //QCOMPARE(_gen.GetDeviceType(),DEVICE_TYPE::ACTUATOR);
-    }
-
+    void SimulateIDeviceImplementation();
 };
 
+IDeviceTester::IDeviceTester()
+{
+}
 
-//QTEST_APPLESS_MAIN(TestIDevice)
+void IDeviceTester::SimulateIDeviceImplementation()
+{
+    GeneratorSimulator _gen;
+    QCOMPARE(_gen.GetDeviceType(),DEVICE_TYPE::GENERATOR);
 
-#include "tst_idevice.moc"
+}
+
+QTEST_APPLESS_MAIN(IDeviceTester)
+
+#include "idevicetester.moc"
