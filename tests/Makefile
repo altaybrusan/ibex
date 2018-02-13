@@ -27,7 +27,8 @@ DEL_DIR       = rmdir
 MOVE          = move
 SUBTARGETS    =  \
 		sub-RS232ConnectorTest \
-		sub-GeneralQtFeaturesTest
+		sub-GeneralQtFeaturesTest \
+		sub-IDeviceTest
 
 
 sub-RS232ConnectorTest-qmake_all:  FORCE
@@ -96,6 +97,39 @@ sub-GeneralQtFeaturesTest-uninstall_subtargets: FORCE
 	@if not exist GeneralQtFeaturesTest\ mkdir GeneralQtFeaturesTest\ & if not exist GeneralQtFeaturesTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd GeneralQtFeaturesTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\GeneralQtFeaturesTest\GeneralQtFeaturesTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+sub-IDeviceTest-qmake_all:  FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	cd IDeviceTest\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && $(MAKE) -f Makefile qmake_all
+sub-IDeviceTest: FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-IDeviceTest-make_first: FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-IDeviceTest-all: FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-IDeviceTest-clean: FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-IDeviceTest-distclean: FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-IDeviceTest-install_subtargets: FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-IDeviceTest-uninstall_subtargets: FORCE
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
 
 Makefile: tests.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf \
@@ -399,15 +433,15 @@ tests.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile tests.pro -spec win32-msvc
 
-qmake_all: sub-RS232ConnectorTest-qmake_all sub-GeneralQtFeaturesTest-qmake_all FORCE
+qmake_all: sub-RS232ConnectorTest-qmake_all sub-GeneralQtFeaturesTest-qmake_all sub-IDeviceTest-qmake_all FORCE
 
-make_first: sub-RS232ConnectorTest-make_first sub-GeneralQtFeaturesTest-make_first  FORCE
-all: sub-RS232ConnectorTest-all sub-GeneralQtFeaturesTest-all  FORCE
-clean: sub-RS232ConnectorTest-clean sub-GeneralQtFeaturesTest-clean  FORCE
-distclean: sub-RS232ConnectorTest-distclean sub-GeneralQtFeaturesTest-distclean  FORCE
+make_first: sub-RS232ConnectorTest-make_first sub-GeneralQtFeaturesTest-make_first sub-IDeviceTest-make_first  FORCE
+all: sub-RS232ConnectorTest-all sub-GeneralQtFeaturesTest-all sub-IDeviceTest-all  FORCE
+clean: sub-RS232ConnectorTest-clean sub-GeneralQtFeaturesTest-clean sub-IDeviceTest-clean  FORCE
+distclean: sub-RS232ConnectorTest-distclean sub-GeneralQtFeaturesTest-distclean sub-IDeviceTest-distclean  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-RS232ConnectorTest-install_subtargets sub-GeneralQtFeaturesTest-install_subtargets FORCE
-uninstall_subtargets: sub-RS232ConnectorTest-uninstall_subtargets sub-GeneralQtFeaturesTest-uninstall_subtargets FORCE
+install_subtargets: sub-RS232ConnectorTest-install_subtargets sub-GeneralQtFeaturesTest-install_subtargets sub-IDeviceTest-install_subtargets FORCE
+uninstall_subtargets: sub-RS232ConnectorTest-uninstall_subtargets sub-GeneralQtFeaturesTest-uninstall_subtargets sub-IDeviceTest-uninstall_subtargets FORCE
 
 sub-RS232ConnectorTest-debug:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -417,7 +451,11 @@ sub-GeneralQtFeaturesTest-debug:
 	@if not exist GeneralQtFeaturesTest\ mkdir GeneralQtFeaturesTest\ & if not exist GeneralQtFeaturesTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd GeneralQtFeaturesTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\GeneralQtFeaturesTest\GeneralQtFeaturesTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-RS232ConnectorTest-debug sub-GeneralQtFeaturesTest-debug
+sub-IDeviceTest-debug:
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+debug: sub-RS232ConnectorTest-debug sub-GeneralQtFeaturesTest-debug sub-IDeviceTest-debug
 
 sub-RS232ConnectorTest-release:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -427,7 +465,11 @@ sub-GeneralQtFeaturesTest-release:
 	@if not exist GeneralQtFeaturesTest\ mkdir GeneralQtFeaturesTest\ & if not exist GeneralQtFeaturesTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd GeneralQtFeaturesTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\GeneralQtFeaturesTest\GeneralQtFeaturesTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-RS232ConnectorTest-release sub-GeneralQtFeaturesTest-release
+sub-IDeviceTest-release:
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+release: sub-RS232ConnectorTest-release sub-GeneralQtFeaturesTest-release sub-IDeviceTest-release
 
 sub-RS232ConnectorTest-check:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -437,7 +479,11 @@ sub-GeneralQtFeaturesTest-check:
 	@if not exist GeneralQtFeaturesTest\ mkdir GeneralQtFeaturesTest\ & if not exist GeneralQtFeaturesTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd GeneralQtFeaturesTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\GeneralQtFeaturesTest\GeneralQtFeaturesTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-RS232ConnectorTest-check sub-GeneralQtFeaturesTest-check
+sub-IDeviceTest-check:
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+check: sub-RS232ConnectorTest-check sub-GeneralQtFeaturesTest-check sub-IDeviceTest-check
 
 sub-RS232ConnectorTest-benchmark:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -447,7 +493,11 @@ sub-GeneralQtFeaturesTest-benchmark:
 	@if not exist GeneralQtFeaturesTest\ mkdir GeneralQtFeaturesTest\ & if not exist GeneralQtFeaturesTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd GeneralQtFeaturesTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\GeneralQtFeaturesTest\GeneralQtFeaturesTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-RS232ConnectorTest-benchmark sub-GeneralQtFeaturesTest-benchmark
+sub-IDeviceTest-benchmark:
+	@if not exist IDeviceTest\ mkdir IDeviceTest\ & if not exist IDeviceTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd IDeviceTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\IDeviceTest\IDeviceTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-RS232ConnectorTest-benchmark sub-GeneralQtFeaturesTest-benchmark sub-IDeviceTest-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

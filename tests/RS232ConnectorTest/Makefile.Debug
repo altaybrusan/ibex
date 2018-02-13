@@ -601,6 +601,8 @@ debug\rs232connectortester.moc: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\QSerialPort \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialport.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialportglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\QSerialPortInfo \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialportinfo.h \
 		..\..\launch\rs232connector.h \
 		..\..\common\include\iconnector.h \
 		rs232connectortester.cpp \
@@ -907,6 +909,8 @@ debug\rs232connectortester.obj: rs232connectortester.cpp C:\Qt\5.9.4\msvc2015_64
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\QSerialPort \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialport.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialportglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\QSerialPortInfo \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialportinfo.h \
 		../../launch/rs232connector.h \
 		../../common/include/iconnector.h \
 		debug\rs232connectortester.moc

@@ -19,6 +19,7 @@ public:
     void OpenConnectionAsService() override;
     void OpenConnection() override;
     void CloseConnection() override;
+    ~RS232Connector();
 
 signals:
     void NotifyMessage(const QString message) const  override;
