@@ -230,6 +230,7 @@ Makefile: RS232ConnectorTest.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmak
 		RS232ConnectorTest.pro \
 		C:\Qt\5.9.4\msvc2015_64\lib\Qt5Test.prl \
 		C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl \
+		C:\Qt\5.9.4\msvc2015_64\lib\Qt5Concurrent.prl \
 		C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl
 	$(QMAKE) -o Makefile RS232ConnectorTest.pro -spec win32-msvc
 C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf:
@@ -387,6 +388,7 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf:
 RS232ConnectorTest.pro:
 C:\Qt\5.9.4\msvc2015_64\lib\Qt5Test.prl:
 C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl:
+C:\Qt\5.9.4\msvc2015_64\lib\Qt5Concurrent.prl:
 C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile RS232ConnectorTest.pro -spec win32-msvc

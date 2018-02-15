@@ -6,6 +6,9 @@
 #include <QMap>
 #include <QMetaEnum>
 
+
+// I did noticed that this class is state-less,you can not ask are you open/close/etc. ?
+// hope it is not a big-deal!!!
 RS232Connector::RS232Connector(QObject *parent) : QObject(parent),
     connection(new QSerialPort(this)),
     connectionSettings(new QMap<QString, QString>())
@@ -126,6 +129,7 @@ const QMap<QString, QString>* RS232Connector::GetConnectionSettings()
 void RS232Connector::OpenConnectionAsService()
 {
 
+
 }
 
 void RS232Connector::OpenConnection()
@@ -157,3 +161,4 @@ RS232Connector::~RS232Connector()
     CloseConnection();
     delete connection;
 }
+

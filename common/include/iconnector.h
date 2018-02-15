@@ -28,8 +28,8 @@ public:
     // writing to port when you are updating a device parameter.
     template<typename T>
     void WriteToConnection(const T& message, const QString parameter=0) = 0;
-    template<typename U,typename V>
-    V ReadFromConnection(const U& param,const QString parameter=0) = 0;
+    template<typename V>
+    V ReadFromConnection(const QString parameter=0) = 0;
 
 
     // try to open the connection in a separate thread.

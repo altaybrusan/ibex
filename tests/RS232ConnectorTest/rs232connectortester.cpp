@@ -10,6 +10,8 @@
 #include <QSerialPortInfo>
 #include "rs232connector.h"
 #include <QDebug>
+#include <QFuture>
+#include <QtConcurrent>
 
 class RS232ConnectorTester : public QObject
 {
@@ -30,6 +32,11 @@ private Q_SLOTS:
     void testOpenConnectionWithoutSettingup();
     void testReopenConnection();
 
+    void testOpenPortAndWriteInto_data();
+    void testOpenPortAndWriteInto();
+    void testOpenPortAndWriteIntoAndReadBack_data();
+    void testOpenPortAndWriteIntoAndReadBack();
+
 private:
 
     RS232Connector* connector;
@@ -44,7 +51,7 @@ RS232ConnectorTester::RS232ConnectorTester()
 void RS232ConnectorTester::cleanup()
 {
     QString testName= QString(QTest::currentTestFunction());
-    if (testName.contains("Open")) {
+    if (testName.contains("Open")|| testName.contains("open")) {
         connector->CloseConnection();
         connector =new RS232Connector(this);
     }
@@ -246,7 +253,6 @@ void RS232ConnectorTester::testOpenConnectionAfterCorrectSettingup()
 }
 void RS232ConnectorTester::testOpenConnectionWithoutSettingup()
 {
-
     QSignalSpy spy(connector,SIGNAL(NotifyConnectionError(QString)));
     connector->OpenConnection();
     QVERIFY(spy.count() == 1);
@@ -258,7 +264,6 @@ void RS232ConnectorTester::testOpenConnectionWithoutSettingup()
     // The system cannot find the path specified.
 
 }
-
 void RS232ConnectorTester::testReopenConnection()
 {
     QSignalSpy spy(connector,SIGNAL(NotifyConnectionOpened()));
@@ -291,6 +296,132 @@ void RS232ConnectorTester::testReopenConnection()
     //reopen connection
     connector->OpenConnection();
     QVERIFY(spy2.count() == 0 );
+}
+
+void RS232ConnectorTester::testOpenPortAndWriteInto_data()
+{
+    QTest::addColumn<QString>("Message");
+    QTest::newRow("message") << "Message From tester.";
+
+}
+void RS232ConnectorTester::testOpenPortAndWriteInto()
+{
+    QFETCH(QString, Message);
+    QSignalSpy spy(connector,SIGNAL(NotifyConnectionError(QString)));
+
+    if(QSerialPortInfo::availablePorts().count()==0)
+    {
+        QSKIP("No serialports exist on this device.");
+    }
+
+    QMap<QString,QString>* connectionSettings = new QMap<QString,QString>();
+
+    qDebug()<<" try to write into port: "<<QSerialPortInfo::availablePorts().first().portName();
+    (*connectionSettings)["Name"]= QSerialPortInfo::availablePorts().first().portName();
+    (*connectionSettings)["BaudRate"]= QString::number(9600);
+    QMetaEnum metaEnum = QMetaEnum::fromType<QSerialPort::DataBits>();
+    (*connectionSettings)["DataBits"]= QString(metaEnum.valueToKey(QSerialPort::Data8));
+    metaEnum = QMetaEnum::fromType<QSerialPort::Parity>();
+    (*connectionSettings)["Parity"]=  QString(metaEnum.valueToKey(QSerialPort::NoParity));
+    metaEnum = QMetaEnum::fromType<QSerialPort::StopBits>();
+    (*connectionSettings)["StopBits"]=  QString(metaEnum.valueToKey(QSerialPort::OneStop));
+    metaEnum = QMetaEnum::fromType<QSerialPort::FlowControl>();
+    (*connectionSettings)["FlowControl"]=  QString(metaEnum.valueToKey(QSerialPort::NoFlowControl));
+
+    connector->UpdateConnectionSettings(connectionSettings);
+    connector->OpenConnection();
+    connector->WriteToConnection<QString>(Message);
+
+    // there must be at least one listener on the other side.
+    // otherwise, there is an error.
+    if(spy.count()==1)
+    {
+        QList<QVariant> arguments = spy.takeFirst();
+        qDebug()<<">>>"<<arguments.at(0).toString();
+    }
+    //QVERIFY(spy.count()==0);
+
+}
+
+void RS232ConnectorTester::testOpenPortAndWriteIntoAndReadBack_data()
+{
+    QTest::addColumn<QString>("Message");
+    QTest::newRow("message") << "Message From tester2.";
+}
+
+// for this test on windows you can use com0com to make virtual
+// serial ports and brig them together.
+void RS232ConnectorTester::testOpenPortAndWriteIntoAndReadBack()
+{
+    QFETCH(QString, Message);
+    QSignalSpy spy(connector,SIGNAL(NotifyConnectionError(QString)));
+
+    if(QSerialPortInfo::availablePorts().count()< 2)
+    {
+        QSKIP("At least tow serial port is required.");
+    }
+
+
+    QMap<QString,QString>* connectionSettings;
+
+    // setup the write port in another thread.
+    QFuture<void> future = QtConcurrent::run([&]()
+    {
+
+        connectionSettings = new QMap<QString,QString>();
+        RS232Connector* connector2=new RS232Connector();
+
+        qDebug()<<".............................";
+        qDebug()<<" try to write into port: "<<QSerialPortInfo::availablePorts().first().portName();
+        (*connectionSettings)["Name"]= QSerialPortInfo::availablePorts().first().portName();
+        (*connectionSettings)["BaudRate"]= QString::number(9600);
+        QMetaEnum metaEnum = QMetaEnum::fromType<QSerialPort::DataBits>();
+        (*connectionSettings)["DataBits"]= QString(metaEnum.valueToKey(QSerialPort::Data8));
+        metaEnum = QMetaEnum::fromType<QSerialPort::Parity>();
+        (*connectionSettings)["Parity"]=  QString(metaEnum.valueToKey(QSerialPort::NoParity));
+        metaEnum = QMetaEnum::fromType<QSerialPort::StopBits>();
+        (*connectionSettings)["StopBits"]=  QString(metaEnum.valueToKey(QSerialPort::OneStop));
+        metaEnum = QMetaEnum::fromType<QSerialPort::FlowControl>();
+        (*connectionSettings)["FlowControl"]=  QString(metaEnum.valueToKey(QSerialPort::NoFlowControl));
+
+        connector2->UpdateConnectionSettings(connectionSettings);
+        connector2->OpenConnection();
+
+        qDebug()<<"Written message:" <<Message;
+        connector2->WriteToConnection<QString>(Message);
+        connector2->CloseConnection();
+        delete connector2;
+    });
+
+
+    // setup read port.
+    connectionSettings = new QMap<QString,QString>();
+    qDebug()<<" try to read from port: "<<QSerialPortInfo::availablePorts().at(1).portName();
+    (*connectionSettings)["Name"]= QSerialPortInfo::availablePorts().at(1).portName();
+    (*connectionSettings)["BaudRate"]= QString::number(9600);
+    QMetaEnum metaEnum = QMetaEnum::fromType<QSerialPort::DataBits>();
+    (*connectionSettings)["DataBits"]= QString(metaEnum.valueToKey(QSerialPort::Data8));
+    metaEnum = QMetaEnum::fromType<QSerialPort::Parity>();
+    (*connectionSettings)["Parity"]=  QString(metaEnum.valueToKey(QSerialPort::NoParity));
+    metaEnum = QMetaEnum::fromType<QSerialPort::StopBits>();
+    (*connectionSettings)["StopBits"]=  QString(metaEnum.valueToKey(QSerialPort::OneStop));
+    metaEnum = QMetaEnum::fromType<QSerialPort::FlowControl>();
+    (*connectionSettings)["FlowControl"]=  QString(metaEnum.valueToKey(QSerialPort::NoFlowControl));
+
+    connector->UpdateConnectionSettings(connectionSettings);
+    connector->OpenConnection();
+
+
+    //wait for writing message finished.
+    future.waitForFinished();
+    QString _recievedMessage = connector->ReadFromConnection<QString>();
+
+
+
+    qDebug()<<">>> Recieved message: "<<_recievedMessage;
+    QVERIFY(_recievedMessage.contains( Message)== true);
+
+
 }
 
 
