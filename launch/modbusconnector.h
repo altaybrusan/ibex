@@ -7,7 +7,9 @@ class QSettings;
 
 class ModBusConnector: public QObject,IConnector
 {
-Q_OBJECT
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "tr.edu.boun.IConnector")
+    Q_INTERFACES(IConnector)
 
 public:
     explicit ModBusConnector(QObject *parent = nullptr);
@@ -82,7 +84,7 @@ public:
             emit NotifyMessage(_errorMsg);
         }
 
-       return ;//qvariant_cast<V>();
+        return ;//qvariant_cast<V>();
     }
 
     void UpdateConnectionSettings(const QMap<QString, QString> *settings) override;

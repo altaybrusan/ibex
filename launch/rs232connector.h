@@ -9,7 +9,6 @@ class QSerialPort;
 class RS232Connector : public QObject,IConnector
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "tr.edu.boun.IConnector")
     Q_INTERFACES(IConnector)
 
 public:

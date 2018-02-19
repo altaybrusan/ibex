@@ -3584,9 +3584,14 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialBus\qmodbuspdu.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialBus\qmodbusreply.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\QSerialPort \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialport.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialportglobal.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtSerialPort\qserialportglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSettings \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaEnum \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetaobject.h
 
 ..\build\debug\.obj\qrc_resources.obj: ..\build\debug\.rcc\qrc_resources.cpp 
 
