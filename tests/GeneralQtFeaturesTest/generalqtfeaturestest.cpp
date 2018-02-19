@@ -19,6 +19,7 @@ private Q_SLOTS:
     void testBooleanValues();
 };
 
+
 GeneralQtFeaturesTester::GeneralQtFeaturesTester()
 {
 }

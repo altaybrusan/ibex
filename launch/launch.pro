@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 
-QT       += core gui sql serialport
+QT       += core gui sql serialbus serialport
 include(../commonconfig.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -80,7 +80,8 @@ SOURCES += \
         imageviewer.cpp \
     pacsnodesettingsdialog.cpp \
     loadstudydialog.cpp \
-    rs232connector.cpp
+    rs232connector.cpp \
+    modbusconnector.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -94,7 +95,8 @@ HEADERS += \
     ../common/include/idevice.h\
     ../common/include/isettingsparser.h \
     ../common/include/iconnector.h \
-    rs232connector.h
+    rs232connector.h \
+    modbusconnector.h
 
 FORMS += \
         mainwindow.ui \

@@ -13,6 +13,8 @@
 #include <QFuture>
 #include <QtConcurrent>
 
+// Some tests of this class require com0com to make virtual
+// serial ports and brig them together.
 class RS232ConnectorTester : public QObject
 {
     Q_OBJECT
@@ -348,9 +350,6 @@ void RS232ConnectorTester::testOpenPortAndWriteIntoAndReadBack_data()
     QTest::addColumn<QString>("Message");
     QTest::newRow("message") << "Message From tester2.";
 }
-
-// for this test on windows you can use com0com to make virtual
-// serial ports and brig them together.
 void RS232ConnectorTester::testOpenPortAndWriteIntoAndReadBack()
 {
     QFETCH(QString, Message);
@@ -415,7 +414,6 @@ void RS232ConnectorTester::testOpenPortAndWriteIntoAndReadBack()
     //wait for writing message finished.
     future.waitForFinished();
     QString _recievedMessage = connector->ReadFromConnection<QString>();
-
 
 
     qDebug()<<">>> Recieved message: "<<_recievedMessage;
