@@ -6,6 +6,7 @@
 #include "pacsnodesettingsdialog.h"
 #include "LoadStudyDialog.h"
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -35,8 +36,9 @@ void MainWindow::on_action_Quick_Start_triggered()
 
 void MainWindow::on_action_Update_PACS_Server_Settings_triggered()
 {
-   PacsNodeSettingsDialog* _dialog=new PacsNodeSettingsDialog(this);
+   PacsNodeSettingsDialog* _dialog = new PacsNodeSettingsDialog(this);
    _dialog->show();
+
 }
 
 void MainWindow::on_action_Load_Study_triggered()

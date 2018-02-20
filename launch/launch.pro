@@ -109,3 +109,6 @@ FORMS += \
 
 RESOURCES += \
     resources.qrc
+
+DISTFILES += \
+    notes

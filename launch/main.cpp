@@ -5,11 +5,15 @@ VTK_MODULE_INIT(vtkInteractionStyle)
 #include <vtkObject.h>
 #include "mainwindow.h"
 #include <QApplication>
+#include <QSettings>
 
 
 int main(int argc, char *argv[])
 {
     //vtkObject::GlobalWarningDisplayOff();
+    QSettings::setDefaultFormat(QSettings::IniFormat);
+    QCoreApplication::setOrganizationName("Bogazici-University");
+    QCoreApplication::setApplicationName("iBEX");
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

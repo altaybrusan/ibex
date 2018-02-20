@@ -2,6 +2,7 @@
 #define PACSNODESETTINGSDIALOG_H
 
 #include <QDialog>
+class ctkDICOMServerNodeWidget;
 
 namespace Ui {
 class PacsNodeSettingsDialog;
@@ -13,10 +14,16 @@ class PacsNodeSettingsDialog : public QDialog
 
 public:
     explicit PacsNodeSettingsDialog(QWidget *parent = 0);
+    QString  GetCallingServerAET();
+    QString GetStorageAETitle();
+    int  GetCallingServerPort();
+
+
     ~PacsNodeSettingsDialog();
 
 private:
     Ui::PacsNodeSettingsDialog *ui;
+    ctkDICOMServerNodeWidget* _dicomservernodeWidget;
 };
 
 #endif // PACSNODESETTINGSDIALOG_H
