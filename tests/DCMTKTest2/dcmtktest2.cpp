@@ -1,3 +1,5 @@
+// this test is based on dcmsend.cc from dcmtk
+
 #include <QString>
 #include <QtTest>
 
