@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2014, OFFIS e.V.
+ *  Copyright (C) 2014-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -56,6 +56,7 @@ class DCMTK_DCMDATA_EXPORT DcmUniversalResourceIdentifierOrLocator
 
     /** copy assignment operator
      *  @param obj element to be copied
+     *  @return reference to this object
      */
     DcmUniversalResourceIdentifierOrLocator &operator=(const DcmUniversalResourceIdentifierOrLocator &obj);
 
@@ -118,6 +119,18 @@ class DCMTK_DCMDATA_EXPORT DcmUniversalResourceIdentifierOrLocator
      */
     virtual OFCondition getOFStringArray(OFString &stringVal,
                                          OFBool normalize = OFTrue);
+
+    // ensure inherited overloads of matches take part in overload resolution
+    using DcmByteString::matches;
+
+    /// @copydoc DcmByteString::matches(OFString,OFString,OFBool)
+    virtual OFBool matches(const OFString& key,
+                           const OFString& candidate,
+                           const OFBool enableWildCardMatching = OFTrue) const;
+
+    /// @copydoc DcmElement::isUniversalMatch()
+    virtual OFBool isUniversalMatch(const OFBool normalize = OFTrue,
+                                    const OFBool enableWildCardMatching = OFTrue);
 
     /* --- static helper functions --- */
 

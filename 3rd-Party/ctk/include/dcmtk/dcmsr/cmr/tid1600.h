@@ -44,14 +44,16 @@ extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_NoImageLibrary;
 extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_NoImageLibraryGroup;
 /// error: there is no image library entry to add descriptors to
 extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_NoImageLibraryEntry;
-/// error: cannot add multiple image library entry descriptors (see TID 1600 Row 3)
-extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_CannotAddMultipleImageLibraryEntryDescriptors;
+/// error: cannot add multiple image library group descriptors (see TID 1600 Row 3)
+extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_CannotAddMultipleImageLibraryGroupDescriptors;
 /// error: the current (most recently added) image library entry has no modality descriptor
 extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_MissingImageLibraryEntryDescriptorModality;
 /// error: the current (most recently added) image library entry has the wrong modality descriptor
 extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_WrongImageLibraryEntryDescriptorModality;
 /// normal: there are no image library entry descriptors to be added (copied from the dataset)
 extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_NoImageLibraryEntryDescriptorsToBeAdded;
+/// normal: there are no (common) image library entry descriptors to be moved (to the image group)
+extern DCMTK_CMR_EXPORT const OFConditionConst CMR_EC_NoImageLibraryEntryDescriptorsToBeMoved;
 
 //@}
 
@@ -72,6 +74,9 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
 
   public:
 
+    // type definition
+    typedef OFList<DSRBasicCodedEntry> ConceptNameList;
+
     /** add mode for image entries
      */
     enum AddImageMode
@@ -79,7 +84,11 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
         /// add image entry without descriptors
         withoutDescriptors,
         /// add image entry with all descriptors from TID 1602 (and included templates)
-        withAllDescriptors
+        withAllDescriptors,
+        /// add image entry with selected descriptors only (from given list of concept names)
+        withSelectedDescriptors,
+        /// add image entry with all but the selected descriptors (from given list of concept names)
+        withoutSelectedDescriptors
     };
 
     /** (default) constructor
@@ -113,7 +122,9 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
      */
     OFCondition createNewImageLibrary();
 
-    /** add an image group to the image library
+    /** add an image group to the image library.
+     *  Image descriptors that are common to all images in this group can be added by
+     *  calling addImageGroupDescriptors().
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addImageGroup();
@@ -122,29 +133,39 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
      *  TID 1601 (Image Library Entry).  The values of the content items (including
      *  the image reference) are copied from the data elements of the given 'dataset'.
      *  If no descriptors were added, CMR_EC_NoImageLibraryEntryDescriptorsToBeAdded
-     *  is returned.
-     ** @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  mode     mode specifying which optional content items are to be added
-     *  @param  check    if enabled, check values for validity before setting them
+     *  is returned, which is not regarded as an error.
+     ** @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  optional list with concept names of descriptors.  Its use
+     *                       and interpretation depends on the value of 'mode'.
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise.  If no
      *          image group exists, CMR_EC_NoImageLibraryGroup is returned.
      */
     OFCondition addImageEntry(DcmItem &dataset,
-                              const AddImageMode mode = withoutDescriptors,
+                              const AddImageMode mode,
+                              const ConceptNameList &descriptors = ConceptNameList(),
                               const OFBool check = OFTrue);
 
-    /** add image entry descriptors to the current image group, i.e.\ add content
+    /** add common image descriptors to the current image group, i.e.\ add content items
      *  items for TID 1602 (Image Library Entry Descriptors) and included templates.
      *  The values of the content items are copied from the data elements of the given
      *  'dataset'.  If none were added, CMR_EC_NoImageLibraryEntryDescriptorsToBeAdded
-     *  is returned.
-     *  Please note that this method should only be called once for each image group.
-     ** @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  check    if enabled, check values for validity before setting them
+     *  is returned, which is not regarded as an error.
+     *  Please note that this method should be called only once for each image group.
+     *  Alternatively, moveCommonImageDescriptorsToImageGroups() could be called to move
+     *  common image descriptors to their respective image groups automatically.
+     ** @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  optional list with concept names of descriptors.  Its use
+     *                       and interpretation depends on the value of 'mode'.
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise.  If no
      *          image group exists, CMR_EC_NoImageLibraryGroup is returned.
      */
-    OFCondition addImageEntryDescriptors(DcmItem &dataset,
+    OFCondition addImageGroupDescriptors(DcmItem &dataset,
+                                         const AddImageMode mode,
+                                         const ConceptNameList &descriptors = ConceptNameList(),
                                          const OFBool check = OFTrue);
 
     /** go to the most recently added image library entry and get the value of the
@@ -154,6 +175,15 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition getImageEntryModality(DSRCodedEntryValue &modalityCode);
+
+    /** move common image descriptors from all image entries in this image library to
+     *  their respective image groups.  This method should usually be called after all
+     *  image entries have been added using addImageEntry().  If no descriptors were
+     *  moved, CMR_EC_NoImageLibraryEntryDescriptorsToBeMoved is returned, which is not
+     *  regarded as an error.
+     ** @return status, EC_Normal if successful, an error code otherwise
+     */
+    OFCondition moveCommonImageDescriptorsToImageGroups();
 
   // --- set modality-specific content manually ---
 
@@ -237,13 +267,17 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
     /** add image library entry descriptors (TID 1602) to given document subtree.
      *  This method also calls addModalitySpecificDescriptors() in order to add the
      *  included templates (TID 1603 to 1607).
-     ** @param  tree     subtree to which the content items should be added
-     *  @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  check    if enabled, check values for validity before setting them
+     ** @param  tree         subtree to which the content items should be added
+     *  @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addImageEntryDescriptors(DSRDocumentSubTree &tree,
                                          DcmItem &dataset,
+                                         const AddImageMode mode,
+                                         const ConceptNameList &descriptors,
                                          const OFBool check);
 
     /** add image library entry descriptors (TID 1603 to 1607) to given document
@@ -251,70 +285,94 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
      *  @warning The mapping of modality to included templates is probably not perfect
      *           yet.  Also please note that most DICOM element values are copied from
      *           the main dataset and not from the respective functional group macros.
-     ** @param  tree      subtree to which the content items should be added
-     *  @param  dataset   DICOM dataset from which the values should be copied
-     *  @param  modality  value of the Modality (0008,0060) attribute from 'dataset'
-     *  @param  check     if enabled, check values for validity before setting them
+     ** @param  tree         subtree to which the content items should be added
+     *  @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  modality     value of the Modality (0008,0060) attribute from 'dataset'
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addModalitySpecificDescriptors(DSRDocumentSubTree &tree,
                                                DcmItem &dataset,
                                                const OFString &modality,
+                                               const AddImageMode mode,
+                                               const ConceptNameList &descriptors,
                                                const OFBool check);
 
     /** add image library entry descriptors for projection radiography (TID 1603)
-     ** @param  tree     subtree to which the content items should be added
-     *  @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  check    if enabled, check values for validity before setting them
+     ** @param  tree         subtree to which the content items should be added
+     *  @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addProjectionRadiographyDescriptors(DSRDocumentSubTree &tree,
                                                     DcmItem &dataset,
+                                                    const AddImageMode mode,
+                                                    const ConceptNameList &descriptors,
                                                     const OFBool check);
 
     /** add image library entry descriptors for cross-sectional modalities (TID 1604)
-     ** @param  tree     subtree to which the content items should be added
-     *  @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  check    if enabled, check values for validity before setting them
+     ** @param  tree         subtree to which the content items should be added
+     *  @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addCrossSectionalModalitiesDescriptors(DSRDocumentSubTree &tree,
                                                        DcmItem &dataset,
+                                                       const AddImageMode mode,
+                                                       const ConceptNameList &descriptors,
                                                        const OFBool check);
 
     /** add image library entry descriptors for CT (TID 1605)
-     ** @param  tree     subtree to which the content items should be added
-     *  @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  check    if enabled, check values for validity before setting them
+     ** @param  tree         subtree to which the content items should be added
+     *  @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addComputedTomographyDescriptors(DSRDocumentSubTree &tree,
                                                  DcmItem &dataset,
+                                                 const AddImageMode mode,
+                                                 const ConceptNameList &descriptors,
                                                  const OFBool check);
 
     /** add image library entry descriptors for MR (TID 1606)
-     ** @param  tree     subtree to which the content items should be added
-     *  @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  check    if enabled, check values for validity before setting them
+     ** @param  tree         subtree to which the content items should be added
+     *  @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addMagneticResonanceDescriptors(DSRDocumentSubTree &tree,
                                                 DcmItem &dataset,
+                                                const AddImageMode mode,
+                                                const ConceptNameList &descriptors,
                                                 const OFBool check);
 
     /** add image library entry descriptors for PET (TID 1607).
      *  @note The template rows 10 to 15 are not yet supported by this method.
-     ** @param  tree     subtree to which the content items should be added
-     *  @param  dataset  DICOM dataset from which the values should be copied
-     *  @param  check    if enabled, check values for validity before setting them
+     ** @param  tree         subtree to which the content items should be added
+     *  @param  dataset      DICOM dataset from which the values should be copied
+     *  @param  mode         mode specifying which optional content items are to be added
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @param  check        if enabled, check values for validity before setting them
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     OFCondition addPositronEmissionTomographyDescriptors(DSRDocumentSubTree &tree,
                                                          DcmItem &dataset,
+                                                         const AddImageMode mode,
+                                                         const ConceptNameList &descriptors,
                                                          const OFBool check);
 
     /** go to the most recently added image library entry and check the value of the
-     *  descriptor 'Modality' (TID 1602 - Row 1)
+     *  associated descriptor 'Modality' (TID 1602 - Row 1)
      ** @param  modalityCode  coded entry (from CID 29) associated with the modality.
      *                        Used to check the image library entry.
      ** @return status, EC_Normal if successful, an error code otherwise
@@ -370,6 +428,25 @@ class DCMTK_CMR_EXPORT TID1600_ImageLibrary
                                                const OFBool check);
 
   // --- static helper functions ---
+
+    /** check whether there are any descriptors to be added (based on given parameters)
+     ** @param  mode         mode specifying what should be checked and how
+     *  @param  descriptors  list with concept names of descriptors (depends on 'mode')
+     *  @return OFTrue if there are any descriptors to be added, OFFalse if not
+     */
+    static OFBool anyDescriptorsToBeAdded(const AddImageMode mode,
+                                          const ConceptNameList &descriptors);
+
+    /** check whether a given descriptor should be added (based on further parameters)
+     ** @param  conceptName  concept name of the descriptor to be checked
+     *  @param  mode         mode specifying what should be checked and how
+     *  @param  descriptors  list with concept names of descriptors to be checked
+     *                       (depending on the given 'mode')
+     *  @return OFTrue if given descriptor should be added, OFFalse if not
+     */
+    static OFBool checkDescriptorToBeAdded(const DSRBasicCodedEntry &conceptName,
+                                           const AddImageMode mode,
+                                           const ConceptNameList &descriptors);
 
     /** add a content item with a string value copied from the given dataset.
      *  The content item is only created and added to the subtree if the specified data

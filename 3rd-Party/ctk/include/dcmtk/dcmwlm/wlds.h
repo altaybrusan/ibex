@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1996-2012, OFFIS e.V.
+ *  Copyright (C) 1996-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -201,7 +201,7 @@ class DCMTK_DCMWLM_EXPORT WlmDataSource
        *    DCM_NamesOfIntendedRecipientsOfResults                (0040,1010)  PN  O  3  (from the Requested Procedure Module)
        *    DCM_InstitutionName                                   (0008,0080)  LO  O  3  (from the Visit Identification Module)
        *    DCM_AdmittingDiagnosesDescription                     (0008,1080)  LO  O  3  (from the Visit Admission Module)
-       *    DCM_OtherPatientIDs                                   (0010,1000)  LO  O  3  (from the Patient Identification Module)
+       *    DCM_RETIRED_OtherPatientIDs                           (0010,1000)  LO  O  3  (from the Patient Identification Module)
        *    DCM_PatientSize                                       (0010,1020)  DS  O  3  (from the Patient Demographic Module)
        *    DCM_EthnicGroup                                       (0010,2160)  SH  O  3  (from the Patient Demographic Module)
        *    DCM_PatientComments                                   (0010,4000)  LT  O  3  (from the Patient Demographic Module)
@@ -373,12 +373,12 @@ class DCMTK_DCMWLM_EXPORT WlmDataSource
     virtual ~WlmDataSource();
 
       /** Connects to the data source.
-       * @return Indicates if the connection was established succesfully.
+       * @return Indicates if the connection was established successfully.
        */
     virtual OFCondition ConnectToDataSource() = 0;
 
       /** Disconnects from the data source.
-       * @return Indicates if the disconnection was completed succesfully.
+       * @return Indicates if the disconnection was completed successfully.
        */
     virtual OFCondition DisconnectFromDataSource() = 0;
 

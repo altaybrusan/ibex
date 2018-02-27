@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2016, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were partly developed by
@@ -71,6 +71,7 @@
 #include "dcmtk/dcmnet/extneg.h"
 #include "dcmtk/dcmnet/dicom.h"
 #include "dcmtk/dcmnet/dcuserid.h"
+#include "dcmtk/dcmnet/dntypes.h"
 
 class DcmTransportConnection;
 class DcmTransportLayer;
@@ -82,25 +83,18 @@ class LST_HEAD;
  *  structure.  Most DICOM applications (except imagectn) don't need the symbolic
  *  hostname anyway, and the reverse DNS lookup can cause a long timeout.
  */
-extern DCMTK_DCMNET_EXPORT OFGlobal<OFBool> dcmDisableGethostbyaddr;   /* default OFFalse */
+extern DCMTK_DCMNET_EXPORT OFGlobal<OFBool> dcmDisableGethostbyaddr;   /* default: OFFalse */
 
-/** Global flag specifying whether to reject presentation contexts in case of an
- *  unsuccessful SCP/SCU role selection (strict) or to return the corresponding
- *  user data item with appropriate values (default). This applies to association
- *  acceptors only.
+/** Global timeout in seconds for connecting to remote hosts.
+ *  Default value is -1, which selects infinite timeout, i.e. blocking connect().
  */
-extern DCMTK_DCMNET_EXPORT OFGlobal<OFBool> dcmStrictRoleSelection;   /* default OFFalse */
-
-/**  Global timeout (seconds) for connecting to remote hosts.
- *   Default value is -1 which selects infinite timeout, i.e. blocking connect().
- */
-extern DCMTK_DCMNET_EXPORT OFGlobal<Sint32> dcmConnectionTimeout;   /* default -1 */
+extern DCMTK_DCMNET_EXPORT OFGlobal<Sint32> dcmConnectionTimeout;   /* default: -1 */
 
 /** This global flag allows to set an already opened socket file descriptor which
  *  will be used by dcmnet the next time receiveTransportConnectionTCP() is called.
  *  Useful for use with proxy applications, but inherently thread unsafe!
  */
-extern DCMTK_DCMNET_EXPORT OFGlobal<int> dcmExternalSocketHandle;   /* default -1 */
+extern DCMTK_DCMNET_EXPORT OFGlobal<DcmNativeSocketType> dcmExternalSocketHandle;   /* default: platform specific value that denotes <i>invalid</i> */
 
 /** When compiled with WITH_TCPWRAPPER, DCMTK server processes may use the TCP
  *  wrapper library to enforce access control - see hosts_access(5).  If this
@@ -108,7 +102,7 @@ extern DCMTK_DCMNET_EXPORT OFGlobal<int> dcmExternalSocketHandle;   /* default -
  *  to is used as the daemon name.  If the flag is NULL, no access control is
  *  performed.
  */
-extern DCMTK_DCMNET_EXPORT OFGlobal<const char *> dcmTCPWrapperDaemonName;   /* default NULL */
+extern DCMTK_DCMNET_EXPORT OFGlobal<const char *> dcmTCPWrapperDaemonName;   /* default: NULL */
 
 /* Global option flag for compatibility with DCMTK releases prior to version 3.0.
  * Default (0) is automatic handling, which should work in most cases.
@@ -189,6 +183,48 @@ typedef struct {
     OFBool useSecureLayer;
 }   DUL_ASSOCIATESERVICEPARAMETERS;
 
+/** Enum describing the possible role settings for role negotiation sub items.
+ *  DCMTK implements the following role negotiation behaviour for association
+ *  acceptors:
+ *  @verbatim
+ *  +--------------------+------------------+---------+
+ *  | Requestor Proposal | Acceptor Setting | Result  |
+ *  +--------------------+------------------+---------+
+ *  | SCU                | SCP              | NONE    |
+ *  | SCU                | SCU              | SCU     |
+ *  | SCU                | SCU/SCP          | SCU     |
+ *  | SCU                | DEFAULT          | DEFAULT |
+ *  | SCP                | SCP              | SCP     |
+ *  | SCP                | SCU              | NONE    |
+ *  | SCP                | SCU/SCP          | SCP     |
+ *  | SCP                | DEFAULT          | DEFAULT |
+ *  | SCU/SCP            | SCP              | SCP     |
+ *  | SCU/SCP            | SCU              | SCU     |
+ *  | SCU/SCP            | SCU/SCP          | SCU/SCP |
+ *  | SCU/SCP            | DEFAULT          | DEFAULT |
+ *  | DEFAULT            | SCP              | Reject  |
+ *  | DEFAULT            | SCU              | DEFAULT |
+ *  | DEFAULT            | SCU/SCP          | DEFAULT |
+ *  | DEFAULT            | DEFAULT          | DEFAULT |
+ *  +--------------------+------------------+---------+
+ *  @endverbatim
+ *  NONE, SCU, SCP as well as SCU/SCP denote the related flags in the
+ *  association role selection user items. The "Reject" case denotes that
+ *  such a presentation context will be rejected by the association acceptor:
+ *  If the requestor connects with default role but the acceptor explicitly
+ *  requires the SCP role (only) then the presentation context
+ *  will be rejected. All other cases do not lead to rejection but to actual
+ *  "negotiation".
+ *
+ *  The Reject case can be avoided by setting a related option available in
+ *  association acceptance code like ASC_acceptPresentationContext() or DcmSCP.
+ *  to OFTrue (reading something like "alwaysAcceptDefaultRole" since when enabled,
+ *  with the Reject being disabled all Default role proposals will be accepted).
+ *  This can make sense for faulty Requestors, e.g. faulty Storage Commitment Servers
+ *  connecting on a second connection for delivering an N-EVENT-REPORT, or broken
+ *  Retrieve requestors proposing GET-based SOP Classes for retrieval using the Default
+ *  role instead of the required SCP role.
+ */
 typedef enum {
     DUL_SC_ROLE_NONE,
     DUL_SC_ROLE_DEFAULT,
@@ -348,7 +384,7 @@ typedef enum {
 */
 
 #define DUL_DULCOMPAT     2768240730UL
-#define DUL_DIMSECOMPAT   655360UL
+#define DUL_DIMSECOMPAT   851968UL
 #define DUL_MAXPDUCOMPAT  4278190335UL
 
 /* Define the function prototypes for this facility.
@@ -439,8 +475,9 @@ DCMTK_DCMNET_EXPORT OFString& dumpExtNegList(OFString& str, SOPClassExtendedNego
 
 DCMTK_DCMNET_EXPORT OFBool
 DUL_dataWaiting(DUL_ASSOCIATIONKEY * callerAssociation, int timeout);
-DCMTK_DCMNET_EXPORT int
-DUL_networkSocket(DUL_NETWORKKEY * callerNet);
+
+DCMTK_DCMNET_EXPORT DcmNativeSocketType DUL_networkSocket(DUL_NETWORKKEY * callerNet);
+
 DCMTK_DCMNET_EXPORT OFBool
 DUL_associationWaiting(DUL_NETWORKKEY * callerNet, int timeout);
 
@@ -482,6 +519,15 @@ DCMTK_DCMNET_EXPORT OFBool DUL_processIsForkedChild();
  *  in receiveTransportConnectionTCP(). The call is not reversible - use with care.
  */
 DCMTK_DCMNET_EXPORT void DUL_markProcessAsForkedChild();
+
+/** this helper function calls DUL_markProcessAsForkedChild(), then reads
+ *  the socket handle from the pipe opened by the parent process and
+ *  stores it in the global variable dcmExternalSocketHandle. This is
+ *  in most cases everything needed to prepare the network layer to act
+ *  as a forked child on Win32. On other operating system, the function does nothing.
+ * @return EC_Normal if successful, an error code otherwise.
+ */
+DCMTK_DCMNET_EXPORT OFCondition DUL_readSocketHandleAsForkedChild();
 
 /** this function marks the current process as a multi-process server and enables
  *  the creation of child processes for each incoming TCP transport connection

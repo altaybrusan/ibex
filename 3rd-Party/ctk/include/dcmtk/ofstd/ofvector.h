@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2010, OFFIS e.V.
+ *  Copyright (C) 2010-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -28,7 +28,7 @@
 #error Your C++ compiler cannot handle class templates:
 #endif
 
-#if defined(HAVE_STL) || defined(HAVE_STL_VECTOR)
+#ifdef HAVE_STL_VECTOR
 
 // Use the standard template library (STL) vector class.
 #include <vector>
@@ -85,7 +85,7 @@ public:
     /** default constructor. This creates an empty OFVector. */
     OFVector() : values_(NULL), allocated_(0), size_(0)
     {
-        reserve(0);
+
     }
 
     /** copy constructor.

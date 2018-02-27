@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2014, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -36,18 +36,20 @@ class DCMTK_DCMDATA_EXPORT DcmFloatingPointDouble
 
  public:
 
+    // Make friend with DcmItem which requires access to protected
+    // constructor allowing construction using an explicit value length.
+    friend class DcmItem;
+
     /** constructor.
-     *  Create new element from given tag and length.
+     *  Create new element from given tag.
      *  @param tag DICOM tag for the new element
-     *  @param len value length for the new element
      */
-    DcmFloatingPointDouble(const DcmTag &tag,
-                           const Uint32 len = 0);
+    DcmFloatingPointDouble(const DcmTag &tag);
 
     /** copy constructor
      *  @param old element to be copied
      */
-    DcmFloatingPointDouble( const DcmFloatingPointDouble &old);
+    DcmFloatingPointDouble(const DcmFloatingPointDouble &old);
 
     /** destructor
      */
@@ -63,7 +65,7 @@ class DCMTK_DCMDATA_EXPORT DcmFloatingPointDouble
      *  with a given object of the same type. The tag of the element is also
      *  considered as the first component that is compared, followed by the
      *  object types (VR, i.e. DCMTK'S EVR) and the comparison of all value
-     *  components of the object, preferrably in the order declared in the
+     *  components of the object, preferably in the order declared in the
      *  object (if applicable).
      *  @param  rhs the right hand side of the comparison
      *  @return 0 if the object values are equal.
@@ -202,6 +204,26 @@ class DCMTK_DCMDATA_EXPORT DcmFloatingPointDouble
      *  @return status, EC_Normal if value length is correct, an error code otherwise
      */
     virtual OFCondition verify(const OFBool autocorrect = OFFalse);
+
+    /// @copydoc DcmElement::matches()
+    virtual OFBool matches(const DcmElement& candidate,
+                           const OFBool enableWildCardMatching = OFTrue) const;
+
+  protected:
+
+    /** constructor. Create new element from given tag and length.
+     *  Only reachable from friend classes since construction with
+     *  length different from 0 leads to a state with length being set but
+     *  the element's value still being uninitialized. This can lead to crashes
+     *  when the value is read or written. Thus the method calling this
+     *  constructor with length > 0 must ensure that the element's value is
+     *  explicitly initialized, too.
+     *  Create new element from given tag and length.
+     *  @param tag DICOM tag for the new element
+     *  @param len value length for the new element
+     */
+    DcmFloatingPointDouble(const DcmTag &tag,
+                           const Uint32 len);
 };
 
 

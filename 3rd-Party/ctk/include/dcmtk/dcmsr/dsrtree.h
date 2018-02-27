@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2016, OFFIS e.V.
+ *  Copyright (C) 2000-2018, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -265,13 +265,23 @@ template<typename T = DSRTreeNode> class DSRTree
     size_t gotoNode(const OFString &reference,
                     const OFBool startFromRoot = OFTrue);
 
-    /** set cursor to specified node. Starts from current position!
+    /** set internal cursor to specified node
      ** @param  annotation     annotation of the node to set the cursor to
      *  @param  startFromRoot  flag indicating whether to start from the root node
      *                         or the current one
      ** @return ID of the new current node if successful, 0 otherwise
      */
     size_t gotoNode(const DSRTreeNodeAnnotation &annotation,
+                    const OFBool startFromRoot = OFTrue);
+
+    /** set internal cursor to specified node (given by its value).
+     *  This method requires that T implements the comparison operator "not equal".
+     ** @param  nodeValue      value of the node to set the cursor to
+     *  @param  startFromRoot  flag indicating whether to start from the root node
+     *                         or the current one
+     ** @return ID of the new current node if successful, 0 otherwise
+     */
+    size_t gotoNode(const T &nodeValue,
                     const OFBool startFromRoot = OFTrue);
 
     /** add new node to the current one.
@@ -318,13 +328,13 @@ template<typename T = DSRTreeNode> class DSRTree
      */
     virtual size_t removeNode();
 
-    /** extract a subtree i.e.\ a fragment from this tree.
+    /** extract a subtree, i.e.\ a fragment from this tree.
      *  The subtree is specified by the current node, which becomes the root of the subtree.
      ** @return pointer to the extracted subtree, NULL in case of error
      */
     virtual DSRTree<T> *extractSubTree();
 
-    /** clone a subtree i.e.\ a fragment of this tree.
+    /** clone a subtree, i.e.\ a fragment of this tree.
      *  The cloning starts with the current node and ends with the given node.
      ** @param  stopAfterNodeID  ID of the node after which the cloning should stop.
      *                           By default (0), the process ends after cloning the
@@ -343,7 +353,8 @@ template<typename T = DSRTreeNode> class DSRTree
     DSRTree(T *rootNode);
 
     /** special copy constructor that clones a particular subtree only
-     ** @param  startCursor      first node of the subtree to be copied
+     ** @param  startCursor      cursor pointing to first node of the subtree to be
+     *                           copied
      *  @param  stopAfterNodeID  ID of the node after which the cloning should stop
      */
     DSRTree(const DSRTreeNodeCursor<T> &startCursor,
@@ -662,6 +673,17 @@ size_t DSRTree<T>::gotoNode(const DSRTreeNodeAnnotation &annotation,
 
 
 template<typename T>
+size_t DSRTree<T>::gotoNode(const T &nodeValue,
+                            const OFBool startFromRoot)
+{
+    if (startFromRoot)
+        gotoRoot();
+    /* call the real function */
+    return DSRTreeNodeCursor<T>::gotoNode(nodeValue);
+}
+
+
+template<typename T>
 size_t DSRTree<T>::addNode(T *node,
                            const E_AddMode addMode)
 {
@@ -940,6 +962,8 @@ DSRTree<T> *DSRTree<T>::cloneSubTree(const size_t stopAfterNodeID) const
 template<typename T>
 void DSRTree<T>::swap(DSRTree<T> &tree)
 {
+    /* swap inherited node cursor */
+    DSRTreeNodeCursor<T>::swap(tree);
     /* swap pointer to the root tree node */
     OFswap(RootNode, tree.RootNode);
 }

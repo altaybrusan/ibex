@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2013, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -27,6 +27,9 @@
 
 #include "dcmtk/dcmdata/dcelem.h"
 
+// forward declarations
+class DcmJsonFormat;
+
 
 /** a class representing the DICOM value representation 'Attribute Tag' (AT)
  */
@@ -36,13 +39,16 @@ class DCMTK_DCMDATA_EXPORT DcmAttributeTag
 
   public:
 
+    // Make friend with DcmItem which requires access to protected
+    // constructor allowing construction using an explicit value length.
+    friend class DcmItem;
+
     /** constructor.
-     *  Create new element from given tag and length.
+     *  Create new element from given tag.
      *  @param tag DICOM tag for the new element
      *  @param len value length for the new element
      */
-    DcmAttributeTag(const DcmTag &tag,
-                    const Uint32 len = 0);
+    DcmAttributeTag(const DcmTag &tag);
 
     /** copy constructor
      *  @param old element to be copied
@@ -63,17 +69,19 @@ class DCMTK_DCMDATA_EXPORT DcmAttributeTag
      *  with a given object of the same type. The tag of the element is also
      *  considered as the first component that is compared, followed by the
      *  object types (VR, i.e. DCMTK'S EVR) and the comparison of all value
-     *  components of the object, preferrably in the order declared in the
+     *  components of the object, preferably in the order declared in the
      *  object (if applicable).
      *  @param  rhs the right hand side of the comparison
      *  @return 0 if the object values are equal.
-     *          -1 if either the value of the  first component that does not match
-     *          is lower in this object than in rhs, or all compared components match
-     *          but this object has fewer components than rhs. Also returned if rhs
-     *          cannot be casted to this object type.
-     *          1 if either the value of the first component that does not match
-     *          is greater in this object than in rhs object, or all compared
-     *          components match but the this component is longer.
+     *          -1 if this element has fewer components than the rhs element.
+     *          Also -1 if the value of the first component that does not match
+     *          is lower in this object than in rhs. Also returned if rhs
+     *          cannot be casted to this object type or both objects are of
+     *          different VR (i.e. the DcmEVR returned by the element's ident()
+     *          call are different).
+     *          1 if either this element has more components than the rhs element, or
+     *          if the first component that does not match is greater in this object than
+     *          in rhs object.
      */
     virtual int compare(const DcmElement& rhs) const;
 
@@ -142,10 +150,18 @@ class DCMTK_DCMDATA_EXPORT DcmAttributeTag
     OFCondition writeXML(STD_NAMESPACE ostream &out,
                          const size_t flags = 0);
 
+    /** write object in JSON format
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    OFCondition writeJson(STD_NAMESPACE ostream &out,
+                          DcmJsonFormat &format);
+
     /** get particular tag value
      *  @param tagVal reference to result variable (cleared in case of error)
      *  @param pos index of the value to be retrieved (0..vm-1)
-     *  @return status status, EC_Normal if successful, an error code otherwise
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition getTagVal(DcmTagKey &tagVal,
                                   const unsigned long pos = 0);
@@ -220,6 +236,10 @@ class DCMTK_DCMDATA_EXPORT DcmAttributeTag
      */
     virtual OFCondition verify(const OFBool autocorrect = OFFalse);
 
+    /// @copydoc DcmElement::isUniversalMatch()
+    virtual OFBool isUniversalMatch(const OFBool normalize = OFTrue,
+                                    const OFBool enableWildCardMatching = OFTrue);
+
     /* --- static helper functions --- */
 
     /** check whether given string value conforms to the VR "AT" (Attribute Tag)
@@ -231,6 +251,22 @@ class DCMTK_DCMDATA_EXPORT DcmAttributeTag
      */
     static OFCondition checkStringValue(const OFString &value,
                                         const OFString &vm = "1-n");
+
+protected:
+
+    /** constructor. Create new element from given tag and length.
+     *  Only reachable from friend classes since construction with
+     *  length different from 0 leads to a state with length being set but
+     *  the element's value still being uninitialized. This can lead to crashes
+     *  when the value is read or written. Thus the method calling this
+     *  constructor with length > 0 must ensure that the element's value is
+     *  explicitly initialized, too.
+     *  Create new element from given tag and length.
+     *  @param tag DICOM tag for the new element
+     *  @param len value length for the new element
+     */
+    DcmAttributeTag(const DcmTag &tag,
+                    const Uint32 len);
 };
 
 

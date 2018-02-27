@@ -87,7 +87,7 @@ OBJECTS       = ..\build\debug\.obj\main.obj \
 		..\build\debug\.obj\moc_rs232connector.obj \
 		..\build\debug\.obj\moc_modbusconnector.obj
 
-DIST          =  mainwindow.h \
+DIST          = notes mainwindow.h \
 		newpatientdialog.h \
 		bodypart.h \
 		bodypartselectionsquare.h \
@@ -1951,7 +1951,9 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSettings \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h
 
 ..\build\debug\.obj\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMainWindow \
@@ -3324,7 +3326,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkDICOMWidgetsExport.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant
 
 ..\build\debug\.obj\loadstudydialog.obj: loadstudydialog.cpp loadstudydialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \

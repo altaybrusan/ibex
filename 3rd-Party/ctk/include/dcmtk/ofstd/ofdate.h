@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2002-2011, OFFIS e.V.
+ *  Copyright (C) 2002-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -43,7 +43,7 @@ END_EXTERN_C
  */
 class DCMTK_OFSTD_EXPORT OFDate
 {
-    // allow class OFDateTime to access protected class members
+    /// allow class OFDateTime to access protected class members
     friend class OFDateTime;
 
 

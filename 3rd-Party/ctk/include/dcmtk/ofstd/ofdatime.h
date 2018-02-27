@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2002-2011, OFFIS e.V.
+ *  Copyright (C) 2002-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -94,7 +94,7 @@ class DCMTK_OFSTD_EXPORT OFDateTime
      */
     virtual OFBool operator==(const OFDateTime &dateTime) const;
 
-    /** comparison operator (unequal)
+    /** comparison operator (unequal).
      *  Please note that the time values are first transformed to the Coordinated Universal
      *  Time (UTC) before they are compared. However, the special case that there is an
      *  "overflow" from one day to another is currently not handled.
@@ -102,6 +102,46 @@ class DCMTK_OFSTD_EXPORT OFDateTime
      *  @return OFTrue if given date or time is unequal, OFFalse otherwise
      */
     virtual OFBool operator!=(const OFDateTime &dateTime) const;
+
+    /** comparison operator (less than).
+     *  Please note that the time values are first transformed to the Coordinated Universal
+     *  Time (UTC) before they are compared. However, the special case that there is an
+     *  "overflow" from one day to another is currently not handled.
+     *  @param dateTime date and time value compared with the current value
+     *  @return OFTrue if current date and time is earlier than the given value, OFFalse
+     *    otherwise
+     */
+    virtual OFBool operator<(const OFDateTime &dateTime) const;
+
+    /** comparison operator (less than or equal).
+     *  Please note that the time values are first transformed to the Coordinated Universal
+     *  Time (UTC) before they are compared. However, the special case that there is an
+     *  "overflow" from one day to another is currently not handled.
+     *  @param dateTime date and time value compared with the current value
+     *  @return OFTrue if current date and time is earlier than or identical to the given value,
+     *    OFFalse otherwise
+     */
+    virtual OFBool operator<=(const OFDateTime &dateTime) const;
+
+    /** comparison operator (greater than or equal).
+     *  Please note that the time values are first transformed to the Coordinated Universal
+     *  Time (UTC) before they are compared. However, the special case that there is an
+     *  "overflow" from one day to another is currently not handled.
+     *  @param dateTime date and time value compared with the current value
+     *  @return OFTrue if current date and time is later than or identical to the given value,
+     *    OFFalse otherwise
+     */
+    virtual OFBool operator>=(const OFDateTime &dateTime) const;
+
+    /** comparison operator (greater than).
+     *  Please note that the time values are first transformed to the Coordinated Universal
+     *  Time (UTC) before they are compared. However, the special case that there is an
+     *  "overflow" from one day to another is currently not handled.
+     *  @param dateTime date and time value compared with the current value
+     *  @return OFTrue if current date and time is later than the given value, OFFalse
+     *    otherwise
+     */
+    virtual OFBool operator>(const OFDateTime &dateTime) const;
 
     /** reset the date/time value.
      *  Sets all date and all time components to '0'. NB: Date becomes invalid.
@@ -220,6 +260,11 @@ class DCMTK_OFSTD_EXPORT OFDateTime
 
 
  private:
+
+    /// let DcmDateTime access the members directly
+    friend class DcmDateTime;
+    /// let DcmAttributeMatching access the members directly
+    friend class DcmAttributeMatching;
 
     /// currently stored date value
     OFDate Date;

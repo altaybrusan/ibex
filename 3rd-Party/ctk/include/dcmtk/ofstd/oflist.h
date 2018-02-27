@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1997-2011, OFFIS e.V.
+ *  Copyright (C) 1997-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -47,7 +47,7 @@
 #error Your C++ compiler cannot handle class templates:
 #endif
 
-#if defined(HAVE_STL) || defined(HAVE_STL_LIST)
+#ifdef HAVE_STL_LIST
 // It is possible to use the standard template library list class since the
 // interface is nearly identical.
 // Important: If you want to use the standard template library (STL), no
@@ -89,7 +89,7 @@ END_EXTERN_C
 // OFListLinkBase, OFListLink and OFListBase are classes for internal
 // use only and shall not be used.
 
-/* non-template double linked list. Base class fo OFListLink.
+/* non-template double linked list. Base class of OFListLink.
  * Implicitly used by OFList, should not be called by users.
  */
 struct OFListLinkBase
@@ -406,7 +406,11 @@ public:
      */
     void insert(OFIterator<T> position, size_t n, const T& x)
     {
-      while(n--) OFListBase::base_insert(position.node, new OFListLink<T>(x));
+      while(n)
+      {
+        --n;
+        OFListBase::base_insert(position.node, new OFListLink<T>(x));
+      }
     }
 
     /** removes the element at the given position from the list.

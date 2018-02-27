@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2016, OFFIS e.V.
+ *  Copyright (C) 2000-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -48,8 +48,10 @@ class DCMTK_DCMSR_EXPORT DSRDocumentTreeNode
 {
     // allow direct access to protected methods
     friend class DSRTree<DSRDocumentTreeNode>;
-    friend class DSRTreeNodeCursor<DSRDocumentTreeNode, OFFalse>;
-    friend class DSRTreeNodeCursor<DSRDocumentTreeNode, OFTrue>;
+    friend class DSRTreeNodeCursor<DSRDocumentTreeNode>;
+    // also for the derived cursor classes
+    friend class DSRDocumentTreeNodeCursor;
+    friend class DSRIncludedTemplateNodeCursor;
 
     // allow access to getConceptNamePtr()
     friend class DSRContentItem;
@@ -84,6 +86,24 @@ class DCMTK_DCMSR_EXPORT DSRDocumentTreeNode
     /** destructor
      */
     virtual ~DSRDocumentTreeNode();
+
+    /** comparison operator "equal".
+     *  Two tree nodes are regarded as equal if the relationship type, the value type and the
+     *  concept name are equal.  Other information is not used unless implemented in a derived
+     *  class.
+     ** @param  node  tree node that should be compared to the current one
+     ** @return OFTrue if both tree nodes are equal, OFFalse otherwise
+     */
+    virtual OFBool operator==(const DSRDocumentTreeNode &node) const;
+
+    /** comparison operator "not equal".
+     *  Two tree nodes are regarded as not equal if either the relationship type or the value
+     *  type or the concept name are not equal.  Other information is not used unless implemented
+     *  in a derived class.
+     ** @param  node  tree node that should be compared to the current one
+     ** @return OFTrue if both tree nodes are not equal, OFFalse otherwise
+     */
+    virtual OFBool operator!=(const DSRDocumentTreeNode &node) const;
 
     /** clone this tree node (abstract).
      *  Internally, the copy constructor is used, so the corresponding comments apply.

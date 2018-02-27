@@ -1,12 +1,12 @@
 /*
  *
- *  Copyright (C) 2015-2016, J. Riesmeier, Oldenburg, Germany
+ *  Copyright (C) 2015-2017, J. Riesmeier, Oldenburg, Germany
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  Header file for class CID7181_AbstractMultiDimensionalImageModelComponentUnits
  *
- *  Generated automatically from DICOM PS 3.16-2016d
- *  File created on 2016-10-04 12:38:58 by J. Riesmeier
+ *  Generated automatically from DICOM PS 3.16-2017d
+ *  File created on 2017-09-26 12:18:58 by J. Riesmeier
  *
  */
 
@@ -28,7 +28,7 @@
 
 /** Implementation of DCMR Context Group:
  *  CID 7181 - Abstract Multi-dimensional Image Model Component Units.
- *  (type: extensible, version: 20141110)
+ *  (type: extensible, version: 20170413)
  */
 class DCMTK_CMR_EXPORT CID7181_AbstractMultiDimensionalImageModelComponentUnits
   : public DSRContextGroup
@@ -80,6 +80,8 @@ class DCMTK_CMR_EXPORT CID7181_AbstractMultiDimensionalImageModelComponentUnits
         StandardizedUptakeValueBodyWeight,
         /// (g/ml{SUVlbm},UCUM,"Standardized Uptake Value lean body mass (James)"), included from CID 85
         StandardizedUptakeValueLeanBodyMassJames,
+        /// (g/ml{SUVlbm(James128)},UCUM,"Standardized Uptake Value lean body mass (James 128 multiplier)"), included from CID 85
+        StandardizedUptakeValueLeanBodyMassJames128Multiplier,
         /// (g/ml{SUVlbm(Janma)},UCUM,"Standardized Uptake Value lean body mass (Janma)"), included from CID 85
         StandardizedUptakeValueLeanBodyMassJanma,
         /// (cm2/ml{SUVbsa},UCUM,"Standardized Uptake Value body surface area"), included from CID 85
@@ -94,6 +96,8 @@ class DCMTK_CMR_EXPORT CID7181_AbstractMultiDimensionalImageModelComponentUnits
         ProportionalToCounts,
         /// ({propcounts}/s,UCUM,"Proportional to counts per second"), included from CID 84
         ProportionalToCountsPerSecond,
+        /// (cm2/ml,UCUM,"Centimeter**2/milliliter"), included from CID 84
+        SquareCentimeterPerMilliliter,
         /// (%,UCUM,"Percent"), included from CID 84
         Percent,
         /// (Bq/ml,UCUM,"Becquerels/milliliter"), included from CID 84
@@ -110,6 +114,14 @@ class DCMTK_CMR_EXPORT CID7181_AbstractMultiDimensionalImageModelComponentUnits
         PerCentimeter,
         /// (umol/ml,UCUM,"Micromole/milliliter"), included from CID 84
         MicromolePerMilliliter,
+        /// (mm2/s,UCUM,"mm2/s"), included from CID 7277
+        Mm2PerS,
+        /// (um2/ms,UCUM,"um2/ms"), included from CID 7277
+        Um2PerMs,
+        /// (um2/s,UCUM,"um2/s"), included from CID 7277
+        Um2PerS,
+        /// (10-6.mm2/s,UCUM,"10-6.mm2/s"), included from CID 7277
+        _106mm2PerS,
         /// (1,UCUM,"no units")
         NoUnits,
         /// ({ratio},UCUM,"ratio")
@@ -118,6 +130,8 @@ class DCMTK_CMR_EXPORT CID7181_AbstractMultiDimensionalImageModelComponentUnits
         HounsfieldUnit,
         /// ([arb'U],UCUM,"arbitrary unit")
         ArbitraryUnit,
+        /// (ppm,UCUM,"ppm")
+        Ppm,
         /// (cm/s,UCUM,"centimeter/second")
         CentimeterPerSecond,
         /// (mm/s,UCUM,"millimeter/second")
@@ -140,8 +154,6 @@ class DCMTK_CMR_EXPORT CID7181_AbstractMultiDimensionalImageModelComponentUnits
         MilliTesla,
         /// ({Particles}/[100]g{Tissue},UCUM,"number particles per 100 gram of tissue")
         NumberParticlesPer100GramOfTissue,
-        /// (mm2/s,UCUM,"square millimeter per second")
-        SquareMillimeterPerSecond,
         /// (s/mm2,UCUM,"second per square millimeter")
         SecondPerSquareMillimeter,
         /// (ml/[100]g/min,UCUM,"milliliter per 100 gram per minute")

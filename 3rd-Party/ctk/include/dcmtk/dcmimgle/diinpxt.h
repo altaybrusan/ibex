@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1996-2016, OFFIS e.V.
+ *  Copyright (C) 1996-2018, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -157,7 +157,7 @@ class DiInputPixelTemplate
         if ((PixelCount == 0) || (PixelStart + PixelCount > Count))         // check for corrupt pixel length
         {
             PixelCount = Count - PixelStart;
-            DCMIMGLE_DEBUG("setting number of pixels to be processed (PixelCount) to: " << PixelCount);
+            DCMIMGLE_DEBUG("setting number of pixels to be processed (PixelCount) to " << PixelCount);
         }
     }
 
@@ -184,9 +184,10 @@ class DiInputPixelTemplate
             DCMIMGLE_DEBUG("determining minimum and maximum pixel values for input data");
             T2 *p = Data;
             unsigned long i;
-            const unsigned long ocnt = OFstatic_cast(unsigned long, getAbsMaxRange());
+            const double absrange = getAbsMaxRange();
+            const unsigned long ocnt = (absrange <= 10000000.0) ? OFstatic_cast(unsigned long, absrange) : 0 /* no LUT */;
             Uint8 *lut = NULL;
-            if ((sizeof(T2) <= 2) && (Count > 3 * ocnt))               // optimization criteria
+            if ((sizeof(T2) <= 2) && (ocnt > 0) && (Count > 3 * ocnt)) // optimization criteria
             {
                 lut = new Uint8[ocnt];
                 if (lut != NULL)

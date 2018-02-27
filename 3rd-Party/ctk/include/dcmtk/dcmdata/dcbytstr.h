@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2016, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -29,6 +29,8 @@
 #include "dcmtk/dcmdata/dcelem.h"
 #include "dcmtk/ofstd/ofstring.h"
 
+// forward declarations
+class DcmJsonFormat;
 
 // include this file in doxygen documentation
 
@@ -54,13 +56,16 @@ class DCMTK_DCMDATA_EXPORT DcmByteString: public DcmElement
 
  public:
 
+    // Make friend with DcmItem which requires access to protected
+    // constructor allowing construction using an explicit value length.
+    friend class DcmItem;
+
     /** constructor.
-     *  Create new element from given tag and length.
+     *  Create new element from given tag.
      *  @param tag DICOM tag for the new element
      *  @param len value length for the new element
      */
-    DcmByteString(const DcmTag &tag,
-                  const Uint32 len = 0);
+    DcmByteString(const DcmTag &tag);
 
     /** copy constructor
      *  @param old element to be copied
@@ -85,13 +90,15 @@ class DCMTK_DCMDATA_EXPORT DcmByteString: public DcmElement
      *  object (if applicable).
      *  @param  rhs the right hand side of the comparison
      *  @return 0 if the object values are equal.
-     *          -1 if either the value of the  first component that does not match
-     *          is lower in this object than in rhs, or all compared components match
-     *          but this object has fewer components than rhs. Also returned if rhs
-     *          cannot be casted to this object type.
-     *          1 if either the value of the first component that does not match
-     *          is greater in this object than in rhs object, or all compared
-     *          components match but the this component is longer.
+     *          -1 if this element has fewer components than the rhs element.
+     *          Also -1 if the value of the first component that does not match
+     *          is lower in this object than in rhs. Also returned if rhs
+     *          cannot be casted to this object type or both objects are of
+     *          different VR (i.e. the DcmEVR returned by the element's ident()
+     *          call are different).
+     *          1 if either this element has more components than the rhs element, or
+     *          if the first component that does not match is greater in this object than
+     *          in rhs object.
      */
     virtual int compare(const DcmElement& rhs) const;
 
@@ -169,6 +176,7 @@ class DCMTK_DCMDATA_EXPORT DcmByteString: public DcmElement
      *  @param oxfer transfer syntax used to write the data
      *  @param enctype flag, specifying the encoding with undefined or explicit length
      *  @param wcache pointer to write cache object, may be NULL
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition write(DcmOutputStream &outStream,
                               const E_TransferSyntax oxfer,
@@ -180,6 +188,7 @@ class DCMTK_DCMDATA_EXPORT DcmByteString: public DcmElement
      *  @param oxfer transfer syntax used to write the data
      *  @param enctype flag, specifying the encoding with undefined or explicit length
      *  @param wcache pointer to write cache object, may be NULL
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition writeSignatureFormat(DcmOutputStream &outStream,
                                              const E_TransferSyntax oxfer,
@@ -276,7 +285,50 @@ class DCMTK_DCMDATA_EXPORT DcmByteString: public DcmElement
      */
     virtual OFBool isEmpty(const OFBool normalize = OFTrue);
 
+    /** write object in JSON format
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition writeJson(STD_NAMESPACE ostream &out,
+                                  DcmJsonFormat &format);
+
+    /// @copydoc DcmElement::matches()
+    virtual OFBool matches(const DcmElement& candidate,
+                           const OFBool enableWildCardMatching = OFTrue) const;
+
+    /** perform attribute matching on a single pair of string values.
+     *  Compare two single string values using the attribute matching function appropriate for
+     *  this element's VR (Universal Matching, Single Value Matching, Wild Card Matching or
+     *  Range Matching).
+     *  @note This method is called by the other overload of matches() for each combination of
+     *    values in the key and candidate element (implementing multi value matching for
+     *    elements with VM>1).
+     *  @param key the key value to match against the candidate.
+     *  @param candidate the candidate value to match the key against.
+     *  @param enableWildCardMatching enable or disable wild card matching. Defaults to OFTrue,
+     *    which means wild card matching is performed if the element's VR supports it. Set to
+     *    OFFalse to force single value matching instead.
+     *  @return OFTrue if the candidate string matches the key string, OFFalse otherwise.
+     */
+    virtual OFBool matches(const OFString& key,
+                           const OFString& candidate,
+                           const OFBool enableWildCardMatching = OFTrue) const;
+
  protected:
+
+    /** constructor. Create new element from given tag and length.
+     *  Only reachable from friend classes since construction with
+     *  length different from 0 leads to a state with length being set but
+     *  the element's value still being uninitialized. This can lead to crashes
+     *  when the value is read or written. Thus the method calling this
+     *  constructor with length > 0 must ensure that the element's value is
+     *  explicitly initialized, too.
+     *  @param tag DICOM tag for the new element
+     *  @param len value length for the new element
+     */
+    DcmByteString(const DcmTag &tag,
+                  const Uint32 len);
 
     /// internal type used to specify the current string representation
     enum E_StringMode

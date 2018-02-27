@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1998-2011, OFFIS e.V.
+ *  Copyright (C) 1998-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -49,7 +49,7 @@ public:
    *  @param newTLSConnection pointer to intialized OpenSSL connection object
    *    to be used for this connection.
    */
-  DcmTLSConnection(int openSocket, SSL *newTLSConnection);
+  DcmTLSConnection(DcmNativeSocketType openSocket, SSL *newTLSConnection);
 
   /** destructor
    */

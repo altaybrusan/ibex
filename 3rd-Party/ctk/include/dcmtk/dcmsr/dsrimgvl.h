@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2016, OFFIS e.V.
+ *  Copyright (C) 2000-2018, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -111,6 +111,20 @@ class DCMTK_DCMSR_EXPORT DSRImageReferenceValue
      ** @return reference to this image reference value after 'referenceValue' has been copied
      */
     DSRImageReferenceValue &operator=(const DSRImageReferenceValue &referenceValue);
+
+    /** comparison operator "equal".
+     *  Please note that the optional icon image is not used for comparing the two values.
+     ** @param  referenceValue  image reference value that should be compared to the current one
+     ** @return OFTrue if both image reference values are equal, OFFalse otherwise
+     */
+    OFBool operator==(const DSRImageReferenceValue &referenceValue) const;
+
+    /** comparison operator "not equal".
+     *  Please note that the optional icon image is not used for comparing the two values.
+     ** @param  referenceValue  image reference value that should be compared to the current one
+     ** @return OFTrue if both image reference values are not equal, OFFalse otherwise
+     */
+    OFBool operator!=(const DSRImageReferenceValue &referenceValue) const;
 
     /** clear all internal variables.
      *  Since an empty image reference is invalid the reference becomes invalid afterwards.
@@ -427,7 +441,7 @@ class DCMTK_DCMSR_EXPORT DSRImageReferenceValue
     /** check the specified SOP class UID for validity.
      *  This method further specializes the checks performed in the base class
      *  DSRCompositeReferenceValue.  All image and segmentation SOP classes that
-     *  are defined in DICOM PS 3.6-2015c are allowed.
+     *  are defined in DICOM PS 3.6-2017e are allowed.
      ** @param  sopClassUID  SOP class UID to be checked
      ** @return status, EC_Normal if value is valid, an error code otherwise
      */

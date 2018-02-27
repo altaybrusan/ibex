@@ -40,17 +40,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 INCLUDEPATH += ../../3rd-Party/ctk/include
 
 SOURCES += \
-    dcmtktesttest.cpp
+    dcmtktest.cpp
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
-LIBS += ../../3rd-Party/ctk/lib/ctk-0.1/dcmfg.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/dcmnet.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/dcmimage.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/dcmiod.lib \
-        ../../3rd-Party/ctk/lib/ctk-0.1/ofstd.lib\
+LIBS += ../../3rd-Party/ctk/lib/ctk-0.1/ofstd.lib\
         ../../3rd-Party/ctk/lib/ctk-0.1/oflog.lib\
         ../../3rd-Party/ctk/lib/ctk-0.1/dcmdata.lib \
+        ../../3rd-Party/ctk/lib/ctk-0.1/dcmfg.lib \
+        ../../3rd-Party/ctk/lib/ctk-0.1/dcmnet.lib \
+        ../../3rd-Party/ctk/lib/ctk-0.1/dcmimage.lib \
+#        ../../3rd-Party/ctk/lib/ctk-0.1/dcmiod.lib \
+
+
 
 HEADERS += \
     testscu.h

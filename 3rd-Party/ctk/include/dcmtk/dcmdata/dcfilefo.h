@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2014, OFFIS e.V.
+ *  Copyright (C) 1994-2016, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -31,6 +31,7 @@
 
 // forward declarations
 class DcmMetaInfo;
+class DcmJsonFormat;
 class DcmInputStream;
 class DcmOutputStream;
 class DcmRepresentationParameter;
@@ -128,6 +129,7 @@ class DCMTK_DCMDATA_EXPORT DcmFileFormat
      *  in metainfo and contain correct values.
      *  @param oxfer the transfer syntax which shall be used
      *  @param writeMode flag indicating whether to update the file meta information or not
+     *  @return EC_Normal if valid, an error code otherwise
      */
     virtual OFCondition validateMetaInfo(const E_TransferSyntax oxfer,
                                          const E_FileWriteMode writeMode = EWM_fileformat);
@@ -183,6 +185,23 @@ class DCMTK_DCMDATA_EXPORT DcmFileFormat
                              const E_GrpLenEncoding glenc = EGL_noChange,
                              const Uint32 maxReadLength = DCM_MaxReadLength);
 
+    /** read object from a stream, up to the attribute tag stopParsingAtElement.
+     *  @param inStream DICOM input stream
+     *  @param xfer transfer syntax to use when parsing
+     *  @param glenc handling of group length parameters
+     *  @param maxReadLength attribute values larger than this value are skipped
+     *    while parsing and read later upon first access if the stream type supports
+     *    this.
+     *  @param stopParsingAtElement parsing of the input stream is stopped when
+     *                       this tag key or any higher tag is encountered.
+     *  @return EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition readUntilTag(DcmInputStream &inStream,
+                                     const E_TransferSyntax xfer = EXS_Unknown,
+                                     const E_GrpLenEncoding glenc = EGL_noChange,
+                                     const Uint32 maxReadLength = DCM_MaxReadLength,
+                                     const DcmTagKey &stopParsingAtElement = DCM_UndefinedTagKey);
+
     /** write fileformat to a stream
      *  @param outStream DICOM output stream
      *  @param oxfer output transfer syntax
@@ -232,6 +251,28 @@ class DCMTK_DCMDATA_EXPORT DcmFileFormat
     virtual OFCondition writeXML(STD_NAMESPACE ostream &out,
                                  const size_t flags = 0);
 
+    /** write object in JSON format.
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition writeJson(STD_NAMESPACE ostream &out,
+                                  DcmJsonFormat &format);
+
+    /** write object in JSON format.
+     *  @tparam Format the formatter class, e.g. DcmJsonFormatPretty.
+     *    Will be deduced automatically.
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    template<typename Format>
+    OFCondition writeJson(STD_NAMESPACE ostream &out,
+                          Format format)
+    {
+        return writeJson(out, OFstatic_cast(DcmJsonFormat&, format));
+    }
+
     /** load object from a DICOM file.
      *  This method supports DICOM objects stored as a file (with meta header) or as a
      *  dataset (without meta header).  By default, the presence of a meta header is
@@ -253,6 +294,31 @@ class DCMTK_DCMDATA_EXPORT DcmFileFormat
                                  const E_GrpLenEncoding groupLength = EGL_noChange,
                                  const Uint32 maxReadLength = DCM_MaxReadLength,
                                  const E_FileReadMode readMode = ERM_autoDetect);
+
+    /** load object from a DICOM file, up to the attribute tag stopParsingAtElement.
+     *  This method supports DICOM objects stored as a file (with meta header) or as a
+     *  dataset (without meta header).  By default, the presence of a meta header is
+     *  detected automatically.
+     *  @param fileName name of the file to load (may contain wide chars if support enabled).
+     *    Since there are various constructors for the OFFilename class, a "char *", "OFString"
+     *    or "wchar_t *" can also be passed directly to this parameter.
+     *  @param readXfer transfer syntax used to read the data (auto detection if EXS_Unknown)
+     *  @param groupLength flag, specifying how to handle the group length tags
+     *  @param maxReadLength maximum number of bytes to be read for an element value.
+     *    Element values with a larger size are not loaded until their value is retrieved
+     *    (with getXXX()) or loadAllDataIntoMemory() is called.
+     *  @param readMode read file with or without meta header, i.e. as a fileformat or a
+     *    dataset.  Use ERM_fileOnly in order to force the presence of a meta header.
+     *  @param stopParsingAtElement parsing of the input stream is stopped when
+     *                       this tag key or any higher tag is encountered.
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition loadFileUntilTag(const OFFilename &fileName,
+                                 const E_TransferSyntax readXfer = EXS_Unknown,
+                                 const E_GrpLenEncoding groupLength = EGL_noChange,
+                                 const Uint32 maxReadLength = DCM_MaxReadLength,
+                                 const E_FileReadMode readMode = ERM_autoDetect,
+                                 const DcmTagKey &stopParsingAtElement = DCM_UndefinedTagKey);
 
     /** save object to a DICOM file.
      *  @param fileName name of the file to save (may contain wide chars if support enabled).
@@ -374,17 +440,12 @@ class DCMTK_DCMDATA_EXPORT DcmFileFormat
      *  @param fromCharset name of the source character set(s) used for the conversion
      *  @param toCharset name of the destination character set used for the conversion.
      *    Only a single value is permitted (i.e. no code extensions).
-     *  @param transliterate mode specifying whether a character that cannot be
-     *    represented in the destination character encoding is approximated through one
-     *    or more characters that look similar to the original one
-     *  @param discardIllegal mode specifying whether characters that cannot be represented
-     *    in the destination character encoding will be silently discarded
+     *  @param flags optional flag used to customize the conversion (see DCMTypes::CF_xxx)
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition convertCharacterSet(const OFString &fromCharset,
                                             const OFString &toCharset,
-                                            const OFBool transliterate = OFFalse,
-                                            const OFBool discardIllegal = OFFalse);
+                                            const size_t flags = 0);
 
     /** convert all element values that are contained in the dataset and that are affected
      *  by SpecificCharacterSet to the given destination character set. The source
@@ -397,16 +458,11 @@ class DCMTK_DCMDATA_EXPORT DcmFileFormat
      *      checked nor updated, since the Basic Directory IOD has no SOP Common Module.
      *  @param toCharset name of the destination character set used for the conversion.
      *    Only a single value is permitted (i.e. no code extensions).
-     *  @param transliterate mode specifying whether a character that cannot be
-     *    represented in the destination character encoding is approximated through one
-     *    or more characters that look similar to the original one
-     *  @param discardIllegal mode specifying whether characters that cannot be represented
-     *    in the destination character encoding will be silently discarded
+     *  @param flags optional flag used to customize the conversion (see DCMTypes::CF_xxx)
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition convertCharacterSet(const OFString &toCharset,
-                                            const OFBool transliterate = OFFalse,
-                                            const OFBool discardIllegal = OFFalse);
+                                            const size_t flags = 0);
 
     /** convert all element values that are contained in the dataset and that are affected
      *  by SpecificCharacterSet from the currently selected source character set to the
@@ -419,7 +475,8 @@ class DCMTK_DCMDATA_EXPORT DcmFileFormat
     /** convert all element values that are contained in the dataset and that are
      *  affected by SpecificCharacterSet to UTF-8 (Unicode). The value of the
      *  SpecificCharacterSet (0008,0005) element is updated, set or deleted automatically
-     *  if needed. The transliteration mode is disabled - see convertCharacterSet().
+     *  if needed. The transliteration mode is disabled, i.e. the conversion flags are
+     *  explicitly set to 0 - see convertCharacterSet().
      *  NB: In case of a DICOMDIR, the SpecificCharacterSet in the main dataset is neither
      *      checked nor updated, since the Basic Directory IOD has no SOP Common Module.
      *  @return status, EC_Normal if successful, an error code otherwise

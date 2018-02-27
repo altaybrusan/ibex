@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2011, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -142,7 +142,7 @@ public:
 
     /// comparison equality
     OFBool operator==(const DcmHashDictIterator& x) const
-        { return (hindex == x.hindex) && (iter == x.iter); }
+        { return iterating ? x.iterating && (hindex == x.hindex) && (iter == x.iter) : !x.iterating; }
 
     /// comparison non-equality
     OFBool operator!=(const DcmHashDictIterator& x) const

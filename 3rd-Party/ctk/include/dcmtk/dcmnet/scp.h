@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2009-2015, OFFIS e.V.
+ *  Copyright (C) 2009-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -83,6 +83,8 @@ enum DcmRefuseReasonType
   DCMSCP_CANNOT_FORK,
   /// Refusing association because of bad application context name
   DCMSCP_BAD_APPLICATION_CONTEXT_NAME,
+  /// Refusing association because of disallowed connecting host
+  DCMSCP_CALLING_HOST_NOT_ALLOWED,
   /// Refusing association because of unaccepted called AE title
   DCMSCP_CALLED_AE_TITLE_NOT_RECOGNIZED,
   /// Refusing association because of unaccepted calling AE title
@@ -128,10 +130,15 @@ struct DCMTK_DCMNET_EXPORT DcmPresentationContextInfo
 
 /** Base class for implementing a DICOM Service Class Provider (SCP). Derived classes can
  *  add the presentation contexts they want to support, set further parameters (port, peer
- *  hostname, etc. as desired) and then call DcmSCP's listen() method to start the server.
+ *  host name, etc. as desired) and then call DcmSCP's listen() method to start the server.
  *  For incoming associations and DIMSE messages, a derived class can define the behavior
- *  of the server. The DcmSCP base class is capable of responding to C-ECHO requests
- *  (Verification SOP Class).
+ *  of the server.
+ *  The DcmSCP base class does not support any presentation contexts per default.
+ *  In particular the Verification SOP class which every SCP must support,
+ *  is not added automatically in order to give the user full control over the
+ *  supported list of presentation contexts. However, if this class should negotiate
+ *  Verification, call setEnableVerification(). In that case DcmSCP will also
+ *  respond to related C-ECHO requests. Note that this cannot be reverted.
  *  @warning This class is EXPERIMENTAL. Be careful to use it in production environment.
  */
 class DCMTK_DCMNET_EXPORT DcmSCP
@@ -149,7 +156,29 @@ public:
 
   /** Starts providing the implemented services to SCUs.
    *  After calling this method the SCP is listening for connection requests.
-   *  @return The result. Function usually only returns in case of errors.
+   *  @return The result. Per default, the method only returns in case of fatal errors.
+   *          However, there are ways to stop listening in a controlled way:
+   *          <ul>
+   *          <li>In non-blocking mode, use stopAfterConnectionTimeout() in order
+   *          shut down after the TCP timeout set with setConnectionTimeout() has
+   *          occurred. In that case, the method returns with NET_EC_StopAfterConnectionTimeout.</li>
+   *          <li>In non-blocking and blocking mode, stopAfterCurrentAssociation() can
+   *          be used to return after an association has been handled and ended.
+   *          In that case, NET_EC_StopAfterAssociation is returned.</li>
+   *          </ul>
+   *         Other error codes include
+   *          <ul>
+   *          <li>NET_EC_InvalidSCPAssociationProfile: Returned if the SCP's presentation
+   *          context information is invalid (e.g. no presentation contexts have
+   *          been added).
+   *          </li>
+   *          <li>NET_EC_InsufficientPortPrivileges: Returned if the SCP is not
+   *          allowed to open the specified TCP port for listening. The reason
+   *          may be that you try to open a port number below 1024 on a Unix-like
+   *          system as non-root user.
+   *          <li>EC_setuidFailed: Returned (on Unix-like systems) if the DcmSCP
+   *          was not able to drop root privileges.
+   *          </ul>
    */
   virtual OFCondition listen();
 
@@ -157,11 +186,35 @@ public:
   /*             Set methods for configuring SCP behavior          */
   /* ************************************************************* */
 
+  /** Enables negotiation of the Verification SOP Class. It adds the Verification
+   *  SOP Class to the list of supported abstract syntaxes for the given profile.
+   *  All uncompressed transfer syntaxes are supported. If Verification SOP
+   *  class is added here, DcmSCP will respond to related C-ECHO requests. Note
+   *  that this cannot be reverted.
+   *  The default behavior of DcmSCP is not to support any SOP Class at all.
+   *  @param profile [in] The profile Verification SOP Class should
+   *                 be added to. The default is to add it to the
+   *                 DcmSCP's internal standard profile called
+   *                 "DEFAULT".
+   *  @return EC_Normal if Verification SOP Class could be added,
+   *          error otherwise.
+   */
+  OFCondition setEnableVerification(const OFString& profile="DEFAULT");
+
   /** Add abstract syntax to presentation contexts the SCP is able to negotiate with SCUs.
    *  @param abstractSyntax [in] The UID of the abstract syntax (e.g.\ SOP class) to add
    *  @param xferSyntaxes   [in] List of transfer syntaxes (UIDs) that should be supported
    *                             for the given abstract syntax name
-   *  @param role           [in] The role to be negotiated
+   *  @param requestorRole  [in] The role to be negotiated. This denotes the role of the
+   *                        the association requestor that this instance should accept, i.e. if
+   *                        set to ASC_SC_ROLE_SCP it means that the association requestor
+   *                        is allowed to negotiate the SCP role, thus, that this DcmSCP instance
+   *                        will be playing the SCU role for this abstract syntax. The default
+   *                        role (ASC_SC_ROLE_DEFAULT) implicates that this DcmSCP instance
+   *                        will be allowed to play the SCP role only, i.e. it will acknowledge
+   *                        such an explicit SCU role request, but also it will accept a proposal
+   *                        for the abstract syntax with no explicit role being proposed
+   *                        at all (since per default the requestor is SCU and the acceptor SCP).
    *  @param profile        [in] The profile the abstract syntax should be added to. The
    *                             default is to add it to the DcmSCP's internal standard
    *                             profile called "DEFAULT".
@@ -169,7 +222,7 @@ public:
    */
   virtual OFCondition addPresentationContext(const OFString &abstractSyntax,
                                              const OFList<OFString> &xferSyntaxes,
-                                             const T_ASC_SC_ROLE role = ASC_SC_ROLE_DEFAULT,
+                                             const T_ASC_SC_ROLE requestorRole = ASC_SC_ROLE_DEFAULT,
                                              const OFString &profile = "DEFAULT");
 
   /** Set SCP's TCP/IP listening port
@@ -270,7 +323,7 @@ public:
   /** Enables or disables looking up the host name from a connecting system.
    *  Note that this sets a GLOBAL flag in DCMTK, i.e. the behavior changes
    *  for all servers. This should be changed in the future.
-   *  @param mode [in] OFTrue, if hostname lookup should be enabled, OFFalse for disabling it.
+   *  @param mode [in] OFTrue, if host name lookup should be enabled, OFFalse for disabling it.
    */
   void setHostLookupEnabled(const OFBool mode);
 
@@ -280,6 +333,19 @@ public:
    *  @param mode [in] Disable progress notification if OFFalse
    */
   void setProgressNotificationMode(const OFBool mode);
+
+  /** Option to always accept a default role as association acceptor.
+   *  If OFFalse (default) the acceptor will reject a presentation context proposed
+   *  with Default role (no role selection at all) when it is configured for role
+   *  SCP only. If this option is set to OFTrue then such presentation contexts will
+   *  be accepted in Default role (i.e. acceptor does not return role selection for
+   *  this presentation context at all). Overall, if set to OFTrue, there are no
+   *  requestor proposals possible that lead to a complete rejection of a presentation
+   *  context. See also role documentation in dul.h.
+   *  @param  enabled If OFTrue, do not reject Default role proposals when configured
+   *          for SCP role. OFFalse (default behaviour): Reject such proposals.
+   */
+  void setAlwaysAcceptDefaultRole(const OFBool enabled);
 
   /* Get methods for SCP settings */
 
@@ -344,7 +410,7 @@ public:
   OFBool getVerbosePCMode() const;
 
   /** Returns whether a connecting system's host name is looked up.
-   *  @return OFTrue, if hostname lookup is enabled, OFFalse otherwise
+   *  @return OFTrue, if host name lookup is enabled, OFFalse otherwise
    */
   OFBool getHostLookupEnabled() const;
 
@@ -365,8 +431,11 @@ public:
 
   /** Set the DcmSCPConfig object to use for configuring this DcmSCP object.
    *  A deep copy is performed.
-   *  @param config The configuration to use.
-   *  @return EC_Normal if configuration can be used, error code otherwise.
+   *  @param  config The configuration to use.
+   *  @return EC_Normal if configuration can be used. The configuration can
+   *          only be changed if the SCP is not yet connected, otherwise
+   *          NET_EC_AlreadyConnected is returned.
+   *
    */
   virtual OFCondition setConfig(const DcmSCPConfig& config);
 
@@ -409,7 +478,7 @@ public:
    */
   Uint32 getPeerMaxPDULength() const;
 
-  // DcmThreadSCP needs access to configuration (m_cfg), at least
+  /// DcmThreadSCP needs access to configuration (m_cfg), at least
   friend class DcmThreadSCP;
 
 protected:
@@ -441,9 +510,11 @@ protected:
   /* *********************************************************************** */
 
   /** Handle incoming command set and react accordingly, e.g.\ sending response via
-   *  DIMSE_sendXXXResponse(). The standard handler only knows how to handle an Echo request
-   *  by calling handleEchoRequest(). This function is most likely to be implemented by a
-   *  derived class implementing a specific SCP behavior.
+   *  DIMSE_sendXXXResponse(). The standard handler only knows how to handle
+   *  a C-ECHO request message (by calling handleEchoRequest()) if it is sent on a
+   *  presentation context configured for the Verification SOP Class.
+   *  This function is most likely to be implemented by a derived class
+   *  implementing a specific SCP behavior.
    *  @param incomingMsg The DIMSE message received
    *  @param presInfo Additional information on the Presentation Context used
    *  @return EC_Normal if the message could be handled, error if not. Especially
@@ -483,9 +554,8 @@ protected:
    */
   virtual OFBool checkCallingAETitleAccepted(const OFString& callingAE);
 
-  /** Overwrite this function if calling IP should undergo checking. Note
-   *  that this function may also return a hostname instead. If
-   *  OFTrue is returned, the IP is accepted and processing is continued.
+  /** Overwrite this function if calling IP / host name should undergo checking.
+   *  If OFTrue is returned, the host is accepted and processing is continued.
    *  In case of OFFalse, the SCP will refuse the incoming association with
    *  an error. The standard handler always returns OFTrue.
    *  @param hostOrIP The IP of the client to check.
@@ -513,6 +583,13 @@ protected:
    */
   virtual void notifyAssociationTermination();
 
+  /** Overwrite this function to be notified about a connection timeout in
+   *  non-blocking mode (see setConnectionBlockingMode() and setConnectionTimeout()
+   *  methods). In blocking mode, this method has no effect since it's never called.
+   *  The standard handler only outputs some information to the TRACE logger.
+   */
+  virtual void notifyConnectionTimeout();
+
   /** Overwrite this function to be notified when a DIMSE error occurs.
    *  The standard handler only outputs error information to the logger.
    *  @param cond [in] The DIMSE error occurred.
@@ -537,12 +614,25 @@ protected:
    */
   virtual void notifyRECEIVEProgress(const unsigned long byteCount);
 
-  /** Overwrite this function to change the behavior of the listen() method. As long as no
+  /** This method can be used to return from the listen() loop in a controlled way.
+   *  In order to use it, it must be overwritten in a derived class. As long as no
    *  severe error occurs and this method returns OFFalse, the listen() method will wait
    *  for incoming associations in an infinite loop.
    *  @return The standard handler always returns OFFalse
    */
   virtual OFBool stopAfterCurrentAssociation();
+
+  /** This method can be used to return from the listen() loop in a controlled way.
+   *  In order to use it, it must be overwritten in a derived class. As long as no
+   *  severe error occurs and this method returns OFFalse, the listen() method will wait
+   *  for incoming associations in an infinite loop. If this method returns OFTrue, the
+   *  SCP will return from the listen() loop after a connection timeout occurs (see
+   *  setConnectionTimeout() method). In blocking mode (see setConnectionBlockingMode()
+   *  method), this method has no effect (it's never called) since the underlying
+   *  routines will wait forever for an incoming TCP connection.
+   *  @return The standard handler always returns OFFalse
+   */
+  virtual OFBool stopAfterConnectionTimeout();
 
   // -- C-ECHO --
 
@@ -911,12 +1001,15 @@ protected:
    *  something goes wrong. Therefore, refusing an association because of wrong application
    *  context name or no common presentation contexts with the SCU does NOT lead to an error.
    *  @param network [in] Contains network parameters
-   *  @return EC_Normal, if everything went fine, an error code otherwise
+   *  @return EC_Normal, if everything went fine, DUL_NOASSOCIATIONREQUEST if a timeout
+   *          occurs in non-blocking mode, DIMSE_ILLEGALASSOCIATION or ASC_NULLKEY if
+   *          severe internal errors occured (should not happen)
    */
   virtual OFCondition waitForAssociationRQ(T_ASC_Network *network);
 
   /** Actually process association request.
-   *  @return EC_Normal if association could be processed, error otherwise.
+   *  @return EC_Normal if association could be processed, ASC_NULLKEY otherwise
+   *          (only if internal association structure is invalid, should never happen)
    */
   virtual OFCondition processAssociationRQ();
 

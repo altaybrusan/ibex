@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2006-2016, OFFIS e.V.
+ *  Copyright (C) 2006-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -43,6 +43,10 @@ BEGIN_EXTERN_C
 #endif
 END_EXTERN_C
 
+#ifdef HAVE_UNIX_H
+#include <unix.h>           /* needed for setlinebuf() on QNX */
+#endif
+
 /* HP-UX has clearerr both as macro and as a function definition. We have to
  * undef the macro so that we can define a function called "clearerr".
  */
@@ -59,19 +63,11 @@ END_EXTERN_C
  * Yes, this is ugly.
  */
 
-/* Find out whether current operating system needs explicit function calls
- * to handle large file support
+/* Find out whether to use explicit LFS function calls to handle
+ * large file support
  */
-#ifdef _LARGEFILE64_SOURCE
-  // Mac OS X defines _LARGEFILE64_SOURCE but anyhow expects implicit 64 bit calls.
-  // The same is true for current Cygwin versions (tested with version 1.7.7-1).
-  #if !(defined(__MACH__) && defined(__APPLE__)) && !defined(__CYGWIN__)
-    #define EXPLICIT_LFS_64
-  #endif
-#endif
-
-// Explicit LFS (LFS64) and Windows need 64 bit types
-#if defined(EXPLICIT_LFS_64) || defined(_WIN32)
+#if defined(DCMTK_ENABLE_LFS) && DCMTK_ENABLE_LFS == DCMTK_LFS64
+#define EXPLICIT_LFS_64
 
 // Use POSIX 64 bit file position type when available
 #ifdef HAVE_FPOS64_T
@@ -92,7 +88,19 @@ typedef Sint64 offile_off_t;
 
 #else // Implicit LFS or no LFS
 
-#ifdef HAVE_FSEEKO
+#if defined(DCMTK_ENABLE_LFS) && DCMTK_ENABLE_LFS == DCMTK_LFS
+#if defined(SIZEOF_FPOS_T) && (!defined(SIZEOF_OFF_T) || SIZEOF_FPOS_T > SIZEOF_OFF_T)
+// strange Windows LFS where sizeof(fpos_t) == 8 but sizeof(off_t) == 4
+#ifndef OF_NO_SINT64 // Use a 64 bit integer
+typedef Sint64 offile_off_t;
+#else // Cry when LFS is required but no 64 bit integer exists
+#error \
+  Could not find a suitable offset-type for LFS support.
+#endif
+#else
+typedef off_t offile_off_t;
+#endif
+#elif defined(HAVE_FSEEKO)
 typedef off_t offile_off_t;
 #else
 typedef long offile_off_t;
@@ -554,7 +562,17 @@ public:
    *  the beginning of the file. This is equivalent to fseek(0, SEEK_SET)
    *  except that the error indicator for the stream is also cleared.
    */
-  void rewind() { STDIO_NAMESPACE rewind(file_); }
+  void rewind()
+  {
+#if defined(_WIN32) || defined(__CYGWIN__)
+    /* On these platforms rewind() fails after reading to the end of file
+     * if the file is read-only. Using fseek() instead.
+     */
+    (void) this->fseek(0L, SEEK_SET);
+#else
+    STDIO_NAMESPACE rewind(file_);
+#endif
+  }
 
   /** clears the end-of-file and error indicators for the stream
    */
@@ -824,8 +842,8 @@ public:
   int fgetpos(offile_fpos_t *pos)
   {
     int result;
-#if defined(EXPLICIT_LFS_64) && ! defined(__MINGW32__)
-    // MinGW has EXPLICIT_LFS_64 but no fgetpos64()
+#if defined(EXPLICIT_LFS_64) && ! defined(__MINGW32__) && ! defined(__QNX__)
+    // MinGW and QNX have EXPLICIT_LFS_64 but no fgetpos64()
     result = :: fgetpos64(file_, pos);
 #else
     result = STDIO_NAMESPACE fgetpos(file_, pos);
@@ -844,8 +862,8 @@ public:
   int fsetpos(offile_fpos_t *pos)
   {
     int result;
-#if defined(EXPLICIT_LFS_64) && ! defined(__MINGW32__)
-    // MinGW has EXPLICIT_LFS_64 but no fsetpos64()
+#if defined(EXPLICIT_LFS_64) && ! defined(__MINGW32__) && ! defined(__QNX__)
+    // MinGW and QNX have EXPLICIT_LFS_64 but no fsetpos64()
     result = :: fsetpos64(file_, pos);
 #else
     result = STDIO_NAMESPACE fsetpos(file_, pos);

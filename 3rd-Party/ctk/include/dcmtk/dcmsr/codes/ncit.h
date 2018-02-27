@@ -1,12 +1,12 @@
 /*
  *
- *  Copyright (C) 2015-2016, J. Riesmeier, Oldenburg, Germany
+ *  Copyright (C) 2015-2017, J. Riesmeier, Oldenburg, Germany
  *  All rights reserved.  See COPYRIGHT file for details.
  *
- *  Header file with NCIt Code Definitions (Coding Scheme "NCIt")
+ *  Header file with NCI Thesaurus Code Definitions (Coding Scheme "NCIt")
  *
- *  Generated automatically from DICOM PS 3.16-2016d
- *  File created on 2016-10-04 11:50:21 by J. Riesmeier
+ *  Generated automatically from DICOM PS 3.16-2017e
+ *  File created on 2017-12-05 09:12:48 by J. Riesmeier
  *
  */
 
@@ -23,17 +23,18 @@
  *  general information  *
  *-----------------------*/
 
-#define CODE_NCIt_CodingSchemeDesignator  "NCIt"
-#define CODE_NCIt_CodingSchemeName        "NCIt"
-#define CODE_NCIt_CodingSchemeDescription "NCI Thesaurus"
-#define CODE_NCIt_CodingSchemeUID         "2.16.840.1.113883.3.26.1.1"
+#define CODE_NCIt_CodingSchemeDesignator              "NCIt"
+#define CODE_NCIt_CodingSchemeName                    "NCI Thesaurus"
+#define CODE_NCIt_CodingSchemeDescription             "NCI Thesaurus"
+#define CODE_NCIt_CodingSchemeResponsibleOrganization "NCI"
+#define CODE_NCIt_CodingSchemeUID                     "2.16.840.1.113883.3.26.1.1"
 
 
 /*--------------------*
  *  code definitions  *
  *--------------------*/
 
-// total number of codes: 16
+// total number of codes: 19
 // - retired: 0
 // - no name: 0
 // - not unique: 0
@@ -48,13 +49,16 @@
 // description of the code meaning to a compiler-friendly but still human-readable representation.
 
 #define CODE_NCIt_RANO                                                     DSRBasicCodedEntry("C114879", "NCIt", "RANO")
+#define CODE_NCIt_MouseMammaryFatPad                                       DSRBasicCodedEntry("C22550", "NCIt", "Mouse mammary fat pad")
 #define CODE_NCIt_BronchioloalveolarAdenocarcinoma                         DSRBasicCodedEntry("C2923", "NCIt", "Bronchioloalveolar adenocarcinoma")
+#define CODE_NCIt_Enrollment                                               DSRBasicCodedEntry("C37948", "NCIt", "Enrollment")
 #define CODE_NCIt_ExtraluminalRoute                                        DSRBasicCodedEntry("C38213", "NCIt", "Extraluminal route")
 #define CODE_NCIt_IntraepithelialRoute                                     DSRBasicCodedEntry("C38244", "NCIt", "Intraepithelial route")
 #define CODE_NCIt_TransluminalRoute                                        DSRBasicCodedEntry("C38306", "NCIt", "Transluminal route")
 #define CODE_NCIt_TemperatureSensorDeviceComponent                         DSRBasicCodedEntry("C50304", "NCIt", "Temperature sensor device component")
 #define CODE_NCIt_AdLibitum                                                DSRBasicCodedEntry("C64636", "NCIt", "ad libitum")
 #define CODE_NCIt_ActivitySession                                          DSRBasicCodedEntry("C67447", "NCIt", "Activity Session")
+#define CODE_NCIt_UnitConversionFactor                                     DSRBasicCodedEntry("C70774", "NCIt", "Unit Conversion Factor")
 #define CODE_NCIt_Erect                                                    DSRBasicCodedEntry("C86043", "NCIt", "erect")
 #define CODE_NCIt_BeddingChange                                            DSRBasicCodedEntry("C90365", "NCIt", "Bedding change")
 #define CODE_NCIt_BeddingMaterial                                          DSRBasicCodedEntry("C90366", "NCIt", "Bedding material")

@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1993-2011, OFFIS e.V.
+ *  Copyright (C) 1993-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -24,10 +24,12 @@
 
 #include "dcmtk/config/osconfig.h"    /* make sure OS specific configuration is included first */
 
+#include "dcmtk/ofstd/ofoption.h"
 #include "dcmtk/dcmnet/dicom.h"
 #include "dcmtk/dcmdata/dcdatset.h"
 #include "dcmtk/dcmdata/dcuid.h"
 #include "dcmtk/dcmdata/dcdeftag.h"
+#include "dcmtk/dcmdata/dcspchrs.h"
 #include "dcmtk/dcmqrdb/dcmqrdbi.h"
 
 BEGIN_EXTERN_C
@@ -62,23 +64,6 @@ enum DB_QUERY_CLASS
     PATIENT_STUDY
 };
 
-/** types of database keys
- */
-enum DB_KEY_CLASS
-{
-    /// a date entry
-    DATE_CLASS,
-    /// a time entry
-    TIME_CLASS,
-    /// a UID entry
-    UID_CLASS,
-    /// a string entry
-    STRING_CLASS,
-    /// an entry not belonging to any other class
-    OTHER_CLASS
-};
-
-
 /** Level Strings
  */
 
@@ -102,13 +87,13 @@ enum DB_KEY_CLASS
 #define FL_MAX_LENGTH   32      /* FLoating point single */
 #define FD_MAX_LENGTH   64      /* Floating point Double */
 #define IS_MAX_LENGTH   96      /* Integer String        */
-#define LO_MAX_LENGTH   64      /* Long String           */
-#define LT_MAX_LENGTH   10240   /* Long Text             */
-#define PN_MAX_LENGTH   64      /* Person Name           */
-#define SH_MAX_LENGTH   16      /* Short String          */
+#define LO_MAX_LENGTH   256     /* Long String           */
+#define LT_MAX_LENGTH   40960   /* Long Text             */
+#define PN_MAX_LENGTH   256     /* Person Name           */
+#define SH_MAX_LENGTH   64      /* Short String          */
 #define SL_MAX_LENGTH   32      /* Signed Long           */
 #define SS_MAX_LENGTH   16      /* Signed Short          */
-#define ST_MAX_LENGTH   1024    /* Short Text            */
+#define ST_MAX_LENGTH   4096    /* Short Text            */
 #define TM_MAX_LENGTH   128     /* Time                  */
 #define UI_MAX_LENGTH   64      /* Unique Identifier     */
 #define UL_MAX_LENGTH   32      /* Unsigned Long         */
@@ -123,6 +108,8 @@ enum DB_KEY_CLASS
 #define SIZEOF_IDXRECORD        (sizeof (IdxRecord))
 #define SIZEOF_STUDYDESC        (sizeof (StudyDescRecord) * MAX_MAX_STUDIES)
 
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
+
 struct DCMTK_DCMQRDB_EXPORT DB_SerializedTagKey
 {
     inline DB_SerializedTagKey() {}
@@ -132,6 +119,8 @@ struct DCMTK_DCMQRDB_EXPORT DB_SerializedTagKey
     inline bool operator==(const DB_SerializedTagKey& rhs) const { return key[0] == rhs.key[0] && key[1] == rhs.key[1]; }
     Uint16 key[2];
 };
+
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
 
 struct DCMTK_DCMQRDB_EXPORT DB_SerializedCharPtr
 {
@@ -144,6 +133,8 @@ struct DCMTK_DCMQRDB_EXPORT DB_SerializedCharPtr
         Uint64 placeholder;
     } ptr ;
 };
+
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
 
 /** this class provides a primitive interface for handling a flat DICOM element,
  *  similar to DcmElement, but only for use within the database module
@@ -170,13 +161,15 @@ private:
     DB_SmallDcmElmt& operator=(const DB_SmallDcmElmt& copy);
 };
 
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
+
 /** this class provides a primitive interface for handling a list of flat DICOM elements,
  *  similar to DcmItem, but only for use within the database module
  */
 struct DCMTK_DCMQRDB_EXPORT DB_ElementList
 {
     /// default constructor
-    DB_ElementList(): elem(), next(NULL) {}
+    DB_ElementList(): elem(), next(NULL), utf8Value() {}
 
     /// current list element
     DB_SmallDcmElmt elem ;
@@ -184,12 +177,17 @@ struct DCMTK_DCMQRDB_EXPORT DB_ElementList
     /// pointer to next in list
     struct DB_ElementList *next ;
 
+    /// UTF-8 cache
+    OFoptional<OFString> utf8Value ;
+
 private:
     /// private undefined copy constructor
     DB_ElementList(const DB_ElementList& copy);
     /// private undefined copy assignment operator
     DB_ElementList& operator=(const DB_ElementList& copy);
 };
+
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
 
 struct DCMTK_DCMQRDB_EXPORT DB_UidList
 {
@@ -200,27 +198,34 @@ struct DCMTK_DCMQRDB_EXPORT DB_UidList
     struct DB_UidList *next ;
 };
 
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
+
 struct DCMTK_DCMQRDB_EXPORT DB_CounterList
 {
     int idxCounter ;
     struct DB_CounterList *next ;
 };
 
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
+
 struct DCMTK_DCMQRDB_EXPORT DB_FindAttr
 {
     DcmTagKey tag ;
     DB_LEVEL level ;
     DB_KEY_TYPE keyAttr ;
-    DB_KEY_CLASS keyClass ;
 
     /* to passify some C++ compilers */
-    DB_FindAttr(const DcmTagKey& t, DB_LEVEL l, DB_KEY_TYPE kt, DB_KEY_CLASS kc)
-        : tag(t), level(l), keyAttr(kt), keyClass(kc) { }
+    DB_FindAttr(const DcmTagKey& t, DB_LEVEL l, DB_KEY_TYPE kt)
+        : tag(t), level(l), keyAttr(kt) { }
 };
+
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
 
 struct DCMTK_DCMQRDB_EXPORT DB_Private_Handle
 {
     int pidx ;
+    OFString findRequestCharacterSet ;
+    DcmSpecificCharacterSet findRequestConverter ;
     DB_ElementList *findRequestList ;
     DB_ElementList *findResponseList ;
     DB_LEVEL queryLevel ;
@@ -236,6 +241,8 @@ struct DCMTK_DCMQRDB_EXPORT DB_Private_Handle
 
     DB_Private_Handle()
     : pidx(0)
+    , findRequestCharacterSet()
+    , findRequestConverter()
     , findRequestList(NULL)
     , findResponseList(NULL)
     , queryLevel(STUDY_LEVEL)
@@ -251,6 +258,8 @@ struct DCMTK_DCMQRDB_EXPORT DB_Private_Handle
     {
     }
 };
+
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
 
 /** this struct defines the structure of each "Study Record" in the index.dat
  *  file maintained by this module. A Study Record is a direct binary copy
@@ -270,6 +279,8 @@ struct DCMTK_DCMQRDB_EXPORT StudyDescRecord
     /// number of images of this study in the database
     Uint32 NumberofRegistratedImages ;
 };
+
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
 
 struct DCMTK_DCMQRDB_EXPORT ImagesofStudyArray
 {
@@ -297,42 +308,40 @@ struct DCMTK_DCMQRDB_EXPORT ImagesofStudyArray
 #define RECORDIDX_OtherPatientIDs                 5
 #define RECORDIDX_OtherPatientNames               6
 #define RECORDIDX_EthnicGroup                     7
-#define RECORDIDX_NumberofPatientRelatedStudies   8
-#define RECORDIDX_NumberofPatientRelatedSeries    9
-#define RECORDIDX_NumberofPatientRelatedInstances 10
-#define RECORDIDX_StudyDate                      11
-#define RECORDIDX_StudyTime                      12
-#define RECORDIDX_StudyID                        13
-#define RECORDIDX_StudyDescription               14
-#define RECORDIDX_NameOfPhysiciansReadingStudy   15
-#define RECORDIDX_AccessionNumber                16
-#define RECORDIDX_ReferringPhysicianName         17
-#define RECORDIDX_ProcedureDescription           18
-#define RECORDIDX_AttendingPhysiciansName        19
-#define RECORDIDX_StudyInstanceUID               20
-#define RECORDIDX_OtherStudyNumbers              21
-#define RECORDIDX_AdmittingDiagnosesDescription  22
-#define RECORDIDX_PatientAge                     23
-#define RECORDIDX_PatientSize                    24
-#define RECORDIDX_PatientWeight                  25
-#define RECORDIDX_Occupation                     26
-#define RECORDIDX_NumberofStudyRelatedSeries     27
-#define RECORDIDX_NumberofStudyRelatedInstances  28
-#define RECORDIDX_SeriesNumber                   29
-#define RECORDIDX_SeriesInstanceUID              30
-#define RECORDIDX_Modality                       31
-#define RECORDIDX_ImageNumber                    32
-#define RECORDIDX_SOPInstanceUID                 33
-#define RECORDIDX_SeriesDate                     34
-#define RECORDIDX_SeriesTime                     35
-#define RECORDIDX_SeriesDescription              36
-#define RECORDIDX_ProtocolName                   37
-#define RECORDIDX_OperatorsName                  38
-#define RECORDIDX_PerformingPhysicianName        39
-#define RECORDIDX_PresentationLabel              40
+#define RECORDIDX_StudyDate                       8
+#define RECORDIDX_StudyTime                       9
+#define RECORDIDX_StudyID                        10
+#define RECORDIDX_StudyDescription               11
+#define RECORDIDX_NameOfPhysiciansReadingStudy   12
+#define RECORDIDX_AccessionNumber                13
+#define RECORDIDX_ReferringPhysicianName         14
+#define RECORDIDX_ProcedureDescription           15
+#define RECORDIDX_AttendingPhysiciansName        16
+#define RECORDIDX_StudyInstanceUID               17
+#define RECORDIDX_OtherStudyNumbers              18
+#define RECORDIDX_AdmittingDiagnosesDescription  19
+#define RECORDIDX_PatientAge                     20
+#define RECORDIDX_PatientSize                    21
+#define RECORDIDX_PatientWeight                  22
+#define RECORDIDX_Occupation                     23
+#define RECORDIDX_SeriesNumber                   24
+#define RECORDIDX_SeriesInstanceUID              25
+#define RECORDIDX_Modality                       26
+#define RECORDIDX_ImageNumber                    27
+#define RECORDIDX_SOPInstanceUID                 28
+#define RECORDIDX_SeriesDate                     29
+#define RECORDIDX_SeriesTime                     30
+#define RECORDIDX_SeriesDescription              31
+#define RECORDIDX_ProtocolName                   32
+#define RECORDIDX_OperatorsName                  33
+#define RECORDIDX_PerformingPhysicianName        34
+#define RECORDIDX_PresentationLabel              35
+#define RECORDIDX_IssuerOfPatientID              36
+#define RECORDIDX_SpecificCharacterSet           37
 
-#define NBPARAMETERS                             41
+#define NBPARAMETERS                             38
 
+/* ENSURE THAT DBVERSION IS INCREMENTED WHENEVER ONE OF THESE STRUCTS IS MODIFIED */
 
 /** this class manages an instance entry of the index file.
  *  Each instance/image record within the index.dat file is
@@ -346,7 +355,7 @@ struct DCMTK_DCMQRDB_EXPORT IdxRecord
     char    filename                        [DBC_MAXSTRING+1] ;
     char    SOPClassUID                     [UI_MAX_LENGTH+1] ;
     double  RecordedDate ;
-    int     ImageSize ;
+    Uint32  ImageSize ;
 
     DB_SmallDcmElmt param                   [NBPARAMETERS] ;
 
@@ -358,9 +367,6 @@ struct DCMTK_DCMQRDB_EXPORT IdxRecord
     char    OtherPatientIDs                 [LO_MAX_LENGTH+1] ;
     char    OtherPatientNames               [PN_MAX_LENGTH+1] ;
     char    EthnicGroup                     [SH_MAX_LENGTH+1] ;
-    char    NumberofPatientRelatedStudies   [IS_MAX_LENGTH+1] ;
-    char    NumberofPatientRelatedSeries    [IS_MAX_LENGTH+1] ;
-    char    NumberofPatientRelatedInstances [IS_MAX_LENGTH+1] ;
 
     char    StudyDate                       [DA_MAX_LENGTH+1] ;
     char    StudyTime                       [TM_MAX_LENGTH+1] ;
@@ -379,8 +385,6 @@ struct DCMTK_DCMQRDB_EXPORT IdxRecord
     char    PatientSize                     [DS_MAX_LENGTH+1] ;
     char    PatientWeight                   [DS_MAX_LENGTH+1] ;
     char    Occupation                      [SH_MAX_LENGTH+1] ;
-    char    NumberofStudyRelatedSeries      [IS_MAX_LENGTH+1] ;
-    char    NumberofStudyRelatedInstances   [IS_MAX_LENGTH+1] ;
 
     char    SeriesNumber                    [IS_MAX_LENGTH+1] ;
     char    SeriesInstanceUID               [UI_MAX_LENGTH+1] ;
@@ -396,11 +400,16 @@ struct DCMTK_DCMQRDB_EXPORT IdxRecord
     char    OperatorsName                   [PN_MAX_LENGTH+1] ;
     char    PerformingPhysicianName         [PN_MAX_LENGTH+1] ;
     char    PresentationLabel               [CS_LABEL_MAX_LENGTH+1] ;
+    char    IssuerOfPatientID               [LO_MAX_LENGTH+1] ;
 
     char    hstat;
 
     // Not related to any particular DICOM attribute !
     char    InstanceDescription             [DESCRIPTION_MAX_LENGTH+1] ;
+
+    // Specific Character Set, support for VM ~ 8 (depending on the
+    // actual length of the used DTs)
+    char    SpecificCharacterSet            [CS_MAX_LENGTH*8+1] ;
 
 private:
     /* undefined */ IdxRecord(const IdxRecord& copy);

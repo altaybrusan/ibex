@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2016, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -55,6 +55,7 @@ class DCMTK_DCMDATA_EXPORT DcmUnlimitedText
 
     /** copy assignment operator
      *  @param obj element to be copied
+     *  @return reference to this object
      */
     DcmUnlimitedText &operator=(const DcmUnlimitedText &obj);
 
@@ -85,7 +86,9 @@ class DCMTK_DCMDATA_EXPORT DcmUnlimitedText
      */
     virtual DcmEVR ident() const;
 
-    /** check whether stored value conforms to the VR and to the specified VM
+    /** check whether stored value conforms to the VR and to the specified VM.
+     *  Currently, the VR checker only supports ASCII (ISO_IR 6) and Latin-1 (ISO_IR 100).
+     *  All other specific character sets disable the check of the value representation.
      *  @param vm parameter not used for this VR
      *  @param oldFormat parameter not used for this VR (only for DA, TM)
      *  @return status of the check, EC_Normal if value is correct, an error code otherwise

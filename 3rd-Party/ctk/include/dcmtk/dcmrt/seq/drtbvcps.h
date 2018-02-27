@@ -1,13 +1,13 @@
 /*
  *
  *  Copyright (C) 2008-2012, OFFIS e.V. and ICSMED AG, Oldenburg, Germany
- *  Copyright (C) 2013-2016, J. Riesmeier, Oldenburg, Germany
+ *  Copyright (C) 2013-2017, J. Riesmeier, Oldenburg, Germany
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  Header file for class DRTBeamDoseVerificationControlPointSequence
  *
- *  Generated automatically from DICOM PS 3.3-2016d
- *  File created on 2016-10-12 13:44:31
+ *  Generated automatically from DICOM PS 3.3-2017e
+ *  File created on 2017-12-05 09:30:54
  *
  */
 
@@ -55,6 +55,7 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
 
         /** assigment operator
          *  @param copy item object to be copied
+         *  @return reference to this object
          */
         Item &operator=(const Item &copy);
 
@@ -90,33 +91,26 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
 
       // --- get DICOM attribute values ---
 
-        /** get AverageBeamDosePointDepth (300a,008d)
+        /** get BeamDosePointDepth (300a,0088)
          *  @param  value  reference to variable in which the value should be stored
          *  @param  pos    index of the value to get (0..vm-1)
          *  @return status, EC_Normal if successful, an error code otherwise
          */
-        OFCondition getAverageBeamDosePointDepth(Float32 &value, const unsigned long pos = 0) const;
+        OFCondition getBeamDosePointDepth(Float32 &value, const unsigned long pos = 0) const;
 
-        /** get AverageBeamDosePointEquivalentDepth (300a,008e)
+        /** get BeamDosePointEquivalentDepth (300a,0089)
          *  @param  value  reference to variable in which the value should be stored
          *  @param  pos    index of the value to get (0..vm-1)
          *  @return status, EC_Normal if successful, an error code otherwise
          */
-        OFCondition getAverageBeamDosePointEquivalentDepth(Float32 &value, const unsigned long pos = 0) const;
+        OFCondition getBeamDosePointEquivalentDepth(Float32 &value, const unsigned long pos = 0) const;
 
-        /** get AverageBeamDosePointSSD (300a,008f)
+        /** get BeamDosePointSSD (300a,008a)
          *  @param  value  reference to variable in which the value should be stored
          *  @param  pos    index of the value to get (0..vm-1)
          *  @return status, EC_Normal if successful, an error code otherwise
          */
-        OFCondition getAverageBeamDosePointSSD(Float32 &value, const unsigned long pos = 0) const;
-
-        /** get AverageBeamDosePointSourceToExternalContourDistance (300a,0131)
-         *  @param  value  reference to variable in which the value should be stored
-         *  @param  pos    index of the value to get (0..vm-1)
-         *  @return status, EC_Normal if successful, an error code otherwise
-         */
-        OFCondition getAverageBeamDosePointSourceToExternalContourDistance(Float32 &value, const unsigned long pos = 0) const;
+        OFCondition getBeamDosePointSSD(Float32 &value, const unsigned long pos = 0) const;
 
         /** get CumulativeMetersetWeight (300a,0134)
          *  @param  value  reference to variable in which the value should be stored
@@ -148,33 +142,26 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
 
       // --- set DICOM attribute values ---
 
-        /** set AverageBeamDosePointDepth (300a,008d)
+        /** set BeamDosePointDepth (300a,0088)
          *  @param  value  value to be set (should be valid for this VR)
          *  @param  pos    index of the value to be set (0..vm-1), vm=1
          *  @return status, EC_Normal if successful, an error code otherwise
          */
-        OFCondition setAverageBeamDosePointDepth(const Float32 value, const unsigned long pos = 0);
+        OFCondition setBeamDosePointDepth(const Float32 value, const unsigned long pos = 0);
 
-        /** set AverageBeamDosePointEquivalentDepth (300a,008e)
+        /** set BeamDosePointEquivalentDepth (300a,0089)
          *  @param  value  value to be set (should be valid for this VR)
          *  @param  pos    index of the value to be set (0..vm-1), vm=1
          *  @return status, EC_Normal if successful, an error code otherwise
          */
-        OFCondition setAverageBeamDosePointEquivalentDepth(const Float32 value, const unsigned long pos = 0);
+        OFCondition setBeamDosePointEquivalentDepth(const Float32 value, const unsigned long pos = 0);
 
-        /** set AverageBeamDosePointSSD (300a,008f)
+        /** set BeamDosePointSSD (300a,008a)
          *  @param  value  value to be set (should be valid for this VR)
          *  @param  pos    index of the value to be set (0..vm-1), vm=1
          *  @return status, EC_Normal if successful, an error code otherwise
          */
-        OFCondition setAverageBeamDosePointSSD(const Float32 value, const unsigned long pos = 0);
-
-        /** set AverageBeamDosePointSourceToExternalContourDistance (300a,0131)
-         *  @param  value  value to be set (should be valid for this VR)
-         *  @param  pos    index of the value to be set (0..vm-1), vm=1
-         *  @return status, EC_Normal if successful, an error code otherwise
-         */
-        OFCondition setAverageBeamDosePointSourceToExternalContourDistance(const Float32 value, const unsigned long pos = 0);
+        OFCondition setBeamDosePointSSD(const Float32 value, const unsigned long pos = 0);
 
         /** set CumulativeMetersetWeight (300a,0134)
          *  @param  value  value to be set (single value only) or "" for no value
@@ -195,14 +182,12 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
         /// internal flag used to mark the empty default item
         /*const*/ OFBool EmptyDefaultItem;
 
-        /// AverageBeamDosePointDepth (300a,008d) vr=FL, vm=1, type=2C
-        DcmFloatingPointSingle AverageBeamDosePointDepth;
-        /// AverageBeamDosePointEquivalentDepth (300a,008e) vr=FL, vm=1, type=2C
-        DcmFloatingPointSingle AverageBeamDosePointEquivalentDepth;
-        /// AverageBeamDosePointSSD (300a,008f) vr=FL, vm=1, type=2C
-        DcmFloatingPointSingle AverageBeamDosePointSSD;
-        /// AverageBeamDosePointSourceToExternalContourDistance (300a,0131) vr=FL, vm=1, type=3
-        DcmFloatingPointSingle AverageBeamDosePointSourceToExternalContourDistance;
+        /// BeamDosePointDepth (300a,0088) vr=FL, vm=1, type=1C
+        DcmFloatingPointSingle BeamDosePointDepth;
+        /// BeamDosePointEquivalentDepth (300a,0089) vr=FL, vm=1, type=1C
+        DcmFloatingPointSingle BeamDosePointEquivalentDepth;
+        /// BeamDosePointSSD (300a,008a) vr=FL, vm=1, type=1C
+        DcmFloatingPointSingle BeamDosePointSSD;
         /// CumulativeMetersetWeight (300a,0134) vr=DS, vm=1, type=1
         DcmDecimalString CumulativeMetersetWeight;
         /// ReferencedControlPointIndex (300c,00f0) vr=IS, vm=1, type=1C
@@ -228,6 +213,7 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
 
     /** assigment operator
      *  @param copy sequence object to be copied
+     *  @return reference to this object
      */
     DRTBeamDoseVerificationControlPointSequence &operator=(const DRTBeamDoseVerificationControlPointSequence &copy);
 
@@ -250,7 +236,7 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
     /** get number of items in the sequence
      *  @return number of items
      */
-    unsigned long getNumberOfItems() const;
+    size_t getNumberOfItems() const;
 
     /** goto first item in the sequence
      *  @return status, EC_Normal if successful, an error code otherwise
@@ -266,7 +252,7 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
      *  @param  num  number of the item to be selected (0..num-1)
      *  @return status, EC_Normal if successful, an error code otherwise
      */
-    OFCondition gotoItem(const unsigned long num);
+    OFCondition gotoItem(const size_t num);
 
     /** get current item in the sequence
      *  @param  item  reference to item pointer (result variable)
@@ -289,31 +275,31 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
      *  @param  item  reference to item pointer (result variable)
      *  @return status, EC_Normal if successful, an error code otherwise
      */
-    OFCondition getItem(const unsigned long num, Item *&item);
+    OFCondition getItem(const size_t num, Item *&item);
 
     /** get particular item in the sequence
      *  @param  num  number of the item to be retrieved (0..num-1)
      *  @return reference to specified item if successful, empty default item otherwise
      */
-    Item &getItem(const unsigned long num);
+    Item &getItem(const size_t num);
 
     /** get particular item in the sequence
      *  @param  num  number of the item to be retrieved (0..num-1)
      *  @return const reference to specified item if successful, empty default item otherwise
      */
-    const Item &getItem(const unsigned long num) const;
+    const Item &getItem(const size_t num) const;
 
     /** get particular item in the sequence
      *  @param  num  number of the item to be retrieved (0..num-1)
      *  @return reference to specified item if successful, empty default item otherwise
      */
-    Item &operator[](const unsigned long num);
+    Item &operator[](const size_t num);
 
     /** get particular item in the sequence
      *  @param  num  number of the item to be retrieved (0..num-1)
      *  @return const reference to specified item if successful, empty default item otherwise
      */
-    const Item &operator[](const unsigned long num) const;
+    const Item &operator[](const size_t num) const;
 
     /** add new item to the end of this sequence
      *  @param  item  reference to new item pointer (result variable)
@@ -326,13 +312,13 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
      *  @param  item  reference to new item pointer (result variable)
      *  @return status, EC_Normal if successful, an error code otherwise
      */
-    OFCondition insertItem(const unsigned long pos, Item *&item);
+    OFCondition insertItem(const size_t pos, Item *&item);
 
     /** remove particular item from the sequence
      *  @param  pos  position of the item to be removed (0..num-1)
      *  @return status, EC_Normal if successful, an error code otherwise
      */
-    OFCondition removeItem(const unsigned long pos);
+    OFCondition removeItem(const size_t pos);
 
   // --- input/output methods ---
 
@@ -367,7 +353,7 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
      *  @param  iterator  list iterator storing the position of the item
      *  @return status, EC_Normal if successful, an error code otherwise
      */
-    OFCondition gotoItem(const unsigned long num,
+    OFCondition gotoItem(const size_t num,
                          OFListIterator(Item *) &iterator);
 
     /** goto particular item in the sequence
@@ -375,7 +361,7 @@ class DCMTK_DCMRT_EXPORT DRTBeamDoseVerificationControlPointSequence
      *  @param  iterator  list iterator storing the position of the item
      *  @return status, EC_Normal if successful, an error code otherwise
      */
-    OFCondition gotoItem(const unsigned long num,
+    OFCondition gotoItem(const size_t num,
                          OFListConstIterator(Item *) &iterator) const;
 
   private:

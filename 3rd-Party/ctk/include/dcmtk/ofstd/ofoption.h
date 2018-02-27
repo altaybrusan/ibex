@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2014, OFFIS e.V.
+ *  Copyright (C) 2014-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -39,7 +39,7 @@
 
 #ifndef DOXYGEN
 struct OFnullopt_t {};
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
 // declare constexpr nullopt if supported.
 constexpr OFnullopt_t OFnullopt{};
 #else // C++11
@@ -164,7 +164,7 @@ public:
     struct is_default_constructible
     : OFintegral_constant<OFBool,sizeof(sfinae<T>(OFnullptr)) == sizeof(yes_type)> {};
 
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
 
     template<typename... Args>
     void construct( Args&&... args )
@@ -192,7 +192,7 @@ public:
     void destroy() { OFstatic_cast( T*, content() )->~T(); m_State = OFFalse; }
     OFBool state() const { return m_State; }
     void* content() const { return m_Content; }
-    mutable OFalign_typename(Uint8[sizeof(T)],T) m_Content;
+    OFalign_typename(Uint8[sizeof(T)],T) mutable m_Content;
     OFBool m_State;
 #else
     // Allocate content on the heap.
@@ -592,6 +592,7 @@ public:
     friend typename OFenable_if<OFis_same<O,OFoptional>::value,bool>::type
     operator>( OFnullopt_t, const O& rhs )
     {
+        (void)rhs;
         return OFFalse;
     }
 
@@ -606,6 +607,7 @@ public:
     friend typename OFenable_if<OFis_same<O,OFoptional>::value,bool>::type
     operator<=( OFnullopt_t, const O& rhs )
     {
+        (void)rhs;
         return OFTrue;
     }
 
@@ -743,7 +745,7 @@ public:
     // False friend of the copy constructor, to prevent incorrect behavior
     // (internally calls the real copy constructor).
     OFoptional( OFoptional& rhs )
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
     // delegate constructor if possible
     : OFoptional( const_cast<const OFoptional&>( rhs ) )
     {
@@ -765,7 +767,7 @@ public:
             OFoptional_traits<T>::construct( *rhs );
     }
 
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
     // Move constructor, kills rhs if it was engaged before.
     OFoptional( OFoptional&& rhs )
     : OFoptional_traits<T>()
@@ -875,7 +877,7 @@ public:
     // State and content accessing functions, see respective expression for details
 
 // declare cast operator as explicit, if possible
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
     explicit
 #endif // C++11
     operator OFBool() const
@@ -988,7 +990,7 @@ public:
     }
 
     // Move semantics if C++11 is supported
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
     OFoptional( OFoptional&& rhs )
     : m_pT( rhs.m_pT )
     {
@@ -1024,7 +1026,7 @@ public:
     // State and content accessing functions, see respective expression for details
 
 // declare cast operator as explicit, if possible
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
     explicit
 #endif // C++11
     operator bool() const
@@ -1059,7 +1061,7 @@ private:
 };
 
 // Move semantics and std::swap overload if C++11 is supported
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
 template<typename T>
 OFoptional<typename OFdecay<T>::type> OFmake_optional( T&& t )
 {

@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2016, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -36,6 +36,7 @@
 
 // forward declarations
 class DcmItem;
+class DcmJsonFormat;
 class DcmOutputStream;
 class DcmInputStream;
 class DcmWriteCache;
@@ -199,6 +200,32 @@ extern DCMTK_DCMDATA_EXPORT OFGlobal<OFBool> dcmIgnoreFileMetaInformationGroupLe
  */
 extern DCMTK_DCMDATA_EXPORT OFGlobal<OFBool> dcmReplaceWrongDelimitationItem; /* default OFFalse */
 
+/** This flag enables the "silent" conversion of illegal OB/OW elements
+ *  with undefined length (other than PixelData) to SQ elements while reading.
+ *  The default behaviour is to reject such elements with an error message.
+ */
+extern DCMTK_DCMDATA_EXPORT OFGlobal<OFBool> dcmConvertUndefinedLengthOBOWtoSQ; /* default OFFalse */
+
+/** This flag enables the "silent" conversion of incorrectly encoded
+ *  VOI LUT Sequence elements with VR=OW and explicit length into a sequence.
+ *  This incorrect encoding was detected "in the wild" in 2016.
+ */
+extern DCMTK_DCMDATA_EXPORT OFGlobal<OFBool> dcmConvertVOILUTSequenceOWtoSQ; /* default OFFalse */
+
+/** This flag influences the behaviour when reading Pixel Data elements.
+ *  Pixel Data in those top level datasets that are using a compression-enabled
+ *  Transfer Syntax (with few exceptions such as Deflated TS),
+ *  is being stored in an encapsulated way. That means DICOM requires that the
+ *  Pixel Data then element uses an undefined length and internally uses a
+ *  pseudo sequence structure called Pixel Sequence with Pixel items inside.
+ *  If this flag is set to OFFalse (default), an error is reported when reading
+ *  datasets with encapsulated Transfer Syntaxes but with Pixel Data being
+ *  stored using explicit length encoding.
+ *  If this flag is set to OFTrue, such an invalid Pixel Data encoding is
+ *  accepted and the element is read with the given length as if it would be the
+ *  case for datasets in uncompressed transfer syntaxes.
+ */
+extern DCMTK_DCMDATA_EXPORT OFGlobal<OFBool> dcmUseExplLengthPixDataForEncTS; /* default OFFalse */
 
 /** Abstract base class for most classes in module dcmdata. As a rule of thumb,
  *  everything that is either a dataset or that can be identified with a DICOM
@@ -350,6 +377,7 @@ class DCMTK_DCMDATA_EXPORT DcmObject
 
     /** set parent of this object. NULL means no parent.
      *  NB: This method is used by derived classes for internal purposes only.
+     *  @param parent pointer to the parent of this object
      */
     inline void setParent(DcmObject *parent) { Parent = parent; }
 
@@ -452,6 +480,14 @@ class DCMTK_DCMDATA_EXPORT DcmObject
      */
     virtual OFCondition writeXML(STD_NAMESPACE ostream&out,
                                  const size_t flags = 0);
+
+    /** write object in JSON format to a stream
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, always returns EC_Illegal Call
+     */
+    virtual OFCondition writeJson(STD_NAMESPACE ostream&out,
+                                  DcmJsonFormat &format);
 
     /** special write method for creation of digital signatures (abstract)
      *  @param outStream DICOM output stream

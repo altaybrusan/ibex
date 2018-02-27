@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2003-2016, OFFIS e.V.
+ *  Copyright (C) 2003-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -60,7 +60,7 @@ class DCMTK_DCMSR_EXPORT DSRCodingSchemeIdentificationList
     /** check whether list is empty
      ** @return OFTrue if list is empty, OFFalse otherwise
      */
-    OFBool empty() const;
+    OFBool isEmpty() const;
 
     /** get number of items stored in the list
      ** @return number of items
@@ -329,6 +329,8 @@ class DCMTK_DCMSR_EXPORT DSRCodingSchemeIdentificationList
         OFString CodingSchemeVersion;
         /// Coding Scheme Responsible Organization (VR=ST, type 3)
         OFString CodingSchemeResponsibleOrganization;
+        /// Coding Scheme Resources Sequence (VR=SQ, type 3)
+         // - tbd: optional attribute not yet supported
     };
 
     /** add the specified coding scheme to the list (if not existent)

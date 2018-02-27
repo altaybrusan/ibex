@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2009-2016, OFFIS e.V.
+ *  Copyright (C) 2009-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -28,7 +28,7 @@
 #include "dcmtk/oflog/logger.h"
 #include "dcmtk/oflog/logmacro.h"
 #include "dcmtk/ofstd/oftypes.h"
-#include "dcmtk/ofstd/ofaptr.h"
+#include "dcmtk/ofstd/ofmem.h"
 #include "dcmtk/ofstd/ofconapp.h"
 
 #define OFLOG_TRACE(logger, msg) DCMTK_LOG4CPLUS_TRACE(logger, msg)
@@ -95,8 +95,10 @@ class DCMTK_LOG4CPLUS_EXPORT OFLog
 
  public:
 
-    /** create a new Logger object
+    /** create a new logger object.
+     *  Logger objects have a reference counting copy-constructor, so returning by-value is cheap.
      *  @param name the name of the logger
+     *  @return requested logger object
      */
     static OFLogger getLogger(const char *name);
 
@@ -108,6 +110,7 @@ class DCMTK_LOG4CPLUS_EXPORT OFLog
     /** handle the command line options used for logging
      *  @param cmd the command line whose options are handled
      *  @param app the console application which is used for console output and error checking
+     *  @param defaultLevel default log level that is used if not specified on the command line
      */
     static void configureFromCommandLine(OFCommandLine &cmd,
                                          OFConsoleApplication &app,
@@ -128,7 +131,7 @@ class DCMTK_LOG4CPLUS_EXPORT OFLog
  private:
 
     /// If we loaded a config file in configureFromCommandLine(), this is it
-    static OFauto_ptr<dcmtk::log4cplus::helpers::Properties> configProperties_;
+    static OFunique_ptr<dcmtk::log4cplus::helpers::Properties> configProperties_;
 };
 
 #endif

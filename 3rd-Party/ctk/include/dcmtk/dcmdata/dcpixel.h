@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2011, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -53,7 +53,7 @@ public:
     virtual ~DcmRepresentationParameter() {}
 
     /** this methods creates a copy of type DcmRepresentationParameter *
-     *  it must be overweritten in every subclass.
+     *  it must be overwritten in every subclass.
      *  @return copy of this object
      */
     virtual DcmRepresentationParameter *clone() const = 0;
@@ -151,7 +151,7 @@ private:
     /// List of representations of pixel data
     DcmRepresentationList repList;
 
-    /// Iterator to the last dummy element in representation lis
+    /// Iterator to the last dummy element in representation list
     DcmRepresentationListIterator repListEnd;
 
     /// Iterator to the original representation. if an uncompressed
@@ -161,7 +161,7 @@ private:
     /// current list element for some operations
     DcmRepresentationListIterator current;
 
-    /// shows if an unecapsulated representation is stored
+    /// shows if an unencapsulated representation is stored
     OFBool existUnencapsulated;
 
     /** this flag indicates that this pixel data element will be written
@@ -276,7 +276,21 @@ public:
       return new DcmPixelData(*this);
     }
 
-    /** Virtual object copying. This method can be used for DcmObject
+    /** comparison operator that compares the value of this element
+     *  with a given element of the same type (e.g. an DcmPixelData with a
+     *  DcmPixelData). The tag of the element is also considered as the first
+     *  component that is compared, followed by the object types (VR, i.e. DCMTK'S EVR).
+     *  The DcmPixelData implementation checks whether the uncompressed data of
+     *  both objects are identical, and if not provided, if the compressed data
+     *  of both objects is the same, by comparing the pixel items bytewise.
+     *  @param  rhs the right hand side of the comparison
+     *  @return 0 if the object values are equal.
+     *          -1 is returned if rhs is considered greater than this object.
+     *          1 is returned if rhs is considered smaller than this object.
+     */
+    virtual int compare(const DcmElement& rhs) const;
+
+    /** virtual object copying. This method can be used for DcmObject
      *  and derived classes to get a deep copy of an object. Internally
      *  the assignment operator is called if the given DcmObject parameter
      *  is of the same type as "this" object instance. If not, an error
@@ -292,9 +306,9 @@ public:
 
     /** set/change the current value representation of the uncompressed image representation, if any
      *  @param vr new value representation to be set.  All VRs except for OW (Other
-     *    Word String) are treated as 8 bit data (OB).  This is particularily useful
+     *    Word String) are treated as 8 bit data (OB).  This is particularly useful
      *    for unknown (UN) or unsupported VRs.
-     *  @return status status, EC_Normal if successful, an error code otherwise
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition setVR(DcmEVR vr);
 
@@ -481,9 +495,9 @@ public:
       const Uint32 length,
       const E_ByteOrder byteOrder);
 
-    /** get a specific exisiting Representation, creates no representation
+    /** get a specific existing Representation, creates no representation
      *  if repParam is NULL, then the representation conforming to the default
-     *  presentationParameters (defined with the codec) is returned.
+     *  representationParameters (defined with the codec) is returned.
      */
     OFCondition getEncapsulatedRepresentation(
         const E_TransferSyntax repType,

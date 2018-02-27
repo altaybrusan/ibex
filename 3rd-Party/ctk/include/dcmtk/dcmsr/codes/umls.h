@@ -1,12 +1,12 @@
 /*
  *
- *  Copyright (C) 2015-2016, J. Riesmeier, Oldenburg, Germany
+ *  Copyright (C) 2015-2017, J. Riesmeier, Oldenburg, Germany
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  Header file with UMLS Code Definitions (Coding Scheme "UMLS")
  *
- *  Generated automatically from DICOM PS 3.16-2016d
- *  File created on 2016-10-04 11:50:20 by J. Riesmeier
+ *  Generated automatically from DICOM PS 3.16-2017e
+ *  File created on 2017-12-05 09:12:47 by J. Riesmeier
  *
  */
 
@@ -23,17 +23,18 @@
  *  general information  *
  *-----------------------*/
 
-#define CODE_UMLS_CodingSchemeDesignator  "UMLS"
-#define CODE_UMLS_CodingSchemeName        "UMLS"
-#define CODE_UMLS_CodingSchemeDescription "UMLS codes as CUIs making up the values in a coding system"
-#define CODE_UMLS_CodingSchemeUID         "2.16.840.1.113883.6.86"
+#define CODE_UMLS_CodingSchemeDesignator              "UMLS"
+#define CODE_UMLS_CodingSchemeName                    "UMLS"
+#define CODE_UMLS_CodingSchemeDescription             "UMLS codes as CUIs making up the values in a coding system"
+#define CODE_UMLS_CodingSchemeResponsibleOrganization "NLM"
+#define CODE_UMLS_CodingSchemeUID                     "2.16.840.1.113883.6.86"
 
 
 /*--------------------*
  *  code definitions  *
  *--------------------*/
 
-// total number of codes: 40
+// total number of codes: 43
 // - retired: 0
 // - no name: 0
 // - not unique: 0
@@ -62,6 +63,8 @@
 #define CODE_UMLS_Fluanisone                                               DSRBasicCodedEntry("C0060473", "UMLS", "Fluanisone")
 #define CODE_UMLS_HeatLamp                                                 DSRBasicCodedEntry("C0181514", "UMLS", "Heat lamp")
 #define CODE_UMLS_UnknownPrimaryNeoplasiaSite                              DSRBasicCodedEntry("C0221297", "UMLS", "unknown primary neoplasia site")
+#define CODE_UMLS_RestrictedDiet                                           DSRBasicCodedEntry("C0425422", "UMLS", "Restricted diet")
+#define CODE_UMLS_InfantOfMotherWithGestationalDiabetes                    DSRBasicCodedEntry("C0456029", "UMLS", "Infant of mother with gestational diabetes")
 #define CODE_UMLS_CoefficientOfVariance                                    DSRBasicCodedEntry("C0681921", "UMLS", "Coefficient of Variance")
 #define CODE_UMLS_Intern                                                   DSRBasicCodedEntry("C1144859", "UMLS", "Intern")
 #define CODE_UMLS_ConsultingPhysician                                      DSRBasicCodedEntry("C1441532", "UMLS", "Consulting Physician")
@@ -86,6 +89,7 @@
 #define CODE_UMLS_ISO1_F18                                                 DSRBasicCodedEntry("C2981788", "UMLS", "ISO-1 F^18^")
 #define CODE_UMLS_RadiationPhysicist                                       DSRBasicCodedEntry("C2985483", "UMLS", "Radiation Physicist")
 #define CODE_UMLS_Pretreatment                                             DSRBasicCodedEntry("C3539075", "UMLS", "Pretreatment")
+#define CODE_UMLS_DistalPhalanx                                            DSRBasicCodedEntry("C3669027", "UMLS", "Distal phalanx")
 #define CODE_UMLS_RoomAir                                                  DSRBasicCodedEntry("C3846005", "UMLS", "Room air")
 
 #endif

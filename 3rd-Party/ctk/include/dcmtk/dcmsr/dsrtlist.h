@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2016, OFFIS e.V.
+ *  Copyright (C) 2000-2018, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -30,6 +30,15 @@
 
 #include "dcmtk/ofstd/oflist.h"
 #include "dcmtk/ofstd/ofvector.h"
+
+
+/** get the default item which is returned in DSRListOfItems::getItem() if the index is invalid.
+ *  This function needs to be specialized and instantiated for each different use of DSRListOfItems.
+ *  @tparam T the type of the object that will be returned.
+ *  @return a reference to an object of type T.
+ */
+template<typename T>
+const T& DSRgetEmptyItem();
 
 
 /*---------------------*
@@ -72,16 +81,68 @@ template<class T> class DSRListOfItems
      */
     inline DSRListOfItems<T> &operator=(const DSRListOfItems<T> &lst)
     {
-        /* class OFList has no overloaded assignment operator */
-        ItemList.clear();
-        const OFLIST_TYPENAME OFListConstIterator(T) endPos = lst.ItemList.end();
-        OFLIST_TYPENAME OFListConstIterator(T) iterator = lst.ItemList.begin();
-        while (iterator != endPos)
+        /* check for self-assignment, which would not work */
+        if (this != &lst)
         {
-            ItemList.push_back(*iterator);
-            iterator++;
+            /* class OFList has no overloaded assignment operator */
+            ItemList.clear();
+            const OFLIST_TYPENAME OFListConstIterator(T) endPos = lst.ItemList.end();
+            OFLIST_TYPENAME OFListConstIterator(T) iterator = lst.ItemList.begin();
+            while (iterator != endPos)
+            {
+                ItemList.push_back(*iterator);
+                iterator++;
+            }
         }
         return *this;
+    }
+
+    /** comparison operator "equal"
+     ** @param  lst  list that should be compared to the current one
+     ** @return OFTrue if both lists are equal, OFFalse otherwise
+     */
+    OFBool operator==(const DSRListOfItems<T> &lst) const
+    {
+        /* first check whether the size of both lists is equal */
+        OFBool result = (ItemList.size() == lst.ItemList.size());
+        /* then iterate over all list entries (if any) */
+        if (result && !ItemList.empty())
+        {
+            /* since OFList does not implement a comparison operator we need the following */
+            const OFLIST_TYPENAME OFListConstIterator(T) endPos = ItemList.end();
+            OFLIST_TYPENAME OFListConstIterator(T) iterator = ItemList.begin();
+            OFLIST_TYPENAME OFListConstIterator(T) lstIter = lst.ItemList.begin();
+            do {
+                result = (*iterator == *lstIter);
+                iterator++;
+                lstIter++;
+            } while (result && (iterator != endPos));
+        }
+        return result;
+    }
+
+    /** comparison operator "not equal"
+     ** @param  lst  list that should be compared to the current one
+     ** @return OFTrue if both lists are not equal, OFFalse otherwise
+     */
+    OFBool operator!=(const DSRListOfItems<T> &lst) const
+    {
+        /* first check whether the size of both lists is not equal */
+        OFBool result = (ItemList.size() != lst.ItemList.size());
+        /* then iterate over all list entries (if any) */
+        if (!result && !ItemList.empty())
+        {
+            /* since OFList does not implement a comparison operator we need the following */
+            const OFLIST_TYPENAME OFListConstIterator(T) endPos = ItemList.end();
+            OFLIST_TYPENAME OFListConstIterator(T) iterator = ItemList.begin();
+            OFLIST_TYPENAME OFListConstIterator(T) lstIter = lst.ItemList.begin();
+            do {
+                result = (*iterator != *lstIter);
+                iterator++;
+                lstIter++;
+            } while (!result && (iterator != endPos));
+        }
+        return result;
     }
 
     /** clear all internal variables
@@ -127,7 +188,7 @@ template<class T> class DSRListOfItems
         if (gotoItemPos(idx, iterator))
             return *iterator;
         else
-            return EmptyItem;
+            return DSRgetEmptyItem<T>();
     }
 
     /** get copy of the specified item
@@ -246,11 +307,6 @@ template<class T> class DSRListOfItems
         }
         return result;
     }
-
-    /// default item which is returned in getItem() if the index is invalid.
-    /// This static member variable needs to be defined (not only declared)
-    /// in each derived class.
-    static const T EmptyItem;
 
 
   protected:

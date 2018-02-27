@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2015, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -31,6 +31,9 @@
 #include "dcmtk/dcmdata/dclist.h"
 #include "dcmtk/dcmdata/dcstack.h"
 
+// forward declarations
+class DcmJsonFormat;
+
 /** class representing a DICOM Sequence of Items (SQ).
  *  This class is derived from class DcmElement (and not from DcmObject) despite the fact
  *  that sequences have no value field as such, they maintain a list of items. However,
@@ -41,15 +44,14 @@ class DCMTK_DCMDATA_EXPORT DcmSequenceOfItems : public DcmElement
 {
 public:
 
+    // Make friend with DcmItem which requires access to protected
+    // constructor allowing construction using an explicit value length.
+    friend class DcmItem;
+
     /** constructor
      *  @param tag attribute tag
-     *  @param len length of the attribute value
-     *  @param readAsUN flag indicating whether the sequence should be
-     *  read (interpreted) as a UN element with Implicit VR Little Endian encoding
      */
-    DcmSequenceOfItems(const DcmTag &tag,
-                       const Uint32 len = 0,
-                       OFBool readAsUN = OFFalse);
+    DcmSequenceOfItems(const DcmTag &tag);
 
     /** copy constructor
      *  @param oldSeq element to be copied
@@ -61,6 +63,7 @@ public:
 
     /** copy assignment operator
      *  @param obj element to be copied
+     *  @return reference to this object
      */
     DcmSequenceOfItems &operator=(const DcmSequenceOfItems &obj);
 
@@ -74,13 +77,15 @@ public:
      *  an expensive operation!
      *  @param  rhs the right hand side of the comparison
      *  @return 0 if the object values are equal.
-     *          -1 if either the value of the  first component that does not match
-     *          is lower in this object than in rhs, or all compared components match
-     *          but this object has fewer components than rhs. Also returned if rhs
-     *          cannot be casted to this object type.
-     *          1 if either the value of the first component that does not match
-     *          is greater in this object than in rhs object, or all compared
-     *          components match but the this component is longer.
+     *          -1 if this element has fewer components than the rhs element.
+     *          Also -1 if the value of the first component that does not match
+     *          is lower in this object than in rhs. Also returned if rhs
+     *          cannot be casted to this object type or both objects are of
+     *          different VR (i.e. the DcmEVR returned by the element's ident()
+     *          call are different).
+     *          1 if either this element has more components than the rhs element, or
+     *          if the first component that does not match is greater in this object than
+     *          in rhs object.
      */
     virtual int compare(const DcmElement& rhs) const;
 
@@ -279,6 +284,14 @@ public:
      */
     virtual OFCondition writeXML(STD_NAMESPACE ostream&out,
                                  const size_t flags = 0);
+
+    /** write object in JSON format
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition writeJson(STD_NAMESPACE ostream&out,
+                                  DcmJsonFormat &format);
 
     /** special write method for creation of digital signatures
      *  @param outStream DICOM output stream
@@ -500,6 +513,22 @@ public:
                                         E_ByteOrder byteOrder = gLocalByteOrder);
 
 protected:
+
+    /** constructor. Create new element from given tag and length.
+     *  Only reachable from friend classes since construction with
+     *  length different from 0 leads to a state with length being set but
+     *  the element's value still being uninitialized. This can lead to crashes
+     *  when the value is read or written. Thus the method calling this
+     *  constructor with length > 0 must ensure that the element's value is
+     *  explicitly initialized, too.
+     *  @param tag attribute tag
+     *  @param len length of the attribute value
+     *  @param readAsUN flag indicating whether the sequence should be
+     *  read (interpreted) as a UN element with Implicit VR Little Endian encoding
+     */
+    DcmSequenceOfItems(const DcmTag &tag,
+                       const Uint32 len,
+                       OFBool readAsUN = OFFalse);
 
     /** This function reads tag and length information from inStream and
      *  returns this information to the caller. When reading information,

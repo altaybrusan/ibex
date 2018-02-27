@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2014-2015, OFFIS e.V.
+ *  Copyright (C) 2014-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -27,20 +27,34 @@
 #include "dcmtk/ofstd/ofutil.h"
 #include "dcmtk/ofstd/ofdefine.h"
 
-// use native classes if C++11 is supported
-#ifdef DCMTK_USE_CXX11_STL
+// use native tuple if available
+#ifdef HAVE_STL_TUPLE
 #include <tuple>
 
-#define OFignore std::ignore
-#define OFmake_tuple std::make_tuple
-#define OFtie std::tie
+#define OFignore STD_NAMESPACE ignore
+#define OFmake_tuple STD_NAMESPACE make_tuple
+#define OFtie STD_NAMESPACE tie
 
+#ifdef HAVE_CXX11
 template<typename... Args>
 using OFtuple = std::tuple<Args...>;
+#else // HAVE_CXX11
+#include "dcmtk/ofstd/variadic/helpers.h"
+#define OFtuple STD_NAMESPACE tuple
+template<OFVARIADIC_DECLARE_TEMPLATE_PARAMETER_PACK(T)>
+void OFswap(OFtuple<OFVARIADIC_TEMPLATE_PARAMETER_PACK(T)>& lhs,
+            OFtuple<OFVARIADIC_TEMPLATE_PARAMETER_PACK(T)>& rhs)
+{
+    lhs.swap(rhs);
+}
+#endif // HAVE_CXX11
 
 #elif !defined(DOXYGEN) // fallback implementations
 
 #include <cstdarg>
+#include "dcmtk/ofstd/ofdiag.h"
+#include DCMTK_DIAGNOSTIC_PUSH
+#include DCMTK_DIAGNOSTIC_IGNORE_MISMATCHED_TAGS
 
 // Implementation of OFignore: struct OFignore_t
 // that can be constructed and assigned to anything
@@ -368,6 +382,7 @@ OFtuple<> OFtie();
 // implementation / overload for the maximum number
 // of elements currently supported.
 #include "dcmtk/ofstd/variadic/tuple.h"
+#include DCMTK_DIAGNOSTIC_POP
 
 #else // NOT C++11 && NOT DOXYGEN
 /** A class template that implements generic tuples.

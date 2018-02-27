@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2015, OFFIS e.V.
+ *  Copyright (C) 1994-2018, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -63,8 +63,9 @@ class DCMTK_DCMDATA_EXPORT DcmPixelItem : public DcmOtherByteOtherWord
 
     /** copy assignment operator
      *  @param obj element to be copied
+     *  @return reference to this object
      */
-    DcmPixelItem &operator=(const DcmPixelItem &obj) { DcmOtherByteOtherWord::operator=(obj); return *this; }
+    DcmPixelItem &operator=(const DcmPixelItem &obj);
 
     /** clone method
      *  @return deep copy of this object
@@ -118,10 +119,16 @@ class DCMTK_DCMDATA_EXPORT DcmPixelItem : public DcmOtherByteOtherWord
                        const char *pixelFileName = NULL,
                        size_t *pixelCounter = NULL);
 
-    /** creates in this object an offset table for a compressed pixel sequence.
-     *  @param offsetList list of size entries for each individual encoded frame
-     *    provided by the compression codec. All entries are expected to have
-     *    an even value (i.e. the pixel items are padded).
+    /** @copydoc DcmObject::calcElementLength()
+     */
+    virtual Uint32 calcElementLength(const E_TransferSyntax xfer,
+                                     const E_EncodingType enctype);
+
+    /** creates in this object an offset table for a compressed pixel sequence
+     *  @param offsetList list of size entries (i.e. number of bytes) for each
+     *    individual frame, including item header (8 bytes) of all associated
+     *    pixel items. All entries are expected to have an even value (i.e. the
+     *    pixel items are padded).
      *  @return EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition createOffsetTable(const DcmOffsetList &offsetList);

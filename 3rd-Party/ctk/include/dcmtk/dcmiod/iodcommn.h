@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2015-2016, Open Connections GmbH
+ *  Copyright (C) 2015-2017, Open Connections GmbH
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation are maintained by
@@ -146,6 +146,8 @@ public:
   /** Make sure that the IOD contains a SOP Instance, Series Instance and Study
    *  Instance UID. They are created if empty. Invalid UIDs are corrected if
    *  desired.
+   *  @param  correctInvalid If OFTrue, invalid instance UIDs will be replaced
+   *          by new ones
    */
   virtual void ensureInstanceUIDs(const OFBool correctInvalid = OFFalse);
 
@@ -174,53 +176,47 @@ public:
    *  @param  readSeries  Read Series-level information if OFTrue, always
    *                      includes Frame of Reference, i.e.\ readFoR is
    *                      considered to be OFTrue
+   *  @param  takeOverCharset If OFTrue (default), Specific Character Set is
+   *                          taken over from imported dataset. If it's not
+   *                          present or empty (invalid), the attribute will
+   *                          not be present in this class either.
    *  @return EC_Normal if successful, an error code otherwise
    */
-  virtual OFCondition import(DcmItem& dataset,
-                             OFBool readPatient,
-                             OFBool readStudy,
-                             OFBool readFoR = OFFalse,
-                             OFBool readSeries = OFFalse);
+  virtual OFCondition importHierarchy(DcmItem& dataset,
+                                      const OFBool readPatient,
+                                      const OFBool readStudy,
+                                      const OFBool readFoR = OFFalse,
+                                      const OFBool readSeries = OFFalse,
+                                      const OFBool takeOverCharset = OFTrue);
 
-  /** Import common module attributes from DICOM file but only read Patient, Study,
+  /** CAUTION: Parameter order (readFoR and readSeries) changed compared to the
+   *  old import() function.
+   *  Import common module attributes from DICOM file but only read Patient, Study,
    *  Series and/or Frame of Reference level portions. The current content
    *  is not deleted before reading. If the log stream is set and valid the
    *  reason for any error might be obtained from the error/warning output.
-   *  This function is deprecated and might be removed in later versions of
-   *  DCMTK. Use the import() call offering the same parameters and
-   *  functionality, instead.
    *  @param  filename The filename to read from.
-   *  @param  usePatient If OFTrue, Patient level information is imported
-   *  @param  useStudy If OFTrue, Study level information is imported
-   *  @param  useSeries If OFTrue, Series level information is imported
-   *  @param  useFoR If OFTrue, Frame of Reference information is imported
+   *  @param  readPatient Read Patient-level information if OFTrue
+   *  @param  readStudy   Read Study-level information if OFTrue, including
+   *          equipment module
+   *  @param  readFoR     Read Frame of Reference information if OFTrue. See
+   *          also readSeries parameter.
+   *  @param  readSeries  Read Series-level information if OFTrue, always
+   *                      includes Frame of Reference, i.e.\ readFoR is
+   *                      considered to be OFTrue
+   *  @param  takeOverCharset If OFTrue (default), Specific Character Set is
+   *                          taken over from imported dataset. If it's not
+   *                          present or empty (invalid), the attribute will
+   *                          not be present in this class either.
    *  @return EC_Normal if reading was successful (i.e.\ if any information could
    *          be read), otherwise an error is returned
    */
-  OFCondition importPatientStudyFoR(const OFString& filename,
-                                    const OFBool usePatient,
-                                    const OFBool useStudy,
-                                    const OFBool useSeries,
-                                    const OFBool useFoR = OFFalse);
-
-  /** Import common module attributes from DICOM file but only read Patient, Study,
-   *  Series and/or Frame of Reference level portions. The current content
-   *  is not deleted before reading. If the log stream is set and valid the
-   *  reason for any error might be obtained from the error/warning output.
-   *  @param  filename The filename to read from
-   *  @param  usePatient If OFTrue, Patient level information is imported
-   *  @param  useStudy If OFTrue, Study level information is imported
-   *  @param  useSeries If OFTrue, Series level information is imported
-   *  @param  useFoR If OFTrue, Frame of Reference information is imported
-   *  @return EC_Normal if reading was successful (i.e.\ if any information could
-   *          be read), otherwise an error is returned
-   */
-  virtual OFCondition import(const OFString& filename,
-                             const OFBool usePatient,
-                             const OFBool useStudy,
-                             const OFBool useSeries,
-                             const OFBool useFoR = OFFalse);
-
+  virtual OFCondition importHierarchy(const OFString& filename,
+                                      const OFBool readPatient,
+                                      const OFBool readStudy,
+                                      const OFBool readFoR = OFFalse,
+                                      const OFBool readSeries = OFFalse,
+                                      const OFBool takeOverCharset = OFTrue);
 
   /** Write the attributes managed by this class to DICOM dataset.
    *  @param dataset  Reference to DICOM dataset to which the current document

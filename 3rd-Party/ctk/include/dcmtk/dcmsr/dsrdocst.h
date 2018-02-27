@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2016, OFFIS e.V.
+ *  Copyright (C) 2000-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -29,6 +29,7 @@
 #include "dcmtk/dcmsr/dsrtree.h"
 #include "dcmtk/dcmsr/dsrdoctn.h"
 #include "dcmtk/dcmsr/dsrdncsr.h"
+#include "dcmtk/dcmsr/dsritcsr.h"
 #include "dcmtk/dcmsr/dsrcitem.h"
 
 #include "dcmtk/ofstd/ofmem.h"
@@ -210,6 +211,30 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
      */
     virtual OFBool getCursorToRootNode(DSRIncludedTemplateNodeCursor &cursor) const;
 
+    /** get a cursor to the current node of this document tree.
+     *  This cursor can be used to iterate over the nodes of the document subtree that
+     *  starts at the current node without changing the internal cursor.  Please note
+     *  that the cursor might become invalid, e.g. by pointing to a non-existing node if
+     *  the content of the document tree is modified after the cursor has been retrieved.
+     *  Included sub-templates are not supported by this type of cursor, i.e. the subtree
+     *  that is managed by an instance of DSRIncludedTemplateTreeNode is not iterated.
+     ** @param  cursor  reference to variable where the cursor is stored
+     ** @return OFTrue is the returned 'cursor' is valid, OFFalse otherwise
+     */
+    virtual OFBool getCursorToCurrentNode(DSRDocumentTreeNodeCursor &cursor) const;
+
+    /** get a cursor to the subtree below the current node.
+     *  This cursor can be used to iterate over the nodes of the selected subtree without
+     *  changing the internal cursor.  Please note that the cursor might become invalid,
+     *  e.g. by pointing to a non-existing node if the content of the document tree is
+     *  modified after the cursor has been retrieved.
+     *  Included sub-templates are not supported by this type of cursor, i.e. the subtree
+     *  that is managed by an instance of DSRIncludedTemplateTreeNode is not iterated.
+     ** @param  cursor  reference to variable where the cursor is stored
+     ** @return OFTrue is the returned 'cursor' is valid, OFFalse otherwise
+     */
+    virtual OFBool getCursorToSubTree(DSRDocumentTreeNodeCursor &cursor) const;
+
     /** count number of content items (nodes) in the document tree.
      *  This method iterates over all nodes that are stored in the document tree.
      *  By default, included sub-templates are counted as a single node (see options).
@@ -224,12 +249,37 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
     size_t countNodes(const OFBool searchIntoSubTemplates = OFFalse,
                       const OFBool countIncludedTemplateNodes = OFTrue) const;
 
+    /** set internal cursor to a matching node.
+     *  If more than one node exists matching the given filter, the first one will be
+     *  selected.  Use gotoNextMatchingNode() in order to go to the next matching node.
+     ** @param  filter         matching criterion based on a single or multiple filters
+     *  @param  startFromRoot  flag indicating whether to start from the root node or
+     *                         the current one
+     *  @param  searchIntoSub  flag indicating whether to search into sub-trees
+     *                         ("deep search") or on the current level only
+     ** @return ID of the new current node if successful, 0 otherwise
+     */
+    virtual size_t gotoMatchingNode(const DSRDocumentTreeNodeFilter &filter,
+                                    const OFBool startFromRoot = OFTrue,
+                                    const OFBool searchIntoSub = OFTrue);
+
+    /** set internal cursor to the next matching node.
+     *  Starts from "next" node, i.e. either the first child of the current node or the
+     *  first sibling following the current node.
+     ** @param  filter         matching criterion based on a single or multiple filters
+     *  @param  searchIntoSub  flag indicating whether to search into sub-trees
+     *                         ("deep search") or on the current level only
+     ** @return ID of the new current node if successful, 0 otherwise
+     */
+    virtual size_t gotoNextMatchingNode(const DSRDocumentTreeNodeFilter &filter,
+                                        const OFBool searchIntoSub = OFTrue);
+
     /** set internal cursor to a named node.
      *  If more than one node exists with the given concept name, the first one will
      *  be selected.  Use gotoNextNamedNode() in order to go to the next matching node.
      ** @param  conceptName    concept name of the node to be searched for
-     *  @param  startFromRoot  flag indicating whether to start from the root node
-     *                         or the current one
+     *  @param  startFromRoot  flag indicating whether to start from the root node or
+     *                         the current one
      *  @param  searchIntoSub  flag indicating whether to search into sub-trees
      *                         ("deep search") or on the current level only
      ** @return ID of the new current node if successful, 0 otherwise
@@ -238,20 +288,30 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
                                  const OFBool startFromRoot = OFTrue,
                                  const OFBool searchIntoSub = OFTrue);
 
-    /** set internal cursor to a named node (starting from the first children of the
-     *  current node).
+    /** set internal cursor to a named node (starting from the first child of the
+     *  current node and searching on this level only).
+     *  This is just a shortcut for calling gotoChild() followed by gotoNamedNode()
+     *  with 'searchIntoSub' being OFFalse, i.e. only the first sub-level is checked.
      *  If more than one node exists with the given concept name, the first one will
-     *  be selected.  Use gotoNextNamedNode() in order to go to the next matching node.
-     ** @param  conceptName    concept name of the node to be searched for
-     *  @param  searchIntoSub  flag indicating whether to search into sub-trees
-     *                         ("deep search") or on the current level only
+     *  be selected.
+     ** @param  conceptName  concept name of the node to be searched for
      ** @return ID of the new current node if successful, 0 otherwise
      */
-    virtual size_t gotoNamedChildNode(const DSRCodedEntryValue &conceptName,
-                                      const OFBool searchIntoSub = OFTrue);
+    virtual size_t gotoNamedChildNode(const DSRCodedEntryValue &conceptName);
+
+    /** set internal cursor to a named node in the subtree below the current node.
+     *  If more than one node exists with the given concept name, the first one will
+     *  be selected.  If the current node has no children, the cursor is not moved.
+     ** @param  conceptName    concept name of the node to be searched for
+     *  @param  searchIntoSub  flag indicating whether to search into sub-trees
+     *                         ("deep search") or on the first sub-level only
+     ** @return ID of the new current node if successful, 0 otherwise
+     */
+    virtual size_t gotoNamedNodeInSubTree(const DSRCodedEntryValue &conceptName,
+                                          const OFBool searchIntoSub = OFTrue);
 
     /** set internal cursor to the next named node.
-     *  Starts from "next" node, i.e. either the first children of the current node
+     *  Starts from "next" node, i.e. either the first child of the current node
      *  or the first sibling following the current node.
      ** @param  conceptName    concept name of the node to be searched for
      *  @param  searchIntoSub  flag indicating whether to search into sub-trees
@@ -266,15 +326,15 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
      *  be selected.  Use gotoNextAnnotatedNode() in order to go to the next matching
      *  node.  In contrast to gotoNamedNode(), a "deep search" is always performed.
      ** @param  annotationText  annotation text of the node to be searched for
-     *  @param  startFromRoot   flag indicating whether to start from the root node
-     *                          or the current one
+     *  @param  startFromRoot   flag indicating whether to start from the root node or
+     *                          the current one
      ** @return ID of the new current node if successful, 0 otherwise
      */
     virtual size_t gotoAnnotatedNode(const OFString &annotationText,
                                      const OFBool startFromRoot = OFTrue);
 
     /** set internal cursor to the next annotated node.
-     *  Starts from "next" node, i.e. either the first children of the current node
+     *  Starts from "next" node, i.e. either the first child of the current node
      *  or the first sibling following the current node.
      ** @param  annotationText  annotation text of the node to be searched for
      ** @return ID of the new current node if successful, 0 otherwise
@@ -350,11 +410,12 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
      *  method is called with the third parameter being DSRTypes::AM_afterCurrent.  If
      *  successful, the given concept name is set for the new node, and the cursor is updated.
      *  @note This is a convenience function that avoids calling several other functions.
-     ** @param  relationshipType  relationship type of node to be added with regard
-     *                            to the current one
+     ** @param  relationshipType  relationship type of node to be added with regard to
+     *                            the current one
      *  @param  valueType         value type of node to be added
      *  @param  conceptName       concept name of the node to be added
-     *  @param  check             if enabled, check 'conceptName for validity before setting it
+     *  @param  check             if enabled, check 'conceptName for validity before
+     *                            setting it
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition addContentItem(const E_RelationshipType relationshipType,
@@ -368,11 +429,12 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
      *  is called with the third parameter being DSRTypes::AM_belowCurrent.  If successful,
      *  the given concept name is set for the new node, and the cursor is updated.
      *  @note This is a convenience function that avoids calling several other functions.
-     ** @param  relationshipType  relationship type of node to be added with regard
-     *                            to the current one
+     ** @param  relationshipType  relationship type of node to be added with regard to
+     *                            the current one
      *  @param  valueType         value type of node to be added
      *  @param  conceptName       concept name of the node to be added
-     *  @param  check             if enabled, check 'conceptName for validity before setting it
+     *  @param  check             if enabled, check 'conceptName for validity before
+     *                            setting it
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition addChildContentItem(const E_RelationshipType relationshipType,
@@ -444,7 +506,7 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
                                       const E_RelationshipType defaultRelType = RT_unknown,
                                       const OFBool deleteIfFail = OFFalse);
 
-    /** extract a subtree i.e.\ a fragment from this tree.
+    /** extract a subtree, i.e.\ a fragment from this tree.
      *  The subtree is specified by the current node, which becomes the root of the subtree.
      *  In contrast to cloneSubTree(), this method also makes sure that the by-reference
      *  relationships are preserved (as long as both source and target node are contained
@@ -481,7 +543,7 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
      */
     virtual DSRDocumentTreeNode *cloneCurrentTreeNode() const;
 
-    /** clone a subtree i.e.\ a fragment of this tree.
+    /** clone a subtree, i.e.\ a fragment of this tree.
      *  The cloning starts with the current node and ends with the given node.
      *  Please note that the returned subtree has to be deleted by the caller if it is not
      *  inserted into the document tree using insertSubTree().
@@ -570,7 +632,7 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
     DSRDocumentSubTree(DSRDocumentTreeNode *rootNode);
 
     /** special copy constructor that clones a particular subtree only
-     ** @param  startCursor      first node of the subtree to be copied
+     ** @param  startCursor      cursor pointing to first node of the subtree to be copied
      *  @param  stopAfterNodeID  ID of the node after which the cloning should stop
      */
     DSRDocumentSubTree(const DSRDocumentTreeNodeCursor &startCursor,
@@ -706,6 +768,16 @@ class DCMTK_DCMSR_EXPORT DSRDocumentSubTree
      */
     virtual OFCondition checkSubTreeConstraints(const DSRDocumentSubTree *tree,
                                                 const DSRIODConstraintChecker *checker) const;
+
+    // --- static helper function ---
+
+    /** clone a particular subtree, i.e.\ a fragment of a tree
+     ** @param  startCursor      cursor pointing to first node of the subtree to be copied
+     *  @param  stopAfterNodeID  ID of the node after which the cloning should stop
+     ** @return pointer to a copy of the specified subtree, NULL in case of error
+     */
+    static DSRDocumentSubTree *cloneSubTree(const DSRDocumentTreeNodeCursor &startCursor,
+                                            const size_t stopAfterNodeID = 0);
 
     /// check relationship content constraints of the associated IOD
     DSRIODConstraintChecker *ConstraintChecker;

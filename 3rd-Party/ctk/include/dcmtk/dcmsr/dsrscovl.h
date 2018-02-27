@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2016, OFFIS e.V.
+ *  Copyright (C) 2000-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -68,15 +68,29 @@ class DCMTK_DCMSR_EXPORT DSRSpatialCoordinatesValue
      */
     DSRSpatialCoordinatesValue &operator=(const DSRSpatialCoordinatesValue &coordinatesValue);
 
+    /** comparison operator "equal"
+     ** @param  coordinatesValue  spatial coordinates value that should be compared to the
+     *                            current one
+     ** @return OFTrue if both spatial coordinates values are equal, OFFalse otherwise
+     */
+    OFBool operator==(const DSRSpatialCoordinatesValue &coordinatesValue) const;
+
+    /** comparison operator "not equal"
+     ** @param  coordinatesValue  spatial coordinates value that should be compared to the
+     *                            current one
+     ** @return OFTrue if both spatial coordinates values are not equal, OFFalse otherwise
+     */
+    OFBool operator!=(const DSRSpatialCoordinatesValue &coordinatesValue) const;
+
     /** clear all internal variables.
-     *  Graphic type is set to GT_invalid.  Since an empty list of graphic data is invalid
-     *  the spatial coordinates value becomes invalid afterwards.
+     *  Graphic type is set to DSRTypes::GT_invalid.  Since an empty list of graphic data is
+     *  invalid the spatial coordinates value becomes invalid afterwards.
      */
     virtual void clear();
 
     /** check whether the current spatial coordinates value is valid.
-     *  The value is valid if the graphic type is not GT_invalid and the graphic data is
-     *  valid.  See checkGraphicData() method for details.
+     *  The value is valid if the graphic type is not DSRTypes::GT_invalid and the graphic data
+     *  is valid.  See checkGraphicData() method for details.
      ** @return OFTrue if reference value is valid, OFFalse otherwise
      */
     virtual OFBool isValid() const;
@@ -161,7 +175,7 @@ class DCMTK_DCMSR_EXPORT DSRSpatialCoordinatesValue
     /** get current graphic type.
      *  The graphic type specifies the geometry of the coordinates stored in the graphic data
      *  list.
-     ** @return graphic type (might be GT_invalid)
+     ** @return graphic type (might be DSRTypes::GT_invalid)
      */
     inline DSRTypes::E_GraphicType getGraphicType() const
     {
@@ -203,7 +217,7 @@ class DCMTK_DCMSR_EXPORT DSRSpatialCoordinatesValue
     /** set current graphic type.
      *  The graphic type specifies the geometry of the coordinates stored in the graphic data
      *  list.
-     ** @param  graphicType  graphic type to be set (GT_invalid is not allowed)
+     ** @param  graphicType  graphic type to be set (DSRTypes::GT_invalid is not allowed)
      *  @param  check        dummy parameter (currently not used)
      ** @return status, EC_Normal if successful, an error code otherwise
      */

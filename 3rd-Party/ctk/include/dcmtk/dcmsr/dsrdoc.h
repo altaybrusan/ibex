@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2016, OFFIS e.V.
+ *  Copyright (C) 2000-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -112,13 +112,13 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      *  If logging is enabled, the reason for any error might be obtained from the log output.
      *  Also warning and debug messages are reported if the respective logger is enabled.
      ** @param  dataset  reference to DICOM dataset from which the document should be read
-     *  @param  flags    optional flag used to customize the reading process (see DSRTypes::RF_xxx).
-     *                   E.g. RF_readDigitalSignatures indicates whether to read the digital
-     *                   signatures from the dataset or not.  If set, the MACParametersSequence
-     *                   and the DigitalSignaturesSequence are read for the general document
-     *                   header (equivalent to top-level content item) and each content item
-     *                   of the document tree.
-     *                   If not removed manually (with DSRDocumentTree::removeSignatures())
+     *  @param  flags    optional flag used to customize the reading process (see
+     *                   DSRTypes::RF_xxx).  E.g. DSRTypes::RF_readDigitalSignatures indicates
+     *                   whether to read the digital signatures from the dataset or not.  If set,
+     *                   the MACParametersSequence and the DigitalSignaturesSequence are read for
+     *                   the general document header (equivalent to top-level content item) and
+     *                   each content item of the document tree.
+     *                   If not removed manually (with DSRDocumentTree::removeSignatures()),
      *                   the signatures are written back to the dataset when the write() method
      *                   is called.
      *                   Please note that the two signature sequences for any other sequence
@@ -170,7 +170,7 @@ class DCMTK_DCMSR_EXPORT DSRDocument
     /** read SR document from XML file.
      *  The format (Schema) of the XML document is expected to conform to the output format
      *  of the writeXML() method.  In addition, the document can be validated against an XML
-     *  Schema by setting the flag XF_validateSchema.
+     *  Schema by setting the flag DSRTypes::XF_validateSchema.
      *  Digital signatures in the XML document are not yet supported.
      *  Please note that the current document is also deleted if the parsing process fails.
      ** @param  filename  name of the file from which the XML document is read ("-" for stdin)
@@ -205,7 +205,7 @@ class DCMTK_DCMSR_EXPORT DSRDocument
   // --- get/set misc attributes ---
 
     /** get the current SR document type
-     ** @return document type (might be DT_invalid if read from dataset)
+     ** @return document type (might be DSRTypes::DT_invalid if read from dataset)
      */
     virtual E_DocumentType getDocumentType() const;
 
@@ -250,19 +250,21 @@ class DCMTK_DCMSR_EXPORT DSRDocument
     /** get specific character set type.
      *  If the type is unknown, the original DICOM defined term can be retrieved
      *  with the method getSpecificCharacterSet().
-     ** @return character set (might be CS_invalid/unknown if not supported)
+     ** @return character set type (might be DSRTypes::CS_invalid or DSRTypes::CS_unknown)
      */
     virtual E_CharacterSet getSpecificCharacterSetType() const;
 
     /** set specific character set type.
      *  The DICOM defined term (see member variable SpecificCharacterSet) is set accordingly.
+     ** @param  characterSet  specific character set to be set (use DSRTypes::CS_invalid to reset
+     *                        to the default value, which is "unspecified")
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition setSpecificCharacterSetType(const E_CharacterSet characterSet);
 
     /** get document preliminary flag.
      *  @note Not applicable to Key Object Selection Documents.
-     ** @return preliminary flag (might be PF_invalid if not specified)
+     ** @return preliminary flag (might be DSRTypes::PF_invalid if not specified)
      */
     virtual E_PreliminaryFlag getPreliminaryFlag() const;
 
@@ -270,7 +272,8 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      *  According to the DICOM standard, the concept of "completeness" is independent of the
      *  concept of "preliminary" or "final".  Therefore, this flag can be specified separately.
      *  @note Not applicable to Key Object Selection Documents.
-     ** @param  flag  preliminary flag to be set (use PF_invalid to omit this optional value)
+     ** @param  flag  preliminary flag to be set (use DSRTypes::PF_invalid to omit this optional
+     *                value)
      ** @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition setPreliminaryFlag(const E_PreliminaryFlag flag);
@@ -279,15 +282,21 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      *  According to the DICOM standard, this flag describes the estimated degree of completeness
      *  of an SR Document.  See DICOM standard for details.
      *  @note Not applicable to Key Object Selection Documents.
-     ** @return completion flag (might be CF_invalid if read from dataset)
+     ** @return completion flag (might be DSRTypes::CF_invalid if read from dataset)
      */
     virtual E_CompletionFlag getCompletionFlag() const;
 
     /** get document verification flag.
      *  @note Not applicable to Key Object Selection Documents.
-     ** @return verification flag (might be VF_invalid if read from dataset)
+     ** @return verification flag (might be DSRTypes::VF_invalid if read from dataset)
      */
     virtual E_VerificationFlag getVerificationFlag() const;
+
+    /** check whether there are one or more verifying observers.
+     *  @note Not applicable to Key Object Selection Documents.
+     ** @return OFTrue if there is at least one verifying observer, OFFalse otherwise
+     */
+    virtual OFBool hasVerifyingObservers() const;
 
     /** get number of verifying observers.
      *  A document can be verified more than once.  The verification flag should be VERIFIED
@@ -296,7 +305,7 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      *  @note Not applicable to Key Object Selection Documents.
      ** @return number of verifying observers (if any), 0 otherwise
      */
-    virtual size_t getNumberOfVerifyingObservers();
+    virtual size_t getNumberOfVerifyingObservers() const;
 
     /** get information about a verifying observer.
      *  All reference variables are cleared before the information is retrieved, i.e. if an error
@@ -398,8 +407,10 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      *  The DICOM standard states: "Such referenced Instances may include equivalent documents or
      *  renderings of this document. [...] Required if the identity of a CDA Document equivalent
      *  to the current SOP Instance is known at the time of creation of this SOP instance. May be
-     *  present otherwise."  Note: An equivalent rendering of the document might be provided as an
-     *  "Encapsulated PDF" DICOM object.
+     *  present otherwise."  The Purpose of Reference Code should be taken from Defined Context
+     *  Group 7006 (SR Document Purposes of Reference).
+     *  Note: An equivalent rendering of the document might be provided as an "Encapsulated PDF"
+     *  DICOM object.
      *  @note Not applicable to Key Object Selection Documents.
      ** @return reference to list object
      */
@@ -479,6 +490,14 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      */
     virtual OFCondition getInstanceCreatorUID(OFString &value,
                                               const signed long pos = 0) const;
+
+    /** get timezone offset from UTC
+     ** @param  value  reference to variable in which the value should be stored
+     *  @param  pos    index of the value to get (0..vm-1), -1 for all components
+     ** @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition getTimezoneOffsetFromUTC(OFString &value,
+                                                 const signed long pos = 0) const;
 
     /** get patient's name
      ** @param  value  reference to variable in which the value should be stored
@@ -697,6 +716,16 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      */
     virtual OFCondition setCompletionFlagDescription(const OFString &value,
                                                      const OFBool check = OFTrue);
+
+    /** set timezone offset from UTC
+     ** @param  value  value to be set (single value only) or "" for no value
+     *  @param  check  check 'value' for conformance with VR (SH) and VM (1) if enabled.
+     *                 Please note that it is not checked whether the 'value' conforms
+     *                 to the requirements of a valid timezone offset (see DICOM PS3.3).
+     ** @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition setTimezoneOffsetFromUTC(const OFString &value,
+                                                 const OFBool check = OFTrue);
 
     /** set patient's name
      ** @param  value  value to be set (single value only) or "" for no value
@@ -1186,10 +1215,12 @@ class DCMTK_DCMSR_EXPORT DSRDocument
     /** update various DICOM attributes.
      *  (e.g. set the modality and SOP class UID, generate a new Study, Series and SOP instance UID
      *  if required, set date/time values, etc.)
-     ** @param  updateAll  flag indicating whether all DICOM attributes should be updated or only
-     *                     the IOD-specific ones. (e.g. set DICOM defined terms from enum values)
+     ** @param  updateAll   flag indicating whether all DICOM attributes should be updated or only
+     *                      the IOD-specific ones. (e.g. set DICOM defined terms from enum values)
+     *  @param  verboseMode report (more) processing details to the logger if enabled (default)
      */
-    void updateAttributes(const OFBool updateAll = OFTrue);
+    void updateAttributes(const OFBool updateAll = OFTrue,
+                          const OFBool verboseMode = OFTrue);
 
 
   private:
@@ -1234,6 +1265,8 @@ class DCMTK_DCMSR_EXPORT DSRDocument
      // - tbd: optional attribute not yet supported
     /// Mapping Resource Identification Sequence: (SQ, 1-n, 3)
      // - tbd: optional attribute not yet supported
+    /// Timezone Offset from UTC: (SH, 1, 3)
+    DcmShortString      TimezoneOffsetFromUTC;
 
     // --- General Study Module (M) ---
 
@@ -1348,6 +1381,11 @@ class DCMTK_DCMSR_EXPORT DSRDocument
     DSRSOPInstanceReferenceList PertinentOtherEvidence;
     /// Referenced Instance Sequence: (SQ, 1-n, 1C)
     DSRReferencedInstanceList ReferencedInstances;
+
+    // --- Timezone Module (M - for some IODs) ---
+
+    // Timezone Offset from UTC: (SH, 1, 1)
+    // - see 'SOP Common Module'
 
  // --- declaration of copy constructor and assignment operator ---
 

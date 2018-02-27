@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2016, OFFIS e.V.
+ *  Copyright (C) 2016-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -34,14 +34,15 @@
  *  @see @ref ofvisit_variant "OFvisit" &ndash; @copybrief ofvisit_variant
  */
 
-#ifdef DCMTK_USE_CXX11_STL
+#ifdef HAVE_CXX11
 #include <type_traits>
 #include <cassert>
 #include <limits>
 
 template<std::size_t,typename... Alternatives>
-struct OFvariant_traits
+class OFvariant_traits
 {
+public:
     using is_constructible = std::false_type;
     static constexpr inline std::size_t alignment() { return 1; }
     static constexpr inline std::size_t size() { return 0; }
@@ -49,17 +50,17 @@ struct OFvariant_traits
 };
 
 template<std::size_t Index,typename Alternative0,typename... Alternatives>
-struct OFvariant_traits<Index,Alternative0,Alternatives...>
+class OFvariant_traits<Index,Alternative0,Alternatives...>
 : OFvariant_traits<Index+1,Alternatives...>
 {
+public:
     using OFvariant_traits<Index+1,Alternatives...>::index_of;
 
     using first_alternative = Alternative0;
 
     static constexpr inline std::size_t alignment()
     {
-        struct test { alignas(OFvariant_traits<Index+1,Alternatives...>::alignment()) first_alternative a; };
-        return alignof(test);
+        return alignof(aligned);
     }
 
     static constexpr inline std::size_t size()
@@ -73,6 +74,9 @@ struct OFvariant_traits<Index,Alternative0,Alternatives...>
     }
 
     static std::integral_constant<std::size_t,Index> index_of( first_alternative );
+
+private:
+    struct aligned { alignas(OFvariant_traits<Index+1,Alternatives...>::alignment()) char c; first_alternative a; };
 };
 
 template<std::size_t AlternativeCount,typename... IndexAlternatives>
@@ -418,7 +422,6 @@ public:
     /** Move constructs a variant by moving the value rhs holds.
      *  @param rhs an rvalue reference to another object of equal type.
      *  @pre All alternatives must be move constructible.
-     *  @note This constructor is currently only available if C++11 support was enabled.
      */
     OFvariant( OFvariant&& rhs );
 
@@ -470,7 +473,6 @@ public:
      *    is move assigned to the value contained in `*this`.
      *  @li if `*this` and `rhs` hold different alternatives, the value contained in `*this`
      *    is destroyed and a new one is move constructed from the value contained in `rhs`.
-     *  @note This constructor is currently only available if C++11 support was enabled.
      */
     OFvariant& operator=( OFvariant&& rhs );
 

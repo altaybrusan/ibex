@@ -1,13 +1,13 @@
 /*
  *
  *  Copyright (C) 2008-2012, OFFIS e.V. and ICSMED AG, Oldenburg, Germany
- *  Copyright (C) 2013-2016, J. Riesmeier, Oldenburg, Germany
+ *  Copyright (C) 2013-2017, J. Riesmeier, Oldenburg, Germany
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  Header file for class DRTIonBeamsTreatmentRecordIOD
  *
- *  Generated automatically from DICOM PS 3.3-2016d
- *  File created on 2016-10-12 13:44:31
+ *  Generated automatically from DICOM PS 3.3-2017e
+ *  File created on 2017-12-05 09:30:54
  *
  */
 
@@ -32,6 +32,7 @@
 #include "dcmtk/dcmrt/seq/drtdss.h"    // for DigitalSignaturesSequence
 #include "dcmtk/dcmrt/seq/drteas.h"    // for EncryptedAttributesSequence
 #include "dcmtk/dcmrt/seq/drtfgss.h"   // for FractionGroupSummarySequence
+#include "dcmtk/dcmrt/seq/drtgms.h"    // for GeneticModificationsSequence
 #include "dcmtk/dcmrt/seq/drtgpis.h"   // for GroupOfPatientsIdentificationSequence
 #include "dcmtk/dcmrt/seq/drthsdrs.h"  // for HL7StructuredDocumentReferenceSequence
 #include "dcmtk/dcmrt/seq/drtians.h"   // for IssuerOfAccessionNumberSequence
@@ -81,6 +82,9 @@
 
 
 /** Interface class for RTIonBeamsTreatmentRecordIOD
+ *  @note Because of its many member variables, an instance of this class requires quite
+ *    some memory. So be careful when creating automatic variables from this class (the
+ *    stack size might be exceeded); it is probably better to use the heap space.
  */
 class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
   : protected DRTTypes
@@ -105,6 +109,7 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
 
     /** assigment operator
      *  @param copy IOD object to be copied
+     *  @return reference to this object
      */
     DRTIonBeamsTreatmentRecordIOD &operator=(const DRTIonBeamsTreatmentRecordIOD &copy);
 
@@ -529,12 +534,26 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
      */
     virtual OFCondition getLastMenstrualDate(OFString &value, const signed long pos = 0) const;
 
+    /** get LongitudinalTemporalEventType (0012,0053)
+     *  @param  value  reference to variable in which the value should be stored
+     *  @param  pos    index of the value to get (0..vm-1), -1 for all components
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition getLongitudinalTemporalEventType(OFString &value, const signed long pos = 0) const;
+
     /** get LongitudinalTemporalInformationModified (0028,0303)
      *  @param  value  reference to variable in which the value should be stored
      *  @param  pos    index of the value to get (0..vm-1), -1 for all components
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition getLongitudinalTemporalInformationModified(OFString &value, const signed long pos = 0) const;
+
+    /** get LongitudinalTemporalOffsetFromEvent (0012,0052)
+     *  @param  value  reference to variable in which the value should be stored
+     *  @param  pos    index of the value to get (0..vm-1)
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition getLongitudinalTemporalOffsetFromEvent(Float64 &value, const unsigned long pos = 0) const;
 
     /** get Manufacturer (0008,0070)
      *  @param  value  reference to variable in which the value should be stored
@@ -640,13 +659,6 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition getOriginalSpecializedSOPClassUID(OFString &value, const signed long pos = 0) const;
-
-    /** get OtherPatientIDs (0010,1000)
-     *  @param  value  reference to variable in which the value should be stored
-     *  @param  pos    index of the value to get (0..vm-1), -1 for all components
-     *  @return status, EC_Normal if successful, an error code otherwise
-     */
-    virtual OFCondition getOtherPatientIDs(OFString &value, const signed long pos = 0) const;
 
     /** get OtherPatientNames (0010,1001)
      *  @param  value  reference to variable in which the value should be stored
@@ -1328,6 +1340,18 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
      */
     const DRTFractionGroupSummarySequence &getFractionGroupSummarySequence() const
         { return FractionGroupSummarySequence; }
+
+    /** get GeneticModificationsSequence (0010,0221)
+     *  @return reference to sequence element
+     */
+    DRTGeneticModificationsSequence &getGeneticModificationsSequence()
+        { return GeneticModificationsSequence; }
+
+    /** get GeneticModificationsSequence (0010,0221)
+     *  @return const reference to sequence element
+     */
+    const DRTGeneticModificationsSequence &getGeneticModificationsSequence() const
+        { return GeneticModificationsSequence; }
 
     /** get GroupOfPatientsIdentificationSequence (0010,0027)
      *  @return reference to sequence element
@@ -2170,12 +2194,26 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
      */
     virtual OFCondition setLastMenstrualDate(const OFString &value, const OFBool check = OFTrue);
 
+    /** set LongitudinalTemporalEventType (0012,0053)
+     *  @param  value  value to be set (single value only) or "" for no value
+     *  @param  check  check 'value' for conformance with VR (CS) and VM (1) if enabled
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition setLongitudinalTemporalEventType(const OFString &value, const OFBool check = OFTrue);
+
     /** set LongitudinalTemporalInformationModified (0028,0303)
      *  @param  value  value to be set (single value only) or "" for no value
      *  @param  check  check 'value' for conformance with VR (CS) and VM (1) if enabled
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition setLongitudinalTemporalInformationModified(const OFString &value, const OFBool check = OFTrue);
+
+    /** set LongitudinalTemporalOffsetFromEvent (0012,0052)
+     *  @param  value  value to be set (should be valid for this VR)
+     *  @param  pos    index of the value to be set (0..vm-1), vm=1
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition setLongitudinalTemporalOffsetFromEvent(const Float64 value, const unsigned long pos = 0);
 
     /** set Manufacturer (0008,0070)
      *  @param  value  value to be set (single value only) or "" for no value
@@ -2260,13 +2298,6 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition setOriginalSpecializedSOPClassUID(const OFString &value, const OFBool check = OFTrue);
-
-    /** set OtherPatientIDs (0010,1000)
-     *  @param  value  value to be set (possibly multi-valued) or "" for no value
-     *  @param  check  check 'value' for conformance with VR (LO) and VM (1-n) if enabled
-     *  @return status, EC_Normal if successful, an error code otherwise
-     */
-    virtual OFCondition setOtherPatientIDs(const OFString &value, const OFBool check = OFTrue);
 
     /** set OtherPatientNames (0010,1001)
      *  @param  value  value to be set (possibly multi-valued) or "" for no value
@@ -2785,8 +2816,6 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
     DRTReferencedPatientSequence ReferencedPatientSequence;
     /// PatientBirthTime (0010,0032) vr=TM, vm=1, type=3
     DcmTime PatientBirthTime;
-    /// OtherPatientIDs (0010,1000) vr=LO, vm=1-n, type=3
-    DcmLongString OtherPatientIDs;
     /// OtherPatientIDsSequence (0010,1002) vr=SQ, vm=1, type=3
     DRTOtherPatientIDsSequence OtherPatientIDsSequence;
     /// OtherPatientNames (0010,1001) vr=PN, vm=1-n, type=3
@@ -2815,6 +2844,8 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
     DcmUnlimitedText StrainAdditionalInformation;
     /// StrainStockSequence (0010,0216) vr=SQ, vm=1, type=3
     DRTStrainStockSequence StrainStockSequence;
+    /// GeneticModificationsSequence (0010,0221) vr=SQ, vm=1, type=3
+    DRTGeneticModificationsSequence GeneticModificationsSequence;
     /// ResponsiblePerson (0010,2297) vr=PN, vm=1, type=2C
     DcmPersonName ResponsiblePerson;
     /// ResponsiblePersonRole (0010,2298) vr=CS, vm=1, type=1C
@@ -2900,6 +2931,10 @@ class DCMTK_DCMRT_EXPORT DRTIonBeamsTreatmentRecordIOD
     DcmLongString ClinicalTrialTimePointID;
     /// ClinicalTrialTimePointDescription (0012,0051) vr=ST, vm=1, type=3
     DcmShortText ClinicalTrialTimePointDescription;
+    /// LongitudinalTemporalOffsetFromEvent (0012,0052) vr=FD, vm=1, type=3
+    DcmFloatingPointDouble LongitudinalTemporalOffsetFromEvent;
+    /// LongitudinalTemporalEventType (0012,0053) vr=CS, vm=1, type=1C
+    DcmCodeString LongitudinalTemporalEventType;
     /// ConsentForClinicalTrialUseSequence (0012,0083) vr=SQ, vm=1, type=3
     DRTConsentForClinicalTrialUseSequence ConsentForClinicalTrialUseSequence;
 

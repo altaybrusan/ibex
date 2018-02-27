@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2011, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were partly developed by
@@ -91,25 +91,13 @@
 #define INCLUDE_UNISTD
 #include "dcmtk/ofstd/ofstdinc.h"
 
-#ifdef HAVE_GUSI_H
-/* Use the Grand Unified Sockets Interface (GUSI) on Macintosh */
-#include <GUSI.h>
-#endif
-
 #ifdef HAVE_WINDOWS_H
-#include <windows.h>  /* this includes either winsock.h or winsock2.h */
-#else
-#ifdef HAVE_WINSOCK_H
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+#include <windows.h>  /* for Windows defines */
+#elif defined(HAVE_WINSOCK_H)
 #include <winsock.h>  /* include winsock.h directly i.e. on MacOS */
-#ifdef macintosh
-/*
-** The WinSock header on Macintosh does not declare the WORD type nor the MAKEWORD
-** macro need to initialize the WinSock library.
-*/
-typedef u_short WORD;
-#define MAKEWORD(a,b) ((WORD) (((a)&0xff)<<8) | ((b)&0xff) )
-#endif
-#endif
 #endif
 
 BEGIN_EXTERN_C
@@ -169,7 +157,6 @@ END_EXTERN_C
 
 #ifdef HAVE_PROTOTYPE_FLOCK
 #define dcmtk_flock flock
-#define dcmtk_plockerr perror
 #endif
 
 #ifndef HAVE_PROTOTYPE_FLOCK
@@ -178,7 +165,6 @@ BEGIN_EXTERN_C
 DCMTK_DCMNET_EXPORT int flock(int fd, int operation);
 END_EXTERN_C
 #define dcmtk_flock flock
-#define dcmtk_plockerr perror
 #else
 /*
  * Simulate the flock function calls
@@ -191,7 +177,6 @@ END_EXTERN_C
 #define   LOCK_UN   8    /* unlock */
 
 DCMTK_DCMNET_EXPORT int dcmtk_flock(int fd, int operation);
-DCMTK_DCMNET_EXPORT void dcmtk_plockerr(const char *s);
 
 #endif /* !HAVE_FLOCK */
 #endif
@@ -209,19 +194,12 @@ BEGIN_EXTERN_C
 DCMTK_DCMNET_EXPORT int gethostname(char* name, int namelen);
 END_EXTERN_C
 #else
-/* define gethostname ourselves */
+#ifndef __MINGW32__
+/* define gethostname ourselves (except on MinGW, where this is defined
+   in a Windows specific header
+*/
 DCMTK_DCMNET_EXPORT int gethostname(char* name, int namelen);
 #endif
-#endif
-
-#ifndef HAVE_PROTOTYPE_GETHOSTBYNAME
-#ifdef HAVE_GETHOSTBYNAME
-/* it is in the libraries but we have no prototype */
-BEGIN_EXTERN_C
-struct hostent *gethostbyname(const char* name);
-END_EXTERN_C
-#else
-/* don't know how to emulate */
 #endif
 #endif
 
@@ -364,20 +342,12 @@ DCMTK_DCMNET_EXPORT int access(const char* path, int amode);
 #ifndef R_OK
 #define W_OK 02 /* Write permission */
 #define R_OK 04 /* Read permission */
-#define F_OK 00 /* Existance only */
-#define X_OK 00 /* execute permission has no meaning under windows, treat as existance */
+#define F_OK 00 /* Existence only */
+#define X_OK 00 /* Execute permission has no meaning under Windows, treat as existence */
 #endif /* R_OK */
 #endif /* _WIN32 */
 
 #endif /* HAVE_ACCESS */
-
-#ifndef HAVE_STRERROR
-DCMTK_DCMNET_EXPORT char *strerror(int e);
-#endif
-
-#ifndef HAVE_TEMPNAM
-DCMTK_DCMNET_EXPORT char *tempnam(char *dir, char *pfx);
-#endif
 
 #ifdef _WIN32
 #define NULL_DEVICE_NAME "nul"
@@ -385,5 +355,6 @@ DCMTK_DCMNET_EXPORT char *tempnam(char *dir, char *pfx);
 #define NULL_DEVICE_NAME "/dev/null"
 #endif
 
+DCMTK_DCMNET_EXPORT void dcmtk_plockerr(const char *s);
 
 #endif /* DCOMPAT_H */

@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2016, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -33,8 +33,9 @@
 
 
 // forward declarations
-class DcmSequenceOfItems;
 class DcmElement;
+class DcmJsonFormat;
+class DcmSequenceOfItems;
 class DcmSpecificCharacterSet;
 
 
@@ -78,7 +79,7 @@ class DCMTK_DCMDATA_EXPORT DcmItem
      */
     DcmItem &operator=(const DcmItem &obj);
 
-    /** comparison operator that compares the normalized value of this object
+    /** comparison operator that compares the value of this object
      *  with a given object of the same type. The tag of the element is also
      *  considered as the first component that is compared, followed by the
      *  object types (VR, i.e. DCMTK'S EVR) and the comparison of all value
@@ -88,13 +89,15 @@ class DCMTK_DCMDATA_EXPORT DcmItem
      *  This may be an expensive operation.
      *  @param  rhs the right hand side of the comparison
      *  @return 0 if the object values are equal.
-     *          -1 if either the value of the  first component that does not match
-     *          is lower in this object than in rhs, or all compared components match
-     *          but this object has fewer components than rhs. Also returned if rhs
-     *          cannot be casted to this object type.
-     *          1 if either the value of the first component that does not match
-     *          is greater in this object than in rhs object, or all compared
-     *          components match but the this component is longer.
+     *          -1 if this element has fewer components than the rhs element.
+     *          Also -1 if the value of the first component that does not match
+     *          is lower in this object than in rhs. Also returned if rhs
+     *          cannot be casted to this object type or both objects are of
+     *          different VR (i.e. the DcmEVR returned by the element's ident()
+     *          call are different).
+     *          1 if either this element has more components than the rhs element, or
+     *          if the first component that does not match is greater in this object than
+     *          in rhs object.
      */
     virtual int compare(const DcmItem& rhs) const;
 
@@ -242,6 +245,28 @@ class DCMTK_DCMDATA_EXPORT DcmItem
                              const E_GrpLenEncoding glenc = EGL_noChange,
                              const Uint32 maxReadLength = DCM_MaxReadLength);
 
+    /** This function reads the information of all attributes which
+     *  are captured in the input stream and captures this information
+     *  in elementList, up to the attribute tag stopParsingAtElement.
+     *  Each attribute is represented as an element
+     *  in this list. If not all information for an attribute could be
+     *  read from the stream, the function returns EC_StreamNotifyClient.
+     *  @param inStream      The stream which contains the information.
+     *  @param ixfer         The transfer syntax which was used to encode
+     *                       the information in inStream.
+     *  @param glenc         Encoding type for group length; specifies
+     *                       what will be done with group length tags.
+     *  @param maxReadLength Maximum read length for reading an attribute value.
+     *  @param stopParsingAtElement parsing of the input stream is stopped when
+     *                       this tag key or any higher tag is encountered.
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition readUntilTag(DcmInputStream &inStream,
+                                     const E_TransferSyntax ixfer,
+                                     const E_GrpLenEncoding glenc = EGL_noChange,
+                                     const Uint32 maxReadLength = DCM_MaxReadLength,
+                                     const DcmTagKey &stopParsingAtElement = DCM_UndefinedTagKey);
+
     /** write object to a stream
      *  @param outStream DICOM output stream
      *  @param oxfer output transfer syntax
@@ -261,6 +286,14 @@ class DCMTK_DCMDATA_EXPORT DcmItem
      */
     virtual OFCondition writeXML(STD_NAMESPACE ostream&out,
                                  const size_t flags = 0);
+
+    /** write object in JSON format
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition writeJson(STD_NAMESPACE ostream&out,
+                                  DcmJsonFormat &format);
 
     /** special write method for creation of digital signatures
      *  @param outStream DICOM output stream
@@ -318,22 +351,17 @@ class DCMTK_DCMDATA_EXPORT DcmItem
      *  @param fromCharset name of the source character set(s) used for the conversion
      *  @param toCharset name of the destination character set used for the conversion.
      *    Only a single value is permitted (i.e. no code extensions).
-     *  @param transliterate mode specifying whether a character that cannot be
-     *    represented in the destination character encoding is approximated through one
-     *    or more characters that look similar to the original one
+     *  @param flags optional flag used to customize the conversion (see DCMTypes::CF_xxx)
      *  @param updateCharset if OFTrue, the SpecificCharacterSet (0008,0005) element is
      *    updated, i.e.\ the current value is either replaced or a new element is inserted
      *    or the existing element is deleted. If OFFalse the SpecificCharacterSet element
      *    remains unchanged.
-     *  @param discardIllegal mode specifying whether characters that cannot be represented
-     *    in the destination character encoding will be silently discarded
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition convertCharacterSet(const OFString &fromCharset,
                                             const OFString &toCharset,
-                                            const OFBool transliterate = OFFalse,
-                                            const OFBool updateCharset = OFFalse,
-                                            const OFBool discardIllegal = OFFalse);
+                                            const size_t flags = 0,
+                                            const OFBool updateCharset = OFFalse);
 
     /** convert all element values that are contained in this item and that are affected
      *  by SpecificCharacterSet to the given destination character set. If not disabled,
@@ -344,19 +372,14 @@ class DCMTK_DCMDATA_EXPORT DcmItem
      *  default character repertoire, which is ASCII (7-bit).
      *  @param toCharset name of the destination character set used for the conversion.
      *    Only a single value is permitted (i.e. no code extensions).
-     *  @param transliterate mode specifying whether a character that cannot be
-     *    represented in the destination character encoding is approximated through one
-     *    or more characters that look similar to the original one
+     *  @param flags optional flag used to customize the conversion (see DCMTypes::CF_xxx)
      *  @param ignoreCharset if OFTrue, the value of SpecificCharacterSet is ignored.
      *    Also see checkForSpecificCharacterSet().
-     *  @param discardIllegal mode specifying whether characters that cannot be represented
-     *    in the destination character encoding will be silently discarded
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition convertCharacterSet(const OFString &toCharset,
-                                            const OFBool transliterate = OFFalse,
-                                            const OFBool ignoreCharset = OFFalse,
-                                            const OFBool discardIllegal = OFFalse);
+                                            const size_t flags = 0,
+                                            const OFBool ignoreCharset = OFFalse);
 
     /** convert all element values that are contained in this item and that are affected
      *  by SpecificCharacterSet from the currently selected source character set to the
@@ -369,7 +392,8 @@ class DCMTK_DCMDATA_EXPORT DcmItem
     /** convert all element values that are contained in this item and that are affected
      *  by SpecificCharacterSet to UTF-8 (Unicode). The value of the SpecificCharacterSet
      *  (0008,0005) element is updated, set or deleted automatically if needed. The
-     *  transliteration mode is disabled - see convertCharacterSet().
+     *  transliteration mode is disabled, i.e. the conversion flags are explicitly set to
+     *  0 - see convertCharacterSet().
      *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition convertToUTF8();
@@ -1211,6 +1235,46 @@ class DCMTK_DCMDATA_EXPORT DcmItem
                                    DcmItem *item,
                                    const signed long itemNum = -2);
 
+    /** creates new DICOM element from given attribute tag.
+     *  Creation of unknown attributes (e.g. private tag not being registered
+     *  in the dictionary) will result in a DcmElement instance of derived type
+     *  DcmOtherByteOtherWord.
+     *  @param tag attribute tag of the element to be created
+     *  @param privateCreator private creator of the element, if element tag
+     *    is private (default: NULL, i.e. non-private DICOM standard tag)
+     *  @return pointer to newly created element upon success, NULL pointer otherwise
+     *
+     */
+     static DcmElement *newDicomElement(const DcmTagKey &tag,
+                                        const char *privateCreator = NULL);
+
+    /** creates new DICOM element from given attribute tag.
+     *  Creation of unknown attributes (e.g. private tag not being registered
+     *  in the dictionary) will result in a DcmElement instance of derived type
+     *  DcmOtherByteOtherWord.
+     *  @param newElement pointer to newly created element returned in this parameter
+     *    upon success, NULL pointer otherwise
+     *  @param tag attribute tag of the element to be created
+     *  @param privateCreator private creator of the element, if element tag
+     *    is private (default: NULL, i.e. non-private DICOM standard tag)
+     *  @return EC_Normal upon success, an error code otherwise
+     */
+    static OFCondition newDicomElement(DcmElement *&newElement,
+                                       const DcmTagKey &tag,
+                                       const char *privateCreator = NULL);
+
+    /** creates new DICOM element from given attribute tag and VR.
+     *  Creation of unknown attributes (e.g. private tag not being registered
+     *  in the dictionary) will result in a DcmElement instance of derived type
+     *  DcmOtherByteOtherWord.
+     *  @param newElement pointer to newly created element returned in this parameter
+     *    upon success, NULL pointer otherwise
+     *  @param tag attribute tag and VR of the element to be created
+     *  @return EC_Normal upon success, an error code otherwise
+     */
+     static OFCondition newDicomElementWithVR(DcmElement *&newElement,
+                                              const DcmTag &tag);
+
   protected:
 
     /// the list of elements maintained by this object
@@ -1227,8 +1291,6 @@ class DCMTK_DCMDATA_EXPORT DcmItem
      *  bytes available for a fixed-length item).
      */
     offile_off_t fStartPosition;
-
-  protected:
 
     /** This function reads tag and length information from inStream and
      *  returns this information to the caller. When reading information,
@@ -1308,6 +1370,31 @@ class DCMTK_DCMDATA_EXPORT DcmItem
     void updateSpecificCharacterSet(OFCondition &status,
                                     const DcmSpecificCharacterSet &converter);
 
+    /** creates new DICOM element from given attribute tag.
+     *  Helper function used by DICOM parser (friend of this class) and thus
+     *  hidden from the public interface. DcmItem's readSubElement() uses
+     *  this function when reading new elements from input data. This method
+     *  internally sets the length of the new element, but does not allocate
+     *  any memory for the element's value. Thus subsequent access to an element
+     *  created by this method can lead to crashes. DcmItem instead initializes
+     *  the value itself a bit later during the read process.
+     *  @param newElement pointer to newly created element returned in this
+     *    parameter upon success, NULL pointer otherwise
+     *  @param tag attribute tag of the element to be created. VR of tag may be
+     *    updated within the method.
+     *  @param length attribute value length of the element to be created
+     *  @param privateCreatorCache cache object for private creator strings in
+     *    the current dataset
+     *  @param readAsUN flag indicating whether parser is currently handling
+     *    UN element that must be read in implicit VR little endian; updated
+     *    upon return
+     *  @return EC_Normal upon success, an error code otherwise
+     */
+    static OFCondition newDicomElement(DcmElement *&newElement,
+                                       DcmTag &tag,
+                                       const Uint32 length,
+                                       DcmPrivateTagCache *privateCreatorCache,
+                                       OFBool& readAsUN);
 
   private:
 
@@ -1390,41 +1477,6 @@ inline OFBool operator>=(const DcmItem& lhs, const DcmItem& rhs)
 // SUPPORT FUNCTIONS
 //
 
-/** helper function for DICOM parser. Creates new DICOM element from given attribute tag
- *  @param newElement pointer to newly created element returned in this parameter upon success,
- *    NULL pointer otherwise
- *  @param tag attribute tag of the element to be created
- *  @param length attribute value length of the element to be created
- *  @param privateCreatorCache cache object for private creator strings in the current dataset
- *  @param readAsUN flag indicating whether parser is currently handling a UN element that
- *    must be read in implicit VR little endian; updated upon return
- *  @return EC_Normal upon success, an error code otherwise
- */
-DCMTK_DCMDATA_EXPORT OFCondition newDicomElement(DcmElement *&newElement,
-                            DcmTag &tag,
-                            const Uint32 length,
-                            DcmPrivateTagCache *privateCreatorCache,
-                            OFBool& readAsUN);
-
-/** helper function for DICOM parser. Creates new DICOM element from given attribute tag
- *  @param newElement pointer to newly created element returned in this parameter upon success,
- *    NULL pointer otherwise
- *  @param tag attribute tag of the element to be created
- *  @param length attribute value length of the element to be created
- *  @return EC_Normal upon success, an error code otherwise
- */
-DCMTK_DCMDATA_EXPORT OFCondition newDicomElement(DcmElement *&newElement,
-                            const DcmTag &tag,
-                            const Uint32 length = 0);
-
-/** helper function for DICOM parser. Creates new DICOM element from given attribute tag
- *  @param tag attribute tag of the element to be created
- *  @param length attribute value length of the element to be created
- *  @return pointer to newly created element returned in this parameter upon success,
- *    NULL pointer otherwise
- */
-DCMTK_DCMDATA_EXPORT DcmElement *newDicomElement(const DcmTag &tag,
-                            const Uint32 length = 0);
 
 /** helper function for DcmElement::nextObject.
  *  hierarchically traverses all datasets/items after the position indicated by the call stack

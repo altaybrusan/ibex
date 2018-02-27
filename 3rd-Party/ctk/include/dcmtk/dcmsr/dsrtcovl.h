@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 2000-2015, OFFIS e.V.
+ *  Copyright (C) 2000-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -64,21 +64,35 @@ class DCMTK_DCMSR_EXPORT DSRTemporalCoordinatesValue
     virtual ~DSRTemporalCoordinatesValue();
 
     /** assignment operator
-     ** @param  coordinatesValue  Temporal coordinates value to be copied (not checked !)
-     ** @return reference to this Temporal coordinates value after 'coordinatesValue' has
+     ** @param  coordinatesValue  temporal coordinates value to be copied (not checked !)
+     ** @return reference to this temporal coordinates value after 'coordinatesValue' has
      *          been copied
      */
     DSRTemporalCoordinatesValue &operator=(const DSRTemporalCoordinatesValue &coordinatesValue);
 
+    /** comparison operator "equal"
+     ** @param  coordinatesValue  temporal coordinates value that should be compared to the
+     *                            current one
+     ** @return OFTrue if both temporal coordinates values are equal, OFFalse otherwise
+     */
+    OFBool operator==(const DSRTemporalCoordinatesValue &coordinatesValue) const;
+
+    /** comparison operator "not equal"
+     ** @param  coordinatesValue  temporal coordinates value that should be compared to the
+     *                            current one
+     ** @return OFTrue if both temporal coordinates values are not equal, OFFalse otherwise
+     */
+    OFBool operator!=(const DSRTemporalCoordinatesValue &coordinatesValue) const;
+
     /** clear all internal variables.
-     *  Temporal range type is set to TRT_invalid.  Since an empty list of graphic data is
-     *  invalid the temporal coordinates value becomes invalid afterwards.
+     *  Temporal range type is set to DSRTypes::TRT_invalid.  Since an empty list of graphic data
+     *  is invalid the temporal coordinates value becomes invalid afterwards.
      */
     virtual void clear();
 
     /** check whether the current temporal coordinates value is valid.
-     *  The value is valid if the temporal range type is not TRT_invalid and the other data
-     *  is valid.  See checkData() method for details.
+     *  The value is valid if the temporal range type is not DSRTypes::TRT_invalid and the other
+     *  data is valid.  See checkData() method for details.
      ** @return OFTrue if reference value is valid, OFFalse otherwise
      */
     virtual OFBool isValid() const;
@@ -161,7 +175,7 @@ class DCMTK_DCMSR_EXPORT DSRTemporalCoordinatesValue
 
     /** get current temporal range type.
      *  This value represents the type of temporal extent of the region of interest.
-     ** @return region type (might be TRT_invalid)
+     ** @return region type (might be DSRTypes::TRT_invalid)
      */
     inline DSRTypes::E_TemporalRangeType getTemporalRangeType() const
     {
@@ -170,7 +184,8 @@ class DCMTK_DCMSR_EXPORT DSRTemporalCoordinatesValue
 
     /** set current temporal range type.
      *  This value represents the type of temporal extent of the region of interest.
-     ** @param  temporalRangeType  temporal range type to be set (TRT_invalid is not allowed)
+     ** @param  temporalRangeType  temporal range type to be set (DSRTypes::TRT_invalid is not
+     *                             allowed)
      *  @param  check              dummy parameter (currently not used)
      ** @return status, EC_Normal if successful, an error code otherwise
      */

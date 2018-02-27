@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1998-2015, OFFIS e.V.
+ *  Copyright (C) 1998-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -80,6 +80,13 @@ public:
   typedef SSL_CTX* native_handle_type;
 
   /** constructor.
+   *  Constructs a DcmTLSTransportLayer object without initializing it, e.g.
+   *  as a placeholder that may or may not be used later depending on user
+   *  input.
+   */
+  DcmTLSTransportLayer();
+
+  /** constructor.
    *  @param networkRole network role to be used by the application, influences
    *    the choice of the secure transport layer code.
    *  @param randFile path to file used to feed the random generator
@@ -90,8 +97,50 @@ public:
    */
   DcmTLSTransportLayer(int networkRole, const char *randFile, OFBool initializeOpenSSL = OFTrue);
 
+  /** move constructor.
+   *  Transfer ownership from another DcmTLSTransportLayer object to the newly
+   *  constructed object (*this).
+   *  @param rhs an rvalue reference to another DcmTLSTransportLayer object.
+   */
+  DcmTLSTransportLayer(OFrvalue_ref(DcmTLSTransportLayer) rhs);
+
+  /** move assignment.
+   *  Assign ownership from another DcmTLSTransportLayer object to *this,
+   *  freeing the existing object first (if any).
+   *  @param rhs an rvalue reference to another DcmTLSTransportLayer object.
+   *  @return *this.
+   */
+  DcmTLSTransportLayer& operator=(OFrvalue_ref(DcmTLSTransportLayer) rhs);
+
   /// destructor
   virtual ~DcmTLSTransportLayer();
+
+  /** Free resources, e.g. the OpenSSL context used by this object and reset
+   *  all members to the default values. Will do nothing if this object has
+   *  not been initialized, e.g. by using the default constructor.
+   */
+  void clear();
+
+#ifdef HAVE_CXX11
+  explicit
+#endif // HAVE_CXX11
+  /** Query whether this object has been initialized successfully, i.e.
+   *  whether it owns a successfully created OpenSSL context.
+   *  @return OFTrue if *this owns refers to a valid OpenSSL context,
+   *    OFFalse otherwise.
+   *  @note If C++11 support is available, the conversion operator is marked as
+   *    <tt>explicit</tt>, which prevents <i>*this</i> to be interpreted as a
+   *    boolean value in an inappropriate context. You should use this operator
+   *    with caution when C++11 support is unavailable, as <i>*this</i> might
+   *    be converted to a boolean value automatically where it shouldn't.
+   */
+  operator OFBool() const;
+
+  /** Query whether this object has not been initialized, e.g. has been
+   *  constructed using the default constructor or the initialization failed.
+   *  @return OFTrue if *this ist not initialized, OFFalse otherwise.
+   */
+  OFBool operator!() const;
 
   /** factory method that returns a new transport connection for the
    *  given socket.  Depending on the second parameter, either a transparent
@@ -104,7 +153,7 @@ public:
    *    transparent layer is used.
    *  @return pointer to new connection object if successful, NULL otherwise.
    */
-  virtual DcmTransportConnection *createConnection(int openSocket, OFBool useSecureLayer);
+  virtual DcmTransportConnection *createConnection(DcmNativeSocketType openSocket, OFBool useSecureLayer);
 
   /** loads the private key used for authentication of this application from a file.
    *  @param fileName path to the private key file
@@ -292,6 +341,16 @@ private:
   /// contains the password for the private key if set on command line
   OFString privateKeyPasswd;
 
+};
+
+#else /* WITH_OPENSSL */
+
+// trivial declaration of DcmTLSTransportLayer as a placeholder
+class DCMTK_DCMTLS_EXPORT DcmTLSTransportLayer : public DcmTransportLayer
+{
+public:
+  inline DcmTLSTransportLayer(OFrvalue_ref(DcmTLSTransportLayer) /* rhs */) {}
+  inline DcmTLSTransportLayer& operator=(OFrvalue_ref(DcmTLSTransportLayer) /* rhs */) { return *this; }
 };
 
 #endif /* WITH_OPENSSL */

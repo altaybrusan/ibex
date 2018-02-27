@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2015, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -24,7 +24,12 @@
 #define DCVROBOW_H
 
 #include "dcmtk/config/osconfig.h"    /* make sure OS specific configuration is included first */
+
 #include "dcmtk/dcmdata/dcelem.h"
+
+
+// forward declarations
+class DcmJsonFormat;
 
 
 /** a class representing the DICOM value representations 'Other Byte' (OB)
@@ -36,13 +41,15 @@ class DCMTK_DCMDATA_EXPORT DcmOtherByteOtherWord
 
  public:
 
+    // Make friend with DcmItem which requires access to protected
+    // constructor allowing construction using an explicit value length.
+    friend class DcmItem;
+
     /** constructor.
-     *  Create new element from given tag and length.
+     *  Create new element from given tag.
      *  @param tag DICOM tag for the new element
-     *  @param len value length for the new element
      */
-    DcmOtherByteOtherWord(const DcmTag &tag,
-                          const Uint32 len = 0);
+    DcmOtherByteOtherWord(const DcmTag &tag);
 
     /** copy constructor
      *  @param old element to be copied
@@ -53,17 +60,20 @@ class DCMTK_DCMDATA_EXPORT DcmOtherByteOtherWord
      *  with a given object of the same type. The tag of the element is also
      *  considered as the first component that is compared, followed by the
      *  object types (VR, i.e. DCMTK'S EVR) and the comparison of all value
-     *  components of the object, preferrably in the order declared in the
-     *  object (if applicable).
+     *  components of the object, preferably in the order declared in the
+     *  object (if applicable). The implementation for DcmOtherByteOtherWord
+     *  does compare the values of two elements in local endianness.
      *  @param  rhs the right hand side of the comparison
      *  @return 0 if the object values are equal.
-     *          -1 if either the value of the  first component that does not match
-     *          is lower in this object than in rhs, or all compared components match
-     *          but this object has fewer components than rhs. Also returned if rhs
-     *          cannot be casted to this object type.
-     *          1 if either the value of the first component that does not match
-     *          is greater in this object than in rhs object, or all compared
-     *          components match but the this component is longer.
+     *          -1 if this element has fewer components than the rhs element.
+     *          Also -1 if the value of the first component that does not match
+     *          is lower in this object than in rhs. Also returned if rhs
+     *          cannot be casted to this object type or both objects are of
+     *          different VR (i.e. the DcmEVR returned by the element's ident()
+     *          call are different).
+     *          1 if either this element has more components than the rhs element, or
+     *          if the first component that does not match is greater in this object than
+     *          in rhs object.
      */
     virtual int compare(const DcmElement& rhs) const;
 
@@ -119,9 +129,9 @@ class DCMTK_DCMDATA_EXPORT DcmOtherByteOtherWord
 
     /** set/change the current value representation
      *  @param vr new value representation to be set.  All VRs except for OW (Other
-     *    Word String) are treated as 8 bit data (OB).  This is particularily useful
+     *    Word String) are treated as 8 bit data (OB).  This is particularly useful
      *    for unknown (UN) or unsupported VRs.
-     *  @return status status, EC_Normal if successful, an error code otherwise
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition setVR(DcmEVR vr);
 
@@ -168,6 +178,14 @@ class DCMTK_DCMDATA_EXPORT DcmOtherByteOtherWord
     virtual OFCondition writeXML(STD_NAMESPACE ostream&out,
                                  const size_t flags = 0);
 
+    /** write object in JSON format to a stream
+     *  @param out output stream to which the JSON document is written
+     *  @param format used to format and customize the output
+     *  @return status, EC_Normal if successful, an error code otherwise
+     */
+    virtual OFCondition writeJson(STD_NAMESPACE ostream&out,
+                                  DcmJsonFormat &format);
+
     /** special write method for creation of digital signatures
      *  @param outStream DICOM output stream
      *  @param oxfer output transfer syntax
@@ -193,7 +211,7 @@ class DCMTK_DCMDATA_EXPORT DcmOtherByteOtherWord
      *  This method is only applicable to OW data.
      *  @param wordVal reference to result variable (cleared in case of error)
      *  @param pos index of the value to be retrieved (0..vm-1)
-     *  @return status status, EC_Normal if successful, an error code otherwise
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition getUint16(Uint16 &wordVal,
                                   const unsigned long pos = 0);
@@ -201,14 +219,14 @@ class DCMTK_DCMDATA_EXPORT DcmOtherByteOtherWord
     /** get reference to stored 8 bit data.
      *  This method is only applicable to non-OW data, e.g. OB.
      *  @param byteVals reference to result variable
-     *  @return status status, EC_Normal if successful, an error code otherwise
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition getUint8Array(Uint8 *&byteVals);
 
     /** get reference to stored 16 bit data.
      *  This method is only applicable to OW data.
      *  @param wordVals reference to result variable
-     *  @return status status, EC_Normal if successful, an error code otherwise
+     *  @return status, EC_Normal if successful, an error code otherwise
      */
     virtual OFCondition getUint16Array(Uint16 *&wordVals);
 
@@ -307,6 +325,20 @@ class DCMTK_DCMDATA_EXPORT DcmOtherByteOtherWord
 
 
  protected:
+
+    /** constructor. Create new element from given tag and length.
+     *  Only reachable from friend classes since construction with
+     *  length different from 0 leads to a state with length being set but
+     *  the element's value still being uninitialized. This can lead to crashes
+     *  when the value is read or written. Thus the method calling this
+     *  constructor with length > 0 must ensure that the element's value is
+     *  explicitly initialized, too.
+     *  Create new element from given tag and length.
+     *  @param tag DICOM tag for the new element
+     *  @param len value length for the new element
+     */
+    DcmOtherByteOtherWord(const DcmTag &tag,
+                          const Uint32 len);
 
     /** method is called after the element value has been loaded.
      *  Can be used to correct the value before it is used for the first time.

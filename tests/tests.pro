@@ -4,4 +4,6 @@ SUBDIRS += \
     RS232ConnectorTest \
     GeneralQtFeaturesTest \
     IDeviceTest \
-    DCMTKTest
+    DCMTKTest \
+    DCMTKTest2
+#    ImageMagicTest

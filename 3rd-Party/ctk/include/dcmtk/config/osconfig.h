@@ -48,13 +48,16 @@
 /* #undef C_RIGHTSHIFT_UNSIGNED */
 
 /* Define the DCMTK default path */
-#define DCMTK_PREFIX "C:\\temp\\CTK\\build\\CMakeExternals\\Install"
+#define DCMTK_PREFIX "C:\\temp\\DCMTK\\install"
 
 /* Define the default data dictionary path for the dcmdata library package */
 #define DCM_DICT_DEFAULT_PATH ""
 
 /* Define if we want a populated builtin dictionary */
 #define ENABLE_BUILTIN_DICTIONARY "1"
+
+/* Define if we want load external dictionaries */
+/* #undef ENABLE_EXTERNAL_DICTIONARY */
 
 /* Define the environment variable path separator */
 #define ENVIRONMENT_PATH_SEPARATOR ';'
@@ -213,6 +216,9 @@
 /* Define to 1 if you have the `getlogin' function. */
 /* #undef HAVE_GETLOGIN */
 
+/* Define to 1 if you have the `getlogin_r' function. */
+/* #undef HAVE_GETLOGIN_R */
+
 /* Define to 1 if you have the `getpid' function. */
 #define HAVE_GETPID 1
 
@@ -294,9 +300,7 @@
 /* Define to 1 if you have the `nsl' library (-lnsl). */
 /* #undef HAVE_LIBNSL */
 
-/* Define to 1 if you have the <libpng/png.h> header file. */
-/* Comment this out so inside dipipng.cxx we can include <png.h> */
-/* instead of <libpng/png.h> KW 20060622 */
+/* Define to 1 if the <libpng/png.h> header shall be used instead of <png.h>. */
 /* #undef HAVE_LIBPNG_PNG_H */
 
 /* Define to 1 if you have the `socket' library (-lsocket). */
@@ -389,10 +393,16 @@
 /* Define to 1 if you have the <sys/systeminfo.h> header file. */
 /* #undef HAVE_SYS_SYSTEMINFO_H */
 
+/* Define to 1 if you have readdir_r */
+/* #undef HAVE_READDIR_R */
+
 /* Define if your system supports readdir_r with the obsolete Posix 1.c draft
    6 declaration (2 arguments) instead of the Posix 1.c declaration with 3
    arguments. */
 /* #undef HAVE_OLD_READDIR_R */
+
+/* Define if your system has a prototype for feenableexcept in fenv.h */
+/* #undef HAVE_PROTOTYPE_FEENABLEEXCEPT */
 
 /* Define if your system has a prototype for accept in sys/types.h
    sys/socket.h */
@@ -425,6 +435,10 @@
 /* Define if your system has a prototype for gethostbyname_r in libc.h unistd.h
    stdlib.h netdb.h */
 /* #undef HAVE_PROTOTYPE_GETHOSTBYNAME_R */
+
+/* Define if your system has a prototype for gethostbyaddr_r in libc.h unistd.h
+   stdlib.h netdb.h */
+/* #undef HAVE_PROTOTYPE_GETHOSTBYADDR_R */
 
 /* Define if your system has a prototype for gethostid in libc.h unistd.h
    stdlib.h netdb.h */
@@ -798,8 +812,11 @@
 /* Define to 1 if you have the `nanosleep' function. */
 /* #undef HAVE_NANOSLEEP */
 
+/* Define if libc.h should be treated as a C++ header */
+/* #undef INCLUDE_LIBC_H_AS_CXX */
+
 /* Define if <math.h> fails if included extern "C" */
-#define INCLUDE_MATH_H_AS_CXX 1
+/* #undef INCLUDE_MATH_H_AS_CXX */
 
 /* Define to 1 if you have variable length arrays. */
 /* #undef HAVE_VLA */
@@ -826,13 +843,13 @@
 #define PACKAGE_DATE "DEV"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "3.6.1"
+#define PACKAGE_VERSION "3.6.3"
 
 /* Define to the version suffix of this package. */
-#define PACKAGE_VERSION_SUFFIX ""
+#define PACKAGE_VERSION_SUFFIX "+"
 
 /* Define to the version number of this package. */
-#define PACKAGE_VERSION_NUMBER 361
+#define PACKAGE_VERSION_NUMBER 363
 
 /* Define path separator */
 #define PATH_SEPARATOR '\\'
@@ -843,16 +860,12 @@
 /* Define if signal handlers need ellipse (...) parameters */
 /* #undef SIGNAL_HANDLER_WITH_ELLIPSE */
 
-/* Define to enable LFS64 (explicit large file support) if available*/
-/* #undef _LARGEFILE64_SOURCE */
+/* LFS mode constants. */
+#define DCMTK_LFS 1
+#define DCMTK_LFS64 2
 
-/* Explicitly request large file support, assuming it exists if fseeko() exists */
-#if defined(HAVE_FSEEKO) && !defined(_LARGEFILE_SOURCE)
-#define _LARGEFILE_SOURCE 1
-#endif
-#if defined(_LARGEFILE_SOURCE) && !defined(_FILE_OFFSET_BITS)
-#define _FILE_OFFSET_BITS 64
-#endif
+/* Select LFS mode (defined above) that shall be used or don't define it */
+#define DCMTK_ENABLE_LFS DCMTK_LFS
 
 /* The size of a `char', as computed by sizeof. */
 #define SIZEOF_CHAR 1
@@ -875,6 +888,12 @@
 /* The size of a `void *', as computed by sizeof. */
 #define SIZEOF_VOID_P 8
 
+/* The size of a `fpos_t', as computed by sizeof. */
+#define SIZEOF_FPOS_T 8
+
+/* The size of a `off_t', as computed by sizeof. */
+/* #undef SIZEOF_OFF_T */
+
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
@@ -886,6 +905,20 @@
 
 /* Define if we are compiling with libiconv support. */
 /* #undef WITH_LIBICONV */
+
+/* Define if the C standard library has iconv builtin. */
+/* #undef WITH_STDLIBC_ICONV */
+
+/* Define if we are compiling with ICU support. */
+/* #undef WITH_ICU */
+
+/* character set conversion constants. */
+#define DCMTK_CHARSET_CONVERSION_ICU 1
+#define DCMTK_CHARSET_CONVERSION_ICONV 2
+#define DCMTK_CHARSET_CONVERSION_STDLIBC_ICONV 3
+
+/* Define to select character set conversion implementation. */
+/* #undef DCMTK_ENABLE_CHARSET_CONVERSION */
 
 /* Define if the second argument to iconv() is const */
 /* #undef LIBICONV_SECOND_ARGUMENT_CONST */
@@ -978,6 +1011,9 @@ typedef unsigned long ulong;
 /* #undef HAVE_LONGLONG */
 /* #undef HAVE_ULONGLONG */
 
+#define HAVE_INT64_T 1
+#define HAVE_UINT64_T 1
+
  /* Additional settings for Borland C++ Builder */
 #ifdef __BORLANDC__
 #define _stricmp stricmp    /* _stricmp in MSVC is stricmp in Borland C++ */
@@ -991,7 +1027,6 @@ typedef unsigned long ulong;
 #endif
 #define HAVE_PROTOTYPE_MKTEMP 1
 #undef HAVE_SYS_UTIME_H
-#define NO_IOS_BASE_ASSIGN 1
 #define _MSC_VER 1200       /* Treat Borland C++ 5.5 as MSVC6. */
 #endif /* __BORLANDC__ */
 
@@ -1029,48 +1064,17 @@ typedef unsigned long ulong;
 /* Define if your system defines ios::nocreate in iostream.h */
 /* #undef HAVE_IOS_NOCREATE */
 
-#ifdef USE_STD_CXX_INCLUDES
-
 /* Define if ANSI standard C++ includes use std namespace */
 #define HAVE_STD_NAMESPACE 1
-
-/* Define if it is not possible to assign stream objects */
-#define NO_IOS_BASE_ASSIGN 1
 
 /* Define if the compiler supports std::nothrow */
 #define HAVE_STD__NOTHROW 1
 
-/* Define if the compiler supports operator delete (std::nothrow).
- * Microsoft Visual C++ 6.0 does NOT have it, newer versions do.
- * For other compilers, by default assume that it exists.
- */
-#if defined(_MSC_VER) && (_MSC_VER <= 1200)
-/* #undef HAVE_NOTHROW_DELETE */
-#else
-#define HAVE_NOTHROW_DELETE 1
-#endif
-
-/* Define if your system has a prototype for std::vfprintf in stdarg.h */
-/* #undef HAVE_PROTOTYPE_STD__VFPRINTF */
-
-#else
-
-/* Define if ANSI standard C++ includes use std namespace */
-/* #undef HAVE_STD_NAMESPACE */
-
-/* Define if it is not possible to assign stream objects */
-/* #undef NO_IOS_BASE_ASSIGN */
-
-/* Define if the compiler supports std::nothrow */
-/* #undef HAVE_STD__NOTHROW */
-
 /* Define if the compiler supports operator delete (std::nothrow) */
-/* #undef HAVE_NOTHROW_DELETE */
+#define HAVE_NOTHROW_DELETE 1
 
 /* Define if your system has a prototype for std::vfprintf in stdarg.h */
 #define HAVE_PROTOTYPE_STD__VFPRINTF 1
-
-#endif /* USE_STD_CXX_INCLUDES */
 
 /* Define if your system has off64_t */
 /* #undef HAVE_OFF64_T */
@@ -1096,13 +1100,12 @@ typedef unsigned long ulong;
 /* Always define STDIO_NAMESPACE to ::, because MSVC6 gets mad if you don't. */
 #define STDIO_NAMESPACE ::
 
-/* Enable or disable C++11 while building DCMTK */
-/* #undef DCMTK_USE_CXX11_STL */
+/* Define if we can use C++11 */
+/* #undef HAVE_CXX11 */
 
-#if defined(DCMTK_USE_CXX11_STL) && defined(__cplusplus) && __cplusplus < 201103L
+#if defined(HAVE_CXX11) && defined(__cplusplus) && __cplusplus < 201103L
 #error\
- DCMTK was configured to use the C++11 STL, but your compiler is not configured\
- for building with C++11 features.
+DCMTK was configured to use C++11 features, but your compiler does not or was not configured to provide them.
 #endif
 
 /* Define if the compiler supports __alignof__ */
@@ -1117,9 +1120,6 @@ typedef unsigned long ulong;
 /* Define if __attribute__((aligned)) supports templates */
 /* #undef ATTRIBUTE_ALIGNED_SUPPORTS_TEMPLATES */
 
-/* Define if alignas supports typedefs */
-/* #undef ALIGNAS_SUPPORTS_TYPEDEFS */
-
 /* Define if the compiler supports __declspec(align) */
 #define HAVE_DECLSPEC_ALIGN 1
 
@@ -1131,5 +1131,38 @@ typedef unsigned long ulong;
 
 /* The path on the Android device that should be used for temporary files */
 /* #undef ANDROID_TEMPORARY_FILES_LOCATION */
+
+/* Define if we are supposed to use STL's vector */
+/* #undef HAVE_STL_VECTOR */
+
+/* Define if we are supposed to use STL's algorithms */
+/* #undef HAVE_STL_ALGORITHM */
+
+/* Define if we are supposed to use STL's limit */
+/* #undef HAVE_STL_LIMITS */
+
+/* Define if we are supposed to use STL's list */
+/* #undef HAVE_STL_LIST */
+
+/* Define if we are supposed to use STL's list */
+/* #undef HAVE_STL_MAP */
+
+/* Define if we are supposed to use STL's memory */
+/* #undef HAVE_STL_MEMORY */
+
+/* Define if we are supposed to use STL's stack */
+/* #undef HAVE_STL_STACK */
+
+/* Define if we are supposed to use STL's string */
+/* #undef HAVE_STL_STRING */
+
+/* Define if we are supposed to use STL's type_traits */
+/* #undef HAVE_STL_TYPE_TRAITS */
+
+/* Define if we are supposed to use STL's tuple */
+/* #undef HAVE_STL_TUPLE */
+
+/* Define if we are supposed to use STL's system_error */
+/* #undef HAVE_STL_SYSTEM_ERROR */
 
 #endif /* !OSCONFIG_H*/

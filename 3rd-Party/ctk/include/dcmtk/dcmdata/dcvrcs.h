@@ -1,6 +1,6 @@
 /*
  *
- *  Copyright (C) 1994-2013, OFFIS e.V.
+ *  Copyright (C) 1994-2017, OFFIS e.V.
  *  All rights reserved.  See COPYRIGHT file for details.
  *
  *  This software and supporting documentation were developed by
@@ -104,6 +104,18 @@ class DCMTK_DCMDATA_EXPORT DcmCodeString
     virtual OFCondition getOFString(OFString &stringVal,
                                     const unsigned long pos,
                                     OFBool normalize = OFTrue);
+
+    // ensure inherited overloads of matches take part in overload resolution
+    using DcmByteString::matches;
+
+    /// @copydoc DcmByteString::matches(OFString,OFString,OFBool)
+    virtual OFBool matches(const OFString& key,
+                           const OFString& candidate,
+                           const OFBool enableWildCardMatching = OFTrue) const;
+
+    /// @copydoc DcmElement::isUniversalMatch()
+    virtual OFBool isUniversalMatch(const OFBool normalize = OFTrue,
+                                    const OFBool enableWildCardMatching = OFTrue);
 
     /* --- static helper functions --- */
 
