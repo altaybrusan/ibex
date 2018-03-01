@@ -66,6 +66,7 @@ private:
     OFCmdSignedInt        opt_cancelAfterNResponses = -1;
     int                   opt_dimse_timeout = 0;
     int                   opt_outputResponsesToLogger = 0;
+    DcmFindSCUExtractMode opt_extractResponses=FEM_singleXMLFile;
     OFBool                opt_extractResponsesToFile = OFTrue;
     OFString              opt_outputDirectory = ".";
     OFCmdUnsignedInt      opt_maxReceivePDULength = ASC_DEFAULTMAXPDU;
@@ -77,8 +78,9 @@ private:
     OFCmdUnsignedInt      opt_repeatCount = 1;
     OFBool                opt_secureConnection = OFFalse; /* default: no secure connection */
     OFList<OFString>      overrideKeys;
+    OFString              opt_extractXMLFilename="Out.xml";
     QTcpSocket * socket;
-        DcmFindSCU findscu;
+    DcmFindSCU findscu;
 
 };
 
@@ -190,49 +192,65 @@ void DCMTKTest3::testModalityWorkListConnection()
         QVERIFY2(false,QString::fromLatin1(temp_str.c_str()).toLatin1().data());
     }
 
-    /* findscu -W
-     * -k 0008,0005
-     * -k 0008,0010
-     * -k 0008,0050
-     * -k 0008,0060
-     * -k 0008,0090
-     * -k 0008,1110
-     * -k 0010,0010
-     * -k 0010,0020
-     * -k 0010,0030
-     * -k 0010,0040
-     * -k 0010,1030
-     * -k 0010,2000
-     * -k 0010,2110
-     * localhost 107
-     * -Xs Out.xml
-*/
 
     overrideKeys.push_back("0008,0005");
     overrideKeys.push_back("0008,0010");
     overrideKeys.push_back("0008,0050");
+    overrideKeys.push_back("0008,0060");
+    overrideKeys.push_back("0008,0090");
+    overrideKeys.push_back("0008,1110");
+
+    overrideKeys.push_back("0010,0010");
+    overrideKeys.push_back("0010,0020");
+    overrideKeys.push_back("0010,0030");
+    overrideKeys.push_back("0010,0040");
+    overrideKeys.push_back("0010,1030");
+    overrideKeys.push_back("0010,2000");
+    overrideKeys.push_back("0010,2110");
 
     // do the main work: negotiate network association, perform C-FIND transaction,
     // process results, and finally tear down the association.
+//    cond = findscu.performQuery(
+//                opt_peer,
+//                opt_port,
+//                opt_ourTitle,
+//                opt_peerTitle,
+//                opt_abstractSyntax,
+//                opt_networkTransferSyntax,
+//                opt_blockMode,
+//                opt_dimse_timeout,
+//                opt_maxReceivePDULength,
+//                opt_secureConnection,
+//                opt_abortAssociation,
+//                opt_repeatCount,
+//                static_cast<DcmFindSCUExtractMode>(opt_extractResponsesToFile),//static_cast<DcmFindSCUExtractMode>
+//                opt_cancelAfterNResponses,
+//                &overrideKeys,
+//                NULL, /* we want to use the default callback */
+//                &fileNameList,
+//                opt_outputDirectory.c_str(),
+//                opt_extractXMLFilename.c_str());
+
     cond = findscu.performQuery(
-                opt_peer,
-                opt_port,
-                opt_ourTitle,
-                opt_peerTitle,
-                opt_abstractSyntax,
-                opt_networkTransferSyntax,
-                opt_blockMode,
-                opt_dimse_timeout,
-                opt_maxReceivePDULength,
-                opt_secureConnection,
-                opt_abortAssociation,
-                opt_repeatCount,
-                static_cast<DcmFindSCUExtractMode>(opt_extractResponsesToFile),//static_cast<DcmFindSCUExtractMode>
-                opt_cancelAfterNResponses,
-                &overrideKeys,
-                NULL, /* we want to use the default callback */
-                &fileNameList,
-                opt_outputDirectory.c_str());
+      opt_peer,
+      opt_port,
+      opt_ourTitle,
+      opt_peerTitle,
+      opt_abstractSyntax,
+      opt_networkTransferSyntax,
+      opt_blockMode,
+      opt_dimse_timeout,
+      opt_maxReceivePDULength,
+      opt_secureConnection,
+      opt_abortAssociation,
+      opt_repeatCount,
+      opt_extractResponses,
+      opt_cancelAfterNResponses,
+      &overrideKeys,
+      NULL, /* we want to use the default callback */
+      &fileNameList,
+      opt_outputDirectory.c_str(),
+      opt_extractXMLFilename.c_str());
 
     if(cond.bad())
     {
