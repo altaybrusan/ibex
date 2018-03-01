@@ -5,5 +5,6 @@ SUBDIRS += \
     GeneralQtFeaturesTest \
     IDeviceTest \
     DCMTKTest \
-    DCMTKTest2
+    DCMTKTest2 \
+    DCMTKTest3
 #    ImageMagicTest

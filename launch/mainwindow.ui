@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>976</width>
-    <height>596</height>
+    <width>1291</width>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -96,8 +96,8 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>976</width>
-     <height>18</height>
+     <width>1291</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">

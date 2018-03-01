@@ -64,7 +64,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(976, 596);
+        MainWindow->resize(1291, 710);
         QIcon icon;
         icon.addFile(QStringLiteral(":/assets/images/_ibex_logo.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -181,7 +181,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         mainMenuBar = new QMenuBar(MainWindow);
         mainMenuBar->setObjectName(QStringLiteral("mainMenuBar"));
-        mainMenuBar->setGeometry(QRect(0, 0, 976, 18));
+        mainMenuBar->setGeometry(QRect(0, 0, 1291, 26));
         mainMenuBar->setStyleSheet(QLatin1String("background-color: rgb(0, 170, 127);\n"
 "border-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"

@@ -157,12 +157,12 @@ void DCMTKTest2::testSendingSingleDicomFileToPacs()
             if (opt_haltOnInvalidFile)
             {
                 QString msg ="bad DICOM file: " + QString(currentFilename) + " : " + QString(status.text());
-                QVERIFY2(false,msg.toLatin1().data());
+                QVERIFY2(false,msg.toLatin1().data());//EXITCODE_INVALID_INPUT_FILE
             }
             else
             {
                 QString msg ="bad DICOM file: " + QString(currentFilename)  + ": " + QString(status.text()) + ", ignoring file";
-                QVERIFY2(false,msg.toLatin1().data());
+                QVERIFY2(false,msg.toLatin1().data()); //EXITCODE_NO_VALID_INPUT_FILES
             }
             ++numInvalidFiles;
         }
@@ -216,17 +216,8 @@ void DCMTKTest2::testSendingSingleDicomFileToPacs()
     {
         if (opt_multipleAssociations)
         {
-            /* output information on the start of the new association */
-            //               if (dcmsendLogger.isEnabledFor(OFLogger::DEBUG_LOG_LEVEL))
-            //               {
-            //                   OFLOG_DEBUG(dcmsendLogger, OFString(65, '-') << OFendl
-            //                       << "starting association #" << (storageSCU.getAssociationCounter() + 1));
-            //               } else {
-            //                   OFLOG_INFO(dcmsendLogger, "starting association #" << (storageSCU.getAssociationCounter() + 1));
-            //               }
-            qDebug()<< "starting association #" << storageSCU.getAssociationCounter();
+           qDebug()<< "starting association #" << storageSCU.getAssociationCounter();
         }
-        //           OFLOG_INFO(dcmsendLogger, "initializing network ...");
 
         qDebug()<<"initializing network ...";
         /* initialize network */
@@ -234,11 +225,9 @@ void DCMTKTest2::testSendingSingleDicomFileToPacs()
         if (status.bad())
         {
             qDebug()<<"cannot initialize network: " << status.text();
-            //               OFLOG_FATAL(dcmsendLogger, "cannot initialize network: " << status.text());
-            //               cleanup();
-            //return EXITCODE_CANNOT_INITIALIZE_NETWORK;
+            QVERIFY2(false,"EXITCODE_CANNOT_INITIALIZE_NETWORK");
         }
-        //           OFLOG_INFO(dcmsendLogger, "negotiating network association ...");
+
         qDebug()<<"negotiating network association ...";
         /* negotiate network association with peer */
         status = storageSCU.negotiateAssociation();
@@ -253,16 +242,12 @@ void DCMTKTest2::testSendingSingleDicomFileToPacs()
                 const size_t numToBeSent = storageSCU.getNumberOfSOPInstancesToBeSent();
                 if (numToBeSent > 0)
                 {
-                    //                       OFLOG_WARN(dcmsendLogger, "trying to continue with a new association "
-                    //                           << "in order to send the remaining " << numToBeSent << " SOP instances");
                     qDebug()<< "trying to continue with a new association in order to send the remaining " << numToBeSent << " SOP instances";
 
                 }
             } else {
-                //                   OFLOG_FATAL(dcmsendLogger, "cannot negotiate network association: " << status.text());
-                //                   cleanup();
-                //                   return EXITCODE_CANNOT_NEGOTIATE_ASSOCIATION;
-                qDebug()<< "cannot negotiate network association: " << status.text();
+                    qDebug()<< "cannot negotiate network association: " << status.text();
+                    QVERIFY2(false,"EXITCODE_CANNOT_NEGOTIATE_ASSOCIATION");
 
             }
         }
@@ -291,9 +276,7 @@ void DCMTKTest2::testSendingSingleDicomFileToPacs()
                     QVERIFY2(false,"peer aborted the association");
 
                 }
-                //                   cleanup();
-                //                   return EXITCODE_CANNOT_SEND_REQUEST;
-                QVERIFY(false);
+                QVERIFY2(false,"EXITCODE_CANNOT_SEND_REQUEST");
             }
         }
         /* close current network association */
@@ -306,13 +289,9 @@ void DCMTKTest2::testSendingSingleDicomFileToPacs()
     /* if anything went wrong, report it to the logger */
     if (status.bad() && (status != NET_EC_NoPresentationContextsDefined))
     {
-        //OFLOG_ERROR(dcmsendLogger, "cannot add presentation contexts: " << status.text());
-        //cleanup();
-        //return EXITCODE_CANNOT_ADD_PRESENTATION_CONTEXT;
         QString message= QString("cannot add presentation contexts: %1 ").arg( QString::fromUtf8(status.text()));
         QVERIFY2(false,message.toLatin1().data());
-        //QVERIFY2(false,QString("cannot add presentation contexts: %1 ").arg( QString::fromUtf8(status.text())));
-    }
+     }
 
     /* create a detailed report on the transfer of instances ... */
     if ((opt_reportFilename != NULL) && (strlen(opt_reportFilename) > 0))
@@ -327,18 +306,6 @@ void DCMTKTest2::testSendingSingleDicomFileToPacs()
         }
     }
 
-
-    /* output some status information on the overall sending process */
-    //       if (dcmsendLogger.isEnabledFor(OFLogger::INFO_LOG_LEVEL))
-    //       {
-    //           OFString summaryText;
-    //           storageSCU.getStatusSummary(summaryText);
-    //           OFLOG_INFO(dcmsendLogger, OFendl << summaryText);
-    //       }
-
-    /* make sure that everything is cleaned up properly */
-    //       cleanup();
-    //       return EXITCODE_NO_ERROR;
 }
 
 void DCMTKTest2::testSendingDirectoryContents()
@@ -408,7 +375,7 @@ void DCMTKTest2::testSendingDirectoryContents()
     /* check whether there are any input files at all */
     if (inputFiles.empty())
     {
-        QVERIFY2(false, "no input files to be processed");
+        QVERIFY2(false, "EXITCODE_NO_INPUT_FILES");
     }
 
     DcmStorageSCU storageSCU;
