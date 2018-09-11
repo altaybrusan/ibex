@@ -146,7 +146,7 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BodyPart bodyPart, bool isS
         qDebug()<<"---------------------------";
         foreach (auto item, _selectedBodyPartList) {
 
-            qDebug()<<"Th selected bodypart: "<<item;
+            qDebug()<<"The selected bodypart: "<<item;
         }
       //qDebug()<<"Number of elements: "<< _selectedBodyPartList.count();
     }

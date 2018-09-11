@@ -113,10 +113,14 @@ Makefile: RS232ConnectorTest.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmak
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri \
@@ -168,6 +172,10 @@ Makefile: RS232ConnectorTest.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmak
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri \
@@ -271,10 +279,14 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri:
@@ -326,6 +338,10 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri:

@@ -29,7 +29,9 @@ SUBTARGETS    =  \
 		sub-RS232ConnectorTest \
 		sub-GeneralQtFeaturesTest \
 		sub-IDeviceTest \
-		sub-DCMTKTest
+		sub-DCMTKTest \
+		sub-DCMTKTest2 \
+		sub-DCMTKTest3
 
 
 sub-RS232ConnectorTest-qmake_all:  FORCE
@@ -164,6 +166,72 @@ sub-DCMTKTest-uninstall_subtargets: FORCE
 	@if not exist DCMTKTest\ mkdir DCMTKTest\ & if not exist DCMTKTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest\DCMTKTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+sub-DCMTKTest2-qmake_all:  FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	cd DCMTKTest2\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && $(MAKE) -f Makefile qmake_all
+sub-DCMTKTest2: FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-DCMTKTest2-make_first: FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-DCMTKTest2-all: FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-DCMTKTest2-clean: FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-DCMTKTest2-distclean: FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-DCMTKTest2-install_subtargets: FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-DCMTKTest2-uninstall_subtargets: FORCE
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+sub-DCMTKTest3-qmake_all:  FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	cd DCMTKTest3\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && $(MAKE) -f Makefile qmake_all
+sub-DCMTKTest3: FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-DCMTKTest3-make_first: FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-DCMTKTest3-all: FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-DCMTKTest3-clean: FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-DCMTKTest3-distclean: FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-DCMTKTest3-install_subtargets: FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-DCMTKTest3-uninstall_subtargets: FORCE
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
 
 Makefile: tests.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf \
@@ -203,10 +271,14 @@ Makefile: tests.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri \
@@ -258,6 +330,10 @@ Makefile: tests.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri \
+		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri \
@@ -353,10 +429,14 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri:
@@ -408,6 +488,10 @@ C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri:
+C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri:
 C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri:
@@ -467,15 +551,15 @@ tests.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile tests.pro -spec win32-msvc
 
-qmake_all: sub-RS232ConnectorTest-qmake_all sub-GeneralQtFeaturesTest-qmake_all sub-IDeviceTest-qmake_all sub-DCMTKTest-qmake_all FORCE
+qmake_all: sub-RS232ConnectorTest-qmake_all sub-GeneralQtFeaturesTest-qmake_all sub-IDeviceTest-qmake_all sub-DCMTKTest-qmake_all sub-DCMTKTest2-qmake_all sub-DCMTKTest3-qmake_all FORCE
 
-make_first: sub-RS232ConnectorTest-make_first sub-GeneralQtFeaturesTest-make_first sub-IDeviceTest-make_first sub-DCMTKTest-make_first  FORCE
-all: sub-RS232ConnectorTest-all sub-GeneralQtFeaturesTest-all sub-IDeviceTest-all sub-DCMTKTest-all  FORCE
-clean: sub-RS232ConnectorTest-clean sub-GeneralQtFeaturesTest-clean sub-IDeviceTest-clean sub-DCMTKTest-clean  FORCE
-distclean: sub-RS232ConnectorTest-distclean sub-GeneralQtFeaturesTest-distclean sub-IDeviceTest-distclean sub-DCMTKTest-distclean  FORCE
+make_first: sub-RS232ConnectorTest-make_first sub-GeneralQtFeaturesTest-make_first sub-IDeviceTest-make_first sub-DCMTKTest-make_first sub-DCMTKTest2-make_first sub-DCMTKTest3-make_first  FORCE
+all: sub-RS232ConnectorTest-all sub-GeneralQtFeaturesTest-all sub-IDeviceTest-all sub-DCMTKTest-all sub-DCMTKTest2-all sub-DCMTKTest3-all  FORCE
+clean: sub-RS232ConnectorTest-clean sub-GeneralQtFeaturesTest-clean sub-IDeviceTest-clean sub-DCMTKTest-clean sub-DCMTKTest2-clean sub-DCMTKTest3-clean  FORCE
+distclean: sub-RS232ConnectorTest-distclean sub-GeneralQtFeaturesTest-distclean sub-IDeviceTest-distclean sub-DCMTKTest-distclean sub-DCMTKTest2-distclean sub-DCMTKTest3-distclean  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-RS232ConnectorTest-install_subtargets sub-GeneralQtFeaturesTest-install_subtargets sub-IDeviceTest-install_subtargets sub-DCMTKTest-install_subtargets FORCE
-uninstall_subtargets: sub-RS232ConnectorTest-uninstall_subtargets sub-GeneralQtFeaturesTest-uninstall_subtargets sub-IDeviceTest-uninstall_subtargets sub-DCMTKTest-uninstall_subtargets FORCE
+install_subtargets: sub-RS232ConnectorTest-install_subtargets sub-GeneralQtFeaturesTest-install_subtargets sub-IDeviceTest-install_subtargets sub-DCMTKTest-install_subtargets sub-DCMTKTest2-install_subtargets sub-DCMTKTest3-install_subtargets FORCE
+uninstall_subtargets: sub-RS232ConnectorTest-uninstall_subtargets sub-GeneralQtFeaturesTest-uninstall_subtargets sub-IDeviceTest-uninstall_subtargets sub-DCMTKTest-uninstall_subtargets sub-DCMTKTest2-uninstall_subtargets sub-DCMTKTest3-uninstall_subtargets FORCE
 
 sub-RS232ConnectorTest-debug:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -493,7 +577,15 @@ sub-DCMTKTest-debug:
 	@if not exist DCMTKTest\ mkdir DCMTKTest\ & if not exist DCMTKTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest\DCMTKTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-RS232ConnectorTest-debug sub-GeneralQtFeaturesTest-debug sub-IDeviceTest-debug sub-DCMTKTest-debug
+sub-DCMTKTest2-debug:
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+sub-DCMTKTest3-debug:
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+debug: sub-RS232ConnectorTest-debug sub-GeneralQtFeaturesTest-debug sub-IDeviceTest-debug sub-DCMTKTest-debug sub-DCMTKTest2-debug sub-DCMTKTest3-debug
 
 sub-RS232ConnectorTest-release:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -511,7 +603,15 @@ sub-DCMTKTest-release:
 	@if not exist DCMTKTest\ mkdir DCMTKTest\ & if not exist DCMTKTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest\DCMTKTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-RS232ConnectorTest-release sub-GeneralQtFeaturesTest-release sub-IDeviceTest-release sub-DCMTKTest-release
+sub-DCMTKTest2-release:
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+sub-DCMTKTest3-release:
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+release: sub-RS232ConnectorTest-release sub-GeneralQtFeaturesTest-release sub-IDeviceTest-release sub-DCMTKTest-release sub-DCMTKTest2-release sub-DCMTKTest3-release
 
 sub-RS232ConnectorTest-check:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -529,7 +629,15 @@ sub-DCMTKTest-check:
 	@if not exist DCMTKTest\ mkdir DCMTKTest\ & if not exist DCMTKTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest\DCMTKTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-RS232ConnectorTest-check sub-GeneralQtFeaturesTest-check sub-IDeviceTest-check sub-DCMTKTest-check
+sub-DCMTKTest2-check:
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+sub-DCMTKTest3-check:
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+check: sub-RS232ConnectorTest-check sub-GeneralQtFeaturesTest-check sub-IDeviceTest-check sub-DCMTKTest-check sub-DCMTKTest2-check sub-DCMTKTest3-check
 
 sub-RS232ConnectorTest-benchmark:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -547,7 +655,15 @@ sub-DCMTKTest-benchmark:
 	@if not exist DCMTKTest\ mkdir DCMTKTest\ & if not exist DCMTKTest\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest\DCMTKTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-RS232ConnectorTest-benchmark sub-GeneralQtFeaturesTest-benchmark sub-IDeviceTest-benchmark sub-DCMTKTest-benchmark
+sub-DCMTKTest2-benchmark:
+	@if not exist DCMTKTest2\ mkdir DCMTKTest2\ & if not exist DCMTKTest2\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest2\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest2\DCMTKTest2.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+sub-DCMTKTest3-benchmark:
+	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-RS232ConnectorTest-benchmark sub-GeneralQtFeaturesTest-benchmark sub-IDeviceTest-benchmark sub-DCMTKTest-benchmark sub-DCMTKTest2-benchmark sub-DCMTKTest3-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

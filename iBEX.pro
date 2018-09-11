@@ -5,8 +5,8 @@ CONFIG += ordered
 SUBDIRS += \
     launch \
     plugins \
-    #tests
     tests
+
 
 
 
