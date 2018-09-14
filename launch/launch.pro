@@ -81,7 +81,8 @@ SOURCES += \
     pacsnodesettingsdialog.cpp \
     loadstudydialog.cpp \
     rs232connector.cpp \
-    modbusconnector.cpp
+    modbusconnector.cpp \
+    worklistdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -96,7 +97,8 @@ HEADERS += \
     ../common/include/isettingsparser.h \
     ../common/include/iconnector.h \
     rs232connector.h \
-    modbusconnector.h
+    modbusconnector.h \
+    worklistdialog.h
 
 FORMS += \
         mainwindow.ui \
@@ -104,7 +106,8 @@ FORMS += \
     exposuredialog.ui \
     imageviewer.ui \
     pacsnodesettingsdialog.ui \
-    loadstudydialog.ui
+    loadstudydialog.ui \
+    worklistdialog.ui
 
 
 RESOURCES += \
