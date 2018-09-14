@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 
-QT       += core gui sql serialbus serialport
+QT       += core gui sql serialbus serialport xml
 include(../commonconfig.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+class NewPatientDialog;
+
 namespace Ui {
     class MainWindow;
 }
@@ -24,8 +26,13 @@ private slots:
 
     void on_action_Load_Study_triggered();
 
+    void on_newPatient_accepted();
+
+
+
 private:
     Ui::MainWindow *ui;
+    NewPatientDialog* _dialog;
 };
 
 #endif // MAINWINDOW_H

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_NewPatientDialog_t {
-    QByteArrayData data[6];
-    char stringdata0[77];
+    QByteArrayData data[8];
+    char stringdata0[113];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,11 +36,14 @@ QT_MOC_LITERAL(1, 17, 23), // "OnBodyPartStatusChanged"
 QT_MOC_LITERAL(2, 41, 0), // ""
 QT_MOC_LITERAL(3, 42, 14), // "iBEX::BodyPart"
 QT_MOC_LITERAL(4, 57, 8), // "bodyPart"
-QT_MOC_LITERAL(5, 66, 10) // "isSelected"
+QT_MOC_LITERAL(5, 66, 10), // "isSelected"
+QT_MOC_LITERAL(6, 77, 13), // "ActivateOkBtn"
+QT_MOC_LITERAL(7, 91, 21) // "on_buttonBox_accepted"
 
     },
     "NewPatientDialog\0OnBodyPartStatusChanged\0"
-    "\0iBEX::BodyPart\0bodyPart\0isSelected"
+    "\0iBEX::BodyPart\0bodyPart\0isSelected\0"
+    "ActivateOkBtn\0on_buttonBox_accepted"
 };
 #undef QT_MOC_LITERAL
 
@@ -50,7 +53,7 @@ static const uint qt_meta_data_NewPatientDialog[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -58,10 +61,14 @@ static const uint qt_meta_data_NewPatientDialog[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    2,   19,    2, 0x08 /* Private */,
+       1,    2,   29,    2, 0x08 /* Private */,
+       6,    0,   34,    2, 0x08 /* Private */,
+       7,    0,   35,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3, QMetaType::Bool,    4,    5,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -73,6 +80,8 @@ void NewPatientDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->OnBodyPartStatusChanged((*reinterpret_cast< iBEX::BodyPart(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+        case 1: _t->ActivateOkBtn(); break;
+        case 2: _t->on_buttonBox_accepted(); break;
         default: ;
         }
     }
@@ -103,13 +112,13 @@ int NewPatientDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }

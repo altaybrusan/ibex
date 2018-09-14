@@ -11,13 +11,13 @@ MAKEFILE      = Makefile.Release
 
 CC            = cl
 CXX           = cl
-DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DTEST_IMAGES_DIR=\"C:/Users/Altay/Documents/Qt/Projects/ibex/launch/test_images/\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_SERIALBUS_LIB -DQT_SERIALPORT_LIB -DQT_CORE_LIB -DNDEBUG
+DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DTEST_IMAGES_DIR=\"C:/Users/Altay/Documents/Qt/Projects/ibex/launch/test_images/\" -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_SERIALBUS_LIB -DQT_SERIALPORT_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -O2 -MD -W3 -w44456 -w44457 -w44458 $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc $(DEFINES)
-INCPATH       = -I. -I..\3rd-Party\ctk\include\ctk-0.1 -I..\3rd-Party\ctk\include -I..\common\include -IC:\VTK\include\vtk-9.0 -IC:\Qt\5.9.4\msvc2015_64\include -IC:\Qt\5.9.4\msvc2015_64\include\QtWidgets -IC:\Qt\5.9.4\msvc2015_64\include\QtGui -IC:\Qt\5.9.4\msvc2015_64\include\QtANGLE -IC:\Qt\5.9.4\msvc2015_64\include\QtSql -IC:\Qt\5.9.4\msvc2015_64\include\QtSerialBus -IC:\Qt\5.9.4\msvc2015_64\include\QtSerialPort -IC:\Qt\5.9.4\msvc2015_64\include\QtCore -I..\build\release\.moc -I..\build\release\.ui -IC:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc 
+INCPATH       = -I. -I..\3rd-Party\ctk\include\ctk-0.1 -I..\3rd-Party\ctk\include -I..\common\include -IC:\VTK\include\vtk-9.0 -IC:\Qt\5.9.4\msvc2015_64\include -IC:\Qt\5.9.4\msvc2015_64\include\QtWidgets -IC:\Qt\5.9.4\msvc2015_64\include\QtGui -IC:\Qt\5.9.4\msvc2015_64\include\QtANGLE -IC:\Qt\5.9.4\msvc2015_64\include\QtSql -IC:\Qt\5.9.4\msvc2015_64\include\QtSerialBus -IC:\Qt\5.9.4\msvc2015_64\include\QtSerialPort -IC:\Qt\5.9.4\msvc2015_64\include\QtXml -IC:\Qt\5.9.4\msvc2015_64\include\QtCore -I..\build\release\.moc -I..\build\release\.ui -IC:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /INCREMENTAL:NO /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /VERSION:0.0
-LIBS          = /LIBPATH:C:\Qt\5.9.4\msvc2015_64\lib C:\Qt\5.9.4\msvc2015_64\lib\qtmain.lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\utils\postgresql\pgsql\lib shell32.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgetsPlugins.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgetsPlugins.lib C:\VTK\lib\QVTKWidgetPlugin.lib C:\VTK\lib\vtkInteractionStyle-9.0.lib C:\VTK\lib\vtkCommonCore-9.0.lib C:\VTK\lib\vtkRenderingOpenGL2-9.0.lib C:\VTK\lib\vtkViewsCore-9.0.lib C:\VTK\lib\vtkGUISupportQt-9.0.lib C:\VTK\lib\vtkRenderingCore-9.0.lib C:\VTK\lib\vtkInteractionImage-9.0.lib C:\VTK\lib\vtkRenderingImage-9.0.lib C:\VTK\lib\vtkIOImage-9.0.lib C:\VTK\lib\vtkCommonExecutionModel-9.0.lib C:\VTK\lib\vtkInteractionWidgets-9.0.lib C:\VTK\lib\vtkRenderingAnnotation-9.0.lib C:\VTK\lib\vtkCommonDataModel-9.0.lib C:\VTK\lib\vtkImagingCore-9.0.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.lib C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\.obj\laucnh_resource.res 
+LIBS          = /LIBPATH:C:\Qt\5.9.4\msvc2015_64\lib C:\Qt\5.9.4\msvc2015_64\lib\qtmain.lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\utils\postgresql\pgsql\lib shell32.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgetsPlugins.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgetsPlugins.lib C:\VTK\lib\QVTKWidgetPlugin.lib C:\VTK\lib\vtkInteractionStyle-9.0.lib C:\VTK\lib\vtkCommonCore-9.0.lib C:\VTK\lib\vtkRenderingOpenGL2-9.0.lib C:\VTK\lib\vtkViewsCore-9.0.lib C:\VTK\lib\vtkGUISupportQt-9.0.lib C:\VTK\lib\vtkRenderingCore-9.0.lib C:\VTK\lib\vtkInteractionImage-9.0.lib C:\VTK\lib\vtkRenderingImage-9.0.lib C:\VTK\lib\vtkIOImage-9.0.lib C:\VTK\lib\vtkCommonExecutionModel-9.0.lib C:\VTK\lib\vtkInteractionWidgets-9.0.lib C:\VTK\lib\vtkRenderingAnnotation-9.0.lib C:\VTK\lib\vtkCommonDataModel-9.0.lib C:\VTK\lib\vtkImagingCore-9.0.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xml.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.lib C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\.obj\laucnh_resource.res 
 QMAKE         = C:\Qt\5.9.4\msvc2015_64\bin\qmake.exe
 IDC           = idc
 IDL           = midl /NOLOGO
@@ -218,7 +218,7 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) laucnh.zip $(SOURCES) $(DIST) launch.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf launch.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmain.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp mainwindow.h newpatientdialog.h bodypart.h bodypartselectionsquare.h exposuredialog.h imageviewer.h pacsnodesettingsdialog.h loadstudydialog.h ..\common\include\idevice.h ..\common\include\isettingsparser.h ..\common\include\iconnector.h rs232connector.h modbusconnector.h main.cpp mainwindow.cpp newpatientdialog.cpp bodypartselectionsquare.cpp exposuredialog.cpp imageviewer.cpp pacsnodesettingsdialog.cpp loadstudydialog.cpp rs232connector.cpp modbusconnector.cpp mainwindow.ui newpatientdialog.ui exposuredialog.ui imageviewer.ui pacsnodesettingsdialog.ui loadstudydialog.ui    
+	$(ZIP) laucnh.zip $(SOURCES) $(DIST) launch.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf launch.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmain.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xml.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp mainwindow.h newpatientdialog.h bodypart.h bodypartselectionsquare.h exposuredialog.h imageviewer.h pacsnodesettingsdialog.h loadstudydialog.h ..\common\include\idevice.h ..\common\include\isettingsparser.h ..\common\include\iconnector.h rs232connector.h modbusconnector.h main.cpp mainwindow.cpp newpatientdialog.cpp bodypartselectionsquare.cpp exposuredialog.cpp imageviewer.cpp pacsnodesettingsdialog.cpp loadstudydialog.cpp rs232connector.cpp modbusconnector.cpp mainwindow.ui newpatientdialog.ui exposuredialog.ui imageviewer.ui pacsnodesettingsdialog.ui loadstudydialog.ui    
 
 clean: compiler_clean 
 	-$(DEL_FILE) ..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj ..\build\release\.obj\moc_modbusconnector.obj
@@ -245,6 +245,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) ..\build\release\.rcc\qrc_resources.cpp
 ..\build\release\.rcc\qrc_resources.cpp: resources.qrc \
 		C:\Qt\5.9.4\msvc2015_64\bin\rcc.exe \
+		configs\_pacs.xml \
 		images\_48_filters.png \
 		images\_48_pacs_server.png \
 		images\_72_radiation_sign.png \
@@ -385,7 +386,7 @@ compiler_moc_header_clean:
 		mainwindow.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" mainwindow.h -o ..\build\release\.moc\moc_mainwindow.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" mainwindow.h -o ..\build\release\.moc\moc_mainwindow.cpp
 
 ..\build\release\.moc\moc_newpatientdialog.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -711,6 +712,7 @@ compiler_moc_header_clean:
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsEllipseItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		bodypartselectionsquare.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPainter \
@@ -719,7 +721,7 @@ compiler_moc_header_clean:
 		newpatientdialog.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" newpatientdialog.h -o ..\build\release\.moc\moc_newpatientdialog.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" newpatientdialog.h -o ..\build\release\.moc\moc_newpatientdialog.cpp
 
 ..\build\release\.moc\moc_bodypart.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
@@ -787,7 +789,7 @@ compiler_moc_header_clean:
 		bodypart.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypart.h -o ..\build\release\.moc\moc_bodypart.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypart.h -o ..\build\release\.moc\moc_bodypart.cpp
 
 ..\build\release\.moc\moc_bodypartselectionsquare.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
@@ -889,7 +891,7 @@ compiler_moc_header_clean:
 		bodypartselectionsquare.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypartselectionsquare.h -o ..\build\release\.moc\moc_bodypartselectionsquare.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" bodypartselectionsquare.h -o ..\build\release\.moc\moc_bodypartselectionsquare.cpp
 
 ..\build\release\.moc\moc_exposuredialog.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -995,7 +997,7 @@ compiler_moc_header_clean:
 		exposuredialog.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" exposuredialog.h -o ..\build\release\.moc\moc_exposuredialog.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" exposuredialog.h -o ..\build\release\.moc\moc_exposuredialog.cpp
 
 ..\build\release\.moc\moc_imageviewer.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmainwindow.h \
@@ -1166,7 +1168,7 @@ compiler_moc_header_clean:
 		imageviewer.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" imageviewer.h -o ..\build\release\.moc\moc_imageviewer.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" imageviewer.h -o ..\build\release\.moc\moc_imageviewer.cpp
 
 ..\build\release\.moc\moc_pacsnodesettingsdialog.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -1272,7 +1274,7 @@ compiler_moc_header_clean:
 		pacsnodesettingsdialog.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" pacsnodesettingsdialog.h -o ..\build\release\.moc\moc_pacsnodesettingsdialog.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" pacsnodesettingsdialog.h -o ..\build\release\.moc\moc_pacsnodesettingsdialog.cpp
 
 ..\build\release\.moc\moc_loadstudydialog.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -1378,7 +1380,7 @@ compiler_moc_header_clean:
 		loadstudydialog.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" loadstudydialog.h -o ..\build\release\.moc\moc_loadstudydialog.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" loadstudydialog.h -o ..\build\release\.moc\moc_loadstudydialog.cpp
 
 ..\build\release\.moc\moc_rs232connector.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
@@ -1447,7 +1449,7 @@ compiler_moc_header_clean:
 		rs232connector.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" rs232connector.h -o ..\build\release\.moc\moc_rs232connector.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" rs232connector.h -o ..\build\release\.moc\moc_rs232connector.cpp
 
 ..\build\release\.moc\moc_modbusconnector.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
@@ -1525,7 +1527,7 @@ compiler_moc_header_clean:
 		modbusconnector.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
-	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" modbusconnector.h -o ..\build\release\.moc\moc_modbusconnector.cpp
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" modbusconnector.h -o ..\build\release\.moc\moc_modbusconnector.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -2060,6 +2062,52 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
 		..\build\release\.ui\ui_mainwindow.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMenu \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSpacerItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QToolBar \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtoolbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
 		newpatientdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -2067,8 +2115,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCoreDepends \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractanimation.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractproxymodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractstate.h \
@@ -2084,7 +2130,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcollator.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineoption.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineparser.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcryptographichash.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatetime.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdeadlinetimer.h \
@@ -2111,7 +2156,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhistorystate.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qidentityproxymodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qisenum.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonarray.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsondocument.h \
@@ -2140,7 +2184,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariantanimation.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qqueue.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qresource.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsavefile.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedvaluerollback.h \
@@ -2207,8 +2250,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qgenericmatrix.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qgenericplugin.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qgenericpluginfactory.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qiconengine.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qiconengineplugin.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimageiohandler.h \
@@ -2279,12 +2320,12 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextdocumentwriter.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextlist.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtexttable.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiversion.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsScene \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsEllipseItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		bodypartselectionsquare.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPainter \
@@ -2621,13 +2662,61 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsEllipseItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		bodypartselectionsquare.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPainter \
 		bodypart.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaEnum \
 		..\build\release\.ui\ui_newpatientdialog.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QRegExpValidator
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QComboBox \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qcombobox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDateEdit \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdatetimeedit.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialogButtonBox \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialogbuttonbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLabel \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLineEdit \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSpacerItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QRegExpValidator \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractbutton.h
 
 ..\build\release\.obj\bodypartselectionsquare.obj: bodypartselectionsquare.cpp bodypartselectionsquare.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
@@ -2859,18 +2948,71 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
 		..\build\release\.ui\ui_exposuredialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QScrollArea \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSpacerItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QTableView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtableview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QTextBrowser \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtextbrowser.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextdocument.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextcursor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkCollapsibleGroupBox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGroupBox \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgroupbox.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
 		imageviewer.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmainwindow.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkQImageView.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QImage \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
 		C:\VTK\include\vtk-9.0\vtkRenderWindowInteractor.h \
 		C:\VTK\include\vtk-9.0\vtkRenderingCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkAutoInit.h \
@@ -2922,7 +3064,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		..\3rd-Party\ctk\include\ctk-0.1\ctkThumbnailListWidget.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkThumbnailLabel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QModelIndex \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\VTK\include\vtk-9.0\vtkImageFlip.h \
 		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
@@ -2939,8 +3080,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QCoreApplication \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
 		../common/include/idevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
@@ -3117,6 +3256,57 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		..\build\release\.ui\ui_imageviewer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSpacerItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QToolBar \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtoolbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QVBoxLayout \
+		C:\VTK\include\vtk-9.0\QVTKWidget.h \
+		C:\VTK\include\vtk-9.0\vtkGUISupportQtModule.h \
+		C:\VTK\include\vtk-9.0\vtkRenderingOpenGL2Module.h \
+		C:\VTK\include\vtk-9.0\vtkRenderingOpenGLConfigure.h \
+		C:\VTK\include\vtk-9.0\QVTKInteractor.h \
+		C:\VTK\include\vtk-9.0\QVTKWin32Header.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\VTK\include\vtk-9.0\vtkTDxConfigure.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QTimer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasictimer.h \
+		C:\VTK\include\vtk-9.0\vtkToolkits.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
@@ -3125,14 +3315,12 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		..\3rd-Party\ctk\include\ctk-0.1\ctkCrosshairLabel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLabel \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPen \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKWidgetsExport.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkCommandLineParser.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QStringList \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkCoreExport.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKSliceView.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKAbstractView.h \
@@ -3150,18 +3338,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtANGLE\GLES2\gl2platform.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qopengles2ext.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qopenglext.h \
-		C:\VTK\include\vtk-9.0\QVTKInteractor.h \
-		C:\VTK\include\vtk-9.0\vtkGUISupportQtModule.h \
-		C:\VTK\include\vtk-9.0\vtkRenderingOpenGL2Module.h \
-		C:\VTK\include\vtk-9.0\vtkRenderingOpenGLConfigure.h \
-		C:\VTK\include\vtk-9.0\QVTKWin32Header.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
-		C:\VTK\include\vtk-9.0\vtkTDxConfigure.h \
-		C:\VTK\include\vtk-9.0\QVTKWidget.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QTimer \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimer.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasictimer.h \
-		C:\VTK\include\vtk-9.0\vtkToolkits.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObject.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObjectEventsObserver.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkSingleton.h \
@@ -3319,6 +3495,46 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
 		..\build\release\.ui\ui_pacsnodesettingsdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialogButtonBox \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialogbuttonbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkDICOMServerNodeWidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
@@ -3327,7 +3543,124 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		..\3rd-Party\ctk\include\ctk-0.1\ctkDICOMWidgetsExport.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QtXml \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QtXmlDepends \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCore \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCoreDepends \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracttransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydataops.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydatapointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasictimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbitarray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbuffer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraymatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcollator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineparser.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcryptographichash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdeadlinetimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qelapsedtimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdiriterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeasingcurve.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qendian.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventtransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qexception.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfactoryinterface.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileselector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QStringList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfilesystemwatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfinalstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuture.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfutureinterface.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrunnable.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qresultstore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuturesynchronizer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuturewatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhistorystate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qidentityproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qisenum.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonarray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibrary.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibraryinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversionnumber.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlinkedlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlockfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qloggingcategory.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmessageauthenticationcode.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetaobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimedata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimedatabase.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimetype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectcleanuphandler.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qoperatingsystemversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qparallelanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpauseanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qplugin.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpluginloader.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocess.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpropertyanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariantanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qqueue.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qresource.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsavefile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedvaluerollback.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsemaphore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsequentialanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedmemory.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsignalmapper.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsignaltransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsocketnotifier.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstack.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstandardpaths.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstatemachine.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstorageinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlistmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemsemaphore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtemporarydir.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QScopedPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtemporaryfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextboundaryfinder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextcodec.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthread.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthreadpool.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthreadstorage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimeline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimezone.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtranslator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypetraits.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\quuid.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qwaitcondition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qwineventnotifier.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qxmlstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcoreversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxmlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxml-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qdom.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qxml.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxmlversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug
 
 ..\build\release\.obj\loadstudydialog.obj: loadstudydialog.cpp loadstudydialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
@@ -3432,6 +3765,38 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
 		..\build\release\.ui\ui_loadstudydialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkDICOMImportWidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkDICOMWidgetsExport.h \

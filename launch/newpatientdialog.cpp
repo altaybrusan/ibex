@@ -1,6 +1,7 @@
 #include "newpatientdialog.h"
 #include "ui_newpatientdialog.h"
 #include <QRegExpValidator>
+#include <QPushButton>
 
 // no view for each body part
 NewPatientDialog::NewPatientDialog(QWidget *parent) :
@@ -17,6 +18,10 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     ui->patientIdLineEdit->setValidator(validator);
     ui->lastNameLineEdit->setValidator(validator);
 
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( false );
+    connect(ui->lastNameLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
+    connect(ui->patientIdLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
+    connect(ui->accessionNumberLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
 
     scene = new QGraphicsScene(this);
     QImage sourceImage;
@@ -119,6 +124,17 @@ NewPatientDialog::~NewPatientDialog()
     delete ui;
 }
 
+void NewPatientDialog::ActivateOkBtn()
+{
+    if(
+        !ui->accessionNumberLineEdit->text().isEmpty() &&
+        !ui->lastNameLineEdit->text().isEmpty() &&
+        !ui->patientIdLineEdit->text().isEmpty())
+        ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( true );
+    else
+        ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( false );
+
+}
 // when a click on a body part scene happens this SLOT is called multiple times.
 void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BodyPart bodyPart, bool isSelected)
 {
@@ -155,3 +171,39 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BodyPart bodyPart, bool isS
 
 
 
+
+void NewPatientDialog::on_buttonBox_accepted()
+{
+    demographics[DemographyKeys::LastName]=ui->lastNameLineEdit->text();
+    demographics[DemographyKeys::FirstName]=ui->firstNameLineEdit->text();
+    demographics[DemographyKeys::MiddleName]=ui->middleNameLineEdit->text();
+    demographics[DemographyKeys::PatientID]=ui->patientIdLineEdit->text();
+    demographics[DemographyKeys::DOB]=ui->dateEdit->date().toString(Qt::ISODate);
+
+    switch(ui->genderComboBox->currentIndex())
+    {
+    case 0:
+        demographics[DemographyKeys::Gender] = "M";
+        break;
+    case 1:
+        demographics[DemographyKeys::Gender] = "F";
+        break;
+    case 2:
+        demographics[DemographyKeys::Gender] = "U";
+        break;
+    }
+
+    demographics[DemographyKeys::ReferrinPhysician]= ui->referringPhysicianLineEdit->text();
+    demographics[DemographyKeys::AdmissionNumber]= ui->admissionNumberLineEdit->text();
+    demographics[DemographyKeys::AccessionNumber]= ui->accessionNumberLineEdit->text();
+
+    qDebug()<<demographics[DemographyKeys::LastName];
+    qDebug()<<demographics[DemographyKeys::FirstName];
+    qDebug()<<demographics[DemographyKeys::MiddleName];
+    qDebug()<<demographics[DemographyKeys::PatientID];
+    qDebug()<<demographics[DemographyKeys::DOB];
+    qDebug()<<demographics[DemographyKeys::Gender];
+    qDebug()<<demographics[DemographyKeys::ReferrinPhysician];
+    qDebug()<<demographics[DemographyKeys::AdmissionNumber];
+    qDebug()<<demographics[DemographyKeys::AccessionNumber];
+}

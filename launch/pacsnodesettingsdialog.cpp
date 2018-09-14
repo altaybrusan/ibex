@@ -2,6 +2,10 @@
 #include "ui_pacsnodesettingsdialog.h"
 #include "ctkDICOMServerNodeWidget.h"
 #include "QVariant"
+#include <QFile>
+//#include <QFileInfo>
+#include <QtXml>
+#include <QDebug>
 
 PacsNodeSettingsDialog::PacsNodeSettingsDialog(QWidget *parent) :
     QDialog(parent),
@@ -9,6 +13,18 @@ PacsNodeSettingsDialog::PacsNodeSettingsDialog(QWidget *parent) :
     ui(new Ui::PacsNodeSettingsDialog)
 {
     ui->setupUi(this);
+    QFile settingFile(":/configs/configs/_pacs.xml");
+    //QFileInfo fileInfo(":/configs/configs/_pacs.xml");
+
+    if(!settingFile.open(QIODevice::Text))
+    {
+        qDebug()<<"Can not open PACS Server configuration file";
+    }
+    else
+    {
+         settingFile.close();
+    }
+
 
 //    QMap<QString, QVariant> defaultServerNode;
 //    defaultServerNode["Name"] = QString("ExampleHost2");
