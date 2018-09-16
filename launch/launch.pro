@@ -82,7 +82,7 @@ SOURCES += \
     loadstudydialog.cpp \
     rs232connector.cpp \
     modbusconnector.cpp \
-    worklistdialog.cpp
+    worklistserversettingsdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -98,7 +98,7 @@ HEADERS += \
     ../common/include/iconnector.h \
     rs232connector.h \
     modbusconnector.h \
-    worklistdialog.h
+    worklistserversettingsdialog.h
 
 FORMS += \
         mainwindow.ui \
@@ -107,7 +107,7 @@ FORMS += \
     imageviewer.ui \
     pacsnodesettingsdialog.ui \
     loadstudydialog.ui \
-    worklistdialog.ui
+    worklistserversettingsdialog.ui
 
 
 RESOURCES += \
@@ -115,3 +115,7 @@ RESOURCES += \
 
 DISTFILES += \
     notes
+
+win32{
+QMAKE_POST_LINK += $(COPY_DIR) $$system_path($$_PRO_FILE_PWD_/configs) $$system_path($$DESTDIR/configs)
+}

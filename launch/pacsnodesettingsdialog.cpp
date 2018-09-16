@@ -32,7 +32,7 @@ PacsNodeSettingsDialog::PacsNodeSettingsDialog(QWidget *parent) :
     ui->setupUi(this);
     QApplication::setOverrideCursor(Qt::WaitCursor);
 
-    QFile settingFile(":/configs/configs/_pacs.xml");
+    QFile settingFile("./configs/_pacs.xml");
 
     if(!settingFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {

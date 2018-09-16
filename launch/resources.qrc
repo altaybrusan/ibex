@@ -24,7 +24,4 @@
         <file>images/_48_invert_selection.png</file>
         <file>images/_72_radiation_sign.png</file>
     </qresource>
-    <qresource prefix="/configs">
-        <file>configs/_pacs.xml</file>
-    </qresource>
 </RCC>
