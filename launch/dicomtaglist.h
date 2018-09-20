@@ -1,0 +1,4 @@
+#ifndef DICOMTAGLIST_H
+#define DICOMTAGLIST_H
+
+#endif // DICOMTAGLIST_H
