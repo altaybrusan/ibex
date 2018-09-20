@@ -32,6 +32,8 @@ private slots:
 
     void on_action_Update_Worklist_Settings_triggered();
 
+    void on_action_Open_Study_triggered();
+
 private:
     Ui::MainWindow *ui;
     NewPatientDialog* _dialog;

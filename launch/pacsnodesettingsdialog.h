@@ -21,6 +21,8 @@ public:
 
     ~PacsNodeSettingsDialog();
 
+private slots:
+
 private:
     Ui::PacsNodeSettingsDialog *ui;
     ctkDICOMServerNodeWidget* _dicomservernodeWidget;

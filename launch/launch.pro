@@ -5,10 +5,11 @@
 #-------------------------------------------------
 
 
-QT       += core gui sql serialbus serialport xml
+QT       += core gui sql serialbus serialport xml network
 include(../commonconfig.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+DEFINES -= UNICODE
+DEFINES += _REENTRANT
 win32:
 {
 VERSION = 0.0.0.1
@@ -44,8 +45,11 @@ LIBS += $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
         $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgetsPlugins.lib \
         $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKWidgets.lib \
         $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKWidgetsPlugins.lib\
-
-
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/dcmtls.lib\
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/dcmnet.lib\
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/dcmdata.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/oflog.lib \
+        $$PWD/../3rd-Party/ctk/lib/ctk-0.1/ofstd.lib \
 
 LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
         $$(VTK_DIR)/lib/vtkInteractionStyle-9.0.lib\
@@ -63,6 +67,22 @@ LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
         $$(VTK_DIR)/lib/vtkCommonDataModel-9.0.lib\
         $$(VTK_DIR)/lib/vtkImagingCore-9.0.lib
 
+win32{
+
+LIBS+= WS2_32.Lib \
+       netapi32.lib \
+       wsock32.lib \
+       kernel32.lib \
+       user32.lib \
+       gdi32.lib \
+       winspool.lib \
+       shell32.lib \
+       ole32.lib \
+       oleaut32.lib \
+       uuid.lib \
+       comdlg32.lib \
+       advapi32.lib
+}
 
 INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
                ../3rd-Party/ctk/include \
@@ -82,7 +102,9 @@ SOURCES += \
     loadstudydialog.cpp \
     rs232connector.cpp \
     modbusconnector.cpp \
-    worklistserversettingsdialog.cpp
+    worklistserversettingsdialog.cpp \
+    worklistdialog.cpp \
+    dbmanager.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -98,7 +120,10 @@ HEADERS += \
     ../common/include/iconnector.h \
     rs232connector.h \
     modbusconnector.h \
-    worklistserversettingsdialog.h
+    worklistserversettingsdialog.h \
+    worklistdialog.h \
+    dbmanager.h \
+    dicomtaglist.h
 
 FORMS += \
         mainwindow.ui \
@@ -107,7 +132,8 @@ FORMS += \
     imageviewer.ui \
     pacsnodesettingsdialog.ui \
     loadstudydialog.ui \
-    worklistserversettingsdialog.ui
+    worklistserversettingsdialog.ui \
+    worklistdialog.ui
 
 
 RESOURCES += \
@@ -118,4 +144,11 @@ DISTFILES += \
 
 win32{
 QMAKE_POST_LINK += $(COPY_DIR) $$system_path($$_PRO_FILE_PWD_/configs) $$system_path($$DESTDIR/configs)
+QMAKE_PRE_LINK += $(COPY_DIR) $$system_path($$_PRO_FILE_PWD_/database) $$system_path($$DESTDIR/database)
 }
+
+
+
+
+
+

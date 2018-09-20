@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <nodes>
- <Server Port="108" AETitle="DEVTK" IP="192.168.0.2"/>
+  <Server IP="192.168.0.1" Port="107" AETitle="DEVTK"/>
 </nodes>

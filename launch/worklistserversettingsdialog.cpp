@@ -92,7 +92,12 @@ void WorklistServerSettingsDialog::on_buttonBox_accepted()
         QByteArray xml = document.toByteArray();
         settingFile.write(xml);
         settingFile.close();
-
+        this->close();
     }
 
+}
+
+void WorklistServerSettingsDialog::on_buttonBox_rejected()
+{
+    this->close();
 }

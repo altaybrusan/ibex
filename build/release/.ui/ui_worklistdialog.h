@@ -17,7 +17,8 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
@@ -25,48 +26,52 @@ class Ui_WorkListDialog
 {
 public:
     QHBoxLayout *horizontalLayout;
-    QFrame *frame;
+    QFrame *leftFrame;
     QHBoxLayout *horizontalLayout_2;
-    QListWidget *listWidget;
-    QFrame *frame_2;
+    QTableView *tableView;
+    QFrame *rightFrame;
+    QPushButton *reloadBtn;
 
     void setupUi(QDialog *WorkListDialog)
     {
         if (WorkListDialog->objectName().isEmpty())
             WorkListDialog->setObjectName(QStringLiteral("WorkListDialog"));
-        WorkListDialog->resize(400, 300);
+        WorkListDialog->resize(623, 332);
         horizontalLayout = new QHBoxLayout(WorkListDialog);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        frame = new QFrame(WorkListDialog);
-        frame->setObjectName(QStringLiteral("frame"));
+        leftFrame = new QFrame(WorkListDialog);
+        leftFrame->setObjectName(QStringLiteral("leftFrame"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(3);
+        sizePolicy.setHorizontalStretch(4);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy);
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        horizontalLayout_2 = new QHBoxLayout(frame);
+        sizePolicy.setHeightForWidth(leftFrame->sizePolicy().hasHeightForWidth());
+        leftFrame->setSizePolicy(sizePolicy);
+        leftFrame->setFrameShape(QFrame::StyledPanel);
+        leftFrame->setFrameShadow(QFrame::Raised);
+        horizontalLayout_2 = new QHBoxLayout(leftFrame);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        listWidget = new QListWidget(frame);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
+        tableView = new QTableView(leftFrame);
+        tableView->setObjectName(QStringLiteral("tableView"));
 
-        horizontalLayout_2->addWidget(listWidget);
+        horizontalLayout_2->addWidget(tableView);
 
 
-        horizontalLayout->addWidget(frame);
+        horizontalLayout->addWidget(leftFrame);
 
-        frame_2 = new QFrame(WorkListDialog);
-        frame_2->setObjectName(QStringLiteral("frame_2"));
+        rightFrame = new QFrame(WorkListDialog);
+        rightFrame->setObjectName(QStringLiteral("rightFrame"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(1);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
-        frame_2->setSizePolicy(sizePolicy1);
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
+        sizePolicy1.setHeightForWidth(rightFrame->sizePolicy().hasHeightForWidth());
+        rightFrame->setSizePolicy(sizePolicy1);
+        rightFrame->setFrameShape(QFrame::StyledPanel);
+        rightFrame->setFrameShadow(QFrame::Raised);
+        reloadBtn = new QPushButton(rightFrame);
+        reloadBtn->setObjectName(QStringLiteral("reloadBtn"));
+        reloadBtn->setGeometry(QRect(20, 20, 80, 31));
 
-        horizontalLayout->addWidget(frame_2);
+        horizontalLayout->addWidget(rightFrame);
 
 
         retranslateUi(WorkListDialog);
@@ -77,6 +82,7 @@ public:
     void retranslateUi(QDialog *WorkListDialog)
     {
         WorkListDialog->setWindowTitle(QApplication::translate("WorkListDialog", "Dialog", Q_NULLPTR));
+        reloadBtn->setText(QApplication::translate("WorkListDialog", "Reload", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -6,6 +6,7 @@
 #include "pacsnodesettingsdialog.h"
 #include "LoadStudyDialog.h"
 #include "worklistserversettingsdialog.h"
+#include "worklistdialog.h"
 
 
 
@@ -62,4 +63,10 @@ void MainWindow::on_action_Update_Worklist_Settings_triggered()
 {
     WorklistServerSettingsDialog* worklistDlg =new WorklistServerSettingsDialog(this);
     worklistDlg->show();
+}
+
+void MainWindow::on_action_Open_Study_triggered()
+{
+    WorkListDialog* wrkDlg=new WorkListDialog(this);
+    wrkDlg->show();
 }

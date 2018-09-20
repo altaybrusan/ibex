@@ -122,3 +122,4 @@ PacsNodeSettingsDialog::~PacsNodeSettingsDialog()
     _dicomservernodeWidget->readSettings();
     delete ui;
 }
+
