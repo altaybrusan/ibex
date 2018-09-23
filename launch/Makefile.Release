@@ -56,7 +56,8 @@ SOURCES       = main.cpp \
 		rs232connector.cpp \
 		modbusconnector.cpp \
 		worklistserversettingsdialog.cpp \
-		worklistdialog.cpp ..\build\release\.rcc\qrc_resources.cpp \
+		worklistdialog.cpp \
+		worklistmodel.cpp ..\build\release\.rcc\qrc_resources.cpp \
 		..\build\release\.moc\moc_mainwindow.cpp \
 		..\build\release\.moc\moc_newpatientdialog.cpp \
 		..\build\release\.moc\moc_bodypart.cpp \
@@ -68,7 +69,8 @@ SOURCES       = main.cpp \
 		..\build\release\.moc\moc_rs232connector.cpp \
 		..\build\release\.moc\moc_modbusconnector.cpp \
 		..\build\release\.moc\moc_worklistserversettingsdialog.cpp \
-		..\build\release\.moc\moc_worklistdialog.cpp
+		..\build\release\.moc\moc_worklistdialog.cpp \
+		..\build\release\.moc\moc_worklistmodel.cpp
 OBJECTS       = ..\build\release\.obj\main.obj \
 		..\build\release\.obj\mainwindow.obj \
 		..\build\release\.obj\newpatientdialog.obj \
@@ -81,6 +83,7 @@ OBJECTS       = ..\build\release\.obj\main.obj \
 		..\build\release\.obj\modbusconnector.obj \
 		..\build\release\.obj\worklistserversettingsdialog.obj \
 		..\build\release\.obj\worklistdialog.obj \
+		..\build\release\.obj\worklistmodel.obj \
 		..\build\release\.obj\qrc_resources.obj \
 		..\build\release\.obj\moc_mainwindow.obj \
 		..\build\release\.obj\moc_newpatientdialog.obj \
@@ -93,7 +96,8 @@ OBJECTS       = ..\build\release\.obj\main.obj \
 		..\build\release\.obj\moc_rs232connector.obj \
 		..\build\release\.obj\moc_modbusconnector.obj \
 		..\build\release\.obj\moc_worklistserversettingsdialog.obj \
-		..\build\release\.obj\moc_worklistdialog.obj
+		..\build\release\.obj\moc_worklistdialog.obj \
+		..\build\release\.obj\moc_worklistmodel.obj
 
 DIST          = notes mainwindow.h \
 		newpatientdialog.h \
@@ -110,7 +114,8 @@ DIST          = notes mainwindow.h \
 		modbusconnector.h \
 		worklistserversettingsdialog.h \
 		worklistdialog.h \
-		dicomtaglist.h main.cpp \
+		dicomtaglist.h \
+		worklistmodel.h main.cpp \
 		mainwindow.cpp \
 		newpatientdialog.cpp \
 		bodypartselectionsquare.cpp \
@@ -121,7 +126,8 @@ DIST          = notes mainwindow.h \
 		rs232connector.cpp \
 		modbusconnector.cpp \
 		worklistserversettingsdialog.cpp \
-		worklistdialog.cpp
+		worklistdialog.cpp \
+		worklistmodel.cpp
 QMAKE_TARGET  = laucnh
 DESTDIR        = ..\build\release\ #avoid trailing-slash linebreak
 TARGET         = laucnh.exe
@@ -219,8 +225,8 @@ all: Makefile.Release  $(DESTDIR_TARGET)
 $(DESTDIR_TARGET): ..\build\release\.ui\ui_mainwindow.h ..\build\release\.ui\ui_newpatientdialog.h ..\build\release\.ui\ui_exposuredialog.h ..\build\release\.ui\ui_imageviewer.h ..\build\release\.ui\ui_pacsnodesettingsdialog.h ..\build\release\.ui\ui_loadstudydialog.h ..\build\release\.ui\ui_worklistserversettingsdialog.h ..\build\release\.ui\ui_worklistdialog.h $(OBJECTS) C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\.obj\laucnh_resource.res
 	$(COPY_DIR) C:\Users\Altay\Documents\Qt\Projects\ibex\launch\database C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\database
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj
-..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj
+..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\worklistmodel.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj
+..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj ..\build\release\.obj\moc_worklistmodel.obj
 $(LIBS)
 <<
 	$(COPY_DIR) C:\Users\Altay\Documents\Qt\Projects\ibex\launch\configs C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\configs
@@ -234,10 +240,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) laucnh.zip $(SOURCES) $(DIST) launch.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf launch.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmain.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xml.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Network.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp mainwindow.h newpatientdialog.h bodypart.h bodypartselectionsquare.h exposuredialog.h imageviewer.h pacsnodesettingsdialog.h loadstudydialog.h ..\common\include\idevice.h ..\common\include\isettingsparser.h ..\common\include\iconnector.h rs232connector.h modbusconnector.h worklistserversettingsdialog.h worklistdialog.h dicomtaglist.h main.cpp mainwindow.cpp newpatientdialog.cpp bodypartselectionsquare.cpp exposuredialog.cpp imageviewer.cpp pacsnodesettingsdialog.cpp loadstudydialog.cpp rs232connector.cpp modbusconnector.cpp worklistserversettingsdialog.cpp worklistdialog.cpp mainwindow.ui newpatientdialog.ui exposuredialog.ui imageviewer.ui pacsnodesettingsdialog.ui loadstudydialog.ui worklistserversettingsdialog.ui worklistdialog.ui    
+	$(ZIP) laucnh.zip $(SOURCES) $(DIST) launch.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf launch.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmain.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xml.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Network.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp mainwindow.h newpatientdialog.h bodypart.h bodypartselectionsquare.h exposuredialog.h imageviewer.h pacsnodesettingsdialog.h loadstudydialog.h ..\common\include\idevice.h ..\common\include\isettingsparser.h ..\common\include\iconnector.h rs232connector.h modbusconnector.h worklistserversettingsdialog.h worklistdialog.h dicomtaglist.h worklistmodel.h main.cpp mainwindow.cpp newpatientdialog.cpp bodypartselectionsquare.cpp exposuredialog.cpp imageviewer.cpp pacsnodesettingsdialog.cpp loadstudydialog.cpp rs232connector.cpp modbusconnector.cpp worklistserversettingsdialog.cpp worklistdialog.cpp worklistmodel.cpp mainwindow.ui newpatientdialog.ui exposuredialog.ui imageviewer.ui pacsnodesettingsdialog.ui loadstudydialog.ui worklistserversettingsdialog.ui worklistdialog.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) ..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj ..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj
+	-$(DEL_FILE) ..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\worklistmodel.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj ..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj ..\build\release\.obj\moc_worklistmodel.obj
 	-$(DEL_FILE) ..\build\release\laucnh0.exp
 	-$(DEL_FILE) C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\.obj\laucnh_resource.res
 
@@ -292,9 +298,9 @@ compiler_moc_predefs_clean:
 ..\build\release\.moc\moc_predefs.h: C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp
 	cl -BxC:\Qt\5.9.4\msvc2015_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp 2>NUL >..\build\release\.moc\moc_predefs.h
 
-compiler_moc_header_make_all: ..\build\release\.moc\moc_mainwindow.cpp ..\build\release\.moc\moc_newpatientdialog.cpp ..\build\release\.moc\moc_bodypart.cpp ..\build\release\.moc\moc_bodypartselectionsquare.cpp ..\build\release\.moc\moc_exposuredialog.cpp ..\build\release\.moc\moc_imageviewer.cpp ..\build\release\.moc\moc_pacsnodesettingsdialog.cpp ..\build\release\.moc\moc_loadstudydialog.cpp ..\build\release\.moc\moc_rs232connector.cpp ..\build\release\.moc\moc_modbusconnector.cpp ..\build\release\.moc\moc_worklistserversettingsdialog.cpp ..\build\release\.moc\moc_worklistdialog.cpp
+compiler_moc_header_make_all: ..\build\release\.moc\moc_mainwindow.cpp ..\build\release\.moc\moc_newpatientdialog.cpp ..\build\release\.moc\moc_bodypart.cpp ..\build\release\.moc\moc_bodypartselectionsquare.cpp ..\build\release\.moc\moc_exposuredialog.cpp ..\build\release\.moc\moc_imageviewer.cpp ..\build\release\.moc\moc_pacsnodesettingsdialog.cpp ..\build\release\.moc\moc_loadstudydialog.cpp ..\build\release\.moc\moc_rs232connector.cpp ..\build\release\.moc\moc_modbusconnector.cpp ..\build\release\.moc\moc_worklistserversettingsdialog.cpp ..\build\release\.moc\moc_worklistdialog.cpp ..\build\release\.moc\moc_worklistmodel.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) ..\build\release\.moc\moc_mainwindow.cpp ..\build\release\.moc\moc_newpatientdialog.cpp ..\build\release\.moc\moc_bodypart.cpp ..\build\release\.moc\moc_bodypartselectionsquare.cpp ..\build\release\.moc\moc_exposuredialog.cpp ..\build\release\.moc\moc_imageviewer.cpp ..\build\release\.moc\moc_pacsnodesettingsdialog.cpp ..\build\release\.moc\moc_loadstudydialog.cpp ..\build\release\.moc\moc_rs232connector.cpp ..\build\release\.moc\moc_modbusconnector.cpp ..\build\release\.moc\moc_worklistserversettingsdialog.cpp ..\build\release\.moc\moc_worklistdialog.cpp
+	-$(DEL_FILE) ..\build\release\.moc\moc_mainwindow.cpp ..\build\release\.moc\moc_newpatientdialog.cpp ..\build\release\.moc\moc_bodypart.cpp ..\build\release\.moc\moc_bodypartselectionsquare.cpp ..\build\release\.moc\moc_exposuredialog.cpp ..\build\release\.moc\moc_imageviewer.cpp ..\build\release\.moc\moc_pacsnodesettingsdialog.cpp ..\build\release\.moc\moc_loadstudydialog.cpp ..\build\release\.moc\moc_rs232connector.cpp ..\build\release\.moc\moc_modbusconnector.cpp ..\build\release\.moc\moc_worklistserversettingsdialog.cpp ..\build\release\.moc\moc_worklistdialog.cpp ..\build\release\.moc\moc_worklistmodel.cpp
 ..\build\release\.moc\moc_mainwindow.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
@@ -398,6 +404,18 @@ compiler_moc_header_clean:
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
+		worklistdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		mainwindow.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -1751,16 +1769,74 @@ compiler_moc_header_clean:
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		worklistdialog.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
 	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtNetwork -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" worklistdialog.h -o ..\build\release\.moc\moc_worklistdialog.cpp
+
+..\build\release\.moc\moc_worklistmodel.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlogging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qflags.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmutex.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
+		worklistmodel.h \
+		..\build\release\.moc\moc_predefs.h \
+		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/launch -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtNetwork -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" worklistmodel.h -o ..\build\release\.moc\moc_worklistmodel.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -2188,6 +2264,18 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
+		worklistdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
@@ -2196,7 +2284,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSettings \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug
 
 ..\build\release\.obj\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMainWindow \
@@ -2302,16 +2391,25 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
-		..\build\release\.ui\ui_mainwindow.h \
-		newpatientdialog.h \
+		worklistdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		..\build\release\.ui\ui_mainwindow.h \
+		newpatientdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCore \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCoreDepends \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractanimation.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractproxymodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractstate.h \
@@ -2528,7 +2626,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsEllipseItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		bodypartselectionsquare.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPainter \
@@ -2540,12 +2637,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		pacsnodesettingsdialog.h \
 		LoadStudyDialog.h \
 		worklistserversettingsdialog.h \
-		worklistdialog.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlField \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlfield.h
 
 ..\build\release\.obj\newpatientdialog.obj: newpatientdialog.cpp newpatientdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
@@ -4302,12 +4395,15 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		..\build\release\.ui\ui_worklistdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\5.9.4\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -4568,9 +4664,62 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qxml.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxmlversion.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFile \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlField \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlfield.h \
 		dicomtaglist.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString
+
+..\build\release\.obj\worklistmodel.obj: worklistmodel.cpp worklistmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlogging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qflags.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmutex.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h
 
 ..\build\release\.obj\qrc_resources.obj: ..\build\release\.rcc\qrc_resources.cpp 
 
@@ -4597,6 +4746,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 ..\build\release\.obj\moc_worklistserversettingsdialog.obj: ..\build\release\.moc\moc_worklistserversettingsdialog.cpp 
 
 ..\build\release\.obj\moc_worklistdialog.obj: ..\build\release\.moc\moc_worklistdialog.cpp 
+
+..\build\release\.obj\moc_worklistmodel.obj: ..\build\release\.moc\moc_worklistmodel.cpp 
 
 ####### Install
 

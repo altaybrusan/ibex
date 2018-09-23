@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "worklistdialog.h"
 class NewPatientDialog;
 
 namespace Ui {
@@ -28,15 +28,16 @@ private slots:
 
     void on_newPatient_accepted();
 
-
-
     void on_action_Update_Worklist_Settings_triggered();
 
     void on_action_Open_Study_triggered();
 
+    void on_Patient_selected(QSqlRecord record);
+
 private:
     Ui::MainWindow *ui;
     NewPatientDialog* _dialog;
+    WorkListDialog* wrkDlg;
 };
 
 #endif // MAINWINDOW_H

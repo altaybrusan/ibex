@@ -24,6 +24,7 @@
 #include <QtXml>
 #include <QFile>
 #include <QMap>
+#include <QSqlField>
 #include <QSqlRecord>
 #include "dicomtaglist.h"
 
@@ -424,4 +425,12 @@ void WorkListDialog::on_reloadBtn_clicked()
     //#ifdef HAVE_WINSOCK_H
     //    WSACleanup();
     //#endif
+}
+
+void WorkListDialog::on_tableView_doubleClicked(const QModelIndex &index)
+{
+    selectedRecord = model->record(index.row());
+    this->close();
+    emit NotifyRecoredSelected(selectedRecord);
+
 }

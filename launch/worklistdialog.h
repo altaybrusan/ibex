@@ -2,6 +2,7 @@
 #define WORKLISTDIALOG_H
 
 #include <QDialog>
+#include <QSqlRecord>
 #include <qsqltablemodel>
 #include <QMap>
 
@@ -92,8 +93,13 @@ public:
     explicit WorkListDialog(QWidget *parent = 0);
     ~WorkListDialog();
 
+signals:
+    void NotifyRecoredSelected(QSqlRecord record);
+
 private slots:
     void on_reloadBtn_clicked();
+
+    void on_tableView_doubleClicked(const QModelIndex &index);
 
 private:
     void InitializeTableViewColumns();
@@ -101,6 +107,7 @@ private:
     void ParsRISResponseAndInsertIntoTableModel();
     QSqlDatabase _database;
     QSqlTableModel *model;
+    QSqlRecord selectedRecord;
     Ui::WorkListDialog *ui;
 };
 

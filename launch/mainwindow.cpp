@@ -7,16 +7,20 @@
 #include "LoadStudyDialog.h"
 #include "worklistserversettingsdialog.h"
 #include "worklistdialog.h"
+#include <QSqlField>
 
 
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
+    wrkDlg(new WorkListDialog(this)),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     _dialog= new NewPatientDialog(this);
     connect(_dialog,SIGNAL(accepted()),this,SLOT(on_newPatient_accepted()));
+    connect(wrkDlg,SIGNAL(NotifyRecoredSelected(QSqlRecord)),this,SLOT(on_Patient_selected(QSqlRecord)));
+
 }
 
 MainWindow::~MainWindow()
@@ -66,7 +70,15 @@ void MainWindow::on_action_Update_Worklist_Settings_triggered()
 }
 
 void MainWindow::on_action_Open_Study_triggered()
-{
-    WorkListDialog* wrkDlg=new WorkListDialog(this);
+{    
     wrkDlg->show();
+}
+
+void MainWindow::on_Patient_selected(QSqlRecord record)
+{
+
+    for(int i=0;i<record.count();i++)
+    {
+        qDebug()<<"the "<<record.fieldName(i) <<" fields value is "<<record.field(i).value().toString();
+    }
 }
