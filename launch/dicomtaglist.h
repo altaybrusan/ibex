@@ -1,20 +1,34 @@
-
-
 #ifndef DICOMTAGLIST_H
 #define DICOMTAGLIST_H
 #include <QMap>
 #include <QString>
-class Dicom{
+class DicomTags{
 public:
-    static Dicom &GetInstance()
+    static DicomTags &GetInstance()
     {
-        static Dicom instance;
+        static DicomTags instance;
         return instance;
     }
 
-private:
+    QList<QString> GetAllTags()
+    {
+        return tagsCollection.keys();
+    }
+    QList<QString> GetAllDescriptiions()
+    {
+        return tagsCollection.values();
+    }
+    QString GetDescription(QString tag)
+    {
+        return tagsCollection.value(tag,"NULL");
+    }
+
+
+
+
+//private:
     QMap<QString,QString> tagsCollection;
-    Dicom()
+    DicomTags()
     {
        tagsCollection.insert("0002,0000" , "File Meta Information Group Length");
        tagsCollection.insert("0002,0001" , "File Meta Information Version");
@@ -2217,7 +2231,7 @@ private:
        tagsCollection.insert("0040,A167" ,	"Observation Category Code Sequence"); //(Trial)	Retired
        tagsCollection.insert("0040,A168" ,	"Concept Code Sequence");
        tagsCollection.insert("0040,A16A" ,	"Bibliographic Citation"); //(Trial)	Retired
-       tagsCollection.insert("0040,A170" ,	"Purpose of Reference Code Sequence";
+       tagsCollection.insert("0040,A170" ,	"Purpose of Reference Code Sequence");
        tagsCollection.insert("0040,A171" ,	"Observation UID");
        tagsCollection.insert("0040,A172" ,	"Referenced Observation UID"); //(Trial)	Retired
        tagsCollection.insert("0040,A173" ,	"Referenced Observation Class"); //(Trial)	Retired
@@ -2251,8 +2265,8 @@ private:
        tagsCollection.insert("0040,A385" ,	"Pertinent Other Evidence Sequence");
        tagsCollection.insert("0040,A390" ,	"HL7 Structured Document Reference Sequence");
        tagsCollection.insert("0040,A402" ,	"Observation Subject UID");//(Trial)	Retired
-       tagsCollection.insert("0040,A403" ,	"Observation Subject Class" //(Trial)	Retired
-       tagsCollection.insert("0040,A404" ,	"Observation Subject Type Code Sequence" //(Trial)	Retired
+       tagsCollection.insert("0040,A403" ,	"Observation Subject Class"); //(Trial)	Retired
+       tagsCollection.insert("0040,A404" ,	"Observation Subject Type Code Sequence"); //(Trial)	Retired
        tagsCollection.insert("0040,A491" ,	"Completion Flag");
        tagsCollection.insert("0040,A492" ,	"Completion Flag Description");
        tagsCollection.insert("0040,A493" ,	"Verification Flag");
@@ -2265,7 +2279,7 @@ private:
        tagsCollection.insert("0040,A603" ,	"Procedure Context Flag");//(Trial)	Retired
        tagsCollection.insert("0040,A730" ,	"Content Sequence");
        tagsCollection.insert("0040,A731" ,	"Relationship Sequence"); //(Trial)	Retired
-       tagsCollection.insert("0040,A732" ,	"Relationship Type Code Sequence" //(Trial)	Retired
+       tagsCollection.insert("0040,A732" ,	"Relationship Type Code Sequence"); //(Trial)	Retired
        tagsCollection.insert("0040,A744" ,	"Language Code Sequence");// (Trial)	Retired
        tagsCollection.insert("0040,A992" ,	"Uniform Resource Locator"); //(Trial)	Retired
        tagsCollection.insert("0040,B020" ,	"Waveform Annotation Sequence");
@@ -3316,7 +3330,7 @@ private:
        tagsCollection.insert("3002,0030" ,  "Exposure Sequence");
        tagsCollection.insert("3002,0032" ,  "Meterset Exposure");
        tagsCollection.insert("3002,0034" ,  "Diaphragm Position");
-       tagsCollection.insert("3002,0040" ,  "Fluence Map Sequence
+       tagsCollection.insert("3002,0040" ,  "Fluence Map Sequence");
        tagsCollection.insert("3002,0041" ,  "Fluence Data Source");
        tagsCollection.insert("3002,0042" ,  "Fluence Data Scale");
        tagsCollection.insert("3002,0050" ,  "Primary Fluence Mode Sequence");
@@ -3547,7 +3561,7 @@ private:
        tagsCollection.insert("300A,0080" ,  "Number of Beams");
        tagsCollection.insert("300A,0082" ,  "Beam Dose Specification Point");
        tagsCollection.insert("300A,0084" ,  "Beam Dose");
-       tagsCollection.insert("300A,0086" ,  "Beam Meterset
+       tagsCollection.insert("300A,0086" ,  "Beam Meterset");
        tagsCollection.insert("300A,0088" ,  "Beam Dose Point Depth");	//Retired
        tagsCollection.insert("300A,0089" ,  "Beam Dose Point Equivalent Depth");	//Retired
        tagsCollection.insert("300A,008A" ,  "Beam Dose Point SSD");	//Retired
@@ -3931,7 +3945,7 @@ private:
        tagsCollection.insert("4008,0101" ,  "Interpretation Recorded Time");	//Retired
        tagsCollection.insert("4008,0102" ,  "Interpretation Recorder");	//Retired
        tagsCollection.insert("4008,0103" ,  "Reference to Recorded Sound");	//Retired
-       tagsCollection.insert("4008,0108" ,  "Interpretation Transcription Date")//Retired
+       tagsCollection.insert("4008,0108" ,  "Interpretation Transcription Date");//Retired
        tagsCollection.insert("4008,0109" ,  "Interpretation Transcription Time");	//Retired
        tagsCollection.insert("4008,010A" ,  "Interpretation Transcriber");	//Retired
        tagsCollection.insert("4008,010B" ,  "Interpretation Text");	//Retired
@@ -4084,12 +4098,12 @@ private:
        tagsCollection.insert("60xx,0045" ,  "Overlay Subtype");
        tagsCollection.insert("60xx,0050" ,  "Overlay Origin");
        tagsCollection.insert("60xx,0051" ,  "Image Frame Origin");
-       tagsCollection.insert("60xx,0052" ,  "Overlay Plane Origin");	Retired
-       tagsCollection.insert("60xx,0060" ,  "Overlay Compression Code");	Retired
-       tagsCollection.insert("60xx,0061" ,  "Overlay Compression Originator");	Retired
-       tagsCollection.insert("60xx,0062" ,  "Overlay Compression Label");	Retired
-       tagsCollection.insert("60xx,0063" ,  "Overlay Compression Description");	Retired
-       tagsCollection.insert("60xx,0066" ,  "Overlay Compression Step Pointers");	Retired
+       tagsCollection.insert("60xx,0052" ,  "Overlay Plane Origin");	//Retired
+       tagsCollection.insert("60xx,0060" ,  "Overlay Compression Code");	//Retired
+       tagsCollection.insert("60xx,0061" ,  "Overlay Compression Originator");	//Retired
+       tagsCollection.insert("60xx,0062" ,  "Overlay Compression Label");	//Retired
+       tagsCollection.insert("60xx,0063" ,  "Overlay Compression Description");	//Retired
+       tagsCollection.insert("60xx,0066" ,  "Overlay Compression Step Pointers");	//Retired
        tagsCollection.insert("60xx,0068" ,  "Overlay Repeat Interval");	//Retired
        tagsCollection.insert("60xx,0069" ,  "Overlay Bits Grouped");	//Retired
        tagsCollection.insert("60xx,0100" ,  "Overlay Bits Allocated");
@@ -4104,7 +4118,7 @@ private:
        tagsCollection.insert("60xx,1100" ,  "Overlay Descriptor - Gray");	//Retired
        tagsCollection.insert("60xx,1101" ,  "Overlay Descriptor - Red");	//Retired
        tagsCollection.insert("60xx,1102" ,  "Overlay Descriptor - Green");	//Retired
-       tagsCollection.insert("60xx,1103" ,  "Overlay Descriptor - Blue")	//Retired
+       tagsCollection.insert("60xx,1103" ,  "Overlay Descriptor - Blue");	//Retired
        tagsCollection.insert("60xx,1200" ,  "Overlays - Gray");	//Retired
        tagsCollection.insert("60xx,1201" ,  "Overlays - Red");	//Retired
        tagsCollection.insert("60xx,1202" ,  "Overlays - Green");	//Retired
@@ -4132,8 +4146,9 @@ private:
        tagsCollection.insert("FFFE,E00D" ,  "Item Delimitation Item");
        tagsCollection.insert("FFFE,E0DD" ,  "Sequence Delimitation Item");
     }
-}
-QMap<QString,QString> DICOM_TAGS;
+
+};
+
 
 
 

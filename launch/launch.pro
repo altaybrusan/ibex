@@ -104,7 +104,7 @@ SOURCES += \
     modbusconnector.cpp \
     worklistserversettingsdialog.cpp \
     worklistdialog.cpp \
-    dbmanager.cpp
+    worklistmodel.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -122,8 +122,8 @@ HEADERS += \
     modbusconnector.h \
     worklistserversettingsdialog.h \
     worklistdialog.h \
-    dbmanager.h \
-    dicomtaglist.h
+    dicomtaglist.h \
+    worklistmodel.h
 
 FORMS += \
         mainwindow.ui \

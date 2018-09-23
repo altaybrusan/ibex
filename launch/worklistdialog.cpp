@@ -1,7 +1,6 @@
 #include "worklistdialog.h"
 #include "ui_worklistdialog.h"
 #include <QTcpSocket>
-#include "dbmanager.h"
 // From Dcmtk:
 #include <dcmtk/config/osconfig.h>    /* make sure OS specific configuration is included first */
 
@@ -25,6 +24,8 @@
 #include <QtXml>
 #include <QFile>
 #include <QMap>
+#include <QSqlRecord>
+#include "dicomtaglist.h"
 
 #define OFFIS_CONSOLE_APPLICATION "findscu"
 
@@ -65,7 +66,7 @@ QTcpSocket * socket;
 DcmFindSCU findscu;
 
 
-void  WorkListDialog::InitializeTableView()
+void  WorkListDialog::InitializeTableViewColumns()
 {
 
     ui->tableView->setColumnHidden(studyid,true);
@@ -119,7 +120,9 @@ void  WorkListDialog::InitializeTableView()
     ui->tableView->setColumnHidden(reserve1,true);
     ui->tableView->setColumnHidden(reserve2,true);
     ui->tableView->setColumnHidden(reserve3,true);
-
+}
+void  WorkListDialog::IntializeTableViewModel()
+{
     model->setHeaderData(studyid, Qt::Horizontal, tr("Study ID"));
     model->setHeaderData(accessionnum,Qt::Horizontal, tr("Accession"));
     model->setHeaderData(patientid,Qt::Horizontal, tr("Patıent ID"));
@@ -171,11 +174,80 @@ void  WorkListDialog::InitializeTableView()
     model->setHeaderData(reserve1,  Qt::Horizontal,    tr("reserve1"));
     model->setHeaderData(reserve2, Qt::Horizontal,  tr("reserve2"));
     model->setHeaderData(reserve3 ,Qt::Horizontal,   tr("reserve3"));
+
 }
 
 void WorkListDialog::ParsRISResponseAndInsertIntoTableModel()
 {
 
+    QFile settingFile("./out.xml");
+
+    if(!settingFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qDebug()<<"Can not open WORKLIST RESPONSE file";
+        return;
+    }
+    else
+    {
+        //get the root element
+        QDomDocument document;
+
+        if(!document.setContent(&settingFile))
+        {
+            qDebug() << "Failed to load document";
+            return;
+        }
+        settingFile.close();
+
+        QDomElement root = document.firstChildElement();
+        //Extract records
+        QDomNodeList _recordList = root.elementsByTagName("data-set");
+
+        for(int recordIndex = 0; recordIndex < _recordList.count(); recordIndex++)
+        {
+            QDomNode _record = _recordList.at(recordIndex);
+
+            //Extract elements inside each record.
+            QDomNodeList _elementsList = _record.toElement().elementsByTagName("element");
+
+            // create a QSqlRecord for each record inside recordList.
+            QSqlRecord record= model->record();
+
+            // initialize the record with dummy data
+            for(int a=0;a<=record.count();a++)
+            {
+                record.setValue(a,QString::number(recordIndex));
+            }
+
+            for(int elementIndex= 0; elementIndex<_elementsList.count();elementIndex++)
+            {
+
+                int temp = WorkListFieldTag.key(_elementsList.at(elementIndex).toElement().attribute("tag"),-1);
+
+                // check if the tag of the elemt exists within database
+                if(temp!=-1)
+                {
+                    record.setValue(temp,_elementsList.at(elementIndex).firstChild().nodeValue());
+                }
+                else
+                {
+                    record.setValue(elementIndex,QString::number(elementIndex));
+                }
+                //                qDebug()<<"The tag: "<<nodeList.at(j).toElement().attribute("tag")
+                //                        <<"with the value: "<<nodeList.at(j).firstChild().nodeValue()
+                //                        <<"The id is: "<<WorkListFieldTag.key(nodeList.at(j).toElement().attribute("tag"),-1);
+            }
+            model->insertRecord(-1,record);
+//            qDebug()<<"----------------------";
+//            for(int k=0;k< record.count();k++)
+//            {
+//                qDebug()<<"The field is: "<< record.fieldName(k)<<" value:"<<record.value(k).toString();
+//            }
+
+        }
+
+        model->select();
+    }
 }
 WorkListDialog::WorkListDialog(QWidget *parent) :
     QDialog(parent),
@@ -187,7 +259,7 @@ WorkListDialog::WorkListDialog(QWidget *parent) :
     qDebug()<<"constructing socket object";
     socket = new QTcpSocket();
 
-     _database = QSqlDatabase::addDatabase("QSQLITE");
+    _database = QSqlDatabase::addDatabase("QSQLITE");
     _database.setDatabaseName("./database/database.db");
     if (!_database.open())
     {
@@ -203,9 +275,11 @@ WorkListDialog::WorkListDialog(QWidget *parent) :
     model->setTable("WorkListTbl");
     model->setEditStrategy(QSqlTableModel::OnFieldChange);
 
-    InitializeTableView();
 
+
+    IntializeTableViewModel();
     ui->tableView->setModel(model);
+    InitializeTableViewColumns();
 
 }
 
@@ -339,8 +413,9 @@ void WorkListDialog::on_reloadBtn_clicked()
             return;
         }
         file.close();
-        QDomElement root = document.firstChildElement();
+        //QDomElement root = document.firstChildElement();
         //QStringList strList = ListElements3(root,"element","tag");
+        ParsRISResponseAndInsertIntoTableModel();
 
     }
 

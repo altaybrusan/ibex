@@ -6,6 +6,7 @@ VTK_MODULE_INIT(vtkInteractionStyle)
 #include "mainwindow.h"
 #include <QApplication>
 #include <QSettings>
+#include <QDebug>
 
 
 int main(int argc, char *argv[])
