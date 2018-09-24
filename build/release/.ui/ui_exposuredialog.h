@@ -14,9 +14,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableView>
@@ -41,6 +44,17 @@ public:
     QFrame *frame;
     QSpacerItem *iconhorizontalSpacerRight;
     ctkCollapsibleGroupBox *patientDemographyBox;
+    QHBoxLayout *horizontalLayout_3;
+    QFrame *frame_2;
+    QFormLayout *formLayout;
+    QLabel *nameLbl;
+    QLineEdit *fullNameLineEdit;
+    QLabel *addmissionNumberLbl;
+    QLineEdit *accessionNumLineEdit;
+    QLabel *label_5;
+    QLineEdit *dobLineEdit;
+    QLabel *sexLbl;
+    QLineEdit *sexLineEdit;
     QTableView *procedureTableView;
     QFrame *line;
     QScrollArea *scrollArea;
@@ -113,6 +127,66 @@ public:
 
         patientDemographyBox = new ctkCollapsibleGroupBox(sideFrame);
         patientDemographyBox->setObjectName(QStringLiteral("patientDemographyBox"));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(patientDemographyBox->sizePolicy().hasHeightForWidth());
+        patientDemographyBox->setSizePolicy(sizePolicy2);
+        horizontalLayout_3 = new QHBoxLayout(patientDemographyBox);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        frame_2 = new QFrame(patientDemographyBox);
+        frame_2->setObjectName(QStringLiteral("frame_2"));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        formLayout = new QFormLayout(frame_2);
+        formLayout->setObjectName(QStringLiteral("formLayout"));
+        nameLbl = new QLabel(frame_2);
+        nameLbl->setObjectName(QStringLiteral("nameLbl"));
+
+        formLayout->setWidget(0, QFormLayout::LabelRole, nameLbl);
+
+        fullNameLineEdit = new QLineEdit(frame_2);
+        fullNameLineEdit->setObjectName(QStringLiteral("fullNameLineEdit"));
+        fullNameLineEdit->setReadOnly(true);
+
+        formLayout->setWidget(0, QFormLayout::FieldRole, fullNameLineEdit);
+
+        addmissionNumberLbl = new QLabel(frame_2);
+        addmissionNumberLbl->setObjectName(QStringLiteral("addmissionNumberLbl"));
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, addmissionNumberLbl);
+
+        accessionNumLineEdit = new QLineEdit(frame_2);
+        accessionNumLineEdit->setObjectName(QStringLiteral("accessionNumLineEdit"));
+        accessionNumLineEdit->setReadOnly(true);
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, accessionNumLineEdit);
+
+        label_5 = new QLabel(frame_2);
+        label_5->setObjectName(QStringLiteral("label_5"));
+
+        formLayout->setWidget(2, QFormLayout::LabelRole, label_5);
+
+        dobLineEdit = new QLineEdit(frame_2);
+        dobLineEdit->setObjectName(QStringLiteral("dobLineEdit"));
+        dobLineEdit->setReadOnly(true);
+
+        formLayout->setWidget(2, QFormLayout::FieldRole, dobLineEdit);
+
+        sexLbl = new QLabel(frame_2);
+        sexLbl->setObjectName(QStringLiteral("sexLbl"));
+
+        formLayout->setWidget(3, QFormLayout::LabelRole, sexLbl);
+
+        sexLineEdit = new QLineEdit(frame_2);
+        sexLineEdit->setObjectName(QStringLiteral("sexLineEdit"));
+        sexLineEdit->setReadOnly(true);
+
+        formLayout->setWidget(3, QFormLayout::FieldRole, sexLineEdit);
+
+
+        horizontalLayout_3->addWidget(frame_2);
+
 
         verticalLayout_2->addWidget(patientDemographyBox);
 
@@ -135,7 +209,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 414, 248));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 410, 214));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         verticalLayout_2->addWidget(scrollArea);
@@ -172,6 +246,10 @@ public:
     {
         ExposureDialog->setWindowTitle(QApplication::translate("ExposureDialog", "Exposure Dialog", Q_NULLPTR));
         patientDemographyBox->setTitle(QApplication::translate("ExposureDialog", "Patients Demography", Q_NULLPTR));
+        nameLbl->setText(QApplication::translate("ExposureDialog", "Full name:", Q_NULLPTR));
+        addmissionNumberLbl->setText(QApplication::translate("ExposureDialog", "Accession", Q_NULLPTR));
+        label_5->setText(QApplication::translate("ExposureDialog", "Birth date:", Q_NULLPTR));
+        sexLbl->setText(QApplication::translate("ExposureDialog", "Sex", Q_NULLPTR));
     } // retranslateUi
 
 };

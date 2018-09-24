@@ -2,6 +2,7 @@
 #include "ui_newpatientdialog.h"
 #include <QRegExpValidator>
 #include <QPushButton>
+#include <QDateTime>
 
 // no view for each body part
 NewPatientDialog::NewPatientDialog(QWidget *parent) :
@@ -117,6 +118,13 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
                     SLOT(OnBodyPartStatusChanged(iBEX::BodyPart,bool)));
         }
     }
+    QString year=QString::number(QDateTime::currentDateTime().date().year());
+    QString month=QString::number(QDateTime::currentDateTime().date().month());
+    QString date=QString::number(QDateTime::currentDateTime().date().day());
+    QString hour=QString::number(QDateTime::currentDateTime().time().hour());
+    QString min=QString::number(QDateTime::currentDateTime().time().minute());
+    QString msec=QString::number(QDateTime::currentDateTime().time().msec());
+    ui->accessionNumberLineEdit->setText(year+month+date+hour+min+msec);
 }
 
 NewPatientDialog::~NewPatientDialog()

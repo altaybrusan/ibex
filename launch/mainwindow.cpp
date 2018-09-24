@@ -77,8 +77,12 @@ void MainWindow::on_action_Open_Study_triggered()
 void MainWindow::on_Patient_selected(QSqlRecord record)
 {
 
-    for(int i=0;i<record.count();i++)
-    {
-        qDebug()<<"the "<<record.fieldName(i) <<" fields value is "<<record.field(i).value().toString();
-    }
+//    for(int i=0;i<record.count();i++)
+//    {
+//        qDebug()<<"the "<<record.fieldName(i) <<" fields value is "<<record.field(i).value().toString();
+//    }
+
+    ExposureDialog* _dialog =new ExposureDialog(this);
+    _dialog->SetRecord(&record);
+    _dialog->show();
 }

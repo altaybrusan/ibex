@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QDir>
 #include <QCoreApplication>
+#include <QSqlField>
 #include "idevice.h"
 
 
@@ -67,6 +68,17 @@ ExposureDialog::ExposureDialog(QWidget *parent) :
     //    _viewer->DisplayImage(FullFileName);
     //    FullFileName= QString(TEST_IMAGES_DIR) + "hand-test.tiff";
     //    _viewer->DisplayImage(FullFileName);
+
+}
+
+void ExposureDialog::SetRecord(QSqlRecord *record)
+{
+    _record= record;
+
+    ui->fullNameLineEdit->setText(record->field(3).value().toString());
+    ui->accessionNumLineEdit->setText(record->field(1).value().toString());
+    ui->dobLineEdit->setText(record->field(8).value().toString());
+    ui->sexLineEdit->setText(record->field(9).value().toString());
 
 }
 

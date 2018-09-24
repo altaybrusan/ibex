@@ -2,7 +2,7 @@
 #define EXPOSUREDIALOG_H
 
 #include <QDialog>
-
+#include <QSqlRecord>
 namespace Ui {
 class ExposureDialog;
 }
@@ -13,10 +13,12 @@ class ExposureDialog : public QDialog
 
 public:
     explicit ExposureDialog(QWidget *parent = 0);
+    void SetRecord(QSqlRecord* record);
     ~ExposureDialog();
 
 private:
     Ui::ExposureDialog *ui;
+    QSqlRecord* _record;
 };
 
 #endif // EXPOSUREDIALOG_H
