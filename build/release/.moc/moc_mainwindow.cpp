@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[12];
-    char stringdata0[290];
+    QByteArrayData data[14];
+    char stringdata0[328];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,7 +42,9 @@ QT_MOC_LITERAL(7, 176, 44), // "on_action_Update_Worklist_Set..."
 QT_MOC_LITERAL(8, 221, 30), // "on_action_Open_Study_triggered"
 QT_MOC_LITERAL(9, 252, 19), // "on_Patient_selected"
 QT_MOC_LITERAL(10, 272, 10), // "QSqlRecord"
-QT_MOC_LITERAL(11, 283, 6) // "record"
+QT_MOC_LITERAL(11, 283, 6), // "record"
+QT_MOC_LITERAL(12, 290, 21), // "on_Login_Successfully"
+QT_MOC_LITERAL(13, 312, 15) // "on_Login_Failed"
 
     },
     "MainWindow\0on_action_New_Study_triggered\0"
@@ -52,7 +54,8 @@ QT_MOC_LITERAL(11, 283, 6) // "record"
     "on_newPatient_accepted\0"
     "on_action_Update_Worklist_Settings_triggered\0"
     "on_action_Open_Study_triggered\0"
-    "on_Patient_selected\0QSqlRecord\0record"
+    "on_Patient_selected\0QSqlRecord\0record\0"
+    "on_Login_Successfully\0on_Login_Failed"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,7 +65,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -70,14 +73,16 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x08 /* Private */,
-       3,    0,   55,    2, 0x08 /* Private */,
-       4,    0,   56,    2, 0x08 /* Private */,
-       5,    0,   57,    2, 0x08 /* Private */,
-       6,    0,   58,    2, 0x08 /* Private */,
-       7,    0,   59,    2, 0x08 /* Private */,
-       8,    0,   60,    2, 0x08 /* Private */,
-       9,    1,   61,    2, 0x08 /* Private */,
+       1,    0,   64,    2, 0x08 /* Private */,
+       3,    0,   65,    2, 0x08 /* Private */,
+       4,    0,   66,    2, 0x08 /* Private */,
+       5,    0,   67,    2, 0x08 /* Private */,
+       6,    0,   68,    2, 0x08 /* Private */,
+       7,    0,   69,    2, 0x08 /* Private */,
+       8,    0,   70,    2, 0x08 /* Private */,
+       9,    1,   71,    2, 0x08 /* Private */,
+      12,    0,   74,    2, 0x08 /* Private */,
+      13,    0,   75,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -88,6 +93,8 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 10,   11,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -106,6 +113,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 5: _t->on_action_Update_Worklist_Settings_triggered(); break;
         case 6: _t->on_action_Open_Study_triggered(); break;
         case 7: _t->on_Patient_selected((*reinterpret_cast< QSqlRecord(*)>(_a[1]))); break;
+        case 8: _t->on_Login_Successfully(); break;
+        case 9: _t->on_Login_Failed(); break;
         default: ;
         }
     }
@@ -136,13 +145,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 10)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 10;
     }
     return _id;
 }

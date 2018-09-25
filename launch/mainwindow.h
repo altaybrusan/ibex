@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "worklistdialog.h"
+#include "logindialog.h"
 class NewPatientDialog;
 
 namespace Ui {
@@ -34,10 +35,14 @@ private slots:
 
     void on_Patient_selected(QSqlRecord record);
 
+    void on_Login_Successfully();
+    void on_Login_Failed();
+
 private:
     Ui::MainWindow *ui;
     NewPatientDialog* _dialog;
     WorkListDialog* wrkDlg;
+    LoginDialog* loginDlg;
 };
 
 #endif // MAINWINDOW_H

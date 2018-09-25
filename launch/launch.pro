@@ -104,7 +104,8 @@ SOURCES += \
     modbusconnector.cpp \
     worklistserversettingsdialog.cpp \
     worklistdialog.cpp \
-    worklistmodel.cpp
+    worklistmodel.cpp \
+    logindialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -123,7 +124,8 @@ HEADERS += \
     worklistserversettingsdialog.h \
     worklistdialog.h \
     dicomtaglist.h \
-    worklistmodel.h
+    worklistmodel.h \
+    logindialog.h
 
 FORMS += \
         mainwindow.ui \
@@ -133,7 +135,8 @@ FORMS += \
     pacsnodesettingsdialog.ui \
     loadstudydialog.ui \
     worklistserversettingsdialog.ui \
-    worklistdialog.ui
+    worklistdialog.ui \
+    logindialog.ui
 
 
 RESOURCES += \
