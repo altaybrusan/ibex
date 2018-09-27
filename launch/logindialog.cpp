@@ -11,12 +11,12 @@ LoginDialog::LoginDialog(QWidget *parent) :
 
 QString LoginDialog::GetUsername()
 {
-  return QString::QString(QCryptographicHash::hash(ui->passwordlineEdit->text().toUtf8(),QCryptographicHash::Md5));
+  return ui->userLineEdit->text();
 }
 
 QString LoginDialog::GetPassword()
 {
-   return QString::QString(QCryptographicHash::hash(ui->passwordlineEdit->text().toUtf8(),QCryptographicHash::Md5));
+   return QString::QString(QCryptographicHash::hash(ui->passwordlineEdit->text().toUtf8(),QCryptographicHash::Md5).toHex());
 }
 
 LoginDialog::~LoginDialog()

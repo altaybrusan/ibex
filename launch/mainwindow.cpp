@@ -134,18 +134,32 @@ void MainWindow::on_Login_Successfully()
         qDebug()<<"Database connection is made...";
     }
 
+
     QSqlQuery query;
-    if(query.exec("SELECT * FROM userTbl"))// WHERE username ='"+_name+"'AND password='"+_pass+"'"))
+    bool flag=false;
+    if(query.exec("SELECT * FROM userTbl"))
     {
         qDebug()<<"Query is executed";
 
         // the users found
-        if(query.next())
+        while(query.next())
         {
             qDebug()<<"User ID:"<<query.value(0).toString();
-            qDebug()<<"User Name:"<<query.value(1).toString();
-            qDebug()<<"User Password:"<<query.value(2).toString();
+            qDebug()<<"User Name:"<<query.value(1).toString()<<_name;
+            qDebug()<<"User Password:"<<query.value(2).toString()<<_pass;
+
+            if(query.value(1).toString() == _name &&
+               query.value(2).toString() == _pass)
+            {
+                qDebug()<<"success";
+                flag=true;
+                break;
+            }
         }
+    }
+    if(flag== false)
+    {
+        loginDlg->exec();
     }
 
 
