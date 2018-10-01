@@ -127,6 +127,16 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     ui->accessionNumberLineEdit->setText(year+month+date+hour+min+msec);
 }
 
+QString NewPatientDialog::GetPatientInfo(NewPatientDialog::DemographyKeys field)
+{
+    return demographics.value(field);
+}
+
+QStringList NewPatientDialog::GetSelectedProceduresList()
+{
+    return _selectedBodyPartList;
+}
+
 NewPatientDialog::~NewPatientDialog()
 {
     delete ui;
@@ -141,6 +151,29 @@ void NewPatientDialog::ActivateOkBtn()
         ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( true );
     else
         ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( false );
+
+    demographics[DemographyKeys::LastName]=ui->lastNameLineEdit->text();
+        demographics[DemographyKeys::FirstName]=ui->firstNameLineEdit->text();
+        demographics[DemographyKeys::MiddleName]=ui->middleNameLineEdit->text();
+        demographics[DemographyKeys::PatientID]=ui->patientIdLineEdit->text();
+        demographics[DemographyKeys::DOB]=ui->dateEdit->date().toString(Qt::ISODate);
+
+        switch(ui->genderComboBox->currentIndex())
+        {
+        case 0:
+            demographics[DemographyKeys::Gender] = "M";
+            break;
+        case 1:
+            demographics[DemographyKeys::Gender] = "F";
+            break;
+        case 2:
+            demographics[DemographyKeys::Gender] = "U";
+            break;
+        }
+
+        demographics[DemographyKeys::ReferrinPhysician]= ui->referringPhysicianLineEdit->text();
+        demographics[DemographyKeys::AdmissionNumber]= ui->admissionNumberLineEdit->text();
+        demographics[DemographyKeys::AccessionNumber]= ui->accessionNumberLineEdit->text();
 
 }
 // when a click on a body part scene happens this SLOT is called multiple times.
@@ -181,14 +214,49 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BodyPart bodyPart, bool isS
 
 
 void NewPatientDialog::on_buttonBox_accepted()
+{    
+
+//    qDebug()<<demographics[DemographyKeys::LastName];
+//    qDebug()<<demographics[DemographyKeys::FirstName];
+//    qDebug()<<demographics[DemographyKeys::MiddleName];
+//    qDebug()<<demographics[DemographyKeys::PatientID];
+//    qDebug()<<demographics[DemographyKeys::DOB];
+//    qDebug()<<demographics[DemographyKeys::Gender];
+//    qDebug()<<demographics[DemographyKeys::ReferrinPhysician];
+//    qDebug()<<demographics[DemographyKeys::AdmissionNumber];
+//      qDebug()<<"ACCESSION: "<<demographics[DemographyKeys::AccessionNumber];
+}
+
+void NewPatientDialog::on_lastNameLineEdit_editingFinished()
 {
     demographics[DemographyKeys::LastName]=ui->lastNameLineEdit->text();
-    demographics[DemographyKeys::FirstName]=ui->firstNameLineEdit->text();
+}
+
+void NewPatientDialog::on_firstNameLineEdit_editingFinished()
+{
+     demographics[DemographyKeys::FirstName]=ui->firstNameLineEdit->text();
+}
+
+void NewPatientDialog::on_middleNameLineEdit_editingFinished()
+{
     demographics[DemographyKeys::MiddleName]=ui->middleNameLineEdit->text();
+}
+
+void NewPatientDialog::on_patientIdLineEdit_editingFinished()
+{
     demographics[DemographyKeys::PatientID]=ui->patientIdLineEdit->text();
+
+}
+
+void NewPatientDialog::on_dateEdit_editingFinished()
+{
     demographics[DemographyKeys::DOB]=ui->dateEdit->date().toString(Qt::ISODate);
 
-    switch(ui->genderComboBox->currentIndex())
+}
+
+void NewPatientDialog::on_genderComboBox_currentIndexChanged(int index)
+{
+    switch(index)
     {
     case 0:
         demographics[DemographyKeys::Gender] = "M";
@@ -200,18 +268,23 @@ void NewPatientDialog::on_buttonBox_accepted()
         demographics[DemographyKeys::Gender] = "U";
         break;
     }
-
-    demographics[DemographyKeys::ReferrinPhysician]= ui->referringPhysicianLineEdit->text();
-    demographics[DemographyKeys::AdmissionNumber]= ui->admissionNumberLineEdit->text();
-    demographics[DemographyKeys::AccessionNumber]= ui->accessionNumberLineEdit->text();
-
-    qDebug()<<demographics[DemographyKeys::LastName];
-    qDebug()<<demographics[DemographyKeys::FirstName];
-    qDebug()<<demographics[DemographyKeys::MiddleName];
-    qDebug()<<demographics[DemographyKeys::PatientID];
-    qDebug()<<demographics[DemographyKeys::DOB];
-    qDebug()<<demographics[DemographyKeys::Gender];
-    qDebug()<<demographics[DemographyKeys::ReferrinPhysician];
-    qDebug()<<demographics[DemographyKeys::AdmissionNumber];
-    qDebug()<<demographics[DemographyKeys::AccessionNumber];
 }
+
+void NewPatientDialog::on_referringPhysicianLineEdit_editingFinished()
+{
+    demographics[DemographyKeys::ReferrinPhysician]= ui->referringPhysicianLineEdit->text();
+
+}
+
+void NewPatientDialog::on_admissionNumberLineEdit_editingFinished()
+{
+    demographics[DemographyKeys::AdmissionNumber]= ui->admissionNumberLineEdit->text();
+
+}
+
+void NewPatientDialog::on_accessionNumberLineEdit_editingFinished()
+{
+    demographics[DemographyKeys::AccessionNumber]= ui->accessionNumberLineEdit->text();
+}
+
+

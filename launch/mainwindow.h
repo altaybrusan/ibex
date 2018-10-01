@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "worklistdialog.h"
 #include "logindialog.h"
+
 class NewPatientDialog;
 
 namespace Ui {
@@ -43,6 +44,7 @@ private:
     NewPatientDialog* _dialog;
     WorkListDialog* wrkDlg;
     LoginDialog* loginDlg;
+    QSqlTableModel* _model,*_model2;
 };
 
 #endif // MAINWINDOW_H

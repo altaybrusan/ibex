@@ -20,7 +20,6 @@ ExposureDialog::ExposureDialog(QWidget *parent) :
 
     QDir pluginsDir(qApp->applicationDirPath());
 
-
     //#if defined(Q_OS_WIN)
     //    if (pluginsDir.dirName().toLower() == "debug" || pluginsDir.dirName().toLower() == "release")
     //        pluginsDir.cdUp();

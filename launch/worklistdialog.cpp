@@ -19,7 +19,7 @@
 #include "dcmtk/dcmnet/diutil.h"
 #include "dcmtk/dcmdata/dcdict.h"
 #include "dcmtk/dcmdata/dcuid.h"      /* for dcmtk version name */
-#include "dcmtk/dcmdata/dcuid.h"
+
 
 #include <QtXml>
 #include <QFile>
@@ -257,8 +257,8 @@ WorkListDialog::WorkListDialog(QWidget *parent) :
     ui->setupUi(this);
     ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
-    qDebug()<<"constructing socket object";
-    socket = new QTcpSocket();
+    //qDebug()<<"constructing socket object";
+    //socket = new QTcpSocket();
 
     _database = QSqlDatabase::addDatabase("QSQLITE");
     _database.setDatabaseName("./database/database.db");
@@ -276,8 +276,6 @@ WorkListDialog::WorkListDialog(QWidget *parent) :
     model->setTable("WorkListTbl");
     model->setEditStrategy(QSqlTableModel::OnFieldChange);
 
-
-
     IntializeTableViewModel();
     ui->tableView->setModel(model);
     InitializeTableViewColumns();
@@ -286,7 +284,7 @@ WorkListDialog::WorkListDialog(QWidget *parent) :
 
 WorkListDialog::~WorkListDialog()
 {
-    _database.close();
+    //_database.close();
     delete ui;
 }
 

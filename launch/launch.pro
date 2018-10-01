@@ -105,7 +105,8 @@ SOURCES += \
     worklistserversettingsdialog.cpp \
     worklistdialog.cpp \
     worklistmodel.cpp \
-    logindialog.cpp
+    logindialog.cpp \
+    dicomwriter.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -125,7 +126,8 @@ HEADERS += \
     worklistdialog.h \
     dicomtaglist.h \
     worklistmodel.h \
-    logindialog.h
+    logindialog.h \
+    dicomwriter.h
 
 FORMS += \
         mainwindow.ui \

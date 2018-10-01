@@ -23,6 +23,13 @@ public:
         return tagsCollection.value(tag,"NULL");
     }
 
+    enum GENERAL_PURPOSE_SCHEDULED_PROC_STEP {
+        SCHEDULED,
+        INPROGRESS,
+        SUSPENDED,
+        COMPLETED,
+        DISCONTINUED
+    };
 
 
 

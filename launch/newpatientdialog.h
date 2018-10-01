@@ -31,12 +31,34 @@ public:
         AdmissionNumber,
         AccessionNumber
     };
+    QString GetPatientInfo(NewPatientDialog::DemographyKeys field);
+    QStringList GetSelectedProceduresList();
     ~NewPatientDialog();
 
 private slots:
     void OnBodyPartStatusChanged(iBEX::BodyPart bodyPart,bool isSelected);
     void ActivateOkBtn();
     void on_buttonBox_accepted();
+
+    void on_lastNameLineEdit_editingFinished();
+
+    void on_firstNameLineEdit_editingFinished();
+
+    void on_middleNameLineEdit_editingFinished();
+
+    void on_patientIdLineEdit_editingFinished();
+
+    void on_dateEdit_editingFinished();
+
+    void on_genderComboBox_currentIndexChanged(int index);
+
+    void on_referringPhysicianLineEdit_editingFinished();
+
+    void on_admissionNumberLineEdit_editingFinished();
+
+    void on_accessionNumberLineEdit_editingFinished();
+
+
 
 private:
     Ui::NewPatientDialog *ui;
@@ -55,5 +77,6 @@ private:
 
     QValidator *validator;
 };
+
 
 #endif // NEWPATIENTDIALOG_H

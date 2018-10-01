@@ -58,7 +58,8 @@ SOURCES       = main.cpp \
 		worklistserversettingsdialog.cpp \
 		worklistdialog.cpp \
 		worklistmodel.cpp \
-		logindialog.cpp ..\build\release\.rcc\qrc_resources.cpp \
+		logindialog.cpp \
+		dicomwriter.cpp ..\build\release\.rcc\qrc_resources.cpp \
 		..\build\release\.moc\moc_mainwindow.cpp \
 		..\build\release\.moc\moc_newpatientdialog.cpp \
 		..\build\release\.moc\moc_bodypart.cpp \
@@ -87,6 +88,7 @@ OBJECTS       = ..\build\release\.obj\main.obj \
 		..\build\release\.obj\worklistdialog.obj \
 		..\build\release\.obj\worklistmodel.obj \
 		..\build\release\.obj\logindialog.obj \
+		..\build\release\.obj\dicomwriter.obj \
 		..\build\release\.obj\qrc_resources.obj \
 		..\build\release\.obj\moc_mainwindow.obj \
 		..\build\release\.obj\moc_newpatientdialog.obj \
@@ -120,7 +122,8 @@ DIST          = notes mainwindow.h \
 		worklistdialog.h \
 		dicomtaglist.h \
 		worklistmodel.h \
-		logindialog.h main.cpp \
+		logindialog.h \
+		dicomwriter.h main.cpp \
 		mainwindow.cpp \
 		newpatientdialog.cpp \
 		bodypartselectionsquare.cpp \
@@ -133,7 +136,8 @@ DIST          = notes mainwindow.h \
 		worklistserversettingsdialog.cpp \
 		worklistdialog.cpp \
 		worklistmodel.cpp \
-		logindialog.cpp
+		logindialog.cpp \
+		dicomwriter.cpp
 QMAKE_TARGET  = laucnh
 DESTDIR        = ..\build\release\ #avoid trailing-slash linebreak
 TARGET         = laucnh.exe
@@ -231,8 +235,8 @@ all: Makefile.Release  $(DESTDIR_TARGET)
 $(DESTDIR_TARGET): ..\build\release\.ui\ui_mainwindow.h ..\build\release\.ui\ui_newpatientdialog.h ..\build\release\.ui\ui_exposuredialog.h ..\build\release\.ui\ui_imageviewer.h ..\build\release\.ui\ui_pacsnodesettingsdialog.h ..\build\release\.ui\ui_loadstudydialog.h ..\build\release\.ui\ui_worklistserversettingsdialog.h ..\build\release\.ui\ui_worklistdialog.h ..\build\release\.ui\ui_logindialog.h $(OBJECTS) C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\.obj\laucnh_resource.res
 	$(COPY_DIR) C:\Users\Altay\Documents\Qt\Projects\ibex\launch\database C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\database
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\worklistmodel.obj ..\build\release\.obj\logindialog.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj
-..\build\release\.obj\moc_rs232connector.obj ..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj ..\build\release\.obj\moc_worklistmodel.obj ..\build\release\.obj\moc_logindialog.obj
+..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\worklistmodel.obj ..\build\release\.obj\logindialog.obj ..\build\release\.obj\dicomwriter.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj
+..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj ..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj ..\build\release\.obj\moc_worklistmodel.obj ..\build\release\.obj\moc_logindialog.obj
 $(LIBS)
 <<
 	$(COPY_DIR) C:\Users\Altay\Documents\Qt\Projects\ibex\launch\configs C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\configs
@@ -246,10 +250,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) laucnh.zip $(SOURCES) $(DIST) launch.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf launch.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmain.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xml.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Network.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp mainwindow.h newpatientdialog.h bodypart.h bodypartselectionsquare.h exposuredialog.h imageviewer.h pacsnodesettingsdialog.h loadstudydialog.h ..\common\include\idevice.h ..\common\include\isettingsparser.h ..\common\include\iconnector.h rs232connector.h modbusconnector.h worklistserversettingsdialog.h worklistdialog.h dicomtaglist.h worklistmodel.h logindialog.h main.cpp mainwindow.cpp newpatientdialog.cpp bodypartselectionsquare.cpp exposuredialog.cpp imageviewer.cpp pacsnodesettingsdialog.cpp loadstudydialog.cpp rs232connector.cpp modbusconnector.cpp worklistserversettingsdialog.cpp worklistdialog.cpp worklistmodel.cpp logindialog.cpp mainwindow.ui newpatientdialog.ui exposuredialog.ui imageviewer.ui pacsnodesettingsdialog.ui loadstudydialog.ui worklistserversettingsdialog.ui worklistdialog.ui logindialog.ui    
+	$(ZIP) laucnh.zip $(SOURCES) $(DIST) launch.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf launch.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmain.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgets.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Gui.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sql.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBus.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPort.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xml.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Network.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Core.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp mainwindow.h newpatientdialog.h bodypart.h bodypartselectionsquare.h exposuredialog.h imageviewer.h pacsnodesettingsdialog.h loadstudydialog.h ..\common\include\idevice.h ..\common\include\isettingsparser.h ..\common\include\iconnector.h rs232connector.h modbusconnector.h worklistserversettingsdialog.h worklistdialog.h dicomtaglist.h worklistmodel.h logindialog.h dicomwriter.h main.cpp mainwindow.cpp newpatientdialog.cpp bodypartselectionsquare.cpp exposuredialog.cpp imageviewer.cpp pacsnodesettingsdialog.cpp loadstudydialog.cpp rs232connector.cpp modbusconnector.cpp worklistserversettingsdialog.cpp worklistdialog.cpp worklistmodel.cpp logindialog.cpp dicomwriter.cpp mainwindow.ui newpatientdialog.ui exposuredialog.ui imageviewer.ui pacsnodesettingsdialog.ui loadstudydialog.ui worklistserversettingsdialog.ui worklistdialog.ui logindialog.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) ..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\worklistmodel.obj ..\build\release\.obj\logindialog.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj ..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj ..\build\release\.obj\moc_worklistmodel.obj ..\build\release\.obj\moc_logindialog.obj
+	-$(DEL_FILE) ..\build\release\.obj\main.obj ..\build\release\.obj\mainwindow.obj ..\build\release\.obj\newpatientdialog.obj ..\build\release\.obj\bodypartselectionsquare.obj ..\build\release\.obj\exposuredialog.obj ..\build\release\.obj\imageviewer.obj ..\build\release\.obj\pacsnodesettingsdialog.obj ..\build\release\.obj\loadstudydialog.obj ..\build\release\.obj\rs232connector.obj ..\build\release\.obj\modbusconnector.obj ..\build\release\.obj\worklistserversettingsdialog.obj ..\build\release\.obj\worklistdialog.obj ..\build\release\.obj\worklistmodel.obj ..\build\release\.obj\logindialog.obj ..\build\release\.obj\dicomwriter.obj ..\build\release\.obj\qrc_resources.obj ..\build\release\.obj\moc_mainwindow.obj ..\build\release\.obj\moc_newpatientdialog.obj ..\build\release\.obj\moc_bodypart.obj ..\build\release\.obj\moc_bodypartselectionsquare.obj ..\build\release\.obj\moc_exposuredialog.obj ..\build\release\.obj\moc_imageviewer.obj ..\build\release\.obj\moc_pacsnodesettingsdialog.obj ..\build\release\.obj\moc_loadstudydialog.obj ..\build\release\.obj\moc_rs232connector.obj ..\build\release\.obj\moc_modbusconnector.obj ..\build\release\.obj\moc_worklistserversettingsdialog.obj ..\build\release\.obj\moc_worklistdialog.obj ..\build\release\.obj\moc_worklistmodel.obj ..\build\release\.obj\moc_logindialog.obj
 	-$(DEL_FILE) ..\build\release\laucnh0.exp
 	-$(DEL_FILE) C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\.obj\laucnh_resource.res
 
@@ -2407,7 +2411,127 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSettings \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug \
+		dicomwriter.h \
+		..\3rd-Party\ctk\include\dcmtk\config\osconfig.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstdinc.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofalgo.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftypes.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdefine.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcast.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofexport.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstream.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oflist.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofmap.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofutil.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftraits.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\variadic\tuplefwd.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstack.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstring.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofvector.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctk.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctypes.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\oflog.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\logger.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config\win32.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config\macosx.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config\defines.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\threadcf.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\loglevel.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\tstring.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\tchar.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\spi\apndatch.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\appender.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofmem.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofthread.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\layout.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\streams.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\pointer.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\thread\syncprim.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\spi\filter.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\lockfile.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\spi\logfact.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\logmacro.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\snprintf.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\tracelog.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofconapp.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcmdln.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofconsol.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\offile.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstd.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcond.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oflimits.h \
+		..\3rd-Party\ctk\include\dcmtk\config\arith.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oferror.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdefine.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcswap.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcerror.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcxfer.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvr.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofglobal.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcistrma.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcostrma.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcuid.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctagkey.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctag.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdicent.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dchashdi.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdict.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdeftag.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcobject.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcstack.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcelem.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcitem.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dclist.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcpcache.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcmetinf.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdatset.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcsequen.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcfilefo.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdicdir.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdirrec.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrulup.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrul.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcpixseq.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcofsetl.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcbytstr.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrae.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvras.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrcs.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrda.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdate.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrds.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrdt.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdatime.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftime.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvris.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrtm.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrui.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrur.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcchrstr.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrlo.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrlt.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrpn.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrsh.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrst.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvruc.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrut.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrobow.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcpixel.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrpobw.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcovlay.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrat.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrss.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrus.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrsl.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrfl.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrfd.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrof.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrod.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrol.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\cmdlnarg.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcistrmz.h
 
 ..\build\release\.obj\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMainWindow \
@@ -2766,7 +2890,26 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlDatabase \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlQuery \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquery.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDateTime \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcuid.h \
+		..\3rd-Party\ctk\include\dcmtk\config\osconfig.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftypes.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdefine.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcast.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofexport.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstdinc.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofalgo.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstream.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oflist.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofmap.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofutil.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftraits.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\variadic\tuplefwd.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstack.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstring.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofvector.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdefine.h
 
 ..\build\release\.obj\newpatientdialog.obj: newpatientdialog.cpp newpatientdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
@@ -4960,6 +5103,127 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		..\build\release\.ui\ui_logindialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QCryptographicHash \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcryptographichash.h
+
+..\build\release\.obj\dicomwriter.obj: dicomwriter.cpp dicomwriter.h \
+		..\3rd-Party\ctk\include\dcmtk\config\osconfig.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstdinc.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofalgo.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftypes.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdefine.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcast.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofexport.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstream.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oflist.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofmap.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofutil.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftraits.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\variadic\tuplefwd.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstack.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstring.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofvector.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctk.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctypes.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\oflog.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\logger.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config\win32.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config\macosx.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\config\defines.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\threadcf.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\loglevel.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\tstring.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\tchar.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\spi\apndatch.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\appender.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofmem.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofthread.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\layout.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\streams.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\pointer.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\thread\syncprim.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\spi\filter.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\lockfile.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\spi\logfact.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\logmacro.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\helpers\snprintf.h \
+		..\3rd-Party\ctk\include\dcmtk\oflog\tracelog.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofconapp.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcmdln.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofconsol.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\offile.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstd.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcond.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oflimits.h \
+		..\3rd-Party\ctk\include\dcmtk\config\arith.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oferror.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdefine.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcswap.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcerror.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcxfer.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvr.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofglobal.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcistrma.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcostrma.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcuid.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctagkey.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dctag.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdicent.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dchashdi.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdict.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdeftag.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcobject.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcstack.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcelem.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcitem.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dclist.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcpcache.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcmetinf.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdatset.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcsequen.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcfilefo.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdicdir.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdirrec.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrulup.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrul.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcpixseq.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcofsetl.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcbytstr.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrae.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvras.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrcs.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrda.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdate.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrds.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrdt.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdatime.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftime.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvris.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrtm.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrui.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrur.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcchrstr.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrlo.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrlt.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrpn.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrsh.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrst.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvruc.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrut.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrobow.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcpixel.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrpobw.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcovlay.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrat.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrss.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrus.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrsl.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrfl.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrfd.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrof.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrod.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcvrol.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\cmdlnarg.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcistrmz.h
 
 ..\build\release\.obj\qrc_resources.obj: ..\build\release\.rcc\qrc_resources.cpp 
 
