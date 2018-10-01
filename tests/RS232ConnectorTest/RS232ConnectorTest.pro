@@ -26,14 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 INCLUDEPATH += ../../common/include \
-               ../../launch/
+               ../../core/
 
-HEADERS += ../../launch/rs232connector.h \
+HEADERS += ../../core/rs232connector.h \
            ../../common/include/iconnector.h\
-           ../../launch/rs232connector.h
+           ../../core/rs232connector.h
 
 SOURCES += \
         rs232connectortester.cpp \
-        ../../launch/rs232connector.cpp
+        ../../core/rs232connector.cpp
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
