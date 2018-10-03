@@ -6,7 +6,7 @@
 #include <QSqlDatabase>
 #include <QSqlField>
 #include <QSqlTableModel>
-#include <QSqlError>
+
 
 
 class TestDatabase : public QObject
@@ -15,6 +15,7 @@ class TestDatabase : public QObject
 
 public:
     TestDatabase();
+    QString RecordToQueryStringConverter(QSqlRecord record);
 
 private Q_SLOTS:
     void initTestCase();
@@ -24,6 +25,8 @@ private Q_SLOTS:
     void TestReadFromTable2();
     void TestChangeFieldInTable1();
     void TestSearchInTable1();
+    void TestRecordConsistency();
+    void TestAutoSqlStringMaker();
     void cleanupTestCase();
 private:
     QSqlDatabase  _database;
@@ -128,7 +131,40 @@ void TestDatabase::TestSearchInTable1()
       qDebug()<<"F1:"<<query.value(0).toString();
       qDebug()<<"F2:"<<query.value(1).toString();
       qDebug()<<"F3:"<<query.value(2).toString();
+   }
+}
+
+void TestDatabase::TestRecordConsistency()
+{
+    QSqlRecord _rec1 = _tbl1Dataset->record();
+    QSqlRecord _rec2 = _tbl2Dataset->record();
+    QVERIFY2(_rec1.count()==_rec2.count(),"The records are not consistent.");
+    for(int i=0;i<_rec1.count();i++)
+    {
+        QVERIFY2(_rec1.fieldName(i) == _rec2.fieldName(i),"The records are not consistent.");
     }
+
+}
+QString TestDatabase::RecordToQueryStringConverter(QSqlRecord record)
+{
+    QString string ="";
+    for (int index=0; index<record.count();index++)
+    {
+        string += record.fieldName(index)+"='"+record.field(index).value().toString()+"'";
+    }
+    return string;
+}
+
+void TestDatabase::TestAutoSqlStringMaker()
+{
+
+    QSqlRecord _record = _tbl1Dataset->record();
+    _record.setValue("F1","D1");
+    _record.setValue("F2","D1");
+    _record.setValue("F3","D1");
+
+    qDebug()<<RecordToQueryStringConverter(_record);
+
 }
 
 void TestDatabase::cleanupTestCase()

@@ -100,7 +100,9 @@ INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
 SOURCES += \
         main.cpp \
         Utils/logmgr.cpp \
-        View/mainwindow.cpp \
+        Utils/databasemgr.cpp \
+#        View/mainwindow.cpp
+
 #        View/newpatientdialog.cpp \
 #        View/bodypartselectionsquare.cpp \
 #        View/exposuredialog.cpp \
@@ -118,11 +120,13 @@ SOURCES += \
 #        Controller/devicemgr.cpp \
 #        Controller/loginmgr.cpp
 
+
 HEADERS += \
         Utils/call_once.h \
         Utils/singleton.h \
         Utils/logmgr.h    \
-        View/mainwindow.h \
+        Utils/databasemgr.h \
+#        View/mainwindow.h \
 #        View/newpatientdialog.h \
 #        View/bodypart.h \
 #        View/bodypartselectionsquare.h \
@@ -144,6 +148,7 @@ HEADERS += \
 #        Model/databaseservice.h \
 #        Controller/devicemgr.h \
 #        Controller/loginmgr.h
+
 
 FORMS += \
          View/mainwindow.ui \

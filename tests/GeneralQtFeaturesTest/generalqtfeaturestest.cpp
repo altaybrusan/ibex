@@ -17,6 +17,7 @@ private Q_SLOTS:
     void testDefineEnum();
     void testNullPointer();
     void testBooleanValues();
+
 };
 
 

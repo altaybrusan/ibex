@@ -26,69 +26,11 @@ SYMLINK       = $(QMAKE) -install ln -f -s
 DEL_DIR       = rmdir
 MOVE          = move
 SUBTARGETS    =  \
-		sub-core \
 		sub-plugins \
 		sub-tests
 
 
-sub-core-qmake_all:  FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	cd core\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && $(MAKE) -f Makefile qmake_all
-sub-core: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile
-sub-core-make_first-ordered: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
-sub-core-make_first: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
-sub-core-all-ordered: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
-sub-core-all: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
-sub-core-clean-ordered: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
-sub-core-clean: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
-sub-core-distclean-ordered: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
-sub-core-distclean: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
-sub-core-install_subtargets-ordered: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
-sub-core-install_subtargets: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
-sub-core-uninstall_subtargets-ordered: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
-sub-core-uninstall_subtargets: FORCE
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
-sub-plugins-qmake_all: sub-core-qmake_all FORCE
+sub-plugins-qmake_all:  FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	cd plugins\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc
 	@set MAKEFLAGS=$(MAKEFLAGS)
@@ -97,7 +39,7 @@ sub-plugins: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile
-sub-plugins-make_first-ordered: sub-core-make_first-ordered  FORCE
+sub-plugins-make_first-ordered: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
@@ -105,7 +47,7 @@ sub-plugins-make_first: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
-sub-plugins-all-ordered: sub-core-all-ordered  FORCE
+sub-plugins-all-ordered: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
@@ -113,7 +55,7 @@ sub-plugins-all: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
-sub-plugins-clean-ordered: sub-core-clean-ordered  FORCE
+sub-plugins-clean-ordered: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
@@ -121,7 +63,7 @@ sub-plugins-clean: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
-sub-plugins-distclean-ordered: sub-core-distclean-ordered  FORCE
+sub-plugins-distclean-ordered: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
@@ -129,7 +71,7 @@ sub-plugins-distclean: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
-sub-plugins-install_subtargets-ordered: sub-core-install_subtargets-ordered  FORCE
+sub-plugins-install_subtargets-ordered: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
@@ -137,7 +79,7 @@ sub-plugins-install_subtargets: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
-sub-plugins-uninstall_subtargets-ordered: sub-core-uninstall_subtargets-ordered  FORCE
+sub-plugins-uninstall_subtargets-ordered: FORCE
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
@@ -521,22 +463,18 @@ iBEX.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile iBEX.pro -spec win32-msvc
 
-qmake_all: sub-core-qmake_all sub-plugins-qmake_all sub-tests-qmake_all FORCE
+qmake_all: sub-plugins-qmake_all sub-tests-qmake_all FORCE
 
-make_first: sub-core-make_first-ordered sub-plugins-make_first-ordered sub-tests-make_first-ordered  FORCE
-all: sub-core-all-ordered sub-plugins-all-ordered sub-tests-all-ordered  FORCE
-clean: sub-core-clean-ordered sub-plugins-clean-ordered sub-tests-clean-ordered  FORCE
-distclean: sub-core-distclean-ordered sub-plugins-distclean-ordered sub-tests-distclean-ordered  FORCE
+make_first: sub-plugins-make_first-ordered sub-tests-make_first-ordered  FORCE
+all: sub-plugins-all-ordered sub-tests-all-ordered  FORCE
+clean: sub-plugins-clean-ordered sub-tests-clean-ordered  FORCE
+distclean: sub-plugins-distclean-ordered sub-tests-distclean-ordered  FORCE
 	-$(DEL_FILE) Makefile
 	-$(DEL_FILE) .qmake.stash
-install_subtargets: sub-core-install_subtargets-ordered sub-plugins-install_subtargets-ordered sub-tests-install_subtargets-ordered FORCE
-uninstall_subtargets: sub-core-uninstall_subtargets-ordered sub-plugins-uninstall_subtargets-ordered sub-tests-uninstall_subtargets-ordered FORCE
+install_subtargets: sub-plugins-install_subtargets-ordered sub-tests-install_subtargets-ordered FORCE
+uninstall_subtargets: sub-plugins-uninstall_subtargets-ordered sub-tests-uninstall_subtargets-ordered FORCE
 
-sub-core-debug_ordered:
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-sub-plugins-debug_ordered: sub-core-debug_ordered 
+sub-plugins-debug_ordered:
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
@@ -544,13 +482,9 @@ sub-tests-debug_ordered: sub-plugins-debug_ordered
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\tests.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-core-debug_ordered sub-plugins-debug_ordered sub-tests-debug_ordered
+debug: sub-plugins-debug_ordered sub-tests-debug_ordered
 
-sub-core-release_ordered:
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-sub-plugins-release_ordered: sub-core-release_ordered 
+sub-plugins-release_ordered:
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
@@ -558,13 +492,9 @@ sub-tests-release_ordered: sub-plugins-release_ordered
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\tests.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-core-release_ordered sub-plugins-release_ordered sub-tests-release_ordered
+release: sub-plugins-release_ordered sub-tests-release_ordered
 
-sub-core-check_ordered:
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-sub-plugins-check_ordered: sub-core-check_ordered 
+sub-plugins-check_ordered:
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
@@ -572,13 +502,9 @@ sub-tests-check_ordered: sub-plugins-check_ordered
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\tests.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-core-check_ordered sub-plugins-check_ordered sub-tests-check_ordered
+check: sub-plugins-check_ordered sub-tests-check_ordered
 
-sub-core-benchmark_ordered:
-	@if not exist core\ mkdir core\ & if not exist core\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd core\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\core\core.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-sub-plugins-benchmark_ordered: sub-core-benchmark_ordered 
+sub-plugins-benchmark_ordered:
 	@if not exist plugins\ mkdir plugins\ & if not exist plugins\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd plugins\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\plugins.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
@@ -586,7 +512,7 @@ sub-tests-benchmark_ordered: sub-plugins-benchmark_ordered
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\tests.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-core-benchmark_ordered sub-plugins-benchmark_ordered sub-tests-benchmark_ordered
+benchmark: sub-plugins-benchmark_ordered sub-tests-benchmark_ordered
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE
