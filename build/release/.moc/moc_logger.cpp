@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../plugins/log4qt/logger.h"
+#include "../../../log4qt/logger.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Log4Qt__Logger_t {
     QByteArrayData data[9];
-    char stringdata0[107];
+    char stringdata0[99];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,18 +34,17 @@ static const qt_meta_stringdata_Log4Qt__Logger_t qt_meta_stringdata_Log4Qt__Logg
 QT_MOC_LITERAL(0, 0, 14), // "Log4Qt::Logger"
 QT_MOC_LITERAL(1, 15, 10), // "additivity"
 QT_MOC_LITERAL(2, 26, 5), // "level"
-QT_MOC_LITERAL(3, 32, 13), // "Log4Qt::Level"
-QT_MOC_LITERAL(4, 46, 16), // "loggerRepository"
-QT_MOC_LITERAL(5, 63, 17), // "LoggerRepository*"
-QT_MOC_LITERAL(6, 81, 4), // "name"
-QT_MOC_LITERAL(7, 86, 12), // "parentLogger"
-QT_MOC_LITERAL(8, 99, 7) // "Logger*"
+QT_MOC_LITERAL(3, 32, 5), // "Level"
+QT_MOC_LITERAL(4, 38, 16), // "loggerRepository"
+QT_MOC_LITERAL(5, 55, 17), // "LoggerRepository*"
+QT_MOC_LITERAL(6, 73, 4), // "name"
+QT_MOC_LITERAL(7, 78, 12), // "parentLogger"
+QT_MOC_LITERAL(8, 91, 7) // "Logger*"
 
     },
-    "Log4Qt::Logger\0additivity\0level\0"
-    "Log4Qt::Level\0loggerRepository\0"
-    "LoggerRepository*\0name\0parentLogger\0"
-    "Logger*"
+    "Log4Qt::Logger\0additivity\0level\0Level\0"
+    "loggerRepository\0LoggerRepository*\0"
+    "name\0parentLogger\0Logger*"
 };
 #undef QT_MOC_LITERAL
 
@@ -77,8 +76,6 @@ void Log4Qt::Logger::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     if (_c == QMetaObject::RegisterPropertyMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 1:
-            *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Log4Qt::Level >(); break;
         case 4:
             *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Logger* >(); break;
         }
@@ -91,7 +88,7 @@ void Log4Qt::Logger::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< bool*>(_v) = _t->additivity(); break;
-        case 1: *reinterpret_cast< Log4Qt::Level*>(_v) = _t->level(); break;
+        case 1: *reinterpret_cast< Level*>(_v) = _t->level(); break;
         case 2: *reinterpret_cast< LoggerRepository**>(_v) = _t->loggerRepository(); break;
         case 3: *reinterpret_cast< QString*>(_v) = _t->name(); break;
         case 4: *reinterpret_cast< Logger**>(_v) = _t->parentLogger(); break;
@@ -103,7 +100,7 @@ void Log4Qt::Logger::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setAdditivity(*reinterpret_cast< bool*>(_v)); break;
-        case 1: _t->setLevel(*reinterpret_cast< Log4Qt::Level*>(_v)); break;
+        case 1: _t->setLevel(*reinterpret_cast< Level*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -128,8 +125,6 @@ void *Log4Qt::Logger::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_Log4Qt__Logger.stringdata0))
         return static_cast<void*>(this);
-    if (!strcmp(_clname, "AppenderAttachable"))
-        return static_cast< AppenderAttachable*>(this);
     return QObject::qt_metacast(_clname);
 }
 

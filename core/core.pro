@@ -7,6 +7,7 @@
 
 QT       += core gui sql serialbus serialport xml network
 include(../commonconfig.pri)
+include(../log4qt/log4qt.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES -= UNICODE
 DEFINES += _REENTRANT
@@ -29,13 +30,18 @@ TEMPLATE = app
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 TEST_IMAGE_REPO = $$PWD/test_images/
-
 DEFINES += TEST_IMAGES_DIR=\\\"$$TEST_IMAGE_REPO\\\"
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+#message( "Test if log4qt exists...." )
+#exists($$DESTDIR/plugins/log4qt.lib){
+#message( "Integrating Log4qt ..." )
+#LIBS += ./plugins/log4qt.lib
+#}
 
 LIBS += $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
         $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMCore.lib \
@@ -93,52 +99,62 @@ INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp \
-        newpatientdialog.cpp \
-        bodypartselectionsquare.cpp \
-        exposuredialog.cpp \
-        imageviewer.cpp \
-    pacsnodesettingsdialog.cpp \
-    loadstudydialog.cpp \
-    rs232connector.cpp \
-    modbusconnector.cpp \
-    worklistserversettingsdialog.cpp \
-    worklistdialog.cpp \
-    worklistmodel.cpp \
-    logindialog.cpp \
-    dicomwriter.cpp
+        Utils/logmgr.cpp \
+        View/mainwindow.cpp \
+#        View/newpatientdialog.cpp \
+#        View/bodypartselectionsquare.cpp \
+#        View/exposuredialog.cpp \
+#        View/imageviewer.cpp \
+#        View/pacsnodesettingsdialog.cpp \
+#        View/loadstudydialog.cpp \
+#        View/rs232connector.cpp \
+#        View/modbusconnector.cpp \
+#        View/worklistserversettingsdialog.cpp \
+#        View/worklistdialog.cpp \
+#        View/worklistmodel.cpp \
+#        View/logindialog.cpp \
+#         Utils/dicomwriter.cpp \
+#        Model/databaseservice.cpp \
+#        Controller/devicemgr.cpp \
+#        Controller/loginmgr.cpp
 
 HEADERS += \
-        mainwindow.h \
-    newpatientdialog.h \
-    bodypart.h \
-    bodypartselectionsquare.h \
-    exposuredialog.h \
-    imageviewer.h \
-    pacsnodesettingsdialog.h \
-    loadstudydialog.h\
-    ../common/include/idevice.h\
-    ../common/include/isettingsparser.h \
-    ../common/include/iconnector.h \
-    rs232connector.h \
-    modbusconnector.h \
-    worklistserversettingsdialog.h \
-    worklistdialog.h \
-    dicomtaglist.h \
-    worklistmodel.h \
-    logindialog.h \
-    dicomwriter.h
+        Utils/call_once.h \
+        Utils/singleton.h \
+        Utils/logmgr.h    \
+        View/mainwindow.h \
+#        View/newpatientdialog.h \
+#        View/bodypart.h \
+#        View/bodypartselectionsquare.h \
+#        View/exposuredialog.h \
+#        View/imageviewer.h \
+#        View/pacsnodesettingsdialog.h \
+#        loadstudydialog.h\
+#        ../common/include/idevice.h\
+#        ../common/include/isettingsparser.h \
+#        ../common/include/iconnector.h \
+#        View/rs232connector.h \
+#        View/modbusconnector.h \
+#        View/worklistserversettingsdialog.h \
+#        View/worklistdialog.h \
+#        View/dicomtaglist.h \
+#        View/worklistmodel.h \
+#        View/logindialog.h \
+#        Utils/dicomwriter.h \
+#        Model/databaseservice.h \
+#        Controller/devicemgr.h \
+#        Controller/loginmgr.h
 
 FORMS += \
-        mainwindow.ui \
-    newpatientdialog.ui \
-    exposuredialog.ui \
-    imageviewer.ui \
-    pacsnodesettingsdialog.ui \
-    loadstudydialog.ui \
-    worklistserversettingsdialog.ui \
-    worklistdialog.ui \
-    logindialog.ui
+         View/mainwindow.ui \
+#        View/newpatientdialog.ui \
+#        View/exposuredialog.ui \
+#        View/imageviewer.ui \
+#        View/pacsnodesettingsdialog.ui \
+#        View/loadstudydialog.ui \
+#        View/worklistserversettingsdialog.ui \
+#        View/worklistdialog.ui \
+#        View/logindialog.ui
 
 
 RESOURCES += \

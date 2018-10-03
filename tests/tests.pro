@@ -6,5 +6,7 @@ SUBDIRS += \
     IDeviceTest \
     DCMTKTest \
     DCMTKTest2 \
-    DCMTKTest3
+    DCMTKTest3 \
+    LogerTest \
+    DatabaseTester
 #    ImageMagicTest

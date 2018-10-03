@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../plugins/log4qt/varia/levelmatchfilter.h"
+#include "../../../log4qt/varia/levelmatchfilter.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Log4Qt__LevelMatchFilter_t {
     QByteArrayData data[4];
-    char stringdata0[66];
+    char stringdata0[58];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,11 +34,11 @@ static const qt_meta_stringdata_Log4Qt__LevelMatchFilter_t qt_meta_stringdata_Lo
 QT_MOC_LITERAL(0, 0, 24), // "Log4Qt::LevelMatchFilter"
 QT_MOC_LITERAL(1, 25, 13), // "acceptOnMatch"
 QT_MOC_LITERAL(2, 39, 12), // "levelToMatch"
-QT_MOC_LITERAL(3, 52, 13) // "Log4Qt::Level"
+QT_MOC_LITERAL(3, 52, 5) // "Level"
 
     },
     "Log4Qt::LevelMatchFilter\0acceptOnMatch\0"
-    "levelToMatch\0Log4Qt::Level"
+    "levelToMatch\0Level"
 };
 #undef QT_MOC_LITERAL
 
@@ -64,22 +64,15 @@ static const uint qt_meta_data_Log4Qt__LevelMatchFilter[] = {
 
 void Log4Qt::LevelMatchFilter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    if (_c == QMetaObject::RegisterPropertyMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 1:
-            *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Log4Qt::Level >(); break;
-        }
-    }
 
 #ifndef QT_NO_PROPERTIES
-    else if (_c == QMetaObject::ReadProperty) {
+    if (_c == QMetaObject::ReadProperty) {
         LevelMatchFilter *_t = static_cast<LevelMatchFilter *>(_o);
         Q_UNUSED(_t)
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< bool*>(_v) = _t->acceptOnMatch(); break;
-        case 1: *reinterpret_cast< Log4Qt::Level*>(_v) = _t->levelToMatch(); break;
+        case 1: *reinterpret_cast< Level*>(_v) = _t->levelToMatch(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -88,13 +81,16 @@ void Log4Qt::LevelMatchFilter::qt_static_metacall(QObject *_o, QMetaObject::Call
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setAcceptOnMatch(*reinterpret_cast< bool*>(_v)); break;
-        case 1: _t->setLevelToMatch(*reinterpret_cast< Log4Qt::Level*>(_v)); break;
+        case 1: _t->setLevelToMatch(*reinterpret_cast< Level*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
     }
 #endif // QT_NO_PROPERTIES
     Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 const QMetaObject Log4Qt::LevelMatchFilter::staticMetaObject = {

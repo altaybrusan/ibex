@@ -26,45 +26,11 @@ SYMLINK       = $(QMAKE) -install ln -f -s
 DEL_DIR       = rmdir
 MOVE          = move
 SUBTARGETS    =  \
-		sub-log4qt \
 		sub-GulmayGenerator \
 		sub-TeledyneDetector \
 		sub-DeltaB2MotorDriver
 
 
-sub-log4qt-qmake_all:  FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	cd log4qt\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && $(MAKE) -f Makefile qmake_all
-sub-log4qt: FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile
-sub-log4qt-make_first: FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
-sub-log4qt-all: FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
-sub-log4qt-clean: FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
-sub-log4qt-distclean: FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
-sub-log4qt-install_subtargets: FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
-sub-log4qt-uninstall_subtargets: FORCE
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
 sub-GulmayGenerator-qmake_all:  FORCE
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
 	cd GulmayGenerator\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\GulmayGenerator\GulmayGenerator.pro -spec win32-msvc
@@ -483,20 +449,16 @@ plugins.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile plugins.pro -spec win32-msvc
 
-qmake_all: sub-log4qt-qmake_all sub-GulmayGenerator-qmake_all sub-TeledyneDetector-qmake_all sub-DeltaB2MotorDriver-qmake_all FORCE
+qmake_all: sub-GulmayGenerator-qmake_all sub-TeledyneDetector-qmake_all sub-DeltaB2MotorDriver-qmake_all FORCE
 
-make_first: sub-log4qt-make_first sub-GulmayGenerator-make_first sub-TeledyneDetector-make_first sub-DeltaB2MotorDriver-make_first  FORCE
-all: sub-log4qt-all sub-GulmayGenerator-all sub-TeledyneDetector-all sub-DeltaB2MotorDriver-all  FORCE
-clean: sub-log4qt-clean sub-GulmayGenerator-clean sub-TeledyneDetector-clean sub-DeltaB2MotorDriver-clean  FORCE
-distclean: sub-log4qt-distclean sub-GulmayGenerator-distclean sub-TeledyneDetector-distclean sub-DeltaB2MotorDriver-distclean  FORCE
+make_first: sub-GulmayGenerator-make_first sub-TeledyneDetector-make_first sub-DeltaB2MotorDriver-make_first  FORCE
+all: sub-GulmayGenerator-all sub-TeledyneDetector-all sub-DeltaB2MotorDriver-all  FORCE
+clean: sub-GulmayGenerator-clean sub-TeledyneDetector-clean sub-DeltaB2MotorDriver-clean  FORCE
+distclean: sub-GulmayGenerator-distclean sub-TeledyneDetector-distclean sub-DeltaB2MotorDriver-distclean  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-log4qt-install_subtargets sub-GulmayGenerator-install_subtargets sub-TeledyneDetector-install_subtargets sub-DeltaB2MotorDriver-install_subtargets FORCE
-uninstall_subtargets: sub-log4qt-uninstall_subtargets sub-GulmayGenerator-uninstall_subtargets sub-TeledyneDetector-uninstall_subtargets sub-DeltaB2MotorDriver-uninstall_subtargets FORCE
+install_subtargets: sub-GulmayGenerator-install_subtargets sub-TeledyneDetector-install_subtargets sub-DeltaB2MotorDriver-install_subtargets FORCE
+uninstall_subtargets: sub-GulmayGenerator-uninstall_subtargets sub-TeledyneDetector-uninstall_subtargets sub-DeltaB2MotorDriver-uninstall_subtargets FORCE
 
-sub-log4qt-debug:
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
 sub-GulmayGenerator-debug:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
@@ -509,12 +471,8 @@ sub-DeltaB2MotorDriver-debug:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-log4qt-debug sub-GulmayGenerator-debug sub-TeledyneDetector-debug sub-DeltaB2MotorDriver-debug
+debug: sub-GulmayGenerator-debug sub-TeledyneDetector-debug sub-DeltaB2MotorDriver-debug
 
-sub-log4qt-release:
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
 sub-GulmayGenerator-release:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
@@ -527,12 +485,8 @@ sub-DeltaB2MotorDriver-release:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-log4qt-release sub-GulmayGenerator-release sub-TeledyneDetector-release sub-DeltaB2MotorDriver-release
+release: sub-GulmayGenerator-release sub-TeledyneDetector-release sub-DeltaB2MotorDriver-release
 
-sub-log4qt-check:
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
 sub-GulmayGenerator-check:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
@@ -545,12 +499,8 @@ sub-DeltaB2MotorDriver-check:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-log4qt-check sub-GulmayGenerator-check sub-TeledyneDetector-check sub-DeltaB2MotorDriver-check
+check: sub-GulmayGenerator-check sub-TeledyneDetector-check sub-DeltaB2MotorDriver-check
 
-sub-log4qt-benchmark:
-	@if not exist log4qt\ mkdir log4qt\ & if not exist log4qt\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd log4qt\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\log4qt\log4qt.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
 sub-GulmayGenerator-benchmark:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
@@ -563,7 +513,7 @@ sub-DeltaB2MotorDriver-benchmark:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-log4qt-benchmark sub-GulmayGenerator-benchmark sub-TeledyneDetector-benchmark sub-DeltaB2MotorDriver-benchmark
+benchmark: sub-GulmayGenerator-benchmark sub-TeledyneDetector-benchmark sub-DeltaB2MotorDriver-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

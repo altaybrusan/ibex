@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../plugins/log4qt/ttcclayout.h"
+#include "../../../log4qt/ttcclayout.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Log4Qt__TTCCLayout_t {
     QByteArrayData data[11];
-    char stringdata0[126];
+    char stringdata0[136];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,15 +39,15 @@ QT_MOC_LITERAL(4, 64, 14), // "threadPrinting"
 QT_MOC_LITERAL(5, 79, 10), // "DateFormat"
 QT_MOC_LITERAL(6, 90, 4), // "NONE"
 QT_MOC_LITERAL(7, 95, 7), // "ISO8601"
-QT_MOC_LITERAL(8, 103, 8), // "ABSOLUTE"
-QT_MOC_LITERAL(9, 112, 4), // "DATE"
-QT_MOC_LITERAL(10, 117, 8) // "RELATIVE"
+QT_MOC_LITERAL(8, 103, 13), // "TIME_ABSOLUTE"
+QT_MOC_LITERAL(9, 117, 4), // "DATE"
+QT_MOC_LITERAL(10, 122, 13) // "TIME_RELATIVE"
 
     },
     "Log4Qt::TTCCLayout\0categoryPrefixing\0"
     "contextPrinting\0dateFormat\0threadPrinting\0"
-    "DateFormat\0NONE\0ISO8601\0ABSOLUTE\0DATE\0"
-    "RELATIVE"
+    "DateFormat\0NONE\0ISO8601\0TIME_ABSOLUTE\0"
+    "DATE\0TIME_RELATIVE"
 };
 #undef QT_MOC_LITERAL
 
@@ -76,9 +76,9 @@ static const uint qt_meta_data_Log4Qt__TTCCLayout[] = {
  // enum data: key, value
        6, uint(Log4Qt::TTCCLayout::NONE),
        7, uint(Log4Qt::TTCCLayout::ISO8601),
-       8, uint(Log4Qt::TTCCLayout::ABSOLUTE),
+       8, uint(Log4Qt::TTCCLayout::TIME_ABSOLUTE),
        9, uint(Log4Qt::TTCCLayout::DATE),
-      10, uint(Log4Qt::TTCCLayout::RELATIVE),
+      10, uint(Log4Qt::TTCCLayout::TIME_RELATIVE),
 
        0        // eod
 };

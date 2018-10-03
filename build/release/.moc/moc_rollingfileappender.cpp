@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../plugins/log4qt/rollingfileappender.h"
+#include "../../../log4qt/rollingfileappender.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -58,7 +58,7 @@ static const uint qt_meta_data_Log4Qt__RollingFileAppender[] = {
  // properties: name, type, flags
        1, QMetaType::Int, 0x00095103,
        2, QMetaType::LongLong, 0x00095103,
-       3, QMetaType::QString, 0x00095103,
+       3, QMetaType::QString, 0x00095102,
 
        0        // eod
 };
@@ -74,7 +74,6 @@ void Log4Qt::RollingFileAppender::qt_static_metacall(QObject *_o, QMetaObject::C
         switch (_id) {
         case 0: *reinterpret_cast< int*>(_v) = _t->maxBackupIndex(); break;
         case 1: *reinterpret_cast< qint64*>(_v) = _t->maximumFileSize(); break;
-        case 2: *reinterpret_cast< QString*>(_v) = _t->maxFileSize(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {

@@ -31,7 +31,9 @@ SUBTARGETS    =  \
 		sub-IDeviceTest \
 		sub-DCMTKTest \
 		sub-DCMTKTest2 \
-		sub-DCMTKTest3
+		sub-DCMTKTest3 \
+		sub-LogerTest \
+		sub-DatabaseTester
 
 
 sub-RS232ConnectorTest-qmake_all:  FORCE
@@ -232,6 +234,72 @@ sub-DCMTKTest3-uninstall_subtargets: FORCE
 	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+sub-LogerTest-qmake_all:  FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	cd LogerTest\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && $(MAKE) -f Makefile qmake_all
+sub-LogerTest: FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-LogerTest-make_first: FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-LogerTest-all: FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-LogerTest-clean: FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-LogerTest-distclean: FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-LogerTest-install_subtargets: FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-LogerTest-uninstall_subtargets: FORCE
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+sub-DatabaseTester-qmake_all:  FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	cd DatabaseTester\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && $(MAKE) -f Makefile qmake_all
+sub-DatabaseTester: FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-DatabaseTester-make_first: FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-DatabaseTester-all: FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-DatabaseTester-clean: FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-DatabaseTester-distclean: FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-DatabaseTester-install_subtargets: FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-DatabaseTester-uninstall_subtargets: FORCE
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
 
 Makefile: tests.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf \
@@ -551,15 +619,15 @@ tests.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile tests.pro -spec win32-msvc
 
-qmake_all: sub-RS232ConnectorTest-qmake_all sub-GeneralQtFeaturesTest-qmake_all sub-IDeviceTest-qmake_all sub-DCMTKTest-qmake_all sub-DCMTKTest2-qmake_all sub-DCMTKTest3-qmake_all FORCE
+qmake_all: sub-RS232ConnectorTest-qmake_all sub-GeneralQtFeaturesTest-qmake_all sub-IDeviceTest-qmake_all sub-DCMTKTest-qmake_all sub-DCMTKTest2-qmake_all sub-DCMTKTest3-qmake_all sub-LogerTest-qmake_all sub-DatabaseTester-qmake_all FORCE
 
-make_first: sub-RS232ConnectorTest-make_first sub-GeneralQtFeaturesTest-make_first sub-IDeviceTest-make_first sub-DCMTKTest-make_first sub-DCMTKTest2-make_first sub-DCMTKTest3-make_first  FORCE
-all: sub-RS232ConnectorTest-all sub-GeneralQtFeaturesTest-all sub-IDeviceTest-all sub-DCMTKTest-all sub-DCMTKTest2-all sub-DCMTKTest3-all  FORCE
-clean: sub-RS232ConnectorTest-clean sub-GeneralQtFeaturesTest-clean sub-IDeviceTest-clean sub-DCMTKTest-clean sub-DCMTKTest2-clean sub-DCMTKTest3-clean  FORCE
-distclean: sub-RS232ConnectorTest-distclean sub-GeneralQtFeaturesTest-distclean sub-IDeviceTest-distclean sub-DCMTKTest-distclean sub-DCMTKTest2-distclean sub-DCMTKTest3-distclean  FORCE
+make_first: sub-RS232ConnectorTest-make_first sub-GeneralQtFeaturesTest-make_first sub-IDeviceTest-make_first sub-DCMTKTest-make_first sub-DCMTKTest2-make_first sub-DCMTKTest3-make_first sub-LogerTest-make_first sub-DatabaseTester-make_first  FORCE
+all: sub-RS232ConnectorTest-all sub-GeneralQtFeaturesTest-all sub-IDeviceTest-all sub-DCMTKTest-all sub-DCMTKTest2-all sub-DCMTKTest3-all sub-LogerTest-all sub-DatabaseTester-all  FORCE
+clean: sub-RS232ConnectorTest-clean sub-GeneralQtFeaturesTest-clean sub-IDeviceTest-clean sub-DCMTKTest-clean sub-DCMTKTest2-clean sub-DCMTKTest3-clean sub-LogerTest-clean sub-DatabaseTester-clean  FORCE
+distclean: sub-RS232ConnectorTest-distclean sub-GeneralQtFeaturesTest-distclean sub-IDeviceTest-distclean sub-DCMTKTest-distclean sub-DCMTKTest2-distclean sub-DCMTKTest3-distclean sub-LogerTest-distclean sub-DatabaseTester-distclean  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-RS232ConnectorTest-install_subtargets sub-GeneralQtFeaturesTest-install_subtargets sub-IDeviceTest-install_subtargets sub-DCMTKTest-install_subtargets sub-DCMTKTest2-install_subtargets sub-DCMTKTest3-install_subtargets FORCE
-uninstall_subtargets: sub-RS232ConnectorTest-uninstall_subtargets sub-GeneralQtFeaturesTest-uninstall_subtargets sub-IDeviceTest-uninstall_subtargets sub-DCMTKTest-uninstall_subtargets sub-DCMTKTest2-uninstall_subtargets sub-DCMTKTest3-uninstall_subtargets FORCE
+install_subtargets: sub-RS232ConnectorTest-install_subtargets sub-GeneralQtFeaturesTest-install_subtargets sub-IDeviceTest-install_subtargets sub-DCMTKTest-install_subtargets sub-DCMTKTest2-install_subtargets sub-DCMTKTest3-install_subtargets sub-LogerTest-install_subtargets sub-DatabaseTester-install_subtargets FORCE
+uninstall_subtargets: sub-RS232ConnectorTest-uninstall_subtargets sub-GeneralQtFeaturesTest-uninstall_subtargets sub-IDeviceTest-uninstall_subtargets sub-DCMTKTest-uninstall_subtargets sub-DCMTKTest2-uninstall_subtargets sub-DCMTKTest3-uninstall_subtargets sub-LogerTest-uninstall_subtargets sub-DatabaseTester-uninstall_subtargets FORCE
 
 sub-RS232ConnectorTest-debug:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -585,7 +653,15 @@ sub-DCMTKTest3-debug:
 	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-RS232ConnectorTest-debug sub-GeneralQtFeaturesTest-debug sub-IDeviceTest-debug sub-DCMTKTest-debug sub-DCMTKTest2-debug sub-DCMTKTest3-debug
+sub-LogerTest-debug:
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+sub-DatabaseTester-debug:
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+debug: sub-RS232ConnectorTest-debug sub-GeneralQtFeaturesTest-debug sub-IDeviceTest-debug sub-DCMTKTest-debug sub-DCMTKTest2-debug sub-DCMTKTest3-debug sub-LogerTest-debug sub-DatabaseTester-debug
 
 sub-RS232ConnectorTest-release:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -611,7 +687,15 @@ sub-DCMTKTest3-release:
 	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-RS232ConnectorTest-release sub-GeneralQtFeaturesTest-release sub-IDeviceTest-release sub-DCMTKTest-release sub-DCMTKTest2-release sub-DCMTKTest3-release
+sub-LogerTest-release:
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+sub-DatabaseTester-release:
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+release: sub-RS232ConnectorTest-release sub-GeneralQtFeaturesTest-release sub-IDeviceTest-release sub-DCMTKTest-release sub-DCMTKTest2-release sub-DCMTKTest3-release sub-LogerTest-release sub-DatabaseTester-release
 
 sub-RS232ConnectorTest-check:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -637,7 +721,15 @@ sub-DCMTKTest3-check:
 	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-RS232ConnectorTest-check sub-GeneralQtFeaturesTest-check sub-IDeviceTest-check sub-DCMTKTest-check sub-DCMTKTest2-check sub-DCMTKTest3-check
+sub-LogerTest-check:
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+sub-DatabaseTester-check:
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+check: sub-RS232ConnectorTest-check sub-GeneralQtFeaturesTest-check sub-IDeviceTest-check sub-DCMTKTest-check sub-DCMTKTest2-check sub-DCMTKTest3-check sub-LogerTest-check sub-DatabaseTester-check
 
 sub-RS232ConnectorTest-benchmark:
 	@if not exist RS232ConnectorTest\ mkdir RS232ConnectorTest\ & if not exist RS232ConnectorTest\ exit 1
@@ -663,7 +755,15 @@ sub-DCMTKTest3-benchmark:
 	@if not exist DCMTKTest3\ mkdir DCMTKTest3\ & if not exist DCMTKTest3\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DCMTKTest3\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DCMTKTest3\DCMTKTest3.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-RS232ConnectorTest-benchmark sub-GeneralQtFeaturesTest-benchmark sub-IDeviceTest-benchmark sub-DCMTKTest-benchmark sub-DCMTKTest2-benchmark sub-DCMTKTest3-benchmark
+sub-LogerTest-benchmark:
+	@if not exist LogerTest\ mkdir LogerTest\ & if not exist LogerTest\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd LogerTest\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\LogerTest\LogerTest.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+sub-DatabaseTester-benchmark:
+	@if not exist DatabaseTester\ mkdir DatabaseTester\ & if not exist DatabaseTester\ exit 1
+	@set MAKEFLAGS=$(MAKEFLAGS)
+	cd DatabaseTester\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\tests\DatabaseTester\DatabaseTester.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-RS232ConnectorTest-benchmark sub-GeneralQtFeaturesTest-benchmark sub-IDeviceTest-benchmark sub-DCMTKTest-benchmark sub-DCMTKTest2-benchmark sub-DCMTKTest3-benchmark sub-LogerTest-benchmark sub-DatabaseTester-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../plugins/log4qt/appender.h"
+#include "../../../log4qt/appender.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Log4Qt__Appender_t {
     QByteArrayData data[5];
-    char stringdata0[60];
+    char stringdata0[52];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,13 +33,13 @@ static const qt_meta_stringdata_Log4Qt__Appender_t qt_meta_stringdata_Log4Qt__Ap
     {
 QT_MOC_LITERAL(0, 0, 16), // "Log4Qt::Appender"
 QT_MOC_LITERAL(1, 17, 6), // "layout"
-QT_MOC_LITERAL(2, 24, 15), // "LayoutSharedPtr"
-QT_MOC_LITERAL(3, 40, 4), // "name"
-QT_MOC_LITERAL(4, 45, 14) // "requiresLayout"
+QT_MOC_LITERAL(2, 24, 7), // "Layout*"
+QT_MOC_LITERAL(3, 32, 4), // "name"
+QT_MOC_LITERAL(4, 37, 14) // "requiresLayout"
 
     },
-    "Log4Qt::Appender\0layout\0LayoutSharedPtr\0"
-    "name\0requiresLayout"
+    "Log4Qt::Appender\0layout\0Layout*\0name\0"
+    "requiresLayout"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,7 +73,7 @@ void Log4Qt::Appender::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         Q_UNUSED(_t)
         void *_v = _a[0];
         switch (_id) {
-        case 0: *reinterpret_cast< LayoutSharedPtr*>(_v) = _t->layout(); break;
+        case 0: *reinterpret_cast< Layout**>(_v) = _t->layout(); break;
         case 1: *reinterpret_cast< QString*>(_v) = _t->name(); break;
         case 2: *reinterpret_cast< bool*>(_v) = _t->requiresLayout(); break;
         default: break;
@@ -83,7 +83,7 @@ void Log4Qt::Appender::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         Q_UNUSED(_t)
         void *_v = _a[0];
         switch (_id) {
-        case 0: _t->setLayout(*reinterpret_cast< LayoutSharedPtr*>(_v)); break;
+        case 0: _t->setLayout(*reinterpret_cast< Layout**>(_v)); break;
         case 1: _t->setName(*reinterpret_cast< QString*>(_v)); break;
         default: break;
         }
@@ -97,7 +97,7 @@ void Log4Qt::Appender::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
 }
 
 const QMetaObject Log4Qt::Appender::staticMetaObject = {
-    { &QObject::staticMetaObject, qt_meta_stringdata_Log4Qt__Appender.data,
+    { &LogObject::staticMetaObject, qt_meta_stringdata_Log4Qt__Appender.data,
       qt_meta_data_Log4Qt__Appender,  qt_static_metacall, nullptr, nullptr}
 };
 
@@ -112,12 +112,12 @@ void *Log4Qt::Appender::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_Log4Qt__Appender.stringdata0))
         return static_cast<void*>(this);
-    return QObject::qt_metacast(_clname);
+    return LogObject::qt_metacast(_clname);
 }
 
 int Log4Qt::Appender::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QObject::qt_metacall(_c, _id, _a);
+    _id = LogObject::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     

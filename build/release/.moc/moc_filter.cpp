@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../plugins/log4qt/spi/filter.h"
+#include "../../../log4qt/spi/filter.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Log4Qt__Filter_t {
     QByteArrayData data[7];
-    char stringdata0[65];
+    char stringdata0[57];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,15 +33,15 @@ static const qt_meta_stringdata_Log4Qt__Filter_t qt_meta_stringdata_Log4Qt__Filt
     {
 QT_MOC_LITERAL(0, 0, 14), // "Log4Qt::Filter"
 QT_MOC_LITERAL(1, 15, 4), // "next"
-QT_MOC_LITERAL(2, 20, 15), // "FilterSharedPtr"
-QT_MOC_LITERAL(3, 36, 8), // "Decision"
-QT_MOC_LITERAL(4, 45, 6), // "ACCEPT"
-QT_MOC_LITERAL(5, 52, 4), // "DENY"
-QT_MOC_LITERAL(6, 57, 7) // "NEUTRAL"
+QT_MOC_LITERAL(2, 20, 7), // "Filter*"
+QT_MOC_LITERAL(3, 28, 8), // "Decision"
+QT_MOC_LITERAL(4, 37, 6), // "ACCEPT"
+QT_MOC_LITERAL(5, 44, 4), // "DENY"
+QT_MOC_LITERAL(6, 49, 7) // "NEUTRAL"
 
     },
-    "Log4Qt::Filter\0next\0FilterSharedPtr\0"
-    "Decision\0ACCEPT\0DENY\0NEUTRAL"
+    "Log4Qt::Filter\0next\0Filter*\0Decision\0"
+    "ACCEPT\0DENY\0NEUTRAL"
 };
 #undef QT_MOC_LITERAL
 
@@ -74,14 +74,21 @@ static const uint qt_meta_data_Log4Qt__Filter[] = {
 
 void Log4Qt::Filter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
+    if (_c == QMetaObject::RegisterPropertyMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        case 0:
+            *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Filter* >(); break;
+        }
+    }
 
 #ifndef QT_NO_PROPERTIES
-    if (_c == QMetaObject::ReadProperty) {
+    else if (_c == QMetaObject::ReadProperty) {
         Filter *_t = static_cast<Filter *>(_o);
         Q_UNUSED(_t)
         void *_v = _a[0];
         switch (_id) {
-        case 0: *reinterpret_cast< FilterSharedPtr*>(_v) = _t->next(); break;
+        case 0: *reinterpret_cast< Filter**>(_v) = _t->next(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -89,20 +96,17 @@ void Log4Qt::Filter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         Q_UNUSED(_t)
         void *_v = _a[0];
         switch (_id) {
-        case 0: _t->setNext(*reinterpret_cast< FilterSharedPtr*>(_v)); break;
+        case 0: _t->setNext(*reinterpret_cast< Filter**>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
     }
 #endif // QT_NO_PROPERTIES
     Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
 }
 
 const QMetaObject Log4Qt::Filter::staticMetaObject = {
-    { &QObject::staticMetaObject, qt_meta_stringdata_Log4Qt__Filter.data,
+    { &LogObject::staticMetaObject, qt_meta_stringdata_Log4Qt__Filter.data,
       qt_meta_data_Log4Qt__Filter,  qt_static_metacall, nullptr, nullptr}
 };
 
@@ -117,12 +121,12 @@ void *Log4Qt::Filter::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_Log4Qt__Filter.stringdata0))
         return static_cast<void*>(this);
-    return QObject::qt_metacast(_clname);
+    return LogObject::qt_metacast(_clname);
 }
 
 int Log4Qt::Filter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QObject::qt_metacall(_c, _id, _a);
+    _id = LogObject::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     
