@@ -19,18 +19,7 @@ class NewPatientDialog : public QDialog
 
 public:
     explicit NewPatientDialog(QWidget *parent = 0);
-    enum DemographyKeys
-    {
-        LastName,
-        FirstName,
-        MiddleName,
-        PatientID,
-        DOB,
-        Gender,
-        ReferrinPhysician,
-        AdmissionNumber,
-        AccessionNumber
-    };
+ 
     QString GetPatientInfo(NewPatientDialog::DemographyKeys field);
     QStringList GetSelectedProceduresList();
     ~NewPatientDialog();
@@ -64,10 +53,9 @@ private:
     Ui::NewPatientDialog *ui;
     QGraphicsScene* scene;
     QGraphicsEllipseItem* ellipse;
-    QMap<DemographyKeys,QString> demographics;
     BodyPartSelectionSquare *head,*thorax,
     *abdomen,*pelvis,*fermur,
-    *knee,*tibia,*ankel,*foot,
+    *knee,*tibia,*ankle,*foot,
     *hand,*finger,*wrist,*elbow,*Scapula,*shoulder;
 
     QStringList _selectedBodyPartList;

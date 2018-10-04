@@ -38,12 +38,12 @@ void BodyPartSelectionSquare::paint(QPainter *painter, const QStyleOptionGraphic
     if(selected)
     {
         brush.setColor(QColor(255, 255, 100, 128));
-        emit NotifyBodyPartIsStatusChanged(_name,true);
+        emit NotifyBodyPartSelectionChanged(_name,true);
     }
     else
     {
         brush.setColor(QColor(128, 220, 255, 128));
-        emit NotifyBodyPartIsStatusChanged(_name,false);
+        emit NotifyBodyPartSelectionChanged(_name,false);
     }
 
     painter->fillRect(rect,brush);

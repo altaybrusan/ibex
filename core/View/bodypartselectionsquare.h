@@ -21,7 +21,7 @@ public:
     void SetSelectionSquareName(iBEX::BODY_PART name);
 
 signals:
-    void NotifyBodyPartIsStatusChanged(iBEX::BODY_PART bodypart,bool isSelected);
+    void NotifyBodyPartSelectionChanged(iBEX::BODY_PART bodypart,bool isSelected);
 
 
 protected:

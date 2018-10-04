@@ -105,7 +105,9 @@ SOURCES += \
         Utils/settingsprovider.cpp \
         View/newpatientdialog.cpp \
         View/bodypartselectionsquare.cpp \
-    Model/patientdata.cpp
+    Model/patientdata.cpp \
+    Utils/dicomtools.cpp \
+    Model/anatomicregionelement.cpp
 #        View/exposuredialog.cpp \
 #        View/imageviewer.cpp \
 #        View/pacsnodesettingsdialog.cpp \
@@ -132,7 +134,9 @@ HEADERS += \
         View/newpatientdialog.h\
         View/bodypartselectionsquare.h \
         Model/DICOM_ENUMS.h \
-    Model/patientdata.h
+    Model/patientdata.h \
+    Utils/dicomtools.h \
+    Model/anatomicregionelement.h
 #        View/exposuredialog.h \
 #        View/imageviewer.h \
 #        View/pacsnodesettingsdialog.h \

@@ -3,6 +3,7 @@
 #include <QRegExpValidator>
 #include <QPushButton>
 #include <QDateTime>
+#include "Utils/dicomtools.h"
 
 // no view for each body part
 NewPatientDialog::NewPatientDialog(QWidget *parent) :
@@ -59,9 +60,9 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     tibia->setToolTip("tibia");
     tibia->SetSelectionSquareName(iBEX::BODY_PART::TIBIA);
 
-    ankel=new BodyPartSelectionSquare(52,330,64,15,this);
-    ankel->setToolTip("ankel");
-    ankel->SetSelectionSquareName(iBEX::BODY_PART::ANKEL);
+    ankle=new BodyPartSelectionSquare(52,330,64,15,this);
+    ankle->setToolTip("ankel");
+    ankle->SetSelectionSquareName(iBEX::BODY_PART::ANKEL);
 
     foot=new BodyPartSelectionSquare(52,347,66,11,this);
     foot->setToolTip("foot");
@@ -94,7 +95,7 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     scene->addItem(fermur);
     scene->addItem(knee);
     scene->addItem(tibia);
-    scene->addItem(ankel);
+    scene->addItem(ankle);
     scene->addItem(foot);
 
     scene->addItem(finger);
@@ -102,8 +103,6 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     scene->addItem(wrist);
     scene->addItem(shoulder);
     scene->addItem(elbow);
-
-
 
     foreach (auto item, scene->items()) {
 
@@ -118,13 +117,8 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
                     SLOT(OnBodyPartStatusChanged(iBEX::BODY_PART,bool)));
         }
     }
-    QString year=QString::number(QDateTime::currentDateTime().date().year());
-    QString month=QString::number(QDateTime::currentDateTime().date().month());
-    QString date=QString::number(QDateTime::currentDateTime().date().day());
-    QString hour=QString::number(QDateTime::currentDateTime().time().hour());
-    QString min=QString::number(QDateTime::currentDateTime().time().minute());
-    QString msec=QString::number(QDateTime::currentDateTime().time().msec());
-    ui->accessionNumberLineEdit->setText(year+month+date+hour+min+msec);
+
+    ui->accessionNumberLineEdit->setText(DicomTools::GenerateAccessionNumber());
 }
 
 QString NewPatientDialog::GetPatientInfo(NewPatientDialog::DemographyKeys field)

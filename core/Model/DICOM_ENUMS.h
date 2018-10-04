@@ -27,8 +27,14 @@ namespace iBEX
         KNEE, TIBIA,  ANKEL,   FOOT,   HAND,
         FINGER, WRIST,ELBOW,   SCAPULA,SHOULDER
     };
+    /* Patient's Sex	(0010,0040) **/
+    enum class GENDER
+    {
+        M,F,O
+    }
 
     Q_ENUM_NS(BODY_PART);
+    Q_ENUM_NS(GENDER);
 }
 
 #endif // BODYPART_H
