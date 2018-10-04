@@ -1,0 +1,12 @@
+#include "patientdata.h"
+
+PatientData::PatientData(QObject *parent) : QObject(parent)
+{
+    
+}
+
+void PatientData::AddNewProcedure(QString procName)
+{
+    m_ProcedureList.removeOne()
+    
+}

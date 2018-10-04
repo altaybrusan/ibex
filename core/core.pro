@@ -104,7 +104,8 @@ SOURCES += \
 #        View/mainwindow.cpp
         Utils/settingsprovider.cpp \
         View/newpatientdialog.cpp \
-        View/bodypartselectionsquare.cpp
+        View/bodypartselectionsquare.cpp \
+    Model/patientdata.cpp
 #        View/exposuredialog.cpp \
 #        View/imageviewer.cpp \
 #        View/pacsnodesettingsdialog.cpp \
@@ -130,7 +131,8 @@ HEADERS += \
 #       View/mainwindow.h \
         View/newpatientdialog.h\
         View/bodypartselectionsquare.h \
-        Model/DICOM_ENUMS.h
+        Model/DICOM_ENUMS.h \
+    Model/patientdata.h
 #        View/exposuredialog.h \
 #        View/imageviewer.h \
 #        View/pacsnodesettingsdialog.h \
