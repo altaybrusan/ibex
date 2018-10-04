@@ -102,9 +102,9 @@ SOURCES += \
         Utils/logmgr.cpp \
         Utils/databasemgr.cpp \
 #        View/mainwindow.cpp
-
-#        View/newpatientdialog.cpp \
-#        View/bodypartselectionsquare.cpp \
+        Utils/settingsprovider.cpp \
+        View/newpatientdialog.cpp \
+        View/bodypartselectionsquare.cpp
 #        View/exposuredialog.cpp \
 #        View/imageviewer.cpp \
 #        View/pacsnodesettingsdialog.cpp \
@@ -126,10 +126,11 @@ HEADERS += \
         Utils/singleton.h \
         Utils/logmgr.h    \
         Utils/databasemgr.h \
-#        View/mainwindow.h \
-#        View/newpatientdialog.h \
-#        View/bodypart.h \
-#        View/bodypartselectionsquare.h \
+        Utils/settingsprovider.h \
+#       View/mainwindow.h \
+        View/newpatientdialog.h\
+        View/bodypartselectionsquare.h \
+        Model/DICOM_ENUMS.h
 #        View/exposuredialog.h \
 #        View/imageviewer.h \
 #        View/pacsnodesettingsdialog.h \
@@ -152,7 +153,7 @@ HEADERS += \
 
 FORMS += \
          View/mainwindow.ui \
-#        View/newpatientdialog.ui \
+         View/newpatientdialog.ui
 #        View/exposuredialog.ui \
 #        View/imageviewer.ui \
 #        View/pacsnodesettingsdialog.ui \

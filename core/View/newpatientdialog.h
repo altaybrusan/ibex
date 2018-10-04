@@ -36,7 +36,7 @@ public:
     ~NewPatientDialog();
 
 private slots:
-    void OnBodyPartStatusChanged(iBEX::BodyPart bodyPart,bool isSelected);
+    void OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart,bool isSelected);
     void ActivateOkBtn();
     void on_buttonBox_accepted();
 

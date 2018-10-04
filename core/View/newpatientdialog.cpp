@@ -33,59 +33,59 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
 
     head =new BodyPartSelectionSquare(60,2,50,60,this);
     head->setToolTip("head");
-    head->SetSelectionSquareName(iBEX::BodyPart::HEAD);
+    head->SetSelectionSquareName(iBEX::BODY_PART::HEAD);
 
     thorax=new BodyPartSelectionSquare(55,64,60,55,this);
     thorax->setToolTip("thorax");
-    thorax->SetSelectionSquareName(iBEX::BodyPart::THORAX);
+    thorax->SetSelectionSquareName(iBEX::BODY_PART::THORAX);
 
     abdomen=new BodyPartSelectionSquare(55,121,60,35,this);
     abdomen->setToolTip("abdomen");
-    abdomen->SetSelectionSquareName(iBEX::BodyPart::ABDOMEN);
+    abdomen->SetSelectionSquareName(iBEX::BODY_PART::ABDOMEN);
 
     pelvis=new BodyPartSelectionSquare(52,158,64,30,this);
     pelvis->setToolTip("pelvis");
-    pelvis->SetSelectionSquareName(iBEX::BodyPart::PELVIS);
+    pelvis->SetSelectionSquareName(iBEX::BODY_PART::PELVIS);
 
     fermur=new BodyPartSelectionSquare(52,190,64,44,this);
     fermur->setToolTip("fermur");
-    fermur->SetSelectionSquareName(iBEX::BodyPart::FERMUR);
+    fermur->SetSelectionSquareName(iBEX::BODY_PART::FERMUR);
 
     knee=new BodyPartSelectionSquare(52,236,64,40,this);
     knee->setToolTip("knee");
-    knee->SetSelectionSquareName(iBEX::BodyPart::KNEE);
+    knee->SetSelectionSquareName(iBEX::BODY_PART::KNEE);
 
     tibia=new BodyPartSelectionSquare(52,278,64,50,this);
     tibia->setToolTip("tibia");
-    tibia->SetSelectionSquareName(iBEX::BodyPart::TIBIA);
+    tibia->SetSelectionSquareName(iBEX::BODY_PART::TIBIA);
 
     ankel=new BodyPartSelectionSquare(52,330,64,15,this);
     ankel->setToolTip("ankel");
-    ankel->SetSelectionSquareName(iBEX::BodyPart::ANKEL);
+    ankel->SetSelectionSquareName(iBEX::BODY_PART::ANKEL);
 
     foot=new BodyPartSelectionSquare(52,347,66,11,this);
     foot->setToolTip("foot");
-    foot->SetSelectionSquareName(iBEX::BodyPart::FOOT);
+    foot->SetSelectionSquareName(iBEX::BODY_PART::FOOT);
 
     finger=new BodyPartSelectionSquare(8,194,28,14,this);
     finger->setToolTip("finger");
-    finger->SetSelectionSquareName(iBEX::BodyPart::FINGER);
+    finger->SetSelectionSquareName(iBEX::BODY_PART::FINGER);
 
     hand=new BodyPartSelectionSquare(8,176,28,16,this);
     hand->setToolTip("hand");
-    hand->SetSelectionSquareName(iBEX::BodyPart::HAND);
+    hand->SetSelectionSquareName(iBEX::BODY_PART::HAND);
 
     wrist=new BodyPartSelectionSquare(8,165,28,10,this);
     wrist->setToolTip("wrist");
-    wrist->SetSelectionSquareName(iBEX::BodyPart::WRIST);
+    wrist->SetSelectionSquareName(iBEX::BODY_PART::WRIST);
 
     shoulder=new BodyPartSelectionSquare(35,55,20,25,this);
     shoulder->setToolTip("shoulder");
-    shoulder->SetSelectionSquareName(iBEX::BodyPart::SHOULDER);
+    shoulder->SetSelectionSquareName(iBEX::BODY_PART::SHOULDER);
 
     elbow=new BodyPartSelectionSquare(28,110,20,25,this);
     elbow->setToolTip("elbow");
-    elbow->SetSelectionSquareName(iBEX::BodyPart::ELBOW);
+    elbow->SetSelectionSquareName(iBEX::BODY_PART::ELBOW);
 
     scene->addItem(head);
     scene->addItem(thorax);
@@ -113,9 +113,9 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
         if(_temp)
         {
             connect(_temp,
-                    SIGNAL(NotifyBodyPartIsStatusChanged(iBEX::BodyPart,bool)),
+                    SIGNAL(NotifyBodyPartIsStatusChanged(iBEX::BODY_PART,bool)),
                     this,
-                    SLOT(OnBodyPartStatusChanged(iBEX::BodyPart,bool)));
+                    SLOT(OnBodyPartStatusChanged(iBEX::BODY_PART,bool)));
         }
     }
     QString year=QString::number(QDateTime::currentDateTime().date().year());
@@ -177,9 +177,9 @@ void NewPatientDialog::ActivateOkBtn()
 
 }
 // when a click on a body part scene happens this SLOT is called multiple times.
-void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BodyPart bodyPart, bool isSelected)
+void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool isSelected)
 {
-    QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BodyPart>();
+    QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
     QString bodyPartStr(metaEnum.valueToKey(static_cast<int>(bodyPart)));
 
     if(isSelected)

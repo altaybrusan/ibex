@@ -1,7 +1,7 @@
 #include "bodypartselectionsquare.h"
 #include <QWidget>
 #include <QStyleOptionGraphicsItem>
-#include "BodyPart.h"
+#include "Model/DICOM_ENUMS.h"
 
 BodyPartSelectionSquare::BodyPartSelectionSquare(int x,
                                                  int y,
@@ -50,7 +50,7 @@ void BodyPartSelectionSquare::paint(QPainter *painter, const QStyleOptionGraphic
     painter->drawRect(rect);
 }
 
-void BodyPartSelectionSquare::SetSelectionSquareName(iBEX::BodyPart name)
+void BodyPartSelectionSquare::SetSelectionSquareName(iBEX::BODY_PART name)
 {
     _name = name;
 }

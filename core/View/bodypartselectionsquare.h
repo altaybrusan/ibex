@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QGraphicsItem>
 #include <QPainter>
-#include "bodypart.h"
+#include "Model/DICOM_ENUMS.h"
 
 class BodyPartSelectionSquare : public QObject,public QGraphicsItem
 {
@@ -18,17 +18,17 @@ public:
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-    void SetSelectionSquareName(iBEX::BodyPart name);
+    void SetSelectionSquareName(iBEX::BODY_PART name);
 
 signals:
-    void NotifyBodyPartIsStatusChanged(iBEX::BodyPart bodypart,bool isSelected);
+    void NotifyBodyPartIsStatusChanged(iBEX::BODY_PART bodypart,bool isSelected);
 
 
 protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     int _x,_y,_width,_height;
     bool selected;
-    iBEX::BodyPart _name;
+    iBEX::BODY_PART _name;
 
 };
 
