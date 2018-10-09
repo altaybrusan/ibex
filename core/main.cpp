@@ -7,6 +7,9 @@ VTK_MODULE_INIT(vtkInteractionStyle)
 #include <QApplication>
 //#include <QSettings>
 #include <Utils/logmgr.h>
+#include "coreapplication.h"
+#include <QDebug>
+
 
 int main(int argc, char *argv[])
 {
@@ -14,14 +17,15 @@ int main(int argc, char *argv[])
     //QSettings::setDefaultFormat(QSettings::IniFormat);
     QCoreApplication::setOrganizationName("Bogazici-University");
     QCoreApplication::setApplicationName("iBEX");
-    QApplication a(argc, argv);
+    CoreApplication a(argc, argv);
 
     LogMgr::instance()->Initialize();
-    LogMgr::instance()->LogAppInfo("*** SYSTEM LOGIN");
+    LogMgr::instance()->LogAppInfo(QObject::tr("*** DEVICE STARTED..."));
 
-
-    //MainWindow w;
-    //w.show();
+    MainWindow w;
+    qDebug()<<"Hi from here to you!!!";
+    w.show();
     return a.exec();
 
 }
+

@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "worklistdialog.h"
-#include "logindialog.h"
+//#include "logindialog.h"
 
 class NewPatientDialog;
 
@@ -41,10 +41,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    NewPatientDialog* _dialog;
-    WorkListDialog* wrkDlg;
-    LoginDialog* loginDlg;
-    QSqlTableModel* _model,*_model2;
+//    NewPatientDialog* _dialog;
+//    WorkListDialog* wrkDlg;
+//    LoginDialog* loginDlg;
+//    QSqlTableModel* _model,*_model2;
 };
 
 #endif // MAINWINDOW_H

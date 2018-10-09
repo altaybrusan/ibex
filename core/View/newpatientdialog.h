@@ -20,8 +20,8 @@ class NewPatientDialog : public QDialog
 public:
     explicit NewPatientDialog(QWidget *parent = 0);
  
-    QString GetPatientInfo(NewPatientDialog::DemographyKeys field);
-    QStringList GetSelectedProceduresList();
+    //QString GetPatientInfo(NewPatientDialog::DemographyKeys field);
+    //QStringList GetSelectedProceduresList();
     ~NewPatientDialog();
 
 private slots:
@@ -54,9 +54,8 @@ private:
     QGraphicsScene* scene;
     QGraphicsEllipseItem* ellipse;
     BodyPartSelectionSquare *head,*thorax,
-    *abdomen,*pelvis,*fermur,
-    *knee,*tibia,*ankle,*foot,
-    *hand,*finger,*wrist,*elbow,*Scapula,*shoulder;
+    *abdomen,*pelvis,*fermur,*knee,*tibia,
+    *ankle,*foot, *hand,*finger,*wrist,*elbow,*Scapula,*shoulder;
 
     QStringList _selectedBodyPartList;
     int _numberOfselectedBodyParts;

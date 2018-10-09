@@ -14,7 +14,7 @@ signals:
 
 public slots:
 private:
-    QString year,month,date,hour,minute,msec,;
+
 };
 
 #endif // DICOMTOOLS_H

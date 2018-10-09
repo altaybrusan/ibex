@@ -31,7 +31,7 @@ namespace iBEX
     enum class GENDER
     {
         M,F,O
-    }
+    };
 
     Q_ENUM_NS(BODY_PART);
     Q_ENUM_NS(GENDER);

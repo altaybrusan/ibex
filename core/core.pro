@@ -9,8 +9,10 @@ QT       += core gui sql serialbus serialport xml network
 include(../commonconfig.pri)
 include(../log4qt/log4qt.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+#QT_LOGGING_TO_CONSOLE = 1
 DEFINES -= UNICODE
 DEFINES += _REENTRANT
+
 win32:
 {
 VERSION = 0.0.0.1
@@ -101,13 +103,15 @@ SOURCES += \
         main.cpp \
         Utils/logmgr.cpp \
         Utils/databasemgr.cpp \
-#        View/mainwindow.cpp
         Utils/settingsprovider.cpp \
-        View/newpatientdialog.cpp \
-        View/bodypartselectionsquare.cpp \
-    Model/patientdata.cpp \
-    Utils/dicomtools.cpp \
-    Model/anatomicregionelement.cpp
+        Utils/dicomtools.cpp \
+#        View/newpatientdialog.cpp \
+#        View/bodypartselectionsquare.cpp \
+#        Model/patientdata.cpp \
+#        Model/anatomicregionelement.cpp\
+        View/mainwindow.cpp \
+    coreapplication.cpp
+
 #        View/exposuredialog.cpp \
 #        View/imageviewer.cpp \
 #        View/pacsnodesettingsdialog.cpp \
@@ -129,14 +133,15 @@ HEADERS += \
         Utils/singleton.h \
         Utils/logmgr.h    \
         Utils/databasemgr.h \
+        Utils/dicomtools.h \
         Utils/settingsprovider.h \
-#       View/mainwindow.h \
-        View/newpatientdialog.h\
-        View/bodypartselectionsquare.h \
-        Model/DICOM_ENUMS.h \
-    Model/patientdata.h \
-    Utils/dicomtools.h \
-    Model/anatomicregionelement.h
+        View/mainwindow.h \
+    coreapplication.h
+#        View/newpatientdialog.h\
+#        View/bodypartselectionsquare.h
+#        Model/DICOM_ENUMS.h \
+#        Model/patientdata.h \
+#        Model/anatomicregionelement.h
 #        View/exposuredialog.h \
 #        View/imageviewer.h \
 #        View/pacsnodesettingsdialog.h \
@@ -159,7 +164,7 @@ HEADERS += \
 
 FORMS += \
          View/mainwindow.ui \
-         View/newpatientdialog.ui
+#         View/newpatientdialog.ui
 #        View/exposuredialog.ui \
 #        View/imageviewer.ui \
 #        View/pacsnodesettingsdialog.ui \

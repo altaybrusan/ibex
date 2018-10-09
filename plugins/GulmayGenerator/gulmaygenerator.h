@@ -26,8 +26,6 @@ public:
 private:
     const ISettingsParser* _settingParser;
     QWidget* _userInterface;
-
-
 };
 
 #endif // GULMAYGENERATOR_H
