@@ -586,3 +586,8 @@
 [ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
 [ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM -  app successfully signed in
 [ 2018-10-10 ][ 23:20:32 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 23:28:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 23:28:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 23:28:29 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 23:28:35 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-10 ][ 23:28:35 ] INFO  SYSTEM - Database connection is closed.

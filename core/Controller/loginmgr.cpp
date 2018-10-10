@@ -3,6 +3,8 @@
 #include "Utils/logmgr.h"
 #include "View/logindialog.h"
 
+QString username;
+
 LoginMgr::LoginMgr(QObject *parent, LoginDialog &loginDlg) :
     QObject(parent),
     m_loginDlg(loginDlg)
@@ -11,6 +13,12 @@ LoginMgr::LoginMgr(QObject *parent, LoginDialog &loginDlg) :
     connect(&m_loginDlg, &LoginDialog::accepted,this,&LoginMgr::OnCheckCredintials);
     connect(&m_loginDlg, &LoginDialog::rejected,this,
             [=]{emit NotifyLoginCancelled();});
+
+}
+
+QString LoginMgr::GetActiveUser()
+{
+    return username;
 
 }
 
@@ -45,6 +53,7 @@ void LoginMgr::OnCheckCredintials()
                 _isfound =true;
                 LogMgr::instance()->LogSysInfo(tr(" %1 successfully signed in").arg(name));
                 LogMgr::instance()->LogAppInfo(tr(" %1 successfully signed in").arg(name));
+                username=name;
                 emit NotifySuccessfulSignin();
                 break;
             }
