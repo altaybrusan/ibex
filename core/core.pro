@@ -105,13 +105,16 @@ SOURCES += \
         Utils/databasemgr.cpp \
         Utils/settingsprovider.cpp \
         Utils/dicomtools.cpp \
+        View/mainwindow.cpp \
+        coreapplication.cpp \
+        startup.cpp\
+         View/logindialog.cpp \
+         Controller/devicemgr.cpp \
+         Controller/loginmgr.cpp \
 #        View/newpatientdialog.cpp \
 #        View/bodypartselectionsquare.cpp \
 #        Model/patientdata.cpp \
 #        Model/anatomicregionelement.cpp\
-        View/mainwindow.cpp \
-    coreapplication.cpp
-
 #        View/exposuredialog.cpp \
 #        View/imageviewer.cpp \
 #        View/pacsnodesettingsdialog.cpp \
@@ -121,10 +124,9 @@ SOURCES += \
 #        View/worklistserversettingsdialog.cpp \
 #        View/worklistdialog.cpp \
 #        View/worklistmodel.cpp \
-#        View/logindialog.cpp \
 #         Utils/dicomwriter.cpp \
-#        Model/databaseservice.cpp \
-#        Controller/devicemgr.cpp \
+         Model/databaseconnector.cpp
+
 #        Controller/loginmgr.cpp
 
 
@@ -136,7 +138,7 @@ HEADERS += \
         Utils/dicomtools.h \
         Utils/settingsprovider.h \
         View/mainwindow.h \
-    coreapplication.h
+        coreapplication.h \
 #        View/newpatientdialog.h\
 #        View/bodypartselectionsquare.h
 #        Model/DICOM_ENUMS.h \
@@ -155,11 +157,13 @@ HEADERS += \
 #        View/worklistdialog.h \
 #        View/dicomtaglist.h \
 #        View/worklistmodel.h \
-#        View/logindialog.h \
+         View/logindialog.h \
 #        Utils/dicomwriter.h \
-#        Model/databaseservice.h \
-#        Controller/devicemgr.h \
+         Controller/devicemgr.h \
 #        Controller/loginmgr.h
+         startup.h \
+    Controller/loginmgr.h \
+    Model/databaseconnector.h
 
 
 FORMS += \
@@ -171,7 +175,7 @@ FORMS += \
 #        View/loadstudydialog.ui \
 #        View/worklistserversettingsdialog.ui \
 #        View/worklistdialog.ui \
-#        View/logindialog.ui
+        View/logindialog.ui
 
 
 RESOURCES += \

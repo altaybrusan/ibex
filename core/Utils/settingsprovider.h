@@ -9,20 +9,14 @@ class SettingsProvider : public QObject
 {
     Q_OBJECT
 public:
-    explicit SettingsProvider(QString settingFileFullPath,
-                              QObject *parent = nullptr);
+    explicit SettingsProvider(QObject *parent = nullptr);
     void UpdateSettingFile(QString settingFileFullPath);
-    void OpenSettingFile();
-    void LoadSettingFile();
+    bool OpenSettingFile();
+    bool LoadSettingFile();
     QDomElement GetRootElement();
     QStringList ListElemnts(QDomElement root,
                             QString tagname,
                             QString attribute);
-
-
-signals:
-    void NotifyFileOpenFailed();
-    void NotifySettingLoadFailed();
 
 
 public slots:

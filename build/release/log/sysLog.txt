@@ -1,0 +1,296 @@
+[ 2018-10-10 ][ 09:08:39 ] INFO  SYSTEM - I AM AT MAINWINDOW
+[ 2018-10-10 ][ 09:18:47 ] INFO  SYSTEM - Device controller is constructing...
+[ 2018-10-10 ][ 09:20:37 ] INFO  SYSTEM - Device controller is constructing...
+[ 2018-10-10 ][ 09:20:37 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 09:42:45 ] INFO  SYSTEM - Device controller is constructing...
+[ 2018-10-10 ][ 09:42:45 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 09:52:07 ] INFO  SYSTEM - Device controller is constructing...
+[ 2018-10-10 ][ 09:52:07 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 09:55:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 09:56:33 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 09:56:47 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 09:57:50 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 09:57:50 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 09:58:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 09:58:15 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 09:58:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 09:58:30 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 09:58:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 09:58:42 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:00:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:02:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:16:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:16:39 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:17:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:17:13 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:20:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:20:04 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:43:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:43:59 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:46:19 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:46:20 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:46:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:46:46 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:51:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:51:26 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:51:40 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:51:40 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:51:48 ] INFO  SYSTEM - Login canceled.
+[ 2018-10-10 ][ 10:52:54 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:52:54 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:52:59 ] INFO  SYSTEM - Login canceled.
+[ 2018-10-10 ][ 10:55:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 10:55:03 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 10:55:03 ] INFO  SYSTEM - Login canceled.
+[ 2018-10-10 ][ 14:31:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:31:59 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 14:31:59 ] INFO  SYSTEM - Login canceled.
+[ 2018-10-10 ][ 14:34:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:36:17 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:36:17 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 14:39:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:39:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 14:39:29 ] INFO  SYSTEM - 
+[ 2018-10-10 ][ 14:40:54 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:40:54 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 14:40:54 ] INFO  SYSTEM - 0
+[ 2018-10-10 ][ 14:42:23 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:42:23 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 14:42:23 ] INFO  SYSTEM - 0
+[ 2018-10-10 ][ 14:43:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:43:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 14:43:43 ] INFO  SYSTEM - 0
+[ 2018-10-10 ][ 14:50:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:50:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 14:50:39 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 14:50:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 14:50:39 ] INFO  SYSTEM - 2
+[ 2018-10-10 ][ 14:52:11 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 14:52:11 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 14:52:11 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 14:52:11 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 14:52:11 ] INFO  SYSTEM - 2
+[ 2018-10-10 ][ 15:12:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:12:16 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:12:16 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:12:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:12:16 ] INFO  SYSTEM - DatabasePath 
+[ 2018-10-10 ][ 15:12:51 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:12:51 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:12:51 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:12:51 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:12:51 ] INFO  SYSTEM - DatabasePath = 
+[ 2018-10-10 ][ 15:14:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:14:53 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:14:53 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:14:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:14:53 ] INFO  SYSTEM - DatabasePath = 
+[ 2018-10-10 ][ 15:16:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:16:07 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:16:07 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:16:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:16:07 ] INFO  SYSTEM - DatabasePath = 
+[ 2018-10-10 ][ 15:21:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:21:32 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:21:32 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:21:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:21:32 ] INFO  SYSTEM - DatabasePath = 
+[ 2018-10-10 ][ 15:22:08 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:22:08 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:22:08 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:22:08 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:22:08 ] INFO  SYSTEM - DatabasePath = 
+[ 2018-10-10 ][ 15:22:48 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:22:48 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:22:48 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:22:48 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:22:48 ] INFO  SYSTEM -  = 
+[ 2018-10-10 ][ 15:23:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:23:24 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:23:24 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:23:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:23:24 ] INFO  SYSTEM - = 
+[ 2018-10-10 ][ 15:23:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:23:53 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:23:53 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:23:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:23:53 ] INFO  SYSTEM - DatabasePath = 
+[ 2018-10-10 ][ 15:24:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:24:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:24:57 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:24:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:24:57 ] INFO  SYSTEM - DatabasePath = 
+[ 2018-10-10 ][ 15:25:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:25:16 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:25:16 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:25:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:25:16 ] INFO  SYSTEM - DatabasePath = DatabasePath
+[ 2018-10-10 ][ 15:35:05 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:35:05 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:35:05 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:35:05 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:36:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:36:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:36:43 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:36:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:36:43 ] INFO  SYSTEM - 
+[ 2018-10-10 ][ 15:38:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:38:36 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:38:36 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:38:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:38:36 ] INFO  SYSTEM - DatabasePath
+[ 2018-10-10 ][ 15:39:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:39:07 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:39:07 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:39:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:39:07 ] INFO  SYSTEM - 
+[ 2018-10-10 ][ 15:40:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:40:16 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:40:16 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:40:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:40:16 ] INFO  SYSTEM - 
+[ 2018-10-10 ][ 15:40:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 15:40:58 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 15:40:58 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 15:40:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 15:40:58 ] INFO  SYSTEM - "./database/database.db"
+[ 2018-10-10 ][ 16:31:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 16:31:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 16:31:14 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 16:31:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 16:31:14 ] INFO  SYSTEM - "./database/database.db"
+[ 2018-10-10 ][ 16:33:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 16:33:04 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 16:33:04 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 16:33:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 16:33:04 ] INFO  SYSTEM - "./database/database.db"
+[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 16:33:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 16:33:57 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - DatabasePath
+[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - "./database/database.db"
+[ 2018-10-10 ][ 17:20:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:20:42 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:20:42 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:20:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:20:42 ] INFO  SYSTEM - QSQLITE
+[ 2018-10-10 ][ 17:26:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:26:02 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:26:02 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:26:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:26:03 ] FATAL SYSTEM - Can not open databse connection
+[ 2018-10-10 ][ 17:27:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:27:31 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:27:31 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:27:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:27:31 ] FATAL SYSTEM - Driver:QSQLITE
+[ 2018-10-10 ][ 17:27:31 ] FATAL SYSTEM - Path:"./database/database.db"
+[ 2018-10-10 ][ 17:27:31 ] FATAL SYSTEM - Can not open databse connection
+[ 2018-10-10 ][ 17:30:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:30:59 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:30:59 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:30:59 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:30:59 ] FATAL SYSTEM - Driver:QSQLITE
+[ 2018-10-10 ][ 17:30:59 ] FATAL SYSTEM - Path:"./database/database.db"
+[ 2018-10-10 ][ 17:30:59 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:35:28 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:35:28 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - Driver:QSQLITE
+[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - Path:"./database/database.db"
+[ 2018-10-10 ][ 17:35:28 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:40:58 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:40:58 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - Driver:QSQLITE
+[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - Path:"./database/database.db"
+[ 2018-10-10 ][ 17:40:58 ] FATAL SYSTEM - Can not open databse connection:Driver not loaded Driver not loaded
+[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:46:13 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:46:13 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - Driver:QSQLITE
+[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - Path:"./database/database.db"
+[ 2018-10-10 ][ 17:46:13 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:48:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:48:57 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - Driver:QSQLITE
+[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - Path:"./database/database.db"
+[ 2018-10-10 ][ 17:48:57 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 17:59:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 17:59:49 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 17:59:49 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 17:59:49 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 17:59:49 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 18:15:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:15:02 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:15:02 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:15:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:15:02 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 18:15:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:15:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:15:39 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:15:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:15:39 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 18:23:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:23:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:23:43 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:23:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:23:43 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 18:31:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:31:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:31:39 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:31:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:31:39 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 18:32:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:32:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:32:14 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:32:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:32:14 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 18:34:03 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:34:03 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:34:03 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:34:03 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:34:03 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
+[ 2018-10-10 ][ 18:35:22 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:35:22 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:35:22 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:35:22 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:35:22 ] FATAL SYSTEM - Can not open databse connection:Driver not loaded Driver not loaded
+[ 2018-10-10 ][ 18:36:00 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:36:00 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:36:00 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:36:00 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:36:00 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 18:37:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:37:32 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:37:32 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:37:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:37:32 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 18:38:11 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:38:11 ] FATAL SYSTEM - Can not open databse connection:Driver not loaded Driver not loaded
+[ 2018-10-10 ][ 18:38:11 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:38:11 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:38:11 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:50:35 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:50:35 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:50:35 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:50:35 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:50:35 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 18:58:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:58:41 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:58:41 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:58:41 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:58:41 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 18:58:44 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 18:58:56 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 18:58:56 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 18:58:59 ] INFO  SYSTEM - Database connection is estabilished.

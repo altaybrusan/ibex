@@ -1,31 +1,33 @@
 #include "settingsprovider.h"
 
-SettingsProvider::SettingsProvider(QString settingFileFullPath, QObject *parent) : QObject(parent)
-{
-    m_filePath = settingFileFullPath;
+SettingsProvider::SettingsProvider(QObject *parent) : QObject(parent)
+{    
 }
 
 void SettingsProvider::UpdateSettingFile(QString settingFileFullPath)
 {
     m_filePath = settingFileFullPath;
-    m_settingFile.setFileName("m_filePath");
+    m_settingFile.setFileName(m_filePath);
 }
 
-void SettingsProvider::OpenSettingFile()
+bool SettingsProvider::OpenSettingFile()
 {
     if(!m_settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
     {
-        emit NotifyFileOpenFailed();
+        return false;
     }
+    return true;
 }
 
-void SettingsProvider::LoadSettingFile()
+bool SettingsProvider::LoadSettingFile()
 {
     if(!document.setContent(&m_settingFile))
     {
-        emit NotifySettingLoadFailed();
+        return false;
     }
     m_settingFile.close();
+    return true;
+
 }
 
 QDomElement SettingsProvider::GetRootElement()
