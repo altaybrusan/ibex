@@ -324,3 +324,265 @@
 [ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Login dialog is activated
 [ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Login canceled.
 [ 2018-10-10 ][ 19:04:24 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 20:50:18 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 20:50:18 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 20:50:18 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 20:50:18 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 20:50:18 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 20:52:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 20:52:45 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 20:52:45 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 20:52:45 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 20:52:45 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 20:53:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 20:53:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 20:53:39 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 20:53:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 20:53:39 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 20:53:48 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 20:53:48 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 20:53:48 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 20:53:48 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 20:53:48 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 20:55:38 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 20:55:38 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 20:55:38 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 20:55:38 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 20:55:38 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 20:56:25 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 20:56:25 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 20:56:25 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 20:56:25 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 20:56:25 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 20:56:29 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 20:57:46 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 20:57:46 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 20:57:46 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 20:57:46 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 20:57:46 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:01:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:01:13 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:01:13 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:01:13 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:01:13 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:03:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:03:45 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:03:45 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:03:45 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:03:45 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:04:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:04:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:04:43 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:04:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:04:43 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:05:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:05:15 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:05:15 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:05:15 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:05:15 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:05:20 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 21:07:46 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:07:46 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:07:46 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:07:46 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:07:46 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:07:51 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 21:08:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:08:31 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:08:31 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:08:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:08:31 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:09:20 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:09:20 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:09:20 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:09:20 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:09:20 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:11:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:11:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:11:57 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:11:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:11:57 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:12:22 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:12:22 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:12:22 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:12:22 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:12:22 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:12:34 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:12:34 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:12:34 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:12:34 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:12:34 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:12:43 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 21:17:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:17:30 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:17:30 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:17:30 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:17:30 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:17:33 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 21:18:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:18:26 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:18:26 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:18:26 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:18:26 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:18:52 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:18:52 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:18:52 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:18:52 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:18:52 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:19:28 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:19:28 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:19:28 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:19:28 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:19:28 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:19:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:19:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:19:43 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:19:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:19:43 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:19:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:19:58 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:19:58 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:19:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:19:58 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:20:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:20:24 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:20:24 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:20:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:20:24 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 21:20:28 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 21:22:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 21:22:07 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 21:22:07 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 21:22:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 21:22:07 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:01:44 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:01:44 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 22:01:44 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 22:01:44 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:01:44 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:01:47 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:02:19 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:02:19 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 22:02:19 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 22:02:19 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:02:19 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:02:23 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:05:18 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:05:18 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 22:05:18 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 22:05:18 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:05:18 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:06:13 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:12:54 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:12:54 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 22:12:54 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 22:12:54 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:12:54 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:13:49 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:15:10 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:15:10 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 22:15:10 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 22:15:10 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:18:07 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:18:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:18:14 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 22:18:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 22:18:14 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:18:26 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:18:38 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:18:38 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 22:18:38 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 22:18:38 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:32:53 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:41:00 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:41:00 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:41:00 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:41:24 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:43:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:43:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:43:58 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:44:04 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:45:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:45:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:45:31 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:45:34 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:46:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:46:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:46:04 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:46:22 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 22:48:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 22:48:59 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 22:48:59 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 22:49:00 ] INFO  SYSTEM - user cancelled sign in
+[ 2018-10-10 ][ 22:49:13 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 23:11:01 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 23:11:01 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 23:11:01 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 23:11:04 ] INFO  SYSTEM - user cancelled sign in
+[ 2018-10-10 ][ 23:11:04 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 23:14:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 23:14:59 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 23:14:59 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 23:15:08 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:15:08 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:15:08 ] INFO  SYSTEM - Successful sign in
+[ 2018-10-10 ][ 23:15:11 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 23:16:09 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 23:16:09 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 23:16:09 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:28 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-10 ][ 23:16:28 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 23:16:40 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 23:16:40 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 23:16:40 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-10 ][ 23:16:49 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:16:49 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:16:49 ] INFO  SYSTEM - successful sign in
+[ 2018-10-10 ][ 23:16:52 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 23:20:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 23:20:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 23:20:16 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-10 ][ 23:20:32 ] INFO  SYSTEM - Database connection is closed.

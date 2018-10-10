@@ -2,18 +2,25 @@
 #define LOGINMGR_H
 
 #include <QObject>
-class LoginDlg;
+class LoginDialog;
 class LoginMgr : public QObject
 {
     Q_OBJECT
 public:
-    explicit LoginMgr(QObject *parent, LoginDlg& loginDlg);
+    explicit LoginMgr(QObject *parent, LoginDialog &loginDlg);
+
 
 signals:
+    void NotifySuccessfulSignin();
+    void NotifyLoginCancelled();
 
 public slots:
+
+     void ActivateLoginProcess();
+private slots:
+    void OnCheckCredintials();
 private:
-    LoginDlg& m_loginDlg;
+    LoginDialog& m_loginDlg;
 };
 
 #endif // LOGINMGR_H

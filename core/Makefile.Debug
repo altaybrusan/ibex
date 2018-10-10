@@ -2773,7 +2773,7 @@ compiler_moc_header_clean:
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
-		View\logindialog.h \
+		Controller\loginmgr.h \
 		Controller\devicemgr.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -7794,6 +7794,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
 		View/logindialog.h \
+		Controller/loginmgr.h \
 		Controller/devicemgr.h \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
@@ -7946,7 +7947,12 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFile \
 		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QDomNode \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\startup.obj startup.cpp
 
 ..\build\debug\.obj\logindialog.obj: View\logindialog.cpp View/logindialog.h \
@@ -8174,7 +8180,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
-		View/logindialog.h \
+		Controller/loginmgr.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
@@ -8204,7 +8210,14 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QHash \
 		../log4qt/patternlayout.h \
 		../log4qt/layout.h \
-		../log4qt/ttcclayout.h
+		../log4qt/ttcclayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\devicemgr.obj Controller\devicemgr.cpp
 
 ..\build\debug\.obj\loginmgr.obj: Controller\loginmgr.cpp Controller/loginmgr.h \
@@ -8254,7 +8267,96 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlQuery \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
+		Utils/logmgr.h \
+		../log4qt/consoleappender.h \
+		../log4qt/writerappender.h \
+		../log4qt/appenderskeleton.h \
+		../log4qt/appender.h \
+		../log4qt/helpers/logobject.h \
+		../log4qt/helpers/classlogger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicInt \
+		../log4qt/helpers/logobjectptr.h \
+		../log4qt/logger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QReadWriteLock \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
+		../log4qt/helpers/logerror.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		../log4qt/level.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
+		../log4qt/log4qt.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMutex \
+		../log4qt/fileappender.h \
+		../log4qt/rollingfileappender.h \
+		../log4qt/loggerrepository.h \
+		../log4qt/logmanager.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QHash \
+		../log4qt/patternlayout.h \
+		../log4qt/layout.h \
+		../log4qt/ttcclayout.h \
+		View/logindialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfont.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcursor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\loginmgr.obj Controller\loginmgr.cpp
 
 ..\build\debug\.obj\databaseconnector.obj: Model\databaseconnector.cpp Model/databaseconnector.h \

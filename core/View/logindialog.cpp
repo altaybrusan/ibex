@@ -7,6 +7,7 @@ LoginDialog::LoginDialog(QWidget *parent) :
     ui(new Ui::LoginDialog)
 {
     ui->setupUi(this);
+
 }
 
 QString LoginDialog::GetUsername()

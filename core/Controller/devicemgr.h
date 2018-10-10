@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include "View/mainwindow.h"
-#include "View/logindialog.h"
+#include "Controller/loginmgr.h"
 
 class DeviceMgr : public QObject
 {
@@ -11,7 +11,7 @@ class DeviceMgr : public QObject
 public:
     explicit DeviceMgr(QObject *parent,
                        MainWindow & mainWindow,
-                       LoginDialog& loginDlg);
+                       LoginMgr& loginMgr);
     void WireConnections();
 
 
@@ -27,9 +27,11 @@ private slots:
     void OnOpenStudyWorkFlowIsTriggered();
 private:
     MainWindow& m_mainWindow;
-    LoginDialog& m_loginDlg;
+    LoginMgr& m_loginMgr;
 
-    void ShowLoginDialog();
+    void ShutdownDevice();
+
+    //void ShowLoginDialog();
 };
 
 #endif // DEVICEMGR_H

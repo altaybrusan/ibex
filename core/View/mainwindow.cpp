@@ -230,54 +230,6 @@ void MainWindow::showEvent(QShowEvent *event)
 
 //void MainWindow::on_Login_Successfully()
 //{
-////    //Check the database for the loged in user
-////    // the password is hashed.
-////    qDebug()<<"The pass:"<<loginDlg->GetPassword();
-////    QString _name= loginDlg->GetUsername();
-////    QString _pass= loginDlg->GetPassword();
-
-////    QSqlDatabase  _database = QSqlDatabase::addDatabase("QSQLITE");
-////    _database.setDatabaseName("./database/database.db");
-////    if (!_database.open())
-////    {
-////        qDebug() << "Failed to open the database";
-////        return ;
-////    }
-////    else
-////    {
-////        qDebug()<<"Database connection is made...";
-////    }
-
-
-////    QSqlQuery query;
-////    bool flag=false;
-////    if(query.exec("SELECT * FROM userTbl"))
-////    {
-////        qDebug()<<"Query is executed";
-
-////        // the users found
-////        while(query.next())
-////        {
-////            qDebug()<<"User ID:"<<query.value(0).toString();
-////            qDebug()<<"User Name:"<<query.value(1).toString()<<_name;
-////            qDebug()<<"User Password:"<<query.value(2).toString()<<_pass;
-
-////            if(query.value(1).toString() == _name &&
-////               query.value(2).toString() == _pass)
-////            {
-////                qDebug()<<"success";
-////                flag=true;
-////                break;
-////            }
-////        }
-////    }
-////    if(flag== false)
-////    {
-////        loginDlg->exec();
-////    }
-
-////    //_database.close();
-
 
 //}
 
