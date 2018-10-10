@@ -294,3 +294,33 @@
 [ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - iBEX settings are loaded successfully.
 [ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - Database connection is estabilished.
 [ 2018-10-10 ][ 18:58:59 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 19:03:23 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 19:03:23 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 19:03:23 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 19:03:23 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 19:03:23 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 19:03:26 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 19:03:36 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 19:03:36 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Login canceled.
+[ 2018-10-10 ][ 19:03:38 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 19:04:02 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 19:04:02 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Login canceled.
+[ 2018-10-10 ][ 19:04:04 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-10 ][ 19:04:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
+[ 2018-10-10 ][ 19:04:14 ] ERROR SYSTEM - Can not open iBEX setting file.
+[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Login dialog is activated
+[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Login canceled.
+[ 2018-10-10 ][ 19:04:24 ] INFO  SYSTEM - Database connection is closed.

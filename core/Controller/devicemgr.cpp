@@ -48,8 +48,10 @@ void DeviceMgr::OnOpenStudyWorkFlowIsTriggered()
 void DeviceMgr::ShowLoginDialog()
 {
   LogMgr::instance()->LogSysInfo(tr("Login dialog is activated"));
+  m_loginDlg.show();
   if (m_loginDlg.result() == QDialog::Rejected)
   {
       LogMgr::instance()->LogSysInfo(tr("Login canceled."));
+      LogMgr::instance()->LogAppInfo(tr("Login canceled."));
   }
 }

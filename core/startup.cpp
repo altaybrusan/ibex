@@ -29,11 +29,10 @@ Startup::Startup() : QObject(nullptr),
         LogMgr::instance()->LogAppFail(tr("unsuccessful start. Database connection failed"));
         exit(1);
     }
-//    m_loginDlg.setParent(&m_mainWindow);
-//    m_loginDlg.setWindowFlag( Qt::Window,true);
-//    m_loginDlg.setModal(true);
-//    m_loginDlg.show();
-//    m_device.WireConnections();
+      m_loginDlg.setParent(&m_mainWindow);
+      m_loginDlg.setWindowFlag( Qt::Window,true);
+      m_loginDlg.setModal(true);
+      m_device.WireConnections();
 
 
 
