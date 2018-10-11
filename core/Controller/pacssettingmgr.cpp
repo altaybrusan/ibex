@@ -27,5 +27,6 @@ int PacsSettingMgr::GetPACSServerport()
 
 void PacsSettingMgr::OnActivatePacsSettingsDialog()
 {
+    LogMgr::instance()->LogAppInfo(tr("PACS settings activated"));
     m_pacsDlg.show();
 }

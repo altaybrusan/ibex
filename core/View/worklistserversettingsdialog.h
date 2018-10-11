@@ -14,10 +14,12 @@ class WorklistServerSettingsDialog : public QDialog
 public:
     explicit WorklistServerSettingsDialog(QWidget *parent = 0);
     ~WorklistServerSettingsDialog();
+signals:
+    void NotifyAccepted();
+    void NotifyRejected();
 
 private slots:
     void on_buttonBox_accepted();
-
     void on_buttonBox_rejected();
 
 private:

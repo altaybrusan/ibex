@@ -3,22 +3,22 @@
 #include <QtXml>
 #include <QFile>
 
-QStringList ListElements2(QDomElement root, QString tagname, QString attribute)
-{
-    QStringList _elemntList;
-    QDomNodeList items = root.elementsByTagName(tagname);
+//QStringList ListElements2(QDomElement root, QString tagname, QString attribute)
+//{
+//    QStringList _elemntList;
+//    QDomNodeList items = root.elementsByTagName(tagname);
 
-     for(int i = 0; i < items.count(); i++)
-     {
-        QDomNode itemnode = items.at(i);
-        if(itemnode.isElement())
-        {
-            QDomElement itemele = itemnode.toElement();
-            _elemntList.append(itemele.attribute(attribute));
-        }
-     }
-     return _elemntList;
-}
+//     for(int i = 0; i < items.count(); i++)
+//     {
+//        QDomNode itemnode = items.at(i);
+//        if(itemnode.isElement())
+//        {
+//            QDomElement itemele = itemnode.toElement();
+//            _elemntList.append(itemele.attribute(attribute));
+//        }
+//     }
+//     return _elemntList;
+//}
 
 
 WorklistServerSettingsDialog::WorklistServerSettingsDialog(QWidget *parent) :
@@ -27,27 +27,27 @@ WorklistServerSettingsDialog::WorklistServerSettingsDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QDomDocument document;
-    QFile settingFile("./configs/_worklist.xml");
+//    QDomDocument document;
+//    QFile settingFile("./configs/_worklist.xml");
 
-    if(!settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
-    {
-        qDebug()<<"Can not open worklist configuration file";
-        return;
-    }
-    else
-    {
-        qDebug()<<"worklist configuration file successfully opened.";
-        //get the root element
-        QDomDocument document;
+//    if(!settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
+//    {
+//        qDebug()<<"Can not open worklist configuration file";
+//        return;
+//    }
+//    else
+//    {
+//        qDebug()<<"worklist configuration file successfully opened.";
+//        //get the root element
+//        QDomDocument document;
 
-        if(!document.setContent(&settingFile))
-        {
-            qDebug() << "Failed to load document";
-            return;
-        }
-        settingFile.close();
-        QDomElement root = document.firstChildElement();
+//        if(!document.setContent(&settingFile))
+//        {
+//            qDebug() << "Failed to load document";
+//            return;
+//        }
+//        settingFile.close();
+//        QDomElement root = document.firstChildElement();
         QStringList strList = ListElements2(root,"Server","IP");
         ui->ipAddresslineEdit->setText(strList.at(0));
         strList = ListElements2(root,"Server","Port");

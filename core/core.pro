@@ -120,13 +120,14 @@ SOURCES += \
 #        View/loadstudydialog.cpp \
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
-#        View/worklistserversettingsdialog.cpp \
+         View/worklistserversettingsdialog.cpp \
 #        View/worklistdialog.cpp \
 #        View/worklistmodel.cpp \
 #         Utils/dicomwriter.cpp \
          Model/databaseconnector.cpp \
     Controller/pacssettingmgr.cpp \
-    View/pacssettingsdialog.cpp
+    View/pacssettingsdialog.cpp \
+    Controller/worklistserversettingsmgr.cpp
 
 #        Controller/loginmgr.cpp
 
@@ -153,7 +154,7 @@ HEADERS += \
 #        ../common/include/iconnector.h \
 #        View/rs232connector.h \
 #        View/modbusconnector.h \
-#        View/worklistserversettingsdialog.h \
+         View/worklistserversettingsdialog.h \
 #        View/worklistdialog.h \
 #        View/dicomtaglist.h \
 #        View/worklistmodel.h \
@@ -165,7 +166,8 @@ HEADERS += \
     Controller/loginmgr.h \
     Model/databaseconnector.h \
     Controller/pacssettingmgr.h \
-    View/pacssettingsdialog.h
+    View/pacssettingsdialog.h \
+    Controller/worklistserversettingsmgr.h
 
 
 FORMS += \
@@ -174,7 +176,7 @@ FORMS += \
 #        View/exposuredialog.ui \
 #        View/imageviewer.ui \
 #        View/loadstudydialog.ui \
-#        View/worklistserversettingsdialog.ui \
+         View/worklistserversettingsdialog.ui \
 #        View/worklistdialog.ui \
         View/logindialog.ui \
     View/pacssettingsdialog.ui
