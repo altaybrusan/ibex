@@ -6,12 +6,16 @@
 DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
                      LoginMgr &loginMgr,
                      PacsSettingsDialog &pacsSettingsDlg,
-                     PacsSettingMgr &pacsSettingsMgr) :
+                     PacsSettingMgr &pacsSettingsMgr,
+                     WorklistServerSettingsDialog &worklistSettingDlg,
+                     WorklistServerSettingsMgr &worklistdialogMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
     m_loginMgr(loginMgr),
     m_pacsSettingsDlg(pacsSettingsDlg),
-    m_pacsSettingsMgr(pacsSettingsMgr)
+    m_pacsSettingsMgr(pacsSettingsMgr),
+    m_worklistSettingsDlg(worklistSettingDlg),
+    m_worklisSettingstMgr(worklistdialogMgr)
 {
 
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
@@ -28,6 +32,7 @@ void DeviceMgr::WireConnections()
       ShutdownDevice();
   });
   connect(&m_mainWindow,&MainWindow::NotifyUpdatePACSSettingIsTriggered,&m_pacsSettingsMgr,&PacsSettingMgr::OnActivatePacsSettingsDialog);
+  connect(&m_mainWindow,&MainWindow::NotifyUpdateWorklistSettingsIsTriggered,&m_worklisSettingstMgr,&WorklistServerSettingsMgr::OnActivateWorklistSettingsDialog);
 }
 
 void DeviceMgr::OnNewStudyWorkFlowIsTriggered()

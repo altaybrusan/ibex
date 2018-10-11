@@ -6,7 +6,8 @@
 #include "View/pacssettingsdialog.h"
 #include "Controller/loginmgr.h"
 #include "Controller/pacssettingmgr.h"
-
+#include "Controller/worklistserversettingsmgr.h"
+#include "View/worklistserversettingsdialog.h"
 
 class DeviceMgr : public QObject
 {
@@ -16,7 +17,9 @@ public:
                        MainWindow & mainWindow,
                        LoginMgr& loginMgr,
                        PacsSettingsDialog& pacsSettingsDlg,
-                       PacsSettingMgr& pacsSettingsMgr);
+                       PacsSettingMgr& pacsSettingsMgr,
+                       WorklistServerSettingsDialog& worklistSettingDlg,
+                       WorklistServerSettingsMgr& worklistdialogMgr);
     void WireConnections();
 
 
@@ -35,7 +38,8 @@ private:
     LoginMgr& m_loginMgr;
     PacsSettingMgr& m_pacsSettingsMgr;
     PacsSettingsDialog& m_pacsSettingsDlg;
-
+    WorklistServerSettingsDialog& m_worklistSettingsDlg;
+    WorklistServerSettingsMgr& m_worklisSettingstMgr;
     void ShutdownDevice();
 
     //void ShowLoginDialog();

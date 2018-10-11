@@ -13,7 +13,16 @@ class WorklistServerSettingsDialog : public QDialog
 
 public:
     explicit WorklistServerSettingsDialog(QWidget *parent = 0);
+
+    QString GetWorklistServerAETitle();
+    QString GetWorklistServerIP();
+    QString GetWorklistServerPort();
+    void SetWorklistServerAETitle(QString aetitle);
+    void SetWorklistServerIP(QString ipaddress);
+    void SetWorklistServerPort(int port);
+
     ~WorklistServerSettingsDialog();
+
 signals:
     void NotifyAccepted();
     void NotifyRejected();

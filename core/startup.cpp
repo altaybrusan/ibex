@@ -4,9 +4,11 @@
 #include "View/logindialog.h"
 #include "Controller/loginmgr.h"
 #include "Controller/devicemgr.h"
+#include "Controller/worklistserversettingsmgr.h"
 #include "Utils/logmgr.h"
 #include "Utils/settingsprovider.h"
 #include "View/pacssettingsdialog.h"
+#include "View/worklistserversettingsdialog.h"
 #include "Controller/pacssettingmgr.h"
 #include <QtXml>
 #include <QDomNode>
@@ -14,7 +16,7 @@
 #include <QApplication>
 
 #define IBEX_STTINGS_FILE "./configs/_ibexsettings.xml"
-
+#define WRKLST_SETTING_FILE "./configs/_worklist.xml"
 Startup::Startup() : QObject(nullptr),
     m_mainWindow(*new MainWindow(nullptr)),
     m_loginDlg(*new LoginDialog(nullptr)),
@@ -22,7 +24,11 @@ Startup::Startup() : QObject(nullptr),
     m_dbConnector(*new DatabaseConnector(nullptr)),
     m_pacsSettingsDlg(*new PacsSettingsDialog(nullptr)),
     m_pacsSettingsMgr(*new PacsSettingMgr(nullptr,m_pacsSettingsDlg)),
-    m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,m_pacsSettingsDlg,m_pacsSettingsMgr))
+    m_worklistDlg(*new WorklistServerSettingsDialog(nullptr)),
+    m_worklistMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistDlg,WRKLST_SETTING_FILE)),
+    m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,
+                            m_pacsSettingsDlg,m_pacsSettingsMgr,
+                            m_worklistDlg,m_worklistMgr))
 {
     m_dbConnector.setParent(this);
     LoadiBEXSettings();
@@ -43,6 +49,11 @@ Startup::Startup() : QObject(nullptr),
       m_pacsSettingsDlg.setWindowFlag( Qt::Window,true);
       m_pacsSettingsDlg.setModal(true);
       m_pacsSettingsMgr.setParent(this);
+
+      m_worklistDlg.setParent(&m_mainWindow);
+      m_worklistDlg.setWindowFlag( Qt::Window,true);
+      m_worklistDlg.setModal(true);
+      m_worklistMgr.setParent(this);
 
       m_device.setParent(this);
       m_device.WireConnections();

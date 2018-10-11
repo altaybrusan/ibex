@@ -190,12 +190,6 @@ void MainWindow::on_actionLoadStudytriggered()
 //    _dialog->show();
 }
 
-void MainWindow::on_actionUpdateWorklistSettingstriggered()
-{
-//    WorklistServerSettingsDialog* worklistDlg =new WorklistServerSettingsDialog(this);
-//    worklistDlg->show();
-}
-
 void MainWindow::on_actionOpenStudytriggered()
 {    
     //    wrkDlg->show();
@@ -227,6 +221,13 @@ void MainWindow::showEvent(QShowEvent *event)
 
 void MainWindow::on_action_Update_PACS_Server_Settings_triggered()
 {
-    LogMgr::instance()->LogSysDebug("loading pacs server is triggered.");
+    LogMgr::instance()->LogSysDebug(tr("loading pacs server is triggered."));
     emit NotifyUpdatePACSSettingIsTriggered();
+}
+
+void MainWindow::on_action_Update_Worklist_Settings_triggered()
+{
+    LogMgr::instance()->LogSysDebug(tr("worklist settings is triggered"));
+    emit NotifyUpdateWorklistSettingsIsTriggered();
+
 }

@@ -2,6 +2,8 @@
 #include "ui_worklistserversettingsdialog.h"
 #include <QtXml>
 #include <QFile>
+#include <QRegExpValidator>
+#include <QRegExp>
 
 //QStringList ListElements2(QDomElement root, QString tagname, QString attribute)
 //{
@@ -26,10 +28,57 @@ WorklistServerSettingsDialog::WorklistServerSettingsDialog(QWidget *parent) :
     ui(new Ui::WorklistServerSettingsDialog)
 {
     ui->setupUi(this);
+    QRegExp rx("^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$");
+    QValidator *validator = new QRegExpValidator(rx, this);
+    ui->portLineEdit->setValidator(validator);
+//        QStringList strList = ListElements2(root,"Server","IP");
+//        ui->ipAddresslineEdit->setText(strList.at(0));
+//        strList = ListElements2(root,"Server","Port");
+//        ui->portLineEdit->setText(strList.at(0));
+//        strList = ListElements2(root,"Server","AETitle");
+//        ui->AETitleLineEdit->setText(strList.at(0));
+}
 
+QString WorklistServerSettingsDialog::GetWorklistServerAETitle()
+{
+    return ui->AETitleLineEdit->text();
+}
+
+QString WorklistServerSettingsDialog::GetWorklistServerIP()
+{
+    return ui->ipAddresslineEdit->text();
+}
+
+QString WorklistServerSettingsDialog::GetWorklistServerPort()
+{
+    return ui->portLineEdit->text();
+}
+
+void WorklistServerSettingsDialog::SetWorklistServerAETitle(QString aetitle)
+{
+    ui->AETitleLineEdit->setText(aetitle);
+}
+
+void WorklistServerSettingsDialog::SetWorklistServerIP(QString ipaddress)
+{
+    ui->ipAddresslineEdit->setText(ipaddress);
+}
+
+void WorklistServerSettingsDialog::SetWorklistServerPort(int port)
+{
+    ui->AETitleLineEdit->setText(QString::number(port));
+}
+
+WorklistServerSettingsDialog::~WorklistServerSettingsDialog()
+{
+    delete ui;
+}
+
+void WorklistServerSettingsDialog::on_buttonBox_accepted()
+{
+    emit NotifyAccepted();
 //    QDomDocument document;
 //    QFile settingFile("./configs/_worklist.xml");
-
 //    if(!settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
 //    {
 //        qDebug()<<"Can not open worklist configuration file";
@@ -46,58 +95,23 @@ WorklistServerSettingsDialog::WorklistServerSettingsDialog(QWidget *parent) :
 //            qDebug() << "Failed to load document";
 //            return;
 //        }
-//        settingFile.close();
+
 //        QDomElement root = document.firstChildElement();
-        QStringList strList = ListElements2(root,"Server","IP");
-        ui->ipAddresslineEdit->setText(strList.at(0));
-        strList = ListElements2(root,"Server","Port");
-        ui->portLineEdit->setText(strList.at(0));
-        strList = ListElements2(root,"Server","AETitle");
-        ui->AETitleLineEdit->setText(strList.at(0));
-    }
-}
-
-WorklistServerSettingsDialog::~WorklistServerSettingsDialog()
-{
-    delete ui;
-}
-
-void WorklistServerSettingsDialog::on_buttonBox_accepted()
-{
-    QDomDocument document;
-    QFile settingFile("./configs/_worklist.xml");
-    if(!settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
-    {
-        qDebug()<<"Can not open worklist configuration file";
-        return;
-    }
-    else
-    {
-        qDebug()<<"worklist configuration file successfully opened.";
-        //get the root element
-        QDomDocument document;
-
-        if(!document.setContent(&settingFile))
-        {
-            qDebug() << "Failed to load document";
-            return;
-        }
-
-        QDomElement root = document.firstChildElement();
-        auto node = root.elementsByTagName("Server").at(0).toElement();
-        node.setAttribute("IP",ui->ipAddresslineEdit->text());
-        node.setAttribute("AETitle",ui->AETitleLineEdit->text());
-        node.setAttribute("Port",ui->portLineEdit->text());
-        settingFile.resize(0);
-        QByteArray xml = document.toByteArray();
-        settingFile.write(xml);
-        settingFile.close();
-        this->close();
-    }
+//        auto node = root.elementsByTagName("Server").at(0).toElement();
+//        node.setAttribute("IP",ui->ipAddresslineEdit->text());
+//        node.setAttribute("AETitle",ui->AETitleLineEdit->text());
+//        node.setAttribute("Port",ui->portLineEdit->text());
+//        settingFile.resize(0);
+//        QByteArray xml = document.toByteArray();
+//        settingFile.write(xml);
+//        settingFile.close();
+//        this->close();
+//    }
 
 }
 
 void WorklistServerSettingsDialog::on_buttonBox_rejected()
 {
-    this->close();
+    //this->close();
+    emit NotifyRejected();
 }

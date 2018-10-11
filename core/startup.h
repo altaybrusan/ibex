@@ -9,7 +9,8 @@ class DeviceMgr;
 class LoginMgr;
 class PacsSettingMgr;
 class PacsSettingsDialog;
-
+class WorklistServerSettingsMgr;
+class WorklistServerSettingsDialog;
 
 class Startup : public QObject
 {
@@ -27,6 +28,8 @@ private:
     QString m_dbName,m_dbDriver;
     PacsSettingsDialog& m_pacsSettingsDlg;
     PacsSettingMgr& m_pacsSettingsMgr;
+    WorklistServerSettingsDialog& m_worklistDlg;
+    WorklistServerSettingsMgr& m_worklistMgr;
     DeviceMgr& m_device;
 
     void LoadiBEXSettings();

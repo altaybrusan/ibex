@@ -722,3 +722,59 @@
 [ 2018-10-11 ][ 13:15:58 ] INFO  SYSTEM -  app successfully signed in
 [ 2018-10-11 ][ 13:16:00 ] DEBUG SYSTEM - loading pacs server is triggered.
 [ 2018-10-11 ][ 13:16:38 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 14:40:18 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 14:40:18 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 14:40:18 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 14:40:35 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 14:40:42 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 14:40:54 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 16:22:30 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 16:22:30 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 16:22:30 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 16:22:38 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 16:26:57 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 16:26:57 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 16:26:57 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 16:27:04 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 16:29:50 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 16:29:50 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 16:29:50 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 16:29:54 ] DEBUG SYSTEM - worklist settings is triggered
+[ 2018-10-11 ][ 16:31:10 ] DEBUG SYSTEM - worklist settings is triggered
+[ 2018-10-11 ][ 16:31:12 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 16:31:25 ] DEBUG SYSTEM - worklist settings is triggered
+[ 2018-10-11 ][ 16:31:35 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 16:48:43 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 16:48:43 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 16:48:43 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 16:48:47 ] DEBUG SYSTEM - worklist settings is triggered
+[ 2018-10-11 ][ 16:49:14 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 16:53:00 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 16:53:00 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 16:53:00 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 16:53:01 ] DEBUG SYSTEM - worklist settings is triggered
+[ 2018-10-11 ][ 16:53:46 ] INFO  SYSTEM - Database connection is closed.
