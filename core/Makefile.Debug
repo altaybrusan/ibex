@@ -96,7 +96,9 @@ SOURCES       = ..\log4qt\appenderskeleton.cpp \
 		View\logindialog.cpp \
 		Controller\devicemgr.cpp \
 		Controller\loginmgr.cpp \
-		Model\databaseconnector.cpp ..\build\debug\.rcc\qrc_resources.cpp \
+		Model\databaseconnector.cpp \
+		Controller\pacssettingmgr.cpp \
+		View\pacssettingsdialog.cpp ..\build\debug\.rcc\qrc_resources.cpp \
 		..\build\debug\.moc\moc_appender.cpp \
 		..\build\debug\.moc\moc_appenderskeleton.cpp \
 		..\build\debug\.moc\moc_consoleappender.cpp \
@@ -128,7 +130,9 @@ SOURCES       = ..\log4qt\appenderskeleton.cpp \
 		..\build\debug\.moc\moc_devicemgr.cpp \
 		..\build\debug\.moc\moc_startup.cpp \
 		..\build\debug\.moc\moc_loginmgr.cpp \
-		..\build\debug\.moc\moc_databaseconnector.cpp
+		..\build\debug\.moc\moc_databaseconnector.cpp \
+		..\build\debug\.moc\moc_pacssettingmgr.cpp \
+		..\build\debug\.moc\moc_pacssettingsdialog.cpp
 OBJECTS       = ..\build\debug\.obj\appenderskeleton.obj \
 		..\build\debug\.obj\basicconfigurator.obj \
 		..\build\debug\.obj\consoleappender.obj \
@@ -181,6 +185,8 @@ OBJECTS       = ..\build\debug\.obj\appenderskeleton.obj \
 		..\build\debug\.obj\devicemgr.obj \
 		..\build\debug\.obj\loginmgr.obj \
 		..\build\debug\.obj\databaseconnector.obj \
+		..\build\debug\.obj\pacssettingmgr.obj \
+		..\build\debug\.obj\pacssettingsdialog.obj \
 		..\build\debug\.obj\qrc_resources.obj \
 		..\build\debug\.obj\moc_appender.obj \
 		..\build\debug\.obj\moc_appenderskeleton.obj \
@@ -213,7 +219,9 @@ OBJECTS       = ..\build\debug\.obj\appenderskeleton.obj \
 		..\build\debug\.obj\moc_devicemgr.obj \
 		..\build\debug\.obj\moc_startup.obj \
 		..\build\debug\.obj\moc_loginmgr.obj \
-		..\build\debug\.obj\moc_databaseconnector.obj
+		..\build\debug\.obj\moc_databaseconnector.obj \
+		..\build\debug\.obj\moc_pacssettingmgr.obj \
+		..\build\debug\.obj\moc_pacssettingsdialog.obj
 
 DIST          = notes ..\log4qt\appender.h \
 		..\log4qt\appenderskeleton.h \
@@ -268,7 +276,9 @@ DIST          = notes ..\log4qt\appender.h \
 		Controller\devicemgr.h \
 		startup.h \
 		Controller\loginmgr.h \
-		Model\databaseconnector.h ..\log4qt\appenderskeleton.cpp \
+		Model\databaseconnector.h \
+		Controller\pacssettingmgr.h \
+		View\pacssettingsdialog.h ..\log4qt\appenderskeleton.cpp \
 		..\log4qt\basicconfigurator.cpp \
 		..\log4qt\consoleappender.cpp \
 		..\log4qt\dailyrollingfileappender.cpp \
@@ -319,7 +329,9 @@ DIST          = notes ..\log4qt\appender.h \
 		View\logindialog.cpp \
 		Controller\devicemgr.cpp \
 		Controller\loginmgr.cpp \
-		Model\databaseconnector.cpp
+		Model\databaseconnector.cpp \
+		Controller\pacssettingmgr.cpp \
+		View\pacssettingsdialog.cpp
 QMAKE_TARGET  = iBEX
 DESTDIR        = ..\build\debug\ #avoid trailing-slash linebreak
 TARGET         = iBEX.exe
@@ -346,13 +358,13 @@ DESTDIR_TARGET = ..\build\debug\iBEX.exe
 first: all
 all: Makefile.Debug  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_logindialog.h $(OBJECTS) C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\iBEX_resource.res
+$(DESTDIR_TARGET): ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_pacsnodesettingsdialog.h ..\build\debug\.ui\ui_logindialog.h $(OBJECTS) C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\iBEX_resource.res
 	$(COPY_DIR) C:\Users\Altay\Documents\Qt\Projects\ibex\core\database C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\database
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
 ..\build\debug\.obj\appenderskeleton.obj ..\build\debug\.obj\basicconfigurator.obj ..\build\debug\.obj\consoleappender.obj ..\build\debug\.obj\dailyrollingfileappender.obj ..\build\debug\.obj\fileappender.obj ..\build\debug\.obj\classlogger.obj ..\build\debug\.obj\configuratorhelper.obj ..\build\debug\.obj\datetime.obj ..\build\debug\.obj\factory.obj ..\build\debug\.obj\initialisationhelper.obj ..\build\debug\.obj\logerror.obj ..\build\debug\.obj\logobject.obj ..\build\debug\.obj\logobjectptr.obj ..\build\debug\.obj\optionconverter.obj ..\build\debug\.obj\patternformatter.obj ..\build\debug\.obj\properties.obj ..\build\debug\.obj\hierarchy.obj ..\build\debug\.obj\layout.obj ..\build\debug\.obj\level.obj ..\build\debug\.obj\log4qt.obj ..\build\debug\.obj\logger.obj ..\build\debug\.obj\loggerrepository.obj ..\build\debug\.obj\loggingevent.obj ..\build\debug\.obj\logmanager.obj ..\build\debug\.obj\mdc.obj ..\build\debug\.obj\ndc.obj ..\build\debug\.obj\patternlayout.obj
-..\build\debug\.obj\propertyconfigurator.obj ..\build\debug\.obj\rollingfileappender.obj ..\build\debug\.obj\simplelayout.obj ..\build\debug\.obj\filter.obj ..\build\debug\.obj\ttcclayout.obj ..\build\debug\.obj\writerappender.obj ..\build\debug\.obj\debugappender.obj ..\build\debug\.obj\denyallfilter.obj ..\build\debug\.obj\nullappender.obj ..\build\debug\.obj\levelmatchfilter.obj ..\build\debug\.obj\levelrangefilter.obj ..\build\debug\.obj\listappender.obj ..\build\debug\.obj\stringmatchfilter.obj ..\build\debug\.obj\main.obj ..\build\debug\.obj\logmgr.obj ..\build\debug\.obj\databasemgr.obj ..\build\debug\.obj\settingsprovider.obj ..\build\debug\.obj\dicomtools.obj ..\build\debug\.obj\mainwindow.obj ..\build\debug\.obj\coreapplication.obj ..\build\debug\.obj\startup.obj ..\build\debug\.obj\logindialog.obj ..\build\debug\.obj\devicemgr.obj ..\build\debug\.obj\loginmgr.obj ..\build\debug\.obj\databaseconnector.obj ..\build\debug\.obj\qrc_resources.obj
-..\build\debug\.obj\moc_appender.obj ..\build\debug\.obj\moc_appenderskeleton.obj ..\build\debug\.obj\moc_consoleappender.obj ..\build\debug\.obj\moc_dailyrollingfileappender.obj ..\build\debug\.obj\moc_fileappender.obj ..\build\debug\.obj\moc_configuratorhelper.obj ..\build\debug\.obj\moc_logobject.obj ..\build\debug\.obj\moc_layout.obj ..\build\debug\.obj\moc_logger.obj ..\build\debug\.obj\moc_patternlayout.obj ..\build\debug\.obj\moc_rollingfileappender.obj ..\build\debug\.obj\moc_simplelayout.obj ..\build\debug\.obj\moc_filter.obj ..\build\debug\.obj\moc_ttcclayout.obj ..\build\debug\.obj\moc_writerappender.obj ..\build\debug\.obj\moc_debugappender.obj ..\build\debug\.obj\moc_denyallfilter.obj ..\build\debug\.obj\moc_nullappender.obj ..\build\debug\.obj\moc_levelmatchfilter.obj ..\build\debug\.obj\moc_levelrangefilter.obj ..\build\debug\.obj\moc_listappender.obj ..\build\debug\.obj\moc_stringmatchfilter.obj ..\build\debug\.obj\moc_logmgr.obj ..\build\debug\.obj\moc_databasemgr.obj
-..\build\debug\.obj\moc_dicomtools.obj ..\build\debug\.obj\moc_settingsprovider.obj ..\build\debug\.obj\moc_mainwindow.obj ..\build\debug\.obj\moc_logindialog.obj ..\build\debug\.obj\moc_devicemgr.obj ..\build\debug\.obj\moc_startup.obj ..\build\debug\.obj\moc_loginmgr.obj ..\build\debug\.obj\moc_databaseconnector.obj
+..\build\debug\.obj\propertyconfigurator.obj ..\build\debug\.obj\rollingfileappender.obj ..\build\debug\.obj\simplelayout.obj ..\build\debug\.obj\filter.obj ..\build\debug\.obj\ttcclayout.obj ..\build\debug\.obj\writerappender.obj ..\build\debug\.obj\debugappender.obj ..\build\debug\.obj\denyallfilter.obj ..\build\debug\.obj\nullappender.obj ..\build\debug\.obj\levelmatchfilter.obj ..\build\debug\.obj\levelrangefilter.obj ..\build\debug\.obj\listappender.obj ..\build\debug\.obj\stringmatchfilter.obj ..\build\debug\.obj\main.obj ..\build\debug\.obj\logmgr.obj ..\build\debug\.obj\databasemgr.obj ..\build\debug\.obj\settingsprovider.obj ..\build\debug\.obj\dicomtools.obj ..\build\debug\.obj\mainwindow.obj ..\build\debug\.obj\coreapplication.obj ..\build\debug\.obj\startup.obj ..\build\debug\.obj\logindialog.obj ..\build\debug\.obj\devicemgr.obj ..\build\debug\.obj\loginmgr.obj ..\build\debug\.obj\databaseconnector.obj ..\build\debug\.obj\pacssettingmgr.obj
+..\build\debug\.obj\pacssettingsdialog.obj ..\build\debug\.obj\qrc_resources.obj ..\build\debug\.obj\moc_appender.obj ..\build\debug\.obj\moc_appenderskeleton.obj ..\build\debug\.obj\moc_consoleappender.obj ..\build\debug\.obj\moc_dailyrollingfileappender.obj ..\build\debug\.obj\moc_fileappender.obj ..\build\debug\.obj\moc_configuratorhelper.obj ..\build\debug\.obj\moc_logobject.obj ..\build\debug\.obj\moc_layout.obj ..\build\debug\.obj\moc_logger.obj ..\build\debug\.obj\moc_patternlayout.obj ..\build\debug\.obj\moc_rollingfileappender.obj ..\build\debug\.obj\moc_simplelayout.obj ..\build\debug\.obj\moc_filter.obj ..\build\debug\.obj\moc_ttcclayout.obj ..\build\debug\.obj\moc_writerappender.obj ..\build\debug\.obj\moc_debugappender.obj ..\build\debug\.obj\moc_denyallfilter.obj ..\build\debug\.obj\moc_nullappender.obj ..\build\debug\.obj\moc_levelmatchfilter.obj ..\build\debug\.obj\moc_levelrangefilter.obj ..\build\debug\.obj\moc_listappender.obj
+..\build\debug\.obj\moc_stringmatchfilter.obj ..\build\debug\.obj\moc_logmgr.obj ..\build\debug\.obj\moc_databasemgr.obj ..\build\debug\.obj\moc_dicomtools.obj ..\build\debug\.obj\moc_settingsprovider.obj ..\build\debug\.obj\moc_mainwindow.obj ..\build\debug\.obj\moc_logindialog.obj ..\build\debug\.obj\moc_devicemgr.obj ..\build\debug\.obj\moc_startup.obj ..\build\debug\.obj\moc_loginmgr.obj ..\build\debug\.obj\moc_databaseconnector.obj ..\build\debug\.obj\moc_pacssettingmgr.obj ..\build\debug\.obj\moc_pacssettingsdialog.obj
 $(LIBS)
 <<
 	$(COPY_DIR) C:\Users\Altay\Documents\Qt\Projects\ibex\core\configs C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\configs
@@ -366,11 +378,11 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) iBEX.zip $(SOURCES) $(DIST) core.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri ..\log4qt\log4qt.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf core.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmaind.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgetsd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Guid.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sqld.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBusd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPortd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xmld.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Networkd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Cored.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp ..\log4qt\appender.h ..\log4qt\appenderskeleton.h ..\log4qt\basicconfigurator.h ..\log4qt\consoleappender.h ..\log4qt\dailyrollingfileappender.h ..\log4qt\fileappender.h ..\log4qt\helpers\classlogger.h ..\log4qt\helpers\configuratorhelper.h ..\log4qt\helpers\datetime.h ..\log4qt\helpers\factory.h ..\log4qt\helpers\initialisationhelper.h ..\log4qt\helpers\logerror.h ..\log4qt\helpers\logobject.h ..\log4qt\helpers\logobjectptr.h ..\log4qt\helpers\optionconverter.h ..\log4qt\helpers\patternformatter.h ..\log4qt\helpers\properties.h ..\log4qt\hierarchy.h ..\log4qt\layout.h ..\log4qt\level.h ..\log4qt\log4qt.h ..\log4qt\logger.h ..\log4qt\loggerrepository.h ..\log4qt\loggingevent.h ..\log4qt\logmanager.h ..\log4qt\mdc.h ..\log4qt\ndc.h ..\log4qt\patternlayout.h ..\log4qt\propertyconfigurator.h ..\log4qt\rollingfileappender.h ..\log4qt\simplelayout.h ..\log4qt\spi\filter.h ..\log4qt\ttcclayout.h ..\log4qt\writerappender.h ..\log4qt\varia\debugappender.h ..\log4qt\varia\denyallfilter.h ..\log4qt\varia\nullappender.h ..\log4qt\varia\levelmatchfilter.h ..\log4qt\varia\levelrangefilter.h ..\log4qt\varia\listappender.h ..\log4qt\varia\stringmatchfilter.h Utils\call_once.h Utils\singleton.h Utils\logmgr.h Utils\databasemgr.h Utils\dicomtools.h Utils\settingsprovider.h View\mainwindow.h coreapplication.h View\logindialog.h Controller\devicemgr.h startup.h Controller\loginmgr.h Model\databaseconnector.h ..\log4qt\appenderskeleton.cpp ..\log4qt\basicconfigurator.cpp ..\log4qt\consoleappender.cpp ..\log4qt\dailyrollingfileappender.cpp ..\log4qt\fileappender.cpp ..\log4qt\helpers\classlogger.cpp ..\log4qt\helpers\configuratorhelper.cpp ..\log4qt\helpers\datetime.cpp ..\log4qt\helpers\factory.cpp ..\log4qt\helpers\initialisationhelper.cpp ..\log4qt\helpers\logerror.cpp ..\log4qt\helpers\logobject.cpp ..\log4qt\helpers\logobjectptr.cpp ..\log4qt\helpers\optionconverter.cpp ..\log4qt\helpers\patternformatter.cpp ..\log4qt\helpers\properties.cpp ..\log4qt\hierarchy.cpp ..\log4qt\layout.cpp ..\log4qt\level.cpp ..\log4qt\log4qt.cpp ..\log4qt\logger.cpp ..\log4qt\loggerrepository.cpp ..\log4qt\loggingevent.cpp ..\log4qt\logmanager.cpp ..\log4qt\mdc.cpp ..\log4qt\ndc.cpp ..\log4qt\patternlayout.cpp ..\log4qt\propertyconfigurator.cpp ..\log4qt\rollingfileappender.cpp ..\log4qt\simplelayout.cpp ..\log4qt\spi\filter.cpp ..\log4qt\ttcclayout.cpp ..\log4qt\writerappender.cpp ..\log4qt\varia\debugappender.cpp ..\log4qt\varia\denyallfilter.cpp ..\log4qt\varia\nullappender.cpp ..\log4qt\varia\levelmatchfilter.cpp ..\log4qt\varia\levelrangefilter.cpp ..\log4qt\varia\listappender.cpp ..\log4qt\varia\stringmatchfilter.cpp main.cpp Utils\logmgr.cpp Utils\databasemgr.cpp Utils\settingsprovider.cpp Utils\dicomtools.cpp View\mainwindow.cpp coreapplication.cpp startup.cpp View\logindialog.cpp Controller\devicemgr.cpp Controller\loginmgr.cpp Model\databaseconnector.cpp View\mainwindow.ui View\logindialog.ui    
+	$(ZIP) iBEX.zip $(SOURCES) $(DIST) core.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\qconfig.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_functions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_post.prf ..\.qmake.stash C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\common\msvc-version.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\toolchain.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_pre.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\default_pre.prf ..\commonconfig.pri ..\log4qt\log4qt.pri C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resolve_config.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\default_post.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\build_pass.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\precompile_header.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\warn_on.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qt.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\resources.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\moc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\opengl.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\uic.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\qmake_use.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\file_copies.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\win32\windows.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\testcase_targets.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\exceptions.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\yacc.prf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\lex.prf core.pro resources.qrc C:\Qt\5.9.4\msvc2015_64\lib\qtmaind.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgetsd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Guid.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Sqld.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialBusd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5SerialPortd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Xmld.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Networkd.prl C:\Qt\5.9.4\msvc2015_64\lib\Qt5Cored.prl   resources.qrc C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp ..\log4qt\appender.h ..\log4qt\appenderskeleton.h ..\log4qt\basicconfigurator.h ..\log4qt\consoleappender.h ..\log4qt\dailyrollingfileappender.h ..\log4qt\fileappender.h ..\log4qt\helpers\classlogger.h ..\log4qt\helpers\configuratorhelper.h ..\log4qt\helpers\datetime.h ..\log4qt\helpers\factory.h ..\log4qt\helpers\initialisationhelper.h ..\log4qt\helpers\logerror.h ..\log4qt\helpers\logobject.h ..\log4qt\helpers\logobjectptr.h ..\log4qt\helpers\optionconverter.h ..\log4qt\helpers\patternformatter.h ..\log4qt\helpers\properties.h ..\log4qt\hierarchy.h ..\log4qt\layout.h ..\log4qt\level.h ..\log4qt\log4qt.h ..\log4qt\logger.h ..\log4qt\loggerrepository.h ..\log4qt\loggingevent.h ..\log4qt\logmanager.h ..\log4qt\mdc.h ..\log4qt\ndc.h ..\log4qt\patternlayout.h ..\log4qt\propertyconfigurator.h ..\log4qt\rollingfileappender.h ..\log4qt\simplelayout.h ..\log4qt\spi\filter.h ..\log4qt\ttcclayout.h ..\log4qt\writerappender.h ..\log4qt\varia\debugappender.h ..\log4qt\varia\denyallfilter.h ..\log4qt\varia\nullappender.h ..\log4qt\varia\levelmatchfilter.h ..\log4qt\varia\levelrangefilter.h ..\log4qt\varia\listappender.h ..\log4qt\varia\stringmatchfilter.h Utils\call_once.h Utils\singleton.h Utils\logmgr.h Utils\databasemgr.h Utils\dicomtools.h Utils\settingsprovider.h View\mainwindow.h coreapplication.h View\logindialog.h Controller\devicemgr.h startup.h Controller\loginmgr.h Model\databaseconnector.h Controller\pacssettingmgr.h View\pacssettingsdialog.h ..\log4qt\appenderskeleton.cpp ..\log4qt\basicconfigurator.cpp ..\log4qt\consoleappender.cpp ..\log4qt\dailyrollingfileappender.cpp ..\log4qt\fileappender.cpp ..\log4qt\helpers\classlogger.cpp ..\log4qt\helpers\configuratorhelper.cpp ..\log4qt\helpers\datetime.cpp ..\log4qt\helpers\factory.cpp ..\log4qt\helpers\initialisationhelper.cpp ..\log4qt\helpers\logerror.cpp ..\log4qt\helpers\logobject.cpp ..\log4qt\helpers\logobjectptr.cpp ..\log4qt\helpers\optionconverter.cpp ..\log4qt\helpers\patternformatter.cpp ..\log4qt\helpers\properties.cpp ..\log4qt\hierarchy.cpp ..\log4qt\layout.cpp ..\log4qt\level.cpp ..\log4qt\log4qt.cpp ..\log4qt\logger.cpp ..\log4qt\loggerrepository.cpp ..\log4qt\loggingevent.cpp ..\log4qt\logmanager.cpp ..\log4qt\mdc.cpp ..\log4qt\ndc.cpp ..\log4qt\patternlayout.cpp ..\log4qt\propertyconfigurator.cpp ..\log4qt\rollingfileappender.cpp ..\log4qt\simplelayout.cpp ..\log4qt\spi\filter.cpp ..\log4qt\ttcclayout.cpp ..\log4qt\writerappender.cpp ..\log4qt\varia\debugappender.cpp ..\log4qt\varia\denyallfilter.cpp ..\log4qt\varia\nullappender.cpp ..\log4qt\varia\levelmatchfilter.cpp ..\log4qt\varia\levelrangefilter.cpp ..\log4qt\varia\listappender.cpp ..\log4qt\varia\stringmatchfilter.cpp main.cpp Utils\logmgr.cpp Utils\databasemgr.cpp Utils\settingsprovider.cpp Utils\dicomtools.cpp View\mainwindow.cpp coreapplication.cpp startup.cpp View\logindialog.cpp Controller\devicemgr.cpp Controller\loginmgr.cpp Model\databaseconnector.cpp Controller\pacssettingmgr.cpp View\pacssettingsdialog.cpp View\mainwindow.ui View\pacsnodesettingsdialog.ui View\logindialog.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) ..\build\debug\.obj\appenderskeleton.obj ..\build\debug\.obj\basicconfigurator.obj ..\build\debug\.obj\consoleappender.obj ..\build\debug\.obj\dailyrollingfileappender.obj ..\build\debug\.obj\fileappender.obj ..\build\debug\.obj\classlogger.obj ..\build\debug\.obj\configuratorhelper.obj ..\build\debug\.obj\datetime.obj ..\build\debug\.obj\factory.obj ..\build\debug\.obj\initialisationhelper.obj ..\build\debug\.obj\logerror.obj ..\build\debug\.obj\logobject.obj ..\build\debug\.obj\logobjectptr.obj ..\build\debug\.obj\optionconverter.obj ..\build\debug\.obj\patternformatter.obj ..\build\debug\.obj\properties.obj ..\build\debug\.obj\hierarchy.obj ..\build\debug\.obj\layout.obj ..\build\debug\.obj\level.obj ..\build\debug\.obj\log4qt.obj ..\build\debug\.obj\logger.obj ..\build\debug\.obj\loggerrepository.obj ..\build\debug\.obj\loggingevent.obj ..\build\debug\.obj\logmanager.obj ..\build\debug\.obj\mdc.obj ..\build\debug\.obj\ndc.obj ..\build\debug\.obj\patternlayout.obj ..\build\debug\.obj\propertyconfigurator.obj ..\build\debug\.obj\rollingfileappender.obj ..\build\debug\.obj\simplelayout.obj ..\build\debug\.obj\filter.obj ..\build\debug\.obj\ttcclayout.obj ..\build\debug\.obj\writerappender.obj ..\build\debug\.obj\debugappender.obj ..\build\debug\.obj\denyallfilter.obj ..\build\debug\.obj\nullappender.obj ..\build\debug\.obj\levelmatchfilter.obj ..\build\debug\.obj\levelrangefilter.obj ..\build\debug\.obj\listappender.obj ..\build\debug\.obj\stringmatchfilter.obj ..\build\debug\.obj\main.obj ..\build\debug\.obj\logmgr.obj ..\build\debug\.obj\databasemgr.obj ..\build\debug\.obj\settingsprovider.obj ..\build\debug\.obj\dicomtools.obj ..\build\debug\.obj\mainwindow.obj ..\build\debug\.obj\coreapplication.obj ..\build\debug\.obj\startup.obj ..\build\debug\.obj\logindialog.obj ..\build\debug\.obj\devicemgr.obj ..\build\debug\.obj\loginmgr.obj ..\build\debug\.obj\databaseconnector.obj ..\build\debug\.obj\qrc_resources.obj ..\build\debug\.obj\moc_appender.obj ..\build\debug\.obj\moc_appenderskeleton.obj
-	-$(DEL_FILE) ..\build\debug\.obj\moc_consoleappender.obj ..\build\debug\.obj\moc_dailyrollingfileappender.obj ..\build\debug\.obj\moc_fileappender.obj ..\build\debug\.obj\moc_configuratorhelper.obj ..\build\debug\.obj\moc_logobject.obj ..\build\debug\.obj\moc_layout.obj ..\build\debug\.obj\moc_logger.obj ..\build\debug\.obj\moc_patternlayout.obj ..\build\debug\.obj\moc_rollingfileappender.obj ..\build\debug\.obj\moc_simplelayout.obj ..\build\debug\.obj\moc_filter.obj ..\build\debug\.obj\moc_ttcclayout.obj ..\build\debug\.obj\moc_writerappender.obj ..\build\debug\.obj\moc_debugappender.obj ..\build\debug\.obj\moc_denyallfilter.obj ..\build\debug\.obj\moc_nullappender.obj ..\build\debug\.obj\moc_levelmatchfilter.obj ..\build\debug\.obj\moc_levelrangefilter.obj ..\build\debug\.obj\moc_listappender.obj ..\build\debug\.obj\moc_stringmatchfilter.obj ..\build\debug\.obj\moc_logmgr.obj ..\build\debug\.obj\moc_databasemgr.obj ..\build\debug\.obj\moc_dicomtools.obj ..\build\debug\.obj\moc_settingsprovider.obj ..\build\debug\.obj\moc_mainwindow.obj ..\build\debug\.obj\moc_logindialog.obj ..\build\debug\.obj\moc_devicemgr.obj ..\build\debug\.obj\moc_startup.obj ..\build\debug\.obj\moc_loginmgr.obj ..\build\debug\.obj\moc_databaseconnector.obj
+	-$(DEL_FILE) ..\build\debug\.obj\appenderskeleton.obj ..\build\debug\.obj\basicconfigurator.obj ..\build\debug\.obj\consoleappender.obj ..\build\debug\.obj\dailyrollingfileappender.obj ..\build\debug\.obj\fileappender.obj ..\build\debug\.obj\classlogger.obj ..\build\debug\.obj\configuratorhelper.obj ..\build\debug\.obj\datetime.obj ..\build\debug\.obj\factory.obj ..\build\debug\.obj\initialisationhelper.obj ..\build\debug\.obj\logerror.obj ..\build\debug\.obj\logobject.obj ..\build\debug\.obj\logobjectptr.obj ..\build\debug\.obj\optionconverter.obj ..\build\debug\.obj\patternformatter.obj ..\build\debug\.obj\properties.obj ..\build\debug\.obj\hierarchy.obj ..\build\debug\.obj\layout.obj ..\build\debug\.obj\level.obj ..\build\debug\.obj\log4qt.obj ..\build\debug\.obj\logger.obj ..\build\debug\.obj\loggerrepository.obj ..\build\debug\.obj\loggingevent.obj ..\build\debug\.obj\logmanager.obj ..\build\debug\.obj\mdc.obj ..\build\debug\.obj\ndc.obj ..\build\debug\.obj\patternlayout.obj ..\build\debug\.obj\propertyconfigurator.obj ..\build\debug\.obj\rollingfileappender.obj ..\build\debug\.obj\simplelayout.obj ..\build\debug\.obj\filter.obj ..\build\debug\.obj\ttcclayout.obj ..\build\debug\.obj\writerappender.obj ..\build\debug\.obj\debugappender.obj ..\build\debug\.obj\denyallfilter.obj ..\build\debug\.obj\nullappender.obj ..\build\debug\.obj\levelmatchfilter.obj ..\build\debug\.obj\levelrangefilter.obj ..\build\debug\.obj\listappender.obj ..\build\debug\.obj\stringmatchfilter.obj ..\build\debug\.obj\main.obj ..\build\debug\.obj\logmgr.obj ..\build\debug\.obj\databasemgr.obj ..\build\debug\.obj\settingsprovider.obj ..\build\debug\.obj\dicomtools.obj ..\build\debug\.obj\mainwindow.obj ..\build\debug\.obj\coreapplication.obj ..\build\debug\.obj\startup.obj ..\build\debug\.obj\logindialog.obj ..\build\debug\.obj\devicemgr.obj ..\build\debug\.obj\loginmgr.obj ..\build\debug\.obj\databaseconnector.obj ..\build\debug\.obj\pacssettingmgr.obj ..\build\debug\.obj\pacssettingsdialog.obj ..\build\debug\.obj\qrc_resources.obj
+	-$(DEL_FILE) ..\build\debug\.obj\moc_appender.obj ..\build\debug\.obj\moc_appenderskeleton.obj ..\build\debug\.obj\moc_consoleappender.obj ..\build\debug\.obj\moc_dailyrollingfileappender.obj ..\build\debug\.obj\moc_fileappender.obj ..\build\debug\.obj\moc_configuratorhelper.obj ..\build\debug\.obj\moc_logobject.obj ..\build\debug\.obj\moc_layout.obj ..\build\debug\.obj\moc_logger.obj ..\build\debug\.obj\moc_patternlayout.obj ..\build\debug\.obj\moc_rollingfileappender.obj ..\build\debug\.obj\moc_simplelayout.obj ..\build\debug\.obj\moc_filter.obj ..\build\debug\.obj\moc_ttcclayout.obj ..\build\debug\.obj\moc_writerappender.obj ..\build\debug\.obj\moc_debugappender.obj ..\build\debug\.obj\moc_denyallfilter.obj ..\build\debug\.obj\moc_nullappender.obj ..\build\debug\.obj\moc_levelmatchfilter.obj ..\build\debug\.obj\moc_levelrangefilter.obj ..\build\debug\.obj\moc_listappender.obj ..\build\debug\.obj\moc_stringmatchfilter.obj ..\build\debug\.obj\moc_logmgr.obj ..\build\debug\.obj\moc_databasemgr.obj ..\build\debug\.obj\moc_dicomtools.obj ..\build\debug\.obj\moc_settingsprovider.obj ..\build\debug\.obj\moc_mainwindow.obj ..\build\debug\.obj\moc_logindialog.obj ..\build\debug\.obj\moc_devicemgr.obj ..\build\debug\.obj\moc_startup.obj ..\build\debug\.obj\moc_loginmgr.obj ..\build\debug\.obj\moc_databaseconnector.obj ..\build\debug\.obj\moc_pacssettingmgr.obj ..\build\debug\.obj\moc_pacssettingsdialog.obj
 	-$(DEL_FILE) ..\build\debug\iBEX0.exp ..\build\debug\.obj\iBEX.vc.pdb ..\build\debug\iBEX0.ilk ..\build\debug\iBEX0.idb
 	-$(DEL_FILE) C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.obj\iBEX_resource.res
 
@@ -426,9 +438,9 @@ compiler_moc_predefs_clean:
 ..\build\debug\.moc\moc_predefs.h: C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp
 	cl -BxC:\Qt\5.9.4\msvc2015_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\5.9.4\msvc2015_64\mkspecs\features\data\dummy.cpp 2>NUL >..\build\debug\.moc\moc_predefs.h
 
-compiler_moc_header_make_all: ..\build\debug\.moc\moc_appender.cpp ..\build\debug\.moc\moc_appenderskeleton.cpp ..\build\debug\.moc\moc_consoleappender.cpp ..\build\debug\.moc\moc_dailyrollingfileappender.cpp ..\build\debug\.moc\moc_fileappender.cpp ..\build\debug\.moc\moc_configuratorhelper.cpp ..\build\debug\.moc\moc_logobject.cpp ..\build\debug\.moc\moc_layout.cpp ..\build\debug\.moc\moc_logger.cpp ..\build\debug\.moc\moc_patternlayout.cpp ..\build\debug\.moc\moc_rollingfileappender.cpp ..\build\debug\.moc\moc_simplelayout.cpp ..\build\debug\.moc\moc_filter.cpp ..\build\debug\.moc\moc_ttcclayout.cpp ..\build\debug\.moc\moc_writerappender.cpp ..\build\debug\.moc\moc_debugappender.cpp ..\build\debug\.moc\moc_denyallfilter.cpp ..\build\debug\.moc\moc_nullappender.cpp ..\build\debug\.moc\moc_levelmatchfilter.cpp ..\build\debug\.moc\moc_levelrangefilter.cpp ..\build\debug\.moc\moc_listappender.cpp ..\build\debug\.moc\moc_stringmatchfilter.cpp ..\build\debug\.moc\moc_logmgr.cpp ..\build\debug\.moc\moc_databasemgr.cpp ..\build\debug\.moc\moc_dicomtools.cpp ..\build\debug\.moc\moc_settingsprovider.cpp ..\build\debug\.moc\moc_mainwindow.cpp ..\build\debug\.moc\moc_logindialog.cpp ..\build\debug\.moc\moc_devicemgr.cpp ..\build\debug\.moc\moc_startup.cpp ..\build\debug\.moc\moc_loginmgr.cpp ..\build\debug\.moc\moc_databaseconnector.cpp
+compiler_moc_header_make_all: ..\build\debug\.moc\moc_appender.cpp ..\build\debug\.moc\moc_appenderskeleton.cpp ..\build\debug\.moc\moc_consoleappender.cpp ..\build\debug\.moc\moc_dailyrollingfileappender.cpp ..\build\debug\.moc\moc_fileappender.cpp ..\build\debug\.moc\moc_configuratorhelper.cpp ..\build\debug\.moc\moc_logobject.cpp ..\build\debug\.moc\moc_layout.cpp ..\build\debug\.moc\moc_logger.cpp ..\build\debug\.moc\moc_patternlayout.cpp ..\build\debug\.moc\moc_rollingfileappender.cpp ..\build\debug\.moc\moc_simplelayout.cpp ..\build\debug\.moc\moc_filter.cpp ..\build\debug\.moc\moc_ttcclayout.cpp ..\build\debug\.moc\moc_writerappender.cpp ..\build\debug\.moc\moc_debugappender.cpp ..\build\debug\.moc\moc_denyallfilter.cpp ..\build\debug\.moc\moc_nullappender.cpp ..\build\debug\.moc\moc_levelmatchfilter.cpp ..\build\debug\.moc\moc_levelrangefilter.cpp ..\build\debug\.moc\moc_listappender.cpp ..\build\debug\.moc\moc_stringmatchfilter.cpp ..\build\debug\.moc\moc_logmgr.cpp ..\build\debug\.moc\moc_databasemgr.cpp ..\build\debug\.moc\moc_dicomtools.cpp ..\build\debug\.moc\moc_settingsprovider.cpp ..\build\debug\.moc\moc_mainwindow.cpp ..\build\debug\.moc\moc_logindialog.cpp ..\build\debug\.moc\moc_devicemgr.cpp ..\build\debug\.moc\moc_startup.cpp ..\build\debug\.moc\moc_loginmgr.cpp ..\build\debug\.moc\moc_databaseconnector.cpp ..\build\debug\.moc\moc_pacssettingmgr.cpp ..\build\debug\.moc\moc_pacssettingsdialog.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) ..\build\debug\.moc\moc_appender.cpp ..\build\debug\.moc\moc_appenderskeleton.cpp ..\build\debug\.moc\moc_consoleappender.cpp ..\build\debug\.moc\moc_dailyrollingfileappender.cpp ..\build\debug\.moc\moc_fileappender.cpp ..\build\debug\.moc\moc_configuratorhelper.cpp ..\build\debug\.moc\moc_logobject.cpp ..\build\debug\.moc\moc_layout.cpp ..\build\debug\.moc\moc_logger.cpp ..\build\debug\.moc\moc_patternlayout.cpp ..\build\debug\.moc\moc_rollingfileappender.cpp ..\build\debug\.moc\moc_simplelayout.cpp ..\build\debug\.moc\moc_filter.cpp ..\build\debug\.moc\moc_ttcclayout.cpp ..\build\debug\.moc\moc_writerappender.cpp ..\build\debug\.moc\moc_debugappender.cpp ..\build\debug\.moc\moc_denyallfilter.cpp ..\build\debug\.moc\moc_nullappender.cpp ..\build\debug\.moc\moc_levelmatchfilter.cpp ..\build\debug\.moc\moc_levelrangefilter.cpp ..\build\debug\.moc\moc_listappender.cpp ..\build\debug\.moc\moc_stringmatchfilter.cpp ..\build\debug\.moc\moc_logmgr.cpp ..\build\debug\.moc\moc_databasemgr.cpp ..\build\debug\.moc\moc_dicomtools.cpp ..\build\debug\.moc\moc_settingsprovider.cpp ..\build\debug\.moc\moc_mainwindow.cpp ..\build\debug\.moc\moc_logindialog.cpp ..\build\debug\.moc\moc_devicemgr.cpp ..\build\debug\.moc\moc_startup.cpp ..\build\debug\.moc\moc_loginmgr.cpp ..\build\debug\.moc\moc_databaseconnector.cpp
+	-$(DEL_FILE) ..\build\debug\.moc\moc_appender.cpp ..\build\debug\.moc\moc_appenderskeleton.cpp ..\build\debug\.moc\moc_consoleappender.cpp ..\build\debug\.moc\moc_dailyrollingfileappender.cpp ..\build\debug\.moc\moc_fileappender.cpp ..\build\debug\.moc\moc_configuratorhelper.cpp ..\build\debug\.moc\moc_logobject.cpp ..\build\debug\.moc\moc_layout.cpp ..\build\debug\.moc\moc_logger.cpp ..\build\debug\.moc\moc_patternlayout.cpp ..\build\debug\.moc\moc_rollingfileappender.cpp ..\build\debug\.moc\moc_simplelayout.cpp ..\build\debug\.moc\moc_filter.cpp ..\build\debug\.moc\moc_ttcclayout.cpp ..\build\debug\.moc\moc_writerappender.cpp ..\build\debug\.moc\moc_debugappender.cpp ..\build\debug\.moc\moc_denyallfilter.cpp ..\build\debug\.moc\moc_nullappender.cpp ..\build\debug\.moc\moc_levelmatchfilter.cpp ..\build\debug\.moc\moc_levelrangefilter.cpp ..\build\debug\.moc\moc_listappender.cpp ..\build\debug\.moc\moc_stringmatchfilter.cpp ..\build\debug\.moc\moc_logmgr.cpp ..\build\debug\.moc\moc_databasemgr.cpp ..\build\debug\.moc\moc_dicomtools.cpp ..\build\debug\.moc\moc_settingsprovider.cpp ..\build\debug\.moc\moc_mainwindow.cpp ..\build\debug\.moc\moc_logindialog.cpp ..\build\debug\.moc\moc_devicemgr.cpp ..\build\debug\.moc\moc_startup.cpp ..\build\debug\.moc\moc_loginmgr.cpp ..\build\debug\.moc\moc_databaseconnector.cpp ..\build\debug\.moc\moc_pacssettingmgr.cpp ..\build\debug\.moc\moc_pacssettingsdialog.cpp
 ..\build\debug\.moc\moc_appender.cpp: ..\log4qt\helpers\logobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
@@ -2942,14 +2954,191 @@ compiler_moc_header_clean:
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
 	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/core -IC:/Users/Altay/Documents/Qt/Projects/ibex -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtNetwork -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" Model\databaseconnector.h -o ..\build\debug\.moc\moc_databaseconnector.cpp
 
+..\build\debug\.moc\moc_pacssettingmgr.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlogging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qflags.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmutex.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		Controller\pacssettingmgr.h \
+		..\build\debug\.moc\moc_predefs.h \
+		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/core -IC:/Users/Altay/Documents/Qt/Projects/ibex -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtNetwork -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" Controller\pacssettingmgr.h -o ..\build\debug\.moc\moc_pacssettingmgr.cpp
+
+..\build\debug\.moc\moc_pacssettingsdialog.cpp: C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlogging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qflags.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmutex.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfont.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcursor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
+		View\pacssettingsdialog.h \
+		..\build\debug\.moc\moc_predefs.h \
+		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
+	C:\Qt\5.9.4\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Altay/Documents/Qt/Projects/ibex/build/debug/.moc/moc_predefs.h -IC:/Qt/5.9.4/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Altay/Documents/Qt/Projects/ibex/core -IC:/Users/Altay/Documents/Qt/Projects/ibex -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include/ctk-0.1 -IC:/Users/Altay/Documents/Qt/Projects/ibex/3rd-Party/ctk/include -IC:/Users/Altay/Documents/Qt/Projects/ibex/common/include -IC:/VTK/include/vtk-9.0 -IC:/Qt/5.9.4/msvc2015_64/include -IC:/Qt/5.9.4/msvc2015_64/include/QtWidgets -IC:/Qt/5.9.4/msvc2015_64/include/QtGui -IC:/Qt/5.9.4/msvc2015_64/include/QtANGLE -IC:/Qt/5.9.4/msvc2015_64/include/QtSql -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialBus -IC:/Qt/5.9.4/msvc2015_64/include/QtSerialPort -IC:/Qt/5.9.4/msvc2015_64/include/QtXml -IC:/Qt/5.9.4/msvc2015_64/include/QtNetwork -IC:/Qt/5.9.4/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" View\pacssettingsdialog.h -o ..\build\debug\.moc\moc_pacssettingsdialog.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_logindialog.h
+compiler_uic_make_all: ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_pacsnodesettingsdialog.h ..\build\debug\.ui\ui_logindialog.h
 compiler_uic_clean:
-	-$(DEL_FILE) ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_logindialog.h
+	-$(DEL_FILE) ..\build\debug\.ui\ui_mainwindow.h ..\build\debug\.ui\ui_pacsnodesettingsdialog.h ..\build\debug\.ui\ui_logindialog.h
 ..\build\debug\.ui\ui_mainwindow.h: View\mainwindow.ui \
 		C:\Qt\5.9.4\msvc2015_64\bin\uic.exe
 	C:\Qt\5.9.4\msvc2015_64\bin\uic.exe View\mainwindow.ui -o ..\build\debug\.ui\ui_mainwindow.h
+
+..\build\debug\.ui\ui_pacsnodesettingsdialog.h: View\pacsnodesettingsdialog.ui \
+		C:\Qt\5.9.4\msvc2015_64\bin\uic.exe
+	C:\Qt\5.9.4\msvc2015_64\bin\uic.exe View\pacsnodesettingsdialog.ui -o ..\build\debug\.ui\ui_pacsnodesettingsdialog.h
 
 ..\build\debug\.ui\ui_logindialog.h: View\logindialog.ui \
 		C:\Qt\5.9.4\msvc2015_64\bin\uic.exe
@@ -7470,7 +7659,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		View\exposuredialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
-		View\pacsnodesettingsdialog.h \
+		View/pacssettingsdialog.h \
 		View\LoadStudyDialog.h \
 		View\worklistserversettingsdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlField \
@@ -8457,6 +8646,467 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlerror.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\databaseconnector.obj Model\databaseconnector.cpp
 
+..\build\debug\.obj\pacssettingmgr.obj: Controller\pacssettingmgr.cpp Controller/pacssettingmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlogging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qflags.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmutex.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		Utils/settingsprovider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QtXml \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QtXmlDepends \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCore \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCoreDepends \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracttransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydataops.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydatapointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasictimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbitarray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbuffer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraymatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcollator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineparser.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcryptographichash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdeadlinetimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qelapsedtimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdiriterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeasingcurve.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qendian.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventtransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qexception.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfactoryinterface.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileselector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QStringList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfilesystemwatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfinalstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuture.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfutureinterface.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrunnable.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qresultstore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuturesynchronizer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuturewatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhistorystate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qidentityproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qisenum.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonarray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibrary.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibraryinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversionnumber.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlinkedlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlockfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qloggingcategory.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmessageauthenticationcode.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetaobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimedata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimedatabase.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimetype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectcleanuphandler.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qoperatingsystemversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qparallelanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpauseanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qplugin.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpluginloader.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocess.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpropertyanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariantanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qqueue.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qresource.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsavefile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedvaluerollback.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsemaphore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsequentialanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedmemory.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsignalmapper.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsignaltransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsocketnotifier.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstack.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstandardpaths.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstatemachine.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstorageinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlistmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemsemaphore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtemporarydir.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QScopedPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtemporaryfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextboundaryfinder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextcodec.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthread.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthreadpool.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthreadstorage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimeline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimezone.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtranslator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypetraits.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\quuid.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qwaitcondition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qwineventnotifier.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qxmlstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcoreversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxmlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxml-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qdom.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qxml.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxmlversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFile \
+		Utils/logmgr.h \
+		../log4qt/consoleappender.h \
+		../log4qt/writerappender.h \
+		../log4qt/appenderskeleton.h \
+		../log4qt/appender.h \
+		../log4qt/helpers/logobject.h \
+		../log4qt/helpers/classlogger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicInt \
+		../log4qt/helpers/logobjectptr.h \
+		../log4qt/logger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QReadWriteLock \
+		../log4qt/helpers/logerror.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		../log4qt/level.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
+		../log4qt/log4qt.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMutex \
+		../log4qt/fileappender.h \
+		../log4qt/rollingfileappender.h \
+		../log4qt/loggerrepository.h \
+		../log4qt/logmanager.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QHash \
+		../log4qt/patternlayout.h \
+		../log4qt/layout.h \
+		../log4qt/ttcclayout.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\pacssettingmgr.obj Controller\pacssettingmgr.cpp
+
+..\build\debug\.obj\pacssettingsdialog.obj: View\pacssettingsdialog.cpp View/pacssettingsdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlogging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qflags.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmutex.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfont.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcursor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
+		..\build\debug\.ui\ui_pacsnodesettingsdialog.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkDICOMServerNodeWidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkDICOMWidgetsExport.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QtXml \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QtXmlDepends \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCore \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtCoreDepends \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstracttransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydataops.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydatapointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasictimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbitarray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbuffer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraymatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcollator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcommandlineparser.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcryptographichash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdeadlinetimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qelapsedtimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdiriterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeasingcurve.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qendian.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventtransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qexception.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfactoryinterface.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileselector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QStringList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfilesystemwatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfinalstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuture.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfutureinterface.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrunnable.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qresultstore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuturesynchronizer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfuturewatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhistorystate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qidentityproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qisenum.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonarray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibrary.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibraryinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversionnumber.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlinkedlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlockfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qloggingcategory.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmessageauthenticationcode.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetaobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimedata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimedatabase.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmimetype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectcleanuphandler.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qoperatingsystemversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qparallelanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpauseanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qplugin.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpluginloader.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocess.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpropertyanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariantanimation.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qqueue.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qresource.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsavefile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedvaluerollback.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsemaphore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsequentialanimationgroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsettings.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedmemory.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsignalmapper.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsignaltransition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsocketnotifier.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsortfilterproxymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstack.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstandardpaths.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstatemachine.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstorageinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlistmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemsemaphore.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtemporarydir.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QScopedPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtemporaryfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextboundaryfinder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextcodec.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthread.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthreadpool.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qthreadstorage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimeline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimezone.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtranslator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypetraits.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\quuid.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qwaitcondition.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qwineventnotifier.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qxmlstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcoreversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxmlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxml-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qdom.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qxml.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtXml\qtxmlversion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\pacssettingsdialog.obj View\pacssettingsdialog.cpp
+
 ..\build\debug\.obj\qrc_resources.obj: ..\build\debug\.rcc\qrc_resources.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\qrc_resources.obj ..\build\debug\.rcc\qrc_resources.cpp
 
@@ -8555,6 +9205,12 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 ..\build\debug\.obj\moc_databaseconnector.obj: ..\build\debug\.moc\moc_databaseconnector.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\moc_databaseconnector.obj ..\build\debug\.moc\moc_databaseconnector.cpp
+
+..\build\debug\.obj\moc_pacssettingmgr.obj: ..\build\debug\.moc\moc_pacssettingmgr.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\moc_pacssettingmgr.obj ..\build\debug\.moc\moc_pacssettingmgr.cpp
+
+..\build\debug\.obj\moc_pacssettingsdialog.obj: ..\build\debug\.moc\moc_pacssettingsdialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\moc_pacssettingsdialog.obj ..\build\debug\.moc\moc_pacssettingsdialog.cpp
 
 ####### Install
 

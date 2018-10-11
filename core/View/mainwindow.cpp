@@ -3,7 +3,7 @@
 #include "newpatientdialog.h"
 #include "exposuredialog.h"
 #include "QMessageBox"
-#include "pacsnodesettingsdialog.h"
+#include "pacssettingsdialog.h"
 #include "LoadStudyDialog.h"
 #include "worklistserversettingsdialog.h"
 #include "worklistdialog.h"

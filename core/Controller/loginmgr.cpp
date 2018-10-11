@@ -19,7 +19,6 @@ LoginMgr::LoginMgr(QObject *parent, LoginDialog &loginDlg) :
 QString LoginMgr::GetActiveUser()
 {
     return username;
-
 }
 
 void LoginMgr::ActivateLoginProcess()

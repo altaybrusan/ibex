@@ -117,7 +117,6 @@ SOURCES += \
 #        Model/anatomicregionelement.cpp\
 #        View/exposuredialog.cpp \
 #        View/imageviewer.cpp \
-#        View/pacsnodesettingsdialog.cpp \
 #        View/loadstudydialog.cpp \
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
@@ -125,7 +124,9 @@ SOURCES += \
 #        View/worklistdialog.cpp \
 #        View/worklistmodel.cpp \
 #         Utils/dicomwriter.cpp \
-         Model/databaseconnector.cpp
+         Model/databaseconnector.cpp \
+    Controller/pacssettingmgr.cpp \
+    View/pacssettingsdialog.cpp
 
 #        Controller/loginmgr.cpp
 
@@ -146,7 +147,6 @@ HEADERS += \
 #        Model/anatomicregionelement.h
 #        View/exposuredialog.h \
 #        View/imageviewer.h \
-#        View/pacsnodesettingsdialog.h \
 #        loadstudydialog.h\
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
@@ -163,7 +163,9 @@ HEADERS += \
 #        Controller/loginmgr.h
          startup.h \
     Controller/loginmgr.h \
-    Model/databaseconnector.h
+    Model/databaseconnector.h \
+    Controller/pacssettingmgr.h \
+    View/pacssettingsdialog.h
 
 
 FORMS += \
@@ -171,7 +173,7 @@ FORMS += \
 #         View/newpatientdialog.ui
 #        View/exposuredialog.ui \
 #        View/imageviewer.ui \
-#        View/pacsnodesettingsdialog.ui \
+         View/pacsnodesettingsdialog.ui \
 #        View/loadstudydialog.ui \
 #        View/worklistserversettingsdialog.ui \
 #        View/worklistdialog.ui \

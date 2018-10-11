@@ -35,7 +35,7 @@ QDomElement SettingsProvider::GetRootElement()
     return document.firstChildElement();
 }
 
-QStringList SettingsProvider::ListElemnts(QDomElement root, QString tagname, QString attribute)
+QStringList SettingsProvider::ListElements(QDomElement root, QString tagname, QString attribute)
 {
     QStringList _elemntList;
     QDomNodeList items = root.elementsByTagName(tagname);

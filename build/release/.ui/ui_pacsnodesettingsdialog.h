@@ -64,8 +64,7 @@ public:
 
 };
 
-namespace Ui {
-    class PacsNodeSettingsDialog: public Ui_PacsNodeSettingsDialog {};
+namespPacsSettingsDialogsNodeSettingsDialog: public Ui_PacsNodeSettingsDialog {};
 } // namespace Ui
 
 QT_END_NAMESPACE

@@ -5,26 +5,28 @@
 class ctkDICOMServerNodeWidget;
 
 namespace Ui {
-class PacsNodeSettingsDialog;
+class PacsSettingsDialog;
 }
 
-class PacsNodeSettingsDialog : public QDialog
+class PacsSettingsDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit PacsNodeSettingsDialog(QWidget *parent = 0);
+    explicit PacsSettingsDialog(QWidget *parent = 0);
     QString  GetCallingServerAET();
     QString GetStorageAETitle();
     int  GetCallingServerPort();
+    void ClearAllPACSNodes();
+    void AddPACSNodes(QMap<QString, QVariant> nodes);
 
 
-    ~PacsNodeSettingsDialog();
+    ~PacsSettingsDialog();
 
 private slots:
 
 private:
-    Ui::PacsNodeSettingsDialog *ui;
+    Ui::PacsSettingsDialog *ui;
     ctkDICOMServerNodeWidget* _dicomservernodeWidget;
 };
 

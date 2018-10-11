@@ -14,7 +14,7 @@ public:
     bool OpenSettingFile();
     bool LoadSettingFile();
     QDomElement GetRootElement();
-    QStringList ListElemnts(QDomElement root,
+    QStringList ListElements(QDomElement root,
                             QString tagname,
                             QString attribute);
 

@@ -12,7 +12,7 @@
 #include <QApplication>
 
 #define IBEX_STTINGS_FILE "./configs/_ibexsettings.xml"
-
+#define IBEX_PACKS_SETTINGS_FILE "./configs/_pacs.xml"
 Startup::Startup() : QObject(nullptr),
     m_mainWindow(*new MainWindow(nullptr)),
     m_loginDlg(*new LoginDialog(nullptr)),
