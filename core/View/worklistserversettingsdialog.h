@@ -19,7 +19,7 @@ public:
     QString GetWorklistServerPort();
     void SetWorklistServerAETitle(QString aetitle);
     void SetWorklistServerIP(QString ipaddress);
-    void SetWorklistServerPort(int port);
+    void SetWorklistServerPort(QString port);
 
     ~WorklistServerSettingsDialog();
 

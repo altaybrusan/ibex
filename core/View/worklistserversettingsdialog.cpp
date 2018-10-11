@@ -22,21 +22,19 @@
 //     return _elemntList;
 //}
 
+QRegExp rxPort("^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$");
+QRegExp rxIP("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$");
 
 WorklistServerSettingsDialog::WorklistServerSettingsDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::WorklistServerSettingsDialog)
 {
     ui->setupUi(this);
-    QRegExp rx("^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$");
-    QValidator *validator = new QRegExpValidator(rx, this);
-    ui->portLineEdit->setValidator(validator);
-//        QStringList strList = ListElements2(root,"Server","IP");
-//        ui->ipAddresslineEdit->setText(strList.at(0));
-//        strList = ListElements2(root,"Server","Port");
-//        ui->portLineEdit->setText(strList.at(0));
-//        strList = ListElements2(root,"Server","AETitle");
-//        ui->AETitleLineEdit->setText(strList.at(0));
+
+    QValidator *portValidator = new QRegExpValidator(rxPort, this);
+    ui->portLineEdit->setValidator(portValidator);
+    QValidator *ipValidator = new QRegExpValidator(rxIP, this);
+    ui->ipAddresslineEdit->setValidator(ipValidator);
 }
 
 QString WorklistServerSettingsDialog::GetWorklistServerAETitle()
@@ -61,12 +59,14 @@ void WorklistServerSettingsDialog::SetWorklistServerAETitle(QString aetitle)
 
 void WorklistServerSettingsDialog::SetWorklistServerIP(QString ipaddress)
 {
-    ui->ipAddresslineEdit->setText(ipaddress);
+    if(rxIP.exactMatch(ipaddress))
+        ui->ipAddresslineEdit->setText(ipaddress);
 }
 
-void WorklistServerSettingsDialog::SetWorklistServerPort(int port)
+void WorklistServerSettingsDialog::SetWorklistServerPort(QString port)
 {
-    ui->AETitleLineEdit->setText(QString::number(port));
+    if(rxPort.exactMatch(port))
+      ui->portLineEdit->setText(port);
 }
 
 WorklistServerSettingsDialog::~WorklistServerSettingsDialog()
