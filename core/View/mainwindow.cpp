@@ -3,7 +3,6 @@
 #include "newpatientdialog.h"
 #include "exposuredialog.h"
 #include "QMessageBox"
-#include "pacssettingsdialog.h"
 #include "LoadStudyDialog.h"
 #include "worklistserversettingsdialog.h"
 #include "worklistdialog.h"
@@ -184,13 +183,6 @@ void MainWindow::on_actionQuickStarttriggered()
 
 }
 
-void MainWindow::on_actionUpdatePACSServerSettingstriggered()
-{
-//   PacsNodeSettingsDialog* _dialog = new PacsNodeSettingsDialog(this);
-//   _dialog->show();
-
-}
-
 void MainWindow::on_actionLoadStudytriggered()
 {
 
@@ -233,3 +225,8 @@ void MainWindow::showEvent(QShowEvent *event)
 
 //}
 
+void MainWindow::on_action_Update_PACS_Server_Settings_triggered()
+{
+    LogMgr::instance()->LogSysDebug("loading pacs server is triggered.");
+    emit NotifyUpdatePACSSettingIsTriggered();
+}

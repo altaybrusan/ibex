@@ -30,7 +30,7 @@ signals:
 private slots:
     void on_actionNewStudytriggered();
     void on_actionQuickStarttriggered();
-    void on_actionUpdatePACSServerSettingstriggered();
+    //void on_actionUpdatePACSServerSettingstriggered();
     void on_actionLoadStudytriggered();
 //    void on_newPatient_accepted();
     void on_actionUpdateWorklistSettingstriggered();
@@ -38,6 +38,7 @@ private slots:
 //    void on_Patient_selected(QSqlRecord record);
 //    void on_Login_Successfully();
 //    void on_Login_Failed();
+    void on_action_Update_PACS_Server_Settings_triggered();
 
 protected:
     void showEvent( QShowEvent* event ) override;

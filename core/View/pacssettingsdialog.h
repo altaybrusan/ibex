@@ -14,12 +14,9 @@ class PacsSettingsDialog : public QDialog
 
 public:
     explicit PacsSettingsDialog(QWidget *parent = 0);
-    QString  GetCallingServerAET();
-    QString GetStorageAETitle();
-    int  GetCallingServerPort();
-    void ClearAllPACSNodes();
-    void AddPACSNodes(QMap<QString, QVariant> nodes);
-
+    QString  GetPACSServerAET();
+    QString GetStorageServerAETitle();
+    int  GetPACSServerPort();
 
     ~PacsSettingsDialog();
 

@@ -3,10 +3,15 @@
 #include "Utils/logmgr.h"
 #include <QApplication>
 
-DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow, LoginMgr &loginMgr) :
+DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
+                     LoginMgr &loginMgr,
+                     PacsSettingsDialog &pacsSettingsDlg,
+                     PacsSettingMgr &pacsSettingsMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
-    m_loginMgr(loginMgr)
+    m_loginMgr(loginMgr),
+    m_pacsSettingsDlg(pacsSettingsDlg),
+    m_pacsSettingsMgr(pacsSettingsMgr)
 {
 
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
@@ -22,6 +27,7 @@ void DeviceMgr::WireConnections()
       LogMgr::instance()->LogSysInfo(tr("user cancelled sign-in"));
       ShutdownDevice();
   });
+  connect(&m_mainWindow,&MainWindow::NotifyUpdatePACSSettingIsTriggered,&m_pacsSettingsMgr,&PacsSettingMgr::OnActivatePacsSettingsDialog);
 }
 
 void DeviceMgr::OnNewStudyWorkFlowIsTriggered()
@@ -58,14 +64,3 @@ void DeviceMgr::ShutdownDevice()
 {
     QApplication::quit();
 }
-
-//void DeviceMgr::ShowLoginDialog()
-//{
-//  LogMgr::instance()->LogSysInfo(tr("Login dialog is activated"));
-//  m_loginDlg.show();
-//  if (m_loginDlg.result() == QDialog::Rejected)
-//  {
-//      LogMgr::instance()->LogSysInfo(tr("Login canceled."));
-//      LogMgr::instance()->LogAppInfo(tr("Login canceled."));
-//  }
-//}

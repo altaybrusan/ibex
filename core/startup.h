@@ -7,6 +7,8 @@ class MainWindow;
 class LoginDialog;
 class DeviceMgr;
 class LoginMgr;
+class PacsSettingMgr;
+class PacsSettingsDialog;
 
 
 class Startup : public QObject
@@ -22,9 +24,10 @@ private:
     LoginDialog& m_loginDlg;
     LoginMgr& m_loginMgr;
     DatabaseConnector& m_dbConnector;
-    DeviceMgr& m_device;
     QString m_dbName,m_dbDriver;
-
+    PacsSettingsDialog& m_pacsSettingsDlg;
+    PacsSettingMgr& m_pacsSettingsMgr;
+    DeviceMgr& m_device;
 
     void LoadiBEXSettings();
     void FailedToLoad();

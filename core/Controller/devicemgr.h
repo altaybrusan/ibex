@@ -3,7 +3,10 @@
 
 #include <QObject>
 #include "View/mainwindow.h"
+#include "View/pacssettingsdialog.h"
 #include "Controller/loginmgr.h"
+#include "Controller/pacssettingmgr.h"
+
 
 class DeviceMgr : public QObject
 {
@@ -11,7 +14,9 @@ class DeviceMgr : public QObject
 public:
     explicit DeviceMgr(QObject *parent,
                        MainWindow & mainWindow,
-                       LoginMgr& loginMgr);
+                       LoginMgr& loginMgr,
+                       PacsSettingsDialog& pacsSettingsDlg,
+                       PacsSettingMgr& pacsSettingsMgr);
     void WireConnections();
 
 
@@ -28,6 +33,8 @@ private slots:
 private:
     MainWindow& m_mainWindow;
     LoginMgr& m_loginMgr;
+    PacsSettingMgr& m_pacsSettingsMgr;
+    PacsSettingsDialog& m_pacsSettingsDlg;
 
     void ShutdownDevice();
 

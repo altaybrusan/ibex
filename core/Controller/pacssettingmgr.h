@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QMap>
-class SettingsProvider;
+
 class PacsSettingsDialog;
 
 
@@ -11,16 +11,16 @@ class PacsSettingMgr : public QObject
 {
     Q_OBJECT
 public:
-    explicit PacsSettingMgr(QObject *parent,PacsSettingsDialog& pacsSettingsDialog);
-    void LoadSettings(QString filePath);
-signals:
-    void NotifyFailedLoadingSettings();
+    explicit PacsSettingMgr(QObject *parent,PacsSettingsDialog& dialog);
+    QString GetPACSServerName();
+    QString GetStorageServerName();
+    int GetPACSServerport();
 
 public slots:
+    void OnActivatePacsSettingsDialog();
 
 private:
 PacsSettingsDialog& m_pacsDlg;
-QMap<QString, QVariant> m_serverNodes;
 };
 
 #endif // PACSSETTINGMGR_H

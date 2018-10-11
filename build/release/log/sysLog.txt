@@ -591,3 +591,126 @@
 [ 2018-10-10 ][ 23:28:29 ] INFO  SYSTEM - Database connection is estabilished.
 [ 2018-10-10 ][ 23:28:35 ] INFO  SYSTEM - user cancelled sign-in
 [ 2018-10-10 ][ 23:28:35 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 09:28:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 09:28:13 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 09:28:13 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 09:28:18 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 09:28:18 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 09:28:18 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 09:28:31 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 09:30:12 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 09:30:12 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 09:30:12 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 09:30:15 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 09:30:15 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 09:30:15 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 09:30:21 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 09:31:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 09:31:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 09:31:24 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 09:31:28 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 09:31:28 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 09:31:28 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 09:32:00 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 09:37:35 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 09:37:35 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 09:37:35 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 09:37:38 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 09:37:38 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 09:37:38 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 09:37:42 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 09:45:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 09:45:30 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 09:45:30 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 09:45:34 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 09:45:34 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 09:45:34 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 09:45:36 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 09:46:11 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 10:49:35 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 10:49:35 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 10:49:35 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 10:49:39 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 10:49:39 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 10:49:39 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 10:49:42 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 10:49:45 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 10:50:03 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 10:50:03 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 10:50:03 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 10:50:07 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 10:50:07 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 10:50:07 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 10:50:09 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 10:50:14 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 10:52:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 10:52:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 10:52:43 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 10:52:54 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-11 ][ 10:52:54 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 10:53:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 10:53:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 10:53:39 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 10:53:43 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 10:53:43 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 10:53:43 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 10:53:45 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 10:54:09 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 10:54:12 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 10:54:17 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 10:54:17 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 10:54:17 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 10:54:20 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 10:54:20 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 10:54:20 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 10:54:22 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 10:54:29 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 10:54:33 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 10:54:33 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 10:54:33 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 10:54:36 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 10:54:36 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 10:54:36 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 10:54:38 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 10:54:46 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 10:54:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 10:54:49 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 10:54:49 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 10:54:53 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 10:54:53 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 10:54:53 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 10:54:55 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 11:38:18 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 12:42:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 12:42:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 12:42:04 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 12:42:10 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 12:42:10 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 12:42:10 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 12:42:11 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 12:42:36 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 12:42:50 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 12:42:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 12:42:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 12:42:53 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 12:42:57 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 12:42:57 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 12:42:57 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 12:43:00 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 12:43:05 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 12:47:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 12:47:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 12:47:16 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 12:47:22 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 12:47:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 12:47:22 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 12:47:23 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 12:47:26 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 13:06:44 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 13:06:44 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 13:06:44 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 13:06:48 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 13:06:48 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 13:06:48 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 13:06:50 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-11 ][ 13:07:24 ] INFO  SYSTEM - Database connection is closed.

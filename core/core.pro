@@ -173,11 +173,11 @@ FORMS += \
 #         View/newpatientdialog.ui
 #        View/exposuredialog.ui \
 #        View/imageviewer.ui \
-         View/pacsnodesettingsdialog.ui \
 #        View/loadstudydialog.ui \
 #        View/worklistserversettingsdialog.ui \
 #        View/worklistdialog.ui \
-        View/logindialog.ui
+        View/logindialog.ui \
+    View/pacssettingsdialog.ui
 
 
 RESOURCES += \

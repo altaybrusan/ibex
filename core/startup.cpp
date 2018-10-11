@@ -6,20 +6,23 @@
 #include "Controller/devicemgr.h"
 #include "Utils/logmgr.h"
 #include "Utils/settingsprovider.h"
+#include "View/pacssettingsdialog.h"
+#include "Controller/pacssettingmgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
 #include <QApplication>
 
 #define IBEX_STTINGS_FILE "./configs/_ibexsettings.xml"
-#define IBEX_PACKS_SETTINGS_FILE "./configs/_pacs.xml"
+
 Startup::Startup() : QObject(nullptr),
     m_mainWindow(*new MainWindow(nullptr)),
     m_loginDlg(*new LoginDialog(nullptr)),
     m_loginMgr(*new LoginMgr(nullptr,m_loginDlg)),
     m_dbConnector(*new DatabaseConnector(nullptr)),
-    m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr))
-
+    m_pacsSettingsDlg(*new PacsSettingsDialog(nullptr)),
+    m_pacsSettingsMgr(*new PacsSettingMgr(nullptr,m_pacsSettingsDlg)),
+    m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,m_pacsSettingsDlg,m_pacsSettingsMgr))
 {
     m_dbConnector.setParent(this);
     LoadiBEXSettings();
@@ -34,8 +37,13 @@ Startup::Startup() : QObject(nullptr),
       m_loginDlg.setParent(&m_mainWindow);
       m_loginDlg.setWindowFlag( Qt::Window,true);
       m_loginDlg.setModal(true);
-
       m_loginMgr.setParent(this);
+
+      m_pacsSettingsDlg.setParent(&m_mainWindow);
+      m_pacsSettingsDlg.setWindowFlag( Qt::Window,true);
+      m_pacsSettingsDlg.setModal(true);
+      m_pacsSettingsMgr.setParent(this);
+
       m_device.setParent(this);
       m_device.WireConnections();
 
