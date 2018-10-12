@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "worklistdialog.h"
-//#include "logindialog.h"
 
 class NewPatientDialog;
 
@@ -31,7 +30,6 @@ private slots:
     void on_actionNewStudytriggered();
     void on_actionQuickStarttriggered();
     //void on_actionUpdatePACSServerSettingstriggered();
-    void on_actionLoadStudytriggered();
 //    void on_newPatient_accepted();
     void on_actionOpenStudytriggered();
 //    void on_Patient_selected(QSqlRecord record);
@@ -41,13 +39,12 @@ private slots:
 
     void on_action_Update_Worklist_Settings_triggered();
 
+    void on_action_Load_Study_triggered();
+
 protected:
     void showEvent( QShowEvent* event ) override;
 private:
     Ui::MainWindow *ui;
-//    NewPatientDialog* _dialog;
-//    WorkListDialog* wrkDlg;
-//    LoginDialog* loginDlg;
 //    QSqlTableModel* _model,*_model2;
 };
 

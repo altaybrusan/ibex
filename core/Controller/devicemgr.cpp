@@ -8,9 +8,13 @@ DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
                      PacsSettingsDialog &pacsSettingsDlg,
                      PacsSettingMgr &pacsSettingsMgr,
                      WorklistServerSettingsDialog &worklistSettingDlg,
-                     WorklistServerSettingsMgr &worklistdialogMgr) :
+                     WorklistServerSettingsMgr &worklistdialogMgr,
+                     LoadStudyDialog &loadStudyDlg,
+                     LoadStudyMgr &loadStudyMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
+    m_loadStudyDlg(loadStudyDlg),
+    m_loadStudyMgr(loadStudyMgr),
     m_loginMgr(loginMgr),
     m_pacsSettingsDlg(pacsSettingsDlg),
     m_pacsSettingsMgr(pacsSettingsMgr),
@@ -33,6 +37,8 @@ void DeviceMgr::WireConnections()
   });
   connect(&m_mainWindow,&MainWindow::NotifyUpdatePACSSettingIsTriggered,&m_pacsSettingsMgr,&PacsSettingMgr::OnActivatePacsSettingsDialog);
   connect(&m_mainWindow,&MainWindow::NotifyUpdateWorklistSettingsIsTriggered,&m_worklisSettingstMgr,&WorklistServerSettingsMgr::OnActivateWorklistSettingsDialog);
+  connect(&m_mainWindow,&MainWindow::NotifyLoadStudyIsTriggered,&m_loadStudyMgr,&LoadStudyMgr::ActivateLoadingStudy);
+
 }
 
 void DeviceMgr::OnNewStudyWorkFlowIsTriggered()

@@ -11,6 +11,8 @@ class PacsSettingMgr;
 class PacsSettingsDialog;
 class WorklistServerSettingsMgr;
 class WorklistServerSettingsDialog;
+class LoadStudyDialog;
+class LoadStudyMgr;
 
 class Startup : public QObject
 {
@@ -22,6 +24,8 @@ public:
 
 private:
     MainWindow& m_mainWindow;
+    LoadStudyDialog& m_loadStudyDlg;
+    LoadStudyMgr& m_loadStudyMgr;
     LoginDialog& m_loginDlg;
     LoginMgr& m_loginMgr;
     DatabaseConnector& m_dbConnector;
@@ -31,6 +35,8 @@ private:
     WorklistServerSettingsDialog& m_worklistDlg;
     WorklistServerSettingsMgr& m_worklistMgr;
     DeviceMgr& m_device;
+
+
 
     void LoadiBEXSettings();
     void FailedToLoad();

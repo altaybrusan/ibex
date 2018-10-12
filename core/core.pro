@@ -39,11 +39,6 @@ DEFINES += TEST_IMAGES_DIR=\\\"$$TEST_IMAGE_REPO\\\"
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-#message( "Test if log4qt exists...." )
-#exists($$DESTDIR/plugins/log4qt.lib){
-#message( "Integrating Log4qt ..." )
-#LIBS += ./plugins/log4qt.lib
-#}
 
 LIBS += $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
         $$PWD/../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMCore.lib \
@@ -101,6 +96,7 @@ INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
 
 SOURCES += \
         main.cpp \
+        View/loadstudydialog.cpp \
         Utils/logmgr.cpp \
         Utils/databasemgr.cpp \
         Utils/settingsprovider.cpp \
@@ -111,24 +107,23 @@ SOURCES += \
          View/logindialog.cpp \
          Controller/devicemgr.cpp \
          Controller/loginmgr.cpp \
+         View/worklistserversettingsdialog.cpp \
+         Model/databaseconnector.cpp \
+         Controller/pacssettingmgr.cpp \
+         View/pacssettingsdialog.cpp \
+         Controller/worklistserversettingsmgr.cpp \
+    Controller/loadstudymgr.cpp
 #        View/newpatientdialog.cpp \
 #        View/bodypartselectionsquare.cpp \
 #        Model/patientdata.cpp \
 #        Model/anatomicregionelement.cpp\
 #        View/exposuredialog.cpp \
 #        View/imageviewer.cpp \
-#        View/loadstudydialog.cpp \
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
-         View/worklistserversettingsdialog.cpp \
 #        View/worklistdialog.cpp \
 #        View/worklistmodel.cpp \
 #         Utils/dicomwriter.cpp \
-         Model/databaseconnector.cpp \
-    Controller/pacssettingmgr.cpp \
-    View/pacssettingsdialog.cpp \
-    Controller/worklistserversettingsmgr.cpp
-
 #        Controller/loginmgr.cpp
 
 
@@ -141,6 +136,21 @@ HEADERS += \
         Utils/settingsprovider.h \
         View/mainwindow.h \
         coreapplication.h \
+        View/loadstudydialog.h\
+         View/worklistserversettingsdialog.h \
+         View/logindialog.h \
+         Controller/devicemgr.h \
+         startup.h \
+         Controller/loginmgr.h \
+         Model/databaseconnector.h \
+         Controller/pacssettingmgr.h \
+         View/pacssettingsdialog.h \
+         Controller/worklistserversettingsmgr.h \
+    Controller/loadstudymgr.h
+#        View/worklistdialog.h \
+#        View/dicomtaglist.h \
+#        View/worklistmodel.h \
+#        Utils/dicomwriter.h \
 #        View/newpatientdialog.h\
 #        View/bodypartselectionsquare.h
 #        Model/DICOM_ENUMS.h \
@@ -148,39 +158,23 @@ HEADERS += \
 #        Model/anatomicregionelement.h
 #        View/exposuredialog.h \
 #        View/imageviewer.h \
-#        loadstudydialog.h\
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \
 #        View/rs232connector.h \
 #        View/modbusconnector.h \
-         View/worklistserversettingsdialog.h \
-#        View/worklistdialog.h \
-#        View/dicomtaglist.h \
-#        View/worklistmodel.h \
-         View/logindialog.h \
-#        Utils/dicomwriter.h \
-         Controller/devicemgr.h \
 #        Controller/loginmgr.h
-         startup.h \
-    Controller/loginmgr.h \
-    Model/databaseconnector.h \
-    Controller/pacssettingmgr.h \
-    View/pacssettingsdialog.h \
-    Controller/worklistserversettingsmgr.h
-
 
 FORMS += \
          View/mainwindow.ui \
+         View/loadstudydialog.ui \
+         View/worklistserversettingsdialog.ui \
+         View/logindialog.ui \
+         View/pacssettingsdialog.ui
 #         View/newpatientdialog.ui
 #        View/exposuredialog.ui \
 #        View/imageviewer.ui \
-#        View/loadstudydialog.ui \
-         View/worklistserversettingsdialog.ui \
 #        View/worklistdialog.ui \
-        View/logindialog.ui \
-    View/pacssettingsdialog.ui
-
 
 RESOURCES += \
     resources.qrc

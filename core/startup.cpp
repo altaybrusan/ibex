@@ -10,6 +10,8 @@
 #include "View/pacssettingsdialog.h"
 #include "View/worklistserversettingsdialog.h"
 #include "Controller/pacssettingmgr.h"
+#include "View/loadstudydialog.h"
+#include "Controller/loadstudymgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -17,8 +19,12 @@
 
 #define IBEX_STTINGS_FILE "./configs/_ibexsettings.xml"
 #define WRKLST_SETTING_FILE "./configs/_worklist.xml"
+#define LOCAL_PACS_FILE "./database/localpacs.db"
+#define LOCALDB_SCHEMA_FILE "./configs/dicom-schema.sql"
 Startup::Startup() : QObject(nullptr),
     m_mainWindow(*new MainWindow(nullptr)),
+    m_loadStudyDlg(*new LoadStudyDialog(nullptr)),
+    m_loadStudyMgr(*new LoadStudyMgr(nullptr,m_loadStudyDlg,LOCAL_PACS_FILE,LOCALDB_SCHEMA_FILE)),
     m_loginDlg(*new LoginDialog(nullptr)),
     m_loginMgr(*new LoginMgr(nullptr,m_loginDlg)),
     m_dbConnector(*new DatabaseConnector(nullptr)),
@@ -28,7 +34,9 @@ Startup::Startup() : QObject(nullptr),
     m_worklistMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistDlg,WRKLST_SETTING_FILE)),
     m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,
                             m_pacsSettingsDlg,m_pacsSettingsMgr,
-                            m_worklistDlg,m_worklistMgr))
+                            m_worklistDlg,m_worklistMgr,
+                            m_loadStudyDlg,m_loadStudyMgr))
+
 {
     m_dbConnector.setParent(this);
     LoadiBEXSettings();
@@ -40,6 +48,11 @@ Startup::Startup() : QObject(nullptr),
         LogMgr::instance()->LogAppFail(tr("unsuccessful start. Database connection failed"));
         exit(1);
     }
+    m_loadStudyDlg.setParent(&m_mainWindow);
+    m_loadStudyDlg.setWindowFlag( Qt::Window,true);
+    m_loadStudyDlg.setModal(true);
+    m_loadStudyMgr.setParent(this);
+
       m_loginDlg.setParent(&m_mainWindow);
       m_loginDlg.setWindowFlag( Qt::Window,true);
       m_loginDlg.setModal(true);
@@ -54,6 +67,10 @@ Startup::Startup() : QObject(nullptr),
       m_worklistDlg.setWindowFlag( Qt::Window,true);
       m_worklistDlg.setModal(true);
       m_worklistMgr.setParent(this);
+
+
+
+
 
       m_device.setParent(this);
       m_device.WireConnections();

@@ -8,6 +8,8 @@
 #include "Controller/pacssettingmgr.h"
 #include "Controller/worklistserversettingsmgr.h"
 #include "View/worklistserversettingsdialog.h"
+#include "View/loadstudydialog.h"
+#include "Controller/loadstudymgr.h"
 
 class DeviceMgr : public QObject
 {
@@ -19,7 +21,9 @@ public:
                        PacsSettingsDialog& pacsSettingsDlg,
                        PacsSettingMgr& pacsSettingsMgr,
                        WorklistServerSettingsDialog& worklistSettingDlg,
-                       WorklistServerSettingsMgr& worklistdialogMgr);
+                       WorklistServerSettingsMgr& worklistdialogMgr,
+                       LoadStudyDialog& loadStudyDlg,
+                       LoadStudyMgr& loadStudyMgr);
     void WireConnections();
 
 
@@ -35,14 +39,17 @@ private slots:
     void OnOpenStudyWorkFlowIsTriggered();
 private:
     MainWindow& m_mainWindow;
+    LoadStudyMgr& m_loadStudyMgr;
+    LoadStudyDialog& m_loadStudyDlg;
     LoginMgr& m_loginMgr;
     PacsSettingMgr& m_pacsSettingsMgr;
     PacsSettingsDialog& m_pacsSettingsDlg;
     WorklistServerSettingsDialog& m_worklistSettingsDlg;
     WorklistServerSettingsMgr& m_worklisSettingstMgr;
+
+
     void ShutdownDevice();
 
-    //void ShowLoginDialog();
 };
 
 #endif // DEVICEMGR_H

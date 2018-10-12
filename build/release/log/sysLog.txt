@@ -1,940 +1,679 @@
-[ 2018-10-10 ][ 09:08:39 ] INFO  SYSTEM - I AM AT MAINWINDOW
-[ 2018-10-10 ][ 09:18:47 ] INFO  SYSTEM - Device controller is constructing...
-[ 2018-10-10 ][ 09:20:37 ] INFO  SYSTEM - Device controller is constructing...
-[ 2018-10-10 ][ 09:20:37 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 09:42:45 ] INFO  SYSTEM - Device controller is constructing...
-[ 2018-10-10 ][ 09:42:45 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 09:52:07 ] INFO  SYSTEM - Device controller is constructing...
-[ 2018-10-10 ][ 09:52:07 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 09:55:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 09:56:33 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 09:56:47 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 09:57:50 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 09:57:50 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 09:58:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 09:58:15 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 09:58:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 09:58:30 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 09:58:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 09:58:42 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:00:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:02:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:16:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:16:39 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:17:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:17:13 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:20:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:20:04 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:43:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:43:59 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:46:19 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:46:20 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:46:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:46:46 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:51:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:51:26 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:51:40 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:51:40 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:51:48 ] INFO  SYSTEM - Login canceled.
-[ 2018-10-10 ][ 10:52:54 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:52:54 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:52:59 ] INFO  SYSTEM - Login canceled.
-[ 2018-10-10 ][ 10:55:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 10:55:03 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 10:55:03 ] INFO  SYSTEM - Login canceled.
-[ 2018-10-10 ][ 14:31:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:31:59 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 14:31:59 ] INFO  SYSTEM - Login canceled.
-[ 2018-10-10 ][ 14:34:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:36:17 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:36:17 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 14:39:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:39:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 14:39:29 ] INFO  SYSTEM - 
-[ 2018-10-10 ][ 14:40:54 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:40:54 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 14:40:54 ] INFO  SYSTEM - 0
-[ 2018-10-10 ][ 14:42:23 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:42:23 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 14:42:23 ] INFO  SYSTEM - 0
-[ 2018-10-10 ][ 14:43:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:43:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 14:43:43 ] INFO  SYSTEM - 0
-[ 2018-10-10 ][ 14:50:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:50:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 14:50:39 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 14:50:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 14:50:39 ] INFO  SYSTEM - 2
-[ 2018-10-10 ][ 14:52:11 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 14:52:11 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 14:52:11 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 14:52:11 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 14:52:11 ] INFO  SYSTEM - 2
-[ 2018-10-10 ][ 15:12:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:12:16 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:12:16 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:12:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:12:16 ] INFO  SYSTEM - DatabasePath 
-[ 2018-10-10 ][ 15:12:51 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:12:51 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:12:51 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:12:51 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:12:51 ] INFO  SYSTEM - DatabasePath = 
-[ 2018-10-10 ][ 15:14:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:14:53 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:14:53 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:14:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:14:53 ] INFO  SYSTEM - DatabasePath = 
-[ 2018-10-10 ][ 15:16:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:16:07 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:16:07 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:16:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:16:07 ] INFO  SYSTEM - DatabasePath = 
-[ 2018-10-10 ][ 15:21:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:21:32 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:21:32 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:21:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:21:32 ] INFO  SYSTEM - DatabasePath = 
-[ 2018-10-10 ][ 15:22:08 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:22:08 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:22:08 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:22:08 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:22:08 ] INFO  SYSTEM - DatabasePath = 
-[ 2018-10-10 ][ 15:22:48 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:22:48 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:22:48 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:22:48 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:22:48 ] INFO  SYSTEM -  = 
-[ 2018-10-10 ][ 15:23:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:23:24 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:23:24 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:23:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:23:24 ] INFO  SYSTEM - = 
-[ 2018-10-10 ][ 15:23:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:23:53 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:23:53 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:23:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:23:53 ] INFO  SYSTEM - DatabasePath = 
-[ 2018-10-10 ][ 15:24:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:24:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:24:57 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:24:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:24:57 ] INFO  SYSTEM - DatabasePath = 
-[ 2018-10-10 ][ 15:25:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:25:16 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:25:16 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:25:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:25:16 ] INFO  SYSTEM - DatabasePath = DatabasePath
-[ 2018-10-10 ][ 15:35:05 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:35:05 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:35:05 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:35:05 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:36:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:36:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:36:43 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:36:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:36:43 ] INFO  SYSTEM - 
-[ 2018-10-10 ][ 15:38:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:38:36 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:38:36 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:38:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:38:36 ] INFO  SYSTEM - DatabasePath
-[ 2018-10-10 ][ 15:39:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:39:07 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:39:07 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:39:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:39:07 ] INFO  SYSTEM - 
-[ 2018-10-10 ][ 15:40:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:40:16 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:40:16 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:40:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:40:16 ] INFO  SYSTEM - 
-[ 2018-10-10 ][ 15:40:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 15:40:58 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 15:40:58 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 15:40:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 15:40:58 ] INFO  SYSTEM - "./database/database.db"
-[ 2018-10-10 ][ 16:31:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 16:31:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 16:31:14 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 16:31:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 16:31:14 ] INFO  SYSTEM - "./database/database.db"
-[ 2018-10-10 ][ 16:33:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 16:33:04 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 16:33:04 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 16:33:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 16:33:04 ] INFO  SYSTEM - "./database/database.db"
-[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 16:33:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 16:33:57 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - DatabasePath
-[ 2018-10-10 ][ 16:33:57 ] INFO  SYSTEM - "./database/database.db"
-[ 2018-10-10 ][ 17:20:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:20:42 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:20:42 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:20:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:20:42 ] INFO  SYSTEM - QSQLITE
-[ 2018-10-10 ][ 17:26:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:26:02 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:26:02 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:26:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:26:03 ] FATAL SYSTEM - Can not open databse connection
-[ 2018-10-10 ][ 17:27:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:27:31 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:27:31 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:27:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:27:31 ] FATAL SYSTEM - Driver:QSQLITE
-[ 2018-10-10 ][ 17:27:31 ] FATAL SYSTEM - Path:"./database/database.db"
-[ 2018-10-10 ][ 17:27:31 ] FATAL SYSTEM - Can not open databse connection
-[ 2018-10-10 ][ 17:30:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:30:59 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:30:59 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:30:59 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:30:59 ] FATAL SYSTEM - Driver:QSQLITE
-[ 2018-10-10 ][ 17:30:59 ] FATAL SYSTEM - Path:"./database/database.db"
-[ 2018-10-10 ][ 17:30:59 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:35:28 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:35:28 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - Driver:QSQLITE
-[ 2018-10-10 ][ 17:35:28 ] INFO  SYSTEM - Path:"./database/database.db"
-[ 2018-10-10 ][ 17:35:28 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:40:58 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:40:58 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - Driver:QSQLITE
-[ 2018-10-10 ][ 17:40:58 ] INFO  SYSTEM - Path:"./database/database.db"
-[ 2018-10-10 ][ 17:40:58 ] FATAL SYSTEM - Can not open databse connection:Driver not loaded Driver not loaded
-[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:46:13 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:46:13 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - Driver:QSQLITE
-[ 2018-10-10 ][ 17:46:13 ] INFO  SYSTEM - Path:"./database/database.db"
-[ 2018-10-10 ][ 17:46:13 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:48:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:48:57 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - Driver:QSQLITE
-[ 2018-10-10 ][ 17:48:57 ] INFO  SYSTEM - Path:"./database/database.db"
-[ 2018-10-10 ][ 17:48:57 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 17:59:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 17:59:49 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 17:59:49 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 17:59:49 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 17:59:49 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 18:15:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:15:02 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:15:02 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:15:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:15:02 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 18:15:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:15:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:15:39 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:15:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:15:39 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 18:23:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:23:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:23:43 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:23:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:23:43 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 18:31:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:31:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:31:39 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:31:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:31:39 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 18:32:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:32:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:32:14 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:32:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:32:14 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 18:34:03 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:34:03 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:34:03 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:34:03 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:34:03 ] FATAL SYSTEM - Can not open databse connection:out of memory Error opening database
-[ 2018-10-10 ][ 18:35:22 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:35:22 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:35:22 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:35:22 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:35:22 ] FATAL SYSTEM - Can not open databse connection:Driver not loaded Driver not loaded
-[ 2018-10-10 ][ 18:36:00 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:36:00 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:36:00 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:36:00 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:36:00 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 18:37:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:37:32 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:37:32 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:37:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:37:32 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 18:38:11 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:38:11 ] FATAL SYSTEM - Can not open databse connection:Driver not loaded Driver not loaded
-[ 2018-10-10 ][ 18:38:11 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:38:11 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:38:11 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:50:35 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:50:35 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:50:35 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:50:35 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:50:35 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 18:58:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:58:41 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:58:41 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:58:41 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:58:41 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 18:58:44 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 18:58:56 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 18:58:56 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 18:58:56 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 18:58:59 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 19:03:23 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 19:03:23 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 19:03:23 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 19:03:23 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 19:03:23 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 19:03:26 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 19:03:36 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 19:03:36 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 19:03:36 ] INFO  SYSTEM - Login canceled.
-[ 2018-10-10 ][ 19:03:38 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 19:04:02 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 19:04:02 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 19:04:02 ] INFO  SYSTEM - Login canceled.
-[ 2018-10-10 ][ 19:04:04 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 19:04:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 19:04:14 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Login dialog is activated
-[ 2018-10-10 ][ 19:04:14 ] INFO  SYSTEM - Login canceled.
-[ 2018-10-10 ][ 19:04:24 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 20:50:18 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 20:50:18 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 20:50:18 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 20:50:18 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 20:50:18 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 20:52:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 20:52:45 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 20:52:45 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 20:52:45 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 20:52:45 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 20:53:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 20:53:39 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 20:53:39 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 20:53:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 20:53:39 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 20:53:48 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 20:53:48 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 20:53:48 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 20:53:48 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 20:53:48 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 20:55:38 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 20:55:38 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 20:55:38 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 20:55:38 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 20:55:38 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 20:56:25 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 20:56:25 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 20:56:25 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 20:56:25 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 20:56:25 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 20:56:29 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 20:57:46 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 20:57:46 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 20:57:46 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 20:57:46 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 20:57:46 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:01:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:01:13 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:01:13 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:01:13 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:01:13 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:03:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:03:45 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:03:45 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:03:45 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:03:45 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:04:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:04:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:04:43 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:04:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:04:43 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:05:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:05:15 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:05:15 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:05:15 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:05:15 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:05:20 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 21:07:46 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:07:46 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:07:46 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:07:46 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:07:46 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:07:51 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 21:08:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:08:31 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:08:31 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:08:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:08:31 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:09:20 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:09:20 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:09:20 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:09:20 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:09:20 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:11:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:11:57 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:11:57 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:11:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:11:57 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:12:22 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:12:22 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:12:22 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:12:22 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:12:22 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:12:34 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:12:34 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:12:34 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:12:34 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:12:34 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:12:43 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 21:17:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:17:30 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:17:30 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:17:30 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:17:30 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:17:33 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 21:18:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:18:26 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:18:26 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:18:26 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:18:26 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:18:52 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:18:52 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:18:52 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:18:52 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:18:52 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:19:28 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:19:28 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:19:28 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:19:28 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:19:28 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:19:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:19:43 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:19:43 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:19:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:19:43 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:19:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:19:58 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:19:58 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:19:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:19:58 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:20:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:20:24 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:20:24 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:20:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:20:24 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 21:20:28 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 21:22:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 21:22:07 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 21:22:07 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 21:22:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 21:22:07 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:01:44 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:01:44 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 22:01:44 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 22:01:44 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:01:44 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:01:47 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:02:19 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:02:19 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 22:02:19 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 22:02:19 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:02:19 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:02:23 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:05:18 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:05:18 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 22:05:18 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 22:05:18 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:05:18 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:06:13 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:12:54 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:12:54 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 22:12:54 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 22:12:54 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:12:54 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:13:49 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:15:10 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:15:10 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 22:15:10 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 22:15:10 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:18:07 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:18:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:18:14 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 22:18:14 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 22:18:14 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:18:26 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:18:38 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:18:38 ] ERROR SYSTEM - Can not open iBEX setting file.
-[ 2018-10-10 ][ 22:18:38 ] ERROR SYSTEM - iBEX Setting file is not valid.
-[ 2018-10-10 ][ 22:18:38 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:32:53 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:41:00 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:41:00 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:41:00 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:41:24 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:43:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:43:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:43:58 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:44:04 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:45:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:45:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:45:31 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:45:34 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:46:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:46:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:46:04 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:46:22 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 22:48:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 22:48:59 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 22:48:59 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 22:49:00 ] INFO  SYSTEM - user cancelled sign in
-[ 2018-10-10 ][ 22:49:13 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 23:11:01 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 23:11:01 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 23:11:01 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 23:11:04 ] INFO  SYSTEM - user cancelled sign in
-[ 2018-10-10 ][ 23:11:04 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 23:14:59 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 23:14:59 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 23:14:59 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 23:15:08 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:15:08 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:15:08 ] INFO  SYSTEM - Successful sign in
-[ 2018-10-10 ][ 23:15:11 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 23:16:09 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 23:16:09 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 23:16:09 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:15 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:18 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:20 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:22 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:24 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:25 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:26 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:28 ] INFO  SYSTEM - user cancelled sign-in
-[ 2018-10-10 ][ 23:16:28 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 23:16:40 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 23:16:40 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 23:16:40 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-10 ][ 23:16:47 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-10 ][ 23:16:49 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:16:49 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:16:49 ] INFO  SYSTEM - successful sign in
-[ 2018-10-10 ][ 23:16:52 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 23:20:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 23:20:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 23:20:16 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-10 ][ 23:20:22 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-10 ][ 23:20:32 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-10 ][ 23:28:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-10 ][ 23:28:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-10 ][ 23:28:29 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-10 ][ 23:28:35 ] INFO  SYSTEM - user cancelled sign-in
-[ 2018-10-10 ][ 23:28:35 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 09:28:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 09:28:13 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 09:28:13 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 09:28:18 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 09:28:18 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 09:28:18 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 09:28:31 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 09:30:12 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 09:30:12 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 09:30:12 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 09:30:15 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 09:30:15 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 09:30:15 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 09:30:21 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 09:31:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 09:31:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 09:31:24 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 09:31:28 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 09:31:28 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 09:31:28 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 09:32:00 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 09:37:35 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 09:37:35 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 09:37:35 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 09:37:38 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 09:37:38 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 09:37:38 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 09:37:42 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 09:45:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 09:45:30 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 09:45:30 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 09:45:34 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 09:45:34 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 09:45:34 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 09:45:36 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 09:46:11 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 10:49:35 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 10:49:35 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 10:49:35 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 10:49:39 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 10:49:39 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 10:49:39 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 10:49:42 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 10:49:45 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 10:50:03 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 10:50:03 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 10:50:03 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 10:50:07 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 10:50:07 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 10:50:07 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 10:50:09 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 10:50:14 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 10:52:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 10:52:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 10:52:43 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 10:52:54 ] INFO  SYSTEM - user cancelled sign-in
-[ 2018-10-11 ][ 10:52:54 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 10:53:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 10:53:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 10:53:39 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 10:53:43 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 10:53:43 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 10:53:43 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 10:53:45 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 10:54:09 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 10:54:12 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 10:54:17 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 10:54:17 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 10:54:17 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 10:54:20 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 10:54:20 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 10:54:20 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 10:54:22 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 10:54:29 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 10:54:33 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 10:54:33 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 10:54:33 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 10:54:36 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 10:54:36 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 10:54:36 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 10:54:38 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 10:54:46 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 10:54:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 10:54:49 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 10:54:49 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 10:54:53 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 10:54:53 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 10:54:53 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 10:54:55 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 11:38:18 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 12:42:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 12:42:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 12:42:04 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 12:42:10 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 12:42:10 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 12:42:10 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 12:42:11 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 12:42:36 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 12:42:50 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 12:42:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 12:42:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 12:42:53 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 12:42:57 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 12:42:57 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 12:42:57 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 12:43:00 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 12:43:05 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 12:47:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 12:47:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 12:47:16 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 12:47:22 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 12:47:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 12:47:22 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 12:47:23 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 12:47:26 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 13:06:44 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 13:06:44 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 13:06:44 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 13:06:48 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 13:06:48 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 13:06:48 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 13:06:50 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 13:07:24 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 13:15:52 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 13:15:52 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 13:15:52 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 13:15:58 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 13:15:58 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 13:15:58 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 13:16:00 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 13:16:38 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 14:40:12 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 14:40:18 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 14:40:18 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 14:40:18 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 14:40:35 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 14:40:42 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 14:40:54 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 16:22:26 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 16:22:30 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 16:22:30 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 16:22:30 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 16:22:38 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 16:26:53 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 16:26:57 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 16:26:57 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 16:26:57 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 16:27:04 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 16:29:47 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 16:29:50 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 16:29:50 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 16:29:50 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 16:29:54 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 16:31:10 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 16:31:12 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 16:31:25 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 16:31:35 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 16:48:40 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 16:48:43 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 16:48:43 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 16:48:43 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 16:48:47 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 16:49:14 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 16:52:57 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 16:53:00 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 16:53:00 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 16:53:00 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 16:53:01 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 16:53:46 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 16:59:39 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 16:59:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 16:59:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 16:59:39 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 16:59:44 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 16:59:44 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 16:59:44 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 16:59:46 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:00:06 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:03:29 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:03:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:03:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:03:29 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:03:32 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:03:32 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:03:32 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:03:35 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:03:59 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:05:06 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:05:06 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:05:06 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:05:06 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:05:10 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:05:10 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:05:10 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:05:13 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:05:21 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:09:41 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:09:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:09:41 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:09:41 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:09:45 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:09:45 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:09:45 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:09:48 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:10:50 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:11:39 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:11:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:11:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:11:39 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:11:45 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:11:45 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:11:45 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:11:47 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:12:00 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:19:26 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:19:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:19:26 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:19:26 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:19:30 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:19:30 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:19:30 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:19:31 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:19:39 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:20:24 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:20:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:20:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:20:24 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:20:27 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:20:27 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:20:27 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:20:29 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:20:47 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:23:28 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:23:28 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:23:28 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:23:28 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:23:36 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:23:36 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:23:36 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:23:38 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:23:45 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:26:58 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:26:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:26:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:26:58 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:27:03 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:27:03 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:27:03 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:27:05 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:09 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:27:12 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:27:12 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:27:12 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:27:12 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:27:15 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:27:15 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:27:15 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-11 ][ 17:27:15 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-11 ][ 17:27:17 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:27:17 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:27:17 ] INFO  SYSTEM - User ID:2User Password:A
-[ 2018-10-11 ][ 17:27:17 ] INFO  SYSTEM - unsuccessful sign in
-[ 2018-10-11 ][ 17:27:23 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:27:23 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:27:23 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:27:24 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:26 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:27 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:28 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:29 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:29 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:31 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:31 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:32 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:33 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:33 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:34 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:34 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:34 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:35 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:35 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:35 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:35 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:36 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:36 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:36 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:36 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:36 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:27:37 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:28:02 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:28:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:28:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:28:02 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:28:07 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:28:07 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:28:07 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:28:08 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:11 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:13 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:16 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:18 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:21 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:24 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:26 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:28 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:31 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:34 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:36 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:28:38 ] INFO  SYSTEM - Database connection is closed.
-[ 2018-10-11 ][ 17:44:56 ] INFO  SYSTEM - worklist settings are loaded successfully.
-[ 2018-10-11 ][ 17:44:56 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
-[ 2018-10-11 ][ 17:44:56 ] INFO  SYSTEM - iBEX settings are loaded successfully.
-[ 2018-10-11 ][ 17:44:56 ] INFO  SYSTEM - Database connection is estabilished.
-[ 2018-10-11 ][ 17:45:01 ] INFO  SYSTEM - Checking database for user
-[ 2018-10-11 ][ 17:45:01 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
-[ 2018-10-11 ][ 17:45:01 ] INFO  SYSTEM -  app successfully signed in
-[ 2018-10-11 ][ 17:45:03 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 17:45:05 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:45:09 ] DEBUG SYSTEM - worklist settings file successfully opened.
-[ 2018-10-11 ][ 17:45:10 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:45:15 ] DEBUG SYSTEM - worklist settings file successfully opened.
-[ 2018-10-11 ][ 17:45:16 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:45:23 ] DEBUG SYSTEM - worklist settings file successfully opened.
-[ 2018-10-11 ][ 17:45:24 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:45:32 ] DEBUG SYSTEM - worklist settings file successfully opened.
-[ 2018-10-11 ][ 17:45:33 ] DEBUG SYSTEM - worklist settings is triggered
-[ 2018-10-11 ][ 17:45:37 ] DEBUG SYSTEM - worklist settings file successfully opened.
-[ 2018-10-11 ][ 17:45:39 ] DEBUG SYSTEM - loading pacs server is triggered.
-[ 2018-10-11 ][ 17:46:16 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 18:28:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 18:28:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 18:28:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 18:28:42 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 18:28:49 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 18:28:49 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 18:28:49 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 18:30:19 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-11 ][ 21:16:52 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-11 ][ 21:16:52 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-11 ][ 21:16:52 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-11 ][ 21:16:52 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-11 ][ 21:16:58 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-11 ][ 21:16:58 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-11 ][ 21:16:58 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-11 ][ 21:17:14 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 09:40:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 09:40:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 09:40:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 09:40:07 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 09:40:11 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 09:40:11 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 09:40:11 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 09:41:02 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 09:43:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 09:43:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 09:43:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 09:43:32 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 09:43:36 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 09:43:36 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 09:43:36 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 09:44:12 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 09:48:34 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 09:48:34 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 09:48:34 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 09:48:34 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 09:48:38 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 09:48:38 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 09:48:38 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 09:48:51 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 09:49:15 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 09:49:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 09:49:15 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 09:49:15 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 09:49:22 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 09:49:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 09:49:22 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:14:11 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:15:43 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:15:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:15:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:15:43 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:15:47 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:15:47 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:15:47 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:18:32 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:26:22 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:26:22 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:26:22 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:26:22 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:26:23 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-12 ][ 10:26:23 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:27:02 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:27:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:27:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:27:02 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:27:06 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:27:06 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:27:06 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:27:11 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:27:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:27:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:27:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:27:42 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:27:46 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:27:46 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:27:46 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:28:03 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:30:05 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:30:05 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:30:05 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:30:05 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:30:09 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:30:09 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:30:09 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:30:19 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:31:02 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:31:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:31:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:31:02 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:31:05 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:31:05 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:31:05 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:32:15 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:36:36 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:36:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:36:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:36:36 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:36:42 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:36:42 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:36:42 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:37:06 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:37:21 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:37:21 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:37:21 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:37:21 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:37:25 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:37:25 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:37:25 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:37:29 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:38:16 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:38:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:38:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:38:16 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:38:19 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:38:19 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:38:19 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:38:24 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:38:51 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:38:51 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:38:51 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:38:51 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:38:54 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:38:54 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:38:54 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:38:59 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:39:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:39:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:39:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:39:32 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:39:36 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:39:36 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:39:36 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:40:07 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 10:47:41 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 10:47:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 10:47:41 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 10:47:41 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 10:47:44 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 10:47:44 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 10:47:44 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 10:48:27 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 11:54:37 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 11:54:37 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 11:54:37 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 11:54:37 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 11:54:38 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-12 ][ 11:54:38 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:00:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:00:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:00:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:00:42 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:00:47 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:00:47 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:00:47 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:00:54 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:10:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:10:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:10:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:10:42 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:10:48 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:10:48 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:10:48 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:11:09 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:31:10 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:31:10 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:31:10 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:31:11 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:31:14 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:31:14 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:31:14 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:31:40 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:32:15 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:32:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:32:15 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:32:15 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:32:20 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:32:20 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:32:20 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:32:28 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:32:31 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:32:33 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:32:44 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:32:49 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:32:53 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:32:57 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:33:00 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:33:04 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:33:43 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:33:46 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:33:49 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:33:59 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:34:02 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:34:07 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:34:36 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:34:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:34:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:34:37 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:34:40 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:34:40 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:34:40 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:34:49 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:34:58 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:35:04 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:35:10 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:35:13 ] DEBUG SYSTEM - I AM HERE ...
+[ 2018-10-12 ][ 12:35:47 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:36:27 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:36:27 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:36:27 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:36:27 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:36:32 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:36:32 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:36:32 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:36:41 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:36:45 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:36:51 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:36:56 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:37:06 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:37:21 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:37:29 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:37:35 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:38:05 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:38:05 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:38:05 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:38:05 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:38:09 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:38:09 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:38:09 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:38:17 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:25 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:27 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:34 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:35 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:35 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:35 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:35 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:38:35 ] DEBUG SYSTEM - number of records:0
+[ 2018-10-12 ][ 12:39:11 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:49:05 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:49:05 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:49:05 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:49:05 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:49:09 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:49:09 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:49:09 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:49:28 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:54:48 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:54:48 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:54:48 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:54:48 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:54:52 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:54:52 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:54:52 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:55:04 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:55:13 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:55:17 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:55:24 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:55:27 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:56:13 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 12:56:25 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 12:56:25 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 12:56:25 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 12:56:25 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 12:56:29 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 12:56:29 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 12:56:29 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 12:56:39 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:56:43 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:56:55 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:01 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:02 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:12 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:15 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:17 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:18 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:18 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:20 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:20 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:21 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:22 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:29 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:32 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:33 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:51 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:55 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:57:59 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:58:03 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:58:08 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:58:27 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:59:04 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:59:54 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 12:59:57 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:00:11 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:00:16 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:00:29 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 13:00:56 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 13:00:56 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 13:00:56 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 13:00:56 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 13:01:00 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 13:01:00 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 13:01:00 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 13:01:10 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 13:01:10 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 13:01:10 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 13:01:29 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:04:27 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:04:37 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 13:04:37 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 13:04:37 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 13:04:49 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:04:54 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:04:57 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:05:01 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:14 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:30 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:38 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:43 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:43 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:44 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:44 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:44 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:45 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:46 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:54 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:55 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:08:57 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:09:01 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:09:02 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:09:20 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:09:40 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:10:11 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:10:19 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 13:38:30 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 13:38:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 13:38:30 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 13:38:30 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 13:38:34 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 13:38:34 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 13:38:34 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 13:38:55 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:38:59 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:39:08 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:39:12 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:39:18 ] DEBUG SYSTEM - Retrived count:0
+[ 2018-10-12 ][ 13:39:44 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 13:41:10 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 13:41:10 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 13:41:10 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 13:41:10 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 13:41:13 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 13:41:13 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 13:41:13 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 13:48:14 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 13:48:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 13:48:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 13:48:14 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 13:48:19 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 13:48:19 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 13:48:19 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 13:49:57 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 13:50:09 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 13:50:09 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 13:50:09 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 13:50:09 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 13:50:14 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 13:50:14 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 13:50:14 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 13:51:15 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:19 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:20 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:20 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:20 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:21 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:23 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:30 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:33 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:51:37 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:21 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:23 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:23 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:24 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:25 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:28 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:29 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:30 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:30 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:31 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:42 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:45 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:46 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:46 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:53 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:54 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:54 ] DEBUG SYSTEM - RETRIEVED:0
+[ 2018-10-12 ][ 13:57:58 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 15:20:25 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 15:20:25 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 15:20:26 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 15:20:26 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 15:20:31 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:20:31 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:20:31 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:20:55 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:20:55 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:20:55 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:21:02 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 15:22:49 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 15:22:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 15:22:51 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 15:22:51 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 15:22:55 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:22:55 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:22:55 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:23:12 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 15:24:22 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 15:24:22 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 15:24:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 15:24:24 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 15:24:28 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:24:28 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:24:28 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:24:31 ] INFO  SYSTEM - Loading study is closed
+[ 2018-10-12 ][ 15:24:35 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 15:29:52 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 15:29:52 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 15:29:54 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 15:29:54 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 15:29:58 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:29:58 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:29:58 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:30:08 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 15:31:19 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 15:31:19 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 15:31:21 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 15:31:21 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 15:31:25 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:31:25 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:31:25 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:31:36 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 15:35:04 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 15:35:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 15:35:05 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 15:35:05 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 15:35:11 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:35:11 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:35:11 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-12 ][ 15:35:11 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-12 ][ 15:35:13 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-12 ][ 15:35:14 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:35:14 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:35:14 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-12 ][ 15:35:14 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-12 ][ 15:35:15 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:35:15 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:35:15 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-12 ][ 15:35:15 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-12 ][ 15:35:16 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:35:16 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:35:16 ] INFO  SYSTEM - User ID:2User Password:A
+[ 2018-10-12 ][ 15:35:16 ] INFO  SYSTEM - unsuccessful sign in
+[ 2018-10-12 ][ 15:35:21 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:35:21 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:35:21 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:35:40 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 15:46:24 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 15:46:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 15:46:25 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 15:46:25 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 15:46:29 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 15:46:29 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 15:46:29 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 15:46:38 ] INFO  SYSTEM - load study is closing.
+[ 2018-10-12 ][ 15:46:46 ] INFO  SYSTEM - load study is closing.
+[ 2018-10-12 ][ 15:46:48 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:12:24 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:12:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:12:25 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:12:25 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:12:38 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:12:38 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:12:38 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:12:38 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:14:41 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:14:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:14:41 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:14:41 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:15:03 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:15:03 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:15:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:15:04 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:16:00 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:16:00 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:16:00 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:16:00 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:16:04 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-12 ][ 16:16:04 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:17:10 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:17:10 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:17:10 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:17:10 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:23:43 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:23:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:23:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:23:43 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:25:15 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:25:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:25:15 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:25:15 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:25:19 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-12 ][ 16:25:19 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:26:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:26:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:26:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:26:42 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:26:46 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 16:26:46 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 16:26:46 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 16:26:48 ] DEBUG SYSTEM - HELLO
+[ 2018-10-12 ][ 16:26:49 ] DEBUG SYSTEM - HELLO
+[ 2018-10-12 ][ 16:26:50 ] DEBUG SYSTEM - HELLO
+[ 2018-10-12 ][ 16:26:51 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:28:01 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:28:01 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:28:01 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:28:01 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:30:29 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:30:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:30:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:30:29 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:33:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:33:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:33:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:33:42 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:34:23 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:34:23 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:34:23 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:34:23 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:36:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:36:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:36:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:36:32 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:36:33 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-12 ][ 16:36:33 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:38:49 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:38:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:38:49 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:38:49 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:42:20 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:42:20 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:42:20 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:42:20 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:42:20 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:42:26 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-12 ][ 16:42:26 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:46:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:46:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:46:07 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:46:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:46:07 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:46:47 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:46:47 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:46:47 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:46:47 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:46:47 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:47:04 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:47:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:47:04 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:47:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:47:04 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:47:12 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:47:12 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:47:12 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:47:12 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:47:12 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:47:48 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:47:48 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:47:48 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:47:48 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:47:48 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:50:18 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:50:18 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:50:18 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:50:18 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:50:19 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:50:26 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 16:50:26 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 16:50:26 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 16:50:29 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:51:44 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:51:45 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:51:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:51:45 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:51:45 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:51:49 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 16:51:49 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 16:51:49 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 16:51:51 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 16:53:25 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:53:25 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:53:25 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:53:25 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:53:25 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:53:29 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 16:53:29 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 16:53:29 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 16:53:32 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 16:54:20 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:54:20 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:54:20 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:54:20 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:54:20 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:54:27 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-12 ][ 16:54:27 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 16:54:53 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 16:54:53 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 16:54:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 16:54:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 16:54:53 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 16:54:57 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 16:54:57 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 16:54:57 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 16:54:59 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 17:00:07 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 17:00:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 17:00:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 17:00:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 17:00:07 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 17:00:14 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 17:00:14 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 17:00:14 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 17:00:17 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 17:00:23 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 17:00:29 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 17:00:29 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 17:00:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 17:00:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 17:00:29 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 17:00:35 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 17:00:35 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 17:00:35 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 17:00:37 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 17:00:46 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 17:20:43 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 17:20:45 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 17:20:45 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 17:20:45 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 17:20:45 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 17:20:51 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 17:20:51 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 17:20:51 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 17:20:52 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 17:21:00 ] INFO  SYSTEM - load study is closing.
+[ 2018-10-12 ][ 17:21:02 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 17:21:07 ] INFO  SYSTEM - load study is closing.
+[ 2018-10-12 ][ 17:21:09 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-12 ][ 17:28:26 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-12 ][ 17:28:27 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-12 ][ 17:28:27 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-12 ][ 17:28:27 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-12 ][ 17:28:27 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-12 ][ 17:28:31 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-12 ][ 17:28:31 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-12 ][ 17:28:31 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-12 ][ 17:28:33 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-12 ][ 17:28:36 ] INFO  SYSTEM - load study is closing.
+[ 2018-10-12 ][ 17:28:38 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-12 ][ 17:28:41 ] DEBUG SYSTEM - worklist settings is triggered
+[ 2018-10-12 ][ 17:28:48 ] DEBUG SYSTEM - worklist settings file successfully opened.
+[ 2018-10-12 ][ 17:28:50 ] DEBUG SYSTEM - loading pacs server is triggered.
+[ 2018-10-12 ][ 17:29:04 ] INFO  SYSTEM - Database connection is closed.

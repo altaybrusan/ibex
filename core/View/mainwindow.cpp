@@ -3,7 +3,6 @@
 #include "newpatientdialog.h"
 #include "exposuredialog.h"
 #include "QMessageBox"
-#include "LoadStudyDialog.h"
 #include "worklistserversettingsdialog.h"
 #include "worklistdialog.h"
 #include <QSqlField>
@@ -17,7 +16,7 @@
 #include "dcmtk/dcmdata/dcuid.h"
 #include "dcmtk/ofstd/ofstream.h"
 #include "Utils/logmgr.h"
-#include "View/logindialog.h"
+
 int MACHINE_UID=001;
 
 //QString GenerateStudyID()
@@ -39,17 +38,9 @@ int MACHINE_UID=001;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    //wrkDlg(new WorkListDialog(this)),
-    //loginDlg(new LoginDialog(this)),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-
-
-//    loginDlg->setModal(true);
-//    CenterWidgets(loginDlg,this);
-//    loginDlg->show();
 
 //    _model= new QSqlTableModel(this,_database) ;
 //    _model->setTable("StudyTbl");
@@ -183,13 +174,6 @@ void MainWindow::on_actionQuickStarttriggered()
 
 }
 
-void MainWindow::on_actionLoadStudytriggered()
-{
-
-//    LoadStudyDialog* _dialog=new LoadStudyDialog(this);
-//    _dialog->show();
-}
-
 void MainWindow::on_actionOpenStudytriggered()
 {    
     //    wrkDlg->show();
@@ -214,11 +198,6 @@ void MainWindow::showEvent(QShowEvent *event)
 ////    _dialog->show();
 //}
 
-//void MainWindow::on_Login_Successfully()
-//{
-
-//}
-
 void MainWindow::on_action_Update_PACS_Server_Settings_triggered()
 {
     LogMgr::instance()->LogSysDebug(tr("loading pacs server is triggered."));
@@ -230,4 +209,9 @@ void MainWindow::on_action_Update_Worklist_Settings_triggered()
     LogMgr::instance()->LogSysDebug(tr("worklist settings is triggered"));
     emit NotifyUpdateWorklistSettingsIsTriggered();
 
+}
+
+void MainWindow::on_action_Load_Study_triggered()
+{
+    emit NotifyLoadStudyIsTriggered();
 }
