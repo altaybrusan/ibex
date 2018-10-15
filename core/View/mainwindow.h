@@ -41,6 +41,8 @@ private slots:
 
     void on_action_Load_Study_triggered();
 
+    void on_action_Open_Study_triggered();
+
 protected:
     void showEvent( QShowEvent* event ) override;
 private:

@@ -16,7 +16,7 @@
 #include "dcmtk/dcmdata/dcuid.h"
 #include "dcmtk/ofstd/ofstream.h"
 #include "Utils/logmgr.h"
-
+#include "View/loadImagedialog.h"
 int MACHINE_UID=001;
 
 //QString GenerateStudyID()
@@ -214,4 +214,16 @@ void MainWindow::on_action_Update_Worklist_Settings_triggered()
 void MainWindow::on_action_Load_Study_triggered()
 {
     emit NotifyLoadStudyIsTriggered();
+}
+
+void MainWindow::on_action_Open_Study_triggered()
+{
+    // This is not best practice: a view class initiates another
+    // view objet. however, because for this iteration we know
+    // that the LoadImageDialog is a simple object with
+    // no controller associated. We ignore the MVC pattern
+    // however, for the future iteration we can make more
+    // suffisticated dialogs and turn it inot MVC design
+    LoadImageDialog* _demo=new LoadImageDialog(this);
+    _demo->show();
 }

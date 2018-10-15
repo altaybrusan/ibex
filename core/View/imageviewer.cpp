@@ -74,6 +74,7 @@ ImageViewer::ImageViewer(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
     //    Automatic test:
     //    when the form is loaded, if an image is loaded or not
     //    QString fileName="C:/test.tiff";

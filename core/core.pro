@@ -34,6 +34,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 TEST_IMAGE_REPO = $$PWD/test_images/
 DEFINES += TEST_IMAGES_DIR=\\\"$$TEST_IMAGE_REPO\\\"
 
+
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -112,13 +113,14 @@ SOURCES += \
          Controller/pacssettingmgr.cpp \
          View/pacssettingsdialog.cpp \
          Controller/worklistserversettingsmgr.cpp \
-    Controller/loadstudymgr.cpp
+         Controller/loadstudymgr.cpp \
 #        View/newpatientdialog.cpp \
 #        View/bodypartselectionsquare.cpp \
 #        Model/patientdata.cpp \
 #        Model/anatomicregionelement.cpp\
 #        View/exposuredialog.cpp \
-#        View/imageviewer.cpp \
+         View/imageviewer.cpp \
+    View/loadImagedialog.cpp
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
 #        View/worklistdialog.cpp \
@@ -146,7 +148,7 @@ HEADERS += \
          Controller/pacssettingmgr.h \
          View/pacssettingsdialog.h \
          Controller/worklistserversettingsmgr.h \
-    Controller/loadstudymgr.h
+         Controller/loadstudymgr.h \
 #        View/worklistdialog.h \
 #        View/dicomtaglist.h \
 #        View/worklistmodel.h \
@@ -157,7 +159,8 @@ HEADERS += \
 #        Model/patientdata.h \
 #        Model/anatomicregionelement.h
 #        View/exposuredialog.h \
-#        View/imageviewer.h \
+         View/imageviewer.h \
+    View/loadImagedialog.h
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \
@@ -169,11 +172,12 @@ FORMS += \
          View/mainwindow.ui \
          View/loadstudydialog.ui \
          View/worklistserversettingsdialog.ui \
-         View/logindialog.ui \
-         View/pacssettingsdialog.ui
+         View/pacssettingsdialog.ui \
 #         View/newpatientdialog.ui
 #        View/exposuredialog.ui \
-#        View/imageviewer.ui \
+         View/imageviewer.ui \
+         View/logindialog.ui \
+    View/loadimagedialog.ui
 #        View/worklistdialog.ui \
 
 RESOURCES += \
