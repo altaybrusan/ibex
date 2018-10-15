@@ -13713,7 +13713,35 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpointer.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDebug \
+		Utils/logmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		../log4qt/consoleappender.h \
+		../log4qt/writerappender.h \
+		../log4qt/appenderskeleton.h \
+		../log4qt/appender.h \
+		../log4qt/helpers/logobject.h \
+		../log4qt/helpers/classlogger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicInt \
+		../log4qt/helpers/logobjectptr.h \
+		../log4qt/logger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QReadWriteLock \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
+		../log4qt/helpers/logerror.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		../log4qt/level.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
+		../log4qt/log4qt.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMutex \
+		../log4qt/fileappender.h \
+		../log4qt/rollingfileappender.h \
+		../log4qt/loggerrepository.h \
+		../log4qt/logmanager.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QHash \
+		../log4qt/patternlayout.h \
+		../log4qt/layout.h \
+		../log4qt/ttcclayout.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
@@ -13721,8 +13749,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlField \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlfield.h \
 		..\common\include\idevice.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
 		..\common\include\isettingsparser.h \

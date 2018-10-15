@@ -8,7 +8,7 @@
 
 // this is not best practice. chage it for the next
 // iteration.
-enum DEVICE_TYPE { GENERATOR , DETECTOR , ACTUATOR };
+enum DEVICE_TYPE { GENERATOR , DETECTOR , ACTUATOR, VENTILATOR, ALARM, SECURITY };
 //// Turn this into state design pattern later.
 /// warning: the launcher should not decide about the widget state.
 //enum DEVICE_STATE {PREPARATION,READY,ACTIVE,CALIBRATING,ERROR};
@@ -32,10 +32,10 @@ public:
 
     // There may be a device outside there, with no external setting parser requirment
     // for example all the settings are hardwired inside the device firmware, so the
-    // the relation ia aggregation and NOT COMPOSITION (no need for internal constructor parameter).
+    // relation is aggregation and NOT COMPOSITION (no need for internal constructor parameter).
     virtual void UpdateSettingsParser(const ISettingsParser* parser ) = 0;
 
-    // the launcher provide a widget for the plugin.
+    // the core provide a widget for the plugin.
     // based on its internal state the plugin draw on its canvas.
     // Some devices may not require any UI. So do not ask for UI at constructor!
     virtual void UpdateParentWidget(QWidget* parent)= 0;

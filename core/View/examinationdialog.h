@@ -17,6 +17,8 @@ public:
     ~ExaminationDialog();
 
 private:
+
+    void LoadDevicePlugins();
     Ui::ExaminationDialog *ui;
     QSqlRecord* _record;
 };
