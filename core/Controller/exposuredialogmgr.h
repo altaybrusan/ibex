@@ -3,11 +3,11 @@
 
 #include <QObject>
 
-class ExposureDialogMgr : public QObject
+class ExaminationMgr : public QObject
 {
     Q_OBJECT
 public:
-    explicit ExposureDialogMgr(QObject *parent = nullptr);
+    explicit ExaminationMgr(QObject *parent = nullptr);
 
 signals:
 
