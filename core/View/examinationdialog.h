@@ -1,10 +1,10 @@
-#ifndef EXPOSUREDIALOG_H
-#define EXPOSUREDIALOG_H
+#ifndef EXAMINATIONDIALOG_H
+#define EXAMINATIONDIALOG_H
 
 #include <QDialog>
 #include <QSqlRecord>
 namespace Ui {
-class ExposureDialog;
+class ExaminationDialog;
 }
 
 class ExaminationDialog : public QDialog
@@ -17,7 +17,7 @@ public:
     ~ExaminationDialog();
 
 private:
-    Ui::ExposureDialog *ui;
+    Ui::ExaminationDialog *ui;
     QSqlRecord* _record;
 };
 

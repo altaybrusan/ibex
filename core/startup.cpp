@@ -12,6 +12,8 @@
 #include "Controller/pacssettingmgr.h"
 #include "View/loadstudydialog.h"
 #include "Controller/loadstudymgr.h"
+#include "View/examinationdialog.h"
+#include "Controller/examinationmgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -32,10 +34,13 @@ Startup::Startup() : QObject(nullptr),
     m_pacsSettingsMgr(*new PacsSettingMgr(nullptr,m_pacsSettingsDlg)),
     m_worklistDlg(*new WorklistServerSettingsDialog(nullptr)),
     m_worklistMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistDlg,WRKLST_SETTING_FILE)),
+    m_examinationDlg(*new ExaminationDialog(nullptr)),
+    m_examinationMgr(*new ExaminationMgr(nullptr,m_examinationDlg)),
     m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,
                             m_pacsSettingsDlg,m_pacsSettingsMgr,
                             m_worklistDlg,m_worklistMgr,
-                            m_loadStudyDlg,m_loadStudyMgr))
+                            m_loadStudyDlg,m_loadStudyMgr,
+                            m_examinationDlg,m_examinationMgr))
 
 {
     m_dbConnector.setParent(this);
@@ -68,6 +73,10 @@ Startup::Startup() : QObject(nullptr),
       m_worklistDlg.setModal(true);
       m_worklistMgr.setParent(this);
 
+      m_examinationDlg.setParent(&m_mainWindow);
+      m_examinationDlg.setWindowFlag( Qt::Window,true);
+      m_examinationDlg.setModal(true);
+      m_examinationMgr.setParent(this);
 
 
 

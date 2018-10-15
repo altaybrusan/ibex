@@ -37,7 +37,7 @@ private:
     WorklistServerSettingsDialog& m_worklistDlg;
     WorklistServerSettingsMgr& m_worklistMgr;
     ExaminationDialog& m_examinationDlg;
-    ExaminationDialogMgr& m_examinationMgr;
+    ExaminationMgr& m_examinationMgr;
 
     DeviceMgr& m_device;
 

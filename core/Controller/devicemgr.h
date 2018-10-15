@@ -10,6 +10,8 @@
 #include "View/worklistserversettingsdialog.h"
 #include "View/loadstudydialog.h"
 #include "Controller/loadstudymgr.h"
+#include "View/examinationdialog.h"
+#include "Controller/examinationmgr.h"
 
 class DeviceMgr : public QObject
 {
@@ -23,7 +25,9 @@ public:
                        WorklistServerSettingsDialog& worklistSettingDlg,
                        WorklistServerSettingsMgr& worklistdialogMgr,
                        LoadStudyDialog& loadStudyDlg,
-                       LoadStudyMgr& loadStudyMgr);
+                       LoadStudyMgr& loadStudyMgr,
+                       ExaminationDialog& examinationDlg,
+                       ExaminationMgr& examinationMgr);
     void WireConnections();
 
 
@@ -46,6 +50,8 @@ private:
     PacsSettingsDialog& m_pacsSettingsDlg;
     WorklistServerSettingsDialog& m_worklistSettingsDlg;
     WorklistServerSettingsMgr& m_worklisSettingstMgr;
+    ExaminationDialog& m_examinationDlg;
+    ExaminationMgr& m_examinationMgr;
 
 
     void ShutdownDevice();

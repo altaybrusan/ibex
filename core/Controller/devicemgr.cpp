@@ -10,7 +10,9 @@ DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
                      WorklistServerSettingsDialog &worklistSettingDlg,
                      WorklistServerSettingsMgr &worklistdialogMgr,
                      LoadStudyDialog &loadStudyDlg,
-                     LoadStudyMgr &loadStudyMgr) :
+                     LoadStudyMgr &loadStudyMgr,
+                     ExaminationDialog &examinationDlg,
+                     ExaminationMgr &examinationMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
     m_loadStudyDlg(loadStudyDlg),
@@ -19,7 +21,9 @@ DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
     m_pacsSettingsDlg(pacsSettingsDlg),
     m_pacsSettingsMgr(pacsSettingsMgr),
     m_worklistSettingsDlg(worklistSettingDlg),
-    m_worklisSettingstMgr(worklistdialogMgr)
+    m_worklisSettingstMgr(worklistdialogMgr),
+    m_examinationDlg(examinationDlg),
+    m_examinationMgr(examinationMgr)
 {
 
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
@@ -39,6 +43,7 @@ void DeviceMgr::WireConnections()
   connect(&m_mainWindow,&MainWindow::NotifyUpdateWorklistSettingsIsTriggered,&m_worklisSettingstMgr,&WorklistServerSettingsMgr::OnActivateWorklistSettingsDialog);
   connect(&m_mainWindow,&MainWindow::NotifyLoadStudyIsTriggered,&m_loadStudyMgr,&LoadStudyMgr::ActivateLoadingStudy);
 
+  connect(&m_mainWindow,&MainWindow::NotifyQuickStudyWorkFlowIsTriggered,&m_examinationMgr,&ExaminationMgr::OnActivateExamination);
 }
 
 void DeviceMgr::OnNewStudyWorkFlowIsTriggered()
@@ -48,6 +53,7 @@ void DeviceMgr::OnNewStudyWorkFlowIsTriggered()
 
 void DeviceMgr::OnQuickStudyWorkFlowIsTriggered()
 {
+
 
 }
 
