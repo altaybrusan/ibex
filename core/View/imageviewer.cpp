@@ -48,7 +48,8 @@
 
 
 // STD includes
-#include <iostream>
+//#include <iostream>
+#include "Utils/logmgr.h"
 
 #include <vtkRenderWindow.h>
 #include <vtkRenderer.h>
@@ -74,18 +75,7 @@ ImageViewer::ImageViewer(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
-    //    Automatic test:
-    //    when the form is loaded, if an image is loaded or not
-    //    QString fileName="C:/test.tiff";
-    //    imageFactory decide which reader should be used this line is mandatory.
-    //    imageReader.TakeReference(imageFactory->CreateImageReader2(fileName.toLatin1()));
-    //    if (!imageReader)
-    //    {
-    //        qDebug() << "Failed to instanciate image reader using: "
-    //                  << qPrintable(fileName) ;
-    //    }
-
+    LogMgr::instance()->LogSysDebug("ImageViewer is launched");
     //when the imageviewer is called for the first time,
     //there is no image to show. To avoid any problem,
     //a blank image is loaded.
@@ -98,13 +88,6 @@ ImageViewer::ImageViewer(QWidget *parent) :
 
     //force the viewer to use the blank image
     imageViewer->SetInputData(blankImage);
-
-    //    imageViewer->SetColorLevel(8846);
-    //    imageViewer->SetColorWindow(14059);
-    // Read image
-    //    imageReader->SetFileName(fileName.toLatin1());
-    //    imageReader->Update();
-    //   imageViewer->SetInputConnection(imageReader->GetOutputPort());
 
     //Defualt options for legend scale
     legendScaleActor->TopAxisVisibilityOff();
@@ -172,18 +155,15 @@ void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 // this image flip is not the best practice. find a better solutipn for the next iteration
 void ImageViewer::OnVerticalFlipToggled(bool value)
 {
-
     imageViewer->GetInput();
     flipFilter->SetInputConnection(imageReader->GetOutputPort());
     if(value)
     {
         flipFilter->SetFilteredAxis(0);
-
     }
     else
     {
         flipFilter->SetFilteredAxis(-2);
-
     }
 
     imageViewer->SetInputConnection(flipFilter->GetOutputPort());
@@ -194,7 +174,6 @@ void ImageViewer::OnVerticalFlipToggled(bool value)
 // this image flip is not the best practice. find a better solutipn for the next iteration
 void ImageViewer::OnHorizontalFlipToggled(bool value)
 {
-
 
     //instead of fliping image, you can flip camera.
     //imageViewer->GetRenderer()->GetActiveCamera()->Yaw(180);
@@ -246,8 +225,8 @@ void ImageViewer::DisplayImage(QString fullFileName)
         imageReader.TakeReference(imageFactory->CreateImageReader2(fullFileName.toLatin1()));
         if (!imageReader)
         {
-            std::cerr << "Failed to instanciate image reader using: "
-                      << qPrintable(fullFileName) << std::endl;
+            LogMgr::instance()->LogSysError("failed to to instanciate image reader: " + fullFileName);
+            return;
         }
         // internal call of UninstallPipeline() is for example triggered by re-setting render window ...
         imageViewer->SetRenderWindow(NULL);
