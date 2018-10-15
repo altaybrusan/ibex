@@ -160,7 +160,8 @@ HEADERS += \
 #        Model/anatomicregionelement.h
 #        View/exposuredialog.h \
          View/imageviewer.h \
-    View/loadImagedialog.h
+    View/loadImagedialog.h \
+    Utils/displaytool.h
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \
