@@ -121,7 +121,7 @@ SOURCES += \
          View/exposuredialog.cpp \
          View/imageviewer.cpp \
     View/loadImagedialog.cpp \
-    Controller/exposuredialogmgr.cpp
+    Controller/examinationmgr.cpp
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
 #        View/worklistdialog.cpp \
@@ -159,11 +159,11 @@ HEADERS += \
 #        Model/DICOM_ENUMS.h \
 #        Model/patientdata.h \
 #        Model/anatomicregionelement.h
-         View/exposuredialog.h \
          View/imageviewer.h \
     View/loadImagedialog.h \
     Utils/displaytool.h \
-    Controller/exposuredialogmgr.h
+    Controller/exposuredialogmgr.h \
+    View/examinationdialog.h
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \
@@ -177,10 +177,10 @@ FORMS += \
          View/worklistserversettingsdialog.ui \
          View/pacssettingsdialog.ui \
 #         View/newpatientdialog.ui
-         View/exposuredialog.ui \
          View/imageviewer.ui \
          View/logindialog.ui \
-    View/loadimagedialog.ui
+    View/loadimagedialog.ui \
+    View/examinationdialog.ui
 #        View/worklistdialog.ui \
 
 RESOURCES += \

@@ -1,5 +1,5 @@
-#include "exposuredialog.h"
-#include "ui_exposuredialog.h"
+#include "examinationdialog.h"
+#include "ui_examinationdialog.h"
 #include "imageviewer.h"
 #include <QPluginLoader>
 #include <QDebug>
@@ -9,9 +9,9 @@
 #include "idevice.h"
 
 
-ExposureDialog::ExposureDialog(QWidget *parent) :
+ExaminationDialog::ExaminationDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::ExposureDialog)
+    ui(new Ui::ExaminationDialog)
 {
     ui->setupUi(this);
 
@@ -70,7 +70,7 @@ ExposureDialog::ExposureDialog(QWidget *parent) :
 
 }
 
-void ExposureDialog::SetRecord(QSqlRecord *record)
+void ExaminationDialog::SetRecord(QSqlRecord *record)
 {
     _record= record;
 
@@ -81,7 +81,7 @@ void ExposureDialog::SetRecord(QSqlRecord *record)
 
 }
 
-ExposureDialog::~ExposureDialog()
+ExaminationDialog::~ExaminationDialog()
 {
     delete ui;
 }

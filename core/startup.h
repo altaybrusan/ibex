@@ -13,7 +13,8 @@ class WorklistServerSettingsMgr;
 class WorklistServerSettingsDialog;
 class LoadStudyDialog;
 class LoadStudyMgr;
-
+class ExaminationDialog;
+class ExaminationMgr;
 
 class Startup : public QObject
 {
@@ -35,6 +36,9 @@ private:
     PacsSettingMgr& m_pacsSettingsMgr;
     WorklistServerSettingsDialog& m_worklistDlg;
     WorklistServerSettingsMgr& m_worklistMgr;
+    ExaminationDialog& m_examinationDlg;
+    ExaminationDialogMgr& m_examinationMgr;
+
     DeviceMgr& m_device;
 
 

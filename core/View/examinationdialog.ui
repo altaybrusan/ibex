@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ExposureDialog</class>
- <widget class="QDialog" name="ExposureDialog">
+ <class>ExaminationDialog</class>
+ <widget class="QDialog" name="ExaminationDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -252,8 +252,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>410</width>
-           <height>214</height>
+           <width>414</width>
+           <height>219</height>
           </rect>
          </property>
         </widget>

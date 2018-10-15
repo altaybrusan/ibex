@@ -7,14 +7,14 @@ namespace Ui {
 class ExposureDialog;
 }
 
-class ExposureDialog : public QDialog
+class ExaminationDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit ExposureDialog(QWidget *parent = 0);
+    explicit ExaminationDialog(QWidget *parent = 0);
     void SetRecord(QSqlRecord* record);
-    ~ExposureDialog();
+    ~ExaminationDialog();
 
 private:
     Ui::ExposureDialog *ui;
