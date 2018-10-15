@@ -12,7 +12,14 @@
 #include <vtkRenderer.h>
 #include <vtkInteractorStyleImage.h>
 #include <vtkImageCast.h>
-#include <ctkVTKMagnifyView.h>
+#include <ctkTransferFunctionGradientItem.h>
+
+#include <ctkVTKHistogram.h>
+#include <vtkIntArray.h>
+#include <ctkTransferFunctionBarsItem.h>
+#include <ctkTransferFunctionView.h>
+
+
 namespace Ui {
     class LoadImageDialog;
 }
@@ -42,6 +49,14 @@ private:
     vtkSmartPointer<vtkRenderer> renderer ;
     vtkSmartPointer<vtkInteractorStyleImage> style ;
     vtkSmartPointer<vtkImageCast> castFilter;
+
+
+    vtkSmartPointer<vtkIntArray> intArray;
+    QSharedPointer<ctkVTKHistogram> histogram;
+    QSharedPointer<ctkTransferFunction> transferFunction ;
+    ctkTransferFunctionBarsItem * histogramItem;
+    ctkTransferFunctionView transferFunctionView;
+    ctkTransferFunctionGradientItem* gradient;
 
 };
 

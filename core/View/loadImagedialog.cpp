@@ -6,6 +6,25 @@
 #include <ctkFileDialog.h>
 #include <QMessageBox>
 
+
+// Qt includes
+#include <QApplication>
+#include <QSharedPointer>
+#include <QTimer>
+
+// CTK includes
+#include "ctkTransferFunction.h"
+#include "ctkTransferFunctionBarsItem.h"
+#include "ctkTransferFunctionView.h"
+#include "ctkVTKHistogram.h"
+
+// VTK includes
+#include <vtkIntArray.h>
+#include <vtkSmartPointer.h>
+
+// STD includes
+#include <iostream>
+
 LoadImageDialog::LoadImageDialog(QWidget *parent) :
     QDialog(parent),    
     ui(new Ui::LoadImageDialog)
@@ -20,6 +39,24 @@ LoadImageDialog::LoadImageDialog(QWidget *parent) :
     imageFactory = vtkSmartPointer<vtkImageReader2Factory>::New();
     renderer = vtkSmartPointer<vtkRenderer>::New();
     style = vtkSmartPointer<vtkInteractorStyleImage>::New();
+    //---------------------------------------------------
+
+    intArray =
+        vtkSmartPointer<vtkIntArray>::New();
+      intArray->SetNumberOfComponents(1);
+      intArray->SetNumberOfTuples(20000);
+      for (int i = 0; i < 20000; ++i)
+       {
+        intArray->SetValue(i, rand() % 10);
+       }
+       histogram =
+        QSharedPointer<ctkVTKHistogram>(new ctkVTKHistogram(intArray));
+      histogram->build();
+
+      histogramItem = new ctkTransferFunctionBarsItem;
+      histogramItem->setTransferFunction(histogram.data());
+      ui->TransferFunctionView->scene()->addItem(histogramItem);
+
 }
 
 LoadImageDialog::~LoadImageDialog()

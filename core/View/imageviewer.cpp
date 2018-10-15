@@ -174,7 +174,6 @@ void ImageViewer::OnVerticalFlipToggled(bool value)
 // this image flip is not the best practice. find a better solutipn for the next iteration
 void ImageViewer::OnHorizontalFlipToggled(bool value)
 {
-
     //instead of fliping image, you can flip camera.
     //imageViewer->GetRenderer()->GetActiveCamera()->Yaw(180);
 
@@ -188,9 +187,7 @@ void ImageViewer::OnHorizontalFlipToggled(bool value)
     else
     {
         flipFilter->SetFilteredAxis(-1);
-
     }
-
 
     imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     flipFilter->Update();

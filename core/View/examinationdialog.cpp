@@ -14,7 +14,6 @@ ExaminationDialog::ExaminationDialog(QWidget *parent) :
     ui(new Ui::ExaminationDialog)
 {
     ui->setupUi(this);
-
     auto _viewer=new ImageViewer(this);
     ui->displayFrame->layout()->addWidget(_viewer);
     LoadDevicePlugins();
