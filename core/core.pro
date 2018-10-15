@@ -118,10 +118,10 @@ SOURCES += \
 #        View/bodypartselectionsquare.cpp \
 #        Model/patientdata.cpp \
 #        Model/anatomicregionelement.cpp\
-         View/exposuredialog.cpp \
          View/imageviewer.cpp \
     View/loadImagedialog.cpp \
-    Controller/examinationmgr.cpp
+    Controller/examinationmgr.cpp \
+    View/examinationdialog.cpp
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
 #        View/worklistdialog.cpp \
@@ -162,8 +162,8 @@ HEADERS += \
          View/imageviewer.h \
     View/loadImagedialog.h \
     Utils/displaytool.h \
-    Controller/exposuredialogmgr.h \
-    View/examinationdialog.h
+    View/examinationdialog.h \
+    Controller/examinationmgr.h
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \

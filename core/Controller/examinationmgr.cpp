@@ -1,6 +1,6 @@
-#include "exposuredialogmgr.h"
+#include "examinationmgr.h"
 
-ExposureDialogMgr::ExposureDialogMgr(QObject *parent) : QObject(parent)
+ExaminationMgr::ExaminationMgr(QObject *parent) : QObject(parent)
 {
 
 }
