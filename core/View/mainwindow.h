@@ -36,9 +36,7 @@ private slots:
 //    void on_Login_Successfully();
 //    void on_Login_Failed();
     void on_action_Update_PACS_Server_Settings_triggered();
-
     void on_action_Update_Worklist_Settings_triggered();
-
     void on_action_Load_Study_triggered();
 
     void on_action_Open_Study_triggered();
