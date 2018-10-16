@@ -4218,11 +4218,6 @@ compiler_moc_header_clean:
 		C:\VTK\include\vtk-9.0\vtkSmartPointer.h \
 		C:\VTK\include\vtk-9.0\vtkSmartPointerBase.h \
 		C:\VTK\include\vtk-9.0\vtkNew.h \
-		C:\VTK\include\vtk-9.0\vtkImageData.h \
-		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkDataSet.h \
-		C:\VTK\include\vtk-9.0\vtkDataObject.h \
-		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		C:\VTK\include\vtk-9.0\vtkRenderer.h \
 		C:\VTK\include\vtk-9.0\vtkViewport.h \
 		C:\VTK\include\vtk-9.0\vtkVolumeCollection.h \
@@ -4239,58 +4234,6 @@ compiler_moc_header_clean:
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
 		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionGradientItem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsObject \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QColor \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionItem.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunction.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSharedPointer \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKHistogram.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkHistogram.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKWidgetsExport.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObject.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObjectEventsObserver.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QList \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkSingleton.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKCoreExport.h \
-		C:\VTK\include\vtk-9.0\vtkCommand.h \
-		C:\VTK\include\vtk-9.0\vtkIntArray.h \
-		C:\VTK\include\vtk-9.0\vtkDataArray.h \
-		C:\VTK\include\vtk-9.0\vtkAbstractArray.h \
-		C:\VTK\include\vtk-9.0\vtkVariant.h \
-		C:\VTK\include\vtk-9.0\vtkStdString.h \
-		C:\VTK\include\vtk-9.0\vtkUnicodeString.h \
-		C:\VTK\include\vtk-9.0\vtkVariantInlineOperators.h \
-		C:\VTK\include\vtk-9.0\vtkAOSDataArrayTemplate.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArray.h \
-		C:\VTK\include\vtk-9.0\vtkTypeTraits.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArrayLookupHelper.h \
-		C:\VTK\include\vtk-9.0\vtkIdList.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArray.txx \
-		C:\VTK\include\vtk-9.0\vtkMath.h \
-		C:\VTK\include\vtk-9.0\vtkMathConfigure.h \
-		C:\VTK\include\vtk-9.0\vtkVariantCast.h \
-		C:\VTK\include\vtk-9.0\vtkBuffer.h \
-		C:\VTK\include\vtk-9.0\vtkObjectFactory.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionBarsItem.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionView.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsView \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainter.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		View\loadImagedialog.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -4982,10 +4925,121 @@ compiler_uic_clean:
 
 ..\build\debug\.ui\ui_loadimagedialog.h: View\loadimagedialog.ui \
 		C:\Qt\5.9.4\msvc2015_64\bin\uic.exe \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionView.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKMagnifyView.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkCrosshairLabel.h \
 		C:\VTK\include\vtk-9.0\QVTKWidget.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsView \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qconfig.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlogging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qflags.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmutex.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkCrosshairLabel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLabel \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfont.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcursor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPen \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKWidgetsExport.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLabel \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlabel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qglobal.h \
@@ -5011,69 +5065,64 @@ compiler_uic_clean:
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qversiontagging.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qnamespace.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstring.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qchar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainter.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qalgorithms.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiterator.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpair.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregexp.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qstringmatcher.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qmatrix.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qregion.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfont.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontmetrics.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qsizepolicy.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcursor.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qkeysequence.h \
@@ -5091,11 +5140,11 @@ compiler_uic_clean:
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPen \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h \
 		C:\VTK\include\vtk-9.0\vtkGUISupportQtModule.h \
 		C:\VTK\include\vtk-9.0\vtkRenderingCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkAutoInit.h \
@@ -10286,11 +10335,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkSmartPointer.h \
 		C:\VTK\include\vtk-9.0\vtkSmartPointerBase.h \
 		C:\VTK\include\vtk-9.0\vtkNew.h \
-		C:\VTK\include\vtk-9.0\vtkImageData.h \
-		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkDataSet.h \
-		C:\VTK\include\vtk-9.0\vtkDataObject.h \
-		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		C:\VTK\include\vtk-9.0\vtkRenderer.h \
 		C:\VTK\include\vtk-9.0\vtkViewport.h \
 		C:\VTK\include\vtk-9.0\vtkVolumeCollection.h \
@@ -10306,51 +10350,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkInteractorStyle.h \
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
 		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
-		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionGradientItem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsObject \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QColor \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionItem.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunction.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSharedPointer \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKHistogram.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkHistogram.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKWidgetsExport.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObject.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObjectEventsObserver.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QList \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkSingleton.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKCoreExport.h \
-		C:\VTK\include\vtk-9.0\vtkCommand.h \
-		C:\VTK\include\vtk-9.0\vtkIntArray.h \
-		C:\VTK\include\vtk-9.0\vtkDataArray.h \
-		C:\VTK\include\vtk-9.0\vtkAbstractArray.h \
-		C:\VTK\include\vtk-9.0\vtkVariant.h \
-		C:\VTK\include\vtk-9.0\vtkStdString.h \
-		C:\VTK\include\vtk-9.0\vtkUnicodeString.h \
-		C:\VTK\include\vtk-9.0\vtkVariantInlineOperators.h \
-		C:\VTK\include\vtk-9.0\vtkAOSDataArrayTemplate.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArray.h \
-		C:\VTK\include\vtk-9.0\vtkTypeTraits.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArrayLookupHelper.h \
-		C:\VTK\include\vtk-9.0\vtkIdList.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArray.txx \
-		C:\VTK\include\vtk-9.0\vtkMath.h \
-		C:\VTK\include\vtk-9.0\vtkMathConfigure.h \
-		C:\VTK\include\vtk-9.0\vtkVariantCast.h \
-		C:\VTK\include\vtk-9.0\vtkBuffer.h \
-		C:\VTK\include\vtk-9.0\vtkObjectFactory.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionBarsItem.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionView.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsView \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h
+		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\mainwindow.obj View\mainwindow.cpp
 
 ..\build\debug\.obj\coreapplication.obj: coreapplication.cpp coreapplication.h \
@@ -13167,11 +13167,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkSmartPointer.h \
 		C:\VTK\include\vtk-9.0\vtkSmartPointerBase.h \
 		C:\VTK\include\vtk-9.0\vtkNew.h \
-		C:\VTK\include\vtk-9.0\vtkImageData.h \
-		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkDataSet.h \
-		C:\VTK\include\vtk-9.0\vtkDataObject.h \
-		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		C:\VTK\include\vtk-9.0\vtkRenderer.h \
 		C:\VTK\include\vtk-9.0\vtkViewport.h \
 		C:\VTK\include\vtk-9.0\vtkVolumeCollection.h \
@@ -13188,60 +13183,9 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
 		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionGradientItem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsObject \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QColor \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionItem.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunction.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSharedPointer \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKHistogram.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkHistogram.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKWidgetsExport.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObject.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVTKObjectEventsObserver.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QList \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkSingleton.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKCoreExport.h \
-		C:\VTK\include\vtk-9.0\vtkCommand.h \
-		C:\VTK\include\vtk-9.0\vtkIntArray.h \
-		C:\VTK\include\vtk-9.0\vtkDataArray.h \
-		C:\VTK\include\vtk-9.0\vtkAbstractArray.h \
-		C:\VTK\include\vtk-9.0\vtkVariant.h \
-		C:\VTK\include\vtk-9.0\vtkStdString.h \
-		C:\VTK\include\vtk-9.0\vtkUnicodeString.h \
-		C:\VTK\include\vtk-9.0\vtkVariantInlineOperators.h \
-		C:\VTK\include\vtk-9.0\vtkAOSDataArrayTemplate.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArray.h \
-		C:\VTK\include\vtk-9.0\vtkTypeTraits.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArrayLookupHelper.h \
-		C:\VTK\include\vtk-9.0\vtkIdList.h \
-		C:\VTK\include\vtk-9.0\vtkGenericDataArray.txx \
-		C:\VTK\include\vtk-9.0\vtkMath.h \
-		C:\VTK\include\vtk-9.0\vtkMathConfigure.h \
-		C:\VTK\include\vtk-9.0\vtkVariantCast.h \
-		C:\VTK\include\vtk-9.0\vtkBuffer.h \
-		C:\VTK\include\vtk-9.0\vtkObjectFactory.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionBarsItem.h \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkTransferFunctionView.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsView \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainter.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		..\build\debug\.ui\ui_loadimagedialog.h \
 		Utils/logmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
 		../log4qt/appenderskeleton.h \
@@ -13256,6 +13200,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QReadWriteLock \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
 		../log4qt/helpers/logerror.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		../log4qt/level.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
 		../log4qt/log4qt.h \
@@ -13272,12 +13218,17 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkRect.h \
 		C:\VTK\include\vtk-9.0\vtkVector.h \
 		C:\VTK\include\vtk-9.0\vtkTuple.h \
+		C:\VTK\include\vtk-9.0\vtkMath.h \
+		C:\VTK\include\vtk-9.0\vtkTypeTraits.h \
+		C:\VTK\include\vtk-9.0\vtkMathConfigure.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QTimer \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasictimer.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkFileDialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAbstractItemView \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -13296,15 +13247,17 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
+		..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\loadImagedialog.obj View\loadImagedialog.cpp
 
 ..\build\debug\.obj\examinationmgr.obj: Controller\examinationmgr.cpp Controller/examinationmgr.h \

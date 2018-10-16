@@ -39,7 +39,7 @@
     <widget class="QFrame" name="frame_2">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>10</horstretch>
+       <horstretch>1</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
@@ -63,8 +63,8 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
-       <widget class="ctkTransferFunctionView" name="TransferFunctionView"/>
+      <item row="1" column="0">
+       <widget class="ctkVTKMagnifyView" name="VTKMagnify"/>
       </item>
      </layout>
     </widget>
@@ -73,9 +73,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>ctkTransferFunctionView</class>
-   <extends>QGraphicsView</extends>
-   <header>ctkTransferFunctionView.h</header>
+   <class>ctkVTKMagnifyView</class>
+   <extends>ctkCrosshairLabel</extends>
+   <header>ctkVTKMagnifyView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ctkCrosshairLabel</class>
+   <extends>QLabel</extends>
+   <header>ctkCrosshairLabel.h</header>
   </customwidget>
   <customwidget>
    <class>QVTKWidget</class>

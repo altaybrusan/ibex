@@ -8,16 +8,9 @@
 #include <vtkImageReader2.h>
 #include <vtkImageReader2Factory.h>
 #include <vtkSmartPointer.h>
-#include <vtkImageData.h>
 #include <vtkRenderer.h>
 #include <vtkInteractorStyleImage.h>
 #include <vtkImageCast.h>
-#include <ctkTransferFunctionGradientItem.h>
-
-#include <ctkVTKHistogram.h>
-#include <vtkIntArray.h>
-#include <ctkTransferFunctionBarsItem.h>
-#include <ctkTransferFunctionView.h>
 
 
 namespace Ui {
@@ -49,15 +42,6 @@ private:
     vtkSmartPointer<vtkRenderer> renderer ;
     vtkSmartPointer<vtkInteractorStyleImage> style ;
     vtkSmartPointer<vtkImageCast> castFilter;
-
-
-    vtkSmartPointer<vtkIntArray> intArray;
-    QSharedPointer<ctkVTKHistogram> histogram;
-    QSharedPointer<ctkTransferFunction> transferFunction ;
-    ctkTransferFunctionBarsItem * histogramItem;
-    ctkTransferFunctionView transferFunctionView;
-    ctkTransferFunctionGradientItem* gradient;
-
 };
 
 #endif // LOADIMAGEDIALOG_H
