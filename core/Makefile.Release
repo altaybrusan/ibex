@@ -12783,6 +12783,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QScrollArea \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSpacerItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QToolBar \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtoolbar.h \

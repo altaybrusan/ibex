@@ -4,7 +4,7 @@ include(./common/build/commonconfig.pri)
 CONFIG += ordered
 SUBDIRS += \
     core \
-    plugins \
+    plugins\
     tests
 
 

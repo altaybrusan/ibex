@@ -12,7 +12,8 @@ Debug:MOC_DIR = $$DESTDIR/.moc
 Debug:RCC_DIR = $$DESTDIR/.rcc
 Debug:UI_DIR = $$DESTDIR/.ui
 
-HEADERS +=
+#HEADERS += \
+#    $$PWD/common/include/ialgorithm.h
 
-SOURCES +=
+#SOURCES +=
 

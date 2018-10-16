@@ -6,10 +6,10 @@
 
 
 QT       += core gui sql serialbus serialport xml network
+CONFIG += no_batch # remove annoing warnings during compile time
 include(../commonconfig.pri)
 include(../log4qt/log4qt.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-#QT_LOGGING_TO_CONSOLE = 1
 DEFINES -= UNICODE
 DEFINES += _REENTRANT
 
