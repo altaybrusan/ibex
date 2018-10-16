@@ -15,6 +15,8 @@
 #include "vtkImageFlip.h"
 #include "vtkImageCast.h"
 
+#include "ialgorithm.h"
+
 namespace Ui {
 class ImageViewer;
 }
@@ -34,9 +36,11 @@ protected slots:
     void OnVerticalFlipToggled(bool value);
     void OnHorizontalFlipToggled(bool value);
     void on_actioninvertColor_triggered();
+    void OnAlgorithmFinished();
 
 
 private:
+    void PrintImage(vtkImageData* image);
     Ui::ImageViewer *ui;
     vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor;
     vtkSmartPointer<vtkImageViewer2> imageViewer;
@@ -55,6 +59,8 @@ private:
 
     bool IsValidFile(QString fullFileName);
     void UpdateThumbnailList();
+
+    IAlgorithm* algorithm;
 
 };
 

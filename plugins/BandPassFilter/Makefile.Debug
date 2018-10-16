@@ -217,9 +217,64 @@ compiler_moc_header_clean:
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
-		C:\VTK\include\vtk-9.0\vtkImageAlgorithm.h \
-		C:\VTK\include\vtk-9.0\vtkCommonExecutionModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkAlgorithm.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfont.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcursor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
 		C:\VTK\include\vtk-9.0\vtkObject.h \
 		C:\VTK\include\vtk-9.0\vtkCommonCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkObjectBase.h \
@@ -244,7 +299,14 @@ compiler_moc_header_clean:
 		C:\VTK\include\vtk-9.0\vtkSetGet.h \
 		C:\VTK\include\vtk-9.0\vtkTimeStamp.h \
 		C:\VTK\include\vtk-9.0\vtkWeakPointerBase.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
+		C:\VTK\include\vtk-9.0\vtkSmartPointer.h \
+		C:\VTK\include\vtk-9.0\vtkSmartPointerBase.h \
+		C:\VTK\include\vtk-9.0\vtkNew.h \
 		bandpassfilter_global.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QList \
 		bandpassfilter.h \
 		..\..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -315,9 +377,64 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject_impl.h \
-		C:\VTK\include\vtk-9.0\vtkImageAlgorithm.h \
-		C:\VTK\include\vtk-9.0\vtkCommonExecutionModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkAlgorithm.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpalette.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcolor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgb.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qbrush.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qline.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtransform.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qimage.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfont.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qcursor.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtouchdevice.h \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
 		C:\VTK\include\vtk-9.0\vtkObject.h \
 		C:\VTK\include\vtk-9.0\vtkCommonCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkObjectBase.h \
@@ -342,7 +459,22 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		C:\VTK\include\vtk-9.0\vtkSetGet.h \
 		C:\VTK\include\vtk-9.0\vtkTimeStamp.h \
 		C:\VTK\include\vtk-9.0\vtkWeakPointerBase.h \
-		bandpassfilter_global.h
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
+		C:\VTK\include\vtk-9.0\vtkSmartPointer.h \
+		C:\VTK\include\vtk-9.0\vtkSmartPointerBase.h \
+		C:\VTK\include\vtk-9.0\vtkNew.h \
+		bandpassfilter_global.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QList \
+		C:\VTK\include\vtk-9.0\vtkObjectFactory.h \
+		C:\VTK\include\vtk-9.0\vtkDebugLeaksManager.h \
+		C:\VTK\include\vtk-9.0\vtkStreamingDemandDrivenPipeline.h \
+		C:\VTK\include\vtk-9.0\vtkCommonExecutionModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDemandDrivenPipeline.h \
+		C:\VTK\include\vtk-9.0\vtkExecutive.h \
+		C:\VTK\include\vtk-9.0\vtkInformationVector.h \
+		C:\VTK\include\vtk-9.0\vtkInformation.h
 
 ..\..\build\debug\.obj\moc_bandpassfilter.obj: ..\..\build\debug\.moc\moc_bandpassfilter.cpp 
 

@@ -4067,6 +4067,13 @@ compiler_moc_header_clean:
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		..\common\include\ialgorithm.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		View\imageviewer.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -4242,6 +4249,13 @@ compiler_moc_header_clean:
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		..\common\include\ialgorithm.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		View\loadImagedialog.h \
 		..\build\release\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -10070,7 +10084,13 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
-		C:\VTK\include\vtk-9.0\vtkImageCast.h
+		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		..\common\include\ialgorithm.h \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\release\.obj\mainwindow.obj View\mainwindow.cpp
 
 ..\build\release\.obj\coreapplication.obj: coreapplication.cpp coreapplication.h \
@@ -12747,6 +12767,13 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		..\common\include\ialgorithm.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		..\build\release\.ui\ui_imageviewer.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
@@ -12795,7 +12822,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkRenderingOpenGLConfigure.h \
 		C:\VTK\include\vtk-9.0\QVTKInteractor.h \
 		C:\VTK\include\vtk-9.0\QVTKWin32Header.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\VTK\include\vtk-9.0\vtkTDxConfigure.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QTimer \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qtimer.h \
@@ -12860,11 +12886,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageMapper.h \
 		C:\VTK\include\vtk-9.0\vtkMapper2D.h \
 		C:\VTK\include\vtk-9.0\vtkAbstractMapper.h \
-		C:\VTK\include\vtk-9.0\vtkImageData.h \
-		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkDataSet.h \
-		C:\VTK\include\vtk-9.0\vtkDataObject.h \
-		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		C:\VTK\include\vtk-9.0\vtkCamera.h \
 		C:\VTK\include\vtk-9.0\vtkRect.h \
 		C:\VTK\include\vtk-9.0\vtkVector.h \
@@ -12902,7 +12923,16 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		../log4qt/layout.h \
 		../log4qt/ttcclayout.h \
 		C:\VTK\include\vtk-9.0\vtkRenderWindow.h \
-		C:\VTK\include\vtk-9.0\vtkWindow.h
+		C:\VTK\include\vtk-9.0\vtkWindow.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QPluginLoader \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpluginloader.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibrary.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qplugin.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpointer.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\release\.obj\imageviewer.obj View\imageviewer.cpp
 
 ..\build\release\.obj\loadImagedialog.obj: View\loadImagedialog.cpp View/loadImagedialog.h \
@@ -13076,6 +13106,13 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		..\common\include\ialgorithm.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		..\build\release\.ui\ui_loadimagedialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
@@ -13119,7 +13156,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractbutton.h \
 		Utils/logmgr.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
 		../log4qt/appenderskeleton.h \
@@ -13164,12 +13200,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
-		C:\VTK\include\vtk-9.0\vtkImageData.h \
-		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkDataSet.h \
-		C:\VTK\include\vtk-9.0\vtkDataObject.h \
-		C:\VTK\include\vtk-9.0\vtkStructuredData.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\release\.obj\loadImagedialog.obj View\loadImagedialog.cpp
 
 ..\build\release\.obj\examinationmgr.obj: Controller\examinationmgr.cpp Controller/examinationmgr.h \
@@ -13544,6 +13575,13 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageReslice.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		..\common\include\ialgorithm.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		C:\VTK\include\vtk-9.0\vtkImageData.h \
+		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
+		C:\VTK\include\vtk-9.0\vtkDataSet.h \
+		C:\VTK\include\vtk-9.0\vtkDataObject.h \
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QPluginLoader \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpluginloader.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibrary.h \
@@ -13552,7 +13590,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
 		Utils/logmgr.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
 		../log4qt/appenderskeleton.h \
