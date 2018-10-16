@@ -2,16 +2,7 @@
 #define LOADIMAGEDIALOG_H
 
 #include <QDialog>
-#include <vtkImageViewer2.h>
-#include <vtkLegendScaleActor.h>
-#include <vtkDistanceWidget.h>
-#include <vtkImageReader2.h>
-#include <vtkImageReader2Factory.h>
-#include <vtkSmartPointer.h>
-#include <vtkRenderer.h>
-#include <vtkInteractorStyleImage.h>
-#include <vtkImageCast.h>
-
+#include "View/imageviewer.h"
 
 namespace Ui {
     class LoadImageDialog;
@@ -32,16 +23,8 @@ private slots:
 private:
     void LoadImage(QString filePath);
     Ui::LoadImageDialog *ui;
+    ImageViewer* m_viewer;
 
-    vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor ;
-    vtkSmartPointer<vtkImageViewer2> imageViewer ;
-    vtkSmartPointer<vtkLegendScaleActor> legendScaleActor ;
-    vtkSmartPointer<vtkDistanceWidget> distanceWidget ;
-    vtkSmartPointer<vtkImageReader2> imageReader ;
-    vtkSmartPointer<vtkImageReader2Factory> imageFactory ;
-    vtkSmartPointer<vtkRenderer> renderer ;
-    vtkSmartPointer<vtkInteractorStyleImage> style ;
-    vtkSmartPointer<vtkImageCast> castFilter;
 };
 
 #endif // LOADIMAGEDIALOG_H

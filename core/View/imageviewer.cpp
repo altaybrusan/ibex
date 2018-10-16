@@ -1,62 +1,44 @@
 #include "imageviewer.h"
 #include "ui_imageviewer.h"
-#include <ctkQImageView.h>
-#include <QDebug>
+
 #include <QFileInfo>
+#include <QMessageBox>
 
 // CTK includes
+//#include <ctkQImageView.h>
 #include "ctkVTKMagnifyView.h"
 #include "ctkCommandLineParser.h"
 #include "ctkVTKSliceView.h"
-#include "ctkWidgetsUtils.h"
+//#include "ctkWidgetsUtils.h"
 #include "ctkThumbnailListWidget.h"
 #include "ctkThumbnailLabel.h"
-
-
 // VTK includes
 #include <vtkImageReader2Factory.h>
 #include <vtkImageReader2.h>
-#include <vtkImageData.h>
 #include <vtkSmartPointer.h>
 #include <vtkInteractorStyleImage.h>
-#include <vtkRenderWindowInteractor.h>
 #include <vtkLightBoxRendererManager.h>
 #include <vtkImageViewer2.h>
-#include <vtkSmartPointer.h>
-#include <vtkTIFFReader.h>
-#include <vtkRenderWindow.h>
-#include <vtkRenderWindowInteractor.h>
-#include <vtkRenderer.h>
-#include <vtkRenderWindow.h>
 #include <vtkRendererCollection.h>
-#include <vtkInteractorStyleImage.h>
-#include <vtkTextRendererStringToImage.h>
 #include <vtkDistanceWidget.h>
 #include <vtkDistanceRepresentation.h>
 #include "QVTKWidget.h"
 #include <vtkLegendScaleActor.h>
-#include <vtkAxisActor2D.h>
-#include <vtkCommand.h>
 #include <vtkImageMapper.h>
 #include <vtkImageData.h>
 #include <vtkCamera.h>
 #include <vtkImageActor.h>
 #include <vtkImageFlip.h>
 #include <vtkImageCast.h>
-#include <vtkImageMapper3D.h>
 #include <vtkAlgorithm.h>
 
 
-// STD includes
-//#include <iostream>
 #include "Utils/logmgr.h"
 
 #include <vtkRenderWindow.h>
 #include <vtkRenderer.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkSmartPointer.h>
-#include <vtkDistanceWidget.h>
-#include <vtkDistanceRepresentation.h>
 
 
 ImageViewer::ImageViewer(QWidget *parent) :
@@ -212,38 +194,94 @@ bool ImageViewer::IsValidFile(QString fullFileName)
 /**
 * Display an image file
 */
-void ImageViewer::DisplayImage(QString fullFileName)
+void ImageViewer::DisplayImage(QString fileName)
 {
-    if(IsValidFile(fullFileName))
+    LogMgr::instance()->LogSysInfo("New Image is received:"+ fileName);
+
+    if(IsValidFile(fileName))
     {
 
         // Instanciate an image reader
         // not tested for all ttypes (may not work with all tiff, dcm or jpg)
-        imageReader.TakeReference(imageFactory->CreateImageReader2(fullFileName.toLatin1()));
+        imageReader.TakeReference(imageFactory->CreateImageReader2(fileName.toLatin1()));
         if (!imageReader)
         {
-            LogMgr::instance()->LogSysError("failed to to instanciate image reader: " + fullFileName);
+            LogMgr::instance()->LogSysDebug("failed to instanciate image reader using: " + fileName);
+            QMessageBox::warning(this,tr("error loading file"),tr("can not load the file"),QMessageBox::Ok);
             return;
+        }
+        else
+        {
+            //Read image
+            imageReader->SetFileName(fileName.toLatin1());
+            imageReader->Update();
+
         }
         // internal call of UninstallPipeline() is for example triggered by re-setting render window ...
         imageViewer->SetRenderWindow(NULL);
         imageViewer->SetRenderWindow(ui->qvtkWidget->GetRenderWindow());
 
-        // This is not best practice
-        // I have used it here for our TDI-detector
-        // automate it for the next iteration
-        imageViewer->SetColorLevel(8846);
-        imageViewer->SetColorWindow(14059);
-
-        // Read image
-        imageReader->SetFileName(fullFileName.toLatin1());
+        castFilter =
+                vtkSmartPointer<vtkImageCast>::New();
+        castFilter->SetInputConnection(imageReader->GetOutputPort());
+        castFilter->Update();
         imageViewer->SetInputConnection(imageReader->GetOutputPort());
+
+        double min = imageReader->GetOutput()->GetScalarRange()[0];
+        double max = imageReader->GetOutput()->GetScalarRange()[1];
+        LogMgr::instance()->LogSysInfo("minimum pixel value: " + QString::number(min));
+        LogMgr::instance()->LogSysInfo("maximum pixel value: " + QString::number(max));
+        imageViewer->SetColorLevel((max+min)/2);
+        imageViewer->SetColorWindow(max-min);
+        //Defualt options for legend scale
+        legendScaleActor->TopAxisVisibilityOff();
+        legendScaleActor->RightAxisVisibilityOff();
+        legendScaleActor->SetLegendVisibility(0);
+
+        //renderer options are set
+        renderer->AddActor(legendScaleActor);
+        renderer->SetBackground(0,0,0);
         renderer->ResetCamera();
+
+
+        int extent[6];
+        castFilter->GetOutput()->GetExtent(extent);
+        double origin[3];
+        castFilter->GetOutput()->GetOrigin(origin);
+        double spacing[3];
+        castFilter->GetOutput()->GetSpacing(spacing);
+        vtkCamera* camera = renderer->GetActiveCamera();
+        camera->ParallelProjectionOn();
+
+
+        float xc = origin[0] + 0.5*(extent[0] + extent[1])*spacing[0];
+        float yc = origin[1] + 0.5*(extent[2] + extent[3])*spacing[1];
+        //float xd = (extent[1] - extent[0] + 1)*spacing[0]; // not used
+        float yd = (extent[3] - extent[2] + 1)*spacing[1];
+        float d = camera->GetDistance();
+        camera->SetParallelScale(0.5f*static_cast<float>(yd));
+        camera->SetFocalPoint(xc,yc,0.0);
+        camera->SetPosition(xc,yc,+d);
+        imageViewer->SetupInteractor(renderWindowInteractor);
+        imageViewer->SetRenderWindow(ui->qvtkWidget->GetRenderWindow());
+        imageViewer->SetRenderer(renderer);
         imageViewer->Render();
-        imagelist.append(fullFileName);
+
+        renderWindowInteractor->SetInteractorStyle(style);
+        renderWindowInteractor->Initialize();
+        imagelist.append(fileName);
         UpdateThumbnailList();
         imageViewer->UpdateDisplayExtent();
-        imageReader->Update();
+
+        // Read image
+        //imageReader->SetFileName(fullFileName.toLatin1());
+        //imageViewer->SetInputConnection(imageReader->GetOutputPort());
+        //renderer->ResetCamera();
+        //imageViewer->Render();
+        //imagelist.append(fullFileName);
+        //UpdateThumbnailList();
+        //imageViewer->UpdateDisplayExtent();
+        //imageReader->Update();
 
 
     }

@@ -1,4 +1,4 @@
-.moc/
-.boj/
-.rcc/
-.ui/
+.moc/*
+.boj/*
+.rcc/*
+.ui/*

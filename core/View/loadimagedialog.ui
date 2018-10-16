@@ -15,7 +15,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="QFrame" name="frame">
+    <widget class="QFrame" name="displayFrame">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>4</horstretch>
@@ -28,15 +28,11 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QVTKWidget" name="qvtkWidget"/>
-      </item>
-     </layout>
+     <layout class="QHBoxLayout" name="horizontalLayout_2"/>
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="controlFrame">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>1</horstretch>
@@ -63,31 +59,11 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="ctkVTKMagnifyView" name="VTKMagnify"/>
-      </item>
      </layout>
     </widget>
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>ctkVTKMagnifyView</class>
-   <extends>ctkCrosshairLabel</extends>
-   <header>ctkVTKMagnifyView.h</header>
-  </customwidget>
-  <customwidget>
-   <class>ctkCrosshairLabel</class>
-   <extends>QLabel</extends>
-   <header>ctkCrosshairLabel.h</header>
-  </customwidget>
-  <customwidget>
-   <class>QVTKWidget</class>
-   <extends>QWidget</extends>
-   <header>QVTKWidget.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

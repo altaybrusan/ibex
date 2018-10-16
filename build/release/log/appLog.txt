@@ -505,3 +505,12 @@
 [ 2018-10-16 ][ 08:18:27 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-10-16 ][ 08:18:35 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test/test.tiff
 [ 2018-10-16 ][ 08:18:45 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test/G4S.TIF
+[ 2018-10-16 ][ 09:59:12 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-16 ][ 09:59:18 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-16 ][ 09:59:50 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-16 ][ 10:02:30 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-16 ][ 10:02:37 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-16 ][ 10:05:02 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-16 ][ 10:05:08 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-16 ][ 10:05:23 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test/test.tiff
+[ 2018-10-16 ][ 10:06:10 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test/G4S.TIF
