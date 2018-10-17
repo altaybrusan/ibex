@@ -27,8 +27,25 @@ DEFINES += BANDPASSFILTER_LIBRARY
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-INCLUDEPATH +=  ../../common/include \
-                 $$(VTK_DIR)/include/vtk-9.0
+INCLUDEPATH += ../../3rd-Party/ctk/include/ctk-0.1 \
+               ../../3rd-Party/ctk/include \
+               ../../common/include \
+               $$(VTK_DIR)/include/vtk-9.0
+
+LIBS += $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKCore.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMCore.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKDICOMWidgets.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKCore.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgets.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKVisualizationVTKWidgetsPlugins.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgets.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/CTKWidgetsPlugins.lib\
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/dcmtls.lib\
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/dcmnet.lib\
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/dcmdata.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/oflog.lib \
+        $$PWD/../../3rd-Party/ctk/lib/ctk-0.1/ofstd.lib \
+
 LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
         $$(VTK_DIR)/lib/vtkInteractionStyle-9.0.lib\
         $$(VTK_DIR)/lib/vtkCommonCore-9.0.lib \
@@ -43,15 +60,21 @@ LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
         $$(VTK_DIR)/lib/vtkInteractionWidgets-9.0.lib\
         $$(VTK_DIR)/lib/vtkRenderingAnnotation-9.0.lib\
         $$(VTK_DIR)/lib/vtkCommonDataModel-9.0.lib\
-        $$(VTK_DIR)/lib/vtkImagingCore-9.0.lib
+        $$(VTK_DIR)/lib/vtkImagingCore-9.0.lib\
+        $$(VTK_DIR)/lib/vtkImagingFourier-9.0.lib
 
 SOURCES += \
-        bandpassfilter.cpp
+        bandpassfilter.cpp \
+    bandpassfilterwidget.cpp
 
 HEADERS += \
         bandpassfilter.h \
-    bandpassfilter_global.h
+    bandpassfilter_global.h \
+    bandpassfilterwidget.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+FORMS += \
+    bandpassfilterwidget.ui

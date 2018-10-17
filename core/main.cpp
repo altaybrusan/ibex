@@ -12,7 +12,7 @@ VTK_MODULE_INIT(vtkInteractionStyle)
 
 int main(int argc, char *argv[])
 {
-    //vtkObject::GlobalWarningDisplayOff();
+    vtkObject::GlobalWarningDisplayOff();
     //QSettings::setDefaultFormat(QSettings::IniFormat);
     QCoreApplication::setOrganizationName("Bogazici-University");
     QCoreApplication::setApplicationName("iBEX");

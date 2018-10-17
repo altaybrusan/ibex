@@ -45,7 +45,7 @@ public:
     QFrame *line;
     QFrame *thumbnailFrame;
     QFrame *line_2;
-    QScrollArea *scrollArea;
+    QScrollArea *FilterArea;
     QWidget *scrollAreaWidgetContents;
     QSpacerItem *verticalSpacer;
     QToolBar *toolBar;
@@ -152,16 +152,16 @@ public:
 
         verticalLayout_5->addWidget(line_2);
 
-        scrollArea = new QScrollArea(settingFrame);
-        scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setFrameShape(QFrame::Panel);
-        scrollArea->setWidgetResizable(true);
+        FilterArea = new QScrollArea(settingFrame);
+        FilterArea->setObjectName(QStringLiteral("FilterArea"));
+        FilterArea->setFrameShape(QFrame::Panel);
+        FilterArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 257, 226));
-        scrollArea->setWidget(scrollAreaWidgetContents);
+        FilterArea->setWidget(scrollAreaWidgetContents);
 
-        verticalLayout_5->addWidget(scrollArea);
+        verticalLayout_5->addWidget(FilterArea);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 

@@ -40,7 +40,7 @@ protected slots:
 
 
 private:
-    void PrintImage(vtkImageData* image);
+
     Ui::ImageViewer *ui;
     vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor;
     vtkSmartPointer<vtkImageViewer2> imageViewer;
@@ -59,6 +59,7 @@ private:
 
     bool IsValidFile(QString fullFileName);
     void UpdateThumbnailList();
+    void LoadAlgorithmPlugins();
 
     IAlgorithm* algorithm;
 
