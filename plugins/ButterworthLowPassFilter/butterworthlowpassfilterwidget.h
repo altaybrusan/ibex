@@ -19,6 +19,12 @@ public:
 
     void CalculateFFT(vtkSmartPointer<vtkImageData> inputData);
     void SetEnableBtn(bool result);
+    void SetBoundaries(double min, double max);
+    void SetX(double value);
+    void SetY(double value);
+    void SetStep(double value);
+    double GetX();
+    double GetY();
 
 signals:
     void NotifyStartHighFrequencyFiltering();
@@ -27,8 +33,10 @@ private slots:
 
     void on_applyBtn_clicked();
 
+
 private:
     Ui::ButterworthLowPassFilterWidget *ui;
+
 };
 
 

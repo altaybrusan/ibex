@@ -21,11 +21,18 @@
 #include <vtkImageSliceMapper.h>
 
 #include <vtkImageButterworthLowPass.h>
-
+#define MIN_BOUND 0.001
+#define MAX_BOUND 0.1
+#define DEF_VALUE 0.01
+#define STEP_SIZE 0.001
 ButterworthLowPassFilter::ButterworthLowPassFilter()
 {
 
     m_filterWidget =new ButterworthLowPassFilterWidget(nullptr);
+    m_filterWidget->SetBoundaries(MIN_BOUND,MAX_BOUND);
+    m_filterWidget->SetX(DEF_VALUE);
+    m_filterWidget->SetY(DEF_VALUE);
+    m_filterWidget->SetStep(STEP_SIZE);
     connect(m_filterWidget,&ButterworthLowPassFilterWidget::NotifyStartHighFrequencyFiltering,this,&ButterworthLowPassFilter::OnHighFrequencyPressed);
 }
 
@@ -88,27 +95,21 @@ void ButterworthLowPassFilter::OnHighFrequencyPressed()
 
 void ButterworthLowPassFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputData)
 {
-
+    double _x = m_filterWidget->GetX();
+    double _y = m_filterWidget->GetY();
     // Compute the FFT of the image
       vtkSmartPointer<vtkImageFFT> fftFilter =
               vtkSmartPointer<vtkImageFFT>::New();
       fftFilter->SetInputData(inputData);
       fftFilter->Update();
 
-      // High pass filter the FFT
-
-//      vtkSmartPointer<vtkImageIdealHighPass> highPassFilter =
-//              vtkSmartPointer<vtkImageIdealHighPass>::New();
-//      highPassFilter->SetInputConnection(fftFilter->GetOutputPort());
-//      highPassFilter->SetXCutOff(.0001);
-//      highPassFilter->SetYCutOff(.0001);
-//      highPassFilter->Update();
+      // ButterworthLowPass the FFT
 
       vtkSmartPointer<vtkImageButterworthLowPass> butterworthLowPass =
                     vtkSmartPointer<vtkImageButterworthLowPass>::New();
       butterworthLowPass->SetInputConnection(fftFilter->GetOutputPort());
-      butterworthLowPass->SetXCutOff(0.1);
-      butterworthLowPass->SetYCutOff(0.1);
+      butterworthLowPass->SetXCutOff(_x);
+      butterworthLowPass->SetYCutOff(_y);
       butterworthLowPass->Update();
 
       // Compute the IFFT of the high pass filtered image

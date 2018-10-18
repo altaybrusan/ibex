@@ -907,11 +907,6 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDoubleSpinBox \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qspinbox.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
@@ -926,6 +921,9 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
