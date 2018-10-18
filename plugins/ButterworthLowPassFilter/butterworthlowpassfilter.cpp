@@ -25,8 +25,8 @@
 ButterworthLowPassFilter::ButterworthLowPassFilter()
 {
 
-    m_filterWidget =new BandPassFilterWidget(nullptr);
-    connect(m_filterWidget,&BandPassFilterWidget::NotifyStartHighFrequencyFiltering,this,&ButterworthLowPassFilter::OnHighFrequencyPressed);
+    m_filterWidget =new ButterworthLowPassFilterWidget(nullptr);
+    connect(m_filterWidget,&ButterworthLowPassFilterWidget::NotifyStartHighFrequencyFiltering,this,&ButterworthLowPassFilter::OnHighFrequencyPressed);
 }
 
 void ButterworthLowPassFilter::UpdateParameter(QString key, QVariant value)

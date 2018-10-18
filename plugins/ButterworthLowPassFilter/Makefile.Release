@@ -892,7 +892,7 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\VTK\include\vtk-9.0\vtkTimeStamp.h \
 		C:\VTK\include\vtk-9.0\vtkWeakPointerBase.h \
 		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
-		..\..\build\release\.ui\ui_bandpassfilterwidget.h \
+		..\..\build\release\.ui\ui_butterworthlowpassfilterwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
@@ -907,6 +907,11 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDoubleSpinBox \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
@@ -921,9 +926,6 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
@@ -936,12 +938,15 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractbutton.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QVBoxLayout \
+		..\..\3rd-Party\ctk\include\ctk-0.1\ctkDoubleSpinBox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		..\..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
+		..\..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
 		..\..\3rd-Party\ctk\include\ctk-0.1\ctkRangeSlider.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSlider \
-		..\..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QtGlobal \
-		..\..\3rd-Party\ctk\include\ctk-0.1\ctkWidgetsExport.h \
-		..\..\3rd-Party\ctk\include\ctk-0.1\ctkCompilerDetections_p.h
+		..\..\3rd-Party\ctk\include\ctk-0.1\ctkPimpl.h
 
 ..\..\build\release\.obj\moc_butterworthlowpassfilterwidget.obj: ..\..\build\release\.moc\moc_butterworthlowpassfilterwidget.cpp 
 

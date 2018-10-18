@@ -45,7 +45,7 @@ private:
     QMap<QString,QVariant> m_parameters;
     QList<vtkSmartPointer<vtkImageData>> m_imageDataSet;
     QList<vtkSmartPointer<vtkImageData>> m_output;
-    BandPassFilterWidget* m_filterWidget;
+    ButterworthLowPassFilterWidget* m_filterWidget;
 
 };
 

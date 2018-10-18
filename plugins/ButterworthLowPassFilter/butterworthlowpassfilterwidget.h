@@ -9,13 +9,13 @@ namespace Ui {
     class ButterworthLowPassFilterWidget;
 }
 
-class BandPassFilterWidget : public QWidget
+class ButterworthLowPassFilterWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit BandPassFilterWidget(QWidget *parent = 0);
-    ~BandPassFilterWidget();
+    explicit ButterworthLowPassFilterWidget(QWidget *parent = 0);
+    ~ButterworthLowPassFilterWidget();
 
     void CalculateFFT(vtkSmartPointer<vtkImageData> inputData);
     void SetEnableBtn(bool result);
@@ -24,11 +24,12 @@ signals:
     void NotifyStartHighFrequencyFiltering();
 
 private slots:
-    void on_highPassFilterBtn_clicked();
+
+    void on_applyBtn_clicked();
 
 private:
     Ui::ButterworthLowPassFilterWidget *ui;
 };
 
 
-#endif // BANDPASSFILTERWIDGET_H
+#endif // BUTTERWORTHLOWPASSFILTERWIDGET_H

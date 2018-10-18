@@ -892,6 +892,7 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\VTK\include\vtk-9.0\vtkTimeStamp.h \
 		C:\VTK\include\vtk-9.0\vtkWeakPointerBase.h \
 		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
+		..\..\build\debug\.ui\ui_butterworthlowpassfilterwidget.h \
 		..\..\3rd-Party\ctk\include\ctk-0.1\ctkRangeSlider.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSlider \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
