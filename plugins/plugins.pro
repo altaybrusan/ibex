@@ -3,4 +3,4 @@ SUBDIRS += \
     GulmayGenerator \
     TeledyneDetector \
     DeltaB2MotorDriver \
-    BandPassFilter
+    ButterworthLowPassFilter

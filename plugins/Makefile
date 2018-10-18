@@ -29,7 +29,7 @@ SUBTARGETS    =  \
 		sub-GulmayGenerator \
 		sub-TeledyneDetector \
 		sub-DeltaB2MotorDriver \
-		sub-BandPassFilter
+		sub-ButterworthLowPassFilter
 
 
 sub-GulmayGenerator-qmake_all:  FORCE
@@ -131,39 +131,39 @@ sub-DeltaB2MotorDriver-uninstall_subtargets: FORCE
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
-sub-BandPassFilter-qmake_all:  FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
-	cd BandPassFilter\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc
+sub-ButterworthLowPassFilter-qmake_all:  FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && $(MAKE) -f Makefile qmake_all
-sub-BandPassFilter: FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && $(MAKE) -f Makefile qmake_all
+sub-ButterworthLowPassFilter: FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile
-sub-BandPassFilter-make_first: FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-ButterworthLowPassFilter-make_first: FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
-sub-BandPassFilter-all: FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-ButterworthLowPassFilter-all: FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
-sub-BandPassFilter-clean: FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-ButterworthLowPassFilter-clean: FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
-sub-BandPassFilter-distclean: FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-ButterworthLowPassFilter-distclean: FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
-sub-BandPassFilter-install_subtargets: FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-ButterworthLowPassFilter-install_subtargets: FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
-sub-BandPassFilter-uninstall_subtargets: FORCE
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-ButterworthLowPassFilter-uninstall_subtargets: FORCE
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
 
 Makefile: plugins.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf \
@@ -483,15 +483,15 @@ plugins.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile plugins.pro -spec win32-msvc
 
-qmake_all: sub-GulmayGenerator-qmake_all sub-TeledyneDetector-qmake_all sub-DeltaB2MotorDriver-qmake_all sub-BandPassFilter-qmake_all FORCE
+qmake_all: sub-GulmayGenerator-qmake_all sub-TeledyneDetector-qmake_all sub-DeltaB2MotorDriver-qmake_all sub-ButterworthLowPassFilter-qmake_all FORCE
 
-make_first: sub-GulmayGenerator-make_first sub-TeledyneDetector-make_first sub-DeltaB2MotorDriver-make_first sub-BandPassFilter-make_first  FORCE
-all: sub-GulmayGenerator-all sub-TeledyneDetector-all sub-DeltaB2MotorDriver-all sub-BandPassFilter-all  FORCE
-clean: sub-GulmayGenerator-clean sub-TeledyneDetector-clean sub-DeltaB2MotorDriver-clean sub-BandPassFilter-clean  FORCE
-distclean: sub-GulmayGenerator-distclean sub-TeledyneDetector-distclean sub-DeltaB2MotorDriver-distclean sub-BandPassFilter-distclean  FORCE
+make_first: sub-GulmayGenerator-make_first sub-TeledyneDetector-make_first sub-DeltaB2MotorDriver-make_first sub-ButterworthLowPassFilter-make_first  FORCE
+all: sub-GulmayGenerator-all sub-TeledyneDetector-all sub-DeltaB2MotorDriver-all sub-ButterworthLowPassFilter-all  FORCE
+clean: sub-GulmayGenerator-clean sub-TeledyneDetector-clean sub-DeltaB2MotorDriver-clean sub-ButterworthLowPassFilter-clean  FORCE
+distclean: sub-GulmayGenerator-distclean sub-TeledyneDetector-distclean sub-DeltaB2MotorDriver-distclean sub-ButterworthLowPassFilter-distclean  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-GulmayGenerator-install_subtargets sub-TeledyneDetector-install_subtargets sub-DeltaB2MotorDriver-install_subtargets sub-BandPassFilter-install_subtargets FORCE
-uninstall_subtargets: sub-GulmayGenerator-uninstall_subtargets sub-TeledyneDetector-uninstall_subtargets sub-DeltaB2MotorDriver-uninstall_subtargets sub-BandPassFilter-uninstall_subtargets FORCE
+install_subtargets: sub-GulmayGenerator-install_subtargets sub-TeledyneDetector-install_subtargets sub-DeltaB2MotorDriver-install_subtargets sub-ButterworthLowPassFilter-install_subtargets FORCE
+uninstall_subtargets: sub-GulmayGenerator-uninstall_subtargets sub-TeledyneDetector-uninstall_subtargets sub-DeltaB2MotorDriver-uninstall_subtargets sub-ButterworthLowPassFilter-uninstall_subtargets FORCE
 
 sub-GulmayGenerator-debug:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -505,11 +505,11 @@ sub-DeltaB2MotorDriver-debug:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-sub-BandPassFilter-debug:
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+sub-ButterworthLowPassFilter-debug:
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-GulmayGenerator-debug sub-TeledyneDetector-debug sub-DeltaB2MotorDriver-debug sub-BandPassFilter-debug
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+debug: sub-GulmayGenerator-debug sub-TeledyneDetector-debug sub-DeltaB2MotorDriver-debug sub-ButterworthLowPassFilter-debug
 
 sub-GulmayGenerator-release:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -523,11 +523,11 @@ sub-DeltaB2MotorDriver-release:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-sub-BandPassFilter-release:
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+sub-ButterworthLowPassFilter-release:
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-GulmayGenerator-release sub-TeledyneDetector-release sub-DeltaB2MotorDriver-release sub-BandPassFilter-release
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+release: sub-GulmayGenerator-release sub-TeledyneDetector-release sub-DeltaB2MotorDriver-release sub-ButterworthLowPassFilter-release
 
 sub-GulmayGenerator-check:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -541,11 +541,11 @@ sub-DeltaB2MotorDriver-check:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-sub-BandPassFilter-check:
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+sub-ButterworthLowPassFilter-check:
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-GulmayGenerator-check sub-TeledyneDetector-check sub-DeltaB2MotorDriver-check sub-BandPassFilter-check
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+check: sub-GulmayGenerator-check sub-TeledyneDetector-check sub-DeltaB2MotorDriver-check sub-ButterworthLowPassFilter-check
 
 sub-GulmayGenerator-benchmark:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -559,11 +559,11 @@ sub-DeltaB2MotorDriver-benchmark:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-sub-BandPassFilter-benchmark:
-	@if not exist BandPassFilter\ mkdir BandPassFilter\ & if not exist BandPassFilter\ exit 1
+sub-ButterworthLowPassFilter-benchmark:
+	@if not exist ButterworthLowPassFilter\ mkdir ButterworthLowPassFilter\ & if not exist ButterworthLowPassFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd BandPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\BandPassFilter\BandPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-GulmayGenerator-benchmark sub-TeledyneDetector-benchmark sub-DeltaB2MotorDriver-benchmark sub-BandPassFilter-benchmark
+	cd ButterworthLowPassFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\ButterworthLowPassFilter\ButterworthLowPassFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-GulmayGenerator-benchmark sub-TeledyneDetector-benchmark sub-DeltaB2MotorDriver-benchmark sub-ButterworthLowPassFilter-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE
