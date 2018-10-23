@@ -7,7 +7,8 @@ class LoginMgr : public QObject
 {
     Q_OBJECT
 public:
-    explicit LoginMgr(QObject *parent, LoginDialog &loginDlg);
+    explicit LoginMgr(QObject *parent,
+                      LoginDialog &loginDlg);
     QString GetActiveUser();
 
 
