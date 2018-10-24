@@ -1,16 +1,11 @@
-# REM: blank space in path can make trubble for gmake
 TEMPLATE = subdirs
+include(./common/build/commonconfig.pri)
+
 CONFIG += ordered
 SUBDIRS += \
-    utilities\
-    common \
-    startuptool \
-    testplugin
-
-
-
-
-
+    core \
+    plugins\
+    tests
 
 
 
