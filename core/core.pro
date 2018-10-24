@@ -122,7 +122,9 @@ SOURCES += \
     View/loadImagedialog.cpp \
     Controller/examinationmgr.cpp \
          View/worklistdialog.cpp \
-    View/examinationdialog.cpp
+    View/examinationdialog.cpp \
+    Model/worklistquerymodel.cpp \
+    Controller/worklistmgr.cpp
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
 
@@ -164,7 +166,10 @@ HEADERS += \
     View/loadImagedialog.h \
     Utils/displaytool.h \
     View/examinationdialog.h \
-    Controller/examinationmgr.h
+    Controller/examinationmgr.h \
+    Model/worklisttbl.h \
+    Model/worklistquerymodel.h \
+    Controller/worklistmgr.h
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \
