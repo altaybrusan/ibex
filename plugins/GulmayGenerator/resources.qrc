@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>images/_64_largspot.png</file>
+        <file>images/_64_smallspot.png</file>
+        <file>images/_64_apply.png</file>
+    </qresource>
+</RCC>

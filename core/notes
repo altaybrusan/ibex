@@ -1,0 +1,37 @@
+DCMTK integration:
+
+You are not linking all of the libraries needed, or you are linking in wrong
+order (library link order is significant!)
+The DCMTK libraries have the following internal dependencies
+(modules introduced with DCMTK 3.6.0 are not listed here):
+    dcmdata --> ofstd
+    dcmimage --> dcmimgle, dcmdata, ofstd
+    dcmimgle --> dcmdata, ofstd
+    dcmjpeg --> ijg8, ijg12, ijg16, dcmimage, dcmimgle, dcmdata, ofstd
+    dcmnet --> dcmdata, ofstd
+    dcmpstat --> dcmimage, dcmimgle, dcmsign, dcmsr, imagectn, dcmtls, dcmnet, dcmdata, ofstd
+    dcmsign --> dcmdata, ofstd
+    dcmsr --> dcmdata, ofstd
+    dcmtls --> dcmnet, dcmdata, ofstd
+    dcmwlm --> dcmnet, dcmdata, ofstd
+    imagectn/dcmqrdb --> dcmnet, dcmdata, ofstd
+
+In addition to the standard libraries, most DCMTK applications have to be
+linked against the "netapi32" and "wsock32" libraries,
+even if they contain no networking code.
+Several external libraries such as zlib, OpenSSL etc. might also be needed.
+See the INSTALL file for details.
+
+inside .pro file
+
+DEFINES += _REENTRANT
+
+QMAKE_CFLAGS_RELEASE -= -MD
+QMAKE_CFLAGS_RELEASE = -MT
+QMAKE_CFLAGS_DEBUG -= -MDd
+QMAKE_CFLAGS_DEBUG = -MTd
+QMAKE_CXXFLAGS_RELEASE -= -MD
+QMAKE_CXXFLAGS_RELEASE += -MT
+QMAKE_CXXFLAGS_DEBUG -= -MDd
+QMAKE_CXXFLAGS_DEBUG += -MTd
+
