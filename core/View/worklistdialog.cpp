@@ -126,7 +126,7 @@ void  WorkListDialog::IntializeTableViewModel()
 {
     model->setHeaderData(studyid, Qt::Horizontal, tr("Study ID"));
     model->setHeaderData(accessionnum,Qt::Horizontal, tr("Accession"));
-    model->setHeaderData(patientid,Qt::Horizontal, tr("Patıent ID"));
+    model->setHeaderData(patientid,Qt::Horizontal, tr("Patient ID"));
     model->setHeaderData(patientname,Qt::Horizontal, tr("Patient Name"));
     model->setHeaderData(otherpatientid,Qt::Horizontal, tr("Other Patient ID"));
     model->setHeaderData(otherpatientname, Qt::Horizontal, tr("Other Patient Name"));

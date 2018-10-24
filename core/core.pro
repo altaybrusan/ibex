@@ -121,10 +121,11 @@ SOURCES += \
          View/imageviewer.cpp \
     View/loadImagedialog.cpp \
     Controller/examinationmgr.cpp \
+         View/worklistdialog.cpp \
     View/examinationdialog.cpp
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
-#        View/worklistdialog.cpp \
+
 #        View/worklistmodel.cpp \
 #         Utils/dicomwriter.cpp \
 #        Controller/loginmgr.cpp
@@ -150,7 +151,7 @@ HEADERS += \
          View/pacssettingsdialog.h \
          Controller/worklistserversettingsmgr.h \
          Controller/loadstudymgr.h \
-#        View/worklistdialog.h \
+         View/worklistdialog.h \
 #        View/dicomtaglist.h \
 #        View/worklistmodel.h \
 #        Utils/dicomwriter.h \
@@ -179,9 +180,10 @@ FORMS += \
 #         View/newpatientdialog.ui
          View/imageviewer.ui \
          View/logindialog.ui \
-    View/loadimagedialog.ui \
-    View/examinationdialog.ui
-#        View/worklistdialog.ui \
+         View/loadimagedialog.ui \
+         View/worklistdialog.ui \
+         View/examinationdialog.ui
+
 
 RESOURCES += \
     resources.qrc

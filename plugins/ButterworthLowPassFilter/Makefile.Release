@@ -907,6 +907,8 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
@@ -916,7 +918,6 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
