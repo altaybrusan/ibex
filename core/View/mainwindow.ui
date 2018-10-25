@@ -113,6 +113,7 @@ selection-background-color: rgb(85, 170, 255);
     </property>
     <addaction name="action_New_Study"/>
     <addaction name="action_Open_Study"/>
+    <addaction name="action_Select"/>
     <addaction name="action_Load_Study"/>
     <addaction name="action_Quick_Start"/>
     <addaction name="separator"/>
@@ -161,6 +162,7 @@ selection-background-color: rgb(85, 170, 255);
    </attribute>
    <addaction name="action_New_Study"/>
    <addaction name="action_Open_Study"/>
+   <addaction name="action_Select"/>
    <addaction name="action_Load_Study"/>
    <addaction name="action_Quick_Start"/>
    <addaction name="separator"/>
@@ -336,6 +338,15 @@ selection-background-color: rgb(85, 170, 255);
    </property>
    <property name="text">
     <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="action_Select">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/assets/images/_48_worklist_select.png</normaloff>:/assets/images/_48_worklist_select.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Select</string>
    </property>
   </action>
  </widget>

@@ -12,6 +12,7 @@
 #include "Controller/loadstudymgr.h"
 #include "View/examinationdialog.h"
 #include "Controller/examinationmgr.h"
+#include "Controller/worklistmgr.h"
 
 class DeviceMgr : public QObject
 {
@@ -27,20 +28,15 @@ public:
                        LoadStudyDialog& loadStudyDlg,
                        LoadStudyMgr& loadStudyMgr,
                        ExaminationDialog& examinationDlg,
-                       ExaminationMgr& examinationMgr);
+                       ExaminationMgr& examinationMgr,
+                       WorklistMgr& worklistMgr);
     void WireConnections();
 
 
 signals:
 
 public slots:
-private slots:
-    void OnNewStudyWorkFlowIsTriggered();
-    void OnQuickStudyWorkFlowIsTriggered();
-    void OnUpdatePACSSettingIsTriggered();
-    void OnLoadStudyIsTriggered();
-    void OnUpdateWorklistSettingsIsTriggered();
-    void OnOpenStudyWorkFlowIsTriggered();
+
 private:
     MainWindow& m_mainWindow;
     LoadStudyMgr& m_loadStudyMgr;
@@ -52,6 +48,7 @@ private:
     WorklistServerSettingsMgr& m_worklisSettingstMgr;
     ExaminationDialog& m_examinationDlg;
     ExaminationMgr& m_examinationMgr;
+    WorklistMgr& m_worklistMgr;
 
 
     void ShutdownDevice();

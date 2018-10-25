@@ -15,6 +15,9 @@ class LoadStudyDialog;
 class LoadStudyMgr;
 class ExaminationDialog;
 class ExaminationMgr;
+class WorklistMgr;
+class WorklistDialog;
+class WorklistModel;
 
 class Startup : public QObject
 {
@@ -34,11 +37,13 @@ private:
     QString m_dbName,m_dbDriver;
     PacsSettingsDialog& m_pacsSettingsDlg;
     PacsSettingMgr& m_pacsSettingsMgr;
-    WorklistServerSettingsDialog& m_worklistDlg;
-    WorklistServerSettingsMgr& m_worklistMgr;
+    WorklistServerSettingsDialog& m_worklistSettingsDlg;
+    WorklistServerSettingsMgr& m_worklistSettingsMgr;
     ExaminationDialog& m_examinationDlg;
     ExaminationMgr& m_examinationMgr;
-
+    WorklistModel& m_worklistMdl;
+    WorklistDialog& m_worklistDlg;
+    WorklistMgr& m_worklistMgr;
     DeviceMgr& m_device;
 
 

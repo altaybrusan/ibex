@@ -2,27 +2,25 @@
 #define WORKLISTDIALOG_H
 
 #include <QDialog>
-//#include <QSqlRecord>
-//#include <qsqltablemodel>
-//#include <QMap>
+#include <QSqlTableModel>
 
 namespace Ui {
     class WorkListDialog;
 }
 
-class WorkListDialog : public QDialog
+class WorklistDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit WorkListDialog(QWidget *parent = 0);
+    explicit WorklistDialog(QWidget *parent = 0);
     void SetColumnHidden(int column,bool value);
     void SetColumnTitle(int column,QString title);
-    ~WorkListDialog();
+    void SetViewModel(QSqlTableModel* model);
+    ~WorklistDialog();
 
 signals:
-    void NotifyRecoredSelected(QSqlRecord record);
-    void NotifyFetchRISRequest();
+    void NotifyFetchRISRequestTriggered();
     void NotifySelectedRecord(int row);
 
 private slots:
@@ -31,9 +29,6 @@ private slots:
 
 private:
 
-    //QSqlDatabase _database;
-    //QSqlTableModel *model;
-    //QSqlRecord selectedRecord;
     Ui::WorkListDialog *ui;
 };
 

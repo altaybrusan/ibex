@@ -25,12 +25,12 @@ signals:
     void NotifyLoadStudyIsTriggered();
     void NotifyUpdateWorklistSettingsIsTriggered();
     void NotifyOpenStudyWorkFlowIsTriggered();
+    void NotifyWorklistLoadIsTriggered();
 
 private slots:
     void on_actionNewStudytriggered();
     //void on_actionUpdatePACSServerSettingstriggered();
 //    void on_newPatient_accepted();
-    void on_actionOpenStudytriggered();
 //    void on_Patient_selected(QSqlRecord record);
 //    void on_Login_Successfully();
 //    void on_Login_Failed();
@@ -39,6 +39,8 @@ private slots:
     void on_action_Load_Study_triggered();
     void on_action_Open_Study_triggered();
     void on_action_Quick_Start_triggered();
+
+    void on_action_Select_triggered();
 
 protected:
     void showEvent( QShowEvent* event ) override;

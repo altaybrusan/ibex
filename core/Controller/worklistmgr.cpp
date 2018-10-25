@@ -18,19 +18,22 @@
 #include <QtXml>
 #include <QFile>
 #include <QMap>
-#include <QTcpSocket>
+#include <QSqlRecord>
 
 #include "worklistmgr.h"
 #include "Model/worklisttbl.h"
 #include "View/worklistdialog.h"
-
+#include "Model/worklistmodel.h"
+#include "Utils/logmgr.h"
+#include "Model/worklistquerymodel.h"
+#include "Utils/settingsprovider.h"
 
 #define OFFIS_CONSOLE_APPLICATION "findscu"
 
 static OFLogger findscuLogger = OFLog::getLogger("dcmtk.apps." OFFIS_CONSOLE_APPLICATION);
 
 static char rcsid[] = "$dcmtk: " OFFIS_CONSOLE_APPLICATION " v"
-        OFFIS_DCMTK_VERSION " " OFFIS_DCMTK_RELEASEDATE " $";
+OFFIS_DCMTK_VERSION " " OFFIS_DCMTK_RELEASEDATE " $";
 
 /* default application titles */
 #define APPLICATIONTITLE        "FINDSCU"
@@ -53,46 +56,52 @@ OFString              opt_outputDirectory = ".";
 OFCmdUnsignedInt      opt_maxReceivePDULength = ASC_DEFAULTMAXPDU;
 E_TransferSyntax      opt_networkTransferSyntax = EXS_Unknown;
 const char *          opt_ourTitle = APPLICATIONTITLE;
-const char *          opt_peer="localhost";
+const char *          opt_peer="";
 const char *          opt_peerTitle = PEERAPPLICATIONTITLE;
 OFCmdUnsignedInt      opt_port = 107;
 OFCmdUnsignedInt      opt_repeatCount = 1;
 OFBool                opt_secureConnection = OFFalse; /* default: no secure connection */
 OFList<OFString>      overrideKeys;
 OFString              opt_extractXMLFilename="Out.xml";
-QTcpSocket * socket;
 DcmFindSCU findscu;
 
 
-WorklistMgr::WorklistMgr(QObject *parent, WorkListDialog &dialog) :
+WorklistMgr::WorklistMgr(QObject *parent, WorklistDialog &dialog, WorklistModel& model, QString settingFile) :
     QObject(parent),
-    worklistDlg(dialog)
+    m_dialog(dialog),
+    m_model(model),
+    m_settingsFileName(settingFile)
 {
+    SettingsProvider _provider(this);
+    _provider.UpdateSettingFile(m_settingsFileName);
 
-    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
-    //qDebug()<<"constructing socket object";
-    //socket = new QTcpSocket();
-
-    _database = QSqlDatabase::addDatabase("QSQLITE");
-    _database.setDatabaseName("./database/database.db");
-    if (!_database.open())
+    if(!_provider.OpenSettingFile())
     {
-        qDebug() << "Failed to open the database";
-        return ;
-    }
-    else
-    {
-        qDebug()<<"Database connection is made...";
+        LogMgr::instance()->LogSysError(tr("Can not open Worklist server setting file."));
+        return;
     }
 
-    model = new QSqlTableModel(new QSqlTableModel(this,_database));
-    model->setTable("WorkListTbl");
-    model->setEditStrategy(QSqlTableModel::OnFieldChange);
+    if(!_provider.LoadSettingFile())
+    {
+        LogMgr::instance()->LogSysError(tr("worklist server setting file is not valid."));
+        return;
+    }
 
-    IntializeTableViewModel();
-    ui->tableView->setModel(model);
-    InitializeTableViewColumns();
+    LogMgr::instance()->LogSysInfo(tr("worklist settings are loaded successfully."));
+
+    auto root =_provider.GetRootElement();
+    QStringList strList = _provider.ListElements(root,"Server","IP");
+    LogMgr::instance()->LogSysInfo(strList.at(0));
+    opt_peer = ((QString)strList.at(0)).toStdString().c_str();
+
+
+//    strList = _provider.ListElements(root,"Server","Port");
+//    m_worklisSettingstDlg.SetWorklistServerPort(strList.at(0));
+
+//    strList = _provider.ListElements(root,"Server","AETitle");
+//    m_worklisSettingstDlg.SetWorklistServerAETitle(strList.at(0));
+
+    connect(&m_dialog,SIGNAL(NotifyFetchRISRequestTriggered()),this,SLOT(OnFetchRISRequestReceived()));
 }
 
 void WorklistMgr::OnFetchRISRequestReceived()
@@ -197,161 +206,145 @@ void WorklistMgr::OnFetchRISRequestReceived()
     {
         qDebug()<<"Cannot perform query";
     }
+  ParsRISResponseAndInsertIntoTableModel();
 
-
-    ////////////////////////////////////////////////
-    QFile file("./Out.xml");
-
-    if(!file.open(QIODevice::ReadWrite | QIODevice::Text))
-    {
-        qDebug()<<"Can not open worklist configuration file";
-        return;
-    }
-    else
-    {
-        qDebug()<<"worklist configuration file successfully opened.";
-        //get the root element
-        QDomDocument document;
-
-        if(!document.setContent(&file))
-        {
-            qDebug() << "Failed to load document";
-            return;
-        }
-        file.close();
-        //QDomElement root = document.firstChildElement();
-        //QStringList strList = ListElements3(root,"element","tag");
-        ParsRISResponseAndInsertIntoTableModel();
-
-    }
 }
 
 void WorklistMgr::OnNewRowIsSelected(int row)
 {
-    selectedRecord = model->record(index.row());
-    this->close();
+    //selectedRecord = model->record(index.row());
+    //this->close();
+}
 
+void WorklistMgr::OnActivateWorklistDialog()
+{
 
+  m_model.MakeModel();
+  m_dialog.SetViewModel(m_model.GetModel());
+  InitializeWorklistTableModel();
+  InitializeWorklistTableView();
+  LogMgr::instance()->LogSysInfo("worklist model is not empty");
+  m_dialog.show();
 }
 
 void WorklistMgr::InitializeWorklistTableView()
 {
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::studyid,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::accessionnum,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::patientid, false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::patientname,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::otherpatientid,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::otherpatientname, true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::age,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::occupation,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::dob, false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::sex, false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::medicalalert,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::contrastallergies, true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::smokingstatus,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::patientcomments,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::patienthistory,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::pregnancystatus,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::lastmenstrualdate,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::specialneeds,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::patientstate,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::admittingtime,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::admissionid,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::visitdate,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::visitstatus,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::visitcomments,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::refphysician,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::scheduledstartdatetime,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::scheduledaetitle,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::regsource,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::studyinstanceuid,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::studystatus,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::studypriority,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::studycomments,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::requestingphysician, false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::requestedproceduredescription,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::requestedcontrastagent,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::studystartdatetime,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::studycompletiondatetime,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::scheduledprocedurestepid,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::scheduledprocedurestepdescription,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::requestedprocedureid, false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::premedication, true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::procedurecode, false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::procedurecodevalue,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::procedurecodemeaning,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::mppsinstanceuid,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::mppsstatus,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::modality,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::operatorname,false);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::reserve1,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::reserve2,true);
-    m_worklistDlg.SetColumnHidden(WORKLIST_FIELDS::reserve3,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::studyid,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::accessionnum,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::patientid, false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::patientname,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::otherpatientid,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::otherpatientname, true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::age,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::occupation,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::dob, false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::sex, false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::medicalalert,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::contrastallergies, true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::smokingstatus,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::patientcomments,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::patienthistory,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::pregnancystatus,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::lastmenstrualdate,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::specialneeds,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::patientstate,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::admittingtime,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::admissionid,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::visitdate,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::visitstatus,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::visitcomments,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::refphysician,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::scheduledstartdatetime,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::scheduledaetitle,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::regsource,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::studyinstanceuid,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::studystatus,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::studypriority,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::studycomments,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::requestingphysician, false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::requestedproceduredescription,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::requestedcontrastagent,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::studystartdatetime,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::studycompletiondatetime,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::scheduledprocedurestepid,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::scheduledprocedurestepdescription,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::requestedprocedureid, false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::premedication, true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::procedurecode, false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::procedurecodevalue,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::procedurecodemeaning,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::mppsinstanceuid,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::mppsstatus,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::modality,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::operatorname,false);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::reserve1,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::reserve2,true);
+    m_dialog.SetColumnHidden(WORKLIST_FIELDS::reserve3,true);
 }
 
 void WorklistMgr::InitializeWorklistTableModel()
 {
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::studyid, tr("Study ID"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::accessionnum, tr("Accession"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::patientid, tr("Patient ID"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::patientname, tr("Patient Name"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::otherpatientid, tr("Other Patient ID"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::otherpatientname, tr("Other Patient Name"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::age, tr("Age"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::occupation, tr("Occupation"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::dob, tr("Date Of Birth"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::sex, tr("Gender"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::medicalalert, tr("Medical Alert"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::contrastallergies, tr("Contrast Alergies"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::smokingstatus, tr("Smoking Status"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::patientcomments, tr("Patient Comments"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::patienthistory, tr("Patient History"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::pregnancystatus, tr("Pragnancy"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::lastmenstrualdate, tr("Last Menstrual Date"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::specialneeds, tr("Special Needs"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::patientstate, tr("Patient State"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::admittingtime, tr("Admitting Time"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::admissionid, tr("Admission ID"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::visitdate, tr("Visit Date"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::visitstatus, tr("Visit Status"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::visitcomments, tr("Visit Comments"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::refphysician, tr("Referring Physician"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::scheduledstartdatetime, tr("Scheduled Start Date And Time"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::scheduledaetitle, tr("Scheduled AE-title"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::regsource, tr("Regsource"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::studyinstanceuid, tr("Study Instance uid"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::studystatus, tr("Study Status"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::studypriority, tr("Study Priority"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::studycomments, tr("Study Comments"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::requestingphysician, tr("Requesting Physician"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::requestedproceduredescription, tr("Requested Procedure Description"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::requestedcontrastagent, tr("requested contrast agent"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::studystartdatetime, tr("study start date time"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::studycompletiondatetime, tr("Study completion date and time"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::scheduledprocedurestepid, tr("Scheduled Procedure Step id"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::scheduledprocedurestepdescription, tr("Scheduled Procedure Step Description"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::requestedprocedureid, tr("requested procedure id"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::premedication,  tr("premedication"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::procedurecode,   tr("procedure code"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::procedurecodevalue,tr("procedure code value"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::procedurecodemeaning,tr("procedure code meaning"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::mppsinstanceuid,tr("mpps instance uid"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::mppsstatus, tr("mpps status"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::modality, tr("modality"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::operatorname,  tr("operator name"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::reserve1,    tr("reserve1"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::reserve2,  tr("reserve2"));
-    m_worklistDlg.SetColumnTitle(WORKLIST_FIELDS::reserve3 ,   tr("reserve3"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::studyid, tr("Study ID"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::accessionnum, tr("Accession"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::patientid, tr("Patient ID"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::patientname, tr("Patient Name"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::otherpatientid, tr("Other Patient ID"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::otherpatientname, tr("Other Patient Name"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::age, tr("Age"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::occupation, tr("Occupation"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::dob, tr("Date Of Birth"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::sex, tr("Gender"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::medicalalert, tr("Medical Alert"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::contrastallergies, tr("Contrast Alergies"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::smokingstatus, tr("Smoking Status"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::patientcomments, tr("Patient Comments"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::patienthistory, tr("Patient History"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::pregnancystatus, tr("Pragnancy"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::lastmenstrualdate, tr("Last Menstrual Date"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::specialneeds, tr("Special Needs"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::patientstate, tr("Patient State"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::admittingtime, tr("Admitting Time"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::admissionid, tr("Admission ID"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::visitdate, tr("Visit Date"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::visitstatus, tr("Visit Status"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::visitcomments, tr("Visit Comments"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::refphysician, tr("Referring Physician"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::scheduledstartdatetime, tr("Scheduled Start Date And Time"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::scheduledaetitle, tr("Scheduled AE-title"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::regsource, tr("Regsource"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::studyinstanceuid, tr("Study Instance uid"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::studystatus, tr("Study Status"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::studypriority, tr("Study Priority"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::studycomments, tr("Study Comments"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::requestingphysician, tr("Requesting Physician"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::requestedproceduredescription, tr("Requested Procedure Description"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::requestedcontrastagent, tr("requested contrast agent"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::studystartdatetime, tr("study start date time"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::studycompletiondatetime, tr("Study completion date and time"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::scheduledprocedurestepid, tr("Scheduled Procedure Step id"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::scheduledprocedurestepdescription, tr("Scheduled Procedure Step Description"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::requestedprocedureid, tr("Requested Procedure id"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::premedication,  tr("Premedication"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::procedurecode,   tr("Procedure Code"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::procedurecodevalue,tr("Procedure Code Value"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::procedurecodemeaning,tr("Procedure Code Meaning"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::mppsinstanceuid,tr("mpps Instance uid"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::mppsstatus, tr("MPPS Status"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::modality, tr("Modality"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::operatorname,  tr("Operator Name"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::reserve1,    tr("Reserve1"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::reserve2,  tr("Reserve2"));
+    m_dialog.SetColumnTitle(WORKLIST_FIELDS::reserve3 ,   tr("Reserve3"));
 
 }
 
 void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
 {
     QFile settingFile("./out.xml");
-
+    WorklistQueryModel _queryModel;
     if(!settingFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        qDebug()<<"Can not open WORKLIST RESPONSE file";
+        LogMgr::instance()->LogSysError(tr("Can not open WORKLIST RESPONSE file"));
         return;
     }
     else
@@ -361,15 +354,16 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
 
         if(!document.setContent(&settingFile))
         {
-            qDebug() << "Failed to load document";
+            LogMgr::instance()->LogSysError(tr("Failed to load document")) ;
             return;
         }
         settingFile.close();
 
         QDomElement root = document.firstChildElement();
-        //Extract records
-        QDomNodeList _recordList = root.elementsByTagName("data-set");
 
+        //Extract records: this xml parser is hard coded
+        // in the next iteration feed it from builder.
+        QDomNodeList _recordList = root.elementsByTagName("data-set");
         for(int recordIndex = 0; recordIndex < _recordList.count(); recordIndex++)
         {
             QDomNode _record = _recordList.at(recordIndex);
@@ -378,7 +372,7 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
             QDomNodeList _elementsList = _record.toElement().elementsByTagName("element");
 
             // create a QSqlRecord for each record inside recordList.
-            QSqlRecord record= model->record();
+            QSqlRecord record= m_model.GetModel()->record();
 
             // initialize the record with dummy data
             for(int a=0;a<=record.count();a++)
@@ -388,8 +382,7 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
 
             for(int elementIndex= 0; elementIndex<_elementsList.count();elementIndex++)
             {
-
-                int temp = WorkListFieldTag.key(_elementsList.at(elementIndex).toElement().attribute("tag"),-1);
+                int temp = _queryModel.WorkListFieldTags.key(_elementsList.at(elementIndex).toElement().attribute("tag"),-1);
 
                 // check if the tag of the elemt exists within database
                 if(temp!=-1)
@@ -404,7 +397,7 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
                 //                        <<"with the value: "<<nodeList.at(j).firstChild().nodeValue()
                 //                        <<"The id is: "<<WorkListFieldTag.key(nodeList.at(j).toElement().attribute("tag"),-1);
             }
-            model->insertRecord(-1,record);
+            m_model.GetModel()->insertRecord(-1,record);
             //            qDebug()<<"----------------------";
             //            for(int k=0;k< record.count();k++)
             //            {
@@ -413,7 +406,7 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
 
         }
 
-        model->select();
+        m_model.GetModel()->select();
     }
 }
 

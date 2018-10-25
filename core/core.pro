@@ -124,7 +124,8 @@ SOURCES += \
          View/worklistdialog.cpp \
     View/examinationdialog.cpp \
     Model/worklistquerymodel.cpp \
-    Controller/worklistmgr.cpp
+    Controller/worklistmgr.cpp \
+    Model/worklistmodel.cpp
 #        View/rs232connector.cpp \
 #        View/modbusconnector.cpp \
 
@@ -169,7 +170,8 @@ HEADERS += \
     Controller/examinationmgr.h \
     Model/worklisttbl.h \
     Model/worklistquerymodel.h \
-    Controller/worklistmgr.h
+    Controller/worklistmgr.h \
+    Model/worklistmodel.h
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \

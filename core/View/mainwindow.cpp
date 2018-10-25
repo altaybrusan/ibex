@@ -145,10 +145,6 @@ void MainWindow::on_actionNewStudytriggered()
 
 //}
 
-void MainWindow::on_actionOpenStudytriggered()
-{    
-    //    wrkDlg->show();
-}
 
 void MainWindow::showEvent(QShowEvent *event)
 {
@@ -204,4 +200,9 @@ void MainWindow::on_action_Quick_Start_triggered()
 {
     emit NotifyQuickStudyWorkFlowIsTriggered();
 
+}
+
+void MainWindow::on_action_Select_triggered()
+{
+    emit NotifyWorklistLoadIsTriggered();
 }

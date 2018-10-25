@@ -12,7 +12,8 @@ DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
                      LoadStudyDialog &loadStudyDlg,
                      LoadStudyMgr &loadStudyMgr,
                      ExaminationDialog &examinationDlg,
-                     ExaminationMgr &examinationMgr) :
+                     ExaminationMgr &examinationMgr,
+                     WorklistMgr& worklistMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
     m_loadStudyDlg(loadStudyDlg),
@@ -23,7 +24,8 @@ DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
     m_worklistSettingsDlg(worklistSettingDlg),
     m_worklisSettingstMgr(worklistdialogMgr),
     m_examinationDlg(examinationDlg),
-    m_examinationMgr(examinationMgr)
+    m_examinationMgr(examinationMgr),
+    m_worklistMgr(worklistMgr)
 {
 
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
@@ -41,40 +43,9 @@ void DeviceMgr::WireConnections()
   });
   connect(&m_mainWindow,&MainWindow::NotifyUpdatePACSSettingIsTriggered,&m_pacsSettingsMgr,&PacsSettingMgr::OnActivatePacsSettingsDialog);
   connect(&m_mainWindow,&MainWindow::NotifyUpdateWorklistSettingsIsTriggered,&m_worklisSettingstMgr,&WorklistServerSettingsMgr::OnActivateWorklistSettingsDialog);
-  connect(&m_mainWindow,&MainWindow::NotifyLoadStudyIsTriggered,&m_loadStudyMgr,&LoadStudyMgr::ActivateLoadingStudy);
-
+  connect(&m_mainWindow,&MainWindow::NotifyLoadStudyIsTriggered,&m_loadStudyMgr,&LoadStudyMgr::OnActivateLoadingStudy);
+  connect(&m_mainWindow,&MainWindow::NotifyWorklistLoadIsTriggered,&m_worklistMgr,&WorklistMgr::OnActivateWorklistDialog);
   connect(&m_mainWindow,&MainWindow::NotifyQuickStudyWorkFlowIsTriggered,&m_examinationMgr,&ExaminationMgr::OnActivateExamination);
-}
-
-void DeviceMgr::OnNewStudyWorkFlowIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnQuickStudyWorkFlowIsTriggered()
-{
-
-
-}
-
-void DeviceMgr::OnUpdatePACSSettingIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnLoadStudyIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnUpdateWorklistSettingsIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnOpenStudyWorkFlowIsTriggered()
-{
-
 }
 
 void DeviceMgr::ShutdownDevice()

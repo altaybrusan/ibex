@@ -52,14 +52,28 @@
      <widget class="QPushButton" name="reloadBtn">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>9</x>
         <y>20</y>
-        <width>80</width>
+        <width>101</width>
         <height>31</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>Reload</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/assets/images/_48_reload.png</normalon>
+       </iconset>
       </property>
      </widget>
     </widget>

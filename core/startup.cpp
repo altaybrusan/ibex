@@ -14,6 +14,9 @@
 #include "Controller/loadstudymgr.h"
 #include "View/examinationdialog.h"
 #include "Controller/examinationmgr.h"
+#include "View/worklistdialog.h"
+#include "Model/worklistmodel.h"
+#include "Controller/worklistmgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -32,15 +35,19 @@ Startup::Startup() : QObject(nullptr),
     m_dbConnector(*new DatabaseConnector(nullptr)),
     m_pacsSettingsDlg(*new PacsSettingsDialog(nullptr)),
     m_pacsSettingsMgr(*new PacsSettingMgr(nullptr,m_pacsSettingsDlg)),
-    m_worklistDlg(*new WorklistServerSettingsDialog(nullptr)),
-    m_worklistMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistDlg,WRKLST_SETTING_FILE)),
+    m_worklistSettingsDlg(*new WorklistServerSettingsDialog(nullptr)),
+    m_worklistSettingsMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistSettingsDlg,WRKLST_SETTING_FILE)),
     m_examinationDlg(*new ExaminationDialog(nullptr)),
     m_examinationMgr(*new ExaminationMgr(nullptr,m_examinationDlg)),
+    m_worklistDlg(*new WorklistDialog(nullptr)),
+    m_worklistMdl(*new WorklistModel(nullptr)),
+    m_worklistMgr(*new WorklistMgr(nullptr,m_worklistDlg,m_worklistMdl,WRKLST_SETTING_FILE)),
     m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,
                             m_pacsSettingsDlg,m_pacsSettingsMgr,
-                            m_worklistDlg,m_worklistMgr,
+                            m_worklistSettingsDlg,m_worklistSettingsMgr,
                             m_loadStudyDlg,m_loadStudyMgr,
-                            m_examinationDlg,m_examinationMgr))
+                            m_examinationDlg,m_examinationMgr,
+                            m_worklistMgr))
 
 {
     m_dbConnector.setParent(this);
@@ -68,18 +75,21 @@ Startup::Startup() : QObject(nullptr),
       m_pacsSettingsDlg.setModal(true);
       m_pacsSettingsMgr.setParent(this);
 
-      m_worklistDlg.setParent(&m_mainWindow);
-      m_worklistDlg.setWindowFlag( Qt::Window,true);
-      m_worklistDlg.setModal(true);
-      m_worklistMgr.setParent(this);
+      m_worklistSettingsDlg.setParent(&m_mainWindow);
+      m_worklistSettingsDlg.setWindowFlag( Qt::Window,true);
+      m_worklistSettingsDlg.setModal(true);
+      m_worklistSettingsMgr.setParent(this);
 
       m_examinationDlg.setParent(&m_mainWindow);
       m_examinationDlg.setWindowFlag( Qt::Window,true);
       m_examinationDlg.setModal(true);
       m_examinationMgr.setParent(this);
 
-
-
+      m_worklistDlg.setParent(&m_mainWindow);
+      m_worklistDlg.setWindowFlag( Qt::Window,true);
+      m_worklistDlg.setModal(true);
+      m_worklistMdl.SetDatabase(m_dbConnector.GetDatabase());
+      m_worklistMgr.setParent(this);
 
       m_device.setParent(this);
       m_device.WireConnections();

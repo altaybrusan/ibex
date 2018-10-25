@@ -6,35 +6,43 @@
 
 
 
-WorkListDialog::WorkListDialog(QWidget *parent) :
+WorklistDialog::WorklistDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::WorkListDialog)
 {
     ui->setupUi(this);
+    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+
 }
 
-void WorkListDialog::SetColumnHidden(int column, bool value)
+void WorklistDialog::SetColumnHidden(int column, bool value)
 {
     ui->tableView->setColumnHidden(column,value);
 }
 
-void WorkListDialog::SetColumnTitle(int column, QString title)
+void WorklistDialog::SetColumnTitle(int column, QString title)
 {
-    model->setHeaderData(column, Qt::Horizontal, title);
+   ui->tableView->model()->setHeaderData(column, Qt::Horizontal, title);
 }
 
-WorkListDialog::~WorkListDialog()
+void WorklistDialog::SetViewModel(QSqlTableModel *model)
+{
+    ui->tableView->setModel(model);
+}
+
+WorklistDialog::~WorklistDialog()
 {
     delete ui;
 }
 
-void WorkListDialog::on_reloadBtn_clicked()
+void WorklistDialog::on_reloadBtn_clicked()
 {
-
+    emit NotifyFetchRISRequestTriggered();
 }
 
 
-void WorkListDialog::on_tableView_doubleClicked(const QModelIndex &index)
+void WorklistDialog::on_tableView_doubleClicked(const QModelIndex &index)
 {
-    emit NotifySelectedRecord(index);
+    emit NotifySelectedRecord(index.row());
 }
