@@ -13,10 +13,12 @@ signals:
 
 public slots:
     void OnFetchRISRequestReceived();
+    void OnNewRowIsSelected(int row);
 private:
     void InitializeWorklistTableView();
     void InitializeWorklistTableModel();
     void ParsRISResponseAndInsertIntoTableModel();
+
 
     WorkListDialog& m_worklistDlg;
 };
