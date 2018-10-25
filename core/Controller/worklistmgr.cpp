@@ -56,7 +56,7 @@ OFString              opt_outputDirectory = ".";
 OFCmdUnsignedInt      opt_maxReceivePDULength = ASC_DEFAULTMAXPDU;
 E_TransferSyntax      opt_networkTransferSyntax = EXS_Unknown;
 const char *          opt_ourTitle = APPLICATIONTITLE;
-const char *          opt_peer="";
+const char *          opt_peer="127.0.0.1";
 const char *          opt_peerTitle = PEERAPPLICATIONTITLE;
 OFCmdUnsignedInt      opt_port = 107;
 OFCmdUnsignedInt      opt_repeatCount = 1;
@@ -72,40 +72,12 @@ WorklistMgr::WorklistMgr(QObject *parent, WorklistDialog &dialog, WorklistModel&
     m_model(model),
     m_settingsFileName(settingFile)
 {
-    SettingsProvider _provider(this);
-    _provider.UpdateSettingFile(m_settingsFileName);
-
-    if(!_provider.OpenSettingFile())
-    {
-        LogMgr::instance()->LogSysError(tr("Can not open Worklist server setting file."));
-        return;
-    }
-
-    if(!_provider.LoadSettingFile())
-    {
-        LogMgr::instance()->LogSysError(tr("worklist server setting file is not valid."));
-        return;
-    }
-
-    LogMgr::instance()->LogSysInfo(tr("worklist settings are loaded successfully."));
-
-    auto root =_provider.GetRootElement();
-    QStringList strList = _provider.ListElements(root,"Server","IP");
-    LogMgr::instance()->LogSysInfo(strList.at(0));
-    opt_peer = ((QString)strList.at(0)).toStdString().c_str();
-
-
-//    strList = _provider.ListElements(root,"Server","Port");
-//    m_worklisSettingstDlg.SetWorklistServerPort(strList.at(0));
-
-//    strList = _provider.ListElements(root,"Server","AETitle");
-//    m_worklisSettingstDlg.SetWorklistServerAETitle(strList.at(0));
-
-    connect(&m_dialog,SIGNAL(NotifyFetchRISRequestTriggered()),this,SLOT(OnFetchRISRequestReceived()));
+   connect(&m_dialog,SIGNAL(NotifyFetchRISRequestTriggered()),this,SLOT(OnFetchRISRequestReceived()));
 }
 
 void WorklistMgr::OnFetchRISRequestReceived()
 {
+    LoadSettings();
     /*
     ** By default. don't let "dcmdata" remove trailing padding or
     ** perform other manipulations. We want to see the real data.
@@ -135,8 +107,7 @@ void WorklistMgr::OnFetchRISRequestReceived()
     /* make sure data dictionary is loaded */
     if (!dcmDataDict.isDictionaryLoaded())
     {
-        qDebug()<<"no data dictionary loaded, check environment variable: "
-               << DCM_DICT_ENVIRONMENT_VARIABLE;
+        LogMgr::instance()->LogSysInfo("no data dictionary loaded, check environment variable ");
     }
 
     /* make sure that output directory can be used (if needed) */
@@ -144,11 +115,13 @@ void WorklistMgr::OnFetchRISRequestReceived()
     {
         if (!OFStandard::dirExists(opt_outputDirectory))
         {
-            qDebug()<<"specified output directory does not exist";
+            LogMgr::instance()->LogSysFail(tr("specified output directory does not exist"));
+            return;
         }
         else if (!OFStandard::isWriteable(opt_outputDirectory))
         {
-            qDebug()<<"specified output directory is not writeable";
+            LogMgr::instance()->LogSysFail(tr("specified output directory is not writeable"));
+            return;
         }
     }
 
@@ -158,7 +131,8 @@ void WorklistMgr::OnFetchRISRequestReceived()
     if (cond.bad())
     {
         DimseCondition::dump(temp_str, cond);
-        qDebug()<< QString::fromLatin1(temp_str.c_str()).toLatin1().data();
+        LogMgr::instance()->LogSysFail(QString::fromLatin1(temp_str.c_str()));
+        return;
     }
 
 
@@ -204,7 +178,8 @@ void WorklistMgr::OnFetchRISRequestReceived()
 
     if(cond.bad())
     {
-        qDebug()<<"Cannot perform query";
+        LogMgr::instance()->LogSysFail("Cannot perform query");
+        return;
     }
   ParsRISResponseAndInsertIntoTableModel();
 
@@ -408,5 +383,41 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
 
         m_model.GetModel()->select();
     }
+}
+
+void WorklistMgr::LoadSettings()
+{
+    SettingsProvider _provider(this);
+    _provider.UpdateSettingFile(m_settingsFileName);
+
+    if(!_provider.OpenSettingFile())
+    {
+        LogMgr::instance()->LogSysError(tr("Can not open Worklist server setting file."));
+        return;
+    }
+
+    if(!_provider.LoadSettingFile())
+    {
+        LogMgr::instance()->LogSysError(tr("worklist server setting file is not valid."));
+        return;
+    }
+
+    LogMgr::instance()->LogSysInfo(tr("worklist settings are loaded successfully."));
+
+    auto root =_provider.GetRootElement();
+    QStringList strList = _provider.ListElements(root,"Server","IP");
+    QString _str = (QString)strList.at(0);
+    LogMgr::instance()->LogSysInfo(">>> The distance IP is: "+ _str);
+    QByteArray _bytes = _str.toLocal8Bit();
+    opt_peer = _bytes.data();
+
+
+//    strList = _provider.ListElements(root,"Server","Port");
+//    m_worklisSettingstDlg.SetWorklistServerPort(strList.at(0));
+
+//    strList = _provider.ListElements(root,"Server","AETitle");
+//    m_worklisSettingstDlg.SetWorklistServerAETitle(strList.at(0));
+
+
 }
 

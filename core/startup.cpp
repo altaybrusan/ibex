@@ -68,26 +68,31 @@ Startup::Startup() : QObject(nullptr),
       m_loginDlg.setParent(&m_mainWindow);
       m_loginDlg.setWindowFlag( Qt::Window,true);
       m_loginDlg.setModal(true);
+      m_loginDlg.setWindowTitle("Login Dialog");
       m_loginMgr.setParent(this);
 
       m_pacsSettingsDlg.setParent(&m_mainWindow);
       m_pacsSettingsDlg.setWindowFlag( Qt::Window,true);
       m_pacsSettingsDlg.setModal(true);
+      m_pacsSettingsDlg.setWindowTitle("PACS Settings Dialog");
       m_pacsSettingsMgr.setParent(this);
 
       m_worklistSettingsDlg.setParent(&m_mainWindow);
       m_worklistSettingsDlg.setWindowFlag( Qt::Window,true);
       m_worklistSettingsDlg.setModal(true);
+      m_worklistSettingsDlg.setWindowTitle("Worklist Settings Dialog");
       m_worklistSettingsMgr.setParent(this);
 
       m_examinationDlg.setParent(&m_mainWindow);
       m_examinationDlg.setWindowFlag( Qt::Window,true);
       m_examinationDlg.setModal(true);
+      m_examinationDlg.setWindowTitle("Examination Dialog");
       m_examinationMgr.setParent(this);
 
       m_worklistDlg.setParent(&m_mainWindow);
       m_worklistDlg.setWindowFlag( Qt::Window,true);
       m_worklistDlg.setModal(true);
+      m_worklistDlg.setWindowTitle("Select Task Dialog");
       m_worklistMdl.SetDatabase(m_dbConnector.GetDatabase());
       m_worklistMgr.setParent(this);
 

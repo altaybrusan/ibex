@@ -20,6 +20,7 @@ private:
     void InitializeWorklistTableView();
     void InitializeWorklistTableModel();
     void ParsRISResponseAndInsertIntoTableModel();
+    void LoadSettings();
 
 
     WorklistDialog& m_dialog;
