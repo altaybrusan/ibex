@@ -3,33 +3,24 @@
 #include "Utils/logmgr.h"
 #include <QApplication>
 
-DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
+DeviceMgr::DeviceMgr(QObject *parent,
+                     MainWindow &mainWindow,
                      LoginMgr &loginMgr,
-                     PacsSettingsDialog &pacsSettingsDlg,
                      PacsSettingMgr &pacsSettingsMgr,
-                     WorklistServerSettingsDialog &worklistSettingDlg,
                      WorklistServerSettingsMgr &worklistdialogMgr,
-                     LoadStudyDialog &loadStudyDlg,
                      LoadStudyMgr &loadStudyMgr,
-                     ExaminationDialog &examinationDlg,
                      ExaminationMgr &examinationMgr,
                      WorklistMgr& worklistMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
-    m_loadStudyDlg(loadStudyDlg),
     m_loadStudyMgr(loadStudyMgr),
     m_loginMgr(loginMgr),
-    m_pacsSettingsDlg(pacsSettingsDlg),
     m_pacsSettingsMgr(pacsSettingsMgr),
-    m_worklistSettingsDlg(worklistSettingDlg),
     m_worklisSettingstMgr(worklistdialogMgr),
-    m_examinationDlg(examinationDlg),
     m_examinationMgr(examinationMgr),
     m_worklistMgr(worklistMgr)
 {
-
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
-
 }
 
 void DeviceMgr::WireConnections()

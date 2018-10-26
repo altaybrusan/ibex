@@ -21,13 +21,9 @@ public:
     explicit DeviceMgr(QObject *parent,
                        MainWindow & mainWindow,
                        LoginMgr& loginMgr,
-                       PacsSettingsDialog& pacsSettingsDlg,
                        PacsSettingMgr& pacsSettingsMgr,
-                       WorklistServerSettingsDialog& worklistSettingDlg,
                        WorklistServerSettingsMgr& worklistdialogMgr,
-                       LoadStudyDialog& loadStudyDlg,
                        LoadStudyMgr& loadStudyMgr,
-                       ExaminationDialog& examinationDlg,
                        ExaminationMgr& examinationMgr,
                        WorklistMgr& worklistMgr);
     void WireConnections();
@@ -40,13 +36,9 @@ public slots:
 private:
     MainWindow& m_mainWindow;
     LoadStudyMgr& m_loadStudyMgr;
-    LoadStudyDialog& m_loadStudyDlg;
     LoginMgr& m_loginMgr;
     PacsSettingMgr& m_pacsSettingsMgr;
-    PacsSettingsDialog& m_pacsSettingsDlg;
-    WorklistServerSettingsDialog& m_worklistSettingsDlg;
     WorklistServerSettingsMgr& m_worklisSettingstMgr;
-    ExaminationDialog& m_examinationDlg;
     ExaminationMgr& m_examinationMgr;
     WorklistMgr& m_worklistMgr;
 

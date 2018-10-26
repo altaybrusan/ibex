@@ -304,3 +304,8 @@
 [ 2018-10-26 ][ 09:24:36 ] INFO  APPLICATION - load study is started
 [ 2018-10-26 ][ 09:24:42 ] DEBUG APPLICATION - examination workflow is started.
 [ 2018-10-26 ][ 09:24:51 ] INFO  APPLICATION - PACS settings activated
+[ 2018-10-26 ][ 10:16:39 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-26 ][ 10:16:43 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-26 ][ 10:16:45 ] INFO  APPLICATION - PACS settings activated
+[ 2018-10-26 ][ 10:16:55 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-26 ][ 10:16:58 ] INFO  APPLICATION - load study is started

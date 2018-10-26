@@ -42,11 +42,12 @@ Startup::Startup() : QObject(nullptr),
     m_worklistDlg(*new WorklistDialog(nullptr)),
     m_worklistMdl(*new WorklistModel(nullptr)),
     m_worklistMgr(*new WorklistMgr(nullptr,m_worklistDlg,m_worklistMdl,WRKLST_SETTING_FILE)),
-    m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,
-                            m_pacsSettingsDlg,m_pacsSettingsMgr,
-                            m_worklistSettingsDlg,m_worklistSettingsMgr,
-                            m_loadStudyDlg,m_loadStudyMgr,
-                            m_examinationDlg,m_examinationMgr,
+    m_device(*new DeviceMgr(nullptr,m_mainWindow,
+                            m_loginMgr,
+                            m_pacsSettingsMgr,
+                            m_worklistSettingsMgr,
+                            m_loadStudyMgr,
+                            m_examinationMgr,
                             m_worklistMgr))
 
 {
