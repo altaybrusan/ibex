@@ -121,16 +121,14 @@ SOURCES += \
         Controller/worklistmgr.cpp \
         Controller/examinationmgr.cpp \
         coreapplication.cpp \
-        startup.cpp
-
-
-#        View/newpatientdialog.cpp \
-#        View/bodypartselectionsquare.cpp \
-#        Model/patientdata.cpp \
-#        Model/anatomicregionelement.cpp\
+        startup.cpp\
+        View/newpatientdialog.cpp \
+        View/bodypartselectionsquare.cpp \
+        Model/patientdata.cpp \
+        Model/anatomicregionelement.cpp
 
 #         Utils/dicomwriter.cpp \
-#        Controller/loginmgr.cpp
+
 
 
 HEADERS += \
@@ -162,22 +160,16 @@ HEADERS += \
         Controller/examinationmgr.h \
         Controller/worklistmgr.h \
         coreapplication.h \
-        startup.h
+        startup.h\
 #       View/dicomtaglist.h \
 #        View/worklistmodel.h \
 #        Utils/dicomwriter.h \
-#        View/newpatientdialog.h\
-#        View/bodypartselectionsquare.h
+        View/newpatientdialog.h\
+        View/bodypartselectionsquare.h\
 #        Model/DICOM_ENUMS.h \
-#        Model/patientdata.h \
-#        Model/anatomicregionelement.h
+        Model/patientdata.h \
+        Model/anatomicregionelement.h
 
-#        ../common/include/idevice.h\
-#        ../common/include/isettingsparser.h \
-#        ../common/include/iconnector.h \
-#        View/rs232connector.h \
-#        View/modbusconnector.h \
-#        Controller/loginmgr.h
 
 FORMS += \
          View/mainwindow.ui \
@@ -188,8 +180,8 @@ FORMS += \
          View/logindialog.ui \
          View/loadimagedialog.ui \
          View/worklistdialog.ui \
-         View/examinationdialog.ui
-#         View/newpatientdialog.ui
+         View/examinationdialog.ui\
+         View/newpatientdialog.ui
 
 RESOURCES += \
     resources.qrc
