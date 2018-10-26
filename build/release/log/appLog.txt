@@ -293,3 +293,14 @@
 [ 2018-10-25 ][ 18:21:15 ] INFO  APPLICATION - load study is started
 [ 2018-10-25 ][ 18:22:31 ] INFO  APPLICATION - loading study is closing
 [ 2018-10-25 ][ 18:22:57 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test/phantom.tiff
+[ 2018-10-26 ][ 08:18:33 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-26 ][ 08:18:38 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-26 ][ 08:18:40 ] INFO  APPLICATION - PACS settings activated
+[ 2018-10-26 ][ 08:18:48 ] INFO  APPLICATION - load study is started
+[ 2018-10-26 ][ 08:18:59 ] INFO  APPLICATION - load study is started
+[ 2018-10-26 ][ 08:19:30 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test/phantom.tiff
+[ 2018-10-26 ][ 09:23:46 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-26 ][ 09:23:51 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-26 ][ 09:24:36 ] INFO  APPLICATION - load study is started
+[ 2018-10-26 ][ 09:24:42 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-26 ][ 09:24:51 ] INFO  APPLICATION - PACS settings activated

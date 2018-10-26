@@ -96,40 +96,39 @@ INCLUDEPATH += ../3rd-Party/ctk/include/ctk-0.1 \
 
 
 SOURCES += \
-        main.cpp \
-        View/loadstudydialog.cpp \
+        main.cpp \        
         Utils/logmgr.cpp \
         Utils/databasemgr.cpp \
         Utils/settingsprovider.cpp \
         Utils/dicomtools.cpp \
+        Model/databaseconnector.cpp \
+        Model/worklistmodel.cpp \
+        Model/worklistquerymodel.cpp \
         View/mainwindow.cpp \
+        View/loadstudydialog.cpp \
+        View/logindialog.cpp \
+        View/worklistserversettingsdialog.cpp \
+        View/pacssettingsdialog.cpp \
+        View/imageviewer.cpp \
+        View/loadImagedialog.cpp \
+        View/worklistdialog.cpp \
+        View/examinationdialog.cpp \
+        Controller/devicemgr.cpp \
+        Controller/loginmgr.cpp \
+        Controller/pacssettingmgr.cpp \
+        Controller/worklistserversettingsmgr.cpp \
+        Controller/loadstudymgr.cpp \
+        Controller/worklistmgr.cpp \
+        Controller/examinationmgr.cpp \
         coreapplication.cpp \
-        startup.cpp\
-         View/logindialog.cpp \
-         Controller/devicemgr.cpp \
-         Controller/loginmgr.cpp \
-         View/worklistserversettingsdialog.cpp \
-         Model/databaseconnector.cpp \
-         Controller/pacssettingmgr.cpp \
-         View/pacssettingsdialog.cpp \
-         Controller/worklistserversettingsmgr.cpp \
-         Controller/loadstudymgr.cpp \
+        startup.cpp
+
+
 #        View/newpatientdialog.cpp \
 #        View/bodypartselectionsquare.cpp \
 #        Model/patientdata.cpp \
 #        Model/anatomicregionelement.cpp\
-         View/imageviewer.cpp \
-    View/loadImagedialog.cpp \
-    Controller/examinationmgr.cpp \
-         View/worklistdialog.cpp \
-    View/examinationdialog.cpp \
-    Model/worklistquerymodel.cpp \
-    Controller/worklistmgr.cpp \
-    Model/worklistmodel.cpp
-#        View/rs232connector.cpp \
-#        View/modbusconnector.cpp \
 
-#        View/worklistmodel.cpp \
 #         Utils/dicomwriter.cpp \
 #        Controller/loginmgr.cpp
 
@@ -141,21 +140,30 @@ HEADERS += \
         Utils/databasemgr.h \
         Utils/dicomtools.h \
         Utils/settingsprovider.h \
+        Utils/displaytool.h \
+        Model/databaseconnector.h \
+        Model/worklisttbl.h \
+        Model/worklistquerymodel.h \
+        Model/worklistmodel.h \
         View/mainwindow.h \
-        coreapplication.h \
+        View/imageviewer.h \
+        View/loadImagedialog.h \
+        View/worklistdialog.h \
         View/loadstudydialog.h\
-         View/worklistserversettingsdialog.h \
-         View/logindialog.h \
-         Controller/devicemgr.h \
-         startup.h \
-         Controller/loginmgr.h \
-         Model/databaseconnector.h \
-         Controller/pacssettingmgr.h \
-         View/pacssettingsdialog.h \
-         Controller/worklistserversettingsmgr.h \
-         Controller/loadstudymgr.h \
-         View/worklistdialog.h \
-#        View/dicomtaglist.h \
+        View/worklistserversettingsdialog.h \
+        View/logindialog.h \
+        View/pacssettingsdialog.h \
+        View/examinationdialog.h \
+        Controller/devicemgr.h \
+        Controller/loginmgr.h \
+        Controller/pacssettingmgr.h \
+        Controller/worklistserversettingsmgr.h \
+        Controller/loadstudymgr.h \
+        Controller/examinationmgr.h \
+        Controller/worklistmgr.h \
+        coreapplication.h \
+        startup.h
+#       View/dicomtaglist.h \
 #        View/worklistmodel.h \
 #        Utils/dicomwriter.h \
 #        View/newpatientdialog.h\
@@ -163,15 +171,7 @@ HEADERS += \
 #        Model/DICOM_ENUMS.h \
 #        Model/patientdata.h \
 #        Model/anatomicregionelement.h
-         View/imageviewer.h \
-    View/loadImagedialog.h \
-    Utils/displaytool.h \
-    View/examinationdialog.h \
-    Controller/examinationmgr.h \
-    Model/worklisttbl.h \
-    Model/worklistquerymodel.h \
-    Controller/worklistmgr.h \
-    Model/worklistmodel.h
+
 #        ../common/include/idevice.h\
 #        ../common/include/isettingsparser.h \
 #        ../common/include/iconnector.h \
@@ -184,13 +184,12 @@ FORMS += \
          View/loadstudydialog.ui \
          View/worklistserversettingsdialog.ui \
          View/pacssettingsdialog.ui \
-#         View/newpatientdialog.ui
          View/imageviewer.ui \
          View/logindialog.ui \
          View/loadimagedialog.ui \
          View/worklistdialog.ui \
          View/examinationdialog.ui
-
+#         View/newpatientdialog.ui
 
 RESOURCES += \
     resources.qrc
