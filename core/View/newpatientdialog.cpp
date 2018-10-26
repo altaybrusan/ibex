@@ -243,7 +243,7 @@ void NewPatientDialog::on_patientIdLineEdit_editingFinished()
 
 void NewPatientDialog::on_dateEdit_editingFinished()
 {
-    demographics[DemographyKeys::DOB]=ui->dateEdit->date().toString(Qt::ISODate);
+//    demographics[DemographyKeys::DOB]=ui->dateEdit->date().toString(Qt::ISODate);
 
 }
 

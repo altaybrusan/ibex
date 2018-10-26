@@ -60,8 +60,6 @@ private:
     QStringList _selectedBodyPartList;
     int _numberOfselectedBodyParts;
     BodyPartSelectionSquare* _temp;
-
-
     QValidator *validator;
 };
 

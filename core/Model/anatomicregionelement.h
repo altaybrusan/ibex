@@ -9,15 +9,17 @@ class AnatomicRegionElement : public QObject
 
 public:
     explicit AnatomicRegionElement(QObject *parent = nullptr);
-
-
-    void SetBodyPart(iBEX::BODY_PART );
+    AnatomicRegionElement(const AnatomicRegionElement &lhs);
+    AnatomicRegionElement &operator=(const AnatomicRegionElement &lhs);
+    bool operator==(const AnatomicRegionElement &lhs);
+    void SetBodyPart(iBEX::BODY_PART part);
     void SetCodeValue(QString code);
     void setCodeMeaning(QString meaning);
 
-    iBEX::BODY_PART GetBodyPart();
-    QString GetCodeValue();
-    QString GetCodeMeaning();
+
+    iBEX::BODY_PART GetBodyPart() const;
+    QString GetCodeValue() const;
+    QString GetCodeMeaning() const;
 
 signals:
 

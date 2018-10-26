@@ -121,11 +121,11 @@ SOURCES += \
         Controller/worklistmgr.cpp \
         Controller/examinationmgr.cpp \
         coreapplication.cpp \
-        startup.cpp
-#        View/newpatientdialog.cpp \
-#        View/bodypartselectionsquare.cpp \
-#        Model/patientdata.cpp \
-#        Model/anatomicregionelement.cpp
+        startup.cpp\
+        View/newpatientdialog.cpp \
+        View/bodypartselectionsquare.cpp \
+        Model/anatomicregionelement.cpp \
+    Model/registrationformmodel.cpp
 
 #         Utils/dicomwriter.cpp \
 
@@ -160,16 +160,15 @@ HEADERS += \
         Controller/examinationmgr.h \
         Controller/worklistmgr.h \
         coreapplication.h \
-        startup.h
+        startup.h\
 #       View/dicomtaglist.h \
 #        View/worklistmodel.h \
 #        Utils/dicomwriter.h \
 #        Model/DICOM_ENUMS.h \
-
-#        View/newpatientdialog.h\
-#        View/bodypartselectionsquare.h\
-#        Model/patientdata.h \
-#        Model/anatomicregionelement.h
+        View/newpatientdialog.h\
+        View/bodypartselectionsquare.h\
+        Model/anatomicregionelement.h \
+    Model/registrationformmodel.h
 
 
 FORMS += \
@@ -181,8 +180,8 @@ FORMS += \
          View/logindialog.ui \
          View/loadimagedialog.ui \
          View/worklistdialog.ui \
-         View/examinationdialog.ui
-#         View/newpatientdialog.ui
+         View/examinationdialog.ui\
+         View/newpatientdialog.ui
 
 RESOURCES += \
     resources.qrc

@@ -4,11 +4,11 @@
 #include <QObject>
 #include <Model/anatomicregionelement.h>
 
-class PatientData : public QObject
+class RegistrationFormModel : public QObject
 {
     Q_OBJECT
 public:
-    explicit PatientData(QObject *parent = nullptr);
+    explicit RegistrationFormModel(QObject *parent = nullptr);
     void AddNewAnatomicRegion(AnatomicRegionElement region);
     void RemoveAnatomicRegion(AnatomicRegionElement region);
 signals:
