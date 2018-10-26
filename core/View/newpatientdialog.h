@@ -26,7 +26,7 @@ public:
 
 private slots:
     void OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart,bool isSelected);
-    void ActivateOkBtn();
+    void RefreshOkBtn();
     void on_buttonBox_accepted();
 
     void on_lastNameLineEdit_editingFinished();
