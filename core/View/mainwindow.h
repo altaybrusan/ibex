@@ -28,7 +28,7 @@ signals:
     void NotifyWorklistLoadIsTriggered();
 
 private slots:
-    void on_actionNewStudytriggered();
+
     //void on_actionUpdatePACSServerSettingstriggered();
 //    void on_newPatient_accepted();
 //    void on_Patient_selected(QSqlRecord record);
@@ -41,6 +41,8 @@ private slots:
     void on_action_Quick_Start_triggered();
 
     void on_action_Select_triggered();
+
+    void on_action_New_Study_triggered();
 
 protected:
     void showEvent( QShowEvent* event ) override;

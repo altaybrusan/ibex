@@ -11,18 +11,18 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-//    // prevent from leading space.
+    // prevent from leading space.
 
-//    QRegExp rx("^(?!\\s*$).+");
-//    validator = new QRegExpValidator(rx, this);
-//    ui->admissionNumberLineEdit->setValidator(validator);
-//    ui->patientIdLineEdit->setValidator(validator);
-//    ui->lastNameLineEdit->setValidator(validator);
+    QRegExp rx("^(?!\\s*$).+");
+    validator = new QRegExpValidator(rx, this);
+    ui->admissionNumberLineEdit->setValidator(validator);
+    ui->patientIdLineEdit->setValidator(validator);
+    ui->lastNameLineEdit->setValidator(validator);
 
-//    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( false );
-//    connect(ui->lastNameLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
-//    connect(ui->patientIdLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
-//    connect(ui->accessionNumberLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( false );
+    connect(ui->lastNameLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
+    connect(ui->patientIdLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
+    connect(ui->accessionNumberLineEdit,SIGNAL(textChanged(QString)),this,SLOT(ActivateOkBtn()));
 
 //    scene = new QGraphicsScene(this);
 //    QImage sourceImage;

@@ -46,13 +46,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_actionNewStudytriggered()
-{
-
-//    _dialog->setModal(true);
-//    _dialog->show();
-
-}
 
 //void MainWindow::on_newPatient_accepted()
 //{
@@ -205,4 +198,9 @@ void MainWindow::on_action_Quick_Start_triggered()
 void MainWindow::on_action_Select_triggered()
 {
     emit NotifyWorklistLoadIsTriggered();
+}
+
+void MainWindow::on_action_New_Study_triggered()
+{
+    emit NotifyNewStudyWorkFlowIsTriggered();
 }

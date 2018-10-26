@@ -125,7 +125,8 @@ SOURCES += \
         View/newpatientdialog.cpp \
         View/bodypartselectionsquare.cpp \
         Model/anatomicregionelement.cpp \
-    Model/registrationformmodel.cpp
+    Model/registrationformmodel.cpp \
+    Controller/newpatientmgr.cpp
 
 #         Utils/dicomwriter.cpp \
 
@@ -168,7 +169,8 @@ HEADERS += \
         View/newpatientdialog.h\
         View/bodypartselectionsquare.h\
         Model/anatomicregionelement.h \
-    Model/registrationformmodel.h
+    Model/registrationformmodel.h \
+    Controller/newpatientmgr.h
 
 
 FORMS += \

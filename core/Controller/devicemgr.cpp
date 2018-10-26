@@ -1,5 +1,4 @@
 #include "devicemgr.h"
-#include <QDebug>
 #include "Utils/logmgr.h"
 #include <QApplication>
 
@@ -10,7 +9,8 @@ DeviceMgr::DeviceMgr(QObject *parent,
                      WorklistServerSettingsMgr &worklistdialogMgr,
                      LoadStudyMgr &loadStudyMgr,
                      ExaminationMgr &examinationMgr,
-                     WorklistMgr& worklistMgr) :
+                     WorklistMgr& worklistMgr,
+                     NewPatientMgr &newpatientMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
     m_loadStudyMgr(loadStudyMgr),
@@ -18,6 +18,7 @@ DeviceMgr::DeviceMgr(QObject *parent,
     m_pacsSettingsMgr(pacsSettingsMgr),
     m_worklisSettingstMgr(worklistdialogMgr),
     m_examinationMgr(examinationMgr),
+    m_newPatientMgr(newpatientMgr),
     m_worklistMgr(worklistMgr)
 {
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
@@ -37,6 +38,7 @@ void DeviceMgr::WireConnections()
   connect(&m_mainWindow,&MainWindow::NotifyLoadStudyIsTriggered,&m_loadStudyMgr,&LoadStudyMgr::OnActivateLoadingStudy);
   connect(&m_mainWindow,&MainWindow::NotifyWorklistLoadIsTriggered,&m_worklistMgr,&WorklistMgr::OnActivateWorklistDialog);
   connect(&m_mainWindow,&MainWindow::NotifyQuickStudyWorkFlowIsTriggered,&m_examinationMgr,&ExaminationMgr::OnActivateExamination);
+  connect(&m_mainWindow,&MainWindow::NotifyNewStudyWorkFlowIsTriggered,&m_newPatientMgr,&NewPatientMgr::OnActivateNewPatientDialog);
 }
 
 void DeviceMgr::ShutdownDevice()

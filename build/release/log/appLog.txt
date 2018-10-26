@@ -309,3 +309,9 @@
 [ 2018-10-26 ][ 10:16:45 ] INFO  APPLICATION - PACS settings activated
 [ 2018-10-26 ][ 10:16:55 ] DEBUG APPLICATION - examination workflow is started.
 [ 2018-10-26 ][ 10:16:58 ] INFO  APPLICATION - load study is started
+[ 2018-10-26 ][ 16:53:04 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-26 ][ 16:53:07 ] INFO  APPLICATION - log in process is cancelled.
+[ 2018-10-26 ][ 17:02:27 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-26 ][ 17:02:31 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-26 ][ 18:59:49 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-26 ][ 18:59:54 ] INFO  APPLICATION -  app successfully signed in

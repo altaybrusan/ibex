@@ -116,8 +116,8 @@ QString RegistrationFormModel::GetAccessionNumber()
     return m_accession;
 }
 
-//QList<AnatomicRegionElement> RegistrationFormModel::GetAnatomicRegionList()
-//{
-//    return m_anatomicRegionList;
-//}
+QList<AnatomicRegionElement> RegistrationFormModel::GetAnatomicRegionList()
+{
+    return m_anatomicRegionList;
+}
 
