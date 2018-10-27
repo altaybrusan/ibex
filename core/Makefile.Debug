@@ -15774,7 +15774,34 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDateTime \
 		Utils/dicomtools.h \
 		Model/registrationformmodel.h \
-		Model/anatomicregionelement.h
+		Model/anatomicregionelement.h \
+		Utils/logmgr.h \
+		../log4qt/consoleappender.h \
+		../log4qt/writerappender.h \
+		../log4qt/appenderskeleton.h \
+		../log4qt/appender.h \
+		../log4qt/helpers/logobject.h \
+		../log4qt/helpers/classlogger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicInt \
+		../log4qt/helpers/logobjectptr.h \
+		../log4qt/logger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QReadWriteLock \
+		../log4qt/helpers/logerror.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		../log4qt/level.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
+		../log4qt/log4qt.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMutex \
+		../log4qt/fileappender.h \
+		../log4qt/rollingfileappender.h \
+		../log4qt/loggerrepository.h \
+		../log4qt/logmanager.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QHash \
+		../log4qt/patternlayout.h \
+		../log4qt/layout.h \
+		../log4qt/ttcclayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\newpatientdialog.obj View\newpatientdialog.cpp
 
 ..\build\debug\.obj\bodypartselectionsquare.obj: View\bodypartselectionsquare.cpp View/bodypartselectionsquare.h \
@@ -16370,7 +16397,34 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPainter \
 		Model\DICOM_ENUMS.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaEnum
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaEnum \
+		Utils/logmgr.h \
+		../log4qt/consoleappender.h \
+		../log4qt/writerappender.h \
+		../log4qt/appenderskeleton.h \
+		../log4qt/appender.h \
+		../log4qt/helpers/logobject.h \
+		../log4qt/helpers/classlogger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicInt \
+		../log4qt/helpers/logobjectptr.h \
+		../log4qt/logger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QReadWriteLock \
+		../log4qt/helpers/logerror.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		../log4qt/level.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
+		../log4qt/log4qt.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMutex \
+		../log4qt/fileappender.h \
+		../log4qt/rollingfileappender.h \
+		../log4qt/loggerrepository.h \
+		../log4qt/logmanager.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QHash \
+		../log4qt/patternlayout.h \
+		../log4qt/layout.h \
+		../log4qt/ttcclayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\newpatientmgr.obj Controller\newpatientmgr.cpp
 
 ..\build\debug\.obj\qrc_resources.obj: ..\build\debug\.rcc\qrc_resources.cpp 

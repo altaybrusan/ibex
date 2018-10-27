@@ -5,6 +5,7 @@
 #include <QDateTime>
 #include "Utils/dicomtools.h"
 #include "Model/registrationformmodel.h"
+#include "Utils/logmgr.h"
 
 NewPatientDialog::NewPatientDialog(QWidget *parent) :
     QDialog(parent),
@@ -123,18 +124,9 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
 
 void NewPatientDialog::SetFormModel(RegistrationFormModel &formModel)
 {
-//    m_model= &formModel;
+    m_model= &formModel;
 }
 
-//QString NewPatientDialog::GetPatientInfo(NewPatientDialog::DemographyKeys field)
-//{
-//    return demographics.value(field);
-//}
-
-//QStringList NewPatientDialog::GetSelectedProceduresList()
-//{
-//    return _selectedBodyPartList;
-//}
 
 NewPatientDialog::~NewPatientDialog()
 {
@@ -175,6 +167,7 @@ void NewPatientDialog::RefreshOkBtn()
         m_model->UpdateReferringPhysician(ui->referringPhysicianLineEdit->text());
         m_model->UpdateAdmissionNumber(ui->admissionNumberLineEdit->text());
         m_model->UpdateAccessionNumber(ui->accessionNumberLineEdit->text());
+        LogMgr::instance()->LogSysDebug(tr("NewPatientFormModel is updated."));
 
     }
 
@@ -182,23 +175,30 @@ void NewPatientDialog::RefreshOkBtn()
 // when a click on a body part scene happens this SLOT is called multiple times.
 void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool isSelected)
 {
-//    QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
-//    QString bodyPartStr(metaEnum.valueToKey(static_cast<int>(bodyPart)));
-
-//    if(isSelected)
-//    {
-//        if(!_selectedBodyPartList.contains(bodyPartStr))
-//        {
-//            _selectedBodyPartList.append(bodyPartStr);
-//        }
-//    }
-//    else
-//    {
-//        if(_selectedBodyPartList.contains(bodyPartStr))
-//        {
-//            _selectedBodyPartList.removeAll(bodyPartStr);
-//        }
-//    }
+    QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
+    QString bodyPartStr(metaEnum.valueToKey(static_cast<int>(bodyPart)));
+    AnatomicRegionElement _element;
+    _element.SetBodyPart(bodyPart);
+    _element.setCodeMeaning(bodyPartStr);
+    //_element.setCodeMeaning(...);
+    if(isSelected)
+    {
+        if(!m_model->IsContainRegion(_element))
+        {
+            m_model->AppendRegion(_element);
+        }
+    }
+    else
+    {
+        if(m_model->IsContainRegion(_element))
+        {
+            m_model->AppendRegion(_element);
+        }
+        if(_selectedBodyPartList.contains(bodyPartStr))
+        {
+            _selectedBodyPartList.removeAll(bodyPartStr);
+        }
+    }
 
 //    if(_numberOfselectedBodyParts != _selectedBodyPartList.count())
 //    {

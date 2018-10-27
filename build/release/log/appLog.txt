@@ -367,3 +367,8 @@
 [ 2018-10-27 ][ 13:00:04 ] DEBUG APPLICATION - examination workflow is started.
 [ 2018-10-27 ][ 13:00:18 ] INFO  APPLICATION - PACS settings activated
 [ 2018-10-27 ][ 13:00:40 ] INFO  APPLICATION - load study is started
+[ 2018-10-27 ][ 13:05:40 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-27 ][ 13:05:46 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-27 ][ 13:11:41 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-27 ][ 13:11:45 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-27 ][ 13:11:48 ] INFO  APPLICATION - new patient registration workflow is started

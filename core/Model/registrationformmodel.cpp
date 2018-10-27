@@ -126,6 +126,11 @@ void RegistrationFormModel::RemoveRegion(AnatomicRegionElement &element)
     m_anatomicRegionList.removeOne(element);
 }
 
+bool RegistrationFormModel::IsContainRegion(AnatomicRegionElement &element)
+{
+    return m_anatomicRegionList.contains(element);
+}
+
 QList<AnatomicRegionElement> RegistrationFormModel::GetAnatomicRegionList()
 {
     return m_anatomicRegionList;

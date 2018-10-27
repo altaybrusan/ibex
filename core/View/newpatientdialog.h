@@ -20,8 +20,6 @@ class NewPatientDialog : public QDialog
 public:
     explicit NewPatientDialog(QWidget *parent);
     void SetFormModel(RegistrationFormModel& formModel);
-    //QString GetPatientInfo(NewPatientDialog::DemographyKeys field);
-    //QStringList GetSelectedProceduresList();
     ~NewPatientDialog();
 
 private slots:
