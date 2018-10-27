@@ -1,13 +1,18 @@
 #include "registrationformmodel.h"
+#include "Model/anatomicregionelement.h"
+#include "Utils/logmgr.h"
 
 RegistrationFormModel::RegistrationFormModel(QObject *parent) : QObject(parent)
 {
     
 }
 
-void RegistrationFormModel::AddNewAnatomicRegion(AnatomicRegionElement region)
+void RegistrationFormModel::AddNewAnatomicRegion(AnatomicRegionElement& region)
 {
-
+    QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
+    iBEX::BODY_PART _part= region.GetBodyPart();
+    QString bodyPartStr(metaEnum.valueToKey(static_cast<int>(_part)));
+    LogMgr::instance()->LogSysInfo("New Anatomic Region is added: "+bodyPartStr);
     m_anatomicRegionList.append(region);
 }
 
@@ -128,6 +133,8 @@ void RegistrationFormModel::RemoveRegion(AnatomicRegionElement &element)
 
 bool RegistrationFormModel::IsContainRegion(AnatomicRegionElement &element)
 {
+    QString val = m_anatomicRegionList.contains(element)?"true":"false";
+    LogMgr::instance()->LogSysDebug(">>>CONTAINS:"+val);
     return m_anatomicRegionList.contains(element);
 }
 

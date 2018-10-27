@@ -20,6 +20,7 @@ class NewPatientDialog : public QDialog
 public:
     explicit NewPatientDialog(QWidget *parent);
     void SetFormModel(RegistrationFormModel& formModel);
+    void WireConnections();
     ~NewPatientDialog();
 
 private slots:

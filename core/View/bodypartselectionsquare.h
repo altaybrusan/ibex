@@ -9,6 +9,7 @@
 class BodyPartSelectionSquare : public QObject,public QGraphicsItem
 {
     Q_OBJECT
+
 public:
     explicit BodyPartSelectionSquare(int x,
                                      int y,

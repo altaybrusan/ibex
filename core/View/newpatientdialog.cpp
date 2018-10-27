@@ -1,11 +1,18 @@
 #include "newpatientdialog.h"
 #include "ui_newpatientdialog.h"
+
+
 #include <QRegExpValidator>
 #include <QPushButton>
 #include <QDateTime>
+#include <QMetaEnum>
+
+
 #include "Utils/dicomtools.h"
 #include "Model/registrationformmodel.h"
 #include "Utils/logmgr.h"
+#include "Model/DICOM_ENUMS.h"
+
 
 NewPatientDialog::NewPatientDialog(QWidget *parent) :
     QDialog(parent),
@@ -104,7 +111,6 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     scene->addItem(wrist);
     scene->addItem(shoulder);
     scene->addItem(elbow);
-
     foreach (auto item, scene->items()) {
 
         _temp = nullptr;
@@ -113,9 +119,10 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
         if(_temp)
         {
             connect(_temp,
-                    SIGNAL(NotifyBodyPartIsStatusChanged(iBEX::BODY_PART,bool)),
-                    this,
-                    SLOT(OnBodyPartStatusChanged(iBEX::BODY_PART,bool)));
+            &BodyPartSelectionSquare::NotifyBodyPartSelectionChanged,
+            this, &NewPatientDialog::OnBodyPartStatusChanged);
+           //SIGNAL(NotifyBodyPartIsStatusChanged(iBEX::BODY_PART,bool))
+           //SLOT(OnBodyPartStatusChanged(iBEX::BODY_PART,bool))
         }
     }
 
@@ -125,6 +132,11 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
 void NewPatientDialog::SetFormModel(RegistrationFormModel &formModel)
 {
     m_model= &formModel;
+}
+
+void NewPatientDialog::WireConnections()
+{
+
 }
 
 
@@ -176,7 +188,9 @@ void NewPatientDialog::RefreshOkBtn()
 void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool isSelected)
 {
     QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
-    QString bodyPartStr(metaEnum.valueToKey(static_cast<int>(bodyPart)));
+    QString bodyPartStr= QString::fromUtf8(metaEnum.valueToKey(static_cast<int>(bodyPart)));
+    LogMgr::instance()->LogSysDebug(">>> [ "+bodyPartStr+" ] .");
+
     AnatomicRegionElement _element;
     _element.SetBodyPart(bodyPart);
     _element.setCodeMeaning(bodyPartStr);

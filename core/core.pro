@@ -165,7 +165,7 @@ HEADERS += \
 #       View/dicomtaglist.h \
 #        View/worklistmodel.h \
 #        Utils/dicomwriter.h \
-#        Model/DICOM_ENUMS.h \
+        Model/DICOM_ENUMS.h \
         View/newpatientdialog.h\
         View/bodypartselectionsquare.h\
         Model/anatomicregionelement.h \

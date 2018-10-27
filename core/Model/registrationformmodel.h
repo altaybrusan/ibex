@@ -9,7 +9,7 @@ class RegistrationFormModel : public QObject
     Q_OBJECT
 public:
     explicit RegistrationFormModel(QObject *parent = nullptr);
-    void AddNewAnatomicRegion(AnatomicRegionElement region);
+    void AddNewAnatomicRegion(AnatomicRegionElement &region);
     void RemoveAnatomicRegion(AnatomicRegionElement region);
 signals:
 
