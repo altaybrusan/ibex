@@ -192,11 +192,7 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool is
     {
         if(m_model->IsContainRegion(_element))
         {
-            m_model->AppendRegion(_element);
-        }
-        if(_selectedBodyPartList.contains(bodyPartStr))
-        {
-            _selectedBodyPartList.removeAll(bodyPartStr);
+            m_model->RemoveRegion(_element);
         }
     }
 

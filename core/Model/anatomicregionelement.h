@@ -9,7 +9,7 @@ class AnatomicRegionElement : public QObject
 
 public:
     explicit AnatomicRegionElement(QObject *parent = nullptr);
-    AnatomicRegionElement(const AnatomicRegionElement &lhs);
+    AnatomicRegionElement(const AnatomicRegionElement &region);
     AnatomicRegionElement &operator=(const AnatomicRegionElement &lhs);
     bool operator==(const AnatomicRegionElement &lhs);
     void SetBodyPart(iBEX::BODY_PART part);

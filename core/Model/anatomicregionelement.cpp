@@ -5,11 +5,11 @@ AnatomicRegionElement::AnatomicRegionElement(QObject *parent) : QObject(parent)
 
 }
 
-AnatomicRegionElement::AnatomicRegionElement(const AnatomicRegionElement &lhs)
+AnatomicRegionElement::AnatomicRegionElement(const AnatomicRegionElement &region)
 {
-    m_bodyPart = lhs.GetBodyPart();
-    m_codeValue = lhs.GetCodeValue();
-    m_codeMeaning = lhs.GetCodeMeaning();
+    m_bodyPart = region.GetBodyPart();
+    m_codeValue = region.GetCodeValue();
+    m_codeMeaning = region.GetCodeMeaning();
 }
 
 AnatomicRegionElement &AnatomicRegionElement::operator=(const AnatomicRegionElement &lhs)
@@ -24,7 +24,6 @@ AnatomicRegionElement &AnatomicRegionElement::operator=(const AnatomicRegionElem
 bool AnatomicRegionElement::operator==(const AnatomicRegionElement &lhs)
 {
    return m_bodyPart == lhs.GetBodyPart();
-
 }
 
 void AnatomicRegionElement::SetBodyPart(iBEX::BODY_PART part)
