@@ -34,6 +34,9 @@ public slots:
     QString GetAdmissionNumber();
     QString GetAccessionNumber();
 
+    void AppendRegion(AnatomicRegionElement& element);
+    void RemoveRegion(AnatomicRegionElement& element);
+
     QList<AnatomicRegionElement> GetAnatomicRegionList();
 
 private:

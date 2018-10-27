@@ -4,6 +4,7 @@
 #include <QPushButton>
 #include <QDateTime>
 #include "Utils/dicomtools.h"
+#include "Model/registrationformmodel.h"
 
 NewPatientDialog::NewPatientDialog(QWidget *parent) :
     QDialog(parent),
@@ -117,7 +118,12 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
         }
     }
 
-//    ui->accessionNumberLineEdit->setText(DicomTools::GenerateAccessionNumber());
+    ui->accessionNumberLineEdit->setText(DicomTools::GenerateAccessionNumber());
+}
+
+void NewPatientDialog::SetFormModel(RegistrationFormModel &formModel)
+{
+//    m_model= &formModel;
 }
 
 //QString NewPatientDialog::GetPatientInfo(NewPatientDialog::DemographyKeys field)
@@ -144,28 +150,33 @@ void NewPatientDialog::RefreshOkBtn()
     else
         ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled( false );
 
-//    demographics[DemographyKeys::LastName]=ui->lastNameLineEdit->text();
-//        demographics[DemographyKeys::FirstName]=ui->firstNameLineEdit->text();
-//        demographics[DemographyKeys::MiddleName]=ui->middleNameLineEdit->text();
-//        demographics[DemographyKeys::PatientID]=ui->patientIdLineEdit->text();
-//        demographics[DemographyKeys::DOB]=ui->dateEdit->date().toString(Qt::ISODate);
+    // protect against nullptr during construction time
+    if(m_model!= nullptr)
+    {
+        m_model->UpdatePatientFirstName(ui->lastNameLineEdit->text());
+        m_model->UpdatePatientLastName(ui->firstNameLineEdit->text());
+        m_model->UpdatePatientMiddleName(ui->middleNameLineEdit->text());
+        m_model->UpdatePatientId(ui->patientIdLineEdit->text());
+        m_model->UpdatePatientDOB(ui->dateEdit->date().toString(Qt::ISODate));
 
-//        switch(ui->genderComboBox->currentIndex())
-//        {
-//        case 0:
-//            demographics[DemographyKeys::Gender] = "M";
-//            break;
-//        case 1:
-//            demographics[DemographyKeys::Gender] = "F";
-//            break;
-//        case 2:
-//            demographics[DemographyKeys::Gender] = "U";
-//            break;
-//        }
+        switch(ui->genderComboBox->currentIndex())
+        {
+        case 0:
+            m_model->UpdatePatientGender("M");
+            break;
+        case 1:
+            m_model->UpdatePatientGender("F");
+            break;
+        case 2:
+            m_model->UpdatePatientGender("U");
+            break;
+        }
 
-//        demographics[DemographyKeys::ReferrinPhysician]= ui->referringPhysicianLineEdit->text();
-//        demographics[DemographyKeys::AdmissionNumber]= ui->admissionNumberLineEdit->text();
-//        demographics[DemographyKeys::AccessionNumber]= ui->accessionNumberLineEdit->text();
+        m_model->UpdateReferringPhysician(ui->referringPhysicianLineEdit->text());
+        m_model->UpdateAdmissionNumber(ui->admissionNumberLineEdit->text());
+        m_model->UpdateAccessionNumber(ui->accessionNumberLineEdit->text());
+
+    }
 
 }
 // when a click on a body part scene happens this SLOT is called multiple times.

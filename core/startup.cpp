@@ -19,6 +19,7 @@
 #include "Controller/worklistmgr.h"
 #include "View/newpatientdialog.h"
 #include "Controller/newpatientmgr.h"
+#include "Model/registrationformmodel.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -45,7 +46,8 @@ Startup::Startup() : QObject(nullptr),
     m_worklistMdl(*new WorklistModel(nullptr)),
     m_worklistMgr(*new WorklistMgr(nullptr,m_worklistDlg,m_worklistMdl,WRKLST_SETTING_FILE)),
     m_newPatientDlg(*new NewPatientDialog(nullptr)),
-    m_newPatientMgr(*new NewPatientMgr(nullptr,m_newPatientDlg)),
+    m_registrationFormModel(*new RegistrationFormModel(nullptr)),
+    m_newPatientMgr(*new NewPatientMgr(nullptr,m_newPatientDlg,m_registrationFormModel)),
     m_device(*new DeviceMgr(nullptr,m_mainWindow,
                             m_loginMgr,
                             m_pacsSettingsMgr,
@@ -102,11 +104,11 @@ Startup::Startup() : QObject(nullptr),
       m_worklistMdl.SetDatabase(m_dbConnector.GetDatabase());
       m_worklistMgr.setParent(this);
 
-      m_newPatientDlg.setParent(&m_mainWindow);
-      m_newPatientDlg.setWindowFlag( Qt::Window,true);
-      m_newPatientDlg.setModal(true);
-      m_newPatientDlg.setWindowTitle("Register New Patient Dialog");
-      m_newPatientMgr.setParent(this);
+//      m_newPatientDlg.setParent(&m_mainWindow);
+//      m_newPatientDlg.setWindowFlag( Qt::Window,true);
+//      m_newPatientDlg.setModal(true);
+//      m_newPatientDlg.setWindowTitle("Register New Patient Dialog");
+//      m_newPatientMgr.setParent(this);
 
       m_device.setParent(this);
       m_device.WireConnections();

@@ -15425,6 +15425,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\QPainter \
 		Model\DICOM_ENUMS.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaEnum \
+		Model/registrationformmodel.h \
+		Model/anatomicregionelement.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QDomNode \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
@@ -15770,7 +15772,9 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractbutton.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDateTime \
-		Utils/dicomtools.h
+		Utils/dicomtools.h \
+		Model/registrationformmodel.h \
+		Model/anatomicregionelement.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\newpatientdialog.obj View\newpatientdialog.cpp
 
 ..\build\debug\.obj\bodypartselectionsquare.obj: View\bodypartselectionsquare.cpp View/bodypartselectionsquare.h \

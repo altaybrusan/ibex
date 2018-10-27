@@ -20,6 +20,7 @@ class WorklistDialog;
 class WorklistModel;
 class NewPatientDialog;
 class NewPatientMgr;
+class RegistrationFormModel;
 
 class Startup : public QObject
 {
@@ -47,6 +48,7 @@ private:
     WorklistDialog& m_worklistDlg;
     WorklistMgr& m_worklistMgr;
     NewPatientDialog& m_newPatientDlg;
+    RegistrationFormModel& m_registrationFormModel;
     NewPatientMgr& m_newPatientMgr;
     DeviceMgr& m_device;
 

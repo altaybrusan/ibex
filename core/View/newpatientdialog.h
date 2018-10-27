@@ -12,14 +12,14 @@
 namespace Ui {
     class NewPatientDialog;
 }
-
+class RegistrationFormModel;
 class NewPatientDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit NewPatientDialog(QWidget *parent = 0);
- 
+    explicit NewPatientDialog(QWidget *parent);
+    void SetFormModel(RegistrationFormModel& formModel);
     //QString GetPatientInfo(NewPatientDialog::DemographyKeys field);
     //QStringList GetSelectedProceduresList();
     ~NewPatientDialog();
@@ -50,7 +50,9 @@ private slots:
 
 
 private:
+
     Ui::NewPatientDialog *ui;
+
     QGraphicsScene* scene;
     QGraphicsEllipseItem* ellipse;
     BodyPartSelectionSquare *head,*thorax,
@@ -59,8 +61,9 @@ private:
 
     QStringList _selectedBodyPartList;
     int _numberOfselectedBodyParts;
-    BodyPartSelectionSquare* _temp;
+    BodyPartSelectionSquare* _temp;    
     QValidator *validator;
+    RegistrationFormModel* m_model=nullptr;
 };
 
 

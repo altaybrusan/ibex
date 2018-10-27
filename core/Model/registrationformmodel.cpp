@@ -116,6 +116,16 @@ QString RegistrationFormModel::GetAccessionNumber()
     return m_accession;
 }
 
+void RegistrationFormModel::AppendRegion(AnatomicRegionElement &element)
+{
+    m_anatomicRegionList.append(element);
+}
+
+void RegistrationFormModel::RemoveRegion(AnatomicRegionElement &element)
+{
+    m_anatomicRegionList.removeOne(element);
+}
+
 QList<AnatomicRegionElement> RegistrationFormModel::GetAnatomicRegionList()
 {
     return m_anatomicRegionList;
