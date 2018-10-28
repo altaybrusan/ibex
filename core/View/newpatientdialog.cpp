@@ -21,7 +21,6 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     ui->setupUi(this);
 
     // prevent from leading space.
-
     QRegExp rx("^(?!\\s*$).+");
     validator = new QRegExpValidator(rx, this);
     ui->admissionNumberLineEdit->setValidator(validator);
@@ -168,19 +167,9 @@ void NewPatientDialog::RefreshOkBtn()
         m_model->UpdatePatientId(ui->patientIdLineEdit->text());
         m_model->UpdatePatientDOB(ui->dateEdit->date().toString(Qt::ISODate));
 
-        switch(ui->genderComboBox->currentIndex())
-        {
-        case 0:
-            m_model->UpdatePatientGender("M");
-            break;
-        case 1:
-            m_model->UpdatePatientGender("F");
-            break;
-        case 2:
-            m_model->UpdatePatientGender("U");
-            break;
-        }
-
+        QMetaEnum _metaEnum =QMetaEnum::fromType<iBEX::GENDER>();
+        QString _genderStr = QString::fromUtf8(_metaEnum.valueToKey(ui->genderComboBox->currentIndex()));
+        m_model->UpdatePatientGender(_genderStr);
         m_model->UpdateReferringPhysician(ui->referringPhysicianLineEdit->text());
         m_model->UpdateAdmissionNumber(ui->admissionNumberLineEdit->text());
         m_model->UpdateAccessionNumber(ui->accessionNumberLineEdit->text());
@@ -215,9 +204,6 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool is
     }
 
 }
-
-
-
 
 void NewPatientDialog::on_buttonBox_accepted()
 {

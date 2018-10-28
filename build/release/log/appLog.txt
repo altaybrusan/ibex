@@ -533,3 +533,14 @@
 [ 2018-10-28 ][ 10:42:57 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-10-28 ][ 10:42:58 ] INFO  APPLICATION - new patient registration workflow is started
 [ 2018-10-28 ][ 10:44:18 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-28 ][ 10:46:02 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 10:46:29 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 10:47:00 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 10:47:21 ] INFO  APPLICATION - load study is started
+[ 2018-10-28 ][ 11:00:03 ] INFO  APPLICATION - PACS settings activated
+[ 2018-10-28 ][ 11:00:09 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-28 ][ 11:00:31 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test/phantom.tiff
+[ 2018-10-28 ][ 11:34:02 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 11:34:08 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 11:34:10 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-28 ][ 11:34:17 ] INFO  APPLICATION - the patient registration form is completed
