@@ -37,6 +37,7 @@ public slots:
     void AppendRegion(AnatomicRegionElement& element);
     void RemoveRegion(AnatomicRegionElement& element);
     bool IsContainRegion(AnatomicRegionElement& element);
+    void ClearForm();
 
     QList<AnatomicRegionElement> GetAnatomicRegionList();
 

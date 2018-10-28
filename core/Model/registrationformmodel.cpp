@@ -142,7 +142,23 @@ bool RegistrationFormModel::IsContainRegion(AnatomicRegionElement &element)
 //        QString val = m_anatomicRegionList.contains(element)?"true":"false";
 //        LogMgr::instance()->LogSysDebug(">>>CONTAINS:"+val);
 //    }
-     return m_anatomicRegionList.contains(element);
+    return m_anatomicRegionList.contains(element);
+}
+
+void RegistrationFormModel::ClearForm()
+{
+    m_name="";
+    m_lastName="";
+    m_middleName="";
+    m_id="";
+    m_dob="";
+    m_gender="";
+    m_physician="";
+    m_admission="";
+    m_accession="";
+    m_anatomicRegionList.clear();
+
+
 }
 
 QList<AnatomicRegionElement> RegistrationFormModel::GetAnatomicRegionList()

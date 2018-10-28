@@ -544,3 +544,17 @@
 [ 2018-10-28 ][ 11:34:08 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-10-28 ][ 11:34:10 ] INFO  APPLICATION - new patient registration workflow is started
 [ 2018-10-28 ][ 11:34:17 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-10-28 ][ 11:39:40 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 11:39:47 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 11:39:49 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-28 ][ 11:42:44 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 11:49:12 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 11:49:16 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 11:49:20 ] INFO  APPLICATION - load study is started
+[ 2018-10-28 ][ 11:49:25 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 11:49:36 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 11:50:05 ] INFO  APPLICATION - PACS settings activated
+[ 2018-10-28 ][ 11:50:13 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-28 ][ 12:53:32 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 12:53:45 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 12:53:47 ] INFO  APPLICATION - new patient registration workflow is started

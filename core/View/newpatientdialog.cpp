@@ -1,12 +1,10 @@
 #include "newpatientdialog.h"
 #include "ui_newpatientdialog.h"
 
-
 #include <QRegExpValidator>
 #include <QPushButton>
 #include <QDateTime>
 #include <QMetaEnum>
-
 
 #include "Utils/dicomtools.h"
 #include "Model/registrationformmodel.h"
@@ -270,3 +268,8 @@ void NewPatientDialog::on_accessionNumberLineEdit_editingFinished()
 }
 
 
+
+void NewPatientDialog::on_buttonBox_rejected()
+{
+    m_model->ClearForm();
+}
