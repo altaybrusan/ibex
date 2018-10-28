@@ -33,6 +33,7 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
     connect(ui->patientIdLineEdit,SIGNAL(textChanged(QString)),this,SLOT(RefreshOkBtn()));
     connect(ui->accessionNumberLineEdit,SIGNAL(textChanged(QString)),this,SLOT(RefreshOkBtn()));
 
+
     scene = new QGraphicsScene(this);
     QImage sourceImage;
    sourceImage.load(":/assets/images/human.jpg");
@@ -121,8 +122,6 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
             connect(_temp,
             &BodyPartSelectionSquare::NotifyBodyPartSelectionChanged,
             this, &NewPatientDialog::OnBodyPartStatusChanged);
-           //SIGNAL(NotifyBodyPartIsStatusChanged(iBEX::BODY_PART,bool))
-           //SLOT(OnBodyPartStatusChanged(iBEX::BODY_PART,bool))
         }
     }
 
@@ -132,6 +131,12 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
 void NewPatientDialog::SetFormModel(RegistrationFormModel &formModel)
 {
     m_model= &formModel;
+    QMetaEnum _metaEnum = QMetaEnum::fromType<iBEX::GENDER>();
+    for(int indx=0;indx<_metaEnum.keyCount();indx++)
+    {
+         QString _str = QString::fromUtf8(_metaEnum.valueToKey(indx));
+         ui->genderComboBox->addItem(_str);
+    }
 }
 
 void NewPatientDialog::WireConnections()
@@ -189,7 +194,6 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool is
 {
     QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
     QString bodyPartStr= QString::fromUtf8(metaEnum.valueToKey(static_cast<int>(bodyPart)));
-    LogMgr::instance()->LogSysDebug(">>> [ "+bodyPartStr+" ] .");
 
     AnatomicRegionElement _element;
     _element.SetBodyPart(bodyPart);
@@ -210,94 +214,73 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool is
         }
     }
 
-//    if(_numberOfselectedBodyParts != _selectedBodyPartList.count())
-//    {
-//        _numberOfselectedBodyParts = _selectedBodyPartList.count();
-//        qDebug()<<"---------------------------";
-//        foreach (auto item, _selectedBodyPartList) {
-
-//            qDebug()<<"The selected bodypart: "<<item;
-//        }
-//      //qDebug()<<"Number of elements: "<< _selectedBodyPartList.count();
-//    }
-
 }
 
 
 
 
 void NewPatientDialog::on_buttonBox_accepted()
-{    
-
-//    qDebug()<<demographics[DemographyKeys::LastName];
-//    qDebug()<<demographics[DemographyKeys::FirstName];
-//    qDebug()<<demographics[DemographyKeys::MiddleName];
-//    qDebug()<<demographics[DemographyKeys::PatientID];
-//    qDebug()<<demographics[DemographyKeys::DOB];
-//    qDebug()<<demographics[DemographyKeys::Gender];
-//    qDebug()<<demographics[DemographyKeys::ReferrinPhysician];
-//    qDebug()<<demographics[DemographyKeys::AdmissionNumber];
-//      qDebug()<<"ACCESSION: "<<demographics[DemographyKeys::AccessionNumber];
+{
+    LogMgr::instance()->LogAppInfo(tr("the patient registration form is completed"));
+    LogMgr::instance()->LogSysInfo(tr("patient registration is completed"));
+    emit OnRegistrationFormCompleted();
 }
 
 void NewPatientDialog::on_lastNameLineEdit_editingFinished()
 {
-//    demographics[DemographyKeys::LastName]=ui->lastNameLineEdit->text();
+    m_model->UpdatePatientLastName(ui->lastNameLineEdit->text());
 }
 
 void NewPatientDialog::on_firstNameLineEdit_editingFinished()
 {
-//     demographics[DemographyKeys::FirstName]=ui->firstNameLineEdit->text();
+    m_model->UpdatePatientFirstName(ui->firstNameLineEdit->text());
 }
 
 void NewPatientDialog::on_middleNameLineEdit_editingFinished()
 {
-//    demographics[DemographyKeys::MiddleName]=ui->middleNameLineEdit->text();
+
+    m_model->UpdatePatientMiddleName(ui->middleNameLineEdit->text());
 }
 
 void NewPatientDialog::on_patientIdLineEdit_editingFinished()
 {
-//    demographics[DemographyKeys::PatientID]=ui->patientIdLineEdit->text();
-
+    m_model->UpdatePatientId(ui->patientIdLineEdit->text());
 }
 
 void NewPatientDialog::on_dateEdit_editingFinished()
 {
-//    demographics[DemographyKeys::DOB]=ui->dateEdit->date().toString(Qt::ISODate);
-
+    m_model->UpdatePatientDOB(ui->dateEdit->date().toString(Qt::ISODate));
 }
 
 void NewPatientDialog::on_genderComboBox_currentIndexChanged(int index)
 {
-//    switch(index)
-//    {
-//    case 0:
-//        demographics[DemographyKeys::Gender] = "M";
-//        break;
-//    case 1:
-//        demographics[DemographyKeys::Gender] = "F";
-//        break;
-//    case 2:
-//        demographics[DemographyKeys::Gender] = "U";
-//        break;
-//    }
+    switch(index)
+    {
+    case 0:
+        m_model->UpdatePatientGender("M");
+        break;
+    case 1:
+        m_model->UpdatePatientGender("F");
+        break;
+    case 2:
+        m_model->UpdatePatientGender("U");
+        break;
+    }
 }
 
 void NewPatientDialog::on_referringPhysicianLineEdit_editingFinished()
 {
-//    demographics[DemographyKeys::ReferrinPhysician]= ui->referringPhysicianLineEdit->text();
-
+    m_model->UpdateReferringPhysician(ui->referringPhysicianLineEdit->text());
 }
 
 void NewPatientDialog::on_admissionNumberLineEdit_editingFinished()
 {
-    //demographics[DemographyKeys::AdmissionNumber]= ui->admissionNumberLineEdit->text();
-
+    m_model->UpdateAdmissionNumber(ui->admissionNumberLineEdit->text());
 }
 
 void NewPatientDialog::on_accessionNumberLineEdit_editingFinished()
 {
-    //demographics[DemographyKeys::AccessionNumber]= ui->accessionNumberLineEdit->text();
+    m_model->UpdateAccessionNumber(ui->accessionNumberLineEdit->text());
 }
 
 

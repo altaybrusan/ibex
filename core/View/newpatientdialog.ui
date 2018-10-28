@@ -356,21 +356,9 @@ background-color: rgb(255, 255, 255);</string>
              <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;
 background-color: rgb(255, 255, 255);</string>
             </property>
-            <item>
-             <property name="text">
-              <string>Male</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Female</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Unknown</string>
-             </property>
-            </item>
+            <property name="currentText">
+             <string/>
+            </property>
            </widget>
           </item>
          </layout>

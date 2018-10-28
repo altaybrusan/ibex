@@ -133,9 +133,16 @@ void RegistrationFormModel::RemoveRegion(AnatomicRegionElement &element)
 
 bool RegistrationFormModel::IsContainRegion(AnatomicRegionElement &element)
 {
-    QString val = m_anatomicRegionList.contains(element)?"true":"false";
-    LogMgr::instance()->LogSysDebug(">>>CONTAINS:"+val);
-    return m_anatomicRegionList.contains(element);
+//    if(m_anatomicRegionList.contains(element))
+//    {
+//        QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
+//        QString bodyPartStr= QString::fromUtf8(metaEnum.valueToKey(static_cast<int>(element.GetBodyPart())));
+//        LogMgr::instance()->LogSysDebug(">>> [ "+bodyPartStr+" ] .");
+
+//        QString val = m_anatomicRegionList.contains(element)?"true":"false";
+//        LogMgr::instance()->LogSysDebug(">>>CONTAINS:"+val);
+//    }
+     return m_anatomicRegionList.contains(element);
 }
 
 QList<AnatomicRegionElement> RegistrationFormModel::GetAnatomicRegionList()

@@ -8443,3 +8443,1001 @@
 [ 2018-10-27 ][ 21:25:22 ] DEBUG SYSTEM - >>> [ FOOT ] .
 [ 2018-10-27 ][ 21:25:22 ] DEBUG SYSTEM - >>>CONTAINS:true
 [ 2018-10-27 ][ 21:25:23 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 09:07:19 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 09:07:19 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 09:07:23 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 09:07:23 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 09:07:23 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ HEAD ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ THORAX ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ ABDOMEN ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ PELVIS ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ KNEE ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ FINGER ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ HAND ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ WRIST ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ SHOULDER ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>> [ ELBOW ] .
+[ 2018-10-28 ][ 09:07:25 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ HEAD ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ THORAX ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ ABDOMEN ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ PELVIS ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ KNEE ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ FINGER ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ HAND ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ WRIST ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ SHOULDER ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>> [ ELBOW ] .
+[ 2018-10-28 ][ 09:07:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ HEAD ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ THORAX ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ ABDOMEN ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ PELVIS ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ KNEE ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ FINGER ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ HAND ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ WRIST ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ SHOULDER ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>> [ ELBOW ] .
+[ 2018-10-28 ][ 09:07:28 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:58 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:07:58 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:07:58 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:07:58 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ HEAD ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ THORAX ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ ABDOMEN ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ PELVIS ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ KNEE ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ FINGER ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ HAND ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ WRIST ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ SHOULDER ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ ELBOW ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ HEAD ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ THORAX ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ ABDOMEN ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ PELVIS ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ KNEE ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ FINGER ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ HAND ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ WRIST ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ SHOULDER ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>> [ ELBOW ] .
+[ 2018-10-28 ][ 09:08:02 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ HEAD ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ THORAX ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ ABDOMEN ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ PELVIS ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ KNEE ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ FINGER ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ HAND ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ WRIST ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ SHOULDER ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ ELBOW ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ HEAD ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ THORAX ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ ABDOMEN ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ PELVIS ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ KNEE ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ FINGER ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ HAND ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ WRIST ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ SHOULDER ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>> [ ELBOW ] .
+[ 2018-10-28 ][ 09:08:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:08:08 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 09:12:11 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 09:12:11 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 09:12:16 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 09:12:16 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 09:12:16 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:20 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:23 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:24 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:33 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:35 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:45 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:12:47 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 09:16:01 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 09:16:01 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 09:16:06 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 09:16:06 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 09:16:06 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 09:16:12 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:16:15 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:16:15 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:16:27 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:16:27 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:16:29 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 09:17:01 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 09:17:01 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 09:17:08 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 09:17:08 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 09:17:08 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 09:17:14 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:17:14 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:14 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:17:14 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:14 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:17:14 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:22 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:17:22 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:22 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:17:22 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:32 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:17:32 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:34 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:17:34 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:36 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:17:36 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:38 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:17:38 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:38 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:17:38 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:55 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:17:55 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:17:55 ] DEBUG SYSTEM - >>> [ TIBIA ] .
+[ 2018-10-28 ][ 09:17:55 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:18:00 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:18:00 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:18:01 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:18:01 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:18:06 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:18:06 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:18:09 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 09:21:18 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 09:21:18 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 09:21:22 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 09:21:22 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 09:21:22 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 09:21:26 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:21:26 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:27 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:21:27 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:27 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:21:27 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:43 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:21:43 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:43 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:21:43 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:47 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:21:47 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:48 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:21:48 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:48 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:21:48 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:55 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:21:55 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:21:55 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:21:55 ] DEBUG SYSTEM - >>>CONTAINS:false
+[ 2018-10-28 ][ 09:22:01 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 09:28:50 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 09:28:50 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 09:28:58 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 09:28:58 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 09:28:58 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 09:29:04 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:08 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:15 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:16 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:18 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:18 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:18 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:22 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:24 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:24 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:25 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:25 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:25 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:25 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:25 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:25 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:27 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:27 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:27 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:27 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:28 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:28 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:30 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:32 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:33 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:29:36 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 09:31:03 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 09:31:03 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 09:31:03 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 09:31:03 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 09:31:04 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 09:31:10 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 09:31:10 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 09:31:10 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 09:31:15 ] DEBUG SYSTEM - >>> [ FOOT ] .
+[ 2018-10-28 ][ 09:31:15 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:31:21 ] DEBUG SYSTEM - >>> [ ANKEL ] .
+[ 2018-10-28 ][ 09:31:21 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:31:25 ] DEBUG SYSTEM - >>> [ FERMUR ] .
+[ 2018-10-28 ][ 09:31:25 ] DEBUG SYSTEM - >>>CONTAINS:true
+[ 2018-10-28 ][ 09:31:30 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:27:37 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:27:37 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:27:58 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 10:27:58 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 10:28:00 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-28 ][ 10:28:00 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:28:12 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 10:28:12 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 10:28:14 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-28 ][ 10:28:14 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:28:39 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 10:28:39 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 10:28:41 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-28 ][ 10:28:41 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:28:57 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 10:28:57 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 10:28:59 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-10-28 ][ 10:28:59 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:29:41 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:29:41 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:30:02 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:30:02 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:33:36 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:33:36 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:33:36 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:33:36 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:33:36 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:33:37 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:34:03 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:34:03 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:34:03 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:34:03 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:34:03 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 10:34:04 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 10:34:07 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 10:34:07 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 10:34:07 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 10:34:15 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:35:54 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:35:54 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:40:46 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:40:46 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:41:41 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 10:41:41 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 10:41:44 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 10:41:44 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 10:41:44 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 10:41:51 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 10:42:53 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 10:42:53 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 10:42:57 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 10:42:57 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 10:42:57 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 10:44:09 ] DEBUG SYSTEM - open study is triggered
+[ 2018-10-28 ][ 10:44:09 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 10:44:09 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 10:44:09 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 10:44:13 ] INFO  SYSTEM - worklist model is not empty
+[ 2018-10-28 ][ 10:44:23 ] INFO  SYSTEM - Database connection is closed.

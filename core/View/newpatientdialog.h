@@ -22,6 +22,8 @@ public:
     void SetFormModel(RegistrationFormModel& formModel);
     void WireConnections();
     ~NewPatientDialog();
+signals:
+    void OnRegistrationFormCompleted();
 
 private slots:
     void OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart,bool isSelected);
