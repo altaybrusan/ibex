@@ -134,6 +134,13 @@ void NewPatientDialog::SetFormModel(RegistrationFormModel &formModel)
          QString _str = QString::fromUtf8(_metaEnum.valueToKey(indx));
          ui->genderComboBox->addItem(_str);
     }
+
+    _metaEnum = QMetaEnum::fromType<iBEX::PATIENT_POSISTION>();
+    for(int indx=0;indx<_metaEnum.keyCount();indx++)
+    {
+         QString _str = QString::fromUtf8(_metaEnum.valueToKey(indx));
+         ui->viewComboBox->addItem(_str);
+    }
 }
 
 void NewPatientDialog::WireConnections()

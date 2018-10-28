@@ -28,14 +28,33 @@ namespace iBEX
         KNEE, TIBIA,  ANKEL,   FOOT,   HAND,
         FINGER, WRIST,ELBOW,   SCAPULA,SHOULDER
     };
-//    /* Patient's Sex	(0010,0040) **/
+    /* Patient's Sex	(0010,0040) **/
     enum class GENDER
     {
         M,F,O
     };
 
+    /**
+     Radiographic view associated with Patient Position (0018,5100).
+     For humans:
+      Defined Terms:
+      AP   Anterior/Posterior
+      PA   Posterior/Anterior
+      LL   Left Lateral
+      RL   Right Lateral
+      RLD  Right Lateral Decubitus
+      LLD  Left Lateral Decubitus
+      RLO  Right Lateral Oblique
+      LLO  Left Lateral Oblique
+*/
+    enum class PATIENT_POSISTION
+    {
+        AP,PA,LL,RL,RLD,LLD,RLO,LLO
+    };
+
     Q_ENUM_NS(BODY_PART);
     Q_ENUM_NS(GENDER);
+    Q_ENUM_NS(PATIENT_POSISTION);
 }
 
 #endif // BODYPART_H
