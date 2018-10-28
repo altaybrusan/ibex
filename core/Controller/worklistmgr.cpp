@@ -19,6 +19,7 @@
 #include <QFile>
 #include <QMap>
 #include <QSqlRecord>
+#include <QMessageBox>
 
 #include "worklistmgr.h"
 #include "Model/worklisttbl.h"
@@ -178,7 +179,8 @@ void WorklistMgr::OnFetchRISRequestReceived()
 
     if(cond.bad())
     {
-        LogMgr::instance()->LogSysFail("Cannot perform query");
+        QMessageBox::warning(&m_dialog,"Warning","Can not perform query",QMessageBox::Ok);
+        LogMgr::instance()->LogSysFail("Can not perform query");
         return;
     }
   ParsRISResponseAndInsertIntoTableModel();
@@ -373,11 +375,6 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
                 //                        <<"The id is: "<<WorkListFieldTag.key(nodeList.at(j).toElement().attribute("tag"),-1);
             }
             m_model.GetModel()->insertRecord(-1,record);
-            //            qDebug()<<"----------------------";
-            //            for(int k=0;k< record.count();k++)
-            //            {
-            //                qDebug()<<"The field is: "<< record.fieldName(k)<<" value:"<<record.value(k).toString();
-            //            }
 
         }
 
@@ -410,14 +407,6 @@ void WorklistMgr::LoadSettings()
     LogMgr::instance()->LogSysInfo(">>> The distance IP is: "+ _str);
     QByteArray _bytes = _str.toLocal8Bit();
     opt_peer = _bytes.data();
-
-
-//    strList = _provider.ListElements(root,"Server","Port");
-//    m_worklisSettingstDlg.SetWorklistServerPort(strList.at(0));
-
-//    strList = _provider.ListElements(root,"Server","AETitle");
-//    m_worklisSettingstDlg.SetWorklistServerAETitle(strList.at(0));
-
 
 }
 
