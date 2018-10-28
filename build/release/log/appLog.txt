@@ -560,3 +560,9 @@
 [ 2018-10-28 ][ 12:53:47 ] INFO  APPLICATION - new patient registration workflow is started
 [ 2018-10-28 ][ 13:09:55 ] INFO  APPLICATION - *** DEVICE STARTED...
 [ 2018-10-28 ][ 13:09:59 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 13:38:41 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 13:38:48 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 13:38:50 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-28 ][ 13:41:06 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 13:41:11 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 13:41:13 ] INFO  APPLICATION - new patient registration workflow is started
