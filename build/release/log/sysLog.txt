@@ -9812,3 +9812,66 @@
 [ 2018-10-28 ][ 14:08:56 ] DEBUG SYSTEM - NewPatientFormModel is updated.
 [ 2018-10-28 ][ 14:08:58 ] DEBUG SYSTEM - NewPatientFormModel is updated.
 [ 2018-10-28 ][ 14:10:12 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 14:14:42 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 14:14:42 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 14:14:49 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 14:14:49 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 14:14:49 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 14:14:52 ] INFO  SYSTEM - load study is activated.
+[ 2018-10-28 ][ 14:14:56 ] DEBUG SYSTEM - open study is triggered
+[ 2018-10-28 ][ 14:14:56 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 14:14:56 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 14:14:56 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 14:15:09 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-28 ][ 14:38:52 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - device type:2
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - device type:0
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - device type:1
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-28 ][ 14:38:52 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-28 ][ 14:38:56 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-28 ][ 14:38:56 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-28 ][ 14:38:56 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-28 ][ 14:39:43 ] INFO  SYSTEM - Database connection is closed.

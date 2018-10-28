@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QSqlRecord>
+#include "View/imageviewer.h"
+
 namespace Ui {
 class ExaminationDialog;
 }
@@ -20,6 +22,7 @@ private:
 
     void LoadDevicePlugins();
     Ui::ExaminationDialog *ui;
+    ImageViewer* m_viewer;
     QSqlRecord* _record;
 };
 

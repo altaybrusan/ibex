@@ -11,11 +11,12 @@
 
 ExaminationDialog::ExaminationDialog(QWidget *parent) :
     QDialog(parent),
+    m_viewer(new ImageViewer(nullptr)),
     ui(new Ui::ExaminationDialog)
 {
     ui->setupUi(this);
-    auto _viewer=new ImageViewer(this);
-    ui->displayFrame->layout()->addWidget(_viewer);
+    //auto _viewer=new ImageViewer(this);
+    ui->displayFrame->layout()->addWidget(m_viewer);
     LoadDevicePlugins();
 }
 
