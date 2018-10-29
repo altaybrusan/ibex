@@ -17,7 +17,7 @@ public slots:
     void OnActivateExamination(RegistrationFormModel& model);
 private:
     ExaminationDialog& m_dialog;
-    RegistrationFormModel* m_regModel;
+
 };
 
 #endif // EXPOSUREDIALOGMGR_H

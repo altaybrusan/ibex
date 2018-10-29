@@ -17,3 +17,8 @@
 [ 2018-10-29 ][ 16:40:40 ] INFO  APPLICATION - *** DEVICE STARTED...
 [ 2018-10-29 ][ 16:40:45 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-10-29 ][ 16:40:49 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 21:49:28 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 21:49:36 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 21:49:37 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-29 ][ 21:49:44 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-10-29 ][ 21:49:44 ] DEBUG APPLICATION - examination workflow is started.

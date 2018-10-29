@@ -4,12 +4,15 @@
 #include <QObject>
 class NewPatientDialog;
 class RegistrationFormModel;
-
+class ExaminationMgr;
 class NewPatientMgr : public QObject
 {
     Q_OBJECT
 public:
-    explicit NewPatientMgr(QObject *parent, NewPatientDialog& dialog,     RegistrationFormModel& model);
+    explicit NewPatientMgr(QObject *parent,
+                           NewPatientDialog& dialog,
+                           RegistrationFormModel& model,
+                           ExaminationMgr& examController);
 
 signals:
 
@@ -18,6 +21,7 @@ public slots:
 private:
     RegistrationFormModel& m_model;
     NewPatientDialog& m_dialog;
+    ExaminationMgr& m_examinationMgr;
 
 };
 

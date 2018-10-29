@@ -214,7 +214,7 @@ void NewPatientDialog::on_buttonBox_accepted()
 {
     LogMgr::instance()->LogAppInfo(tr("the patient registration form is completed"));
     LogMgr::instance()->LogSysInfo(tr("patient registration is completed"));
-    emit OnRegistrationFormCompleted();
+    emit NotifyRegistrationFormCompleted();
 }
 
 void NewPatientDialog::on_lastNameLineEdit_editingFinished()

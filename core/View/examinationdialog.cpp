@@ -16,6 +16,7 @@ ExaminationDialog::ExaminationDialog(QWidget *parent, ImageViewer &viewer) :
 {
     ui->setupUi(this);
     LoadDevicePlugins();
+
 }
 
 void ExaminationDialog::SetRecord(QSqlRecord *record)

@@ -23,11 +23,13 @@ public:
     void WireConnections();
     ~NewPatientDialog();
 signals:
-    void OnRegistrationFormCompleted();
+    void NotifyRegistrationFormCompleted();
 
 private slots:
     void OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart,bool isSelected);
+
     void RefreshOkBtn();
+
     void on_buttonBox_accepted();
 
     void on_lastNameLineEdit_editingFinished();
@@ -47,8 +49,6 @@ private slots:
     void on_admissionNumberLineEdit_editingFinished();
 
     void on_accessionNumberLineEdit_editingFinished();
-
-
 
     void on_buttonBox_rejected();
 
