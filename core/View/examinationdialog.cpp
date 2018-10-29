@@ -9,14 +9,12 @@
 #include "idevice.h"
 
 
-ExaminationDialog::ExaminationDialog(QWidget *parent) :
+ExaminationDialog::ExaminationDialog(QWidget *parent, ImageViewer &viewer) :
     QDialog(parent),
-    m_viewer(new ImageViewer(nullptr)),
+    m_viewer(viewer),
     ui(new Ui::ExaminationDialog)
 {
     ui->setupUi(this);
-    //auto _viewer=new ImageViewer(this);
-    ui->displayFrame->layout()->addWidget(m_viewer);
     LoadDevicePlugins();
 }
 
@@ -28,6 +26,12 @@ void ExaminationDialog::SetRecord(QSqlRecord *record)
     ui->dobLineEdit->setText(record->field(8).value().toString());
     ui->sexLineEdit->setText(record->field(9).value().toString());
 
+}
+
+void ExaminationDialog::Show()
+{
+   ui->displayFrame->layout()->addWidget(&m_viewer);
+   this->show();
 }
 
 ExaminationDialog::~ExaminationDialog()

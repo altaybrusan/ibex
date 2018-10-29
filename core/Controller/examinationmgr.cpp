@@ -11,5 +11,5 @@ ExaminationMgr::ExaminationMgr(QObject *parent, ExaminationDialog &dialog) :
 void ExaminationMgr::OnActivateExamination()
 {
     LogMgr::instance()->LogAppDebug(tr("examination workflow is started."));
-    m_dialog.show();
+    m_dialog.Show();
 }

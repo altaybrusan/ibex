@@ -582,3 +582,46 @@
 [ 2018-10-28 ][ 14:38:51 ] INFO  APPLICATION - *** DEVICE STARTED...
 [ 2018-10-28 ][ 14:38:56 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-10-28 ][ 14:39:20 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 17:18:24 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 17:18:31 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 17:18:38 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 17:18:57 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 17:19:02 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 17:19:06 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 17:19:19 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 17:19:44 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 17:19:51 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 17:19:55 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 17:19:57 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 17:20:13 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-28 ][ 17:20:25 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-28 ][ 17:21:31 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-28 ][ 17:21:36 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-28 ][ 17:21:39 ] INFO  APPLICATION - load study is started
+[ 2018-10-29 ][ 11:13:12 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 11:13:19 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 11:13:21 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:13:34 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:15:45 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 11:15:51 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 11:17:30 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 11:17:34 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 11:18:55 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 11:18:59 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 11:22:08 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 11:22:12 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 11:22:26 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:22:30 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:22:32 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:22:34 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:22:39 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 11:22:44 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 11:22:45 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:22:51 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:25:06 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-29 ][ 11:25:10 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-29 ][ 11:25:15 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:25:20 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:25:22 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:25:27 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-10-29 ][ 11:25:33 ] DEBUG APPLICATION - examination workflow is started.

@@ -20,6 +20,8 @@
 #include "View/newpatientdialog.h"
 #include "Controller/newpatientmgr.h"
 #include "Model/registrationformmodel.h"
+#include "View/imageviewer.h"
+#include "View/loadImagedialog.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -30,7 +32,9 @@
 #define LOCAL_PACS_FILE "./database/localpacs.db"
 #define LOCALDB_SCHEMA_FILE "./configs/dicom-schema.sql"
 Startup::Startup() : QObject(nullptr),
-    m_mainWindow(*new MainWindow(nullptr)),
+    m_imageViewer(*new ImageViewer(nullptr)),
+    m_loadImageDlg(*new LoadImageDialog(nullptr,m_imageViewer)),
+    m_mainWindow(*new MainWindow(nullptr,m_loadImageDlg)),
     m_loadStudyDlg(*new LoadStudyDialog(nullptr)),
     m_loadStudyMgr(*new LoadStudyMgr(nullptr,m_loadStudyDlg,LOCAL_PACS_FILE,LOCALDB_SCHEMA_FILE)),
     m_loginDlg(*new LoginDialog(nullptr)),
@@ -40,7 +44,7 @@ Startup::Startup() : QObject(nullptr),
     m_pacsSettingsMgr(*new PacsSettingMgr(nullptr,m_pacsSettingsDlg)),
     m_worklistSettingsDlg(*new WorklistServerSettingsDialog(nullptr)),
     m_worklistSettingsMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistSettingsDlg,WRKLST_SETTING_FILE)),
-    m_examinationDlg(*new ExaminationDialog(nullptr)),
+    m_examinationDlg(*new ExaminationDialog(nullptr,m_imageViewer)),
     m_examinationMgr(*new ExaminationMgr(nullptr,m_examinationDlg)),
     m_worklistDlg(*new WorklistDialog(nullptr)),
     m_worklistMdl(*new WorklistModel(nullptr)),
@@ -68,6 +72,12 @@ Startup::Startup() : QObject(nullptr),
         LogMgr::instance()->LogAppFail(tr("unsuccessful start. Database connection failed"));
         exit(1);
     }
+
+    m_loadImageDlg.setParent(&m_mainWindow);
+    m_loadImageDlg.setWindowFlag( Qt::Window,true);
+    m_loadImageDlg.setModal(true);
+    m_loadImageDlg.setWindowTitle("Load Image Dialog");
+
     m_loadStudyDlg.setParent(&m_mainWindow);
     m_loadStudyDlg.setWindowFlag( Qt::Window,true);
     m_loadStudyDlg.setModal(true);

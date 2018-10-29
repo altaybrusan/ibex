@@ -19,8 +19,9 @@
 int MACHINE_UID=001;
 
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent, LoadImageDialog &loadImageDialog) :
     QMainWindow(parent),
+    m_loadImageDlg(loadImageDialog),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
@@ -184,9 +185,11 @@ void MainWindow::on_action_Open_Study_triggered()
     // no controller associated. We ignore the MVC pattern
     // however, for the future iteration we can make more
     // suffisticated dialogs and turn it inot MVC design
-    LogMgr::instance()->LogSysDebug(tr("open study is triggered"));
-    LoadImageDialog* _demo=new LoadImageDialog(this);
-    _demo->show();
+    //LogMgr::instance()->LogSysDebug(tr("open study is triggered"));
+    //LoadImageDialog* _demo=new LoadImageDialog(this);
+    //_demo->show();
+    m_loadImageDlg.repaint();
+    m_loadImageDlg.Show();
 }
 
 void MainWindow::on_action_Quick_Start_triggered()

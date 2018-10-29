@@ -8,14 +8,20 @@
 #include <vtkImageData.h>
 #include "View/imageviewer.h"
 
-LoadImageDialog::LoadImageDialog(QWidget *parent) :
+LoadImageDialog::LoadImageDialog(QWidget *parent, ImageViewer &viewer) :
     QDialog(parent),    
-    m_viewer(new ImageViewer(nullptr)),
+    m_viewer(viewer),
     ui(new Ui::LoadImageDialog)
 {
     ui->setupUi(this);
 
-    ui->displayFrame->layout()->addWidget(m_viewer);
+}
+
+void LoadImageDialog::Show()
+{
+    ui->displayFrame->layout()->addWidget(&m_viewer);
+    this->show();
+
 }
 
 LoadImageDialog::~LoadImageDialog()
@@ -33,7 +39,7 @@ void LoadImageDialog::on_loadBtn_clicked()
         {
             // just load the first file
             LogMgr::instance()->LogAppDebug("Loading file:" + dlg.selectedFiles().at(0));
-            m_viewer->DisplayImage(dlg.selectedFiles().at(0));
+            m_viewer.DisplayImage(dlg.selectedFiles().at(0));
         }
     }
 }

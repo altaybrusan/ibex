@@ -5,7 +5,7 @@
 #include "worklistdialog.h"
 
 class NewPatientDialog;
-
+class LoadImageDialog;
 namespace Ui {
     class MainWindow;
 }
@@ -15,7 +15,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent, LoadImageDialog& loadImageDialog);
     ~MainWindow();
 signals:
     void NotifyMainWindowIsLoaded();
@@ -49,6 +49,7 @@ protected:
 private:
     Ui::MainWindow *ui;
 //    QSqlTableModel* _model,*_model2;
+    LoadImageDialog& m_loadImageDlg;
 };
 
 #endif // MAINWINDOW_H

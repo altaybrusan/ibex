@@ -14,15 +14,16 @@ class ExaminationDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit ExaminationDialog(QWidget *parent = 0);
+    explicit ExaminationDialog(QWidget *parent, ImageViewer& viewer);
     void SetRecord(QSqlRecord* record);
+    void Show();
     ~ExaminationDialog();
 
 private:
 
     void LoadDevicePlugins();
     Ui::ExaminationDialog *ui;
-    ImageViewer* m_viewer;
+    ImageViewer& m_viewer;
     QSqlRecord* _record;
 };
 

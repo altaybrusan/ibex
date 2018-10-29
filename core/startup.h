@@ -21,6 +21,8 @@ class WorklistModel;
 class NewPatientDialog;
 class NewPatientMgr;
 class RegistrationFormModel;
+class ImageViewer;
+class LoadImageDialog;
 
 class Startup : public QObject
 {
@@ -31,6 +33,8 @@ public:
     ~Startup();
 
 private:
+    ImageViewer& m_imageViewer;
+    LoadImageDialog& m_loadImageDlg;
     MainWindow& m_mainWindow;
     LoadStudyDialog& m_loadStudyDlg;
     LoadStudyMgr& m_loadStudyMgr;
