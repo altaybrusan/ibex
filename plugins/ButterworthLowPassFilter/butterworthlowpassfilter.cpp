@@ -33,6 +33,9 @@ ButterworthLowPassFilter::ButterworthLowPassFilter()
     m_filterWidget->SetX(DEF_VALUE);
     m_filterWidget->SetY(DEF_VALUE);
     m_filterWidget->SetStep(STEP_SIZE);
+    m_isEnabled = true;
+    m_UID = 1;
+    m_name="Butterworth low pass filter";
     connect(m_filterWidget,&ButterworthLowPassFilterWidget::NotifyStartHighFrequencyFiltering,this,&ButterworthLowPassFilter::OnHighFrequencyPressed);
 }
 
@@ -79,6 +82,37 @@ void ButterworthLowPassFilter::StartAlgorithm()
 
 void ButterworthLowPassFilter::StopAlgorithm()
 {
+
+}
+
+bool ButterworthLowPassFilter::IsEnabled()
+{
+   return  m_isEnabled;
+}
+
+void ButterworthLowPassFilter::SetEnabled(bool enabled)
+{
+    m_isEnabled = enabled;
+}
+
+int ButterworthLowPassFilter::GetAlgorithmUID()
+{
+    return m_UID;
+}
+
+int ButterworthLowPassFilter::GetNextAlgorithmUID()
+{
+    return -1;
+}
+
+int ButterworthLowPassFilter::GetPreviousAlgorithmUID()
+{
+    return -1;
+}
+
+QString ButterworthLowPassFilter::AlgorithmName()
+{
+    return m_name;
 
 }
 

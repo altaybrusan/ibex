@@ -76,7 +76,7 @@ Startup::Startup() : QObject(nullptr),
     m_loadImageDlg.setParent(&m_mainWindow);
     m_loadImageDlg.setWindowFlag( Qt::Window,true);
     m_loadImageDlg.setModal(true);
-    m_loadImageDlg.setWindowTitle("Load Image Dialog");
+    m_loadImageDlg.setWindowTitle("Open Image Dialog");
 
     m_loadStudyDlg.setParent(&m_mainWindow);
     m_loadStudyDlg.setWindowFlag( Qt::Window,true);

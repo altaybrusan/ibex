@@ -169,8 +169,8 @@ HEADERS += \
         View/newpatientdialog.h\
         View/bodypartselectionsquare.h\
         Model/anatomicregionelement.h \
-    Model/registrationformmodel.h \
-    Controller/newpatientmgr.h
+        Model/registrationformmodel.h \
+        Controller/newpatientmgr.h
 
 
 FORMS += \

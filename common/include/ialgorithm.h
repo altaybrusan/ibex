@@ -17,6 +17,12 @@ public:
     virtual QList<vtkSmartPointer<vtkImageData>> GetOutputData() =0;
     virtual void StartAlgorithm() = 0;
     virtual void StopAlgorithm() = 0;
+    virtual bool IsEnabled() = 0;
+    virtual void SetEnabled(bool enabled) =0;
+    virtual int GetAlgorithmUID() = 0;
+    virtual int GetNextAlgorithmUID() = 0;
+    virtual int GetPreviousAlgorithmUID() = 0;
+    virtual QString AlgorithmName() = 0;
 
 public slots:
     virtual void OnParameterUpdated()= 0;

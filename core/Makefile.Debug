@@ -12711,48 +12711,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkDataSet.h \
 		C:\VTK\include\vtk-9.0\vtkDataObject.h \
 		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
-		ui_loadimagedialog.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFormLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qformlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractbutton.h \
+		..\build\debug\.ui\ui_loadimagedialog.h \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
@@ -12769,6 +12728,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
 		../log4qt/helpers/logerror.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		../log4qt/level.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
 		../log4qt/log4qt.h \
@@ -12793,6 +12753,20 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qbasictimer.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkFileDialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAbstractItemView \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
@@ -13139,66 +13113,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkDataSet.h \
 		C:\VTK\include\vtk-9.0\vtkDataObject.h \
 		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
-		ui_examinationdialog.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFormLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qformlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLabel \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLineEdit \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlineedit.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextcursor.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextformat.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QScrollArea \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qscrollarea.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QSpacerItem \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QTableView \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtableview.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QTextBrowser \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtextbrowser.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextdocument.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QVBoxLayout \
-		..\3rd-Party\ctk\include\ctk-0.1\ctkCollapsibleGroupBox.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgroupbox.h \
+		..\build\debug\.ui\ui_examinationdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QPluginLoader \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpluginloader.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qlibrary.h \
@@ -13222,6 +13137,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
 		../log4qt/helpers/logerror.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		../log4qt/level.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
 		../log4qt/log4qt.h \
@@ -13238,6 +13154,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlField \
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlfield.h \
 		..\common\include\idevice.h \

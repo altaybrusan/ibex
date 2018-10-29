@@ -29,7 +29,8 @@ LoadImageDialog::~LoadImageDialog()
     delete ui;
 }
 
-void LoadImageDialog::on_loadBtn_clicked()
+
+void LoadImageDialog::on_openBtn_clicked()
 {
     ctkFileDialog dlg(this,tr("load file"),tr("select a file"));
     dlg.setModal(true);

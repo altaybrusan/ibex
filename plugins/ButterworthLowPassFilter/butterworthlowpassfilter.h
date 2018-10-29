@@ -24,6 +24,12 @@ public:
     QList<vtkSmartPointer<vtkImageData>> GetOutputData() override;
     void StartAlgorithm() override;
     void StopAlgorithm() override;
+    bool IsEnabled() override;
+    void SetEnabled(bool enabled) ;
+    int GetAlgorithmUID() ;
+    int GetNextAlgorithmUID();
+    int GetPreviousAlgorithmUID();
+    QString AlgorithmName() override;
 
 signals:
     void NotifyAlgorithmStarted() override;
@@ -46,6 +52,10 @@ private:
     QList<vtkSmartPointer<vtkImageData>> m_imageDataSet;
     QList<vtkSmartPointer<vtkImageData>> m_output;
     ButterworthLowPassFilterWidget* m_filterWidget;
+    bool m_isEnabled;
+    QString m_name;
+    int m_UID;
+
 
 };
 

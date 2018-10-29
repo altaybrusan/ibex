@@ -19,7 +19,7 @@ public:
     ~LoadImageDialog();
 
 private slots:
-    void on_loadBtn_clicked();
+    void on_openBtn_clicked();
 
 private:
     void LoadImage(QString filePath);

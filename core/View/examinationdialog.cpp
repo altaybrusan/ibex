@@ -70,7 +70,7 @@ void ExaminationDialog::LoadDevicePlugins()
             device = qobject_cast<IDevice *>(plugin);
             if (device)
             {
-                // There must be a mechanis to order the loaded widgets.
+                // There must be a mechanism to order the loaded widgets.
                 int device_type=device->GetDeviceType();
                 LogMgr::instance()->LogSysInfo("device type:"+QString::number(device_type));
                 _deviceWidgetList.append(device->GetWidget());

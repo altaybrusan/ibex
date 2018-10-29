@@ -12711,7 +12711,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkDataSet.h \
 		C:\VTK\include\vtk-9.0\vtkDataObject.h \
 		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
-		ui_loadimagedialog.h \
+		..\build\release\.ui\ui_loadimagedialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
@@ -12725,16 +12725,13 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qinputmethod.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QButtonGroup \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFormLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qformlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QLayout \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QFrame \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHBoxLayout \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QHeaderView \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qheaderview.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
@@ -12753,6 +12750,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QPushButton \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QVBoxLayout \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
@@ -13139,7 +13137,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkDataSet.h \
 		C:\VTK\include\vtk-9.0\vtkDataObject.h \
 		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
-		ui_examinationdialog.h \
+		..\build\release\.ui\ui_examinationdialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QAction \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qaction.h \
