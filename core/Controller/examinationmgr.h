@@ -14,10 +14,10 @@ signals:
 
 public slots:
     void OnActivateExamination();
-    void OnActivateExamination(RegistrationFormModel& model);
+    void OnActivateExaminationAfterRegistration(RegistrationFormModel& model);
 private:
     ExaminationDialog& m_dialog;
-    RegistrationFormModel* m_regModel;
+
 };
 
 #endif // EXPOSUREDIALOGMGR_H

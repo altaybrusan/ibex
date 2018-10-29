@@ -14,7 +14,10 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
 {    
   m_dialog.SetFormModel(model);
   connect(&dialog,&NewPatientDialog::NotifyRegistrationFormCompleted,
-          &m_examinationMgr,&ExaminationMgr::OnActivateExamination);
+          this,[&](){
+      LogMgr::instance()->LogSysInfo("tring to call examination dialog");
+      m_examinationMgr.OnActivateExaminationAfterRegistration(model);
+  });
 }
 
 void NewPatientMgr::OnActivateNewPatientDialog()

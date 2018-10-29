@@ -1,4 +1,5 @@
 #include "examinationmgr.h"
+#include "Model/registrationformmodel.h"
 #include "Utils/logmgr.h"
 
 ExaminationMgr::ExaminationMgr(QObject *parent, ExaminationDialog &dialog) :
@@ -14,9 +15,9 @@ void ExaminationMgr::OnActivateExamination()
     m_dialog.Show();
 }
 
-void ExaminationMgr::OnActivateExamination(RegistrationFormModel &model)
+void ExaminationMgr::OnActivateExaminationAfterRegistration(RegistrationFormModel &model)
 {
     LogMgr::instance()->LogAppDebug(tr("examination workflow is started after patient registration."));
-
-    m_regModel = &model;
+    m_dialog.UpdatePatientForm(model);
+    m_dialog.show();
 }

@@ -5,6 +5,7 @@
 #include "Utils/logmgr.h"
 #include <QDir>
 #include <QCoreApplication>
+#include "Model/registrationformmodel.h"
 #include <QSqlField>
 #include "idevice.h"
 
@@ -19,14 +20,13 @@ ExaminationDialog::ExaminationDialog(QWidget *parent, ImageViewer &viewer) :
 
 }
 
-void ExaminationDialog::SetRecord(QSqlRecord *record)
+void ExaminationDialog::UpdatePatientForm(RegistrationFormModel &model)
 {
-    _record= record;
-    ui->fullNameLineEdit->setText(record->field(3).value().toString());
-    ui->accessionNumLineEdit->setText(record->field(1).value().toString());
-    ui->dobLineEdit->setText(record->field(8).value().toString());
-    ui->sexLineEdit->setText(record->field(9).value().toString());
-
+    QString _fullName = model.GetPatientName()+ "^"+ model.GetPatientMiddleName()+"^"+model.GetPatientLastName();
+    ui->fullNameLineEdit->setText(_fullName);
+    ui->accessionNumLineEdit->setText(model.GetAccessionNumber());
+    ui->dobLineEdit->setText(model.GetPatientDOB());
+    ui->sexLineEdit->setText(model.GetPatientGender());
 }
 
 void ExaminationDialog::Show()
