@@ -22,7 +22,13 @@ ExaminationDialog::ExaminationDialog(QWidget *parent, ImageViewer &viewer) :
 
 void ExaminationDialog::UpdatePatientForm(RegistrationFormModel &model)
 {
-    QString _fullName = model.GetPatientName()+ "^"+ model.GetPatientMiddleName()+"^"+model.GetPatientLastName();
+    QString _fullName = model.GetPatientName();
+
+    if(!model.GetPatientMiddleName().isEmpty())
+     _fullName = _fullName + "^"+ model.GetPatientMiddleName();
+    if(!model.GetPatientLastName().isEmpty())
+        _fullName = _fullName + "^" + model.GetPatientLastName();
+
     ui->fullNameLineEdit->setText(_fullName);
     ui->accessionNumLineEdit->setText(model.GetAccessionNumber());
     ui->dobLineEdit->setText(model.GetPatientDOB());
