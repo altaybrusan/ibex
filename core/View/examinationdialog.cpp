@@ -10,7 +10,7 @@
 #include <QSqlField>
 #include "idevice.h"
 #include <QStandardItemModel>
-
+#include <QSharedPointer>
 
 ExaminationDialog::ExaminationDialog(QWidget *parent, ImageViewer &viewer) :
     QDialog(parent),
@@ -44,9 +44,11 @@ void ExaminationDialog::UpdatePatientForm(RegistrationFormModel &model)
         iBEX::BODY_PART _part = model.GetAnatomicRegionList().at(row).GetBodyPart();
         iBEX::PATIENT_POSISTION _pos =model.GetAnatomicRegionList().at(row).GetBodyPartView();
 
+
         QString _bodyPartName = QString::fromUtf8(_bodyPartMetaEnum.valueToKey(static_cast<int>(_part)));
         QString _bodyPartPos = QString::fromUtf8(_bodyPartPositionMetaEnum.valueToKey(static_cast<int>(_pos)));
 
+        LogMgr::instance()->LogSysInfo("The view: "+ QString::number(static_cast<int>(_pos)));
         QStandardItem *bodyPartItem = new QStandardItem(_bodyPartName);
         QStandardItem *bodyPartPosItem = new QStandardItem(_bodyPartPos);
 

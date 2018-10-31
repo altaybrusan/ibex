@@ -3,6 +3,7 @@
 #include "Model/DICOM_ENUMS.h"
 #include <QObject>
 
+
 class AnatomicRegionElement : public QObject
 {
     Q_OBJECT

@@ -3,6 +3,7 @@
 
 #include <QRegExpValidator>
 #include <QPushButton>
+#include <QSharedPointer>
 #include <QDateTime>
 #include <QMetaEnum>
 
@@ -192,12 +193,15 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool is
     _element.SetBodyPart(bodyPart);
     _element.setCodeMeaning(bodyPartStr);
     //_element.setCodeMeaning(...);
-    _element.SetBodyPartView((iBEX::PATIENT_POSISTION)ui->viewComboBox->currentIndex());
+    int _index=ui->viewComboBox->currentIndex();
+    iBEX::PATIENT_POSISTION _view = static_cast<iBEX::PATIENT_POSISTION>(_index);
+     _element.SetBodyPartView(_view);
+
     if(isSelected)
     {
         if(!m_model->IsContainRegion(_element))
         {
-            m_model->AppendRegion(_element);
+             m_model->AppendRegion(_element);
         }
     }
     else
