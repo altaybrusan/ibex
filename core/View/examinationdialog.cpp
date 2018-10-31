@@ -57,6 +57,8 @@ void ExaminationDialog::UpdatePatientForm(RegistrationFormModel &model)
    table->setHorizontalHeaderItem(0,new QStandardItem(tr("Body part")));
    table->setHorizontalHeaderItem(1,new QStandardItem(tr("View")));
    ui->procedureTableView->horizontalHeader()->setStretchLastSection(true);
+   ui->procedureTableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+   ui->procedureTableView->setSelectionBehavior(QAbstractItemView::SelectRows);
    ui->procedureTableView->setModel(table);
 
 
