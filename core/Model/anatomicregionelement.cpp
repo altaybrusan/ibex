@@ -31,6 +31,11 @@ void AnatomicRegionElement::SetBodyPart(iBEX::BODY_PART part)
     m_bodyPart= part;
 }
 
+void AnatomicRegionElement::SetBodyPartView(iBEX::PATIENT_POSISTION position)
+{
+    m_position = position;
+}
+
 void AnatomicRegionElement::SetCodeValue(QString code)
 {
     m_codeValue=code;
@@ -45,6 +50,11 @@ void AnatomicRegionElement::setCodeMeaning(QString meaning)
 iBEX::BODY_PART AnatomicRegionElement::GetBodyPart() const
 {
     return m_bodyPart;
+}
+
+iBEX::PATIENT_POSISTION AnatomicRegionElement::GetBodyPartView() const
+{
+    return m_position;
 }
 
 QString AnatomicRegionElement::GetCodeValue() const

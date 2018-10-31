@@ -540,3 +540,36 @@
 [ 2018-10-31 ][ 10:37:17 ] INFO  SYSTEM - patient registration is completed
 [ 2018-10-31 ][ 10:37:17 ] INFO  SYSTEM - tring to call examination dialog
 [ 2018-10-31 ][ 10:37:22 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-10-31 ][ 10:38:17 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-10-31 ][ 10:38:17 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM -  iBEX is loading filter: ButterworthLowPassFilter.dll
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.dll
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.exp
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:ButterworthLowPassFilter.lib
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - device type:2
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - device type:0
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - device type:1
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-10-31 ][ 10:38:18 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-10-31 ][ 10:38:21 ] INFO  SYSTEM - Checking database for user
+[ 2018-10-31 ][ 10:38:21 ] INFO  SYSTEM - User ID:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-10-31 ][ 10:38:21 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-10-31 ][ 10:38:24 ] DEBUG SYSTEM - NewPatientFormModel is updated.
+[ 2018-10-31 ][ 10:38:25 ] DEBUG SYSTEM - NewPatientFormModel is updated.
+[ 2018-10-31 ][ 10:38:32 ] INFO  SYSTEM - patient registration is completed
+[ 2018-10-31 ][ 10:38:32 ] INFO  SYSTEM - tring to call examination dialog
+[ 2018-10-31 ][ 10:38:50 ] INFO  SYSTEM - Database connection is closed.
