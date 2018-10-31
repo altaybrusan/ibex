@@ -188,11 +188,11 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool is
 {
     QMetaEnum metaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
     QString bodyPartStr= QString::fromUtf8(metaEnum.valueToKey(static_cast<int>(bodyPart)));
-
     AnatomicRegionElement _element;
     _element.SetBodyPart(bodyPart);
     _element.setCodeMeaning(bodyPartStr);
     //_element.setCodeMeaning(...);
+    _element.SetBodyPartView((iBEX::PATIENT_POSISTION)ui->viewComboBox->currentIndex());
     if(isSelected)
     {
         if(!m_model->IsContainRegion(_element))

@@ -6,8 +6,10 @@
 #include <QDir>
 #include <QCoreApplication>
 #include "Model/registrationformmodel.h"
+#include "Model/anatomicregionelement.h"
 #include <QSqlField>
 #include "idevice.h"
+#include <QStandardItemModel>
 
 
 ExaminationDialog::ExaminationDialog(QWidget *parent, ImageViewer &viewer) :
@@ -33,6 +35,31 @@ void ExaminationDialog::UpdatePatientForm(RegistrationFormModel &model)
     ui->accessionNumLineEdit->setText(model.GetAccessionNumber());
     ui->dobLineEdit->setText(model.GetPatientDOB());
     ui->sexLineEdit->setText(model.GetPatientGender());
+
+    QMetaEnum _bodyPartMetaEnum = QMetaEnum::fromType<iBEX::BODY_PART>();
+    QMetaEnum _bodyPartPositionMetaEnum = QMetaEnum::fromType<iBEX::PATIENT_POSISTION>();
+    table =new QStandardItemModel(model.GetAnatomicRegionList().count(), 2);
+    for(int row=0;row<model.GetAnatomicRegionList().count();row++)
+    {
+        iBEX::BODY_PART _part = model.GetAnatomicRegionList().at(row).GetBodyPart();
+        iBEX::PATIENT_POSISTION _pos =model.GetAnatomicRegionList().at(row).GetBodyPartView();
+
+        QString _bodyPartName = QString::fromUtf8(_bodyPartMetaEnum.valueToKey(static_cast<int>(_part)));
+        QString _bodyPartPos = QString::fromUtf8(_bodyPartPositionMetaEnum.valueToKey(static_cast<int>(_pos)));
+
+        QStandardItem *bodyPartItem = new QStandardItem(_bodyPartName);
+        QStandardItem *bodyPartPosItem = new QStandardItem(_bodyPartPos);
+
+        table->setItem(row, 0 , bodyPartItem);
+        table->setItem(row, 1 , bodyPartPosItem);
+    }
+
+   table->setHorizontalHeaderItem(0,new QStandardItem(tr("Body part")));
+   table->setHorizontalHeaderItem(1,new QStandardItem(tr("View")));
+   ui->procedureTableView->horizontalHeader()->setStretchLastSection(true);
+   ui->procedureTableView->setModel(table);
+
+
 }
 
 void ExaminationDialog::Show()

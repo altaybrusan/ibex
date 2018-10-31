@@ -2,12 +2,13 @@
 #define EXAMINATIONDIALOG_H
 
 #include <QDialog>
-#include <QSqlRecord>
+#include <QStandardItemModel>
 #include "View/imageviewer.h"
 
 
 namespace Ui {
 class ExaminationDialog;
+
 }
 class RegistrationFormModel;
 class ExaminationDialog : public QDialog
@@ -24,6 +25,7 @@ private:
 
     void LoadDevicePlugins();
     Ui::ExaminationDialog *ui;
+    QStandardItemModel* table;
     ImageViewer& m_viewer;
 
 };

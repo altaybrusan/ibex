@@ -86,3 +86,23 @@
 [ 2018-10-31 ][ 10:38:23 ] INFO  APPLICATION - new patient registration workflow is started
 [ 2018-10-31 ][ 10:38:32 ] INFO  APPLICATION - the patient registration form is completed
 [ 2018-10-31 ][ 10:38:32 ] DEBUG APPLICATION - examination workflow is started after patient registration.
+[ 2018-10-31 ][ 11:06:01 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-31 ][ 11:06:09 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-31 ][ 11:06:12 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-31 ][ 11:06:20 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-10-31 ][ 11:06:20 ] DEBUG APPLICATION - examination workflow is started after patient registration.
+[ 2018-10-31 ][ 11:57:18 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-31 ][ 11:57:23 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-31 ][ 11:57:25 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-31 ][ 11:57:35 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-10-31 ][ 11:57:35 ] DEBUG APPLICATION - examination workflow is started after patient registration.
+[ 2018-10-31 ][ 12:02:12 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-31 ][ 12:02:16 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-31 ][ 12:02:18 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-31 ][ 12:02:26 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-10-31 ][ 12:02:26 ] DEBUG APPLICATION - examination workflow is started after patient registration.
+[ 2018-10-31 ][ 12:16:13 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-31 ][ 12:16:18 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-10-31 ][ 12:16:21 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-31 ][ 12:16:24 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-10-31 ][ 12:16:24 ] DEBUG APPLICATION - examination workflow is started after patient registration.
