@@ -19,5 +19,5 @@ void ExaminationMgr::OnActivateExaminationAfterRegistration(RegistrationFormMode
 {
     LogMgr::instance()->LogAppDebug(tr("examination workflow is started after patient registration."));
     m_dialog.UpdatePatientForm(model);
-    m_dialog.show();
+    m_dialog.Show();
 }
