@@ -548,6 +548,7 @@ compiler_rcc_clean:
 		images\_larg_ibex_background.png \
 		images\_48_tools.png \
 		images\_48_quick.png \
+		images\_48_add_user.png \
 		images\_48_horizontal_flip.png \
 		images\_48_devices.png \
 		images\_48_load.png \
@@ -556,6 +557,7 @@ compiler_rcc_clean:
 		images\_48_open_document.png \
 		images\_48_worklist_select.png \
 		images\_48_connections.png \
+		images\_48_remove_user.png \
 		images\_48_worklist.png \
 		images\_48_open.png \
 		images\_48_writecd.png \
