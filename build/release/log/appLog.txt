@@ -276,3 +276,7 @@
 [ 2018-10-31 ][ 16:28:22 ] INFO  APPLICATION - load study is started
 [ 2018-10-31 ][ 16:28:25 ] DEBUG APPLICATION - examination workflow is started.
 [ 2018-10-31 ][ 16:28:36 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-10-31 ][ 20:20:13 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-31 ][ 20:20:18 ] INFO  APPLICATION - log in process is cancelled.
+[ 2018-10-31 ][ 20:27:23 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-10-31 ][ 20:27:28 ] INFO  APPLICATION - log in process is cancelled.

@@ -46,15 +46,15 @@ void DataBaseMgr::FetchDataFromDatabase()
     if(m_database.isOpen())
     {
         emit NotifyFetchingDataStarted();
-        m_worklistModel= make_unique<QSqlTableModel>(this,m_database) ;
+        m_instanceModel= make_unique<QSqlTableModel>(this,m_database) ;
         m_studyModel= make_unique<QSqlTableModel>(this,m_database) ;
         m_userModel= make_unique<QSqlTableModel>(this,m_database) ;
         m_rejImgModel= make_unique<QSqlTableModel>(this,m_database) ;
 
         result = QtConcurrent::run([&]{
-            m_worklistModel->setTable("WorkListTbl");
-            m_worklistModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
-            m_worklistModel->select();
+            m_instanceModel->setTable("IntanceTbl");
+            m_instanceModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
+            m_instanceModel->select();
 
             m_studyModel->setTable("StudyTbl");
             m_studyModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
@@ -79,11 +79,11 @@ bool DataBaseMgr::isConnectionOpen()
    return m_database.isOpen();
 }
 
-QSqlRecord DataBaseMgr::GetRecordTemplateForWorklistTable()
+QSqlRecord DataBaseMgr::GetRecordTemplateForInstanceTable()
 {
     try
     {
-     return m_worklistModel.get()->record();
+     return m_instanceModel.get()->record();
     }
     catch(...)
     {
@@ -131,10 +131,10 @@ QSqlRecord DataBaseMgr::GetRecordTemplateForRejectedImageTable()
     return QSqlRecord();
 }
 
-void DataBaseMgr::AppendIntoWorklistTable(QSqlRecord record)
+void DataBaseMgr::AppendIntoInstanceTable(QSqlRecord record)
 {
-   m_worklistModel.get()->insertRecord(-1,record);
-   if(!m_worklistModel.get()->submitAll())
+   m_instanceModel.get()->insertRecord(-1,record);
+   if(!m_instanceModel.get()->submitAll())
    {
       emit NotifyWritingToDatabaseFailed("Can not write into Worklist table");
    }
@@ -167,11 +167,11 @@ void DataBaseMgr::AppendIntoRejectedImageTable(QSqlRecord record)
     }
 }
 
-void DataBaseMgr::DeleteRecordFromWorklistTableAt(int row)
+void DataBaseMgr::DeleteRecordFromInstanceTableAt(int row)
 {
-    if(m_worklistModel.get()->removeRow(row))
+    if(m_instanceModel.get()->removeRow(row))
     {
-       if(m_worklistModel.get()->submitAll())
+       if(m_instanceModel.get()->submitAll())
        {
            return;
        }
@@ -245,7 +245,7 @@ void DataBaseMgr::DeleteRecordFromRejectedImageTableAt(int row)
     }
 }
 
-bool DataBaseMgr::isRecordinWorklistTable(QSqlRecord record)
+bool DataBaseMgr::isRecordinInstanceTable(QSqlRecord record)
 {
     QString condition = RecordToQueryStringConverter(record);
     QString str_query="SELECT * FROM WorkListTbl WHERE "+condition;
@@ -281,10 +281,10 @@ bool DataBaseMgr::isRecordinRejectedImageTable(QSqlRecord record)
     return query.next();
 }
 
-void DataBaseMgr::UpdateWorklistTableAt(int row, QSqlRecord record)
+void DataBaseMgr::UpdateInstanceTableAt(int row, QSqlRecord record)
 {
-    m_worklistModel.get()->insertRecord(row,record);
-    m_worklistModel.get()->submitAll();
+    m_instanceModel.get()->insertRecord(row,record);
+    m_instanceModel.get()->submitAll();
 }
 
 void DataBaseMgr::UpdateStudyTableAt(int row, QSqlRecord record)

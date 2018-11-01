@@ -2,6 +2,7 @@
 #include "View/newpatientdialog.h"
 #include "Utils/logmgr.h"
 #include "Controller/examinationmgr.h"
+#include "Utils/databasemgr.h"
 
 NewPatientMgr::NewPatientMgr(QObject *parent,
                              NewPatientDialog &dialog,
@@ -16,7 +17,9 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
   connect(&dialog,&NewPatientDialog::NotifyRegistrationFormCompleted,
           this,[&](){
       LogMgr::instance()->LogSysInfo("tring to call examination dialog");
+
       m_examinationMgr.OnActivateExaminationAfterRegistration(model);
+
   });
 }
 
