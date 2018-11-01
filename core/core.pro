@@ -126,7 +126,8 @@ SOURCES += \
         View/bodypartselectionsquare.cpp \
         Model/anatomicregionelement.cpp \
     Model/registrationformmodel.cpp \
-    Controller/newpatientmgr.cpp
+    Controller/newpatientmgr.cpp \
+    View/aboutdialog.cpp
 
 #         Utils/dicomwriter.cpp \
 
@@ -170,7 +171,8 @@ HEADERS += \
         View/bodypartselectionsquare.h\
         Model/anatomicregionelement.h \
         Model/registrationformmodel.h \
-        Controller/newpatientmgr.h
+        Controller/newpatientmgr.h \
+    View/aboutdialog.h
 
 
 FORMS += \
@@ -183,7 +185,8 @@ FORMS += \
          View/loadimagedialog.ui \
          View/worklistdialog.ui \
          View/examinationdialog.ui\
-         View/newpatientdialog.ui
+         View/newpatientdialog.ui \
+    View/aboutdialog.ui
 
 RESOURCES += \
     resources.qrc

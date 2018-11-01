@@ -32,8 +32,7 @@ private slots:
     //void on_actionUpdatePACSServerSettingstriggered();
 //    void on_newPatient_accepted();
 //    void on_Patient_selected(QSqlRecord record);
-//    void on_Login_Successfully();
-//    void on_Login_Failed();
+
     void on_action_Update_PACS_Server_Settings_triggered();
     void on_action_Update_Worklist_Settings_triggered();
     void on_action_Load_Study_triggered();
@@ -44,11 +43,12 @@ private slots:
 
     void on_action_New_Study_triggered();
 
+    void on_action_About_triggered();
+
 protected:
     void showEvent( QShowEvent* event ) override;
 private:
     Ui::MainWindow *ui;
-//    QSqlTableModel* _model,*_model2;
     LoadImageDialog& m_loadImageDlg;
 };
 

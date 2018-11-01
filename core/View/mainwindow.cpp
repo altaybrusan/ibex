@@ -13,6 +13,7 @@
 #include <QDateTime>
 #include "Utils/logmgr.h"
 #include "View/loadImagedialog.h"
+#include "View/aboutdialog.h"
 int MACHINE_UID=001;
 
 
@@ -119,4 +120,15 @@ void MainWindow::on_action_Select_triggered()
 void MainWindow::on_action_New_Study_triggered()
 {
     emit NotifyNewStudyWorkFlowIsTriggered();
+}
+
+AboutDialog* _dialog;
+void MainWindow::on_action_About_triggered()
+{
+
+    _dialog =new AboutDialog(this);
+    _dialog->setModal(true);
+    _dialog->setWindowTitle("About iBEX");
+    _dialog->show();
+
 }
