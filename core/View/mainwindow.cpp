@@ -23,20 +23,6 @@ MainWindow::MainWindow(QWidget *parent, LoadImageDialog &loadImageDialog) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-//    _model= new QSqlTableModel(this,_database) ;
-//    _model->setTable("StudyTbl");
-//    _model->setEditStrategy(QSqlTableModel::OnManualSubmit);
-//    _model->select();
-
-//    _model2 = new QSqlTableModel(this,_database) ;
-//    _model2->setTable("WorkListTbl");
-//    _model2->setEditStrategy(QSqlTableModel::OnManualSubmit);
-//    _model2->select();
-
-//    connect(_dialog,SIGNAL(accepted()),this,SLOT(on_newPatient_accepted()));
-//    connect(wrkDlg,SIGNAL(NotifyRecoredSelected(QSqlRecord)),this,SLOT(on_Patient_selected(QSqlRecord)));
-
 }
 
 MainWindow::~MainWindow()
@@ -45,13 +31,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-//void MainWindow::on_newPatient_accepted()
-//{
-
-
-
-//}
 
 
 void MainWindow::showEvent(QShowEvent *event)
@@ -125,10 +104,8 @@ void MainWindow::on_action_New_Study_triggered()
 AboutDialog* _dialog;
 void MainWindow::on_action_About_triggered()
 {
-
     _dialog =new AboutDialog(this);
     _dialog->setModal(true);
     _dialog->setWindowTitle("About iBEX");
     _dialog->show();
-
 }
