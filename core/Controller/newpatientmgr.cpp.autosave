@@ -1,9 +1,12 @@
+#include "dcmtk/config/osconfig.h"    /* make sure OS specific configuration is included first */
 #include "newpatientmgr.h"
 #include "View/newpatientdialog.h"
 #include "Utils/logmgr.h"
 #include "Controller/examinationmgr.h"
 #include "Utils/databasemgr.h"
-#include "Utils/databasemgr.h"
+#include "Model/DICOM_ENUMS.h"
+#include "dcmtk/dcmdata/dcuid.h"
+#include "dcmtk/ofstd/ofstream.h"
 
 #include <QSqlRecord>
 
@@ -20,13 +23,10 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
   connect(&dialog,&NewPatientDialog::NotifyRegistrationFormCompleted,
           this,[&](){
       LogMgr::instance()->LogSysInfo("tring to call examination dialog");
-      
-      //qDebug()<< "Dialog RESULT:"<<_dialog->result();
-      //_model->setTable("StudyTbl");
-      
+      DataBaseMgr _databaseMgr;
 
-      QSqlRecord _record = _model->record();
-  
+      QSqlRecord _record = _databaseMgr.GetRecordTemplateForStudyTable();
+
       char uid[100];
       QString StudyId =GenerateStudyID();
       _record.setValue("studyid",StudyId);
@@ -41,7 +41,7 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
       _record.setValue("imagesendstatus","SCHEDULED");
       _record.setValue("imageprintstatus","SCHEDULED");
       _model->insertRecord(_model->rowCount(),_record);
-  
+
       if(_model->submitAll())
       {
           qDebug()<<"Successfully sumited to the db.";
@@ -50,8 +50,8 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
       {
           qDebug()<<"Failed to sumite to the db.";
       }
-  
-  
+
+
           QSqlRecord _record2 = _model2->record();
           // initialize the record with dummy data
           for(int a=0;a<=_record2.count();a++)
@@ -60,9 +60,9 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
           }
           _record2.setValue("studyid: ",StudyId);
           _record2.setValue("accessionnum",_dialog->GetPatientInfo(NewPatientDialog::AccessionNumber));
-  
+
           QString fullname;
-  
+
           if(_dialog->GetPatientInfo(NewPatientDialog::MiddleName) != "")
           {
               fullname = _dialog->GetPatientInfo(NewPatientDialog::FirstName)+"^"+
@@ -74,7 +74,7 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
               fullname = _dialog->GetPatientInfo(NewPatientDialog::FirstName)+"^"+
                          _dialog->GetPatientInfo(NewPatientDialog::LastName);
           }
-  
+
           _record2.setValue("patientname",fullname);
           _record2.setValue("patientid",_dialog->GetPatientInfo(NewPatientDialog::PatientID));
           _record2.setValue("sex",_dialog->GetPatientInfo(NewPatientDialog::Gender));
@@ -84,11 +84,11 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
           _record2.setValue("visitcomment","LOCAL");
           _record2.setValue("studystatus","SCHEDULED");
           _record2.setValue("studystartdatetime",QDate::currentDate().toString(Qt::ISODate));
-  
-  
+
+
           //OTHER FIELDS ARE NOT INSERTED YET
           _model2->insertRecord(_model2->rowCount(),_record2);
-  
+
           if(_model2->submitAll())
           {
               qDebug()<<"Successfully sumited to the worklist table.";
@@ -97,8 +97,8 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
           {
               qDebug()<<"Failed to submit to the worklist table. Due to: "<<_model2->lastError().text();;
           }
-  
-  
+
+
       //_database.close();
 
       m_examinationMgr.OnActivateExaminationAfterRegistration(model);

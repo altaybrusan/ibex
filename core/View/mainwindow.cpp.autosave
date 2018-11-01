@@ -11,8 +11,6 @@
 #include <QSqlError>
 #include "logindialog.h"
 #include <QDateTime>
-#include "dcmtk/dcmdata/dcuid.h"
-#include "dcmtk/ofstd/ofstream.h"
 #include "Utils/logmgr.h"
 #include "View/loadImagedialog.h"
 int MACHINE_UID=001;

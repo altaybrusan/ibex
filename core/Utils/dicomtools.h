@@ -9,6 +9,7 @@ class DicomTools : public QObject
 public:
     explicit DicomTools(QObject *parent = nullptr);
     static QString GenerateAccessionNumber();
+    static QString GenerateStudyId();
 
 signals:
 
