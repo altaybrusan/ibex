@@ -109,3 +109,8 @@ void MainWindow::on_action_About_triggered()
     _dialog->setWindowTitle("About iBEX");
     _dialog->show();
 }
+
+void MainWindow::on_action_Get_Tools_Status_triggered()
+{
+    emit NotiftToolsSettingsIsTriggered();
+}

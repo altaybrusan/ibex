@@ -26,6 +26,7 @@ signals:
     void NotifyUpdateWorklistSettingsIsTriggered();
     void NotifyOpenStudyWorkFlowIsTriggered();
     void NotifyWorklistLoadIsTriggered();
+    void NotiftToolsSettingsIsTriggered();
 
 private slots:
 
@@ -44,6 +45,8 @@ private slots:
     void on_action_New_Study_triggered();
 
     void on_action_About_triggered();
+
+    void on_action_Get_Tools_Status_triggered();
 
 protected:
     void showEvent( QShowEvent* event ) override;

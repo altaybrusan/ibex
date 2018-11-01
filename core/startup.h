@@ -23,6 +23,8 @@ class NewPatientMgr;
 class RegistrationFormModel;
 class ImageViewer;
 class LoadImageDialog;
+class ToolsDialog;
+class ToolsMgr;
 
 class Startup : public QObject
 {
@@ -54,7 +56,10 @@ private:
     NewPatientDialog& m_newPatientDlg;
     RegistrationFormModel& m_registrationFormModel;
     NewPatientMgr& m_newPatientMgr;
+    ToolsDialog& m_toolsDlg;
+    ToolsMgr& m_toolsMgr;
     DeviceMgr& m_device;
+
 
 
 

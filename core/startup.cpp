@@ -22,6 +22,8 @@
 #include "Model/registrationformmodel.h"
 #include "View/imageviewer.h"
 #include "View/loadImagedialog.h"
+#include "View/toolsdialog.h"
+#include "Controller/toolsmgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -52,6 +54,8 @@ Startup::Startup() : QObject(nullptr),
     m_registrationFormModel(*new RegistrationFormModel(nullptr)),
     m_newPatientDlg(*new NewPatientDialog(nullptr)),
     m_newPatientMgr(*new NewPatientMgr(nullptr,m_newPatientDlg,m_registrationFormModel,m_examinationMgr)),
+    m_toolsDlg(*new ToolsDialog(nullptr)),
+    m_toolsMgr(*new ToolsMgr(nullptr,m_toolsDlg)),
     m_device(*new DeviceMgr(nullptr,m_mainWindow,
                             m_loginMgr,
                             m_pacsSettingsMgr,
@@ -59,7 +63,8 @@ Startup::Startup() : QObject(nullptr),
                             m_loadStudyMgr,
                             m_examinationMgr,
                             m_worklistMgr,
-                            m_newPatientMgr))
+                            m_newPatientMgr,
+                            m_toolsMgr))
 
 {
     m_dbConnector.setParent(this);
@@ -83,46 +88,51 @@ Startup::Startup() : QObject(nullptr),
     m_loadStudyDlg.setModal(true);
     m_loadStudyMgr.setParent(this);
 
-      m_loginDlg.setParent(&m_mainWindow);
-      m_loginDlg.setWindowFlag( Qt::Window,true);
-      m_loginDlg.setModal(true);
-      m_loginDlg.setWindowTitle("Login Dialog");
-      m_loginMgr.setParent(this);
+    m_loginDlg.setParent(&m_mainWindow);
+    m_loginDlg.setWindowFlag( Qt::Window,true);
+    m_loginDlg.setModal(true);
+    m_loginDlg.setWindowTitle("Login Dialog");
+    m_loginMgr.setParent(this);
 
-      m_pacsSettingsDlg.setParent(&m_mainWindow);
-      m_pacsSettingsDlg.setWindowFlag( Qt::Window,true);
-      m_pacsSettingsDlg.setModal(true);
-      m_pacsSettingsDlg.setWindowTitle("PACS Settings Dialog");
-      m_pacsSettingsMgr.setParent(this);
+    m_pacsSettingsDlg.setParent(&m_mainWindow);
+    m_pacsSettingsDlg.setWindowFlag( Qt::Window,true);
+    m_pacsSettingsDlg.setModal(true);
+    m_pacsSettingsDlg.setWindowTitle("PACS Settings Dialog");
+    m_pacsSettingsMgr.setParent(this);
 
-      m_worklistSettingsDlg.setParent(&m_mainWindow);
-      m_worklistSettingsDlg.setWindowFlag( Qt::Window,true);
-      m_worklistSettingsDlg.setModal(true);
-      m_worklistSettingsDlg.setWindowTitle("Worklist Settings Dialog");
-      m_worklistSettingsMgr.setParent(this);
+    m_worklistSettingsDlg.setParent(&m_mainWindow);
+    m_worklistSettingsDlg.setWindowFlag( Qt::Window,true);
+    m_worklistSettingsDlg.setModal(true);
+    m_worklistSettingsDlg.setWindowTitle("Worklist Settings Dialog");
+    m_worklistSettingsMgr.setParent(this);
 
-      m_examinationDlg.setParent(&m_mainWindow);
-      m_examinationDlg.setWindowFlag( Qt::Window,true);
-      m_examinationDlg.setModal(true);
-      m_examinationDlg.setWindowTitle("Examination Dialog");
-      m_examinationMgr.setParent(this);
+    m_examinationDlg.setParent(&m_mainWindow);
+    m_examinationDlg.setWindowFlag( Qt::Window,true);
+    m_examinationDlg.setModal(true);
+    m_examinationDlg.setWindowTitle("Examination Dialog");
+    m_examinationMgr.setParent(this);
 
-      m_worklistDlg.setParent(&m_mainWindow);
-      m_worklistDlg.setWindowFlag( Qt::Window,true);
-      m_worklistDlg.setModal(true);
-      m_worklistDlg.setWindowTitle("Select Task Dialog");
-      m_worklistMdl.SetDatabase(m_dbConnector.GetDatabase());
-      m_worklistMgr.setParent(this);
+    m_worklistDlg.setParent(&m_mainWindow);
+    m_worklistDlg.setWindowFlag( Qt::Window,true);
+    m_worklistDlg.setModal(true);
+    m_worklistDlg.setWindowTitle("Select Task Dialog");
+    m_worklistMdl.SetDatabase(m_dbConnector.GetDatabase());
+    m_worklistMgr.setParent(this);
 
-      m_newPatientDlg.setParent(&m_mainWindow);
-      m_newPatientDlg.setWindowFlag( Qt::Window,true);
-      m_newPatientDlg.setModal(true);
-      m_newPatientDlg.setWindowTitle("Register New Patient Dialog");
-      m_newPatientMgr.setParent(this);
-      m_newPatientDlg.WireConnections();
+    m_newPatientDlg.setParent(&m_mainWindow);
+    m_newPatientDlg.setWindowFlag( Qt::Window,true);
+    m_newPatientDlg.setModal(true);
+    m_newPatientDlg.setWindowTitle("Register New Patient Dialog");
+    m_newPatientMgr.setParent(this);
+    m_newPatientDlg.WireConnections();
 
-      m_device.setParent(this);
-      m_device.WireConnections();
+    m_toolsDlg.setParent(&m_mainWindow);
+    m_toolsDlg.setWindowFlag( Qt::Window,true);
+    m_toolsDlg.setModal(true);
+    m_toolsMgr.setParent(this);
+
+    m_device.setParent(this);
+    m_device.WireConnections();
 
 }
 

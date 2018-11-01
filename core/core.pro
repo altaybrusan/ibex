@@ -127,7 +127,9 @@ SOURCES += \
         Model/anatomicregionelement.cpp \
     Model/registrationformmodel.cpp \
     Controller/newpatientmgr.cpp \
-    View/aboutdialog.cpp
+    View/aboutdialog.cpp \
+    View/toolsdialog.cpp \
+    Controller/toolsmgr.cpp
 
 #         Utils/dicomwriter.cpp \
 
@@ -172,7 +174,9 @@ HEADERS += \
         Model/anatomicregionelement.h \
         Model/registrationformmodel.h \
         Controller/newpatientmgr.h \
-    View/aboutdialog.h
+    View/aboutdialog.h \
+    View/toolsdialog.h \
+    Controller/toolsmgr.h
 
 
 FORMS += \
@@ -186,7 +190,8 @@ FORMS += \
          View/worklistdialog.ui \
          View/examinationdialog.ui\
          View/newpatientdialog.ui \
-    View/aboutdialog.ui
+    View/aboutdialog.ui \
+    View/toolsdialog.ui
 
 RESOURCES += \
     resources.qrc
