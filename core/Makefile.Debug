@@ -11137,26 +11137,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlerror.h \
 		View/logindialog.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDateTime \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
-		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
-		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcuid.h \
-		..\3rd-Party\ctk\include\dcmtk\config\osconfig.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\oftypes.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdefine.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcast.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofexport.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstdinc.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofalgo.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstream.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\oflist.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofmap.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofutil.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\oftraits.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\variadic\tuplefwd.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstack.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstring.h \
-		..\3rd-Party\ctk\include\dcmtk\ofstd\ofvector.h \
-		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdefine.h \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
@@ -16553,7 +16533,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		../log4qt/ttcclayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\registrationformmodel.obj Model\registrationformmodel.cpp
 
-..\build\debug\.obj\newpatientmgr.obj: Controller\newpatientmgr.cpp Controller/newpatientmgr.h \
+..\build\debug\.obj\newpatientmgr.obj: Controller\newpatientmgr.cpp ..\3rd-Party\ctk\include\dcmtk\config\osconfig.h \
+		Controller/newpatientmgr.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qobjectdefs.h \
@@ -16986,7 +16967,36 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkCommonDataModelModule.h \
 		C:\VTK\include\vtk-9.0\vtkDataSet.h \
 		C:\VTK\include\vtk-9.0\vtkDataObject.h \
-		C:\VTK\include\vtk-9.0\vtkStructuredData.h
+		C:\VTK\include\vtk-9.0\vtkStructuredData.h \
+		Utils/databasemgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlRecord \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlrecord.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qtsqlglobal.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlTableModel \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqltablemodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqldatabase.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\qsqlquerymodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtSql\QSqlDatabase \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcuid.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftypes.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofdefine.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofcast.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofexport.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstdinc.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofalgo.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstream.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oflist.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofmap.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofutil.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\oftraits.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\variadic\tuplefwd.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstack.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofstring.h \
+		..\3rd-Party\ctk\include\dcmtk\ofstd\ofvector.h \
+		..\3rd-Party\ctk\include\dcmtk\dcmdata\dcdefine.h \
+		Utils/dicomtools.h \
+		Model\RegistrationFormModel.h \
+		Model/anatomicregionelement.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\newpatientmgr.obj Controller\newpatientmgr.cpp
 
 ..\build\debug\.obj\qrc_resources.obj: ..\build\debug\.rcc\qrc_resources.cpp 

@@ -5,6 +5,7 @@
 #include <QFutureWatcher>
 #include <QSqlField>
 #include <QSqlQuery>
+#include "Utils/logmgr.h"
 
 
 
@@ -26,13 +27,14 @@ DataBaseMgr *DataBaseMgr::instance()
 
 }
 
-void DataBaseMgr::OpenDatabse()
+void DataBaseMgr::OpenDatabase()
 {
     m_database = QSqlDatabase::addDatabase("QSQLITE");
     m_database.setDatabaseName("./database/database.db");
 
     if(m_database.open())
     {
+        LogMgr::instance()->LogSysInfo("DatabaseMgr successfully connected opened database");
         emit NotifyConnectionSuccess();
     }
     else
@@ -46,20 +48,21 @@ void DataBaseMgr::FetchDataFromDatabase()
     if(m_database.isOpen())
     {
         emit NotifyFetchingDataStarted();
+
         m_instanceModel= make_unique<QSqlTableModel>(this,m_database) ;
-        m_studyModel= make_unique<QSqlTableModel>(this,m_database) ;
+        m_studyModel = make_unique<QSqlTableModel>(this,m_database) ;
         m_userModel= make_unique<QSqlTableModel>(this,m_database) ;
         m_rejImgModel= make_unique<QSqlTableModel>(this,m_database) ;
 
-        result = QtConcurrent::run([&]{
+        //result = QtConcurrent::run([=]{
             m_instanceModel->setTable("IntanceTbl");
             m_instanceModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
             m_instanceModel->select();
 
-            m_studyModel->setTable("StudyTbl");
-            m_studyModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
-            m_studyModel->select();
 
+            m_studyModel.get()->setTable("StudyTbl");
+            m_studyModel.get()->setEditStrategy(QSqlTableModel::OnManualSubmit);
+            m_studyModel.get()->select();
 
             m_userModel->setTable("userTbl");
             m_userModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
@@ -69,8 +72,8 @@ void DataBaseMgr::FetchDataFromDatabase()
             m_rejImgModel->setTable("RejectedImageTbl");
             m_rejImgModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
             m_rejImgModel->select();
-        });
-        watcher.setFuture(result);
+        //});
+        //watcher.setFuture(result);
     }
 }
 
@@ -100,7 +103,7 @@ QSqlRecord DataBaseMgr::GetRecordTemplateForStudyTable()
     }
     catch(...)
     {
-      emit NotifyDataFetchError(tr("Fetch data before making a template"));
+     emit NotifyDataFetchError(tr("Fetch data before making a template"));
     }
     return QSqlRecord();
 }
@@ -145,7 +148,12 @@ void DataBaseMgr::AppendIntoStudyTable(QSqlRecord record)
     m_studyModel.get()->insertRecord(-1,record);
     if(!m_studyModel.get()->submitAll())
     {
+       LogMgr::instance()->LogSysError("can not write into study table.");
        emit NotifyWritingToDatabaseFailed("Can not write into study table.");
+    }
+    else
+    {
+       LogMgr::instance()->LogSysInfo("successfully sumbited to study table.");
     }
 }
 

@@ -14,7 +14,7 @@ public:
     ~DataBaseMgr();
     static DataBaseMgr* instance();
 
-    void OpenDatabse();
+    void OpenDatabase();
     void FetchDataFromDatabase();
     bool isConnectionOpen();
 

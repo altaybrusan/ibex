@@ -11,6 +11,7 @@ AnatomicRegionElement::AnatomicRegionElement(const AnatomicRegionElement &region
     m_bodyPart = region.GetBodyPart();
     m_codeValue = region.GetCodeValue();
     m_codeMeaning = region.GetCodeMeaning();
+    m_position = region.GetBodyPartView();
 }
 
 AnatomicRegionElement &AnatomicRegionElement::operator=(const AnatomicRegionElement &lhs)
@@ -18,6 +19,7 @@ AnatomicRegionElement &AnatomicRegionElement::operator=(const AnatomicRegionElem
     m_bodyPart = lhs.GetBodyPart();
     m_codeValue = lhs.GetCodeValue();
     m_codeMeaning = lhs.GetCodeMeaning();
+    m_position = lhs.GetBodyPartView();
 
     return *this;
 }

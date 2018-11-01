@@ -18,6 +18,8 @@ signals:
 
 public slots:
    void OnActivateNewPatientDialog();
+private slots:
+   void OnRegistrationFormCompleted();
 private:
     RegistrationFormModel& m_model;
     NewPatientDialog& m_dialog;
