@@ -52,9 +52,22 @@ namespace iBEX
         AP,PA,LL,RL,RLD,LLD,RLO,LLO
     };
 
+    /*
+     *  SCHEDULED,
+        INPROGRESS,
+        SUSPENDED,
+        COMPLETED,
+        DISCONTINUED
+     */
+   enum class STUDY_STATUS
+   {
+       SCHEDULED,INPROGRESS,SUSPENDED,COMPLETED,DISCONTINUED
+   };
+
     Q_ENUM_NS(BODY_PART);
     Q_ENUM_NS(GENDER);
     Q_ENUM_NS(PATIENT_POSISTION);
+    Q_ENUM_NS(STUDY_STATUS);
 }
 
 #endif // BODYPART_H

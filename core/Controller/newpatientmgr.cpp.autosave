@@ -23,8 +23,8 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
       
       //qDebug()<< "Dialog RESULT:"<<_dialog->result();
       //_model->setTable("StudyTbl");
-      _model->select();
-      qDebug()<<"Number of records: "<<_model->rowCount();
+      
+
       QSqlRecord _record = _model->record();
   
       char uid[100];
@@ -37,13 +37,7 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
       _record.setValue("primarysopuid",sop);
       _record.setValue("secondarysopuid",sop+".1");
       _record.setValue("imageacqdatetime",QDateTime::currentDateTime().time().toString());
-      /*
-       *  SCHEDULED,
-          INPROGRESS,
-          SUSPENDED,
-          COMPLETED,
-          DISCONTINUED
-       */
+
       _record.setValue("imagesendstatus","SCHEDULED");
       _record.setValue("imageprintstatus","SCHEDULED");
       _model->insertRecord(_model->rowCount(),_record);
