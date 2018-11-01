@@ -630,3 +630,13 @@
 [ 2018-11-01 ][ 16:50:16 ] INFO  APPLICATION - new patient registration workflow is started
 [ 2018-11-01 ][ 16:50:22 ] INFO  APPLICATION - the patient registration form is completed
 [ 2018-11-01 ][ 16:50:22 ] DEBUG APPLICATION - examination workflow is started after patient registration.
+[ 2018-11-01 ][ 16:52:21 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-01 ][ 16:52:26 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-01 ][ 16:52:29 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-11-01 ][ 16:52:40 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-11-01 ][ 16:52:40 ] DEBUG APPLICATION - examination workflow is started after patient registration.
+[ 2018-11-01 ][ 17:29:03 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-01 ][ 17:29:08 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-01 ][ 17:29:20 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-11-01 ][ 17:29:25 ] INFO  APPLICATION - the patient registration form is completed
+[ 2018-11-01 ][ 17:29:26 ] DEBUG APPLICATION - examination workflow is started after patient registration.
