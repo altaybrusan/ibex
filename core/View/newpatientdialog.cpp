@@ -34,7 +34,7 @@ NewPatientDialog::NewPatientDialog(QWidget *parent) :
 
     scene = new QGraphicsScene(this);
     QImage sourceImage;
-   sourceImage.load(":/assets/images/human.jpg");
+    sourceImage.load(":/assets/images/human.jpg");
     scene->addPixmap(QPixmap::fromImage(sourceImage));
 
     ui->graphicsView->setScene(scene);
@@ -146,6 +146,20 @@ void NewPatientDialog::SetFormModel(RegistrationFormModel &formModel)
 
 void NewPatientDialog::WireConnections()
 {
+
+}
+
+void NewPatientDialog::ResetForm()
+{
+    ui->lastNameLineEdit->clear();
+    ui->middleNameLineEdit->clear();
+    ui->firstNameLineEdit->clear();
+    ui->patientIdLineEdit->clear();
+    ui->genderComboBox->setCurrentIndex(0);
+    ui->referringPhysicianLineEdit->clear();
+    ui->accessionNumberLineEdit->setText(DicomTools::GenerateAccessionNumber());
+    ui->admissionNumberLineEdit->clear();
+    ui->viewComboBox->setCurrentIndex(0);
 
 }
 

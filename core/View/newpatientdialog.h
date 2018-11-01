@@ -21,6 +21,7 @@ public:
     explicit NewPatientDialog(QWidget *parent);
     void SetFormModel(RegistrationFormModel& formModel);
     void WireConnections();
+    void ResetForm();
     ~NewPatientDialog();
 signals:
     void NotifyRegistrationFormCompleted();

@@ -22,7 +22,6 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
     m_dialog(dialog)
 {    
   m_dialog.SetFormModel(m_model);
-
   connect(&dialog,&NewPatientDialog::NotifyRegistrationFormCompleted,
           this,&NewPatientMgr::OnRegistrationFormCompleted);
 }
@@ -30,6 +29,8 @@ NewPatientMgr::NewPatientMgr(QObject *parent,
 void NewPatientMgr::OnActivateNewPatientDialog()
 {
     LogMgr::instance()->LogAppInfo(tr("new patient registration workflow is started"));
+    m_model.ClearForm();
+    m_dialog.ResetForm();
     m_dialog.show();
 }
 
