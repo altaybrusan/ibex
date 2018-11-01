@@ -55,7 +55,7 @@ void DataBaseMgr::FetchDataFromDatabase()
         m_rejImgModel= make_unique<QSqlTableModel>(this,m_database) ;
 
         //result = QtConcurrent::run([=]{
-            m_instanceModel->setTable("IntanceTbl");
+            m_instanceModel->setTable("InstanceTbl");
             m_instanceModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
             m_instanceModel->select();
 
@@ -139,7 +139,11 @@ void DataBaseMgr::AppendIntoInstanceTable(QSqlRecord record)
    m_instanceModel.get()->insertRecord(-1,record);
    if(!m_instanceModel.get()->submitAll())
    {
-      emit NotifyWritingToDatabaseFailed("Can not write into Worklist table");
+      emit NotifyWritingToDatabaseFailed("Can not write into instance table");
+   }
+   else
+   {
+       LogMgr::instance()->LogSysInfo("successfully sumbited to instance table.");
    }
 }
 
@@ -190,7 +194,7 @@ void DataBaseMgr::DeleteRecordFromInstanceTableAt(int row)
     }
     else
     {
-        emit NotifyDeletingFromDatabaseFailed(tr("Can not remove row from worklist dataset"));
+        emit NotifyDeletingFromDatabaseFailed(tr("Can not remove row from instance dataset"));
     }
 }
 
@@ -256,7 +260,7 @@ void DataBaseMgr::DeleteRecordFromRejectedImageTableAt(int row)
 bool DataBaseMgr::isRecordinInstanceTable(QSqlRecord record)
 {
     QString condition = RecordToQueryStringConverter(record);
-    QString str_query="SELECT * FROM WorkListTbl WHERE "+condition;
+    QString str_query="SELECT * FROM instanceTbl WHERE "+condition;
     QSqlQuery query;
     query.exec(str_query);
     return query.next();

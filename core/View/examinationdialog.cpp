@@ -48,7 +48,6 @@ void ExaminationDialog::UpdatePatientForm(RegistrationFormModel &model)
         QString _bodyPartName = QString::fromUtf8(_bodyPartMetaEnum.valueToKey(static_cast<int>(_part)));
         QString _bodyPartPos = QString::fromUtf8(_bodyPartPositionMetaEnum.valueToKey(static_cast<int>(_pos)));
 
-        LogMgr::instance()->LogSysInfo("The view: "+ QString::number(static_cast<int>(_pos)));
         QStandardItem *bodyPartItem = new QStandardItem(_bodyPartName);
         QStandardItem *bodyPartPosItem = new QStandardItem(_bodyPartPos);
 

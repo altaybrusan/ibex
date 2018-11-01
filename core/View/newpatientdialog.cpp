@@ -213,7 +213,6 @@ void NewPatientDialog::OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart, bool is
         if(!m_model->IsContainRegion(_element))
         {
             int _index = ui->viewComboBox->currentIndex();
-            LogMgr::instance()->LogSysInfo("Current view index is:"+ QString::number(_index));
             iBEX::PATIENT_POSISTION _view = static_cast<iBEX::PATIENT_POSISTION>(_index);
             _element.SetBodyPartView(_view);
             m_model->AppendRegion(_element);
