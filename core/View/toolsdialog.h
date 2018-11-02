@@ -15,6 +15,7 @@ public:
     explicit ToolsDialog(QWidget *parent = 0);
     QString GetPassword();
     QString GetUser();
+    void ClearCrenential();
 
     ~ToolsDialog();
 signals:

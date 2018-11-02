@@ -18,7 +18,19 @@ ToolsDialog::~ToolsDialog()
 
 void ToolsDialog::on_addUserBtn_clicked()
 {
-    emit NotifyAddUser();
+    if(ui->retypePasswordlineEdit->text() == ui->passwordLineEdit->text())
+    {
+        ui->passwordLineEdit->setStyleSheet("border: 1px solid white");
+        ui->retypePasswordlineEdit->setStyleSheet("border: 1px solid black");
+        emit NotifyAddUser();
+    }
+    else
+    {
+     ui->passwordLineEdit->setStyleSheet("border: 1px solid red");
+     ui->retypePasswordlineEdit->setStyleSheet("border: 1px solid red");
+    }
+
+
 }
 
 void ToolsDialog::on_removeUserBtn_clicked()
@@ -34,4 +46,11 @@ QString ToolsDialog::GetPassword()
 QString ToolsDialog::GetUser()
 {
     return ui->userLineEdit->text();
+}
+
+void ToolsDialog::ClearCrenential()
+{
+    ui->userLineEdit->clear();
+    ui->passwordLineEdit->clear();
+    ui->retypePasswordlineEdit->clear();
 }

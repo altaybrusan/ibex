@@ -3,6 +3,7 @@
 #include "Utils/databasemgr.h"
 #include "Utils/logmgr.h"
 #include <QSqlRecord>
+#include <QMessageBox>
 
 ToolsMgr::ToolsMgr(QObject *parent, ToolsDialog &dialog) :
     QObject(parent),
@@ -33,7 +34,16 @@ void ToolsMgr::OnAddUser()
     _record.setValue("password",_password);
     _record.setValue("userlevel",_level);
 
-    m_dbMgr->AppendIntoUserTable(_record);
+    if(!m_dbMgr->isRecordinUserTable(_record))
+    {
+        m_dbMgr->AppendIntoUserTable(_record);
+        m_dialog.ClearCrenential();
+        QMessageBox::information(&m_dialog,"Information","new user is registered",QMessageBox::Ok);
+    }
+    else
+    {
+        QMessageBox::information(&m_dialog,"Information","This credentials already registered in database",QMessageBox::Ok);
+    }
 
 
 }
@@ -59,6 +69,8 @@ void ToolsMgr::OnRemoveUser()
         {
             LogMgr::instance()->LogSysInfo("starting to delete");
             m_dbMgr->DeleteRecordFromUserTableAt(row);
+            QMessageBox::information(&m_dialog,"Information","the user is removed from database",QMessageBox::Ok);
+            m_dialog.ClearCrenential();
         }
     }
 

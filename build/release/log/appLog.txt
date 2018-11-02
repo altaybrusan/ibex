@@ -885,3 +885,46 @@
 [ 2018-11-02 ][ 10:47:56 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-11-02 ][ 10:47:59 ] INFO  APPLICATION - tool box is activated
 [ 2018-11-02 ][ 10:48:10 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:04:06 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:04:10 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:04:11 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:17:04 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:17:08 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:17:10 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:18:17 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:18:23 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:18:31 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:18:49 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:19:15 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:19:18 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:19:20 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:19:35 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:23:10 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:23:15 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:23:16 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:23:23 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:29:39 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:29:44 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:29:46 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:30:39 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:30:53 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:55:39 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:55:43 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:55:45 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:55:51 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:56:00 ] INFO  APPLICATION - trying to remove user: demo
+[ 2018-11-02 ][ 11:57:31 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:57:35 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:57:39 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:57:48 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:57:57 ] INFO  APPLICATION - trying to remove user: demo
+[ 2018-11-02 ][ 11:59:20 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 11:59:28 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 11:59:30 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 11:59:36 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 11:59:41 ] INFO  APPLICATION - trying to remove user: demo
+[ 2018-11-02 ][ 12:00:20 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-02 ][ 12:00:23 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-02 ][ 12:00:25 ] INFO  APPLICATION - tool box is activated
+[ 2018-11-02 ][ 12:00:30 ] INFO  APPLICATION - trying to add new user
+[ 2018-11-02 ][ 12:00:38 ] INFO  APPLICATION - trying to remove user: demo
