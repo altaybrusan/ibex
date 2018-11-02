@@ -2,16 +2,38 @@
 #include "View/toolsdialog.h"
 #include "Utils/databasemgr.h"
 #include "Utils/logmgr.h"
+#include "Utils/settingsprovider.h"
 #include <QSqlRecord>
 #include <QMessageBox>
+#include <QtXml>
+#include <QFile>
 
-ToolsMgr::ToolsMgr(QObject *parent, ToolsDialog &dialog) :
+ToolsMgr::ToolsMgr(QObject *parent, ToolsDialog &dialog, QString settingFileName) :
     QObject(parent),
+    m_provider(*new SettingsProvider(nullptr)),
+    m_settingsFileName(settingFileName),
     m_dialog(dialog)
 {
     connect(&m_dialog,&ToolsDialog::NotifyAddUser,this,&ToolsMgr::OnAddUser);
     connect(&m_dialog,&ToolsDialog::NotifyRemoveUser,this,&ToolsMgr::OnRemoveUser);
+     connect(&m_dialog,&ToolsDialog::NotifyDialogAccepted,this,&ToolsMgr::OnDialogAccepted);
     m_dbMgr = DataBaseMgr::instance();
+
+    m_provider.setParent(this);
+    m_provider.UpdateSettingFile(m_settingsFileName);
+    if(!m_provider.OpenSettingFile())
+    {
+        LogMgr::instance()->LogSysError(tr("can not open tools setting file."));
+        return;
+    }
+
+    if(!m_provider.LoadSettingFile())
+    {
+        LogMgr::instance()->LogSysError(tr("tools file is not valid."));
+        return;
+    }
+
+    LogMgr::instance()->LogSysInfo(tr("worklist settings are loaded successfully."));
 
 }
 
@@ -45,7 +67,6 @@ void ToolsMgr::OnAddUser()
         QMessageBox::information(&m_dialog,"Information","This credentials already registered in database",QMessageBox::Ok);
     }
 
-
 }
 
 void ToolsMgr::OnRemoveUser()
@@ -74,14 +95,59 @@ void ToolsMgr::OnRemoveUser()
         }
     }
 
-
-
 }
 
 void ToolsMgr::OnActivateToolsDialog()
 {
     LogMgr::instance()->LogAppInfo(tr("tool box is activated"));
     LogMgr::instance()->LogSysInfo(tr("tool box is activated"));
+    LoadSystemSettings();
     m_dialog.show();
+}
+
+void ToolsMgr::OnDialogAccepted()
+{
+    QFile settingFile(m_settingsFileName);
+    if(!settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
+    {
+        LogMgr::instance()->LogSysError(tr("can not open tools settings file."));
+        return;
+    }
+    else
+    {
+        LogMgr::instance()->LogSysDebug(tr("tool settings file successfully opened."));
+        //get the root element
+        QDomDocument document;
+
+        if(!document.setContent(&settingFile))
+        {
+            LogMgr::instance()->LogSysError(tr("Failed to load tools settings file."));
+            return;
+        }
+
+        QDomElement root = document.firstChildElement();
+        auto node =root.firstChildElement("Manufacturer").firstChild();
+        node.setNodeValue(m_dialog.GetManufacturer());
+        node = root.firstChildElement("InstitutionName").firstChild();
+        node.setNodeValue(m_dialog.GetInstitutionName());
+        node = root.firstChildElement("StationName").firstChild();
+        node.setNodeValue(m_dialog.GetStationName());
+        node = root.firstChildElement("ManufacturersModelName").firstChild();
+        node.setNodeValue(m_dialog.GetManufacturersModelName());
+        settingFile.resize(0);
+        QByteArray xml = document.toByteArray();
+        settingFile.write(xml);
+        settingFile.close();
+    }
+}
+
+void ToolsMgr::LoadSystemSettings()
+{
+    auto root = m_provider.GetRootElement();
+    m_dialog.UpdateManufacturer(root.firstChildElement("Manufacturer").firstChild().nodeValue());
+    m_dialog.UpdateInstitutionName(root.firstChildElement("InstitutionName").firstChild().nodeValue());
+    m_dialog.UpdateStationName(root.firstChildElement("StationName").firstChild().nodeValue());
+    m_dialog.UpdateManufacturersModelName(root.firstChildElement("ManufacturersModelName").firstChild().nodeValue());
+
 }
 

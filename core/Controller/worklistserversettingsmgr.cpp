@@ -83,5 +83,5 @@ void WorklistServerSettingsMgr::OnDialogAccepted()
         settingFile.write(xml);
         settingFile.close();
         m_worklisSettingstDlg.close();
-}
+    }
 }

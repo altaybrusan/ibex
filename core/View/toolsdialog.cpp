@@ -54,3 +54,48 @@ void ToolsDialog::ClearCrenential()
     ui->passwordLineEdit->clear();
     ui->retypePasswordlineEdit->clear();
 }
+
+void ToolsDialog::UpdateManufacturer(QString manufacturer)
+{
+    ui->manufacturerLineEdit->setText(manufacturer);
+}
+
+void ToolsDialog::UpdateInstitutionName(QString institutionName)
+{
+    ui->institutionNameLineEdit->setText(institutionName);
+}
+
+void ToolsDialog::UpdateStationName(QString stationName)
+{
+    ui->stationNameLineEdit->setText(stationName);
+}
+
+void ToolsDialog::UpdateManufacturersModelName(QString modelName)
+{
+    ui->manufacturerModelNameLineEdit->setText(modelName);
+}
+
+QString ToolsDialog::GetManufacturer()
+{
+    return ui->manufacturerLineEdit->text();
+}
+
+QString ToolsDialog::GetInstitutionName()
+{
+    return ui->institutionNameLineEdit->text();
+}
+
+QString ToolsDialog::GetStationName()
+{
+    return ui->stationNameLineEdit->text();
+}
+
+QString ToolsDialog::GetManufacturersModelName()
+{
+    return ui->manufacturerModelNameLineEdit->text();
+}
+
+void ToolsDialog::on_buttonBox_accepted()
+{
+    emit NotifyDialogAccepted();
+}

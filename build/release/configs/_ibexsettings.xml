@@ -1,5 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Device>
-    <DatabasePath>./database/database.db</DatabasePath>
-    <DatabaseDriver>QSQLITE</DatabaseDriver>
+ <DatabasePath>./database/database.db</DatabasePath>
+ <DatabaseDriver>QSQLITE</DatabaseDriver>
+ <Manufacturer>Durmaz Teknoloji1</Manufacturer>
+ <InstitutionName>Bogazici University2</InstitutionName>
+ <StationName>X-Lab3</StationName>
+ <ManufacturersModelName>iBEX-SYNCBOX4</ManufacturersModelName>
+ <FieldofViewShape/>
+ <FieldofViewDimensions/>
 </Device>

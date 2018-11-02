@@ -33,6 +33,7 @@
 #define WRKLST_SETTING_FILE "./configs/_worklist.xml"
 #define LOCAL_PACS_FILE "./database/localpacs.db"
 #define LOCALDB_SCHEMA_FILE "./configs/dicom-schema.sql"
+#define TOOLS_SETTINGS_FILE "./config/_ibexsettings.xml"
 Startup::Startup() : QObject(nullptr),
     m_imageViewer(*new ImageViewer(nullptr)),
     m_loadImageDlg(*new LoadImageDialog(nullptr,m_imageViewer)),
@@ -55,7 +56,7 @@ Startup::Startup() : QObject(nullptr),
     m_newPatientDlg(*new NewPatientDialog(nullptr)),
     m_newPatientMgr(*new NewPatientMgr(nullptr,m_newPatientDlg,m_registrationFormModel,m_examinationMgr)),
     m_toolsDlg(*new ToolsDialog(nullptr)),
-    m_toolsMgr(*new ToolsMgr(nullptr,m_toolsDlg)),
+    m_toolsMgr(*new ToolsMgr(nullptr,m_toolsDlg,IBEX_STTINGS_FILE)),
     m_device(*new DeviceMgr(nullptr,m_mainWindow,
                             m_loginMgr,
                             m_pacsSettingsMgr,
