@@ -157,7 +157,7 @@ void DataBaseMgr::AppendIntoStudyTable(QSqlRecord record)
     }
     else
     {
-       LogMgr::instance()->LogSysInfo("successfully sumbited to study table.");
+       LogMgr::instance()->LogSysInfo("successfully sumbited to study table");
     }
 }
 
@@ -167,6 +167,9 @@ void DataBaseMgr::AppendIntoUserTable(QSqlRecord record)
     if(!m_userModel.get()->submitAll())
     {
        emit NotifyWritingToDatabaseFailed("Can not write into user table.");
+    }
+    else {
+        LogMgr::instance()->LogSysInfo("successfully sumbited to user table");
     }
 }
 
@@ -224,16 +227,19 @@ void DataBaseMgr::DeleteRecordFromUserTableAt(int row)
     {
        if(m_userModel.get()->submitAll())
        {
+           LogMgr::instance()->LogSysError(tr("record is deleted from user table successfully"));
            return;
        }
        else
        {
-           emit NotifyDeletingFromDatabaseFailed(tr("Can not submit delete command to user table"));
+           LogMgr::instance()->LogSysError(tr("can not submit delete command to user table"));
+           emit NotifyDeletingFromDatabaseFailed(tr("can not submit delete command to user table"));
        }
     }
     else
     {
-        emit NotifyDeletingFromDatabaseFailed(tr("Can not remove row from user dataset"));
+        LogMgr::instance()->LogSysError(tr("can not remove row from user table"));
+        emit NotifyDeletingFromDatabaseFailed(tr("can not remove row from user table"));
     }
 
 }
@@ -277,11 +283,21 @@ bool DataBaseMgr::isRecordinStudyTable(QSqlRecord record)
 
 bool DataBaseMgr::isRecordinUserTable(QSqlRecord record)
 {
-    QString condition = RecordToQueryStringConverter(record);
-    QString str_query="SELECT * FROM userTbl WHERE "+condition;
+
+    QString str_query = "SELECT * FROM userTbl WHERE  username= '"
+                          + record.field(1).value().toString()+"'";
+    LogMgr::instance()->LogSysInfo("The query string  is:"+ str_query);
+
     QSqlQuery query;
     query.exec(str_query);
-    return query.next();
+
+    while(query.next())
+    {
+        if(query.value(2)== record.value(2).toString())
+            return true;
+
+    }
+    return false;
 }
 
 bool DataBaseMgr::isRecordinRejectedImageTable(QSqlRecord record)
@@ -316,6 +332,11 @@ void DataBaseMgr::UpdateRejectedImageTableAt(int row, QSqlRecord record)
 {
     m_rejImgModel.get()->insertRecord(row,record);
     m_rejImgModel.get()->submitAll();
+}
+
+int DataBaseMgr::GetNumberOfUsers()
+{
+    return m_userModel.get()->rowCount();
 }
 
 void DataBaseMgr::onDataFetchingFinished()
@@ -354,7 +375,7 @@ QString DataBaseMgr::RecordToQueryStringConverter(QSqlRecord record)
     QString string ="";
     for (int index=0; index<record.count();index++)
     {
-        string += record.fieldName(index)+"='"+record.field(index).value().toString()+"'";
+        string += record.fieldName(index)+"= '"+record.field(index).value().toString()+"' ";
     }
     return string;
 }

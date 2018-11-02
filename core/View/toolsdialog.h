@@ -13,10 +13,24 @@ class ToolsDialog : public QDialog
 
 public:
     explicit ToolsDialog(QWidget *parent = 0);
+    QString GetPassword();
+    QString GetUser();
+
     ~ToolsDialog();
+signals:
+    void NotifyAddUser();
+    void NotifyRemoveUser();
+
+private slots:
+
+
+    void on_addUserBtn_clicked();
+
+    void on_removeUserBtn_clicked();
 
 private:
     Ui::ToolsDialog *ui;
+
 };
 
 #endif // TOOLSDIALOG_H

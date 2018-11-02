@@ -43,6 +43,8 @@ public:
     void UpdateUserTableAt(int row,QSqlRecord record);
     void UpdateRejectedImageTableAt(int row,QSqlRecord record);
 
+    int GetNumberOfUsers();
+
 signals:
 
     void NotifyConnectionSuccess();
