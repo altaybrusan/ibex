@@ -129,7 +129,8 @@ SOURCES += \
     Controller/newpatientmgr.cpp \
     View/aboutdialog.cpp \
     View/toolsdialog.cpp \
-    Controller/toolsmgr.cpp
+    Controller/toolsmgr.cpp \
+    Controller/algorithmpluginmgr.cpp
 
 #         Utils/dicomwriter.cpp \
 
@@ -165,6 +166,7 @@ HEADERS += \
         Controller/worklistmgr.h \
         coreapplication.h \
         startup.h\
+        ../common/include/ialgorithm.h\
 #       View/dicomtaglist.h \
 #        View/worklistmodel.h \
 #        Utils/dicomwriter.h \
@@ -176,7 +178,8 @@ HEADERS += \
         Controller/newpatientmgr.h \
     View/aboutdialog.h \
     View/toolsdialog.h \
-    Controller/toolsmgr.h
+    Controller/toolsmgr.h \
+    Controller/algorithmpluginmgr.h
 
 
 FORMS += \

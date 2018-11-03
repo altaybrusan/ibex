@@ -9,7 +9,7 @@ ButterworthLowPassFilterWidget::ButterworthLowPassFilterWidget(QWidget *parent) 
     QWidget(parent),    
     ui(new Ui::ButterworthLowPassFilterWidget)
 {
-    ui->setupUi(this);
+    ui->setupUi(this);    
 }
 
 
@@ -58,12 +58,8 @@ void ButterworthLowPassFilterWidget::SetStep(double value)
 
 void ButterworthLowPassFilterWidget::on_applyBtn_clicked()
 {
-    SetEnableBtn(false);
-
-    //ui->highPassFilterBtn->setDisabled(true);
-
-    emit NotifyStartHighFrequencyFiltering();
-
+    //SetEnableBtn(false);
+    emit NotifyApplyFiltering();
 }
 
 
@@ -75,4 +71,11 @@ double ButterworthLowPassFilterWidget::GetX()
 double ButterworthLowPassFilterWidget::GetY()
 {
     return ui->yCutOffDSBox->value();
+}
+
+void ButterworthLowPassFilterWidget::SetWidgetEnabled(bool enable)
+{
+    ui->yCutOffDSBox->setEnabled(enable);
+    ui->xCutOffDSBox->setEnabled(enable);
+    ui->frame->repaint();
 }

@@ -8,7 +8,7 @@
 #include <QList>
 #include <butterworthlowpassfilterwidget.h>
 
-class BUTTERWORTHLOWPASSFILTER_EXPORT ButterworthLowPassFilter : public QObject, public IAlgorithm
+class BUTTERWORTHLOWPASSFILTER_EXPORT ButterworthLowPassFilter : public IAlgorithm
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "tr.edu.boun.IAlgorithm")
@@ -25,23 +25,23 @@ public:
     void StartAlgorithm() override;
     void StopAlgorithm() override;
     bool IsEnabled() override;
-    void SetEnabled(bool enabled) ;
+    void SetAlgorithmEnabled(bool enabled) override ;
     int GetAlgorithmUID() ;
     int GetNextAlgorithmUID();
     int GetPreviousAlgorithmUID();
     QString AlgorithmName() override;
 
-signals:
-    void NotifyAlgorithmStarted() override;
-    void NotifyProgress(int percent) override;
-    void NotifyError(QString message) override;
-    void NotifyAlgorithmFinished() override ;
+//signals:
+//    void NotifyAlgorithmStarted(int algorithmUID) override;
+//    void NotifyProgress(int algorithmUID,int percent) override;
+//    void NotifyError(int algorithmUID,QString message) override;
+//    void NotifyAlgorithmFinished(int algorithmUID) override ;
 
 public slots:
     void OnParameterUpdated() override;
 
 private slots:
-    void OnHighFrequencyPressed();
+    void OnApplyBtnPressed();
 
 
 

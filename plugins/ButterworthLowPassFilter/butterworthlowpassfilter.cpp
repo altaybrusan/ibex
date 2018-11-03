@@ -19,7 +19,6 @@
 #include <vtkImageShiftScale.h>
 #include <vtkImageSlice.h>
 #include <vtkImageSliceMapper.h>
-
 #include <vtkImageButterworthLowPass.h>
 #define MIN_BOUND 0.001
 #define MAX_BOUND 0.1
@@ -36,7 +35,7 @@ ButterworthLowPassFilter::ButterworthLowPassFilter()
     m_isEnabled = true;
     m_UID = 1;
     m_name="Butterworth low pass filter";
-    connect(m_filterWidget,&ButterworthLowPassFilterWidget::NotifyStartHighFrequencyFiltering,this,&ButterworthLowPassFilter::OnHighFrequencyPressed);
+    connect(m_filterWidget,&ButterworthLowPassFilterWidget::NotifyApplyFiltering,this,&ButterworthLowPassFilter::OnApplyBtnPressed);
 }
 
 void ButterworthLowPassFilter::UpdateParameter(QString key, QVariant value)
@@ -90,9 +89,10 @@ bool ButterworthLowPassFilter::IsEnabled()
    return  m_isEnabled;
 }
 
-void ButterworthLowPassFilter::SetEnabled(bool enabled)
+void ButterworthLowPassFilter::SetAlgorithmEnabled(bool enabled)
 {
     m_isEnabled = enabled;
+    //m_filterWidget->SetWidgetEnabled(false);
 }
 
 int ButterworthLowPassFilter::GetAlgorithmUID()
@@ -121,9 +121,10 @@ void ButterworthLowPassFilter::OnParameterUpdated()
 
 }
 
-void ButterworthLowPassFilter::OnHighFrequencyPressed()
+void ButterworthLowPassFilter::OnApplyBtnPressed()
 {
-  CalculateFFT(m_imageDataSet.at(0));
+  //CalculateFFT(m_imageDataSet.at(0));
+  emit NotifyAlgorithmStarted(m_UID);
 }
 
 
@@ -185,5 +186,5 @@ void ButterworthLowPassFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputD
      writer->SetInputData(outputCastFilter->GetOutput());
      writer->Write();
      m_filterWidget->SetEnableBtn(true);
-     emit NotifyAlgorithmFinished();
+     emit NotifyAlgorithmFinished(m_UID);
 }

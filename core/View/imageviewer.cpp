@@ -1,7 +1,7 @@
 #include "imageviewer.h"
 #include "ui_imageviewer.h"
 
-#include <QFileInfo>
+
 #include <QMessageBox>
 
 // CTK includes
@@ -31,18 +31,12 @@
 #include <vtkImageFlip.h>
 #include <vtkImageCast.h>
 #include <vtkAlgorithm.h>
-
-
-#include "Utils/logmgr.h"
-
 #include <vtkRenderWindow.h>
 #include <vtkRenderer.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkSmartPointer.h>
-
-#include "ialgorithm.h"
-#include <QPluginLoader>
-#include <QDir>
+#include "Controller/algorithmpluginmgr.h"
+#include "Utils/logmgr.h"
 
 ImageViewer::ImageViewer(QWidget *parent) :
     QMainWindow(parent),
@@ -59,9 +53,11 @@ ImageViewer::ImageViewer(QWidget *parent) :
     ui(new Ui::ImageViewer)
 {
     ui->setupUi(this);
+    AlgorithmPluginMgr _mgr(nullptr,"");
+    _mgr.LoadPlugins();
 
     LogMgr::instance()->LogSysDebug("ImageViewer is launched");
-    LoadAlgorithmPlugins();
+    //LoadAlgorithmPlugins();
 
     //when the imageviewer is called for the first time,
     //there is no image to show. To avoid any problem,
@@ -118,13 +114,34 @@ ImageViewer::ImageViewer(QWidget *parent) :
             this,
             SLOT(OnHorizontalFlipToggled(bool)));
 
+        QVBoxLayout *filterlayout = new QVBoxLayout(ui->FilterArea);
+        filterlayout->setMargin(0);
+        QMapIterator<int,IAlgorithm*> _iterator(_mgr.GetWidgetList());
+        while(_iterator.hasNext())
+        {
+          _iterator.next();
+          if(_iterator.value()->GetWidget())
+            {
+                filterlayout->addWidget(_iterator.value()->GetWidget());
+                QFrame *line=new QFrame(this);
+                line->setGeometry(QRect(50, 160, 118, 3));
+                line->setFrameShape(QFrame::HLine);
+                line->setFrameShadow(QFrame::Sunken);
+                filterlayout->addWidget(line);
+            }
 
-// These linese test to make toolbar (flip) operations mutually exclusive.
 
-//    QActionGroup* toolActionGroup= new QActionGroup(this);
-//    toolActionGroup->addAction(ui->actionhFlip);
-//    toolActionGroup->addAction(ui->actionvFlip);
-//    toolActionGroup->setExclusive(true);
+//           connect(dynamic_cast<QObject*>(_iterator.value()),SIGNAL(NotifyAlgorithmStarted(int algorithmUID)),
+//                   this,SLOT(OnAlgorithmStarted(int algorithmUID)));
+          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmStarted,this,&ImageViewer::OnAlgorithmStarted);
+
+
+        }
+
+        //               connect(dynamic_cast<QObject*>(_iterator.value()),SIGNAL(NotifyAlgorithmStarted),this,SLOT(OnAlgorithmStarted));
+        //              connect(dynamic_cast<QObject*>(algorithm),SIGNAL(NotifyAlgorithmStarted()),this,SLOT(OnAlgorithmStarted()));
+        //              LogMgr::instance()->LogSysInfo(" iBEX is loading filter: "+ fileName);
+
 
 }
 
@@ -305,65 +322,6 @@ void ImageViewer::UpdateThumbnailList()
     }
 }
 
-void ImageViewer::LoadAlgorithmPlugins()
-{
-    QDir pluginsDir(qApp->applicationDirPath());
-    LogMgr::instance()->LogSysInfo("current directory:"+pluginsDir.currentPath());
-    pluginsDir.cd("plugins");
-    QVBoxLayout *layout = new QVBoxLayout(ui->FilterArea);
-    layout->setMargin(0);
-    foreach (QString fileName, pluginsDir.entryList(QDir::Files))
-    {
-        QPluginLoader pluginLoader(pluginsDir.absoluteFilePath(fileName));
-        QObject *plugin = pluginLoader.instance();
-        if (plugin)
-        {
-          algorithm = dynamic_cast<IAlgorithm*>(plugin);
-          if(algorithm)
-          {
-              connect(dynamic_cast<QObject*>(algorithm),SIGNAL(NotifyAlgorithmFinished()),this,SLOT(OnAlgorithmFinished()));
-              LogMgr::instance()->LogSysInfo(" iBEX is loading filter: "+ fileName);
-              if(algorithm->GetWidget())
-              {
-                 layout->addWidget(algorithm->GetWidget());
-                 QFrame *line=new QFrame(this);
-                 line->setGeometry(QRect(50, 160, 118, 3));
-                 line->setFrameShape(QFrame::HLine);
-                 line->setFrameShadow(QFrame::Sunken);
-                 layout->addWidget(line);
-
-//                 QDir testDir(qApp->applicationDirPath());
-//                 testDir.cd("test");
-//                  QString fileName = "C:\\Users\\Altay\\Documents\\Qt\\Projects\\ibex\\build\\release\\test\\phantom.tiff";
-//                  vtkSmartPointer<vtkImageReader2> imageReader =vtkSmartPointer<vtkImageReader2>::New();
-//                  vtkSmartPointer<vtkImageReader2Factory> imageFactory = vtkSmartPointer<vtkImageReader2Factory>::New();
-//                  imageReader.TakeReference(imageFactory->CreateImageReader2(fileName.toLatin1()));
-//                  if (!imageReader)
-//                  {
-//                      LogMgr::instance()->LogSysDebug("failed to instanciate image reader using: " + fileName);
-//                      QMessageBox::warning(this,tr("error loading file"),tr("can not load the file"),QMessageBox::Ok);
-//                      return;
-//                  }
-//                  else
-//                  {
-//                      //Read image
-//                      imageReader->SetFileName(fileName.toLatin1());
-//                      imageReader->Update();
-//                      vtkSmartPointer<vtkImageData> _imgData =
-//                              vtkSmartPointer<vtkImageData>::New();
-//                      _imgData= imageReader->GetOutput();
-//                      QList<vtkSmartPointer<vtkImageData>> _list;
-//                      _list.append(_imgData);
-//                      algorithm->SetInputData(_list);
-//                      algorithm->UpdateParentWidget(ui->FilterArea);
-//                  }
-              }
-          }
-        }
-}
-
-
-}
 
 
 // not implemented yet.
@@ -372,10 +330,24 @@ void ImageViewer::on_actioninvertColor_triggered()
 
 }
 
-void ImageViewer::OnAlgorithmFinished()
+void ImageViewer::OnAlgorithmStarted(int algorithmUID)
+{
+    LogMgr::instance()->LogSysDebug("algorithm is started:"+ QString::number(algorithmUID));
+}
+
+void ImageViewer::OnAlgorithmProgress(int algorithmUID, int percent)
 {
 
-    LogMgr::instance()->LogSysDebug("filter operation is done");
+}
+
+void ImageViewer::OnAlgorithmError(int algorithmUID, QString message)
+{
+
+}
+
+void ImageViewer::OnAlgorithmFinished(int algorithmUID)
+{
+
 }
 
 

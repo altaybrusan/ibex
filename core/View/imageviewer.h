@@ -14,7 +14,6 @@
 #include "ctkThumbnailLabel.h"
 #include "vtkImageFlip.h"
 #include "vtkImageCast.h"
-
 #include "ialgorithm.h"
 
 namespace Ui {
@@ -36,8 +35,12 @@ protected slots:
     void OnVerticalFlipToggled(bool value);
     void OnHorizontalFlipToggled(bool value);
     void on_actioninvertColor_triggered();
-    void OnAlgorithmFinished();
 
+private slots:
+    void OnAlgorithmStarted(int algorithmUID);
+    void OnAlgorithmProgress(int algorithmUID, int percent);
+    void OnAlgorithmError(int algorithmUID, QString message);
+    void OnAlgorithmFinished(int algorithmUID);
 
 private:
 
@@ -59,9 +62,6 @@ private:
 
     bool IsValidFile(QString fullFileName);
     void UpdateThumbnailList();
-    void LoadAlgorithmPlugins();
-
-    IAlgorithm* algorithm;
 
 };
 

@@ -25,9 +25,10 @@ public:
     void SetStep(double value);
     double GetX();
     double GetY();
+    void SetWidgetEnabled(bool enable);
 
 signals:
-    void NotifyStartHighFrequencyFiltering();
+    void NotifyApplyFiltering();
 
 private slots:
 

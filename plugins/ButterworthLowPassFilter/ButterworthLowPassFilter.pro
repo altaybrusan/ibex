@@ -70,6 +70,7 @@ SOURCES += \
 HEADERS += \
     butterworthlowpassfilterwidget.h \
     butterworthlowpassfilter_global.h \
+    ../../common/include/ialgorithm.h \
     butterworthlowpassfilter.h
 unix {
     target.path = /usr/lib
