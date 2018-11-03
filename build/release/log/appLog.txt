@@ -1086,3 +1086,10 @@
 [ 2018-11-03 ][ 13:16:57 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-11-03 ][ 14:03:57 ] INFO  APPLICATION - *** DEVICE STARTED...
 [ 2018-11-03 ][ 14:04:02 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 14:11:09 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 14:11:14 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 14:12:04 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 14:13:07 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 14:13:11 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 14:13:43 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 14:14:22 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/circle-test.tiff

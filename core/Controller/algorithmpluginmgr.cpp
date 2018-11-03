@@ -43,35 +43,6 @@ void AlgorithmPluginMgr::LoadPlugins()
               {
                   LogMgr::instance()->LogSysDebug("algorithm already registered");
               }
-
-
-
-//                 QDir testDir(qApp->applicationDirPath());
-//                 testDir.cd("test");
-//                  QString fileName = "C:\\Users\\Altay\\Documents\\Qt\\Projects\\ibex\\build\\release\\test\\phantom.tiff";
-//                  vtkSmartPointer<vtkImageReader2> imageReader =vtkSmartPointer<vtkImageReader2>::New();
-//                  vtkSmartPointer<vtkImageReader2Factory> imageFactory = vtkSmartPointer<vtkImageReader2Factory>::New();
-//                  imageReader.TakeReference(imageFactory->CreateImageReader2(fileName.toLatin1()));
-//                  if (!imageReader)
-//                  {
-//                      LogMgr::instance()->LogSysDebug("failed to instanciate image reader using: " + fileName);
-//                      QMessageBox::warning(this,tr("error loading file"),tr("can not load the file"),QMessageBox::Ok);
-//                      return;
-//                  }
-//                  else
-//                  {
-//                      //Read image
-//                      imageReader->SetFileName(fileName.toLatin1());
-//                      imageReader->Update();
-//                      vtkSmartPointer<vtkImageData> _imgData =
-//                              vtkSmartPointer<vtkImageData>::New();
-//                      _imgData= imageReader->GetOutput();
-//                      QList<vtkSmartPointer<vtkImageData>> _list;
-//                      _list.append(_imgData);
-//                      algorithm->SetInputData(_list);
-//                      algorithm->UpdateParentWidget(ui->FilterArea);
-//                  }
-
           }
         }
     }

@@ -19,13 +19,14 @@
 namespace Ui {
 class ImageViewer;
 }
+class AlgorithmPluginMgr;
 
 class ImageViewer : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit ImageViewer(QWidget *parent = 0);
+    explicit ImageViewer(QWidget *parent, AlgorithmPluginMgr manager);
     void DisplayImage(QString fileName);
     ~ImageViewer();
 
@@ -59,7 +60,8 @@ private:
     vtkSmartPointer<vtkImageCast> castFilter;
 
     QList<QString> imagelist,thumbnailList;
-
+    QString m_lastLoadedFile;
+    AlgorithmPluginMgr& m_pluginMgr;
     bool IsValidFile(QString fullFileName);
     void UpdateThumbnailList();
 

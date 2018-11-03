@@ -38,8 +38,9 @@
 #include "Controller/algorithmpluginmgr.h"
 #include "Utils/logmgr.h"
 
-ImageViewer::ImageViewer(QWidget *parent) :
+ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr manager) :
     QMainWindow(parent),
+    m_pluginMgr(manager),
     renderWindowInteractor(vtkSmartPointer<vtkRenderWindowInteractor>::New()),
     legendScaleActor(vtkSmartPointer<vtkLegendScaleActor>::New()),
     imageViewer(vtkSmartPointer<vtkImageViewer2>::New()),
@@ -53,8 +54,7 @@ ImageViewer::ImageViewer(QWidget *parent) :
     ui(new Ui::ImageViewer)
 {
     ui->setupUi(this);
-    AlgorithmPluginMgr _mgr(nullptr,"");
-    _mgr.LoadPlugins();
+    m_pluginMgr.LoadPlugins();
 
     LogMgr::instance()->LogSysDebug("ImageViewer is launched");
     //LoadAlgorithmPlugins();
@@ -116,7 +116,7 @@ ImageViewer::ImageViewer(QWidget *parent) :
 
         QVBoxLayout *filterlayout = new QVBoxLayout(ui->FilterArea);
         filterlayout->setMargin(0);
-        QMapIterator<int,IAlgorithm*> _iterator(_mgr.GetWidgetList());
+        QMapIterator<int,IAlgorithm*> _iterator(m_pluginMgr.GetWidgetList());
         while(_iterator.hasNext())
         {
           _iterator.next();
@@ -130,9 +130,6 @@ ImageViewer::ImageViewer(QWidget *parent) :
                 filterlayout->addWidget(line);
             }
 
-
-//           connect(dynamic_cast<QObject*>(_iterator.value()),SIGNAL(NotifyAlgorithmStarted(int algorithmUID)),
-//                   this,SLOT(OnAlgorithmStarted(int algorithmUID)));
           connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmStarted,this,&ImageViewer::OnAlgorithmStarted);
 
 
@@ -237,6 +234,7 @@ void ImageViewer::DisplayImage(QString fileName)
             //Read image
             imageReader->SetFileName(fileName.toLatin1());
             imageReader->Update();
+            m_lastLoadedFile = fileName;
 
         }
         // internal call of UninstallPipeline() is for example triggered by re-setting render window ...
@@ -295,18 +293,8 @@ void ImageViewer::DisplayImage(QString fileName)
         UpdateThumbnailList();
         imageViewer->UpdateDisplayExtent();
 
-        // Read image
-        //imageReader->SetFileName(fullFileName.toLatin1());
-        //imageViewer->SetInputConnection(imageReader->GetOutputPort());
-        //renderer->ResetCamera();
-        //imageViewer->Render();
-        //imagelist.append(fullFileName);
-        //UpdateThumbnailList();
-        //imageViewer->UpdateDisplayExtent();
-        //imageReader->Update();
-
-
     }
+
 
 }
 
@@ -332,21 +320,59 @@ void ImageViewer::on_actioninvertColor_triggered()
 
 void ImageViewer::OnAlgorithmStarted(int algorithmUID)
 {
-    LogMgr::instance()->LogSysDebug("algorithm is started:"+ QString::number(algorithmUID));
+    if(m_lastLoadedFile.isEmpty())
+        return;
+
+    LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is started");
+    LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is started");
+
+
+    vtkSmartPointer<vtkImageReader2> imageReader =vtkSmartPointer<vtkImageReader2>::New();
+    vtkSmartPointer<vtkImageReader2Factory> imageFactory = vtkSmartPointer<vtkImageReader2Factory>::New();
+    imageReader.TakeReference(imageFactory->CreateImageReader2(m_lastLoadedFile.toLatin1()));
+    if (!imageReader)
+    {
+        LogMgr::instance()->LogSysDebug("failed to instanciate image reader using: " + m_lastLoadedFile);
+        QMessageBox::warning(this,tr("error loading file"),tr("can not load the file"),QMessageBox::Ok);
+        return;
+    }
+    else
+    {
+        //Read image
+        imageReader->SetFileName(m_lastLoadedFile.toLatin1());
+        imageReader->Update();
+        vtkSmartPointer<vtkImageData> _imgData =
+                vtkSmartPointer<vtkImageData>::New();
+        _imgData= imageReader->GetOutput();
+        QList<vtkSmartPointer<vtkImageData>> _list;
+        _list.append(_imgData);
+
+        (m_pluginMgr.GetWidgetList())[algorithmUID]->SetInputData(_list);
+        //algorithm->UpdateParentWidget(ui->FilterArea);
+    }
+
 }
 
 void ImageViewer::OnAlgorithmProgress(int algorithmUID, int percent)
 {
+    LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is progressed: "+QString::number(percent));
+    LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is progressed: "+QString::number(percent));
 
 }
 
 void ImageViewer::OnAlgorithmError(int algorithmUID, QString message)
 {
+    LogMgr::instance()->LogSysError("algorithm "+ QString::number(algorithmUID)+" error: " + message);
+    LogMgr::instance()->LogAppError("algorithm "+ QString::number(algorithmUID)+" error: " + message);
+    QMessageBox::warning(this,"Warning","the selected algorithmed issued error:"+message,QMessageBox::Ok);
 
 }
 
 void ImageViewer::OnAlgorithmFinished(int algorithmUID)
 {
+    LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is finished");
+    LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is finished");
+
 
 }
 
