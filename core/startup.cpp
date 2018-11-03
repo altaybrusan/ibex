@@ -24,6 +24,7 @@
 #include "View/loadImagedialog.h"
 #include "View/toolsdialog.h"
 #include "Controller/toolsmgr.h"
+#include "Controller/algorithmpluginmgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -34,8 +35,10 @@
 #define LOCAL_PACS_FILE "./database/localpacs.db"
 #define LOCALDB_SCHEMA_FILE "./configs/dicom-schema.sql"
 #define TOOLS_SETTINGS_FILE "./config/_ibexsettings.xml"
+#define ALGORITHM_PLUGIN_DIR "./plugins/"
 Startup::Startup() : QObject(nullptr),
-    m_imageViewer(*new ImageViewer(nullptr)),
+    m_algorithmPluginMgr(*new AlgorithmPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
+    m_imageViewer(*new ImageViewer(nullptr,m_algorithmPluginMgr)),
     m_loadImageDlg(*new LoadImageDialog(nullptr,m_imageViewer)),
     m_mainWindow(*new MainWindow(nullptr,m_loadImageDlg)),
     m_loadStudyDlg(*new LoadStudyDialog(nullptr)),

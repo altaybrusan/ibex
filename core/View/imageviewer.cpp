@@ -38,7 +38,7 @@
 #include "Controller/algorithmpluginmgr.h"
 #include "Utils/logmgr.h"
 
-ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr manager) :
+ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr &manager) :
     QMainWindow(parent),
     m_pluginMgr(manager),
     renderWindowInteractor(vtkSmartPointer<vtkRenderWindowInteractor>::New()),
@@ -57,7 +57,6 @@ ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr manager) :
     m_pluginMgr.LoadPlugins();
 
     LogMgr::instance()->LogSysDebug("ImageViewer is launched");
-    //LoadAlgorithmPlugins();
 
     //when the imageviewer is called for the first time,
     //there is no image to show. To avoid any problem,
@@ -131,8 +130,9 @@ ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr manager) :
             }
 
           connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmStarted,this,&ImageViewer::OnAlgorithmStarted);
-
-
+          connect(_iterator.value(),&IAlgorithm::NotifyProgress,this,&ImageViewer::OnAlgorithmProgress);
+          connect(_iterator.value(),&IAlgorithm::NotifyError,this,&ImageViewer::OnAlgorithmError);
+          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmFinished,this,&ImageViewer::OnAlgorithmFinished);
         }
 
         //               connect(dynamic_cast<QObject*>(_iterator.value()),SIGNAL(NotifyAlgorithmStarted),this,SLOT(OnAlgorithmStarted));

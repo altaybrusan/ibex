@@ -26,7 +26,7 @@ class ImageViewer : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit ImageViewer(QWidget *parent, AlgorithmPluginMgr manager);
+    explicit ImageViewer(QWidget *parent, AlgorithmPluginMgr& manager);
     void DisplayImage(QString fileName);
     ~ImageViewer();
 

@@ -4,7 +4,6 @@
 #include <QPluginLoader>
 #include <QDir>
 #include <QFileInfo>
-#include <QCoreApplication>
 
 
 
@@ -12,15 +11,14 @@ AlgorithmPluginMgr::AlgorithmPluginMgr(QObject *parent,QString path) :
     QObject(parent),
     m_path(path)
 {
-    m_pluginsDir = qApp->applicationDirPath();
-    m_pluginsDir.cd("plugins");
 
 }
 
 void AlgorithmPluginMgr::LoadPlugins()
 {
 
-    LogMgr::instance()->LogSysInfo("current directory:"+m_pluginsDir.currentPath());
+    m_pluginsDir.setPath(m_path);
+    LogMgr::instance()->LogSysInfo("algorithm plugins are loaded from: "+m_pluginsDir.path());
 
 
     foreach (QString fileName, m_pluginsDir.entryList(QDir::Files))
