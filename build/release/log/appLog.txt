@@ -1106,3 +1106,8 @@
 [ 2018-11-03 ][ 15:42:28 ] INFO  APPLICATION - log in process is cancelled.
 [ 2018-11-03 ][ 15:42:32 ] INFO  APPLICATION - *** DEVICE STARTED...
 [ 2018-11-03 ][ 15:42:57 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 15:50:26 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 15:50:31 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 15:51:36 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 15:51:43 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 15:51:51 ] DEBUG APPLICATION - algorithm UID:1 is finished

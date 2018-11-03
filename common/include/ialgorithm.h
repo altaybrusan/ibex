@@ -16,6 +16,7 @@ public:
     virtual void UpdateParentWidget(QWidget* parent)= 0;
     virtual QWidget* GetWidget() = 0;
     virtual void SetInputData(QList<vtkSmartPointer<vtkImageData>> imageDataSet) = 0;
+    virtual vtkImageData GetAlgorithmOutput() = 0;
     virtual QList<vtkSmartPointer<vtkImageData>> GetOutputData() =0;
     virtual void StartAlgorithm() = 0;
     virtual void StopAlgorithm() = 0;

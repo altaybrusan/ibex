@@ -58,7 +58,7 @@ void ButterworthLowPassFilterWidget::SetStep(double value)
 
 void ButterworthLowPassFilterWidget::on_applyBtn_clicked()
 {
-    //SetEnableBtn(false);
+    SetEnableBtn(false);
     emit NotifyApplyFiltering();
 }
 

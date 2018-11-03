@@ -123,8 +123,8 @@ void ButterworthLowPassFilter::OnParameterUpdated()
 
 void ButterworthLowPassFilter::OnApplyBtnPressed()
 {
-  //CalculateFFT(m_imageDataSet.at(0));
-  emit NotifyAlgorithmStarted(m_UID);
+    emit NotifyAlgorithmStarted(m_UID);
+    CalculateFFT(m_imageDataSet.at(0));
 }
 
 
