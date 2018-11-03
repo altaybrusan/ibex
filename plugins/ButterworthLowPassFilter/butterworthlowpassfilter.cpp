@@ -75,7 +75,12 @@ QList<vtkSmartPointer<vtkImageData> > ButterworthLowPassFilter::GetOutputData()
 void ButterworthLowPassFilter::StartAlgorithm()
 {
 
-   CalculateFFT(m_imageDataSet.at(0));
+    if(m_imageDataSet.at(0))
+    {
+        m_filterWidget->SetEnableBtn(false);
+       CalculateFFT(m_imageDataSet.at(0));
+
+    }
    return;
 }
 
@@ -124,7 +129,6 @@ void ButterworthLowPassFilter::OnParameterUpdated()
 void ButterworthLowPassFilter::OnApplyBtnPressed()
 {
     emit NotifyAlgorithmStarted(m_UID);
-    CalculateFFT(m_imageDataSet.at(0));
 }
 
 
@@ -178,13 +182,14 @@ void ButterworthLowPassFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputD
       outputCastFilter->SetOutputScalarTypeToUnsignedChar();
       outputCastFilter->Update();
 
+     m_output.append( outputCastFilter->GetOutput());
+//     vtkSmartPointer<vtkPNGWriter> writer =
+//       vtkSmartPointer<vtkPNGWriter>::New();
+//     writer->SetFileName("demo.png");
 
-     vtkSmartPointer<vtkPNGWriter> writer =
-       vtkSmartPointer<vtkPNGWriter>::New();
-     writer->SetFileName("demo.png");
+//     writer->SetInputData(outputCastFilter->GetOutput());
+//     writer->Write();
 
-     writer->SetInputData(outputCastFilter->GetOutput());
-     writer->Write();
      m_filterWidget->SetEnableBtn(true);
      emit NotifyAlgorithmFinished(m_UID);
 }

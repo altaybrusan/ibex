@@ -325,7 +325,7 @@ void ImageViewer::OnAlgorithmStarted(int algorithmUID)
 
     LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is started");
     LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is started");
-
+    QApplication::setOverrideCursor(Qt::WaitCursor);
 
     vtkSmartPointer<vtkImageReader2> imageReader =vtkSmartPointer<vtkImageReader2>::New();
     vtkSmartPointer<vtkImageReader2Factory> imageFactory = vtkSmartPointer<vtkImageReader2Factory>::New();
@@ -348,6 +348,7 @@ void ImageViewer::OnAlgorithmStarted(int algorithmUID)
         _list.append(_imgData);
 
         (m_pluginMgr.GetWidgetList())[algorithmUID]->SetInputData(_list);
+        (m_pluginMgr.GetWidgetList())[algorithmUID]->StartAlgorithm();
         //algorithm->UpdateParentWidget(ui->FilterArea);
     }
 
@@ -372,7 +373,7 @@ void ImageViewer::OnAlgorithmFinished(int algorithmUID)
 {
     LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is finished");
     LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is finished");
-
+    QApplication::restoreOverrideCursor();
 
 }
 

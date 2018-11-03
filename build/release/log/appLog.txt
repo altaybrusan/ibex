@@ -1111,3 +1111,43 @@
 [ 2018-11-03 ][ 15:51:36 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
 [ 2018-11-03 ][ 15:51:43 ] DEBUG APPLICATION - algorithm UID:1 is started
 [ 2018-11-03 ][ 15:51:51 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-03 ][ 16:08:34 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 16:08:41 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 16:09:01 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 16:09:04 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 16:09:11 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-03 ][ 16:10:13 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 16:10:20 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 16:10:43 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 16:10:45 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 16:10:52 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-03 ][ 16:12:51 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 16:12:55 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 16:13:24 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 16:13:26 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 16:13:33 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-03 ][ 16:13:45 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 16:13:49 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 16:30:21 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 16:30:44 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 16:31:07 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 16:31:10 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 16:38:52 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 16:38:56 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 16:39:40 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/core/test_images/hand-test.tiff
+[ 2018-11-03 ][ 16:39:43 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 17:01:05 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 17:02:21 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 17:03:05 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-03 ][ 17:03:12 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 17:04:55 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 17:04:59 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 17:05:08 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-03 ][ 17:05:10 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 17:07:04 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 17:07:09 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-03 ][ 17:07:18 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-03 ][ 17:07:19 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-03 ][ 17:07:27 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-03 ][ 17:07:36 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-03 ][ 17:07:40 ] INFO  APPLICATION -  app successfully signed in
