@@ -68,8 +68,8 @@ LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
         $$(VTK_DIR)/lib/vtkImagingFourier-9.0.lib
 
 SOURCES += \
-    butterworthlowpassfilter.cpp \
-    butterworthlowpassfilterwidget.cpp
+    butterworthlowpassfilterwidget.cpp \
+    logfilter.cpp
 
 HEADERS += \
     butterworthlowpassfilterwidget.h \
