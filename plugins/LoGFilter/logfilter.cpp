@@ -1,5 +1,5 @@
-#include "butterworthlowpassfilter.h"
-#include "butterworthlowpassfilterwidget.h"
+#include "logfilter.h"
+#include "logfilterwidget.h"
 
 #include <QVariant>
 #include <vtkImageData.h>
@@ -36,7 +36,7 @@
 ButterworthLowPassFilter::ButterworthLowPassFilter()
 {
 
-    m_filterWidget =new ButterworthLowPassFilterWidget(nullptr);
+    m_filterWidget =new LoGFilterWidget(nullptr);
     m_filterWidget->SetBoundaries(MIN_BOUND,MAX_BOUND);
     m_filterWidget->SetX(DEF_VALUE);
     m_filterWidget->SetY(DEF_VALUE);
@@ -44,7 +44,7 @@ ButterworthLowPassFilter::ButterworthLowPassFilter()
     m_isEnabled = true;
     m_UID = 1;
     m_name="Butterworth low pass filter";
-    connect(m_filterWidget,&ButterworthLowPassFilterWidget::NotifyApplyFiltering,this,&ButterworthLowPassFilter::OnApplyBtnPressed);
+    connect(m_filterWidget,&LoGFilterWidget::NotifyApplyFiltering,this,&ButterworthLowPassFilter::OnApplyBtnPressed);
 }
 
 void ButterworthLowPassFilter::UpdateParameter(QString key, QVariant value)
@@ -171,7 +171,7 @@ void ButterworthLowPassFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputD
 
       vtkSmartPointer<vtkImageShiftScale> shiftScaleFilter =
         vtkSmartPointer<vtkImageShiftScale>::New();
-      shiftScaleFilter->SetOutputScalarTypeToFloat();
+      //shiftScaleFilter->SetOutputScalarTypeToFloat();
       shiftScaleFilter->SetInputConnection(enhance->GetOutputPort());
       shiftScaleFilter->SetShift(-1.0f * enhance->GetOutput()->GetScalarRange()[0]); // brings the lower bound to 0
       float oldRange = enhance->GetOutput()->GetScalarRange()[1] -

@@ -8,14 +8,14 @@
 #include <QList>
 #include <logfilterwidget.h>
 
-class BUTTERWORTHLOWPASSFILTER_EXPORT ButterworthLowPassFilter : public IAlgorithm
+class LOGFILTER_EXPORT LoGFilter : public IAlgorithm
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "tr.edu.boun.IAlgorithm")
     Q_INTERFACES(IAlgorithm)
 
 public:
-    ButterworthLowPassFilter();
+    LoGFilter();
     void UpdateParameter(QString key, QVariant value) override;
     QVariant GetParameterValue(QString key) override;
     void UpdateParentWidget(QWidget* parent) override;
@@ -31,12 +31,6 @@ public:
     int GetPreviousAlgorithmUID();
     QString AlgorithmName() override;
 
-//signals:
-//    void NotifyAlgorithmStarted(int algorithmUID) override;
-//    void NotifyProgress(int algorithmUID,int percent) override;
-//    void NotifyError(int algorithmUID,QString message) override;
-//    void NotifyAlgorithmFinished(int algorithmUID) override ;
-
 public slots:
     void OnParameterUpdated() override;
 
@@ -51,7 +45,7 @@ private:
     QMap<QString,QVariant> m_parameters;
     QList<vtkSmartPointer<vtkImageData>> m_imageDataSet;
     QList<vtkSmartPointer<vtkImageData>> m_output;
-    ButterworthLowPassFilterWidget* m_filterWidget;
+    LoGFilterWidget* m_filterWidget;
     bool m_isEnabled;
     QString m_name;
     int m_UID;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ButterworthLowPassFilterWidget</class>
- <widget class="QWidget" name="ButterworthLowPassFilterWidget">
+ <class>LoGFilterWidget</class>
+ <widget class="QWidget" name="LoGFilterWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -83,14 +83,14 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QLabel" name="xCutOffLbl">
+         <widget class="QLabel" name="kernelSizeLbl">
           <property name="text">
            <string>G-Kernel</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="kernelSpinBox"/>
+         <widget class="QSpinBox" name="kernelSizeSpinBox"/>
         </item>
        </layout>
       </item>
