@@ -1,4 +1,4 @@
-#include "butterworthlowpassfilterwidget.h"
+#include "logfilterwidget.h"
 #include "ui_butterworthlowpassfilterwidget.h"
 #include "ctkRangeSlider.h"
 

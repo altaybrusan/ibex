@@ -72,10 +72,10 @@ SOURCES += \
     logfilterwidget.cpp
 
 HEADERS += \
-    butterworthlowpassfilterwidget.h \
     butterworthlowpassfilter_global.h \
     ../../common/include/ialgorithm.h \
-    butterworthlowpassfilter.h
+    butterworthlowpassfilter.h \
+    logfilterwidget.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

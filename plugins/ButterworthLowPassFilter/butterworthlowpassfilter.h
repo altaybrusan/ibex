@@ -6,7 +6,7 @@
 #include <QMap>
 #include <QVariant>
 #include <QList>
-#include <butterworthlowpassfilterwidget.h>
+#include <logfilterwidget.h>
 
 class BUTTERWORTHLOWPASSFILTER_EXPORT ButterworthLowPassFilter : public IAlgorithm
 {
