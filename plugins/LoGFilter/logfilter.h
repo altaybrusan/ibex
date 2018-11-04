@@ -40,7 +40,7 @@ private slots:
 
 
 private:
-    void CalculateFFT(vtkSmartPointer<vtkImageData> inputData);
+    void Filter(vtkSmartPointer<vtkImageData> inputData);
 
     QMap<QString,QVariant> m_parameters;
     QList<vtkSmartPointer<vtkImageData>> m_imageDataSet;
