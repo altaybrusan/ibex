@@ -1681,3 +1681,47 @@
 [ 2018-11-04 ][ 16:12:50 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
 [ 2018-11-04 ][ 16:12:53 ] DEBUG APPLICATION - algorithm UID:1 is started
 [ 2018-11-04 ][ 16:12:54 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 17:04:46 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 17:04:56 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 17:05:04 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 17:05:07 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 17:05:07 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 17:05:20 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 17:05:21 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 17:09:20 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 17:09:25 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 17:09:40 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 17:09:41 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 17:09:43 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 18:25:33 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 18:25:45 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 18:26:02 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 18:26:08 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 18:26:10 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 18:29:22 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 18:29:27 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 18:29:40 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 18:29:47 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 18:29:48 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 18:41:53 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 18:41:56 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 18:42:05 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 18:42:13 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 18:42:14 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 18:43:58 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 18:44:02 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 18:44:16 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 18:44:23 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 18:44:24 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 18:53:17 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 18:53:24 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 18:53:31 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 18:53:34 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 18:53:35 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 19:28:59 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-04 ][ 19:29:04 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-04 ][ 19:29:14 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-04 ][ 19:29:18 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 19:29:19 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-04 ][ 19:29:41 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-04 ][ 19:29:42 ] DEBUG APPLICATION - algorithm UID:1 is finished

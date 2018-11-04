@@ -375,7 +375,7 @@ void ImageViewer::OnAlgorithmFinished(int algorithmUID)
     LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is finished");
     LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is finished");
 
-//    vtkSmartPointer<vtkImageData> _filteredImage = m_pluginMgr.GetWidgetList()[algorithmUID]->GetOutputData().at(0);
+    vtkSmartPointer<vtkImageData> _filteredImage = m_pluginMgr.GetWidgetList()[algorithmUID]->GetOutputData().at(0);
 //     vtkSmartPointer<vtkPNGWriter> writer =
 //       vtkSmartPointer<vtkPNGWriter>::New();
 //     writer->SetFileName("demo.png");
@@ -383,13 +383,18 @@ void ImageViewer::OnAlgorithmFinished(int algorithmUID)
 //     writer->SetInputData(_filteredImage);
 //     writer->Write();
 
-//    castFilter->SetInputData(_filteredImage);
-//    castFilter->Update();
-//    castFilter->Modified();
 
-//    imageViewer->Render();
-//    imageViewer->UpdateDisplayExtent();
-//    QApplication::restoreOverrideCursor();
+    castFilter->SetInputData(_filteredImage);
+    castFilter->Update();
+    castFilter->Modified();
+    double min = castFilter->GetOutput()->GetScalarRange()[0];
+    double max = castFilter->GetOutput()->GetScalarRange()[1];
+    imageViewer->SetColorLevel((max+min)/2);
+    imageViewer->SetColorWindow(max-min);
+    imageViewer->SetInputData(_filteredImage);
+    imageViewer->Render();
+    //imageViewer->UpdateDisplayExtent();
+    QApplication::restoreOverrideCursor();
 }
 
 

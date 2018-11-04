@@ -13049,6 +13049,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		..\3rd-Party\ctk\include\ctk-0.1\ctkSingleton.h \
 		..\3rd-Party\ctk\include\ctk-0.1\ctkVisualizationVTKCoreExport.h \
 		C:\VTK\include\vtk-9.0\vtkVersion.h \
+		C:\VTK\include\vtk-9.0\vtkPNGWriter.h \
+		C:\VTK\include\vtk-9.0\vtkImageWriter.h \
 		C:\VTK\include\vtk-9.0\vtkInteractorStyleImage.h \
 		C:\VTK\include\vtk-9.0\vtkInteractionStyleModule.h \
 		C:\VTK\include\vtk-9.0\vtkInteractorStyleTrackballCamera.h \
@@ -16442,6 +16444,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		Model/anatomicregionelement.h \
 		View/loadImagedialog.h \
 		View/toolsdialog.h \
+		Controller/algorithmpluginmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
 		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QDomNode \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
@@ -18260,10 +18264,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpointer.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFileInfo \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QCoreApplication \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qeventloop.h
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFileInfo
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\algorithmpluginmgr.obj Controller\algorithmpluginmgr.cpp
 
 ..\build\debug\.obj\qrc_resources.obj: ..\build\debug\.rcc\qrc_resources.cpp 

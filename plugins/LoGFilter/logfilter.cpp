@@ -84,7 +84,7 @@ void LoGFilter::StartAlgorithm()
     if(m_imageDataSet.at(0))
     {
         m_filterWidget->SetEnableBtn(false);
-       CalculateFFT(m_imageDataSet.at(0));
+       Filter(m_imageDataSet.at(0));
 
     }
    return;
@@ -139,7 +139,7 @@ void LoGFilter::OnApplyBtnPressed()
 }
 
 
-void LoGFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputData)
+void LoGFilter::Filter(vtkSmartPointer<vtkImageData> inputData)
 {
 
     vtkSmartPointer<vtkImageCast> originalCastFilter =
@@ -186,13 +186,24 @@ void LoGFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputData)
       outputCastFilter->Update();
 
 
-//     m_output.append( outputCastFilter->GetOutput());
+     m_output.append( outputCastFilter->GetOutput());
      vtkSmartPointer<vtkTIFFWriter> writer =
        vtkSmartPointer<vtkTIFFWriter>::New();
-     writer->SetFileName("demox2.png");
-
+     writer->SetFileName("LoGOutput.png");
      writer->SetInputData(outputCastFilter->GetOutput());
      writer->Write();
+
+     vtkSmartPointer<vtkTIFFWriter> writer2 =
+       vtkSmartPointer<vtkTIFFWriter>::New();
+     writer2->SetFileName("GaussianOutput.png");
+     writer2->SetInputData(gaussianSmoothFilter->GetOutput());
+     writer2->Write();
+
+     vtkSmartPointer<vtkTIFFWriter> writer3 =
+       vtkSmartPointer<vtkTIFFWriter>::New();
+     writer3->SetFileName("EdgeOutput.png");
+     writer3->SetInputData(laplacian->GetOutput());
+     writer3->Write();
 
      m_filterWidget->SetEnableBtn(true);
      emit NotifyAlgorithmFinished(m_UID);
