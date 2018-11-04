@@ -2,7 +2,7 @@
 #define BUTTERWORTHLOWPASSFILTER_H
 
 #include "ialgorithm.h"
-#include "butterworthlowpassfilter_global.h"
+#include "logfilterwidget_global.h"
 #include <QMap>
 #include <QVariant>
 #include <QList>
