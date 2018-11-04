@@ -73,9 +73,9 @@ SOURCES += \
 
 HEADERS += \
     ../../common/include/ialgorithm.h \
-    butterworthlowpassfilter.h \
     logfilterwidget.h \
-    logfilterwidget_global.h
+    logfilterwidget_global.h \
+    logfilter.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
