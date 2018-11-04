@@ -17,7 +17,7 @@ CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStri
 INCPATH       = -I. -I..\..\3rd-Party\ctk\include\ctk-0.1 -I..\..\3rd-Party\ctk\include -I..\..\common\include -IC:\VTK\include\vtk-9.0 -IC:\Qt\5.9.4\msvc2015_64\include -IC:\Qt\5.9.4\msvc2015_64\include\QtWidgets -IC:\Qt\5.9.4\msvc2015_64\include\QtGui -IC:\Qt\5.9.4\msvc2015_64\include\QtANGLE -IC:\Qt\5.9.4\msvc2015_64\include\QtCore -I..\..\build\debug\.moc -I..\..\build\debug\.ui -IC:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /DLL /SUBSYSTEM:WINDOWS
-LIBS          = C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgetsPlugins.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgetsPlugins.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\dcmtls.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\dcmnet.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\dcmdata.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\oflog.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\ofstd.lib C:\VTK\lib\QVTKWidgetPlugin.lib C:\VTK\lib\vtkInteractionStyle-9.0.lib C:\VTK\lib\vtkCommonCore-9.0.lib C:\VTK\lib\vtkRenderingOpenGL2-9.0.lib C:\VTK\lib\vtkViewsCore-9.0.lib C:\VTK\lib\vtkGUISupportQt-9.0.lib C:\VTK\lib\vtkRenderingCore-9.0.lib C:\VTK\lib\vtkInteractionImage-9.0.lib C:\VTK\lib\vtkRenderingImage-9.0.lib C:\VTK\lib\vtkIOImage-9.0.lib C:\VTK\lib\vtkCommonExecutionModel-9.0.lib C:\VTK\lib\vtkInteractionWidgets-9.0.lib C:\VTK\lib\vtkRenderingAnnotation-9.0.lib C:\VTK\lib\vtkCommonDataModel-9.0.lib C:\VTK\lib\vtkImagingCore-9.0.lib C:\VTK\lib\vtkImagingFourier-9.0.lib /LIBPATH:C:\Qt\5.9.4\msvc2015_64\lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Guid.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Cored.lib 
+LIBS          = C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKDICOMWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKCore.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKVisualizationVTKWidgetsPlugins.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgets.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\CTKWidgetsPlugins.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\dcmtls.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\dcmnet.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\dcmdata.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\oflog.lib C:\Users\Altay\Documents\Qt\Projects\ibex\3rd-Party\ctk\lib\ctk-0.1\ofstd.lib C:\VTK\lib\QVTKWidgetPlugin.lib C:\VTK\lib\vtkInteractionStyle-9.0.lib C:\VTK\lib\vtkCommonCore-9.0.lib C:\VTK\lib\vtkRenderingOpenGL2-9.0.lib C:\VTK\lib\vtkViewsCore-9.0.lib C:\VTK\lib\vtkGUISupportQt-9.0.lib C:\VTK\lib\vtkRenderingCore-9.0.lib C:\VTK\lib\vtkInteractionImage-9.0.lib C:\VTK\lib\vtkRenderingImage-9.0.lib C:\VTK\lib\vtkIOImage-9.0.lib C:\VTK\lib\vtkCommonExecutionModel-9.0.lib C:\VTK\lib\vtkInteractionWidgets-9.0.lib C:\VTK\lib\vtkRenderingAnnotation-9.0.lib C:\VTK\lib\vtkCommonDataModel-9.0.lib C:\VTK\lib\vtkImagingCore-9.0.lib C:\VTK\lib\vtkImagingGeneral-9.0.lib C:\VTK\lib\vtkImagingMath-9.0.lib C:\VTK\lib\vtkImagingColor-9.0.lib C:\VTK\lib\vtkImagingSources-9.0.lib C:\VTK\lib\vtkImagingFourier-9.0.lib /LIBPATH:C:\Qt\5.9.4\msvc2015_64\lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Guid.lib C:\Qt\5.9.4\msvc2015_64\lib\Qt5Cored.lib 
 QMAKE         = C:\Qt\5.9.4\msvc2015_64\bin\qmake.exe
 IDC           = idc
 IDL           = midl /NOLOGO
@@ -872,33 +872,55 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\VTK\include\vtk-9.0\vtkExecutive.h \
 		C:\VTK\include\vtk-9.0\vtkInformationVector.h \
 		C:\VTK\include\vtk-9.0\vtkInformation.h \
-		C:\VTK\include\vtk-9.0\vtkImageFFT.h \
-		C:\VTK\include\vtk-9.0\vtkImagingFourierModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageFourierFilter.h \
-		C:\VTK\include\vtk-9.0\vtkImageDecomposeFilter.h \
+		C:\VTK\include\vtk-9.0\vtkImageCast.h \
 		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageIterateFilter.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkAlgorithm.h \
-		C:\VTK\include\vtk-9.0\vtkImageCast.h \
 		C:\VTK\include\vtk-9.0\vtkPNGWriter.h \
 		C:\VTK\include\vtk-9.0\vtkIOImageModule.h \
 		C:\VTK\include\vtk-9.0\vtkAutoInit.h \
 		C:\VTK\include\vtk-9.0\vtkImageWriter.h \
-		C:\VTK\include\vtk-9.0\vtkImageIdealHighPass.h \
-		C:\VTK\include\vtk-9.0\vtkImageRFFT.h \
-		C:\VTK\include\vtk-9.0\vtkImageExtractComponents.h \
 		C:\VTK\include\vtk-9.0\vtkImageShiftScale.h \
-		C:\VTK\include\vtk-9.0\vtkImageSlice.h \
+		C:\VTK\include\vtk-9.0\vtkImageLaplacian.h \
+		C:\VTK\include\vtk-9.0\vtkImagingGeneralModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageMathematics.h \
+		C:\VTK\include\vtk-9.0\vtkImagingMathModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageMapToWindowLevelColors.h \
+		C:\VTK\include\vtk-9.0\vtkImagingColorModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageMapToColors.h \
+		C:\VTK\include\vtk-9.0\vtkImageActor.h \
 		C:\VTK\include\vtk-9.0\vtkRenderingCoreModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageSlice.h \
 		C:\VTK\include\vtk-9.0\vtkProp3D.h \
 		C:\VTK\include\vtk-9.0\vtkProp.h \
+		C:\VTK\include\vtk-9.0\vtkTIFFWriter.h \
+		C:\VTK\include\vtk-9.0\vtkImageGaussianSmooth.h \
+		C:\VTK\include\vtk-9.0\vtkPointData.h \
+		C:\VTK\include\vtk-9.0\vtkDataSetAttributes.h \
+		C:\VTK\include\vtk-9.0\vtkFieldData.h \
+		C:\VTK\include\vtk-9.0\vtkAbstractArray.h \
+		C:\VTK\include\vtk-9.0\vtkVariant.h \
+		C:\VTK\include\vtk-9.0\vtkStdString.h \
+		C:\VTK\include\vtk-9.0\vtkUnicodeString.h \
+		C:\VTK\include\vtk-9.0\vtkVariantInlineOperators.h \
+		C:\VTK\include\vtk-9.0\vtkDataArray.h \
+		C:\VTK\include\vtk-9.0\vtkImageMandelbrotSource.h \
+		C:\VTK\include\vtk-9.0\vtkImagingSourcesModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageSobel2D.h \
+		C:\VTK\include\vtk-9.0\vtkImageSpatialAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkImageSliceMapper.h \
 		C:\VTK\include\vtk-9.0\vtkImageMapper3D.h \
 		C:\VTK\include\vtk-9.0\vtkAbstractMapper3D.h \
 		C:\VTK\include\vtk-9.0\vtkAbstractMapper.h \
-		C:\VTK\include\vtk-9.0\vtkImageButterworthLowPass.h
+		C:\VTK\include\vtk-9.0\vtkImageRFFT.h \
+		C:\VTK\include\vtk-9.0\vtkImagingFourierModule.h \
+		C:\VTK\include\vtk-9.0\vtkImageFourierFilter.h \
+		C:\VTK\include\vtk-9.0\vtkImageDecomposeFilter.h \
+		C:\VTK\include\vtk-9.0\vtkImageIterateFilter.h \
+		C:\VTK\include\vtk-9.0\vtkImageFFT.h \
+		C:\VTK\include\vtk-9.0\vtkImageIdealHighPass.h \
+		C:\VTK\include\vtk-9.0\vtkImageExtractComponents.h
 
 ..\..\build\debug\.obj\butterworthlowpassfilterwidget.obj: butterworthlowpassfilterwidget.cpp butterworthlowpassfilterwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \

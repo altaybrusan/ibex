@@ -61,6 +61,10 @@ LIBS += $$(VTK_DIR)/lib/QVTKWidgetPlugin.lib \
         $$(VTK_DIR)/lib/vtkRenderingAnnotation-9.0.lib\
         $$(VTK_DIR)/lib/vtkCommonDataModel-9.0.lib\
         $$(VTK_DIR)/lib/vtkImagingCore-9.0.lib\
+        $$(VTK_DIR)/lib/vtkImagingGeneral-9.0.lib\
+        $$(VTK_DIR)/lib/vtkImagingMath-9.0.lib\
+        $$(VTK_DIR)/lib/vtkImagingColor-9.0.lib\
+        $$(VTK_DIR)/lib/vtkImagingSources-9.0.lib\
         $$(VTK_DIR)/lib/vtkImagingFourier-9.0.lib
 
 SOURCES += \
@@ -78,4 +82,4 @@ unix {
 }
 
 FORMS += \
-    butterworthlowpassfilterwidget.ui
+    logfilterwidget.ui

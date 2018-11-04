@@ -1,27 +1,36 @@
 #include "butterworthlowpassfilter.h"
-#include <QVariant>
-
-
-#include "vtkImageData.h"
-#include "vtkObjectFactory.h"
-#include "vtkStreamingDemandDrivenPipeline.h"
-#include "vtkInformationVector.h"
-#include "vtkInformation.h"
-#include "vtkDataObject.h"
-#include "vtkSmartPointer.h"
 #include "butterworthlowpassfilterwidget.h"
-#include <vtkImageFFT.h>
+
+#include <QVariant>
+#include <vtkImageData.h>
+#include <vtkObjectFactory.h>
+#include <vtkStreamingDemandDrivenPipeline.h>
+#include <vtkInformationVector.h>
+#include <vtkInformation.h>
+#include <vtkDataObject.h>
+#include <vtkSmartPointer.h>
 #include <vtkImageCast.h>
 #include <vtkPNGWriter.h>
-#include <vtkImageIdealHighPass.h>
-#include <vtkImageRFFT.h>
-#include <vtkImageExtractComponents.h>
 #include <vtkImageShiftScale.h>
-#include <vtkImageSlice.h>
+#include <vtkImageLaplacian.h>
+#include <vtkImageMathematics.h>
+#include <vtkImageMapToWindowLevelColors.h>
+#include <vtkImageActor.h>
+#include <vtkTIFFWriter.h>
+#include <vtkImageGaussianSmooth.h>
+#include <vtkPointData.h>
+#include <vtkDataArray.h>
+#include <vtkImageMandelbrotSource.h>
+#include <vtkImageSobel2D.h>
 #include <vtkImageSliceMapper.h>
-#include <vtkImageButterworthLowPass.h>
+#include <vtkImageCast.h>
+#include <vtkImageRFFT.h>
+#include <vtkImageFFT.h>
+#include <vtkImageIdealHighPass.h>
+#include <vtkImageExtractComponents.h>
+
 #define MIN_BOUND 0.001
-#define MAX_BOUND 0.1
+#define MAX_BOUND 100.0
 #define DEF_VALUE 0.01
 #define STEP_SIZE 0.001
 ButterworthLowPassFilter::ButterworthLowPassFilter()
@@ -74,7 +83,6 @@ QList<vtkSmartPointer<vtkImageData> > ButterworthLowPassFilter::GetOutputData()
 
 void ButterworthLowPassFilter::StartAlgorithm()
 {
-
     if(m_imageDataSet.at(0))
     {
         m_filterWidget->SetEnableBtn(false);
@@ -86,6 +94,7 @@ void ButterworthLowPassFilter::StartAlgorithm()
 
 void ButterworthLowPassFilter::StopAlgorithm()
 {
+
 
 }
 
@@ -134,43 +143,39 @@ void ButterworthLowPassFilter::OnApplyBtnPressed()
 
 void ButterworthLowPassFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputData)
 {
-    double _x = m_filterWidget->GetX();
-    double _y = m_filterWidget->GetY();
-    // Compute the FFT of the image
-      vtkSmartPointer<vtkImageFFT> fftFilter =
-              vtkSmartPointer<vtkImageFFT>::New();
-      fftFilter->SetInputData(inputData);
-      fftFilter->Update();
 
-      // ButterworthLowPass the FFT
+    vtkSmartPointer<vtkImageCast> originalCastFilter =
+      vtkSmartPointer<vtkImageCast>::New();
+    originalCastFilter->SetInputData(inputData);
+    originalCastFilter->SetOutputScalarTypeToFloat();
+    originalCastFilter->Update();
 
-      vtkSmartPointer<vtkImageButterworthLowPass> butterworthLowPass =
-                    vtkSmartPointer<vtkImageButterworthLowPass>::New();
-      butterworthLowPass->SetInputConnection(fftFilter->GetOutputPort());
-      butterworthLowPass->SetXCutOff(_x);
-      butterworthLowPass->SetYCutOff(_y);
-      butterworthLowPass->Update();
+    vtkSmartPointer<vtkImageGaussianSmooth> gaussianSmoothFilter =
+        vtkSmartPointer<vtkImageGaussianSmooth>::New();
+      gaussianSmoothFilter->SetInputConnection(originalCastFilter->GetOutputPort());
+      gaussianSmoothFilter->SetRadiusFactor(2);
+      gaussianSmoothFilter->Update();
 
-      // Compute the IFFT of the high pass filtered image
-      vtkSmartPointer<vtkImageRFFT> rfftFilter =
-              vtkSmartPointer<vtkImageRFFT>::New();
-      //rfftFilter->SetInputConnection(highPassFilter->GetOutputPort());
-      rfftFilter->SetInputConnection(butterworthLowPass->GetOutputPort());
-      rfftFilter->Update();
+    vtkSmartPointer<vtkImageLaplacian> laplacian =
+      vtkSmartPointer<vtkImageLaplacian>::New();
+    laplacian->SetInputConnection(gaussianSmoothFilter->GetOutputPort());
+    laplacian->SetDimensionality(2);
+    laplacian->Update();
 
-      vtkSmartPointer<vtkImageExtractComponents> extractRealFilter =
-        vtkSmartPointer<vtkImageExtractComponents>::New();
-      extractRealFilter->SetInputConnection(rfftFilter->GetOutputPort());
-      extractRealFilter->SetComponents(0);
-      extractRealFilter->Update();
+    vtkSmartPointer<vtkImageMathematics> enhance =
+      vtkSmartPointer<vtkImageMathematics>::New();
+    enhance->SetInputConnection(0, gaussianSmoothFilter->GetOutputPort());
+    enhance->SetInputConnection(1, laplacian->GetOutputPort());
+    enhance->SetOperationToAdd();
+    enhance->Update();
 
       vtkSmartPointer<vtkImageShiftScale> shiftScaleFilter =
         vtkSmartPointer<vtkImageShiftScale>::New();
-      shiftScaleFilter->SetOutputScalarTypeToUnsignedChar();
-      shiftScaleFilter->SetInputConnection(extractRealFilter->GetOutputPort());
-      shiftScaleFilter->SetShift(-1.0f * extractRealFilter->GetOutput()->GetScalarRange()[0]); // brings the lower bound to 0
-      float oldRange = extractRealFilter->GetOutput()->GetScalarRange()[1] -
-              extractRealFilter->GetOutput()->GetScalarRange()[0];
+      shiftScaleFilter->SetOutputScalarTypeToFloat();
+      shiftScaleFilter->SetInputConnection(enhance->GetOutputPort());
+      shiftScaleFilter->SetShift(-1.0f * enhance->GetOutput()->GetScalarRange()[0]); // brings the lower bound to 0
+      float oldRange = enhance->GetOutput()->GetScalarRange()[1] -
+                       enhance->GetOutput()->GetScalarRange()[0];
       float newRange = 100; // We want the output [0,100] (the same as the original image)
       shiftScaleFilter->SetScale(newRange/oldRange);
       shiftScaleFilter->Update();
@@ -179,16 +184,17 @@ void ButterworthLowPassFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputD
       vtkSmartPointer<vtkImageCast> outputCastFilter =
               vtkSmartPointer<vtkImageCast>::New();
       outputCastFilter->SetInputConnection(shiftScaleFilter->GetOutputPort());
-      outputCastFilter->SetOutputScalarTypeToUnsignedChar();
+      outputCastFilter->SetOutputScalarTypeToFloat();
       outputCastFilter->Update();
 
-     m_output.append( outputCastFilter->GetOutput());
-//     vtkSmartPointer<vtkPNGWriter> writer =
-//       vtkSmartPointer<vtkPNGWriter>::New();
-//     writer->SetFileName("demo.png");
 
-//     writer->SetInputData(outputCastFilter->GetOutput());
-//     writer->Write();
+//     m_output.append( outputCastFilter->GetOutput());
+     vtkSmartPointer<vtkTIFFWriter> writer =
+       vtkSmartPointer<vtkTIFFWriter>::New();
+     writer->SetFileName("demox2.png");
+
+     writer->SetInputData(outputCastFilter->GetOutput());
+     writer->Write();
 
      m_filterWidget->SetEnableBtn(true);
      emit NotifyAlgorithmFinished(m_UID);

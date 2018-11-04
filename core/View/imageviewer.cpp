@@ -13,6 +13,7 @@
 #include "ctkThumbnailListWidget.h"
 #include "ctkThumbnailLabel.h"
 // VTK includes
+#include <vtkPNGWriter.h>
 #include <vtkImageReader2Factory.h>
 #include <vtkImageReader2.h>
 #include <vtkSmartPointer.h>
@@ -373,8 +374,22 @@ void ImageViewer::OnAlgorithmFinished(int algorithmUID)
 {
     LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is finished");
     LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is finished");
-    QApplication::restoreOverrideCursor();
 
+//    vtkSmartPointer<vtkImageData> _filteredImage = m_pluginMgr.GetWidgetList()[algorithmUID]->GetOutputData().at(0);
+//     vtkSmartPointer<vtkPNGWriter> writer =
+//       vtkSmartPointer<vtkPNGWriter>::New();
+//     writer->SetFileName("demo.png");
+
+//     writer->SetInputData(_filteredImage);
+//     writer->Write();
+
+//    castFilter->SetInputData(_filteredImage);
+//    castFilter->Update();
+//    castFilter->Modified();
+
+//    imageViewer->Render();
+//    imageViewer->UpdateDisplayExtent();
+//    QApplication::restoreOverrideCursor();
 }
 
 
