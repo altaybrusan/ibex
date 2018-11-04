@@ -29,31 +29,29 @@
 #include <vtkImageIdealHighPass.h>
 #include <vtkImageExtractComponents.h>
 
-#define MIN_BOUND 0.001
-#define MAX_BOUND 100.0
+#define MIN_BOUND 2
+#define MAX_BOUND 10
 #define DEF_VALUE 0.01
-#define STEP_SIZE 0.001
-ButterworthLowPassFilter::ButterworthLowPassFilter()
+#define STEP_SIZE 1
+LoGFilter::LoGFilter()
 {
 
     m_filterWidget =new LoGFilterWidget(nullptr);
     m_filterWidget->SetBoundaries(MIN_BOUND,MAX_BOUND);
-    m_filterWidget->SetX(DEF_VALUE);
-    m_filterWidget->SetY(DEF_VALUE);
     m_filterWidget->SetStep(STEP_SIZE);
     m_isEnabled = true;
     m_UID = 1;
-    m_name="Butterworth low pass filter";
-    connect(m_filterWidget,&LoGFilterWidget::NotifyApplyFiltering,this,&ButterworthLowPassFilter::OnApplyBtnPressed);
+    m_name="LoG filter";
+    connect(m_filterWidget,&LoGFilterWidget::NotifyApplyFiltering,this,&LoGFilter::OnApplyBtnPressed);
 }
 
-void ButterworthLowPassFilter::UpdateParameter(QString key, QVariant value)
+void LoGFilter::UpdateParameter(QString key, QVariant value)
 {
     if(m_parameters.contains(key))
         m_parameters.insert(key,value);
 }
 
-QVariant ButterworthLowPassFilter::GetParameterValue(QString key)
+QVariant LoGFilter::GetParameterValue(QString key)
 {
     if(m_parameters.contains(key))
         return m_parameters[key];
@@ -61,27 +59,27 @@ QVariant ButterworthLowPassFilter::GetParameterValue(QString key)
         return QVariant();
 }
 
-void ButterworthLowPassFilter::UpdateParentWidget(QWidget *parent)
+void LoGFilter::UpdateParentWidget(QWidget *parent)
 {
     m_filterWidget->setParent(parent);
 }
 
-QWidget *ButterworthLowPassFilter::GetWidget()
+QWidget *LoGFilter::GetWidget()
 {
     return dynamic_cast<QWidget*>(m_filterWidget);
 }
 
-void ButterworthLowPassFilter::SetInputData(QList<vtkSmartPointer<vtkImageData> > imageDataSet)
+void LoGFilter::SetInputData(QList<vtkSmartPointer<vtkImageData> > imageDataSet)
 {
     m_imageDataSet = imageDataSet;
 }
 
-QList<vtkSmartPointer<vtkImageData> > ButterworthLowPassFilter::GetOutputData()
+QList<vtkSmartPointer<vtkImageData> > LoGFilter::GetOutputData()
 {
     return m_output;
 }
 
-void ButterworthLowPassFilter::StartAlgorithm()
+void LoGFilter::StartAlgorithm()
 {
     if(m_imageDataSet.at(0))
     {
@@ -92,56 +90,56 @@ void ButterworthLowPassFilter::StartAlgorithm()
    return;
 }
 
-void ButterworthLowPassFilter::StopAlgorithm()
+void LoGFilter::StopAlgorithm()
 {
 
 
 }
 
-bool ButterworthLowPassFilter::IsEnabled()
+bool LoGFilter::IsEnabled()
 {
    return  m_isEnabled;
 }
 
-void ButterworthLowPassFilter::SetAlgorithmEnabled(bool enabled)
+void LoGFilter::SetAlgorithmEnabled(bool enabled)
 {
     m_isEnabled = enabled;
     //m_filterWidget->SetWidgetEnabled(false);
 }
 
-int ButterworthLowPassFilter::GetAlgorithmUID()
+int LoGFilter::GetAlgorithmUID()
 {
     return m_UID;
 }
 
-int ButterworthLowPassFilter::GetNextAlgorithmUID()
+int LoGFilter::GetNextAlgorithmUID()
 {
     return -1;
 }
 
-int ButterworthLowPassFilter::GetPreviousAlgorithmUID()
+int LoGFilter::GetPreviousAlgorithmUID()
 {
     return -1;
 }
 
-QString ButterworthLowPassFilter::AlgorithmName()
+QString LoGFilter::AlgorithmName()
 {
     return m_name;
 
 }
 
-void ButterworthLowPassFilter::OnParameterUpdated()
+void LoGFilter::OnParameterUpdated()
 {
 
 }
 
-void ButterworthLowPassFilter::OnApplyBtnPressed()
+void LoGFilter::OnApplyBtnPressed()
 {
     emit NotifyAlgorithmStarted(m_UID);
 }
 
 
-void ButterworthLowPassFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputData)
+void LoGFilter::CalculateFFT(vtkSmartPointer<vtkImageData> inputData)
 {
 
     vtkSmartPointer<vtkImageCast> originalCastFilter =
