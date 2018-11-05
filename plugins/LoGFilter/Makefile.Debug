@@ -760,22 +760,12 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		logfilterwidget.h \
 		C:\VTK\include\vtk-9.0\vtkObjectFactory.h \
 		C:\VTK\include\vtk-9.0\vtkDebugLeaksManager.h \
-		C:\VTK\include\vtk-9.0\vtkStreamingDemandDrivenPipeline.h \
-		C:\VTK\include\vtk-9.0\vtkCommonExecutionModelModule.h \
-		C:\VTK\include\vtk-9.0\vtkDemandDrivenPipeline.h \
-		C:\VTK\include\vtk-9.0\vtkExecutive.h \
-		C:\VTK\include\vtk-9.0\vtkInformationVector.h \
-		C:\VTK\include\vtk-9.0\vtkInformation.h \
-		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		C:\VTK\include\vtk-9.0\vtkImageShiftScale.h \
 		C:\VTK\include\vtk-9.0\vtkImagingCoreModule.h \
 		C:\VTK\include\vtk-9.0\vtkThreadedImageAlgorithm.h \
+		C:\VTK\include\vtk-9.0\vtkCommonExecutionModelModule.h \
 		C:\VTK\include\vtk-9.0\vtkImageAlgorithm.h \
 		C:\VTK\include\vtk-9.0\vtkAlgorithm.h \
-		C:\VTK\include\vtk-9.0\vtkPNGWriter.h \
-		C:\VTK\include\vtk-9.0\vtkIOImageModule.h \
-		C:\VTK\include\vtk-9.0\vtkAutoInit.h \
-		C:\VTK\include\vtk-9.0\vtkImageWriter.h \
-		C:\VTK\include\vtk-9.0\vtkImageShiftScale.h \
 		C:\VTK\include\vtk-9.0\vtkImageLaplacian.h \
 		C:\VTK\include\vtk-9.0\vtkImagingGeneralModule.h \
 		C:\VTK\include\vtk-9.0\vtkImageMathematics.h \
@@ -783,12 +773,10 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\VTK\include\vtk-9.0\vtkImageMapToWindowLevelColors.h \
 		C:\VTK\include\vtk-9.0\vtkImagingColorModule.h \
 		C:\VTK\include\vtk-9.0\vtkImageMapToColors.h \
-		C:\VTK\include\vtk-9.0\vtkImageActor.h \
-		C:\VTK\include\vtk-9.0\vtkRenderingCoreModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageSlice.h \
-		C:\VTK\include\vtk-9.0\vtkProp3D.h \
-		C:\VTK\include\vtk-9.0\vtkProp.h \
 		C:\VTK\include\vtk-9.0\vtkTIFFWriter.h \
+		C:\VTK\include\vtk-9.0\vtkIOImageModule.h \
+		C:\VTK\include\vtk-9.0\vtkAutoInit.h \
+		C:\VTK\include\vtk-9.0\vtkImageWriter.h \
 		C:\VTK\include\vtk-9.0\vtkImageGaussianSmooth.h \
 		C:\VTK\include\vtk-9.0\vtkPointData.h \
 		C:\VTK\include\vtk-9.0\vtkDataSetAttributes.h \
@@ -799,22 +787,10 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\VTK\include\vtk-9.0\vtkUnicodeString.h \
 		C:\VTK\include\vtk-9.0\vtkVariantInlineOperators.h \
 		C:\VTK\include\vtk-9.0\vtkDataArray.h \
-		C:\VTK\include\vtk-9.0\vtkImageMandelbrotSource.h \
-		C:\VTK\include\vtk-9.0\vtkImagingSourcesModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageSobel2D.h \
-		C:\VTK\include\vtk-9.0\vtkImageSpatialAlgorithm.h \
-		C:\VTK\include\vtk-9.0\vtkImageSliceMapper.h \
-		C:\VTK\include\vtk-9.0\vtkImageMapper3D.h \
-		C:\VTK\include\vtk-9.0\vtkAbstractMapper3D.h \
-		C:\VTK\include\vtk-9.0\vtkAbstractMapper.h \
-		C:\VTK\include\vtk-9.0\vtkImageRFFT.h \
-		C:\VTK\include\vtk-9.0\vtkImagingFourierModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageFourierFilter.h \
-		C:\VTK\include\vtk-9.0\vtkImageDecomposeFilter.h \
-		C:\VTK\include\vtk-9.0\vtkImageIterateFilter.h \
-		C:\VTK\include\vtk-9.0\vtkImageFFT.h \
-		C:\VTK\include\vtk-9.0\vtkImageIdealHighPass.h \
-		C:\VTK\include\vtk-9.0\vtkImageExtractComponents.h
+		C:\VTK\include\vtk-9.0\vtkImageCast.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h
 
 ..\..\build\debug\.obj\logfilterwidget.obj: logfilterwidget.cpp logfilterwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QWidget \

@@ -4,30 +4,17 @@
 #include <QVariant>
 #include <vtkImageData.h>
 #include <vtkObjectFactory.h>
-#include <vtkStreamingDemandDrivenPipeline.h>
-#include <vtkInformationVector.h>
-#include <vtkInformation.h>
 #include <vtkDataObject.h>
 #include <vtkSmartPointer.h>
-#include <vtkImageCast.h>
-#include <vtkPNGWriter.h>
 #include <vtkImageShiftScale.h>
 #include <vtkImageLaplacian.h>
 #include <vtkImageMathematics.h>
 #include <vtkImageMapToWindowLevelColors.h>
-#include <vtkImageActor.h>
 #include <vtkTIFFWriter.h>
 #include <vtkImageGaussianSmooth.h>
 #include <vtkPointData.h>
 #include <vtkDataArray.h>
-#include <vtkImageMandelbrotSource.h>
-#include <vtkImageSobel2D.h>
-#include <vtkImageSliceMapper.h>
 #include <vtkImageCast.h>
-#include <vtkImageRFFT.h>
-#include <vtkImageFFT.h>
-#include <vtkImageIdealHighPass.h>
-#include <vtkImageExtractComponents.h>
 #include <QDir>
 
 #define MIN_BOUND 2
