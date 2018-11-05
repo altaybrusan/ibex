@@ -9,7 +9,6 @@
 #include <vtkImageShiftScale.h>
 #include <vtkImageLaplacian.h>
 #include <vtkImageMathematics.h>
-#include <vtkImageMapToWindowLevelColors.h>
 #include <vtkTIFFWriter.h>
 #include <vtkImageGaussianSmooth.h>
 #include <vtkPointData.h>

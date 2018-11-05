@@ -770,9 +770,6 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 		C:\VTK\include\vtk-9.0\vtkImagingGeneralModule.h \
 		C:\VTK\include\vtk-9.0\vtkImageMathematics.h \
 		C:\VTK\include\vtk-9.0\vtkImagingMathModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageMapToWindowLevelColors.h \
-		C:\VTK\include\vtk-9.0\vtkImagingColorModule.h \
-		C:\VTK\include\vtk-9.0\vtkImageMapToColors.h \
 		C:\VTK\include\vtk-9.0\vtkTIFFWriter.h \
 		C:\VTK\include\vtk-9.0\vtkIOImageModule.h \
 		C:\VTK\include\vtk-9.0\vtkAutoInit.h \
