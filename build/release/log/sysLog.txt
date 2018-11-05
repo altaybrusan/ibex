@@ -15384,3 +15384,1693 @@
 [ 2018-11-05 ][ 08:27:31 ] INFO  SYSTEM - number of images in stack:1
 [ 2018-11-05 ][ 08:27:33 ] DEBUG SYSTEM - algorithm 1 is finished
 [ 2018-11-05 ][ 08:27:41 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 09:17:59 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 09:18:00 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 09:18:00 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 09:18:00 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 09:18:03 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 09:18:03 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 09:18:03 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 09:18:10 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 09:18:10 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 09:18:10 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 09:18:36 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 09:19:37 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 09:19:37 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 09:19:37 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 09:19:41 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 09:19:41 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 09:19:41 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 09:19:49 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 09:19:49 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 09:19:49 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 09:20:10 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 09:21:19 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 09:21:19 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 09:21:19 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 09:21:19 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 09:21:20 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 09:30:14 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 09:30:14 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 09:30:14 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 09:30:44 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 09:30:44 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 09:30:44 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 09:54:25 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 09:54:25 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 09:54:27 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 09:54:53 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 09:56:31 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 09:56:31 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 09:56:31 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 09:56:31 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 09:56:32 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 09:56:36 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 09:56:36 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 09:56:36 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 09:56:45 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 09:56:46 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 09:56:46 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 09:56:55 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 09:57:07 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 09:57:07 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 09:57:07 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 09:57:11 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 09:57:11 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 09:57:11 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 09:57:18 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 09:57:18 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 09:57:18 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 09:57:32 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 09:58:50 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 09:58:51 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 09:58:51 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 09:58:51 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 09:58:54 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 09:58:54 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 09:58:54 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 09:59:00 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 09:59:00 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 09:59:00 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 09:59:02 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 09:59:02 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 09:59:04 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 09:59:16 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 09:59:17 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 09:59:17 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 09:59:26 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:05:36 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:05:36 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:05:36 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:05:42 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:05:42 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:05:42 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:05:51 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:05:51 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:05:51 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:05:52 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 10:05:52 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 10:05:54 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 10:06:19 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:09:07 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:09:07 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:09:07 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:09:09 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-11-05 ][ 10:09:09 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:14:28 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:14:28 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:14:28 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:14:28 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:14:29 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:14:32 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:14:32 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:14:32 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:14:40 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:14:40 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:14:40 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:15:11 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:15:31 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:15:31 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:15:31 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:15:35 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:15:35 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:15:35 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:15:43 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:15:43 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:15:43 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:15:45 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 10:15:46 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 10:15:47 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 10:16:10 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:21:44 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:21:44 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:21:44 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:21:51 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:21:51 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:21:51 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:21:59 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:21:59 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:21:59 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:22:06 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:22:11 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:22:18 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:23:09 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:23:10 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:23:10 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:23:10 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:23:14 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:23:14 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:23:14 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:23:24 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:23:24 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:23:24 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:23:26 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 10:23:26 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 10:23:27 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 10:23:29 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:31 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:32 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:33 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:34 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:35 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:36 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:38 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:39 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:42 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:43 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:44 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:45 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:46 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:47 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:54 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:56 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:23:57 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:23:58 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:24:01 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:24:02 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:24:03 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:24:04 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:24:10 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:25:12 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:25:13 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:25:13 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:25:13 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:25:14 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-11-05 ][ 10:25:14 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:26:49 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:26:50 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:26:50 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:26:50 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:26:54 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:26:54 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:26:54 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:27:00 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:27:00 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:27:00 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:27:01 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:27:02 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:27:07 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:27:22 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:27:22 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:27:22 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:27:26 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:27:26 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:27:26 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:27:35 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:27:35 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:27:35 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:27:37 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:27:38 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:27:39 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:27:40 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:27:42 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:27:43 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:27:45 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:27:48 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:27:49 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:27:51 ] DEBUG SYSTEM - horizontal flip image:0
+[ 2018-11-05 ][ 10:28:00 ] DEBUG SYSTEM - horizontal flip image:1
+[ 2018-11-05 ][ 10:28:05 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:33:38 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:33:38 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:33:38 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:33:44 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:33:44 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:33:44 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:33:50 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:33:50 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:33:50 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:34:00 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:35:53 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:35:54 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:35:54 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:35:54 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:35:59 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:35:59 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:35:59 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:36:05 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:36:05 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:36:05 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:36:18 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 10:36:18 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 10:36:20 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 10:36:27 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:37:33 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:37:34 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:37:34 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:37:34 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:37:41 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:37:41 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:37:41 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:37:51 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:37:51 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:37:51 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:38:20 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:38:25 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:38:25 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:38:25 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:38:26 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:38:26 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:38:26 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:38:26 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:38:30 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:38:30 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:38:30 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:38:41 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:38:42 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:38:42 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:39:09 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:40:20 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:40:21 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:40:21 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:40:21 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:40:26 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:40:26 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:40:26 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:40:36 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 10:40:36 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 10:40:36 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 10:41:09 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 10:41:10 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 10:41:11 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 10:41:32 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 10:41:33 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 10:41:34 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 10:41:56 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:50:04 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:50:04 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:50:04 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:50:08 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:50:08 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:50:08 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:51:46 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:51:46 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:51:46 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:51:51 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:51:51 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:51:51 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:52:15 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:52:15 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:52:15 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:52:20 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:52:20 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:52:20 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:52:51 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:52:51 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:52:51 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:52:51 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:52:51 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:52:51 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:52:51 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:52:51 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:52:51 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:52:52 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 10:52:55 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 10:52:55 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 10:52:55 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 10:54:48 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 10:54:48 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 10:54:48 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 10:54:48 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 10:54:48 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 10:54:49 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:12:31 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:12:31 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:12:31 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:12:39 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:12:40 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:12:40 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:12:43 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:13:13 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:13:17 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:13:17 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:13:17 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:13:22 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:13:22 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:13:22 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:13:29 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:14:08 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:14:08 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:14:08 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:14:09 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:14:13 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:14:13 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:14:13 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:14:20 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:23 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:24 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:25 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:25 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:26 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:27 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:28 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:28 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:29 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:14:31 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:15:36 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:15:36 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:15:36 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:15:44 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:15:44 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:15:44 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:15:46 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:16:01 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:16:01 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:16:01 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:16:05 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:16:05 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:16:05 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:16:11 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:17:10 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:17:10 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:17:10 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:17:14 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:17:14 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:17:14 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:17:44 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:17:49 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:17:49 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:17:49 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:17:53 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:17:53 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:17:53 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:18:01 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:18:01 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:18:01 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:18:11 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:18:31 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:18:31 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:18:31 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:18:37 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:18:37 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:18:37 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:18:54 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:19:18 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:19:18 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:19:18 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:19:18 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:19:18 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:19:19 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:19:23 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:19:23 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:19:23 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:19:55 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:19:55 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:19:55 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:19:55 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:19:56 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:19:59 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:19:59 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:19:59 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:20:10 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:20:11 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:20:11 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:20:17 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:20:29 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:21:21 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:21:21 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:21:21 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:21:25 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:21:25 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:21:25 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:21:41 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:21:41 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:21:41 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:21:46 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:21:57 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:23:27 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:23:27 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:23:27 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:23:31 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:23:31 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:23:31 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:24:06 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:24:07 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:24:07 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:24:07 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:24:10 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:24:10 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:24:10 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:26:16 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:26:16 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:26:16 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:26:21 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:26:21 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:26:21 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:26:39 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:26:39 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:26:39 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:26:45 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:27:11 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 11:27:11 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 11:27:11 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 11:27:35 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:28:13 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:28:14 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:28:14 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:28:14 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:28:18 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:28:18 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:28:18 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:28:25 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:28:25 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:28:25 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:28:29 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:28:41 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 11:28:41 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 11:28:41 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 11:28:52 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:32:02 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:32:02 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:32:02 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:32:07 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:32:07 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:32:07 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:32:15 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:32:15 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:32:15 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:32:19 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:32:27 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 11:32:27 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 11:32:27 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 11:32:35 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:38:31 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:38:32 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:38:32 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:38:32 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:38:35 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:38:35 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:38:35 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:38:50 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:39:31 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:39:31 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:39:32 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:39:32 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:39:36 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:39:36 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:39:36 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:39:45 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:39:46 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:39:46 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:39:53 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:40:01 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:40:01 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:40:01 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:40:05 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:40:05 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:40:05 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:40:10 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:40:34 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:40:35 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:40:35 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:40:35 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:40:38 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:40:38 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:40:38 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:40:47 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:40:47 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:40:47 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:40:52 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:41:03 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 11:41:23 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:41:24 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:41:24 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:41:24 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:41:27 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:41:27 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:41:27 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:41:38 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:41:39 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:41:39 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:41:45 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:41:54 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 11:41:54 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 11:41:54 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 11:42:00 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 11:44:30 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 11:44:30 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 11:44:30 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 11:44:34 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 11:44:34 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 11:44:34 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 11:44:40 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:44:40 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:44:40 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:44:44 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:44:51 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 11:44:51 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 11:44:51 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 11:44:54 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 11:45:07 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 11:45:07 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 11:45:07 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 11:45:09 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 12:04:58 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 12:04:58 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 12:05:00 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 12:05:02 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 12:05:02 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 12:05:02 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 12:05:04 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 12:05:12 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 12:35:58 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 12:35:58 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 12:35:58 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 12:36:01 ] INFO  SYSTEM - user cancelled sign-in
+[ 2018-11-05 ][ 12:36:01 ] INFO  SYSTEM - Database connection is closed.
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2018-11-05 ][ 12:37:21 ] DEBUG SYSTEM - new algorithm is found
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - total number of plugins:1
+[ 2018-11-05 ][ 12:37:21 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - device type:2
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - device type:0
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:LoGFilter.dll
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:LoGFilter.exp
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:LoGFilter.lib
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - device type:1
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2018-11-05 ][ 12:37:21 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2018-11-05 ][ 12:37:25 ] INFO  SYSTEM - Checking database for user
+[ 2018-11-05 ][ 12:37:25 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2018-11-05 ][ 12:37:25 ] INFO  SYSTEM -  app successfully signed in
+[ 2018-11-05 ][ 12:37:53 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 12:37:53 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 12:37:53 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 12:37:58 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 12:38:15 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 12:38:15 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 12:38:17 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 12:38:24 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 12:38:24 ] INFO  SYSTEM - minimum pixel value: 2886
+[ 2018-11-05 ][ 12:38:24 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2018-11-05 ][ 12:38:26 ] INFO  SYSTEM - imageviewer is not empty
+[ 2018-11-05 ][ 12:38:32 ] DEBUG SYSTEM - algorithm 1 is started
+[ 2018-11-05 ][ 12:38:32 ] INFO  SYSTEM - number of images in stack:1
+[ 2018-11-05 ][ 12:38:33 ] DEBUG SYSTEM - algorithm 1 is finished
+[ 2018-11-05 ][ 12:38:37 ] INFO  SYSTEM - New Image is received:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 12:38:38 ] INFO  SYSTEM - minimum pixel value: 1816
+[ 2018-11-05 ][ 12:38:38 ] INFO  SYSTEM - maximum pixel value: 15875
+[ 2018-11-05 ][ 12:38:58 ] INFO  SYSTEM - Database connection is closed.

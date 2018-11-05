@@ -63,14 +63,14 @@ ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr &manager) :
     //there is no image to show. To avoid any problem,
     //a blank image is loaded.
     //this may not be best pracctice, but at least works fine.
-    blankImage->SetDimensions(10, 10, 1);
-    blankImage->AllocateScalars(VTK_DOUBLE,1);
-    for (int i = 0; i < 10; i++)
-        for (int j = 0; j < 10; j++)
-            blankImage->SetScalarComponentFromDouble(i, j, 0, 0, 0);
+//    blankImage->SetDimensions(10, 10, 1);
+//    blankImage->AllocateScalars(VTK_DOUBLE,1);
+//    for (int i = 0; i < 10; i++)
+//        for (int j = 0; j < 10; j++)
+//            blankImage->SetScalarComponentFromDouble(i, j, 0, 0, 0);
 
-    //force the viewer to use the blank image
-    imageViewer->SetInputData(blankImage);
+//    //force the viewer to use the blank image
+//    imageViewer->SetInputData(blankImage);
 
     //Defualt options for legend scale
     legendScaleActor->TopAxisVisibilityOff();
@@ -153,8 +153,33 @@ void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 // this image flip is not the best practice. find a better solutipn for the next iteration
 void ImageViewer::OnVerticalFlipToggled(bool value)
 {
-    //imageViewer->GetInput();
-    flipFilter->SetInputConnection(imageReader->GetOutputPort());
+//    //imageViewer->GetInput();
+//    flipFilter->SetInputConnection(imageReader->GetOutputPort());
+//    if(value)
+//    {
+//        flipFilter->SetFilteredAxis(0);
+//    }
+//    else
+//    {
+//        flipFilter->SetFilteredAxis(-2);
+//    }
+
+//    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
+//    flipFilter->Update();
+//    imageViewer->Render();
+
+    if(!imageViewer->GetInput())
+        return; //there is no image to flip
+
+    if(!flipFilter->GetInput(0))
+    {
+       LogMgr::instance()->LogSysInfo("imageviewer is not empty");
+       castFilter->SetInputData(imageViewer->GetInput());
+       castFilter->Update();
+       flipFilter->SetInputConnection(castFilter->GetOutputPort());
+       flipFilter->Update();
+
+    }
     if(value)
     {
         flipFilter->SetFilteredAxis(0);
@@ -163,10 +188,10 @@ void ImageViewer::OnVerticalFlipToggled(bool value)
     {
         flipFilter->SetFilteredAxis(-2);
     }
-
-    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     flipFilter->Update();
+    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     imageViewer->Render();
+
 }
 
 // this image flip is not the best practice. find a better solutipn for the next iteration
@@ -175,21 +200,30 @@ void ImageViewer::OnHorizontalFlipToggled(bool value)
     //instead of fliping image, you can flip camera.
     //imageViewer->GetRenderer()->GetActiveCamera()->Yaw(180);
 
-    //flipXFilter->AddInputData(imageViewer->GetImageActor()->GetInput());
-    flipFilter->SetInputConnection(imageReader->GetOutputPort());
+    if(!imageViewer->GetInput())
+        return; //there is no image to flip
+
+    if(!flipFilter->GetInput(0))
+    {
+       LogMgr::instance()->LogSysInfo("imageviewer is not empty");
+       castFilter->SetInputData(imageViewer->GetInput());
+       castFilter->Update();
+       flipFilter->SetInputConnection(castFilter->GetOutputPort());
+       flipFilter->Update();
+
+    }
     if(value)
     {
-        //ui->actionvFlip->setChecked(false);
         flipFilter->SetFilteredAxis(1);
     }
     else
     {
         flipFilter->SetFilteredAxis(-1);
     }
-
-    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     flipFilter->Update();
+    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     imageViewer->Render();
+
 
 }
 
@@ -216,7 +250,11 @@ void ImageViewer::DisplayImage(QString fileName)
 
     if(IsValidFile(fileName))
     {
-
+        if(flipFilter->GetInput(0))
+        {
+            //reset flip
+            flipFilter->SetInputData(0);
+        }
         // Instanciate an image reader
         // not tested for all ttypes (may not work with all tiff, dcm or jpg)
         imageReader.TakeReference(imageFactory->CreateImageReader2(fileName.toLatin1()));
@@ -381,14 +419,6 @@ void ImageViewer::OnAlgorithmFinished(int algorithmUID)
     LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is finished");
 
     vtkSmartPointer<vtkImageData> _filteredImage = m_pluginMgr.GetWidgetList()[algorithmUID]->GetOutputData().at(0);
-//     vtkSmartPointer<vtkPNGWriter> writer =
-//       vtkSmartPointer<vtkPNGWriter>::New();
-//     writer->SetFileName("demo.png");
-
-//     writer->SetInputData(_filteredImage);
-//     writer->Write();
-
-
     castFilter->SetInputData(_filteredImage);
     castFilter->Update();
     castFilter->Modified();
