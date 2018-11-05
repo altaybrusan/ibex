@@ -9,7 +9,6 @@
 #include "ctkVTKMagnifyView.h"
 #include "ctkCommandLineParser.h"
 #include "ctkVTKSliceView.h"
-//#include "ctkWidgetsUtils.h"
 #include "ctkThumbnailListWidget.h"
 #include "ctkThumbnailLabel.h"
 // VTK includes
@@ -36,6 +35,7 @@
 #include <vtkRenderer.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkSmartPointer.h>
+#include <vtkTIFFWriter.h>
 #include "Controller/algorithmpluginmgr.h"
 #include "Utils/logmgr.h"
 
@@ -136,11 +136,6 @@ ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr &manager) :
           connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmFinished,this,&ImageViewer::OnAlgorithmFinished);
         }
 
-        //               connect(dynamic_cast<QObject*>(_iterator.value()),SIGNAL(NotifyAlgorithmStarted),this,SLOT(OnAlgorithmStarted));
-        //              connect(dynamic_cast<QObject*>(algorithm),SIGNAL(NotifyAlgorithmStarted()),this,SLOT(OnAlgorithmStarted()));
-        //              LogMgr::instance()->LogSysInfo(" iBEX is loading filter: "+ fileName);
-
-
 }
 
 ImageViewer::~ImageViewer()
@@ -150,6 +145,7 @@ ImageViewer::~ImageViewer()
 
 void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 {
+    m_lastLoadedFile= widget.text();
     DisplayImage(widget.text());
 }
 
@@ -157,7 +153,7 @@ void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 // this image flip is not the best practice. find a better solutipn for the next iteration
 void ImageViewer::OnVerticalFlipToggled(bool value)
 {
-    imageViewer->GetInput();
+    //imageViewer->GetInput();
     flipFilter->SetInputConnection(imageReader->GetOutputPort());
     if(value)
     {
@@ -344,9 +340,18 @@ void ImageViewer::OnAlgorithmStarted(int algorithmUID)
         imageReader->Update();
         vtkSmartPointer<vtkImageData> _imgData =
                 vtkSmartPointer<vtkImageData>::New();
-        _imgData= imageReader->GetOutput();
+        //_imgData= imageReader->GetOutput();
+        _imgData = imageViewer->GetInput();
+
+        vtkSmartPointer<vtkTIFFWriter> writer =
+          vtkSmartPointer<vtkTIFFWriter>::New();
+        writer->SetFileName("screenImage.png");
+        writer->SetInputData(_imgData);
+        writer->Write();
+
         QList<vtkSmartPointer<vtkImageData>> _list;
         _list.append(_imgData);
+        LogMgr::instance()->LogSysInfo("number of images in stack:" + QString::number(_list.count()));
 
         (m_pluginMgr.GetWidgetList())[algorithmUID]->SetInputData(_list);
         (m_pluginMgr.GetWidgetList())[algorithmUID]->StartAlgorithm();

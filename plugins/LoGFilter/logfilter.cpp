@@ -28,6 +28,7 @@
 #include <vtkImageFFT.h>
 #include <vtkImageIdealHighPass.h>
 #include <vtkImageExtractComponents.h>
+#include <QDir>
 
 #define MIN_BOUND 2
 #define MAX_BOUND 10
@@ -71,6 +72,11 @@ QWidget *LoGFilter::GetWidget()
 
 void LoGFilter::SetInputData(QList<vtkSmartPointer<vtkImageData> > imageDataSet)
 {
+    if(m_imageDataSet.count()!=0)
+    {
+        m_imageDataSet.clear();
+    }
+
     m_imageDataSet = imageDataSet;
 }
 
@@ -84,8 +90,8 @@ void LoGFilter::StartAlgorithm()
     if(m_imageDataSet.at(0))
     {
         m_filterWidget->SetEnableBtn(false);
-       Filter(m_imageDataSet.at(0));
-
+        m_output.clear(); //clear all previous filter outputs.
+        Filter(m_imageDataSet.at(0));
     }
    return;
 }
@@ -142,6 +148,7 @@ void LoGFilter::OnApplyBtnPressed()
 void LoGFilter::Filter(vtkSmartPointer<vtkImageData> inputData)
 {
 
+    int _kernelSize= m_filterWidget->GetGaussianKernelLength();
     vtkSmartPointer<vtkImageCast> originalCastFilter =
       vtkSmartPointer<vtkImageCast>::New();
     originalCastFilter->SetInputData(inputData);
@@ -151,7 +158,7 @@ void LoGFilter::Filter(vtkSmartPointer<vtkImageData> inputData)
     vtkSmartPointer<vtkImageGaussianSmooth> gaussianSmoothFilter =
         vtkSmartPointer<vtkImageGaussianSmooth>::New();
       gaussianSmoothFilter->SetInputConnection(originalCastFilter->GetOutputPort());
-      gaussianSmoothFilter->SetRadiusFactor(2);
+      gaussianSmoothFilter->SetRadiusFactor(_kernelSize);
       gaussianSmoothFilter->Update();
 
     vtkSmartPointer<vtkImageLaplacian> laplacian =
@@ -186,22 +193,25 @@ void LoGFilter::Filter(vtkSmartPointer<vtkImageData> inputData)
       outputCastFilter->Update();
 
 
+      if(!QDir("filterouts").exists())
+          QDir().mkdir("filterouts");
      m_output.append( outputCastFilter->GetOutput());
      vtkSmartPointer<vtkTIFFWriter> writer =
        vtkSmartPointer<vtkTIFFWriter>::New();
-     writer->SetFileName("LoGOutput.png");
+     writer->SetFileName("./filterouts/LoGOutput.png");
      writer->SetInputData(outputCastFilter->GetOutput());
      writer->Write();
 
      vtkSmartPointer<vtkTIFFWriter> writer2 =
        vtkSmartPointer<vtkTIFFWriter>::New();
-     writer2->SetFileName("GaussianOutput.png");
+     writer2->SetFileName("./filterouts/GaussianOutput.png");
      writer2->SetInputData(gaussianSmoothFilter->GetOutput());
      writer2->Write();
 
      vtkSmartPointer<vtkTIFFWriter> writer3 =
        vtkSmartPointer<vtkTIFFWriter>::New();
-     writer3->SetFileName("EdgeOutput.png");
+
+     writer3->SetFileName("./filterouts/EdgeOutput.png");
      writer3->SetInputData(laplacian->GetOutput());
      writer3->Write();
 
