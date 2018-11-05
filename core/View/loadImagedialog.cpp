@@ -19,6 +19,7 @@ LoadImageDialog::LoadImageDialog(QWidget *parent, ImageViewer &viewer) :
 
 void LoadImageDialog::Show()
 {
+    m_viewer.ClearImageViewer();
     ui->displayFrame->layout()->addWidget(&m_viewer);
     this->show();
 

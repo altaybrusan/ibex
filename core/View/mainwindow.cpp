@@ -77,6 +77,7 @@ void MainWindow::on_action_Open_Study_triggered()
     //LoadImageDialog* _demo=new LoadImageDialog(this);
     //_demo->show();
     m_loadImageDlg.repaint();
+
     m_loadImageDlg.Show();
 }
 

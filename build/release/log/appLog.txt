@@ -2007,3 +2007,39 @@
 [ 2018-11-05 ][ 13:12:48 ] INFO  APPLICATION - *** DEVICE STARTED...
 [ 2018-11-05 ][ 13:12:54 ] INFO  APPLICATION -  app successfully signed in
 [ 2018-11-05 ][ 13:13:00 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-11-05 ][ 15:13:04 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 15:13:08 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:15:00 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:15:07 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:15:10 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-11-05 ][ 16:15:17 ] INFO  APPLICATION - new patient registration workflow is started
+[ 2018-11-05 ][ 16:25:04 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:25:06 ] INFO  APPLICATION - log in process is cancelled.
+[ 2018-11-05 ][ 16:26:10 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:26:14 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:26:21 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 16:26:33 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-05 ][ 16:26:34 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-05 ][ 16:32:49 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:32:54 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:33:01 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 16:42:06 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:42:11 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:42:40 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:42:44 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:42:55 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 16:43:12 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:43:16 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:43:22 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 16:43:32 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 16:44:51 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:44:56 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:45:02 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 16:45:04 ] DEBUG APPLICATION - algorithm UID:1 is started
+[ 2018-11-05 ][ 16:45:06 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-05 ][ 16:45:15 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 16:48:31 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 16:48:35 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 16:48:46 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 16:52:07 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
+[ 2018-11-05 ][ 16:52:16 ] DEBUG APPLICATION - examination workflow is started.

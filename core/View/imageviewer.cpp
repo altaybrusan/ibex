@@ -58,85 +58,10 @@ ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr &manager) :
     m_pluginMgr.LoadPlugins();
 
     LogMgr::instance()->LogSysDebug("ImageViewer is launched");
-
-    //when the imageviewer is called for the first time,
-    //there is no image to show. To avoid any problem,
-    //a blank image is loaded.
-    //this may not be best pracctice, but at least works fine.
-//    blankImage->SetDimensions(10, 10, 1);
-//    blankImage->AllocateScalars(VTK_DOUBLE,1);
-//    for (int i = 0; i < 10; i++)
-//        for (int j = 0; j < 10; j++)
-//            blankImage->SetScalarComponentFromDouble(i, j, 0, 0, 0);
-
-//    //force the viewer to use the blank image
-//    imageViewer->SetInputData(blankImage);
-
-    //Defualt options for legend scale
-    legendScaleActor->TopAxisVisibilityOff();
-    legendScaleActor->RightAxisVisibilityOff();
-    legendScaleActor->SetLegendVisibility(0);
-
-    //renderer options are set
-    renderer->AddActor(legendScaleActor);
-    renderer->SetBackground(0,0,0);
-    renderer->ResetCameraClippingRange();
-
-    imageViewer->SetupInteractor(renderWindowInteractor);
-    imageViewer->SetRenderWindow(ui->qvtkWidget->GetRenderWindow());
-    imageViewer->SetRenderer(renderer);
-    imageViewer->Render();
-
-    renderWindowInteractor->SetInteractorStyle(style);
-    renderWindowInteractor->Initialize();
-
-
-    // thumbnailbar configuration
-    QVBoxLayout* layout =new QVBoxLayout;
-    layout->setSpacing(0);
-    layout->setMargin(1);
-    QSize _size(64,64);
-    thumbnailBar= new ctkThumbnailListWidget(this);
-    thumbnailBar->setThumbnailSize(_size);
-    thumbnailBar->setStyleSheet("background-color:black;");
-    layout->addWidget(thumbnailBar);
-    ui->thumbnailFrame->setLayout(layout);
-    connect(thumbnailBar,
-            SIGNAL(doubleClicked(ctkThumbnailLabel)),
-            this,
-            SLOT(OnThumbnailChanged(ctkThumbnailLabel)));
-    connect(ui->actionvFlip,
-            SIGNAL(toggled(bool)),
-            this,
-            SLOT(OnVerticalFlipToggled(bool)));
-    connect(ui->actionhFlip,
-            SIGNAL(toggled(bool)),
-            this,
-            SLOT(OnHorizontalFlipToggled(bool)));
-
-        QVBoxLayout *filterlayout = new QVBoxLayout(ui->FilterArea);
-        filterlayout->setMargin(0);
-        QMapIterator<int,IAlgorithm*> _iterator(m_pluginMgr.GetWidgetList());
-        while(_iterator.hasNext())
-        {
-          _iterator.next();
-          if(_iterator.value()->GetWidget())
-            {
-                filterlayout->addWidget(_iterator.value()->GetWidget());
-                QFrame *line=new QFrame(this);
-                line->setGeometry(QRect(50, 160, 118, 3));
-                line->setFrameShape(QFrame::HLine);
-                line->setFrameShadow(QFrame::Sunken);
-                filterlayout->addWidget(line);
-            }
-
-          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmStarted,this,&ImageViewer::OnAlgorithmStarted);
-          connect(_iterator.value(),&IAlgorithm::NotifyProgress,this,&ImageViewer::OnAlgorithmProgress);
-          connect(_iterator.value(),&IAlgorithm::NotifyError,this,&ImageViewer::OnAlgorithmError);
-          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmFinished,this,&ImageViewer::OnAlgorithmFinished);
-        }
-
+    InitializeViewer();
+    LoadPlugins();
 }
+
 
 ImageViewer::~ImageViewer()
 {
@@ -318,6 +243,16 @@ void ImageViewer::DisplayImage(QString fileName)
 
 }
 
+void ImageViewer::ClearImageViewer()
+{
+    m_lastLoadedFile.clear();
+    imagelist.clear();
+    thumbnailList.clear();
+    thumbnailBar->clearThumbnails();
+    imageViewer = vtkSmartPointer<vtkImageViewer2>::New();
+    InitializeViewer();
+}
+
 void ImageViewer::UpdateThumbnailList()
 {
     foreach (QString item, imagelist) {
@@ -415,6 +350,89 @@ void ImageViewer::OnAlgorithmFinished(int algorithmUID)
     imageViewer->Render();
     //imageViewer->UpdateDisplayExtent();
     QApplication::restoreOverrideCursor();
+}
+
+void ImageViewer::InitializeViewer()
+{
+    //when the imageviewer is called for the first time,
+    //there is no image to show. To avoid any problem,
+    //a blank image is loaded.
+    //this may not be best pracctice, but at least works fine.
+//    blankImage->SetDimensions(10, 10, 1);
+//    blankImage->AllocateScalars(VTK_DOUBLE,1);
+//    for (int i = 0; i < 10; i++)
+//        for (int j = 0; j < 10; j++)
+//            blankImage->SetScalarComponentFromDouble(i, j, 0, 0, 0);
+
+//    //force the viewer to use the blank image
+//    imageViewer->SetInputData(blankImage);
+
+    //Defualt options for legend scale
+    legendScaleActor->TopAxisVisibilityOff();
+    legendScaleActor->RightAxisVisibilityOff();
+    legendScaleActor->SetLegendVisibility(0);
+
+    //renderer options are set
+    renderer->AddActor(legendScaleActor);
+    renderer->SetBackground(0,0,0);
+    renderer->ResetCameraClippingRange();
+
+    imageViewer->SetupInteractor(renderWindowInteractor);
+    imageViewer->SetRenderWindow(ui->qvtkWidget->GetRenderWindow());
+    imageViewer->SetRenderer(renderer);
+    imageViewer->Render();
+
+    renderWindowInteractor->SetInteractorStyle(style);
+    renderWindowInteractor->Initialize();
+
+}
+
+void ImageViewer::LoadPlugins()
+{
+    // thumbnailbar configuration
+    QVBoxLayout* layout =new QVBoxLayout;
+    layout->setSpacing(0);
+    layout->setMargin(1);
+    QSize _size(64,64);
+    thumbnailBar= new ctkThumbnailListWidget(this);
+    thumbnailBar->setThumbnailSize(_size);
+    thumbnailBar->setStyleSheet("background-color:black;");
+    layout->addWidget(thumbnailBar);
+    ui->thumbnailFrame->setLayout(layout);
+    connect(thumbnailBar,
+            SIGNAL(doubleClicked(ctkThumbnailLabel)),
+            this,
+            SLOT(OnThumbnailChanged(ctkThumbnailLabel)));
+    connect(ui->actionvFlip,
+            SIGNAL(toggled(bool)),
+            this,
+            SLOT(OnVerticalFlipToggled(bool)));
+    connect(ui->actionhFlip,
+            SIGNAL(toggled(bool)),
+            this,
+            SLOT(OnHorizontalFlipToggled(bool)));
+
+        QVBoxLayout *filterlayout = new QVBoxLayout(ui->FilterArea);
+        filterlayout->setMargin(0);
+        QMapIterator<int,IAlgorithm*> _iterator(m_pluginMgr.GetWidgetList());
+        while(_iterator.hasNext())
+        {
+          _iterator.next();
+          if(_iterator.value()->GetWidget())
+            {
+                filterlayout->addWidget(_iterator.value()->GetWidget());
+                QFrame *line=new QFrame(this);
+                line->setGeometry(QRect(50, 160, 118, 3));
+                line->setFrameShape(QFrame::HLine);
+                line->setFrameShadow(QFrame::Sunken);
+                filterlayout->addWidget(line);
+            }
+
+          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmStarted,this,&ImageViewer::OnAlgorithmStarted);
+          connect(_iterator.value(),&IAlgorithm::NotifyProgress,this,&ImageViewer::OnAlgorithmProgress);
+          connect(_iterator.value(),&IAlgorithm::NotifyError,this,&ImageViewer::OnAlgorithmError);
+          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmFinished,this,&ImageViewer::OnAlgorithmFinished);
+        }
 }
 
 

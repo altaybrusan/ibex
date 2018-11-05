@@ -28,6 +28,7 @@ class ImageViewer : public QMainWindow
 public:
     explicit ImageViewer(QWidget *parent, AlgorithmPluginMgr& manager);
     void DisplayImage(QString fileName);
+    void ClearImageViewer();
     ~ImageViewer();
 
 
@@ -44,6 +45,8 @@ private slots:
     void OnAlgorithmFinished(int algorithmUID);
 
 private:
+    void InitializeViewer();
+    void LoadPlugins();
 
     Ui::ImageViewer *ui;
     vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor;
