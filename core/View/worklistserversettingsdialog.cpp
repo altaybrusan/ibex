@@ -77,37 +77,6 @@ WorklistServerSettingsDialog::~WorklistServerSettingsDialog()
 void WorklistServerSettingsDialog::on_buttonBox_accepted()
 {
     emit NotifyAccepted();
-//    QDomDocument document;
-//    QFile settingFile("./configs/_worklist.xml");
-//    if(!settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
-//    {
-//        qDebug()<<"Can not open worklist configuration file";
-//        return;
-//    }
-//    else
-//    {
-//        qDebug()<<"worklist configuration file successfully opened.";
-//        //get the root element
-//        QDomDocument document;
-
-//        if(!document.setContent(&settingFile))
-//        {
-//            qDebug() << "Failed to load document";
-//            return;
-//        }
-
-//        QDomElement root = document.firstChildElement();
-//        auto node = root.elementsByTagName("Server").at(0).toElement();
-//        node.setAttribute("IP",ui->ipAddresslineEdit->text());
-//        node.setAttribute("AETitle",ui->AETitleLineEdit->text());
-//        node.setAttribute("Port",ui->portLineEdit->text());
-//        settingFile.resize(0);
-//        QByteArray xml = document.toByteArray();
-//        settingFile.write(xml);
-//        settingFile.close();
-//        this->close();
-//    }
-
 }
 
 void WorklistServerSettingsDialog::on_buttonBox_rejected()
