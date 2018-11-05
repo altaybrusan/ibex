@@ -83,7 +83,7 @@ void WorklistMgr::OnFetchRISRequestReceived()
     ** By default. don't let "dcmdata" remove trailing padding or
     ** perform other manipulations. We want to see the real data.
     */
-    OFBool opt_automaticDataCorrection = OFFalse;
+    //OFBool opt_automaticDataCorrection = OFFalse;
 
     OFString temp_str;
     //    OFConsoleApplication app(OFFIS_CONSOLE_APPLICATION , "DICOM query (C-FIND) SCU", rcsid);
