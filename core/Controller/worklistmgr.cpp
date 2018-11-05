@@ -39,7 +39,7 @@ OFFIS_DCMTK_VERSION " " OFFIS_DCMTK_RELEASEDATE " $";
 /* default application titles */
 #define APPLICATIONTITLE        "FINDSCU"
 #define PEERAPPLICATIONTITLE    "ANY-SCP"
-#define SITE_INSTANCE_UID_ROOT  007
+//#define SITE_INSTANCE_UID_ROOT  007
 #define SHORTCOL 4
 #define LONGCOL 20
 
