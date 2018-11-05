@@ -153,21 +153,6 @@ void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 // this image flip is not the best practice. find a better solutipn for the next iteration
 void ImageViewer::OnVerticalFlipToggled(bool value)
 {
-//    //imageViewer->GetInput();
-//    flipFilter->SetInputConnection(imageReader->GetOutputPort());
-//    if(value)
-//    {
-//        flipFilter->SetFilteredAxis(0);
-//    }
-//    else
-//    {
-//        flipFilter->SetFilteredAxis(-2);
-//    }
-
-//    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
-//    flipFilter->Update();
-//    imageViewer->Render();
-
     if(!imageViewer->GetInput())
         return; //there is no image to flip
 
