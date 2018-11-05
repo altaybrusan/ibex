@@ -30,10 +30,6 @@ signals:
 
 private slots:
 
-    //void on_actionUpdatePACSServerSettingstriggered();
-//    void on_newPatient_accepted();
-//    void on_Patient_selected(QSqlRecord record);
-
     void on_action_Update_PACS_Server_Settings_triggered();
     void on_action_Update_Worklist_Settings_triggered();
     void on_action_Load_Study_triggered();
