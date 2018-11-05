@@ -5,22 +5,6 @@
 #include <QRegExpValidator>
 #include <QRegExp>
 
-//QStringList ListElements2(QDomElement root, QString tagname, QString attribute)
-//{
-//    QStringList _elemntList;
-//    QDomNodeList items = root.elementsByTagName(tagname);
-
-//     for(int i = 0; i < items.count(); i++)
-//     {
-//        QDomNode itemnode = items.at(i);
-//        if(itemnode.isElement())
-//        {
-//            QDomElement itemele = itemnode.toElement();
-//            _elemntList.append(itemele.attribute(attribute));
-//        }
-//     }
-//     return _elemntList;
-//}
 
 QRegExp rxPort("^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$");
 QRegExp rxIP("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$");
