@@ -2043,3 +2043,8 @@
 [ 2018-11-05 ][ 16:48:46 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
 [ 2018-11-05 ][ 16:52:07 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
 [ 2018-11-05 ][ 16:52:16 ] DEBUG APPLICATION - examination workflow is started.
+[ 2018-11-05 ][ 20:48:02 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 20:48:13 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 20:48:23 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/hand-test.tiff
+[ 2018-11-05 ][ 20:48:39 ] INFO  APPLICATION - load study is started
+[ 2018-11-05 ][ 20:48:59 ] DEBUG APPLICATION - examination workflow is started.

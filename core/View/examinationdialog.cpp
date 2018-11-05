@@ -67,6 +67,7 @@ void ExaminationDialog::UpdatePatientForm(RegistrationFormModel &model)
 
 void ExaminationDialog::Show()
 {
+    m_viewer.ClearImageViewer();
    ui->displayFrame->layout()->addWidget(&m_viewer);
    this->show();
 }
