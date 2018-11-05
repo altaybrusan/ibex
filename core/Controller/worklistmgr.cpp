@@ -3,11 +3,11 @@
 #include "dcmtk/ofstd/ofstdinc.h"
 #include "dcmtk/ofstd/ofstd.h"
 #include "dcmtk/ofstd/ofconapp.h"
-#include <dcmtk/ofstd/ofstream.h>
-#include <dcmtk/dcmdata/dctk.h>
-#include <dcmtk/dcmdata/dcfilefo.h>
+#include "dcmtk/ofstd/ofstream.h"
+#include "dcmtk/dcmdata/dctk.h"
+#include "dcmtk/dcmdata/dcfilefo.h"
 #include "dcmtk/dcmnet/dfindscu.h"
-#include <dcmtk/dcmdata/dcistrmz.h>    /* for dcmZlibExpectRFC1950Encoding */
+#include "dcmtk/dcmdata/dcistrmz.h"    /* for dcmZlibExpectRFC1950Encoding */
 #include "dcmtk/ofstd/ofstdinc.h"
 #include "dcmtk/dcmnet/dimse.h"
 #include "dcmtk/dcmnet/diutil.h"
@@ -370,9 +370,6 @@ void WorklistMgr::ParsRISResponseAndInsertIntoTableModel()
                 {
                     record.setValue(elementIndex,QString::number(elementIndex));
                 }
-                //                qDebug()<<"The tag: "<<nodeList.at(j).toElement().attribute("tag")
-                //                        <<"with the value: "<<nodeList.at(j).firstChild().nodeValue()
-                //                        <<"The id is: "<<WorkListFieldTag.key(nodeList.at(j).toElement().attribute("tag"),-1);
             }
             m_model.GetModel()->insertRecord(-1,record);
 

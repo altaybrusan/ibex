@@ -10,7 +10,7 @@
 #include <QSqlField>
 #include "idevice.h"
 #include <QStandardItemModel>
-#include <QSharedPointer>
+
 
 ExaminationDialog::ExaminationDialog(QWidget *parent, ImageViewer &viewer) :
     QDialog(parent),

@@ -13083,6 +13083,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkImageSlice.h \
 		C:\VTK\include\vtk-9.0\vtkRenderWindow.h \
 		C:\VTK\include\vtk-9.0\vtkWindow.h \
+		C:\VTK\include\vtk-9.0\vtkTIFFWriter.h \
 		Controller/algorithmpluginmgr.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
@@ -13751,8 +13752,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
 		..\common\include\isettingsparser.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QSharedPointer
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\examinationdialog.obj View\examinationdialog.cpp
 
 ..\build\debug\.obj\devicemgr.obj: Controller\devicemgr.cpp Controller/devicemgr.h \

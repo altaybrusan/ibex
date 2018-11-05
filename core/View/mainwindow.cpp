@@ -42,11 +42,6 @@ void MainWindow::showEvent(QShowEvent *event)
 //void MainWindow::on_Patient_selected(QSqlRecord record)
 //{
 
-//////    for(int i=0;i<record.count();i++)
-//////    {
-//////        qDebug()<<"the "<<record.fieldName(i) <<" fields value is "<<record.field(i).value().toString();
-//////    }
-
 ////    ExposureDialog* _dialog =new ExposureDialog(this);
 ////    _dialog->SetRecord(&record);
 ////    _dialog->show();
