@@ -2004,3 +2004,6 @@
 [ 2018-11-05 ][ 12:38:24 ] DEBUG APPLICATION - Loading file:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release/test_images/step.tiff
 [ 2018-11-05 ][ 12:38:32 ] DEBUG APPLICATION - algorithm UID:1 is started
 [ 2018-11-05 ][ 12:38:33 ] DEBUG APPLICATION - algorithm UID:1 is finished
+[ 2018-11-05 ][ 13:12:48 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2018-11-05 ][ 13:12:54 ] INFO  APPLICATION -  app successfully signed in
+[ 2018-11-05 ][ 13:13:00 ] INFO  APPLICATION - new patient registration workflow is started

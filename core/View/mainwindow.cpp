@@ -14,7 +14,7 @@
 #include "Utils/logmgr.h"
 #include "View/loadImagedialog.h"
 #include "View/aboutdialog.h"
-int MACHINE_UID=001;
+
 
 
 MainWindow::MainWindow(QWidget *parent, LoadImageDialog &loadImageDialog) :
