@@ -130,8 +130,8 @@ SOURCES += \
     View/aboutdialog.cpp \
     View/toolsdialog.cpp \
     Controller/toolsmgr.cpp \
-    Controller/algorithmpluginmgr.cpp \
-    View/filtersdialog.cpp
+    View/filtersdialog.cpp \
+    Controller/filterpluginmgr.cpp
 
 #         Utils/dicomwriter.cpp \
 
