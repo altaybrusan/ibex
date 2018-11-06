@@ -7,14 +7,14 @@
 
 
 
-AlgorithmPluginMgr::AlgorithmPluginMgr(QObject *parent,QString path) :
+FilterPluginMgr::FilterPluginMgr(QObject *parent,QString path) :
     QObject(parent),
     m_path(path)
 {
 
 }
 
-void AlgorithmPluginMgr::LoadPlugins()
+void FilterPluginMgr::LoadPlugins()
 {
 
     m_pluginsDir.setPath(m_path);
@@ -49,7 +49,7 @@ void AlgorithmPluginMgr::LoadPlugins()
 
 }
 
-QMap<int, IAlgorithm *> AlgorithmPluginMgr::GetWidgetList()
+QMap<int, IAlgorithm *> FilterPluginMgr::GetWidgetList()
 {
     return m_algorithmContainer;
 

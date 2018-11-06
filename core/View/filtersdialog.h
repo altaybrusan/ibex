@@ -2,6 +2,7 @@
 #define FILTERSDIALOG_H
 
 #include <QDialog>
+#include <QListWidget>
 
 namespace Ui {
     class FiltersDialog;
@@ -13,6 +14,7 @@ class FiltersDialog : public QDialog
 
 public:
     explicit FiltersDialog(QWidget *parent = 0);
+    void AddItemToList(QString filterName);
     ~FiltersDialog();
 
 private:

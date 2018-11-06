@@ -8,6 +8,12 @@ FiltersDialog::FiltersDialog(QWidget *parent) :
     ui->setupUi(this);
 }
 
+void FiltersDialog::AddItemToList(QString filterName)
+{
+    new QListWidgetItem(filterName,ui->filtersListWidget);
+
+}
+
 FiltersDialog::~FiltersDialog()
 {
     delete ui;
