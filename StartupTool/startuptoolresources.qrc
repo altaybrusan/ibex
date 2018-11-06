@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>images/_ibex_logo.png</file>
+        <file>images/_larg_ibex_background.png</file>
+        <file>icons/_48_connections.png</file>
+        <file>icons/_48_devices.png</file>
+        <file>icons/_48_exit.png</file>
+        <file>icons/_48_filters.png</file>
+        <file>icons/_48_pacs_server.png</file>
+        <file>icons/_48_pheripherals.png</file>
+        <file>icons/_48_tools.png</file>
+        <file>icons/_48_worklist.png</file>
+        <file>icons/_48_load.png</file>
+        <file>icons/_48_printing.png</file>
+        <file>icons/_48_start_document.png</file>
+        <file>icons/_48_writecd.png</file>
+        <file>icons/_48_open_document.png</file>
+    </qresource>
+    <qresource prefix="/config">
+        <file>xml/BodyPartDescription.xml</file>
+        <file>xml/Protocol.xml</file>
+    </qresource>
+</RCC>
