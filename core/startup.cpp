@@ -24,7 +24,7 @@
 #include "View/loadImagedialog.h"
 #include "View/toolsdialog.h"
 #include "Controller/toolsmgr.h"
-#include "Controller/algorithmpluginmgr.h"
+#include "Controller/filterpluginmgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>

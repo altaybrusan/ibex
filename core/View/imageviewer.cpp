@@ -36,7 +36,7 @@
 #include <vtkRenderWindowInteractor.h>
 #include <vtkSmartPointer.h>
 #include <vtkTIFFWriter.h>
-#include "Controller/algorithmpluginmgr.h"
+#include "Controller/filterpluginmgr.h"
 #include "Utils/logmgr.h"
 
 ImageViewer::ImageViewer(QWidget *parent, FilterPluginMgr &manager) :

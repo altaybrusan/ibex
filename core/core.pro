@@ -180,8 +180,8 @@ HEADERS += \
     View/aboutdialog.h \
     View/toolsdialog.h \
     Controller/toolsmgr.h \
-    Controller/algorithmpluginmgr.h \
-    View/filtersdialog.h
+    View/filtersdialog.h \
+    Controller/filterpluginmgr.h
 
 
 FORMS += \
