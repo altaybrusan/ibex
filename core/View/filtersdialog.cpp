@@ -10,8 +10,10 @@ FiltersDialog::FiltersDialog(QWidget *parent) :
 
 void FiltersDialog::AddItemToList(QString filterName)
 {
-    new QListWidgetItem(filterName,ui->filtersListWidget);
+    QListWidgetItem* item = new QListWidgetItem(filterName,ui->filtersListWidget);
 
+    item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+    item->setCheckState(Qt::Unchecked);
 }
 
 FiltersDialog::~FiltersDialog()

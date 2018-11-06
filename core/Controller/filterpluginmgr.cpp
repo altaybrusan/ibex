@@ -4,12 +4,21 @@
 #include <QPluginLoader>
 #include <QDir>
 #include <QFileInfo>
+#include "View/filtersdialog.h"
 
 
 
 FilterPluginMgr::FilterPluginMgr(QObject *parent,QString path) :
     QObject(parent),
-    m_path(path)
+    m_path(path),
+    m_dialog(*new FiltersDialog(nullptr))
+{
+
+}
+
+FilterPluginMgr::FilterPluginMgr(QObject *parent, FiltersDialog &Dialog):
+    QObject(parent),
+    m_dialog(Dialog)
 {
 
 }
@@ -53,4 +62,14 @@ QMap<int, IAlgorithm *> FilterPluginMgr::GetWidgetList()
 {
     return m_algorithmContainer;
 
+}
+
+void FilterPluginMgr::OnActivateFilterPluginDialog()
+{
+    LoadPlugins();
+    for(int idx=0;idx<m_algorithmContainer.count();idx++)
+    {
+        m_dialog.AddItemToList(m_algorithmContainer[idx]->AlgorithmName());
+    }
+    m_dialog.show();
 }
