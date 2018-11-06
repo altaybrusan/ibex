@@ -11,7 +11,8 @@ DeviceMgr::DeviceMgr(QObject *parent,
                      ExaminationMgr &examinationMgr,
                      WorklistMgr& worklistMgr,
                      NewPatientMgr &newpatientMgr,
-                     ToolsMgr &toolsMgr) :
+                     ToolsMgr &toolsMgr,
+                     FilterPluginMgr &filterMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
     m_loadStudyMgr(loadStudyMgr),
@@ -21,7 +22,8 @@ DeviceMgr::DeviceMgr(QObject *parent,
     m_examinationMgr(examinationMgr),
     m_newPatientMgr(newpatientMgr),
     m_worklistMgr(worklistMgr),
-    m_toolsMgr(toolsMgr)
+    m_toolsMgr(toolsMgr),
+    m_filtersPluginMgr(filterMgr)
 {
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
 }
@@ -42,6 +44,7 @@ void DeviceMgr::WireConnections()
   connect(&m_mainWindow,&MainWindow::NotifyQuickStudyWorkFlowIsTriggered,&m_examinationMgr,&ExaminationMgr::OnActivateExamination);
   connect(&m_mainWindow,&MainWindow::NotifyNewStudyWorkFlowIsTriggered,&m_newPatientMgr,&NewPatientMgr::OnActivateNewPatientDialog);
   connect(&m_mainWindow,&MainWindow::NotiftToolsSettingsIsTriggered,&m_toolsMgr,&ToolsMgr::OnActivateToolsDialog);
+  connect(&m_mainWindow,&MainWindow::NotifyEnlistFilterIsTriggered,&m_filtersPluginMgr,&FilterPluginMgr::OnActivateFilterPluginDialog);
 
 }
 

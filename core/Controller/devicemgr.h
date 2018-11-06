@@ -15,6 +15,7 @@
 #include "Controller/worklistmgr.h"
 #include "Controller/newpatientmgr.h"
 #include "Controller/toolsmgr.h"
+#include "Controller/filterpluginmgr.h"
 
 class DeviceMgr : public QObject
 {
@@ -29,7 +30,8 @@ public:
                        ExaminationMgr& examinationMgr,
                        WorklistMgr& worklistMgr,
                        NewPatientMgr& newpatientMgr,
-                       ToolsMgr& toolsMgr);
+                       ToolsMgr& toolsMgr,
+                       FilterPluginMgr& filterMgr);
     void WireConnections();
 
 
@@ -47,6 +49,7 @@ private:
     WorklistMgr& m_worklistMgr;
     NewPatientMgr& m_newPatientMgr;
     ToolsMgr& m_toolsMgr;
+    FilterPluginMgr& m_filtersPluginMgr;
 
 
     void ShutdownDevice();

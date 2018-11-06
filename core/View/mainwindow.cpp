@@ -110,3 +110,8 @@ void MainWindow::on_action_Get_Tools_Status_triggered()
 {
     emit NotiftToolsSettingsIsTriggered();
 }
+
+void MainWindow::on_action_Get_Filters_Status_triggered()
+{
+    emit NotifyEnlistFilterIsTriggered();
+}

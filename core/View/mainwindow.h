@@ -27,6 +27,7 @@ signals:
     void NotifyOpenStudyWorkFlowIsTriggered();
     void NotifyWorklistLoadIsTriggered();
     void NotiftToolsSettingsIsTriggered();
+    void NotifyEnlistFilterIsTriggered();
 
 private slots:
 
@@ -43,6 +44,8 @@ private slots:
     void on_action_About_triggered();
 
     void on_action_Get_Tools_Status_triggered();
+
+    void on_action_Get_Filters_Status_triggered();
 
 protected:
     void showEvent( QShowEvent* event ) override;

@@ -24,6 +24,7 @@
 #include "View/loadImagedialog.h"
 #include "View/toolsdialog.h"
 #include "Controller/toolsmgr.h"
+#include "View/filtersdialog.h"
 #include "Controller/filterpluginmgr.h"
 #include <QtXml>
 #include <QDomNode>
@@ -37,8 +38,10 @@
 #define TOOLS_SETTINGS_FILE "./config/_ibexsettings.xml"
 #define ALGORITHM_PLUGIN_DIR "./plugins/"
 Startup::Startup() : QObject(nullptr),
-    m_algorithmPluginMgr(*new FilterPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
-    m_imageViewer(*new ImageViewer(nullptr,m_algorithmPluginMgr)),
+    m_filterPluginDlg(*new FiltersDialog(nullptr)),
+    m_filterMgr(*new FilterPluginMgr(nullptr,m_filterPluginDlg)),
+    m_filterPluginMgr(*new FilterPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
+    m_imageViewer(*new ImageViewer(nullptr,m_filterPluginMgr)),
     m_loadImageDlg(*new LoadImageDialog(nullptr,m_imageViewer)),
     m_mainWindow(*new MainWindow(nullptr,m_loadImageDlg)),
     m_loadStudyDlg(*new LoadStudyDialog(nullptr)),
@@ -68,7 +71,8 @@ Startup::Startup() : QObject(nullptr),
                             m_examinationMgr,
                             m_worklistMgr,
                             m_newPatientMgr,
-                            m_toolsMgr))
+                            m_toolsMgr,
+                            m_filterMgr))
 
 {
     m_dbConnector.setParent(this);
@@ -86,6 +90,12 @@ Startup::Startup() : QObject(nullptr),
     m_loadImageDlg.setWindowFlag( Qt::Window,true);
     m_loadImageDlg.setModal(true);
     m_loadImageDlg.setWindowTitle("Open Image Dialog");
+
+    m_filterPluginDlg.setParent(&m_mainWindow);
+    m_filterPluginDlg.setWindowFlag( Qt::Window,true);
+    m_filterPluginDlg.setModal(true);
+    m_filterPluginDlg.setWindowTitle("Filters");
+    m_filterPluginMgr.setParent(this);
 
     m_loadStudyDlg.setParent(&m_mainWindow);
     m_loadStudyDlg.setWindowFlag( Qt::Window,true);

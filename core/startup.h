@@ -25,6 +25,7 @@ class ImageViewer;
 class LoadImageDialog;
 class ToolsDialog;
 class ToolsMgr;
+class FiltersDialog;
 class FilterPluginMgr;
 
 class Startup : public QObject
@@ -36,7 +37,9 @@ public:
     ~Startup();
 
 private:
-    FilterPluginMgr& m_algorithmPluginMgr;
+    FiltersDialog& m_filterPluginDlg;
+    FilterPluginMgr& m_filterMgr;
+    FilterPluginMgr& m_filterPluginMgr;
     ImageViewer& m_imageViewer;
     LoadImageDialog& m_loadImageDlg;
     MainWindow& m_mainWindow;
