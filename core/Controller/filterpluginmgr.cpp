@@ -1,4 +1,4 @@
-#include "algorithmpluginmgr.h"
+#include "filterpluginmgr.h"
 #include "Utils/logmgr.h"
 
 #include <QPluginLoader>
