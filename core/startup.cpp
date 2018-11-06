@@ -37,7 +37,7 @@
 #define TOOLS_SETTINGS_FILE "./config/_ibexsettings.xml"
 #define ALGORITHM_PLUGIN_DIR "./plugins/"
 Startup::Startup() : QObject(nullptr),
-    m_algorithmPluginMgr(*new AlgorithmPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
+    m_algorithmPluginMgr(*new FilterPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
     m_imageViewer(*new ImageViewer(nullptr,m_algorithmPluginMgr)),
     m_loadImageDlg(*new LoadImageDialog(nullptr,m_imageViewer)),
     m_mainWindow(*new MainWindow(nullptr,m_loadImageDlg)),

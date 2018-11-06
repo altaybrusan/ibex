@@ -130,7 +130,8 @@ SOURCES += \
     View/aboutdialog.cpp \
     View/toolsdialog.cpp \
     Controller/toolsmgr.cpp \
-    Controller/algorithmpluginmgr.cpp
+    Controller/algorithmpluginmgr.cpp \
+    View/filtersdialog.cpp
 
 #         Utils/dicomwriter.cpp \
 
@@ -179,7 +180,8 @@ HEADERS += \
     View/aboutdialog.h \
     View/toolsdialog.h \
     Controller/toolsmgr.h \
-    Controller/algorithmpluginmgr.h
+    Controller/algorithmpluginmgr.h \
+    View/filtersdialog.h
 
 
 FORMS += \
@@ -194,7 +196,8 @@ FORMS += \
          View/examinationdialog.ui\
          View/newpatientdialog.ui \
     View/aboutdialog.ui \
-    View/toolsdialog.ui
+    View/toolsdialog.ui \
+    View/filtersdialog.ui
 
 RESOURCES += \
     resources.qrc

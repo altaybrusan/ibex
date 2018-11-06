@@ -19,14 +19,14 @@
 namespace Ui {
 class ImageViewer;
 }
-class AlgorithmPluginMgr;
+class FilterPluginMgr;
 
 class ImageViewer : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit ImageViewer(QWidget *parent, AlgorithmPluginMgr& manager);
+    explicit ImageViewer(QWidget *parent, FilterPluginMgr& manager);
     void DisplayImage(QString fileName);
     void ClearImageViewer();
     ~ImageViewer();
@@ -64,7 +64,7 @@ private:
 
     QList<QString> imagelist,thumbnailList;
     QString m_lastLoadedFile;
-    AlgorithmPluginMgr& m_pluginMgr;
+    FilterPluginMgr& m_pluginMgr;
     bool IsValidFile(QString fullFileName);
     void UpdateThumbnailList();
 

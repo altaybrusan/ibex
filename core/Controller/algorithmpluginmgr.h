@@ -6,11 +6,11 @@
 #include "ialgorithm.h"
 #include <QMap>
 
-class AlgorithmPluginMgr : public QObject
+class FilterPluginMgr : public QObject
 {
     Q_OBJECT
 public:
-    explicit AlgorithmPluginMgr(QObject *parent, QString path);
+    explicit FilterPluginMgr(QObject *parent, QString path);
 
     void LoadPlugins();
     QMap<int,IAlgorithm*> GetWidgetList();

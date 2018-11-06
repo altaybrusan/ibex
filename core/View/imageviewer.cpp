@@ -39,7 +39,7 @@
 #include "Controller/algorithmpluginmgr.h"
 #include "Utils/logmgr.h"
 
-ImageViewer::ImageViewer(QWidget *parent, AlgorithmPluginMgr &manager) :
+ImageViewer::ImageViewer(QWidget *parent, FilterPluginMgr &manager) :
     QMainWindow(parent),
     m_pluginMgr(manager),
     renderWindowInteractor(vtkSmartPointer<vtkRenderWindowInteractor>::New()),
