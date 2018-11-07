@@ -12,7 +12,7 @@ class FilterPluginMgr : public QObject
     Q_OBJECT
 public:
     explicit FilterPluginMgr(QObject *parent, QString path);
-    explicit FilterPluginMgr(QObject *parent, FiltersDialog& Dialog);
+    explicit FilterPluginMgr(QObject *parent, FiltersDialog& Dialog,QString path);
     void LoadPlugins();
     QMap<int,IAlgorithm*> GetWidgetList();
 

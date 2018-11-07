@@ -39,9 +39,9 @@
 #define ALGORITHM_PLUGIN_DIR "./plugins/"
 Startup::Startup() : QObject(nullptr),
     m_filterPluginDlg(*new FiltersDialog(nullptr)),
-    m_filterMgr(*new FilterPluginMgr(nullptr,m_filterPluginDlg)),
-    m_filterPluginMgr(*new FilterPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
-    m_imageViewer(*new ImageViewer(nullptr,m_filterPluginMgr)),
+    m_filterMgr(*new FilterPluginMgr(nullptr,m_filterPluginDlg,ALGORITHM_PLUGIN_DIR)),
+    //m_filterPluginMgr(*new FilterPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
+    m_imageViewer(*new ImageViewer(nullptr,m_filterMgr)),
     m_loadImageDlg(*new LoadImageDialog(nullptr,m_imageViewer)),
     m_mainWindow(*new MainWindow(nullptr,m_loadImageDlg)),
     m_loadStudyDlg(*new LoadStudyDialog(nullptr)),
@@ -95,7 +95,8 @@ Startup::Startup() : QObject(nullptr),
     m_filterPluginDlg.setWindowFlag( Qt::Window,true);
     m_filterPluginDlg.setModal(true);
     m_filterPluginDlg.setWindowTitle("Filters");
-    m_filterPluginMgr.setParent(this);
+    m_filterMgr.setParent(this);
+    //m_filterPluginMgr.setParent(this);
 
     m_loadStudyDlg.setParent(&m_mainWindow);
     m_loadStudyDlg.setWindowFlag( Qt::Window,true);

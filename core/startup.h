@@ -39,7 +39,7 @@ public:
 private:
     FiltersDialog& m_filterPluginDlg;
     FilterPluginMgr& m_filterMgr;
-    FilterPluginMgr& m_filterPluginMgr;
+    //FilterPluginMgr& m_filterPluginMgr;
     ImageViewer& m_imageViewer;
     LoadImageDialog& m_loadImageDlg;
     MainWindow& m_mainWindow;
