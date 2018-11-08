@@ -22,6 +22,13 @@ FilterPluginMgr::FilterPluginMgr(QObject *parent, FiltersDialog &Dialog, QString
     m_path(path),
     m_dialog(Dialog)
 {
+    LoadPlugins();
+    for(int idx=1;idx<=m_algorithmContainer.count();idx++)
+    {
+        LogMgr::instance()->LogSysDebug("plugin name:"+m_algorithmContainer[idx]->AlgorithmName());
+        m_dialog.AddItemToList(m_algorithmContainer[idx]->AlgorithmName());
+    }
+
     connect(&m_dialog,&FiltersDialog::NotifyItemCheckChanged,this,&FilterPluginMgr::OnItemCheckChanged);
 
 }
@@ -69,12 +76,7 @@ QMap<int, IAlgorithm *> FilterPluginMgr::GetWidgetList()
 
 void FilterPluginMgr::OnActivateFilterPluginDialog()
 {
-    LoadPlugins();
-    for(int idx=1;idx<=m_algorithmContainer.count();idx++)
-    {
-        LogMgr::instance()->LogSysDebug("plugin name:"+m_algorithmContainer[idx]->AlgorithmName());
-        m_dialog.AddItemToList(m_algorithmContainer[idx]->AlgorithmName());
-    }
+
     m_dialog.show();
 }
 

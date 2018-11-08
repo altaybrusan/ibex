@@ -20,6 +20,11 @@ public:
 signals:
     void NotifyItemCheckChanged(int row,bool checked);
 
+private slots:
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
 private:
     Ui::FiltersDialog *ui;
 };

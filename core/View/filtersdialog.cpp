@@ -28,3 +28,13 @@ FiltersDialog::~FiltersDialog()
 {
     delete ui;
 }
+
+void FiltersDialog::on_buttonBox_accepted()
+{
+    this->close();
+}
+
+void FiltersDialog::on_buttonBox_rejected()
+{
+    this->close();
+}
