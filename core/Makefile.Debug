@@ -4366,6 +4366,23 @@ compiler_moc_header_clean:
 		Controller\worklistmgr.h \
 		Controller\newpatientmgr.h \
 		Controller\toolsmgr.h \
+		Controller\filterpluginmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidgetItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
 		Controller\devicemgr.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -6461,6 +6478,26 @@ compiler_moc_header_clean:
 		C:\VTK\include\vtk-9.0\vtkSmartPointerBase.h \
 		C:\VTK\include\vtk-9.0\vtkNew.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidgetItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
 		Controller\filterpluginmgr.h \
 		..\build\debug\.moc\moc_predefs.h \
 		C:\Qt\5.9.4\msvc2015_64\bin\moc.exe
@@ -13225,6 +13262,9 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qdir.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidgetItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistview.h \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
@@ -14275,6 +14315,23 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		Controller/worklistmgr.h \
 		Controller/newpatientmgr.h \
 		Controller/toolsmgr.h \
+		Controller/filterpluginmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidgetItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
@@ -16430,6 +16487,23 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		Controller/worklistmgr.h \
 		Controller/newpatientmgr.h \
 		Controller/toolsmgr.h \
+		Controller/filterpluginmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidgetItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
@@ -16565,7 +16639,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextdocumentwriter.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtextlist.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtexttable.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qtguiversion.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QGraphicsScene \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
@@ -16580,8 +16653,8 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		Model/anatomicregionelement.h \
 		View/loadImagedialog.h \
 		View/toolsdialog.h \
-		Controller/filterpluginmgr.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QDir \
+		View/filtersdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidget \
 		C:\Qt\5.9.4\msvc2015_64\include\QtXml\QDomNode \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qmessagebox.h \
@@ -18347,7 +18420,37 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
-		..\build\debug\.ui\ui_filtersdialog.h
+		..\build\debug\.ui\ui_filtersdialog.h \
+		Utils/logmgr.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QObject \
+		../log4qt/consoleappender.h \
+		../log4qt/writerappender.h \
+		../log4qt/appenderskeleton.h \
+		../log4qt/appender.h \
+		../log4qt/helpers/logobject.h \
+		../log4qt/helpers/classlogger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicPointer \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QAtomicInt \
+		../log4qt/helpers/logobjectptr.h \
+		../log4qt/logger.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QList \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QReadWriteLock \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qreadwritelock.h \
+		../log4qt/helpers/logerror.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QString \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QVariant \
+		../log4qt/level.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMetaType \
+		../log4qt/log4qt.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMutex \
+		../log4qt/fileappender.h \
+		../log4qt/rollingfileappender.h \
+		../log4qt/loggerrepository.h \
+		../log4qt/logmanager.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QHash \
+		../log4qt/patternlayout.h \
+		../log4qt/layout.h \
+		../log4qt/ttcclayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\filtersdialog.obj View\filtersdialog.cpp
 
 ..\build\debug\.obj\filterpluginmgr.obj: Controller\filterpluginmgr.cpp Controller/filterpluginmgr.h \
@@ -18489,6 +18592,26 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\VTK\include\vtk-9.0\vtkSmartPointerBase.h \
 		C:\VTK\include\vtk-9.0\vtkNew.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QMap \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidgetItem \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qlistview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtGui\qicon.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qrubberband.h \
 		Utils/logmgr.h \
 		../log4qt/consoleappender.h \
 		../log4qt/writerappender.h \
@@ -18525,7 +18648,11 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qpointer.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\5.9.4\msvc2015_64\include\QtCore\qjsonvalue.h \
-		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFileInfo
+		C:\Qt\5.9.4\msvc2015_64\include\QtCore\QFileInfo \
+		View/filtersdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QDialog \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.9.4\msvc2015_64\include\QtWidgets\QListWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Fo..\build\debug\.obj\filterpluginmgr.obj Controller\filterpluginmgr.cpp
 
 ..\build\debug\.obj\qrc_resources.obj: ..\build\debug\.rcc\qrc_resources.cpp 

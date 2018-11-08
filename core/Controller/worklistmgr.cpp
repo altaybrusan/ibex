@@ -401,7 +401,7 @@ void WorklistMgr::LoadSettings()
     auto root =_provider.GetRootElement();
     QStringList strList = _provider.ListElements(root,"Server","IP");
     QString _str = (QString)strList.at(0);
-    LogMgr::instance()->LogSysInfo(">>> The distance IP is: "+ _str);
+    LogMgr::instance()->LogSysInfo("The distance worklist IP is: "+ _str);
     QByteArray _bytes = _str.toLocal8Bit();
     opt_peer = _bytes.data();
 
