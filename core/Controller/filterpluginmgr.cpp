@@ -22,6 +22,7 @@ FilterPluginMgr::FilterPluginMgr(QObject *parent, FiltersDialog &Dialog, QString
     m_path(path),
     m_dialog(Dialog)
 {
+    connect(&m_dialog,&FiltersDialog::NotifyItemCheckChanged,this,&FilterPluginMgr::OnItemCheckChanged);
 
 }
 
@@ -75,4 +76,14 @@ void FilterPluginMgr::OnActivateFilterPluginDialog()
         m_dialog.AddItemToList(m_algorithmContainer[idx]->AlgorithmName());
     }
     m_dialog.show();
+}
+
+void FilterPluginMgr::OnItemCheckChanged(int row, bool check)
+{
+    // The FiltersDialog issues the index based on zero;
+    // however, the QMap of algorithms index starts from one.
+
+    int mapped_index =row+1;
+    m_algorithmContainer[mapped_index]->SetAlgorithmEnabled(check);
+
 }

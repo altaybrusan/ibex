@@ -5,6 +5,7 @@
 #include <QDir>
 #include "ialgorithm.h"
 #include <QMap>
+#include <QListWidgetItem>
 
 class FiltersDialog;
 class FilterPluginMgr : public QObject
@@ -20,6 +21,8 @@ signals:
 
 public slots:
     void OnActivateFilterPluginDialog();
+private slots:
+    void OnItemCheckChanged(int row, bool check);
 private:
     QString m_path;
     QDir m_pluginsDir;

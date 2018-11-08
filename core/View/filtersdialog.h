@@ -17,6 +17,9 @@ public:
     void AddItemToList(QString filterName);
     ~FiltersDialog();
 
+signals:
+    void NotifyItemCheckChanged(int row,bool checked);
+
 private:
     Ui::FiltersDialog *ui;
 };

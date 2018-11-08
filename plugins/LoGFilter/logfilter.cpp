@@ -96,7 +96,7 @@ bool LoGFilter::IsEnabled()
 void LoGFilter::SetAlgorithmEnabled(bool enabled)
 {
     m_isEnabled = enabled;
-    //m_filterWidget->SetWidgetEnabled(false);
+    m_filterWidget->SetWidgetEnabled(enabled);
 }
 
 int LoGFilter::GetAlgorithmUID()
