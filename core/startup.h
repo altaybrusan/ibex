@@ -15,6 +15,18 @@ class LoadStudyDialog;
 class LoadStudyMgr;
 class ExaminationDialog;
 class ExaminationMgr;
+class WorklistMgr;
+class WorklistDialog;
+class WorklistModel;
+class NewPatientDialog;
+class NewPatientMgr;
+class RegistrationFormModel;
+class ImageViewer;
+class LoadImageDialog;
+class ToolsDialog;
+class ToolsMgr;
+class FiltersDialog;
+class FilterPluginMgr;
 
 class Startup : public QObject
 {
@@ -25,6 +37,11 @@ public:
     ~Startup();
 
 private:
+    FiltersDialog& m_filterPluginDlg;
+    FilterPluginMgr& m_filterMgr;
+    //FilterPluginMgr& m_filterPluginMgr;
+    ImageViewer& m_imageViewer;
+    LoadImageDialog& m_loadImageDlg;
     MainWindow& m_mainWindow;
     LoadStudyDialog& m_loadStudyDlg;
     LoadStudyMgr& m_loadStudyMgr;
@@ -34,12 +51,20 @@ private:
     QString m_dbName,m_dbDriver;
     PacsSettingsDialog& m_pacsSettingsDlg;
     PacsSettingMgr& m_pacsSettingsMgr;
-    WorklistServerSettingsDialog& m_worklistDlg;
-    WorklistServerSettingsMgr& m_worklistMgr;
+    WorklistServerSettingsDialog& m_worklistSettingsDlg;
+    WorklistServerSettingsMgr& m_worklistSettingsMgr;
     ExaminationDialog& m_examinationDlg;
     ExaminationMgr& m_examinationMgr;
-
+    WorklistModel& m_worklistMdl;
+    WorklistDialog& m_worklistDlg;
+    WorklistMgr& m_worklistMgr;
+    NewPatientDialog& m_newPatientDlg;
+    RegistrationFormModel& m_registrationFormModel;
+    NewPatientMgr& m_newPatientMgr;
+    ToolsDialog& m_toolsDlg;
+    ToolsMgr& m_toolsMgr;
     DeviceMgr& m_device;
+
 
 
 

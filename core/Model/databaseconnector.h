@@ -10,6 +10,7 @@ public:
     explicit DatabaseConnector(QObject *parent = nullptr);
     void AddDatabase(QString driver, QString dbName);
     bool ConnectToDatabase();
+    QSqlDatabase* GetDatabase();
     ~DatabaseConnector();
 
 signals:

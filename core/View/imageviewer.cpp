@@ -1,7 +1,7 @@
 #include "imageviewer.h"
 #include "ui_imageviewer.h"
 
-#include <QFileInfo>
+
 #include <QMessageBox>
 
 // CTK includes
@@ -9,10 +9,10 @@
 #include "ctkVTKMagnifyView.h"
 #include "ctkCommandLineParser.h"
 #include "ctkVTKSliceView.h"
-//#include "ctkWidgetsUtils.h"
 #include "ctkThumbnailListWidget.h"
 #include "ctkThumbnailLabel.h"
 // VTK includes
+#include <vtkPNGWriter.h>
 #include <vtkImageReader2Factory.h>
 #include <vtkImageReader2.h>
 #include <vtkSmartPointer.h>
@@ -31,21 +31,17 @@
 #include <vtkImageFlip.h>
 #include <vtkImageCast.h>
 #include <vtkAlgorithm.h>
-
-
-#include "Utils/logmgr.h"
-
 #include <vtkRenderWindow.h>
 #include <vtkRenderer.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkSmartPointer.h>
+#include <vtkTIFFWriter.h>
+#include "Controller/filterpluginmgr.h"
+#include "Utils/logmgr.h"
 
-#include "ialgorithm.h"
-#include <QPluginLoader>
-#include <QDir>
-
-ImageViewer::ImageViewer(QWidget *parent) :
+ImageViewer::ImageViewer(QWidget *parent, FilterPluginMgr &manager) :
     QMainWindow(parent),
+    m_pluginMgr(manager),
     renderWindowInteractor(vtkSmartPointer<vtkRenderWindowInteractor>::New()),
     legendScaleActor(vtkSmartPointer<vtkLegendScaleActor>::New()),
     imageViewer(vtkSmartPointer<vtkImageViewer2>::New()),
@@ -59,74 +55,13 @@ ImageViewer::ImageViewer(QWidget *parent) :
     ui(new Ui::ImageViewer)
 {
     ui->setupUi(this);
+    m_pluginMgr.LoadPlugins();
 
     LogMgr::instance()->LogSysDebug("ImageViewer is launched");
-    LoadAlgorithmPlugins();
-
-    //when the imageviewer is called for the first time,
-    //there is no image to show. To avoid any problem,
-    //a blank image is loaded.
-    //this may not be best pracctice, but at least works fine.
-    blankImage->SetDimensions(10, 10, 1);
-    blankImage->AllocateScalars(VTK_DOUBLE,1);
-    for (int i = 0; i < 10; i++)
-        for (int j = 0; j < 10; j++)
-            blankImage->SetScalarComponentFromDouble(i, j, 0, 0, 0);
-
-    //force the viewer to use the blank image
-    imageViewer->SetInputData(blankImage);
-
-    //Defualt options for legend scale
-    legendScaleActor->TopAxisVisibilityOff();
-    legendScaleActor->RightAxisVisibilityOff();
-    legendScaleActor->SetLegendVisibility(0);
-
-    //renderer options are set
-    renderer->AddActor(legendScaleActor);
-    renderer->SetBackground(0,0,0);
-    renderer->ResetCameraClippingRange();
-
-    imageViewer->SetupInteractor(renderWindowInteractor);
-    imageViewer->SetRenderWindow(ui->qvtkWidget->GetRenderWindow());
-    imageViewer->SetRenderer(renderer);
-    imageViewer->Render();
-
-    renderWindowInteractor->SetInteractorStyle(style);
-    renderWindowInteractor->Initialize();
-
-
-    // thumbnailbar configuration
-    QVBoxLayout* layout =new QVBoxLayout;
-    layout->setSpacing(0);
-    layout->setMargin(1);
-    QSize _size(64,64);
-    thumbnailBar= new ctkThumbnailListWidget(this);
-    thumbnailBar->setThumbnailSize(_size);
-    thumbnailBar->setStyleSheet("background-color:black;");
-    layout->addWidget(thumbnailBar);
-    ui->thumbnailFrame->setLayout(layout);
-    connect(thumbnailBar,
-            SIGNAL(doubleClicked(ctkThumbnailLabel)),
-            this,
-            SLOT(OnThumbnailChanged(ctkThumbnailLabel)));
-    connect(ui->actionvFlip,
-            SIGNAL(toggled(bool)),
-            this,
-            SLOT(OnVerticalFlipToggled(bool)));
-    connect(ui->actionhFlip,
-            SIGNAL(toggled(bool)),
-            this,
-            SLOT(OnHorizontalFlipToggled(bool)));
-
-
-// These linese test to make toolbar (flip) operations mutually exclusive.
-
-//    QActionGroup* toolActionGroup= new QActionGroup(this);
-//    toolActionGroup->addAction(ui->actionhFlip);
-//    toolActionGroup->addAction(ui->actionvFlip);
-//    toolActionGroup->setExclusive(true);
-
+    InitializeViewer();
+    LoadPlugins();
 }
+
 
 ImageViewer::~ImageViewer()
 {
@@ -135,6 +70,7 @@ ImageViewer::~ImageViewer()
 
 void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 {
+    m_lastLoadedFile= widget.text();
     DisplayImage(widget.text());
 }
 
@@ -142,8 +78,18 @@ void ImageViewer::OnThumbnailChanged(const ctkThumbnailLabel &widget)
 // this image flip is not the best practice. find a better solutipn for the next iteration
 void ImageViewer::OnVerticalFlipToggled(bool value)
 {
-    imageViewer->GetInput();
-    flipFilter->SetInputConnection(imageReader->GetOutputPort());
+    if(!imageViewer->GetInput())
+        return; //there is no image to flip
+
+    if(!flipFilter->GetInput(0))
+    {
+       LogMgr::instance()->LogSysInfo("imageviewer is not empty");
+       castFilter->SetInputData(imageViewer->GetInput());
+       castFilter->Update();
+       flipFilter->SetInputConnection(castFilter->GetOutputPort());
+       flipFilter->Update();
+
+    }
     if(value)
     {
         flipFilter->SetFilteredAxis(0);
@@ -152,10 +98,10 @@ void ImageViewer::OnVerticalFlipToggled(bool value)
     {
         flipFilter->SetFilteredAxis(-2);
     }
-
-    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     flipFilter->Update();
+    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     imageViewer->Render();
+
 }
 
 // this image flip is not the best practice. find a better solutipn for the next iteration
@@ -164,21 +110,30 @@ void ImageViewer::OnHorizontalFlipToggled(bool value)
     //instead of fliping image, you can flip camera.
     //imageViewer->GetRenderer()->GetActiveCamera()->Yaw(180);
 
-    //flipXFilter->AddInputData(imageViewer->GetImageActor()->GetInput());
-    flipFilter->SetInputConnection(imageReader->GetOutputPort());
+    if(!imageViewer->GetInput())
+        return; //there is no image to flip
+
+    if(!flipFilter->GetInput(0))
+    {
+       LogMgr::instance()->LogSysInfo("imageviewer is not empty");
+       castFilter->SetInputData(imageViewer->GetInput());
+       castFilter->Update();
+       flipFilter->SetInputConnection(castFilter->GetOutputPort());
+       flipFilter->Update();
+
+    }
     if(value)
     {
-        //ui->actionvFlip->setChecked(false);
         flipFilter->SetFilteredAxis(1);
     }
     else
     {
         flipFilter->SetFilteredAxis(-1);
     }
-
-    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     flipFilter->Update();
+    imageViewer->SetInputConnection(flipFilter->GetOutputPort());
     imageViewer->Render();
+
 
 }
 
@@ -205,7 +160,11 @@ void ImageViewer::DisplayImage(QString fileName)
 
     if(IsValidFile(fileName))
     {
-
+        if(flipFilter->GetInput(0))
+        {
+            //reset flip
+            flipFilter->SetInputData(0);
+        }
         // Instanciate an image reader
         // not tested for all ttypes (may not work with all tiff, dcm or jpg)
         imageReader.TakeReference(imageFactory->CreateImageReader2(fileName.toLatin1()));
@@ -220,6 +179,7 @@ void ImageViewer::DisplayImage(QString fileName)
             //Read image
             imageReader->SetFileName(fileName.toLatin1());
             imageReader->Update();
+            m_lastLoadedFile = fileName;
 
         }
         // internal call of UninstallPipeline() is for example triggered by re-setting render window ...
@@ -278,19 +238,19 @@ void ImageViewer::DisplayImage(QString fileName)
         UpdateThumbnailList();
         imageViewer->UpdateDisplayExtent();
 
-        // Read image
-        //imageReader->SetFileName(fullFileName.toLatin1());
-        //imageViewer->SetInputConnection(imageReader->GetOutputPort());
-        //renderer->ResetCamera();
-        //imageViewer->Render();
-        //imagelist.append(fullFileName);
-        //UpdateThumbnailList();
-        //imageViewer->UpdateDisplayExtent();
-        //imageReader->Update();
-
-
     }
 
+
+}
+
+void ImageViewer::ClearImageViewer()
+{
+    m_lastLoadedFile.clear();
+    imagelist.clear();
+    thumbnailList.clear();
+    thumbnailBar->clearThumbnails();
+    imageViewer = vtkSmartPointer<vtkImageViewer2>::New();
+    InitializeViewer();
 }
 
 void ImageViewer::UpdateThumbnailList()
@@ -305,73 +265,6 @@ void ImageViewer::UpdateThumbnailList()
     }
 }
 
-void ImageViewer::LoadAlgorithmPlugins()
-{
-    QDir pluginsDir(qApp->applicationDirPath());
-    LogMgr::instance()->LogSysInfo("current directory:"+pluginsDir.currentPath());
-    pluginsDir.cd("plugins");
-    QVBoxLayout *layout = new QVBoxLayout(ui->FilterArea);
-    layout->setMargin(0);
-    foreach (QString fileName, pluginsDir.entryList(QDir::Files))
-    {
-        QPluginLoader pluginLoader(pluginsDir.absoluteFilePath(fileName));
-        QObject *plugin = pluginLoader.instance();
-        if (plugin)
-        {
-          algorithm = dynamic_cast<IAlgorithm*>(plugin);
-          if(algorithm)
-          {
-              connect(dynamic_cast<QObject*>(algorithm),SIGNAL(NotifyAlgorithmFinished()),this,SLOT(OnAlgorithmFinished()));
-              LogMgr::instance()->LogSysInfo(" iBEX is loading filter: "+ fileName);
-              if(algorithm->GetWidget())
-              {
-                 layout->addWidget(algorithm->GetWidget());
-                 QFrame *line=new QFrame(this);
-                 line->setGeometry(QRect(50, 160, 118, 3));
-                 line->setFrameShape(QFrame::HLine);
-                 line->setFrameShadow(QFrame::Sunken);
-                 layout->addWidget(line);
-
-                 QDir testDir(qApp->applicationDirPath());
-                 testDir.cd("test");
-
-                  QString fileName = "C:\\Users\\Altay\\Documents\\Qt\\Projects\\ibex\\build\\release\\test\\phantom.tiff";
-
-                  vtkSmartPointer<vtkImageReader2> imageReader =vtkSmartPointer<vtkImageReader2>::New();
-                  vtkSmartPointer<vtkImageReader2Factory> imageFactory = vtkSmartPointer<vtkImageReader2Factory>::New();
-                  imageReader.TakeReference(imageFactory->CreateImageReader2(fileName.toLatin1()));
-                  if (!imageReader)
-                  {
-                      LogMgr::instance()->LogSysDebug("failed to instanciate image reader using: " + fileName);
-                      QMessageBox::warning(this,tr("error loading file"),tr("can not load the file"),QMessageBox::Ok);
-                      return;
-                  }
-                  else
-                  {
-                      //Read image
-                      imageReader->SetFileName(fileName.toLatin1());
-                      imageReader->Update();
-                      vtkSmartPointer<vtkImageData> _imgData =
-                              vtkSmartPointer<vtkImageData>::New();
-
-                      _imgData= imageReader->GetOutput();
-                      QList<vtkSmartPointer<vtkImageData>> _list;
-
-                      _list.append(_imgData);
-                      algorithm->SetInputData(_list);
-                      algorithm->UpdateParentWidget(ui->FilterArea);
-
-
-                  }
-
-
-              }
-          }
-        }
-}
-
-
-}
 
 
 // not implemented yet.
@@ -380,10 +273,166 @@ void ImageViewer::on_actioninvertColor_triggered()
 
 }
 
-void ImageViewer::OnAlgorithmFinished()
+void ImageViewer::OnAlgorithmStarted(int algorithmUID)
 {
+    if(m_lastLoadedFile.isEmpty())
+        return;
 
-    LogMgr::instance()->LogSysDebug("filter operation is done");
+    LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is started");
+    LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is started");
+    QApplication::setOverrideCursor(Qt::WaitCursor);
+
+    vtkSmartPointer<vtkImageReader2> imageReader =vtkSmartPointer<vtkImageReader2>::New();
+    vtkSmartPointer<vtkImageReader2Factory> imageFactory = vtkSmartPointer<vtkImageReader2Factory>::New();
+    imageReader.TakeReference(imageFactory->CreateImageReader2(m_lastLoadedFile.toLatin1()));
+    if (!imageReader)
+    {
+        LogMgr::instance()->LogSysDebug("failed to instanciate image reader using: " + m_lastLoadedFile);
+        QMessageBox::warning(this,tr("error loading file"),tr("can not load the file"),QMessageBox::Ok);
+        return;
+    }
+    else
+    {
+        //Read image
+        imageReader->SetFileName(m_lastLoadedFile.toLatin1());
+        imageReader->Update();
+        vtkSmartPointer<vtkImageData> _imgData =
+                vtkSmartPointer<vtkImageData>::New();
+        //_imgData= imageReader->GetOutput();
+        _imgData = imageViewer->GetInput();
+
+        vtkSmartPointer<vtkTIFFWriter> writer =
+          vtkSmartPointer<vtkTIFFWriter>::New();
+        writer->SetFileName("screenImage.png");
+        writer->SetInputData(_imgData);
+        writer->Write();
+
+        QList<vtkSmartPointer<vtkImageData>> _list;
+        _list.append(_imgData);
+        LogMgr::instance()->LogSysInfo("number of images in stack:" + QString::number(_list.count()));
+
+        (m_pluginMgr.GetWidgetList())[algorithmUID]->SetInputData(_list);
+        (m_pluginMgr.GetWidgetList())[algorithmUID]->StartAlgorithm();
+        //algorithm->UpdateParentWidget(ui->FilterArea);
+    }
+
+}
+
+void ImageViewer::OnAlgorithmProgress(int algorithmUID, int percent)
+{
+    LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is progressed: "+QString::number(percent));
+    LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is progressed: "+QString::number(percent));
+
+}
+
+void ImageViewer::OnAlgorithmError(int algorithmUID, QString message)
+{
+    LogMgr::instance()->LogSysError("algorithm "+ QString::number(algorithmUID)+" error: " + message);
+    LogMgr::instance()->LogAppError("algorithm "+ QString::number(algorithmUID)+" error: " + message);
+    QMessageBox::warning(this,"Warning","the selected algorithmed issued error:"+message,QMessageBox::Ok);
+
+}
+
+void ImageViewer::OnAlgorithmFinished(int algorithmUID)
+{
+    LogMgr::instance()->LogSysDebug("algorithm "+ QString::number(algorithmUID)+" is finished");
+    LogMgr::instance()->LogAppDebug("algorithm UID:"+QString::number(algorithmUID)+" is finished");
+
+    vtkSmartPointer<vtkImageData> _filteredImage = m_pluginMgr.GetWidgetList()[algorithmUID]->GetOutputData().at(0);
+    castFilter->SetInputData(_filteredImage);
+    castFilter->Update();
+    castFilter->Modified();
+    double min = castFilter->GetOutput()->GetScalarRange()[0];
+    double max = castFilter->GetOutput()->GetScalarRange()[1];
+    imageViewer->SetColorLevel((max+min)/2);
+    imageViewer->SetColorWindow(max-min);
+    imageViewer->SetInputData(_filteredImage);
+    imageViewer->Render();
+    //imageViewer->UpdateDisplayExtent();
+    QApplication::restoreOverrideCursor();
+}
+
+void ImageViewer::InitializeViewer()
+{
+    //when the imageviewer is called for the first time,
+    //there is no image to show. To avoid any problem,
+    //a blank image is loaded.
+    //this may not be best pracctice, but at least works fine.
+//    blankImage->SetDimensions(10, 10, 1);
+//    blankImage->AllocateScalars(VTK_DOUBLE,1);
+//    for (int i = 0; i < 10; i++)
+//        for (int j = 0; j < 10; j++)
+//            blankImage->SetScalarComponentFromDouble(i, j, 0, 0, 0);
+
+//    //force the viewer to use the blank image
+//    imageViewer->SetInputData(blankImage);
+
+    //Defualt options for legend scale
+    legendScaleActor->TopAxisVisibilityOff();
+    legendScaleActor->RightAxisVisibilityOff();
+    legendScaleActor->SetLegendVisibility(0);
+
+    //renderer options are set
+    renderer->AddActor(legendScaleActor);
+    renderer->SetBackground(0,0,0);
+    renderer->ResetCameraClippingRange();
+
+    imageViewer->SetupInteractor(renderWindowInteractor);
+    imageViewer->SetRenderWindow(ui->qvtkWidget->GetRenderWindow());
+    imageViewer->SetRenderer(renderer);
+    imageViewer->Render();
+
+    renderWindowInteractor->SetInteractorStyle(style);
+    renderWindowInteractor->Initialize();
+
+}
+
+void ImageViewer::LoadPlugins()
+{
+    // thumbnailbar configuration
+    QVBoxLayout* layout =new QVBoxLayout;
+    layout->setSpacing(0);
+    layout->setMargin(1);
+    QSize _size(64,64);
+    thumbnailBar= new ctkThumbnailListWidget(this);
+    thumbnailBar->setThumbnailSize(_size);
+    thumbnailBar->setStyleSheet("background-color:black;");
+    layout->addWidget(thumbnailBar);
+    ui->thumbnailFrame->setLayout(layout);
+    connect(thumbnailBar,
+            SIGNAL(doubleClicked(ctkThumbnailLabel)),
+            this,
+            SLOT(OnThumbnailChanged(ctkThumbnailLabel)));
+    connect(ui->actionvFlip,
+            SIGNAL(toggled(bool)),
+            this,
+            SLOT(OnVerticalFlipToggled(bool)));
+    connect(ui->actionhFlip,
+            SIGNAL(toggled(bool)),
+            this,
+            SLOT(OnHorizontalFlipToggled(bool)));
+
+        QVBoxLayout *filterlayout = new QVBoxLayout(ui->FilterArea);
+        filterlayout->setMargin(0);
+        QMapIterator<int,IAlgorithm*> _iterator(m_pluginMgr.GetWidgetList());
+        while(_iterator.hasNext())
+        {
+          _iterator.next();
+          if(_iterator.value()->GetWidget())
+            {
+                filterlayout->addWidget(_iterator.value()->GetWidget());
+                QFrame *line=new QFrame(this);
+                line->setGeometry(QRect(50, 160, 118, 3));
+                line->setFrameShape(QFrame::HLine);
+                line->setFrameShadow(QFrame::Sunken);
+                filterlayout->addWidget(line);
+            }
+
+          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmStarted,this,&ImageViewer::OnAlgorithmStarted);
+          connect(_iterator.value(),&IAlgorithm::NotifyProgress,this,&ImageViewer::OnAlgorithmProgress);
+          connect(_iterator.value(),&IAlgorithm::NotifyError,this,&ImageViewer::OnAlgorithmError);
+          connect(_iterator.value(),&IAlgorithm::NotifyAlgorithmFinished,this,&ImageViewer::OnAlgorithmFinished);
+        }
 }
 
 

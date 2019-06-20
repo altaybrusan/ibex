@@ -24,5 +24,9 @@
         <file>images/_48_invert_selection.png</file>
         <file>images/_72_radiation_sign.png</file>
         <file>images/_operator_logo.png</file>
+        <file>images/_48_worklist_select.png</file>
+        <file>images/_48_reload.png</file>
+        <file>images/_48_add_user.png</file>
+        <file>images/_48_remove_user.png</file>
     </qresource>
 </RCC>

@@ -30,6 +30,11 @@ bool DatabaseConnector::ConnectToDatabase()
     return true;
 }
 
+QSqlDatabase *DatabaseConnector::GetDatabase()
+{
+    return &m_database;
+}
+
 DatabaseConnector::~DatabaseConnector()
 {
     m_database.close();

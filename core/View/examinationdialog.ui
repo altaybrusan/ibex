@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1282</width>
+    <width>1629</width>
     <height>876</height>
    </rect>
   </property>
@@ -252,11 +252,87 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>414</width>
-           <height>219</height>
+           <width>525</width>
+           <height>176</height>
           </rect>
          </property>
         </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="resultFrame">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>160</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Panel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="spacing">
+          <number>15</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="acceptBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 9pt &quot;Tahoma&quot;;
+background-color: rgb(85, 170, 127);</string>
+           </property>
+           <property name="text">
+            <string>Accept</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="rejectBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 9pt &quot;Tahoma&quot;;
+background-color: rgb(85, 170, 127);</string>
+           </property>
+           <property name="text">
+            <string>Reject</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
       <item>

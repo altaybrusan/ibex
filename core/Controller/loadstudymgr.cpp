@@ -32,7 +32,7 @@ LoadStudyMgr::LoadStudyMgr(QObject *parent,
     });
 }
 
-void LoadStudyMgr::ActivateLoadingStudy()
+void LoadStudyMgr::OnActivateLoadingStudy()
 {
     LogMgr::instance()->LogAppInfo(tr("load study is started"));
     LogMgr::instance()->LogSysInfo(tr("load study is activated."));

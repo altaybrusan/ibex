@@ -14,16 +14,17 @@ class LoadImageDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit LoadImageDialog(QWidget *parent = 0);
+    explicit LoadImageDialog(QWidget *parent,ImageViewer & viewer);
+    void Show();
     ~LoadImageDialog();
 
 private slots:
-    void on_loadBtn_clicked();
+    void on_openBtn_clicked();
 
 private:
     void LoadImage(QString filePath);
     Ui::LoadImageDialog *ui;
-    ImageViewer* m_viewer;
+    ImageViewer& m_viewer;
 
 };
 

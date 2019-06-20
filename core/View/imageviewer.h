@@ -14,20 +14,21 @@
 #include "ctkThumbnailLabel.h"
 #include "vtkImageFlip.h"
 #include "vtkImageCast.h"
-
 #include "ialgorithm.h"
 
 namespace Ui {
 class ImageViewer;
 }
+class FilterPluginMgr;
 
 class ImageViewer : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit ImageViewer(QWidget *parent = 0);
+    explicit ImageViewer(QWidget *parent, FilterPluginMgr& manager);
     void DisplayImage(QString fileName);
+    void ClearImageViewer();
     ~ImageViewer();
 
 
@@ -36,10 +37,16 @@ protected slots:
     void OnVerticalFlipToggled(bool value);
     void OnHorizontalFlipToggled(bool value);
     void on_actioninvertColor_triggered();
-    void OnAlgorithmFinished();
 
+private slots:
+    void OnAlgorithmStarted(int algorithmUID);
+    void OnAlgorithmProgress(int algorithmUID, int percent);
+    void OnAlgorithmError(int algorithmUID, QString message);
+    void OnAlgorithmFinished(int algorithmUID);
 
 private:
+    void InitializeViewer();
+    void LoadPlugins();
 
     Ui::ImageViewer *ui;
     vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor;
@@ -56,12 +63,10 @@ private:
     vtkSmartPointer<vtkImageCast> castFilter;
 
     QList<QString> imagelist,thumbnailList;
-
+    QString m_lastLoadedFile;
+    FilterPluginMgr& m_pluginMgr;
     bool IsValidFile(QString fullFileName);
     void UpdateThumbnailList();
-    void LoadAlgorithmPlugins();
-
-    IAlgorithm* algorithm;
 
 };
 

@@ -1,13 +1,42 @@
 #include "anatomicregionelement.h"
 
+
 AnatomicRegionElement::AnatomicRegionElement(QObject *parent) : QObject(parent)
 {
 
 }
 
-void AnatomicRegionElement::SetBodyPart(iBEX::BODY_PART bodyPart)
+AnatomicRegionElement::AnatomicRegionElement(const AnatomicRegionElement &region)
 {
-    m_bodyPart= bodyPart;
+    m_bodyPart = region.GetBodyPart();
+    m_codeValue = region.GetCodeValue();
+    m_codeMeaning = region.GetCodeMeaning();
+    m_position = region.GetBodyPartView();
+}
+
+AnatomicRegionElement &AnatomicRegionElement::operator=(const AnatomicRegionElement &lhs)
+{
+    m_bodyPart = lhs.GetBodyPart();
+    m_codeValue = lhs.GetCodeValue();
+    m_codeMeaning = lhs.GetCodeMeaning();
+    m_position = lhs.GetBodyPartView();
+
+    return *this;
+}
+
+bool AnatomicRegionElement::operator==(const AnatomicRegionElement &lhs)
+{
+   return m_bodyPart == lhs.GetBodyPart();
+}
+
+void AnatomicRegionElement::SetBodyPart(iBEX::BODY_PART part)
+{
+    m_bodyPart= part;
+}
+
+void AnatomicRegionElement::SetBodyPartView(iBEX::PATIENT_POSISTION position)
+{
+    m_position = position;
 }
 
 void AnatomicRegionElement::SetCodeValue(QString code)
@@ -20,17 +49,23 @@ void AnatomicRegionElement::setCodeMeaning(QString meaning)
     m_codeMeaning =meaning;
 }
 
-iBEX::BODY_PART AnatomicRegionElement::GetBodyPart()
+
+iBEX::BODY_PART AnatomicRegionElement::GetBodyPart() const
 {
     return m_bodyPart;
 }
 
-QString AnatomicRegionElement::GetCodeValue()
+iBEX::PATIENT_POSISTION AnatomicRegionElement::GetBodyPartView() const
+{
+    return m_position;
+}
+
+QString AnatomicRegionElement::GetCodeValue() const
 {
     return m_codeValue;
 }
 
-QString AnatomicRegionElement::GetCodeMeaning()
+QString AnatomicRegionElement::GetCodeMeaning() const
 {
     return m_codeMeaning;
 }

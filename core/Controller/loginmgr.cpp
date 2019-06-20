@@ -42,9 +42,9 @@ void LoginMgr::OnCheckCredintials()
         bool _isfound = false;
         while(query.next())
         {
-            QString _uid = "User ID:" + query.value(0).toString();
+            QString _uname = "User Name:" + query.value(0).toString();
             QString _pass = "User Password:" +query.value(2).toString();
-            LogMgr::instance()->LogSysInfo(_uid + _pass);
+            LogMgr::instance()->LogSysInfo(_uname + _pass);
 
             if(query.value(1).toString() == name &&
                query.value(2).toString() == password)

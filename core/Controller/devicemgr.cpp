@@ -1,33 +1,31 @@
 #include "devicemgr.h"
-#include <QDebug>
 #include "Utils/logmgr.h"
 #include <QApplication>
 
-DeviceMgr::DeviceMgr(QObject *parent, MainWindow &mainWindow,
+DeviceMgr::DeviceMgr(QObject *parent,
+                     MainWindow &mainWindow,
                      LoginMgr &loginMgr,
-                     PacsSettingsDialog &pacsSettingsDlg,
                      PacsSettingMgr &pacsSettingsMgr,
-                     WorklistServerSettingsDialog &worklistSettingDlg,
                      WorklistServerSettingsMgr &worklistdialogMgr,
-                     LoadStudyDialog &loadStudyDlg,
                      LoadStudyMgr &loadStudyMgr,
-                     ExaminationDialog &examinationDlg,
-                     ExaminationMgr &examinationMgr) :
+                     ExaminationMgr &examinationMgr,
+                     WorklistMgr& worklistMgr,
+                     NewPatientMgr &newpatientMgr,
+                     ToolsMgr &toolsMgr,
+                     FilterPluginMgr &filterMgr) :
     QObject(parent),
     m_mainWindow(mainWindow),
-    m_loadStudyDlg(loadStudyDlg),
     m_loadStudyMgr(loadStudyMgr),
     m_loginMgr(loginMgr),
-    m_pacsSettingsDlg(pacsSettingsDlg),
     m_pacsSettingsMgr(pacsSettingsMgr),
-    m_worklistSettingsDlg(worklistSettingDlg),
     m_worklisSettingstMgr(worklistdialogMgr),
-    m_examinationDlg(examinationDlg),
-    m_examinationMgr(examinationMgr)
+    m_examinationMgr(examinationMgr),
+    m_newPatientMgr(newpatientMgr),
+    m_worklistMgr(worklistMgr),
+    m_toolsMgr(toolsMgr),
+    m_filtersPluginMgr(filterMgr)
 {
-
     LogMgr::instance()->LogSysInfo(tr("Device Manager <DeviceMgr> is constructing..."));
-
 }
 
 void DeviceMgr::WireConnections()
@@ -41,39 +39,12 @@ void DeviceMgr::WireConnections()
   });
   connect(&m_mainWindow,&MainWindow::NotifyUpdatePACSSettingIsTriggered,&m_pacsSettingsMgr,&PacsSettingMgr::OnActivatePacsSettingsDialog);
   connect(&m_mainWindow,&MainWindow::NotifyUpdateWorklistSettingsIsTriggered,&m_worklisSettingstMgr,&WorklistServerSettingsMgr::OnActivateWorklistSettingsDialog);
-  connect(&m_mainWindow,&MainWindow::NotifyLoadStudyIsTriggered,&m_loadStudyMgr,&LoadStudyMgr::ActivateLoadingStudy);
-
+  connect(&m_mainWindow,&MainWindow::NotifyLoadStudyIsTriggered,&m_loadStudyMgr,&LoadStudyMgr::OnActivateLoadingStudy);
+  connect(&m_mainWindow,&MainWindow::NotifyWorklistLoadIsTriggered,&m_worklistMgr,&WorklistMgr::OnActivateWorklistDialog);
   connect(&m_mainWindow,&MainWindow::NotifyQuickStudyWorkFlowIsTriggered,&m_examinationMgr,&ExaminationMgr::OnActivateExamination);
-}
-
-void DeviceMgr::OnNewStudyWorkFlowIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnQuickStudyWorkFlowIsTriggered()
-{
-
-
-}
-
-void DeviceMgr::OnUpdatePACSSettingIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnLoadStudyIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnUpdateWorklistSettingsIsTriggered()
-{
-
-}
-
-void DeviceMgr::OnOpenStudyWorkFlowIsTriggered()
-{
+  connect(&m_mainWindow,&MainWindow::NotifyNewStudyWorkFlowIsTriggered,&m_newPatientMgr,&NewPatientMgr::OnActivateNewPatientDialog);
+  connect(&m_mainWindow,&MainWindow::NotiftToolsSettingsIsTriggered,&m_toolsMgr,&ToolsMgr::OnActivateToolsDialog);
+  connect(&m_mainWindow,&MainWindow::NotifyEnlistFilterIsTriggered,&m_filtersPluginMgr,&FilterPluginMgr::OnActivateFilterPluginDialog);
 
 }
 

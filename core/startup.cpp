@@ -14,6 +14,18 @@
 #include "Controller/loadstudymgr.h"
 #include "View/examinationdialog.h"
 #include "Controller/examinationmgr.h"
+#include "View/worklistdialog.h"
+#include "Model/worklistmodel.h"
+#include "Controller/worklistmgr.h"
+#include "View/newpatientdialog.h"
+#include "Controller/newpatientmgr.h"
+#include "Model/registrationformmodel.h"
+#include "View/imageviewer.h"
+#include "View/loadImagedialog.h"
+#include "View/toolsdialog.h"
+#include "Controller/toolsmgr.h"
+#include "View/filtersdialog.h"
+#include "Controller/filterpluginmgr.h"
 #include <QtXml>
 #include <QDomNode>
 #include <QMessageBox>
@@ -23,8 +35,15 @@
 #define WRKLST_SETTING_FILE "./configs/_worklist.xml"
 #define LOCAL_PACS_FILE "./database/localpacs.db"
 #define LOCALDB_SCHEMA_FILE "./configs/dicom-schema.sql"
+#define TOOLS_SETTINGS_FILE "./config/_ibexsettings.xml"
+#define ALGORITHM_PLUGIN_DIR "./plugins/"
 Startup::Startup() : QObject(nullptr),
-    m_mainWindow(*new MainWindow(nullptr)),
+    m_filterPluginDlg(*new FiltersDialog(nullptr)),
+    m_filterMgr(*new FilterPluginMgr(nullptr,m_filterPluginDlg,ALGORITHM_PLUGIN_DIR)),
+    //m_filterPluginMgr(*new FilterPluginMgr(nullptr,ALGORITHM_PLUGIN_DIR)),
+    m_imageViewer(*new ImageViewer(nullptr,m_filterMgr)),
+    m_loadImageDlg(*new LoadImageDialog(nullptr,m_imageViewer)),
+    m_mainWindow(*new MainWindow(nullptr,m_loadImageDlg)),
     m_loadStudyDlg(*new LoadStudyDialog(nullptr)),
     m_loadStudyMgr(*new LoadStudyMgr(nullptr,m_loadStudyDlg,LOCAL_PACS_FILE,LOCALDB_SCHEMA_FILE)),
     m_loginDlg(*new LoginDialog(nullptr)),
@@ -32,15 +51,28 @@ Startup::Startup() : QObject(nullptr),
     m_dbConnector(*new DatabaseConnector(nullptr)),
     m_pacsSettingsDlg(*new PacsSettingsDialog(nullptr)),
     m_pacsSettingsMgr(*new PacsSettingMgr(nullptr,m_pacsSettingsDlg)),
-    m_worklistDlg(*new WorklistServerSettingsDialog(nullptr)),
-    m_worklistMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistDlg,WRKLST_SETTING_FILE)),
-    m_examinationDlg(*new ExaminationDialog(nullptr)),
+    m_worklistSettingsDlg(*new WorklistServerSettingsDialog(nullptr)),
+    m_worklistSettingsMgr(*new WorklistServerSettingsMgr(nullptr,m_worklistSettingsDlg,WRKLST_SETTING_FILE)),
+    m_examinationDlg(*new ExaminationDialog(nullptr,m_imageViewer)),
     m_examinationMgr(*new ExaminationMgr(nullptr,m_examinationDlg)),
-    m_device(*new DeviceMgr(nullptr,m_mainWindow,m_loginMgr,
-                            m_pacsSettingsDlg,m_pacsSettingsMgr,
-                            m_worklistDlg,m_worklistMgr,
-                            m_loadStudyDlg,m_loadStudyMgr,
-                            m_examinationDlg,m_examinationMgr))
+    m_worklistDlg(*new WorklistDialog(nullptr)),
+    m_worklistMdl(*new WorklistModel(nullptr)),
+    m_worklistMgr(*new WorklistMgr(nullptr,m_worklistDlg,m_worklistMdl,WRKLST_SETTING_FILE)),
+    m_registrationFormModel(*new RegistrationFormModel(nullptr)),
+    m_newPatientDlg(*new NewPatientDialog(nullptr)),
+    m_newPatientMgr(*new NewPatientMgr(nullptr,m_newPatientDlg,m_registrationFormModel,m_examinationMgr)),
+    m_toolsDlg(*new ToolsDialog(nullptr)),
+    m_toolsMgr(*new ToolsMgr(nullptr,m_toolsDlg,IBEX_STTINGS_FILE)),
+    m_device(*new DeviceMgr(nullptr,m_mainWindow,
+                            m_loginMgr,
+                            m_pacsSettingsMgr,
+                            m_worklistSettingsMgr,
+                            m_loadStudyMgr,
+                            m_examinationMgr,
+                            m_worklistMgr,
+                            m_newPatientMgr,
+                            m_toolsMgr,
+                            m_filterMgr))
 
 {
     m_dbConnector.setParent(this);
@@ -53,36 +85,69 @@ Startup::Startup() : QObject(nullptr),
         LogMgr::instance()->LogAppFail(tr("unsuccessful start. Database connection failed"));
         exit(1);
     }
+
+    m_loadImageDlg.setParent(&m_mainWindow);
+    m_loadImageDlg.setWindowFlag( Qt::Window,true);
+    m_loadImageDlg.setModal(true);
+    m_loadImageDlg.setWindowTitle("Open Image Dialog");
+
+    m_filterPluginDlg.setParent(&m_mainWindow);
+    m_filterPluginDlg.setWindowFlag( Qt::Window,true);
+    m_filterPluginDlg.setModal(true);
+    m_filterPluginDlg.setWindowTitle("Filters");
+    m_filterMgr.setParent(this);
+    //m_filterPluginMgr.setParent(this);
+
     m_loadStudyDlg.setParent(&m_mainWindow);
     m_loadStudyDlg.setWindowFlag( Qt::Window,true);
     m_loadStudyDlg.setModal(true);
     m_loadStudyMgr.setParent(this);
 
-      m_loginDlg.setParent(&m_mainWindow);
-      m_loginDlg.setWindowFlag( Qt::Window,true);
-      m_loginDlg.setModal(true);
-      m_loginMgr.setParent(this);
+    m_loginDlg.setParent(&m_mainWindow);
+    m_loginDlg.setWindowFlag( Qt::Window,true);
+    m_loginDlg.setModal(true);
+    m_loginDlg.setWindowTitle("Login Dialog");
+    m_loginMgr.setParent(this);
 
-      m_pacsSettingsDlg.setParent(&m_mainWindow);
-      m_pacsSettingsDlg.setWindowFlag( Qt::Window,true);
-      m_pacsSettingsDlg.setModal(true);
-      m_pacsSettingsMgr.setParent(this);
+    m_pacsSettingsDlg.setParent(&m_mainWindow);
+    m_pacsSettingsDlg.setWindowFlag( Qt::Window,true);
+    m_pacsSettingsDlg.setModal(true);
+    m_pacsSettingsDlg.setWindowTitle("PACS Settings Dialog");
+    m_pacsSettingsMgr.setParent(this);
 
-      m_worklistDlg.setParent(&m_mainWindow);
-      m_worklistDlg.setWindowFlag( Qt::Window,true);
-      m_worklistDlg.setModal(true);
-      m_worklistMgr.setParent(this);
+    m_worklistSettingsDlg.setParent(&m_mainWindow);
+    m_worklistSettingsDlg.setWindowFlag( Qt::Window,true);
+    m_worklistSettingsDlg.setModal(true);
+    m_worklistSettingsDlg.setWindowTitle("Worklist Settings Dialog");
+    m_worklistSettingsMgr.setParent(this);
 
-      m_examinationDlg.setParent(&m_mainWindow);
-      m_examinationDlg.setWindowFlag( Qt::Window,true);
-      m_examinationDlg.setModal(true);
-      m_examinationMgr.setParent(this);
+    m_examinationDlg.setParent(&m_mainWindow);
+    m_examinationDlg.setWindowFlag( Qt::Window,true);
+    m_examinationDlg.setModal(true);
+    m_examinationDlg.setWindowTitle("Examination Dialog");
+    m_examinationMgr.setParent(this);
 
+    m_worklistDlg.setParent(&m_mainWindow);
+    m_worklistDlg.setWindowFlag( Qt::Window,true);
+    m_worklistDlg.setModal(true);
+    m_worklistDlg.setWindowTitle("Select Task Dialog");
+    m_worklistMdl.SetDatabase(m_dbConnector.GetDatabase());
+    m_worklistMgr.setParent(this);
 
+    m_newPatientDlg.setParent(&m_mainWindow);
+    m_newPatientDlg.setWindowFlag( Qt::Window,true);
+    m_newPatientDlg.setModal(true);
+    m_newPatientDlg.setWindowTitle("Register New Patient Dialog");
+    m_newPatientMgr.setParent(this);
+    m_newPatientDlg.WireConnections();
 
+    m_toolsDlg.setParent(&m_mainWindow);
+    m_toolsDlg.setWindowFlag( Qt::Window,true);
+    m_toolsDlg.setModal(true);
+    m_toolsMgr.setParent(this);
 
-      m_device.setParent(this);
-      m_device.WireConnections();
+    m_device.setParent(this);
+    m_device.WireConnections();
 
 }
 

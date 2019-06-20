@@ -2,6 +2,7 @@
 #include <QWidget>
 #include <QStyleOptionGraphicsItem>
 #include "Model/DICOM_ENUMS.h"
+#include "Utils/logmgr.h"
 
 BodyPartSelectionSquare::BodyPartSelectionSquare(int x,
                                                  int y,

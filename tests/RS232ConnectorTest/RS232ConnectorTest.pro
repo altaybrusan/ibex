@@ -28,12 +28,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 INCLUDEPATH += ../../common/include \
                ../../core/
 
-HEADERS += ../../core/rs232connector.h \
+HEADERS += rs232connector.h \
            ../../common/include/iconnector.h\
-           ../../core/rs232connector.h
+           rs232connector.h
 
 SOURCES += \
         rs232connectortester.cpp \
-        ../../core/rs232connector.cpp
+        rs232connector.cpp
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"

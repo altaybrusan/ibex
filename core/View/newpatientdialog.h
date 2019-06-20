@@ -12,21 +12,25 @@
 namespace Ui {
     class NewPatientDialog;
 }
-
+class RegistrationFormModel;
 class NewPatientDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit NewPatientDialog(QWidget *parent = 0);
- 
-    //QString GetPatientInfo(NewPatientDialog::DemographyKeys field);
-    //QStringList GetSelectedProceduresList();
+    explicit NewPatientDialog(QWidget *parent);
+    void SetFormModel(RegistrationFormModel& formModel);
+    void WireConnections();
+    void ResetForm();
     ~NewPatientDialog();
+signals:
+    void NotifyRegistrationFormCompleted();
 
 private slots:
     void OnBodyPartStatusChanged(iBEX::BODY_PART bodyPart,bool isSelected);
-    void ActivateOkBtn();
+
+    void RefreshOkBtn();
+
     void on_buttonBox_accepted();
 
     void on_lastNameLineEdit_editingFinished();
@@ -47,10 +51,12 @@ private slots:
 
     void on_accessionNumberLineEdit_editingFinished();
 
-
+    void on_buttonBox_rejected();
 
 private:
+
     Ui::NewPatientDialog *ui;
+
     QGraphicsScene* scene;
     QGraphicsEllipseItem* ellipse;
     BodyPartSelectionSquare *head,*thorax,
@@ -59,10 +65,9 @@ private:
 
     QStringList _selectedBodyPartList;
     int _numberOfselectedBodyParts;
-    BodyPartSelectionSquare* _temp;
-
-
+    BodyPartSelectionSquare* _temp;    
     QValidator *validator;
+    RegistrationFormModel* m_model=nullptr;
 };
 
 

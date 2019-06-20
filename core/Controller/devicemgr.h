@@ -12,6 +12,10 @@
 #include "Controller/loadstudymgr.h"
 #include "View/examinationdialog.h"
 #include "Controller/examinationmgr.h"
+#include "Controller/worklistmgr.h"
+#include "Controller/newpatientmgr.h"
+#include "Controller/toolsmgr.h"
+#include "Controller/filterpluginmgr.h"
 
 class DeviceMgr : public QObject
 {
@@ -20,38 +24,32 @@ public:
     explicit DeviceMgr(QObject *parent,
                        MainWindow & mainWindow,
                        LoginMgr& loginMgr,
-                       PacsSettingsDialog& pacsSettingsDlg,
                        PacsSettingMgr& pacsSettingsMgr,
-                       WorklistServerSettingsDialog& worklistSettingDlg,
                        WorklistServerSettingsMgr& worklistdialogMgr,
-                       LoadStudyDialog& loadStudyDlg,
                        LoadStudyMgr& loadStudyMgr,
-                       ExaminationDialog& examinationDlg,
-                       ExaminationMgr& examinationMgr);
+                       ExaminationMgr& examinationMgr,
+                       WorklistMgr& worklistMgr,
+                       NewPatientMgr& newpatientMgr,
+                       ToolsMgr& toolsMgr,
+                       FilterPluginMgr& filterMgr);
     void WireConnections();
 
 
 signals:
 
 public slots:
-private slots:
-    void OnNewStudyWorkFlowIsTriggered();
-    void OnQuickStudyWorkFlowIsTriggered();
-    void OnUpdatePACSSettingIsTriggered();
-    void OnLoadStudyIsTriggered();
-    void OnUpdateWorklistSettingsIsTriggered();
-    void OnOpenStudyWorkFlowIsTriggered();
+
 private:
     MainWindow& m_mainWindow;
     LoadStudyMgr& m_loadStudyMgr;
-    LoadStudyDialog& m_loadStudyDlg;
     LoginMgr& m_loginMgr;
     PacsSettingMgr& m_pacsSettingsMgr;
-    PacsSettingsDialog& m_pacsSettingsDlg;
-    WorklistServerSettingsDialog& m_worklistSettingsDlg;
     WorklistServerSettingsMgr& m_worklisSettingstMgr;
-    ExaminationDialog& m_examinationDlg;
     ExaminationMgr& m_examinationMgr;
+    WorklistMgr& m_worklistMgr;
+    NewPatientMgr& m_newPatientMgr;
+    ToolsMgr& m_toolsMgr;
+    FilterPluginMgr& m_filtersPluginMgr;
 
 
     void ShutdownDevice();

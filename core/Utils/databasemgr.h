@@ -14,34 +14,36 @@ public:
     ~DataBaseMgr();
     static DataBaseMgr* instance();
 
-    void OpenDatabse();
+    void OpenDatabase();
     void FetchDataFromDatabase();
     bool isConnectionOpen();
 
-    QSqlRecord GetRecordTemplateForWorklistTable();
+    QSqlRecord GetRecordTemplateForInstanceTable();
     QSqlRecord GetRecordTemplateForStudyTable();
     QSqlRecord GetRecordTemplateForUserTable();
     QSqlRecord GetRecordTemplateForRejectedImageTable();
 
-    void AppendIntoWorklistTable(QSqlRecord record);
+    void AppendIntoInstanceTable(QSqlRecord record);
     void AppendIntoStudyTable(QSqlRecord record);
     void AppendIntoUserTable(QSqlRecord record);
     void AppendIntoRejectedImageTable(QSqlRecord record);
 
-    void DeleteRecordFromWorklistTableAt(int row);
+    void DeleteRecordFromInstanceTableAt(int row);
     void DeleteRecordFromStudyTableAt(int row);
     void DeleteRecordFromUserTableAt(int row);
     void DeleteRecordFromRejectedImageTableAt(int row);
 
-    bool isRecordinWorklistTable(QSqlRecord record);
+    bool isRecordinInstanceTable(QSqlRecord record);
     bool isRecordinStudyTable(QSqlRecord record);
     bool isRecordinUserTable(QSqlRecord record);
     bool isRecordinRejectedImageTable(QSqlRecord record);
 
-    void UpdateWorklistTableAt(int row,QSqlRecord record);
+    void UpdateInstanceTableAt(int row,QSqlRecord record);
     void UpdateStudyTableAt(int row,QSqlRecord record);
     void UpdateUserTableAt(int row,QSqlRecord record);
     void UpdateRejectedImageTableAt(int row,QSqlRecord record);
+
+    int GetNumberOfUsers();
 
 signals:
 
@@ -69,7 +71,7 @@ private:
     QString RecordToQueryStringConverter(QSqlRecord record);
 
      QSqlDatabase m_database ;
-     std::unique_ptr<QSqlTableModel> m_worklistModel ;
+     std::unique_ptr<QSqlTableModel> m_instanceModel ;
      std::unique_ptr<QSqlTableModel> m_studyModel ;
      std::unique_ptr<QSqlTableModel> m_userModel ;
      std::unique_ptr<QSqlTableModel> m_rejImgModel ; // rejected Image model

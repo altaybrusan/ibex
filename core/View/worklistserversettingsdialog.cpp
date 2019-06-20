@@ -5,22 +5,6 @@
 #include <QRegExpValidator>
 #include <QRegExp>
 
-//QStringList ListElements2(QDomElement root, QString tagname, QString attribute)
-//{
-//    QStringList _elemntList;
-//    QDomNodeList items = root.elementsByTagName(tagname);
-
-//     for(int i = 0; i < items.count(); i++)
-//     {
-//        QDomNode itemnode = items.at(i);
-//        if(itemnode.isElement())
-//        {
-//            QDomElement itemele = itemnode.toElement();
-//            _elemntList.append(itemele.attribute(attribute));
-//        }
-//     }
-//     return _elemntList;
-//}
 
 QRegExp rxPort("^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$");
 QRegExp rxIP("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$");
@@ -77,37 +61,6 @@ WorklistServerSettingsDialog::~WorklistServerSettingsDialog()
 void WorklistServerSettingsDialog::on_buttonBox_accepted()
 {
     emit NotifyAccepted();
-//    QDomDocument document;
-//    QFile settingFile("./configs/_worklist.xml");
-//    if(!settingFile.open(QIODevice::ReadWrite | QIODevice::Text))
-//    {
-//        qDebug()<<"Can not open worklist configuration file";
-//        return;
-//    }
-//    else
-//    {
-//        qDebug()<<"worklist configuration file successfully opened.";
-//        //get the root element
-//        QDomDocument document;
-
-//        if(!document.setContent(&settingFile))
-//        {
-//            qDebug() << "Failed to load document";
-//            return;
-//        }
-
-//        QDomElement root = document.firstChildElement();
-//        auto node = root.elementsByTagName("Server").at(0).toElement();
-//        node.setAttribute("IP",ui->ipAddresslineEdit->text());
-//        node.setAttribute("AETitle",ui->AETitleLineEdit->text());
-//        node.setAttribute("Port",ui->portLineEdit->text());
-//        settingFile.resize(0);
-//        QByteArray xml = document.toByteArray();
-//        settingFile.write(xml);
-//        settingFile.close();
-//        this->close();
-//    }
-
 }
 
 void WorklistServerSettingsDialog::on_buttonBox_rejected()

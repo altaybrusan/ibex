@@ -22,7 +22,7 @@ signals:
 
 public slots:
 
-    void ActivateLoadingStudy();
+    void OnActivateLoadingStudy();
 
 
 private:

@@ -6,6 +6,7 @@
 
 namespace iBEX
 {
+
     Q_NAMESPACE
 
     /**
@@ -33,8 +34,40 @@ namespace iBEX
         M,F,O
     };
 
+    /**
+     Radiographic view associated with Patient Position (0018,5100).
+     For humans:
+      Defined Terms:
+      AP   Anterior/Posterior
+      PA   Posterior/Anterior
+      LL   Left Lateral
+      RL   Right Lateral
+      RLD  Right Lateral Decubitus
+      LLD  Left Lateral Decubitus
+      RLO  Right Lateral Oblique
+      LLO  Left Lateral Oblique
+*/
+    enum class PATIENT_POSISTION
+    {
+        AP,PA,LL,RL,RLD,LLD,RLO,LLO
+    };
+
+    /*
+     *  SCHEDULED,
+        INPROGRESS,
+        SUSPENDED,
+        COMPLETED,
+        DISCONTINUED
+     */
+   enum class STUDY_STATUS
+   {
+       SCHEDULED,INPROGRESS,SUSPENDED,COMPLETED,DISCONTINUED
+   };
+
     Q_ENUM_NS(BODY_PART);
     Q_ENUM_NS(GENDER);
+    Q_ENUM_NS(PATIENT_POSISTION);
+    Q_ENUM_NS(STUDY_STATUS);
 }
 
 #endif // BODYPART_H
