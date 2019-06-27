@@ -124,3 +124,6 @@
 [ 2019-06-20 ][ 14:06:18 ] INFO  APPLICATION - tool box is activated
 [ 2019-06-20 ][ 14:06:24 ] INFO  APPLICATION - tool box is activated
 [ 2019-06-20 ][ 14:06:28 ] DEBUG APPLICATION - examination workflow is started.
+[ 2019-06-20 ][ 17:51:38 ] INFO  APPLICATION - *** DEVICE STARTED...
+[ 2019-06-20 ][ 17:51:47 ] INFO  APPLICATION -  app successfully signed in
+[ 2019-06-20 ][ 17:51:54 ] DEBUG APPLICATION - examination workflow is started.

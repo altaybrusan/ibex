@@ -29,7 +29,7 @@ SUBTARGETS    =  \
 		sub-GulmayGenerator \
 		sub-TeledyneDetector \
 		sub-DeltaB2MotorDriver \
-		sub-LoGFilter
+		sub-CompareFilter
 
 
 sub-GulmayGenerator-qmake_all:  FORCE
@@ -131,39 +131,39 @@ sub-DeltaB2MotorDriver-uninstall_subtargets: FORCE
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
-sub-LoGFilter-qmake_all:  FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
-	cd LoGFilter\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc
+sub-CompareFilter-qmake_all:  FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
+	cd CompareFilter\ && $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && $(MAKE) -f Makefile qmake_all
-sub-LoGFilter: FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+	cd CompareFilter\ && $(MAKE) -f Makefile qmake_all
+sub-CompareFilter: FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile
-sub-LoGFilter-make_first: FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile
+sub-CompareFilter-make_first: FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
-sub-LoGFilter-all: FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile 
+sub-CompareFilter-all: FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
-sub-LoGFilter-clean: FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile all
+sub-CompareFilter-clean: FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
-sub-LoGFilter-distclean: FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile clean
+sub-CompareFilter-distclean: FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
-sub-LoGFilter-install_subtargets: FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile distclean
+sub-CompareFilter-install_subtargets: FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
-sub-LoGFilter-uninstall_subtargets: FORCE
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile install
+sub-CompareFilter-uninstall_subtargets: FORCE
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile uninstall
 
 Makefile: plugins.pro C:\Qt\5.9.4\msvc2015_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.9.4\msvc2015_64\mkspecs\features\spec_pre.prf \
 		C:\Qt\5.9.4\msvc2015_64\mkspecs\common\angle.conf \
@@ -483,15 +483,15 @@ plugins.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile plugins.pro -spec win32-msvc
 
-qmake_all: sub-GulmayGenerator-qmake_all sub-TeledyneDetector-qmake_all sub-DeltaB2MotorDriver-qmake_all sub-LoGFilter-qmake_all FORCE
+qmake_all: sub-GulmayGenerator-qmake_all sub-TeledyneDetector-qmake_all sub-DeltaB2MotorDriver-qmake_all sub-CompareFilter-qmake_all FORCE
 
-make_first: sub-GulmayGenerator-make_first sub-TeledyneDetector-make_first sub-DeltaB2MotorDriver-make_first sub-LoGFilter-make_first  FORCE
-all: sub-GulmayGenerator-all sub-TeledyneDetector-all sub-DeltaB2MotorDriver-all sub-LoGFilter-all  FORCE
-clean: sub-GulmayGenerator-clean sub-TeledyneDetector-clean sub-DeltaB2MotorDriver-clean sub-LoGFilter-clean  FORCE
-distclean: sub-GulmayGenerator-distclean sub-TeledyneDetector-distclean sub-DeltaB2MotorDriver-distclean sub-LoGFilter-distclean  FORCE
+make_first: sub-GulmayGenerator-make_first sub-TeledyneDetector-make_first sub-DeltaB2MotorDriver-make_first sub-CompareFilter-make_first  FORCE
+all: sub-GulmayGenerator-all sub-TeledyneDetector-all sub-DeltaB2MotorDriver-all sub-CompareFilter-all  FORCE
+clean: sub-GulmayGenerator-clean sub-TeledyneDetector-clean sub-DeltaB2MotorDriver-clean sub-CompareFilter-clean  FORCE
+distclean: sub-GulmayGenerator-distclean sub-TeledyneDetector-distclean sub-DeltaB2MotorDriver-distclean sub-CompareFilter-distclean  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-GulmayGenerator-install_subtargets sub-TeledyneDetector-install_subtargets sub-DeltaB2MotorDriver-install_subtargets sub-LoGFilter-install_subtargets FORCE
-uninstall_subtargets: sub-GulmayGenerator-uninstall_subtargets sub-TeledyneDetector-uninstall_subtargets sub-DeltaB2MotorDriver-uninstall_subtargets sub-LoGFilter-uninstall_subtargets FORCE
+install_subtargets: sub-GulmayGenerator-install_subtargets sub-TeledyneDetector-install_subtargets sub-DeltaB2MotorDriver-install_subtargets sub-CompareFilter-install_subtargets FORCE
+uninstall_subtargets: sub-GulmayGenerator-uninstall_subtargets sub-TeledyneDetector-uninstall_subtargets sub-DeltaB2MotorDriver-uninstall_subtargets sub-CompareFilter-uninstall_subtargets FORCE
 
 sub-GulmayGenerator-debug:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -505,11 +505,11 @@ sub-DeltaB2MotorDriver-debug:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-sub-LoGFilter-debug:
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+sub-CompareFilter-debug:
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
-debug: sub-GulmayGenerator-debug sub-TeledyneDetector-debug sub-DeltaB2MotorDriver-debug sub-LoGFilter-debug
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile debug
+debug: sub-GulmayGenerator-debug sub-TeledyneDetector-debug sub-DeltaB2MotorDriver-debug sub-CompareFilter-debug
 
 sub-GulmayGenerator-release:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -523,11 +523,11 @@ sub-DeltaB2MotorDriver-release:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-sub-LoGFilter-release:
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+sub-CompareFilter-release:
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
-release: sub-GulmayGenerator-release sub-TeledyneDetector-release sub-DeltaB2MotorDriver-release sub-LoGFilter-release
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile release
+release: sub-GulmayGenerator-release sub-TeledyneDetector-release sub-DeltaB2MotorDriver-release sub-CompareFilter-release
 
 sub-GulmayGenerator-check:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -541,11 +541,11 @@ sub-DeltaB2MotorDriver-check:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-sub-LoGFilter-check:
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+sub-CompareFilter-check:
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
-check: sub-GulmayGenerator-check sub-TeledyneDetector-check sub-DeltaB2MotorDriver-check sub-LoGFilter-check
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile check
+check: sub-GulmayGenerator-check sub-TeledyneDetector-check sub-DeltaB2MotorDriver-check sub-CompareFilter-check
 
 sub-GulmayGenerator-benchmark:
 	@if not exist GulmayGenerator\ mkdir GulmayGenerator\ & if not exist GulmayGenerator\ exit 1
@@ -559,11 +559,11 @@ sub-DeltaB2MotorDriver-benchmark:
 	@if not exist DeltaB2MotorDriver\ mkdir DeltaB2MotorDriver\ & if not exist DeltaB2MotorDriver\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd DeltaB2MotorDriver\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\DeltaB2MotorDriver\DeltaB2MotorDriver.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-sub-LoGFilter-benchmark:
-	@if not exist LoGFilter\ mkdir LoGFilter\ & if not exist LoGFilter\ exit 1
+sub-CompareFilter-benchmark:
+	@if not exist CompareFilter\ mkdir CompareFilter\ & if not exist CompareFilter\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd LoGFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\LoGFilter\LoGFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-GulmayGenerator-benchmark sub-TeledyneDetector-benchmark sub-DeltaB2MotorDriver-benchmark sub-LoGFilter-benchmark
+	cd CompareFilter\ && ( if not exist Makefile $(QMAKE) -o Makefile C:\Users\Altay\Documents\Qt\Projects\ibex\plugins\CompareFilter\CompareFilter.pro -spec win32-msvc ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-GulmayGenerator-benchmark sub-TeledyneDetector-benchmark sub-DeltaB2MotorDriver-benchmark sub-CompareFilter-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

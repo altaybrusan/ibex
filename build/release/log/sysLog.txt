@@ -1126,3 +1126,41 @@
 [ 2019-06-20 ][ 14:06:29 ] INFO  SYSTEM - minimum pixel value: 2248
 [ 2019-06-20 ][ 14:06:29 ] INFO  SYSTEM - maximum pixel value: 65535
 [ 2019-06-20 ][ 14:06:43 ] INFO  SYSTEM - Database connection is closed.
+[ 2019-06-20 ][ 17:51:38 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2019-06-20 ][ 17:51:39 ] DEBUG SYSTEM - new algorithm is found
+[ 2019-06-20 ][ 17:51:39 ] INFO  SYSTEM - total number of plugins:1
+[ 2019-06-20 ][ 17:51:39 ] DEBUG SYSTEM - plugin name:LoG filter
+[ 2019-06-20 ][ 17:51:41 ] INFO  SYSTEM - algorithm plugins are loaded from: ./plugins
+[ 2019-06-20 ][ 17:51:41 ] DEBUG SYSTEM - algorithm already registered
+[ 2019-06-20 ][ 17:51:41 ] INFO  SYSTEM - total number of plugins:1
+[ 2019-06-20 ][ 17:51:41 ] DEBUG SYSTEM - ImageViewer is launched
+[ 2019-06-20 ][ 17:51:42 ] INFO  SYSTEM - Load Study manager is initiating...
+[ 2019-06-20 ][ 17:51:42 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - current directory:C:/Users/Altay/Documents/Qt/Projects/ibex/build/release
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:CompareFilter.dll
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:CompareFilter.exp
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:CompareFilter.lib
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.dll
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - device type:2
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.exp
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:DeltaB2MotorDriver.lib
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:GulmayGenerator.dll
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - device type:0
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:GulmayGenerator.exp
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:GulmayGenerator.lib
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:TeledyneDetector.dll
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - device type:1
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:TeledyneDetector.exp
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - processing plugin:TeledyneDetector.lib
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - total number of loaded plugins:3
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - worklist settings are loaded successfully.
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - Device Manager <DeviceMgr> is constructing...
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - iBEX settings are loaded successfully.
+[ 2019-06-20 ][ 17:51:43 ] INFO  SYSTEM - Database connection is estabilished.
+[ 2019-06-20 ][ 17:51:47 ] INFO  SYSTEM - Checking database for user
+[ 2019-06-20 ][ 17:51:47 ] INFO  SYSTEM - User Name:1User Password:d2a57dc1d883fd21fb9951699df71cc7
+[ 2019-06-20 ][ 17:51:47 ] INFO  SYSTEM -  app successfully signed in
+[ 2019-06-20 ][ 17:51:54 ] INFO  SYSTEM - New Image is received:C:/temp/113.tiff
+[ 2019-06-20 ][ 17:51:55 ] INFO  SYSTEM - minimum pixel value: 2248
+[ 2019-06-20 ][ 17:51:55 ] INFO  SYSTEM - maximum pixel value: 65535
+[ 2019-06-20 ][ 17:52:12 ] INFO  SYSTEM - Database connection is closed.
