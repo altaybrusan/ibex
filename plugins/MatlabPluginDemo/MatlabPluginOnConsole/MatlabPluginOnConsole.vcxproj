@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BACD424A-BA57-44BB-9FB2-BA392A231BB8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConsoleApplication7</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>MatlabPluginOnConsole</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\VTK\include\vtk-9.0;C:\Program Files\MATLAB\R2019a\extern\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\VTK\lib;C:\Users\Altay\Documents\Visual Studio 2015\Projects\MatlabPluginDemo\MatlabPluginOnConsole\libs;C:\Program Files\MATLAB\R2019a\extern\lib\win64\microsoft;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vtkCommonCore-9.0.lib;vtkRenderingCore-9.0.lib;vtkInteractionImage-9.0.lib;vtkRenderingImage-9.0.lib;vtkIOImage-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkImagingCore-9.0.lib;xid.lib;asynciocoder.lib;gpu.lib;gpumexbinder.lib;libcovrt.lib;libemlrt.lib;libeng.lib;libfixedpoint.lib;libmat.lib;libMatlabCppSharedLib.lib;libMatlabDataArray.lib;libMatlabEngine.lib;libmex.lib;libmwacfObjectDetector.lib;libmwautonomouscodegen.lib;libmwblas.lib;libmwblascompat32.lib;libmwboxfilter.lib;libmwboxfilter3.lib;libmwbwdistEDT.lib;libmwbwdistEDTFT.lib;libmwbwdistEDTFT_tbb.lib;libmwbwdistEDT_tbb.lib;libmwbwlookup.lib;libmwbwlookup_tbb.lib;libmwbwpackc.lib;libmwbwpackctbb.lib;libmwbwunpackc.lib;libmwbwunpackctbb.lib;libmwcannythresholding_tbb.lib;libmwcgir_construct.lib;libmwcgxert.lib;libmwcoderprofile.lib;libmwcoder_CodeInstrHostAppSvc.lib;libmwcoder_CodeInstrTgtAppSvc.lib;libmwcoder_CoderAssumpHostAppSvc.lib;libmwcoder_CoderAssumpTgtAppSvc.lib;libmwcoder_connectivity_memunit.lib;libmwcoder_ParamTuningTgtAppSvc.lib;libmwcoder_RTIOStreamHostAppSvc.lib;libmwcoder_RTIOStreamTgtAppSvc.lib;libmwcoder_target_services.lib;libmwcoder_ToAsyncQueueTgtAppSvc.lib;libmwcoder_XILHostAppSvc.lib;libmwcoder_XILTgtAppSvc.lib;libmwComputeMetric.lib;libmwddist.lib;libmwdisparitySGM.lib;libmwedgesobelprewitt_tbb.lib;libmwedgethinning_tbb.lib;libmwforegroundDetector.lib;libmwgetnumcores.lib;libmwgrayto16.lib;libmwgrayto8.lib;libmwgrayxform.lib;libmwgrayxform_tbb.lib;libmwimfilter.lib;libmwimlincomb.lib;libmwimlincomb_tbb.lib;libmwimreconstruct.lib;libmwimregionalmax.lib;libmwimterp2d.lib;libmwint16touint16.lib;libmwint32touint32.lib;libmwint8touint8.lib;libmwintlut.lib;libmwintluttbb.lib;libmwipp.lib;libmwippfilter.lib;libmwippgeotrans.lib;libmwippmedianfilter.lib;libmwippreconstruct.lib;libmwjpegreader.lib;libmwkdtree.lib;libmwlapack.lib;libmwmathutil.lib;libmwmorphop_binary.lib;libmwmorphop_binary_tbb.lib;libmwmorphop_flat.lib;libmwmorphop_flat_tbb.lib;libmwmorphop_nonflat.lib;libmwmorphop_nonflat_tbb.lib;libmwmorphop_ocv.lib;libmwmorphop_packed.lib;libmwocvgpumex.lib;libmwocvmex.lib;libmwordfilt2.lib;libmwpolyfun.lib;libmwremap.lib;libmwremaptbb.lib;libmwrgb2gray_tbb.lib;libmwrgb2hsv_tbb.lib;libmwrtiostreamutils.lib;libmwsdi_raccel.lib;libmwsearchOrganizedPointCloud.lib;libmwservices.lib;libmwsigstream.lib;libmwsimulink.lib;libmwslexec_parallel.lib;libmwslexec_simbridge.lib;libmwslexec_simlog.lib;libmwslio_clients.lib;libmwslio_core.lib;libmwsltest_raccel.lib;libmwsl_AsyncioQueue.lib;libmwsl_fileio.lib;libmwsl_log_load_blocks.lib;libmwsl_services.lib;libmwsl_sfcn_cov_bridge.lib;libmwsl_sfcn_loader.lib;libmwsl_simtarget_core.lib;libmwsl_simtarget_instrumentation.lib;libmwsl_solver_rtw.lib;libmwstringutil.lib;libmwtbbhist.lib;libmwuint16toint16.lib;libmwvoxelGridFilter.lib;libmwxilcomms.lib;libmwxilcomms_rtiostream.lib;libmwxilutils.lib;libmwxilutils_sl.lib;libmx.lib;libut.lib;mclbase.lib;mclcommain.lib;mclmcr.lib;mclmcrrt.lib;mclxlmain.lib;ne_mli.lib;ocrutils.lib;physmod_common_external_library_kernel.lib;physmod_common_foundation_core_performance.lib;physmod_common_foundation_core_util.lib;physmod_common_foundation_sli_util.lib;rtwcg.lib;sf_runtime.lib;SimulinkBlock.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="xid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
