@@ -1,0 +1,761 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="View\aboutdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\anatomicregionelement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\appenderskeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\basicconfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\bodypartselectionsquare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\classlogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\configuratorhelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\consoleappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coreapplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\dailyrollingfileappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\databaseconnector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\databasemgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\datetime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\varia\debugappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\varia\denyallfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\devicemgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\dicomtools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\examinationdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\examinationmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\fileappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\spi\filter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\filterpluginmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\filtersdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\hierarchy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\imageviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\initialisationhelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\layout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\varia\levelmatchfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\varia\levelrangefilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\varia\listappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\loadImagedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\loadstudydialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\loadstudymgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\log4qt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\logerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\loggerrepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\loggingevent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\logindialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\loginmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\logmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\logmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\logobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\logobjectptr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\mdc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\ndc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\newpatientdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\newpatientmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\varia\nullappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\optionconverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\pacssettingmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\pacssettingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\patternformatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\patternlayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\helpers\properties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\propertyconfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\registrationformmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\rollingfileappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\settingsprovider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\simplelayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="startup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\varia\stringmatchfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\toolsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\toolsmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\ttcclayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\worklistdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\worklistmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\worklistmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\worklistquerymodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\worklistserversettingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\worklistserversettingsmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\log4qt\writerappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Model\DICOM_ENUMS.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\aboutdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\anatomicregionelement.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\appender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\appenderskeleton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\basicconfigurator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="View\bodypartselectionsquare.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="Utils\call_once.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\log4qt\helpers\classlogger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\helpers\configuratorhelper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\consoleappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="coreapplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\dailyrollingfileappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\databaseconnector.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Utils\databasemgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\helpers\datetime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\varia\debugappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\varia\denyallfilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\devicemgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Utils\dicomtools.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="Utils\displaytool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="View\examinationdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\examinationmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\helpers\factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\fileappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\spi\filter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\filterpluginmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\filtersdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\hierarchy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\common\include\ialgorithm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\imageviewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\helpers\initialisationhelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\layout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\varia\levelmatchfilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\varia\levelrangefilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\varia\listappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\loadImagedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\loadstudydialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\loadstudymgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\log4qt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\log4qt\helpers\logerror.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\logger.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\loggerrepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\log4qt\loggingevent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="View\logindialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\loginmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\logmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="Utils\logmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\helpers\logobject.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\helpers\logobjectptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="View\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\mdc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\log4qt\ndc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="View\newpatientdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\newpatientmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\varia\nullappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\helpers\optionconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="Controller\pacssettingmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\pacssettingsdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\helpers\patternformatter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\patternlayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="..\log4qt\helpers\properties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\log4qt\propertyconfigurator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="Model\registrationformmodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\rollingfileappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Utils\settingsprovider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\simplelayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="Utils\singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="startup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\varia\stringmatchfilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\toolsdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\toolsmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\log4qt\ttcclayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\worklistdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\worklistmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\worklistmodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\worklistquerymodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\worklistserversettingsdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Controller\worklistserversettingsmgr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="Model\worklisttbl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="..\log4qt\writerappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Altay\Documents\Qt\Projects\ibex\build\debug\.moc\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Altay\Documents\Qt\Projects\ibex\build\release\.moc\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\build\debug\.ui\ui_aboutdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_aboutdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_examinationdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_examinationdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_filtersdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_filtersdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_imageviewer.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_imageviewer.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_loadimagedialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_loadimagedialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_loadstudydialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_loadstudydialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_logindialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_logindialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_mainwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_mainwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_newpatientdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_newpatientdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_pacssettingsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_pacssettingsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_toolsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_toolsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_worklistdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_worklistdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\debug\.ui\ui_worklistserversettingsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\build\release\.ui\ui_worklistserversettingsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="View\aboutdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\examinationdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\filtersdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\imageviewer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\loadimagedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\loadstudydialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\logindialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\newpatientdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\pacssettingsdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\toolsdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\worklistdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\worklistserversettingsdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\_48_add_user.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_connections.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_devices.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_exit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_filters.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_horizontal_flip.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_info.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_invert_selection.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_load.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_open.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_open_document.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_pacs_server.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_pheripherals.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_printing.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_quick.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_reload.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_remove_user.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_start_document.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_tools.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_vertical_flip.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_worklist.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_worklist_select.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_48_writecd.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_72_radiation_sign.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_ibex_logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_larg_ibex_background.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\_operator_logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\human.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="resources.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="notes">
+      <Filter>Distribution Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\iBEX_resource.rc" />
+  </ItemGroup>
+</Project>

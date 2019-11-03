@@ -90,7 +90,7 @@ public:
 
     void retranslateUi(QDialog *WorkListDialog)
     {
-        WorkListDialog->setWindowTitle(QApplication::translate("WorkListDialog", "Dialog", Q_NULLPTR));
+        WorkListDialog->setWindowTitle(QApplication::translate("WorkListDialog", "Select Task", Q_NULLPTR));
         reloadBtn->setText(QApplication::translate("WorkListDialog", "Reload", Q_NULLPTR));
     } // retranslateUi
 
